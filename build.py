@@ -23,7 +23,7 @@ NAV_MAP = {
     '/es/eventos/': 'eventos/',
     '/es/contacto/': 'contacto/',
     '/es/penthouse/': 'penthouse/', '/es/presidencial/': 'presidencial/', '/es/suites-de-lujo/': 'suites-de-lujo/',
-    '/es/servicios/': 'servicios/', '/es/preguntas-frecuentes/': 'preguntas-frecuentes/',
+    '/es/servicios/': 'servicios/', '/es/serena-rewards/': 'serena-rewards/', '/es/preguntas-frecuentes/': 'preguntas-frecuentes/',
 }
 for _s in ['suite-emperor-901','suite-emperor-902','suite-presidential','suite-imperial-402','suite-excelsior-401','suite-excelsior-804','suite-excelsior-604',
            'habitacion-ambassador','habitacion-ambassador-jr','habitacion-viscount-803','habitacion-viscount','habitacion-lord','habitacion-earl',

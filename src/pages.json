@@ -235,6 +235,14 @@
   "head_extra": ""
  },
  {
+  "slug": "serena-rewards",
+  "key": "rewards",
+  "file": "serena-rewards.html",
+  "title": "Serena Rewards: programa de fidelización | Haven Medellín",
+  "desc": "Planes Silver, Gold, Diamond y Black: descuentos en alojamiento y alimentos, traslados, upgrades y acceso al 360° Rooftop.",
+  "head_extra": ""
+ },
+ {
   "slug": "preguntas-frecuentes",
   "key": "faq",
   "file": "preguntas-frecuentes.html",

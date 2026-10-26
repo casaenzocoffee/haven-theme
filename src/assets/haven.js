@@ -270,7 +270,7 @@ addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.arch').forEach(a=>gsap.fromTo(a,{clipPath:'inset(40% 10% 0% 10% round 999px 999px 28px 28px)'},{clipPath:'inset(0% 0% 0% 0% round 999px 999px 28px 28px)',ease:'none',scrollTrigger:{trigger:a,start:'top 95%',end:'top 35%',scrub:true}}));
   document.querySelectorAll('.arch-float').forEach(a=>gsap.from(a,{scale:.4,rotate:-25,opacity:0,duration:1.4,ease:'back.out(1.6)',scrollTrigger:{trigger:a,start:'top 90%'}}));
   // Frase grande palabra a palabra (dorado)
-  document.querySelectorAll('.bigq p').forEach(el=>{const txt=el.textContent.trim();el.setAttribute('aria-label',txt);el.innerHTML=txt.split(' ').map(w=>`<span class="wd" aria-hidden="true" style="opacity:.15;display:inline-block">${w}</span>`).join(' ');
+  document.querySelectorAll('.bigq p:not(.eyebrow)').forEach(el=>{const txt=el.textContent.trim();el.setAttribute('aria-label',txt);el.innerHTML=txt.split(' ').map(w=>`<span class="wd" aria-hidden="true" style="opacity:.15;display:inline-block">${w}</span>`).join(' ');
     gsap.to(el.querySelectorAll('.wd'),{opacity:1,stagger:.08,ease:'none',scrollTrigger:{trigger:el,start:'top 80%',end:'bottom 50%',scrub:true}});});
   // Specs con contador
   document.querySelectorAll('.rd-specs b[data-n]').forEach(b=>{const end=+b.dataset.n,o={v:0};ScrollTrigger.create({trigger:b,start:'top 92%',once:true,onEnter:()=>gsap.to(o,{v:end,duration:1.6,ease:'power2.out',onUpdate:()=>b.textContent=Math.round(o.v)+(b.dataset.u||'')})});});
