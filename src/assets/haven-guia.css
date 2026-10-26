@@ -388,3 +388,11 @@ html:not(.hg-js) .hg .hg-wizard__nav [data-nav]{display:none}
 /* mapa de calles: teselas de OpenStreetMap oscurecidas con la paleta Haven */
 .hg .hg-map__streets .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.82) contrast(.92) sepia(.35) saturate(.7)}
 .hg .hg-map__streets .leaflet-container{background:#191311}
+/* índice de la guía más grande: se lee que son 3 herramientas */
+@media (min-width:821px){
+  .hg .hg-chapters ol{padding:8px;gap:6px;background:rgba(25,19,17,.86)}
+  .hg .hg-chapters a{padding:16px 26px;font-size:16px;gap:12px;letter-spacing:.02em}
+  .hg .hg-chapters a span{font:500 22px/1 var(--hg-serif,'Playfair Display',serif);letter-spacing:0;color:var(--hg-gold)}
+}
+.page-guia .ph-media img{opacity:.62;filter:saturate(.85) contrast(1.05)}
+.page-guia .ph-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,19,17,.35),rgba(25,19,17,.15) 40%,rgba(25,19,17,.92))}

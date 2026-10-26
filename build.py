@@ -242,7 +242,7 @@ def build():
         shutil.copy(os.path.join(SRC, 'root', a), os.path.join(DIST, a))
     for page in PAGES:
         REAL[page['slug'] + '/' if page['slug'] else ''] = 'https://havenmedellin.com' + page.get('canonical', '/es/')
-    MV = hashlib.sha1(b''.join(open(os.path.join(SRC, 'media', f), 'rb').read() for f in sorted(os.listdir(os.path.join(SRC, 'media'))))).hexdigest()[:8]
+    MVF = {f: hashlib.sha1(open(os.path.join(SRC, 'media', f), 'rb').read()).hexdigest()[:8] for f in os.listdir(os.path.join(SRC, 'media'))}
     for page in PAGES:
         slug = page['slug']
         R = '' if not slug else '../' * (slug.count('/') + 1)
@@ -280,7 +280,7 @@ def build():
             scripts += f'<script type="module" src="{R}assets/clock3d.js?v={ver}"></script>\n'
         html = (head(page, R, ver) + f'<body class="no-js page-{page.get("key", slug or "home")}">\n' + top
                 + rd('partials/nojs.html') + header(slug, R, en) + body + '\n' + footer(R, en) + scripts + '</body>\n</html>\n')
-        html = re.sub(r'(media/[\w.-]+\.(?:mp4|webp))"', lambda m: m.group(1) + '?v=' + MV + '"', html)
+        html = re.sub(r'((?<=[/"])media/[\w.-]+\.(?:mp4|webp))"', lambda m: m.group(1) + '?v=' + MVF.get(m.group(1).split('/')[-1], '1') + '"', html)
         html = brand(html)
         html = responsive(html)
         out = os.path.join(DIST, slug, 'index.html') if slug else os.path.join(DIST, 'index.html')

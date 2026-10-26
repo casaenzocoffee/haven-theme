@@ -153,7 +153,7 @@ addEventListener('DOMContentLoaded',()=>{
       n.replaceWith(frag);} else if(n.nodeType===1) walk(n);});};
   h1.setAttribute('aria-label',h1.textContent.replace(/\s+/g,' '));walk(h1);
   h1.querySelectorAll('.w').forEach(w=>w.setAttribute('aria-hidden','true'));
-  document.querySelectorAll('.split:not(h1)').forEach(t=>{t.setAttribute('aria-label',t.textContent.replace(/\s+/g,' '));walk(t);t.querySelectorAll('.w').forEach(w=>w.setAttribute('aria-hidden','true'));gsap.from(t.querySelectorAll('.ch'),{rotateX:-95,yPercent:50,opacity:0,duration:1.1,ease:'expo.out',stagger:.02,scrollTrigger:{trigger:t,start:'top 85%'}});});
+  document.querySelectorAll('.split:not(h1)').forEach(t=>{t.setAttribute('aria-label',t.textContent.replace(/\s+/g,' '));walk(t);t.querySelectorAll('.w').forEach(w=>w.setAttribute('aria-hidden','true'));gsap.from(t.querySelectorAll('.ch'),{rotateX:-95,yPercent:50,opacity:0,duration:1.1,ease:'expo.out',stagger:.02,scrollTrigger:{trigger:t,start:'clamp(top 85%)'}});});
   gsap.from(h1.querySelectorAll('.ch'),{rotateX:-95,yPercent:40,opacity:0,duration:1.1,ease:'expo.out',stagger:.022,delay:.1});
   gsap.from('.hero-sub, .hero .facts, .hero .eyebrow',{y:24,opacity:0,duration:1,ease:'power3.out',stagger:.1,delay:.5});
   gsap.from('.booking',{y:40,opacity:0,duration:1.1,ease:'power3.out',delay:.8});
@@ -161,8 +161,8 @@ addEventListener('DOMContentLoaded',()=>{
   // ¿Por qué Haven?: título letra a letra, chips que flotan, cinta que responde al scroll, íconos que se dibujan
   const wt=document.querySelector('.why-title');
   if(wt){wt.setAttribute('aria-label',wt.textContent.replace(/\s+/g,' '));const em=wt.querySelector('.shine'),emT=em.textContent;walk(wt);em.textContent=emT;em.setAttribute('aria-hidden','true');em.style.display='inline-block';wt.querySelectorAll('.w').forEach(w=>w.setAttribute('aria-hidden','true'));
-    const tl=gsap.timeline({scrollTrigger:{trigger:wt,start:'top 88%'}});tl.from(wt.querySelectorAll('.ch'),{rotateX:-100,yPercent:60,opacity:0,ease:'expo.out',duration:1.2,stagger:.03}).from(em,{rotateX:-80,y:50,opacity:0,filter:'blur(10px)',duration:1.4,ease:'expo.out',transformOrigin:'50% 100%'},'-=.8');
-    gsap.from('.gets li',{scale:.6,opacity:0,y:30,duration:.9,ease:'back.out(1.8)',stagger:.08,scrollTrigger:{trigger:'.gets',start:'top 88%'}});
+    const tl=gsap.timeline({scrollTrigger:{trigger:wt,start:'clamp(top 88%)'}});tl.from(wt.querySelectorAll('.ch'),{rotateX:-100,yPercent:60,opacity:0,ease:'expo.out',duration:1.2,stagger:.03}).from(em,{rotateX:-80,y:50,opacity:0,filter:'blur(10px)',duration:1.4,ease:'expo.out',transformOrigin:'50% 100%'},'-=.8');
+    gsap.from('.gets li',{scale:.6,opacity:0,y:30,duration:.9,ease:'back.out(1.8)',stagger:.08,scrollTrigger:{trigger:'.gets',start:'clamp(top 88%)'}});
     const tr=document.querySelector('.mq-track');let x=0,dir=-1,boost=0;
     ScrollTrigger.create({trigger:'.why',start:'top bottom',end:'bottom top',onUpdate:st=>{dir=st.direction>0?-1:1;boost=Math.min(Math.abs(st.getVelocity())/120,18);}});
     gsap.ticker.add(()=>{const half=tr.scrollWidth/2;x+=dir*(0.6+boost);boost*=.92;if(x<=-half)x+=half;if(x>0)x-=half;tr.style.transform=`translate3d(${x}px,0,0) skewX(${dir*-boost*.6}deg)`;});
@@ -171,7 +171,7 @@ addEventListener('DOMContentLoaded',()=>{
 
   // Marco del hero que se abre a pantalla completa
   if(matchMedia('(min-width: 821px)').matches){
-    gsap.fromTo('.hero-media',{clipPath:'inset(0% 6% 0% 6% round 28px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:'.hero-media',start:'top 88%',end:'top 5%',scrub:true}});
+    gsap.fromTo('.hero-media',{clipPath:'inset(0% 6% 0% 6% round 28px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:'.hero-media',start:'clamp(top 88%)',end:'top 5%',scrub:true}});
   }
   gsap.to('.hero-media img, .hero-media video',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero-media',start:'top bottom',end:'bottom top',scrub:true}});
 
@@ -179,7 +179,7 @@ addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.reveal-text').forEach(el=>{
     const txt=el.textContent.trim();el.setAttribute('aria-label',txt);
     el.innerHTML=txt.split(' ').map(w=>`<span class="wd" aria-hidden="true">${w}</span>`).join(' ');
-    gsap.to(el.querySelectorAll('.wd'),{color:'#191311',stagger:.1,ease:'none',scrollTrigger:{trigger:el,start:'top 88%',end:'bottom 45%',scrub:true}});
+    gsap.to(el.querySelectorAll('.wd'),{color:'#191311',stagger:.1,ease:'none',scrollTrigger:{trigger:el,start:'clamp(top 88%)',end:'bottom 45%',scrub:true}});
   });
   document.querySelectorAll('.floaters img').forEach(im=>{
     gsap.fromTo(im,{y:()=>parseFloat(im.dataset.speed)*-260,rotate:()=>parseFloat(im.dataset.speed)*-12},{y:()=>parseFloat(im.dataset.speed)*260,rotate:()=>parseFloat(im.dataset.speed)*12,ease:'none',scrollTrigger:{trigger:'.manifesto',start:'top bottom',end:'bottom top',scrub:true}});
@@ -192,7 +192,7 @@ addEventListener('DOMContentLoaded',()=>{
   if(matchMedia('(min-width: 821px)').matches){
     const suites=gsap.utils.toArray('.suite');
     suites.forEach((s,i)=>{if(i===suites.length-1)return;
-      gsap.to(s,{scale:.92,filter:'brightness(.55)',ease:'none',scrollTrigger:{trigger:suites[i+1],start:'top 85%',end:'top 15%',scrub:true}});});
+      gsap.to(s,{scale:.92,filter:'brightness(.55)',ease:'none',scrollTrigger:{trigger:suites[i+1],start:'clamp(top 85%)',end:'top 15%',scrub:true}});});
   }
 
   // Túnel 3D: fotos que vienen desde la profundidad
@@ -205,32 +205,32 @@ addEventListener('DOMContentLoaded',()=>{
       f.style.transform=`translate3d(${s.x*W()}px,${s.y*H()}px,${z}px)`;f.style.opacity=Math.max(0,Math.min(1,o));f.style.visibility=z>820?'hidden':'visible';});};
   place(0);
   ScrollTrigger.create({trigger:'.tunnel',start:'top top',end:'bottom bottom',scrub:true,onUpdate:st=>place(st.progress)});
-  gsap.fromTo('.tunnel-title',{scale:.85,opacity:.3},{scale:1,opacity:1,ease:'none',scrollTrigger:{trigger:'.tunnel',start:'top 88%',end:'top top',scrub:true}});
+  gsap.fromTo('.tunnel-title',{scale:.85,opacity:.3},{scale:1,opacity:1,ease:'none',scrollTrigger:{trigger:'.tunnel',start:'clamp(top 88%)',end:'top top',scrub:true}});
 
   // Tarjetas de experiencias
-  gsap.from('.exp-card',{y:140,rotateX:38,rotateY:i=>(i-1.5)*-10,opacity:0,transformOrigin:'50% 100%',duration:1.4,ease:'expo.out',stagger:.12,clearProps:'transform',scrollTrigger:{trigger:'.exp-grid',start:'top 85%'}});
-  gsap.utils.toArray('.exp-card').forEach(c=>gsap.fromTo(c,{clipPath:'inset(14% 8% 0% 8% round 22px)'},{clipPath:'inset(0% 0% 0% 0% round 22px)',ease:'none',scrollTrigger:{trigger:c,start:'top 100%',end:'top 55%',scrub:true}}));
+  gsap.from('.exp-card',{y:140,rotateX:38,rotateY:i=>(i-1.5)*-10,opacity:0,transformOrigin:'50% 100%',duration:1.4,ease:'expo.out',stagger:.12,clearProps:'transform',scrollTrigger:{trigger:'.exp-grid',start:'clamp(top 85%)'}});
+  gsap.utils.toArray('.exp-card').forEach(c=>gsap.fromTo(c,{clipPath:'inset(14% 8% 0% 8% round 22px)'},{clipPath:'inset(0% 0% 0% 0% round 22px)',ease:'none',scrollTrigger:{trigger:c,start:'clamp(top 100%)',end:'top 55%',scrub:true}}));
 
   // Fotos de suites y acomodación: se revelan con cortina y zoom al hacer scroll
   gsap.utils.toArray('.suite-media').forEach(m=>{
-    gsap.fromTo(m,{clipPath:'inset(0% 0% 100% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:1.3,ease:'expo.inOut',scrollTrigger:{trigger:m,start:'top 85%'}});
-    gsap.fromTo(m.querySelector('.main'),{scale:1.35},{scale:1,duration:1.8,ease:'expo.out',scrollTrigger:{trigger:m,start:'top 85%'}});
+    gsap.fromTo(m,{clipPath:'inset(0% 0% 100% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:1.3,ease:'expo.inOut',scrollTrigger:{trigger:m,start:'clamp(top 85%)'}});
+    gsap.fromTo(m.querySelector('.main'),{scale:1.35},{scale:1,duration:1.8,ease:'expo.out',scrollTrigger:{trigger:m,start:'clamp(top 85%)'}});
   });
-  gsap.from('.room-stage',{clipPath:'inset(30% 20% 30% 20% round 40px)',duration:1.6,ease:'expo.out',scrollTrigger:{trigger:'.room-switch',start:'top 88%'}});
-  gsap.from('.room-list li',{x:-60,opacity:0,duration:1,ease:'power3.out',stagger:.09,scrollTrigger:{trigger:'.room-list',start:'top 88%'}});
-  gsap.from('.map-frame',{clipPath:'inset(20% 20% 20% 20% round 60px)',scale:.9,duration:1.6,ease:'expo.out',scrollTrigger:{trigger:'.location',start:'top 88%'}});
-  gsap.from('.loc-copy > *',{y:30,opacity:0,stagger:.08,duration:.9,ease:'power3.out',scrollTrigger:{trigger:'.location',start:'top 88%'}});
+  gsap.from('.room-stage',{clipPath:'inset(30% 20% 30% 20% round 40px)',duration:1.6,ease:'expo.out',scrollTrigger:{trigger:'.room-switch',start:'clamp(top 88%)'}});
+  gsap.from('.room-list li',{x:-60,opacity:0,duration:1,ease:'power3.out',stagger:.09,scrollTrigger:{trigger:'.room-list',start:'clamp(top 88%)'}});
+  gsap.from('.map-frame',{clipPath:'inset(20% 20% 20% 20% round 60px)',scale:.9,duration:1.6,ease:'expo.out',scrollTrigger:{trigger:'.location',start:'clamp(top 88%)'}});
+  gsap.from('.loc-copy > *',{y:30,opacity:0,stagger:.08,duration:.9,ease:'power3.out',scrollTrigger:{trigger:'.location',start:'clamp(top 88%)'}});
 
   // Contadores
   document.querySelectorAll('[data-count]').forEach(el=>{
     const end=parseFloat(el.dataset.count),dec=+el.dataset.dec||0,sup=el.querySelector('sup');const o={v:0};
-    ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:()=>gsap.to(o,{v:end,duration:1.8,ease:'power2.out',onUpdate:()=>{el.firstChild.nodeValue=o.v.toLocaleString(document.documentElement.lang==='en'?'en-US':'es-CO',{minimumFractionDigits:dec,maximumFractionDigits:dec});}})});
+    ScrollTrigger.create({trigger:el,start:'clamp(top 90%)',once:true,onEnter:()=>gsap.to(o,{v:end,duration:1.8,ease:'power2.out',onUpdate:()=>{el.firstChild.nodeValue=o.v.toLocaleString(document.documentElement.lang==='en'?'en-US':'es-CO',{minimumFractionDigits:dec,maximumFractionDigits:dec});}})});
     if(!el.firstChild||el.firstChild.nodeType!==3)el.prepend(document.createTextNode(''));
   });
 
   // Tarjetas de membresía entrando
-  gsap.from('.tier-wrap',{y:90,rotateX:25,opacity:0,duration:1.2,ease:'power3.out',stagger:.12,scrollTrigger:{trigger:'.tiers',start:'top 85%'}});
-  gsap.fromTo('.wordmark',{yPercent:30,opacity:.2},{yPercent:0,opacity:1,ease:'none',scrollTrigger:{trigger:'.wordmark',start:'top bottom',end:'bottom bottom',scrub:true}});
+  gsap.from('.tier-wrap',{y:90,rotateX:25,opacity:0,duration:1.2,ease:'power3.out',stagger:.12,scrollTrigger:{trigger:'.tiers',start:'clamp(top 85%)'}});
+  gsap.fromTo('.wordmark',{yPercent:18,opacity:.25},{yPercent:0,opacity:1,duration:1.4,ease:'power3.out',scrollTrigger:{trigger:'.site-footer .foot-grid',start:'clamp(top 85%)',once:true}});
 });
 
 /* Acomodación en celular: copia la foto de cada categoría dentro de su tarjeta */
@@ -290,11 +290,11 @@ addEventListener('DOMContentLoaded',()=>{
     gsap.to(ph.firstElementChild,{yPercent:-10,ease:'none',scrollTrigger:{trigger:'.ph',start:'top top',end:'bottom top',scrub:true}});
     gsap.from('.ph .crumbs,.ph .eyebrow,.ph-row>*',{y:30,opacity:0,duration:1,ease:'power3.out',stagger:.1,delay:.5});}
   // Aparición escalonada genérica
-  document.querySelectorAll('[data-reveal]').forEach(g=>gsap.from(g.children,{y:50,opacity:0,duration:1.05,ease:'power3.out',stagger:.09,scrollTrigger:{trigger:g,start:'top 86%'}}));
+  document.querySelectorAll('[data-reveal]').forEach(g=>gsap.from(g.children,{y:50,opacity:0,duration:1.05,ease:'power3.out',stagger:.09,scrollTrigger:{trigger:g,start:'clamp(top 86%)'}}));
   // Fotos con cortina + zoom
   document.querySelectorAll('.img-reveal').forEach(m=>{const im=m.querySelector('img,video');
-    gsap.fromTo(m,{clipPath:'inset(100% 0% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:1.4,ease:'expo.inOut',scrollTrigger:{trigger:m,start:'top 88%'}});
-    if(im)gsap.fromTo(im,{scale:1.35},{scale:1,duration:2,ease:'expo.out',scrollTrigger:{trigger:m,start:'top 88%'}});});
+    gsap.fromTo(m,{clipPath:'inset(100% 0% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:1.4,ease:'expo.inOut',scrollTrigger:{trigger:m,start:'clamp(top 88%)'}});
+    if(im)gsap.fromTo(im,{scale:1.35},{scale:1,duration:2,ease:'expo.out',scrollTrigger:{trigger:m,start:'clamp(top 88%)'}});});
   // Parallax
   document.querySelectorAll('[data-speed]').forEach(el=>{if(el.closest('.floaters'))return;const s=parseFloat(el.dataset.speed)||.15;
     gsap.fromTo(el,{yPercent:-s*100},{yPercent:s*100,ease:'none',scrollTrigger:{trigger:el.parentElement,start:'top bottom',end:'bottom top',scrub:true}});});
@@ -305,15 +305,15 @@ addEventListener('DOMContentLoaded',()=>{
       onUpdate:st=>{items.forEach((it,k)=>{const r=it.getBoundingClientRect();it.querySelector('img').style.setProperty('--px',((r.left+r.width/2)/innerWidth-.5)*-60+'px');});
         if(cnt)cnt.textContent=String(Math.min(items.length,1+Math.round(st.progress*(items.length-1)))).padStart(2,'0');}}});});
   // Tarjetas entrando en 3D
-  document.querySelectorAll('.cards').forEach(g=>gsap.from(g.querySelectorAll('.card'),{y:110,rotateX:24,opacity:0,transformOrigin:'50% 100%',duration:1.3,ease:'expo.out',stagger:.08,clearProps:'transform',scrollTrigger:{trigger:g,start:'top 85%'}}));
+  document.querySelectorAll('.cards').forEach(g=>gsap.from(g.querySelectorAll('.card'),{y:110,rotateX:24,opacity:0,transformOrigin:'50% 100%',duration:1.3,ease:'expo.out',stagger:.08,clearProps:'transform',scrollTrigger:{trigger:g,start:'clamp(top 85%)'}}));
   // Arco: se abre desde abajo
-  document.querySelectorAll('.arch').forEach(a=>gsap.fromTo(a,{clipPath:'inset(40% 10% 0% 10% round 999px 999px 28px 28px)'},{clipPath:'inset(0% 0% 0% 0% round 999px 999px 28px 28px)',ease:'none',scrollTrigger:{trigger:a,start:'top 95%',end:'top 35%',scrub:true}}));
-  document.querySelectorAll('.arch-float').forEach(a=>gsap.from(a,{scale:.4,rotate:-25,opacity:0,duration:1.4,ease:'back.out(1.6)',scrollTrigger:{trigger:a,start:'top 90%'}}));
+  document.querySelectorAll('.arch').forEach(a=>gsap.fromTo(a,{clipPath:'inset(40% 10% 0% 10% round 999px 999px 28px 28px)'},{clipPath:'inset(0% 0% 0% 0% round 999px 999px 28px 28px)',ease:'none',scrollTrigger:{trigger:a,start:'clamp(top 95%)',end:'top 35%',scrub:true}}));
+  document.querySelectorAll('.arch-float').forEach(a=>gsap.from(a,{scale:.4,rotate:-25,opacity:0,duration:1.4,ease:'back.out(1.6)',scrollTrigger:{trigger:a,start:'clamp(top 90%)'}}));
   // Frase grande palabra a palabra (dorado)
   document.querySelectorAll('.bigq p:not(.eyebrow)').forEach(el=>{const txt=el.textContent.trim();el.setAttribute('aria-label',txt);el.innerHTML=txt.split(' ').map(w=>`<span class="wd" aria-hidden="true" style="opacity:.15;display:inline-block">${w}</span>`).join(' ');
-    gsap.to(el.querySelectorAll('.wd'),{opacity:1,stagger:.08,ease:'none',scrollTrigger:{trigger:el,start:'top 88%',end:'bottom 50%',scrub:true}});});
+    gsap.to(el.querySelectorAll('.wd'),{opacity:1,stagger:.08,ease:'none',scrollTrigger:{trigger:el,start:'clamp(top 88%)',end:'bottom 50%',scrub:true}});});
   // Specs con contador
-  document.querySelectorAll('.rd-specs b[data-n]').forEach(b=>{const end=+b.dataset.n,o={v:0};ScrollTrigger.create({trigger:b,start:'top 92%',once:true,onEnter:()=>gsap.to(o,{v:end,duration:1.6,ease:'power2.out',onUpdate:()=>b.textContent=Math.round(o.v)+(b.dataset.u||'')})});});
+  document.querySelectorAll('.rd-specs b[data-n]').forEach(b=>{const end=+b.dataset.n,o={v:0};ScrollTrigger.create({trigger:b,start:'clamp(top 92%)',once:true,onEnter:()=>gsap.to(o,{v:end,duration:1.6,ease:'power2.out',onUpdate:()=>b.textContent=Math.round(o.v)+(b.dataset.u||'')})});});
 });
 
 /* hv-warm: después de cargar, precarga en segundo plano las imágenes de abajo para que aparezcan al instante al hacer scroll */
@@ -328,6 +328,8 @@ addEventListener('load',()=>{if(navigator.connection&&(navigator.connection.save
   const refresh=()=>{if(window.ScrollTrigger)ScrollTrigger.refresh();};
   addEventListener('load',()=>{refresh();(window.__hvAfterIntro||(f=>f()))(()=>{refresh();setTimeout(refresh,1500);});});
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(refresh);
+  // si la altura de la página cambia (fotos que cargan, la guía que se arma, etc.), recalcula los disparadores
+  if('ResizeObserver' in window){let tm=0,lastH=0;new ResizeObserver(()=>{const h=document.body.scrollHeight;if(Math.abs(h-lastH)<40)return;lastH=h;clearTimeout(tm);tm=setTimeout(refresh,350);}).observe(document.body);}
   const SEL='.tier-wrap,.exp-card,.gets li,.room-list li,.room-stage,.card,.ig-card,.plan,.benefit,.stat,.suite,[data-reveal],.loc-copy > *,.map-frame,.booking';
   setInterval(()=>{if(!window.gsap)return;document.querySelectorAll(SEL).forEach(el=>{
     if(parseFloat(getComputedStyle(el).opacity)>0.05){el.__hvSeen=0;return;}

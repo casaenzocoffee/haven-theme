@@ -288,7 +288,7 @@ def fixhref(h, wa_text):
         return P(h).replace('/es/servicios/', '{{R}}servicios/'), False
     return h, h.startswith('http')
 
-def page_experience(slug, h1, sub, hero_img, crumbs_name, gal_title, wa_text, key, after_first=''):
+def page_experience(slug, h1, sub, hero_img, crumbs_name, gal_title, wa_text, key, after_first='', first_img=None):
     secs = sections_of(slug)
     imgs_all = [u for s in secs for u in s['imgs']]
     body = hero(h1, sub, hero_img, [('Inicio', '{{R}}'), (crumbs_name, '')], 'Haven · Medellín')
@@ -308,7 +308,8 @@ def page_experience(slug, h1, sub, hero_img, crumbs_name, gal_title, wa_text, ke
         words = title.split(' ')
         if len(words) > 1:
             title = ' '.join(words[:-1]) + f' <em>{words[-1]}</em>'
-        body += editorial(s['eyebrow'] or crumbs_name, title, s['paras'], ims[0] if ims else hero_img, ims[1] if len(ims) > 1 else None, flip=n % 2 == 1, cream=n % 2 == 1, cta=cta)
+        main_img = first_img if (n == 0 and first_img) else (ims[0] if ims else hero_img)
+        body += editorial(s['eyebrow'] or crumbs_name, title, s['paras'], main_img, ims[1] if len(ims) > 1 else None, flip=n % 2 == 1, cream=n % 2 == 1, cta=cta)
         if n == 0 and after_first:
             body += after_first
         if n == 0 and len(imgs_all) >= 5:
@@ -601,7 +602,7 @@ def main():
     add('rooftop', 'rooftop', '360° Rooftop: piscina y bar con vista a Medellín | Haven', 'Bar y piscina en el piso 11 con vista panorámica de 360° de Medellín. Cócteles de autor, Sunny Days y atardeceres en El Poblado.',
         page_experience('360-rooftop', '360° Rooftop <em>&amp; Restaurant</em>', 'Medellín desde el cielo: piscina, cócteles de autor y la mejor vista de El Poblado.', '/wp-content/uploads/2026/06/hotel-haven-rooftop-360-4.webp', '360° Rooftop', 'Atardeceres <em>en el 11</em>', 'Hola, quiero reservar en el 360 Rooftop', 'rooftop'))
     add('swing', 'swing', 'Swing Bar: café de día, cócteles de noche | Haven Medellín', 'Swing Bar en el vestíbulo de Haven: café colombiano por la mañana, vinos, cervezas y cócteles por la noche en El Poblado.',
-        page_experience('swing-bar', 'Swing <em>Coffee Bar</em>', 'Café colombiano por la mañana, cócteles de autor por la noche.', '/wp-content/uploads/2026/06/swing-bar-6.webp', 'Swing Bar', 'El <em>Swing</em>', 'Hola, quiero reservar en el Swing Bar', 'swing', casa_enzo()))
+        page_experience('swing-bar', 'Swing <em>Coffee Bar</em>', 'Café colombiano por la mañana, cócteles de autor por la noche.', '/wp-content/uploads/2026/06/swing-bar-6.webp', 'Swing Bar', 'El <em>Swing</em>', 'Hola, quiero reservar en el Swing Bar', 'swing', casa_enzo(), '{{R}}media/swing-cafe.webp'))
     add('gastronomia', 'gastronomia', 'Gastronomía en el 360° Rooftop | Haven Medellín', 'Pizzas artesanales, salmón, albóndigas y cocina local e internacional con vista a Medellín en el 360° Rooftop.', page_gastronomia())
     add('wellness', 'wellness', 'Wellness: masajes, faciales y sueroterapia | Haven Medellín', 'Masaje relajante, hidratación facial y terapia de sueros Ultra Vit para recuperarte del viaje en Haven, El Poblado.',
         page_experience('wellness', '<em>Wellness</em>', 'Rituales para recuperar el equilibrio después del viaje.', '/wp-content/uploads/2026/07/masaje-relajante.webp', 'Wellness', 'Bienestar <em>y equilibrio</em>', 'Hola, quiero agendar un servicio de wellness', 'wellness'))
