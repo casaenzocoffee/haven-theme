@@ -66,7 +66,9 @@ FONTS = 'https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9.
 REAL = {}
 GVER = ''
 # Contenedor de Google Tag Manager (GA4, Google Ads, Meta). Vacío = no se carga.
-GTM_ID = ''
+GTM_ID = 'GTM-TVFGX8W'
+# Solo se carga en producción (HV_PROD=1), para que las visitas y pruebas del prototipo no ensucien GA4 ni las conversiones de Google Ads.
+GTM_ON = os.environ.get('HV_PROD') == '1'
 
 # Herramientas "Medellín desde Haven" (mismo código del plugin haven-guia).
 # En una página se insertan con <!--HG:guia-->, <!--HG:mapa--> o <!--HG:quiz-->.
@@ -120,7 +122,7 @@ def head(page, R, ver):
     if crumbs:
         extra += '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "name": n, **({"item": u} if u else {})} for i, (n, u) in enumerate(crumbs)]}, ensure_ascii=False) + '</script>\n'
-    gtm = ("<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','" + GTM_ID + "');</script>\n") if GTM_ID else ''
+    gtm = ("<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','" + GTM_ID + "');</script>\n") if (GTM_ID and GTM_ON) else ''
     hgcss = f'\n<link rel="stylesheet" href="{R}assets/haven-guia.css?v={GVER}">' if page.get('_hg') else ''
     preload = ''.join(f'<link rel="preload" as="image" href="{u}" fetchpriority="high">\n' for u in page.get('preload', []))
     return f'''<!doctype html>

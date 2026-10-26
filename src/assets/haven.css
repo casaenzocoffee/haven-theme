@@ -320,7 +320,7 @@ html.intro-on,html.intro-on body{overflow:hidden}
 .mbar{display:none}
 
 /* ---------- Responsive ---------- */
-@media (max-width:1300px){
+@media (max-width:1360px){
   .nav{display:none}
   .menu-btn{display:grid;place-items:center;margin-left:0}
   .lang{display:flex;align-items:center;margin-left:auto;margin-right:2px;height:40px;padding:0 6px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);font-size:13px;gap:2px}
