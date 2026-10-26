@@ -328,14 +328,14 @@ def casa_enzo():
                  p2='It is the coffee we serve at Haven, and you can take it home: a bag of Casa Enzo is a gift that carries the taste of origin.',
                  facts=[('Origin', 'Santa Elena, Medellín'), ('Altitude', '1,699 m'), ('Variety', 'Caturra · light honey'), ('Lot', 'Artisanal micro-lot')],
                  where='Enjoy it at', places=['Swing Coffee Bar', 'Our breakfast', 'Every room', 'To take home as a gift'],
-                 cta='See more', alt=['Casa Enzo Coffee bag, Primera Luz', 'Pouring coffee over a Chemex', 'Roasted coffee, green coffee and coffee cherries'])
+                 cta='See more', ig='Follow us', alt=['Casa Enzo Coffee bag, Primera Luz', 'Pouring coffee over a Chemex', 'Roasted coffee, green coffee and coffee cherries'])
     else:
         t = dict(eb='Nuestro café insignia', h='Casa Enzo <em>Coffee</em>',
                  p1='Café de especialidad colombiano, cultivado por caficultores colombianos y tostado en Medellín. Su primer lote, Primera Luz, es un Caturra cosechado a mano a 1.699 metros en las montañas de Santa Elena, sobre la ciudad: un microlote artesanal con notas de manzana verde, frutos amarillos y caña de azúcar.',
                  p2='Es el café que servimos en Haven, y también puedes llevártelo: una bolsa de Casa Enzo es un regalo con el sabor del origen.',
                  facts=[('Origen', 'Santa Elena, Medellín'), ('Altura', '1.699 msnm'), ('Variedad', 'Caturra · honey claro'), ('Lote', 'Microlote artesanal')],
                  where='Lo encuentras en', places=['Swing Coffee Bar', 'Nuestro desayuno', 'Todas las habitaciones', 'Para llevar de regalo'],
-                 cta='Ver más', alt=['Bolsa de Casa Enzo Coffee, Primera Luz', 'Café filtrado en Chemex', 'Café tostado, café verde y cerezas de café'])
+                 cta='Ver más', ig='Síguenos', alt=['Bolsa de Casa Enzo Coffee, Primera Luz', 'Café filtrado en Chemex', 'Café tostado, café verde y cerezas de café'])
     imgs = [CE_IMG + 'files/WhatsApp_Image_2026-10-21_at_10_16_43_AM.jpg?v=1792596874&width=1000',
             CE_IMG + 'articles/hf_20261024_235910_6ef4ebc1-6fc7-4975-97b4-9f50157d0c07.png?v=1792886467&width=700',
             CE_IMG + 'articles/hf_20261024_235944_e3420dd7-0d73-444f-81ac-9a9f38e6d61e.png?v=1792886474&width=700']
@@ -356,7 +356,7 @@ def casa_enzo():
       <div class="ce-facts">{facts}</div>
       <p class="ce-where">{e(t['where'])}</p>
       <ul class="ce-places">{places}</ul>
-      <div style="margin-top:30px">{btn(t['cta'], url, 'gold', 'casa_enzo_ver_mas', True)}</div>
+      <div class="ce-ctas">{btn(t['cta'], url, 'gold', 'casa_enzo_ver_mas', True)}<a class="btn btn-ghost ce-ig" href="https://www.instagram.com/casaenzocoffee" target="_blank" rel="noopener" data-track="casa_enzo_instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>{e(t['ig'])} <b>@casaenzocoffee</b></a></div>
     </div>
   </div>
 </section>

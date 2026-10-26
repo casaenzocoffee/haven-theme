@@ -691,3 +691,8 @@ html.intro-on,html.intro-on body{overflow:hidden}
 .intro-load::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,#F7DFAE,#CDB371,transparent);transform:translateX(-100%);animation:introLoad 1.15s cubic-bezier(.6,0,.4,1) infinite;will-change:transform}
 @keyframes introLoad{to{transform:translateX(100%)}}
 .intro.go .intro-load{opacity:0}
+
+.ce-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;align-items:center}
+.ce-ig{display:inline-flex;align-items:center;gap:10px}
+.ce-ig svg{width:18px;height:18px;flex:none}
+.ce-ig b{font-weight:600;color:var(--gold);text-transform:none;letter-spacing:.02em}
