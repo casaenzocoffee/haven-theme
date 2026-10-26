@@ -136,8 +136,8 @@ addEventListener('load',()=>{const v=document.querySelector('.hero-video');if(v&
 addEventListener('DOMContentLoaded',()=>{
   if(!window.gsap){document.body.classList.add('reduce');return;}
   if(document.body.classList.contains('reduce'))return;
-  gsap.registerPlugin(ScrollTrigger);
-  const lenis=window.Lenis?new Lenis({lerp:.1}):null;
+  gsap.registerPlugin(ScrollTrigger);gsap.globalTimeline.timeScale(1.5);
+  const lenis=window.Lenis?new Lenis({lerp:.16,wheelMultiplier:1.1}):null;
   if(lenis){lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
     document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1&&document.querySelector(id)){e.preventDefault();lenis.scrollTo(id,{offset:-140});}}));}
 
@@ -161,7 +161,7 @@ addEventListener('DOMContentLoaded',()=>{
   // ¿Por qué Haven?: título letra a letra, chips que flotan, cinta que responde al scroll, íconos que se dibujan
   const wt=document.querySelector('.why-title');
   if(wt){wt.setAttribute('aria-label',wt.textContent.replace(/\s+/g,' '));const em=wt.querySelector('.shine'),emT=em.textContent;walk(wt);em.textContent=emT;em.setAttribute('aria-hidden','true');em.style.display='inline-block';wt.querySelectorAll('.w').forEach(w=>w.setAttribute('aria-hidden','true'));
-    const tl=gsap.timeline({scrollTrigger:{trigger:wt,start:'top 82%'}});tl.from(wt.querySelectorAll('.ch'),{rotateX:-100,yPercent:60,opacity:0,ease:'expo.out',duration:1.2,stagger:.03}).from(em,{rotateX:-80,y:50,opacity:0,filter:'blur(10px)',duration:1.4,ease:'expo.out',transformOrigin:'50% 100%'},'-=.8');
+    const tl=gsap.timeline({scrollTrigger:{trigger:wt,start:'top 88%'}});tl.from(wt.querySelectorAll('.ch'),{rotateX:-100,yPercent:60,opacity:0,ease:'expo.out',duration:1.2,stagger:.03}).from(em,{rotateX:-80,y:50,opacity:0,filter:'blur(10px)',duration:1.4,ease:'expo.out',transformOrigin:'50% 100%'},'-=.8');
     gsap.from('.gets li',{scale:.6,opacity:0,y:30,duration:.9,ease:'back.out(1.8)',stagger:.08,scrollTrigger:{trigger:'.gets',start:'top 88%'}});
     const tr=document.querySelector('.mq-track');let x=0,dir=-1,boost=0;
     ScrollTrigger.create({trigger:'.why',start:'top bottom',end:'bottom top',onUpdate:st=>{dir=st.direction>0?-1:1;boost=Math.min(Math.abs(st.getVelocity())/120,18);}});
@@ -171,7 +171,7 @@ addEventListener('DOMContentLoaded',()=>{
 
   // Marco del hero que se abre a pantalla completa
   if(matchMedia('(min-width: 821px)').matches){
-    gsap.fromTo('.hero-media',{clipPath:'inset(0% 6% 0% 6% round 28px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:'.hero-media',start:'top 70%',end:'top 5%',scrub:true}});
+    gsap.fromTo('.hero-media',{clipPath:'inset(0% 6% 0% 6% round 28px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:'.hero-media',start:'top 88%',end:'top 5%',scrub:true}});
   }
   gsap.to('.hero-media img, .hero-media video',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero-media',start:'top bottom',end:'bottom top',scrub:true}});
 
@@ -179,7 +179,7 @@ addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.reveal-text').forEach(el=>{
     const txt=el.textContent.trim();el.setAttribute('aria-label',txt);
     el.innerHTML=txt.split(' ').map(w=>`<span class="wd" aria-hidden="true">${w}</span>`).join(' ');
-    gsap.to(el.querySelectorAll('.wd'),{color:'#191311',stagger:.1,ease:'none',scrollTrigger:{trigger:el,start:'top 80%',end:'bottom 45%',scrub:true}});
+    gsap.to(el.querySelectorAll('.wd'),{color:'#191311',stagger:.1,ease:'none',scrollTrigger:{trigger:el,start:'top 88%',end:'bottom 45%',scrub:true}});
   });
   document.querySelectorAll('.floaters img').forEach(im=>{
     gsap.fromTo(im,{y:()=>parseFloat(im.dataset.speed)*-260,rotate:()=>parseFloat(im.dataset.speed)*-12},{y:()=>parseFloat(im.dataset.speed)*260,rotate:()=>parseFloat(im.dataset.speed)*12,ease:'none',scrollTrigger:{trigger:'.manifesto',start:'top bottom',end:'bottom top',scrub:true}});
@@ -205,7 +205,7 @@ addEventListener('DOMContentLoaded',()=>{
       f.style.transform=`translate3d(${s.x*W()}px,${s.y*H()}px,${z}px)`;f.style.opacity=Math.max(0,Math.min(1,o));f.style.visibility=z>820?'hidden':'visible';});};
   place(0);
   ScrollTrigger.create({trigger:'.tunnel',start:'top top',end:'bottom bottom',scrub:true,onUpdate:st=>place(st.progress)});
-  gsap.fromTo('.tunnel-title',{scale:.85,opacity:.3},{scale:1,opacity:1,ease:'none',scrollTrigger:{trigger:'.tunnel',start:'top 60%',end:'top top',scrub:true}});
+  gsap.fromTo('.tunnel-title',{scale:.85,opacity:.3},{scale:1,opacity:1,ease:'none',scrollTrigger:{trigger:'.tunnel',start:'top 88%',end:'top top',scrub:true}});
 
   // Tarjetas de experiencias
   gsap.from('.exp-card',{y:140,rotateX:38,rotateY:i=>(i-1.5)*-10,opacity:0,transformOrigin:'50% 100%',duration:1.4,ease:'expo.out',stagger:.12,clearProps:'transform',scrollTrigger:{trigger:'.exp-grid',start:'top 85%'}});
@@ -216,10 +216,10 @@ addEventListener('DOMContentLoaded',()=>{
     gsap.fromTo(m,{clipPath:'inset(0% 0% 100% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:1.3,ease:'expo.inOut',scrollTrigger:{trigger:m,start:'top 85%'}});
     gsap.fromTo(m.querySelector('.main'),{scale:1.35},{scale:1,duration:1.8,ease:'expo.out',scrollTrigger:{trigger:m,start:'top 85%'}});
   });
-  gsap.from('.room-stage',{clipPath:'inset(30% 20% 30% 20% round 40px)',duration:1.6,ease:'expo.out',scrollTrigger:{trigger:'.room-switch',start:'top 75%'}});
-  gsap.from('.room-list li',{x:-60,opacity:0,duration:1,ease:'power3.out',stagger:.09,scrollTrigger:{trigger:'.room-list',start:'top 80%'}});
-  gsap.from('.map-frame',{clipPath:'inset(20% 20% 20% 20% round 60px)',scale:.9,duration:1.6,ease:'expo.out',scrollTrigger:{trigger:'.location',start:'top 75%'}});
-  gsap.from('.loc-copy > *',{y:30,opacity:0,stagger:.08,duration:.9,ease:'power3.out',scrollTrigger:{trigger:'.location',start:'top 75%'}});
+  gsap.from('.room-stage',{clipPath:'inset(30% 20% 30% 20% round 40px)',duration:1.6,ease:'expo.out',scrollTrigger:{trigger:'.room-switch',start:'top 88%'}});
+  gsap.from('.room-list li',{x:-60,opacity:0,duration:1,ease:'power3.out',stagger:.09,scrollTrigger:{trigger:'.room-list',start:'top 88%'}});
+  gsap.from('.map-frame',{clipPath:'inset(20% 20% 20% 20% round 60px)',scale:.9,duration:1.6,ease:'expo.out',scrollTrigger:{trigger:'.location',start:'top 88%'}});
+  gsap.from('.loc-copy > *',{y:30,opacity:0,stagger:.08,duration:.9,ease:'power3.out',scrollTrigger:{trigger:'.location',start:'top 88%'}});
 
   // Contadores
   document.querySelectorAll('[data-count]').forEach(el=>{
@@ -311,7 +311,7 @@ addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.arch-float').forEach(a=>gsap.from(a,{scale:.4,rotate:-25,opacity:0,duration:1.4,ease:'back.out(1.6)',scrollTrigger:{trigger:a,start:'top 90%'}}));
   // Frase grande palabra a palabra (dorado)
   document.querySelectorAll('.bigq p:not(.eyebrow)').forEach(el=>{const txt=el.textContent.trim();el.setAttribute('aria-label',txt);el.innerHTML=txt.split(' ').map(w=>`<span class="wd" aria-hidden="true" style="opacity:.15;display:inline-block">${w}</span>`).join(' ');
-    gsap.to(el.querySelectorAll('.wd'),{opacity:1,stagger:.08,ease:'none',scrollTrigger:{trigger:el,start:'top 80%',end:'bottom 50%',scrub:true}});});
+    gsap.to(el.querySelectorAll('.wd'),{opacity:1,stagger:.08,ease:'none',scrollTrigger:{trigger:el,start:'top 88%',end:'bottom 50%',scrub:true}});});
   // Specs con contador
   document.querySelectorAll('.rd-specs b[data-n]').forEach(b=>{const end=+b.dataset.n,o={v:0};ScrollTrigger.create({trigger:b,start:'top 92%',once:true,onEnter:()=>gsap.to(o,{v:end,duration:1.6,ease:'power2.out',onUpdate:()=>b.textContent=Math.round(o.v)+(b.dataset.u||'')})});});
 });
