@@ -230,7 +230,7 @@ addEventListener('DOMContentLoaded',()=>{
 
   // Tarjetas de membresía entrando
   gsap.from('.tier-wrap',{y:90,rotateX:25,opacity:0,duration:1.2,ease:'power3.out',stagger:.12,scrollTrigger:{trigger:'.tiers',start:'clamp(top 85%)'}});
-  gsap.fromTo('.wordmark',{yPercent:18,opacity:.25},{yPercent:0,opacity:1,duration:1.4,ease:'power3.out',scrollTrigger:{trigger:'.site-footer .foot-grid',start:'clamp(top 85%)',once:true}});
+  gsap.fromTo('.wordmark',{yPercent:12},{yPercent:0,duration:1.4,ease:'power3.out',scrollTrigger:{trigger:'.site-footer .foot-grid',start:'clamp(top 85%)',once:true}});
 });
 
 /* Acomodación en celular: copia la foto de cada categoría dentro de su tarjeta */

@@ -283,6 +283,14 @@ def build():
         html = re.sub(r'((?<=[/"])media/[\w.-]+\.(?:mp4|webp))"', lambda m: m.group(1) + '?v=' + MVF.get(m.group(1).split('/')[-1], '1') + '"', html)
         html = brand(html)
         html = responsive(html)
+        # precarga la foto principal (LCP) de las páginas internas con su srcset
+        hm = re.search(r'<div class="ph-media"><img ([^>]*)>', html)
+        if hm:
+            a = hm.group(1)
+            src = re.search(r'src="([^"]+)"', a); ss = re.search(r'srcset="([^"]+)"', a); sz = re.search(r'sizes="([^"]+)"', a)
+            if src:
+                pl = f'<link rel="preload" as="image" href="{src.group(1)}"' + (f' imagesrcset="{ss.group(1)}" imagesizes="{sz.group(1)}"' if ss else '') + ' fetchpriority="high">\n'
+                html = html.replace('<link rel="stylesheet" href="https://fonts.googleapis.com', pl + '<link rel="stylesheet" href="https://fonts.googleapis.com', 1) if '<link rel="stylesheet" href="https://fonts.googleapis.com' in html else html.replace('</head>', pl + '</head>', 1)
         out = os.path.join(DIST, slug, 'index.html') if slug else os.path.join(DIST, 'index.html')
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with open(out, 'w', encoding='utf-8') as f:
