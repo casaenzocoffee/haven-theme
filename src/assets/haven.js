@@ -90,7 +90,7 @@
 })();
 
 /* ---------- Video del hero: se carga después de la página ---------- */
-addEventListener('load',()=>{const v=document.querySelector('.hero-video');if(!v||!matchMedia('(min-width: 900px)').matches||(navigator.connection&&navigator.connection.saveData))return;
+addEventListener('load',()=>{const v=document.querySelector('.hero-video');if(v&&v.dataset.srcM&&!matchMedia('(min-width: 900px)').matches){v.dataset.src=v.dataset.srcM;}if(!v||(!matchMedia('(min-width: 900px)').matches&&!v.dataset.srcM)||(navigator.connection&&navigator.connection.saveData))return;
   setTimeout(()=>{v.src=v.dataset.src;v.addEventListener('playing',()=>v.classList.add('playing'),{once:true});v.play().catch(()=>{});},600);});
 
 /* ---------- Animaciones (GSAP + Lenis), se cargan diferidas ---------- */

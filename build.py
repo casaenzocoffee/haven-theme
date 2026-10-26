@@ -22,7 +22,14 @@ NAV_MAP = {
     '/es/wellness/': 'wellness/',
     '/es/eventos/': 'eventos/',
     '/es/contacto/': 'contacto/',
+    '/es/penthouse/': 'penthouse/', '/es/presidencial/': 'presidencial/', '/es/suites-de-lujo/': 'suites-de-lujo/',
+    '/es/servicios/': 'servicios/', '/es/preguntas-frecuentes/': 'preguntas-frecuentes/',
 }
+for _s in ['suite-emperor-901','suite-emperor-902','suite-presidential','suite-imperial-402','suite-excelsior-401','suite-excelsior-804','suite-excelsior-604',
+           'habitacion-ambassador','habitacion-ambassador-jr','habitacion-viscount-803','habitacion-viscount','habitacion-lord','habitacion-earl',
+           'habitacion-marques-plus','habitacion-marques','habitacion-duke','habitacion-consort']:
+    NAV_MAP['/es/'+_s+'/'] = 'habitacion/'+_s+'/'
+NAV_MAP['/es/suite-presidencial/'] = 'habitacion/suite-presidential/'
 
 def head(page, R, ver):
     canonical = 'https://havenmedellin.com' + page.get('canonical', '/es/')
