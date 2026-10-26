@@ -8,7 +8,21 @@
   "canonical": "/es/",
   "og": "/wp-content/uploads/revslider/video-media/video-haven-medellin.webp",
   "extra_head_file": "partials/home_head_extra.html",
-  "clock": true
+  "clock": true,
+  "static": true
+ },
+ {
+  "slug": "en",
+  "key": "home",
+  "file": "index_en.html",
+  "title": "Haven Medellín | Design hotel in El Poblado",
+  "desc": "Haven, A Design Hotel: suites with jacuzzi, 360° Rooftop, Swing Bar and wellness in the heart of El Poblado, Medellín. Book direct at the best rate.",
+  "canonical": "/en/",
+  "og": "/wp-content/uploads/revslider/video-media/video-haven-medellin.webp",
+  "extra_head_file": "partials/home_head_extra.html",
+  "clock": true,
+  "static": true,
+  "lang": "en"
  },
  {
   "slug": "habitaciones",
@@ -16,7 +30,9 @@
   "file": "habitaciones.html",
   "title": "Habitaciones y suites | Haven Medellín, El Poblado",
   "desc": "Penthouse, suite presidencial, suites con jacuzzi y habitaciones de diseño en El Poblado, Medellín. Reserva directo al mejor precio.",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitaciones/"
  },
  {
   "slug": "penthouse",
@@ -24,7 +40,9 @@
   "file": "penthouse.html",
   "title": "Penthouse con jacuzzi | Haven Medellín",
   "desc": "Suites Emperor 901 y 902: penthouse dúplex de hasta 138 m² para 8 personas en El Poblado, Medellín.",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/penthouse/"
  },
  {
   "slug": "presidencial",
@@ -32,7 +50,9 @@
   "file": "presidencial.html",
   "title": "Suite Presidencial | Haven Medellín",
   "desc": "Suite Presidencial de 145 m²: dúplex de 4 habitaciones con piscina interior privada en El Poblado, Medellín.",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/presidencial/"
  },
  {
   "slug": "suites-de-lujo",
@@ -40,7 +60,9 @@
   "file": "suites-de-lujo.html",
   "title": "Suites de lujo con jacuzzi | Haven Medellín",
   "desc": "Suite Imperial 402 y Suites Excelsior 401, 604 y 804: suites con jacuzzi en El Poblado, Medellín.",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/suites-de-lujo/"
  },
  {
   "slug": "habitacion/suite-emperor-901",
@@ -48,7 +70,9 @@
   "file": "habitacion_suite-emperor-901.html",
   "title": "Suite Emperor 901 Penthouse | Haven Medellín",
   "desc": "Suite Emperor 901 Penthouse: 138 m², 8 personas, King x2, Queen x2. Bienvenido a tu residencia privada en las alturas de Medellín. La Suite Emperor 901 es ",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/suite-emperor-901/"
  },
  {
   "slug": "habitacion/suite-emperor-902",
@@ -56,7 +80,9 @@
   "file": "habitacion_suite-emperor-902.html",
   "title": "Suite Emperor 902 Penthouse | Haven Medellín",
   "desc": "Suite Emperor 902 Penthouse: 111 m², 8 personas, King x2, Queen x2. Bienvenidos a un espacio diseñado para ser compartido e inolvidable. La Suite Emperor 9",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/suite-emperor-902/"
  },
  {
   "slug": "habitacion/suite-presidential",
@@ -64,7 +90,9 @@
   "file": "habitacion_suite-presidential.html",
   "title": "Suite Presidencial | Haven Medellín",
   "desc": "Suite Presidencial: 145 m², 8 personas, King x2, Queen x2. Descubra una residencia única en Medellín. La Suite Presidencial, es un audaz dúplex de 4 habita",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/suite-presidential/"
  },
  {
   "slug": "habitacion/suite-imperial-402",
@@ -72,7 +100,9 @@
   "file": "habitacion_suite-imperial-402.html",
   "title": "Suite Imperial 402 | Haven Medellín",
   "desc": "Suite Imperial 402: 68 m², 6 personas, Queen x3. Descubra la comodidad y la elegancia en nuestra Suite Imperial 402, una joya de suite de 3 habitaciones, c",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/suite-imperial-402/"
  },
  {
   "slug": "habitacion/suite-excelsior-401",
@@ -80,7 +110,9 @@
   "file": "habitacion_suite-excelsior-401.html",
   "title": "Suite Excelsior 401 | Haven Medellín",
   "desc": "Suite Excelsior 401: 62 m², 4 personas, Queen x2. Disfrute de una estancia refinada en la Suite Excelsior 401, la suite de hotel de dos recámaras más grand",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/suite-excelsior-401/"
  },
  {
   "slug": "habitacion/suite-excelsior-804",
@@ -88,7 +120,9 @@
   "file": "habitacion_suite-excelsior-804.html",
   "title": "Suite Excelsior 804 | Haven Medellín",
   "desc": "Suite Excelsior 804: 62 m², 4 personas, Queen x2. Disfrute de una estancia excepcional en la Suite Excelsior 804, una suite de 2 dormitorios diseñada para ",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/suite-excelsior-804/"
  },
  {
   "slug": "habitacion/suite-excelsior-604",
@@ -96,7 +130,9 @@
   "file": "habitacion_suite-excelsior-604.html",
   "title": "Suite Excelsior 604 | Haven Medellín",
   "desc": "Suite Excelsior 604: 62 m², 4 personas, Queen x2. La suite Excelsior 604 es un apartamento de dos habitaciones con capacidad para hasta 4 personas. Cuenta ",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/suite-excelsior-604/"
  },
  {
   "slug": "habitacion/habitacion-ambassador",
@@ -104,7 +140,9 @@
   "file": "habitacion_habitacion-ambassador.html",
   "title": "Habitación Ambassador | Haven Medellín",
   "desc": "Habitación Ambassador: 29 m², 2 personas, Queen x1. Disfrute del máximo confort en la habitación Ambassador, una estancia diseñada para quienes buscan ampl",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/habitacion-ambassador/"
  },
  {
   "slug": "habitacion/habitacion-ambassador-jr",
@@ -112,7 +150,9 @@
   "file": "habitacion_habitacion-ambassador-jr.html",
   "title": "Habitación Ambassador Jr | Haven Medellín",
   "desc": "Habitación Ambassador Jr: 29 m², 2 personas, Queen x1. Descubra la exclusividad diseñada exclusivamente para dos en nuestra habitación Ambassador Jr. Sumér",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/habitacion-ambassador-jr/"
  },
  {
   "slug": "habitacion/habitacion-viscount-803",
@@ -120,7 +160,9 @@
   "file": "habitacion_habitacion-viscount-803.html",
   "title": "Habitación Viscount 803 | Haven Medellín",
   "desc": "Habitación Viscount 803: 24 m², 2 personas, Queen x1. Jacuzzi exterior en su balcón privado. Viscount 803 ofrece una estancia premium de 24 m² donde podrá ",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/habitacion-viscount-803/"
  },
  {
   "slug": "habitacion/habitacion-viscount",
@@ -128,7 +170,9 @@
   "file": "habitacion_habitacion-viscount.html",
   "title": "Habitación Viscount | Haven Medellín",
   "desc": "Habitación Viscount: 24 m², 2 personas, Queen x1. Descubra el esplendor de nuestra Habitación Viscount, una auténtica joya de lujo diseñada para una experi",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/habitacion-viscount/"
  },
  {
   "slug": "habitacion/habitacion-lord",
@@ -136,7 +180,9 @@
   "file": "habitacion_habitacion-lord.html",
   "title": "Habitación Lord | Haven Medellín",
   "desc": "Habitación Lord: 24 m², 2 personas, Queen x1. Sumérjase en el lujo exclusivo de nuestra Habitación Lord, con una cama tamaño queen. Esta habitación está di",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/habitacion-lord/"
  },
  {
   "slug": "habitacion/habitacion-earl",
@@ -144,7 +190,9 @@
   "file": "habitacion_habitacion-earl.html",
   "title": "Habitación Earl | Haven Medellín",
   "desc": "Habitación Earl: 20 m², 2 personas, Queen x1. Sumérjase en el encanto incomparable de nuestra Habitación Earl. Disfrute de vistas panorámicas de la ciudad ",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/habitacion-earl/"
  },
  {
   "slug": "habitacion/habitacion-marques-plus",
@@ -152,7 +200,9 @@
   "file": "habitacion_habitacion-marques-plus.html",
   "title": "Habitación Marqués Plus | Haven Medellín",
   "desc": "Habitación Marqués Plus: 27 m², 2 personas, Queen x1. Suite espaciosa, mucho más allá de lo convencional. Diseñada para ofrecer libertad y comodidad, esta ",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/habitacion-marques-plus/"
  },
  {
   "slug": "habitacion/habitacion-marques",
@@ -160,7 +210,9 @@
   "file": "habitacion_habitacion-marques.html",
   "title": "Habitación Marqués | Haven Medellín",
   "desc": "Habitación Marqués: 24 m², 2 personas, Queen x1. Suite espaciosa, mucho más allá de lo convencional. Diseñada para ofrecer libertad y comodidad, esta suite",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/habitacion-marques/"
  },
  {
   "slug": "habitacion/habitacion-duke",
@@ -168,7 +220,9 @@
   "file": "habitacion_habitacion-duke.html",
   "title": "Habitación Duke | Haven Medellín",
   "desc": "Habitación Duke: 20 m², 2 personas, Queen x1. Más espacio, más comodidad. La habitación Duke está diseñada para una estancia relajante en la ciudad y cuent",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/habitacion-duke/"
  },
  {
   "slug": "habitacion/habitacion-consort",
@@ -176,7 +230,9 @@
   "file": "habitacion_habitacion-consort.html",
   "title": "Habitación Consort | Haven Medellín",
   "desc": "Habitación Consort: 15 m², 2 personas, Queen x1. Compacta, elegante y totalmente equipada, nuestra habitación Consort cuenta con una cama queen, baño priva",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/habitacion/habitacion-consort/"
  },
  {
   "slug": "rooftop",
@@ -184,7 +240,9 @@
   "file": "rooftop.html",
   "title": "360° Rooftop: piscina y bar con vista a Medellín | Haven",
   "desc": "Bar y piscina en el piso 11 con vista panorámica de 360° de Medellín. Cócteles de autor, Sunny Days y atardeceres en El Poblado.",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/rooftop/"
  },
  {
   "slug": "swing",
@@ -192,7 +250,9 @@
   "file": "swing.html",
   "title": "Swing Bar: café de día, cócteles de noche | Haven Medellín",
   "desc": "Swing Bar en el vestíbulo de Haven: café colombiano por la mañana, vinos, cervezas y cócteles por la noche en El Poblado.",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/swing/"
  },
  {
   "slug": "gastronomia",
@@ -200,7 +260,9 @@
   "file": "gastronomia.html",
   "title": "Gastronomía en el 360° Rooftop | Haven Medellín",
   "desc": "Pizzas artesanales, salmón, albóndigas y cocina local e internacional con vista a Medellín en el 360° Rooftop.",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/gastronomia/"
  },
  {
   "slug": "wellness",
@@ -208,7 +270,9 @@
   "file": "wellness.html",
   "title": "Wellness: masajes, faciales y sueroterapia | Haven Medellín",
   "desc": "Masaje relajante, hidratación facial y terapia de sueros Ultra Vit para recuperarte del viaje en Haven, El Poblado.",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/wellness/"
  },
  {
   "slug": "eventos",
@@ -216,7 +280,9 @@
   "file": "eventos.html",
   "title": "Eventos: fiestas, brunch y celebraciones | Haven Medellín",
   "desc": "DJ en vivo en la Terraza 360, fiesta del primer viernes, fiesta en la piscina, brunch dominical y celebraciones especiales en El Poblado.",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/eventos/"
  },
  {
   "slug": "servicios",
@@ -224,7 +290,9 @@
   "file": "servicios.html",
   "title": "Servicios del hotel | Haven Medellín",
   "desc": "Traslados al aeropuerto, spa, hidratación intravenosa, tours por Antioquia, alquiler de carros y más servicios en Haven Medellín.",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/servicios/"
  },
  {
   "slug": "contacto",
@@ -232,7 +300,9 @@
   "file": "contacto.html",
   "title": "Contacto | Haven Medellín, El Poblado",
   "desc": "Calle 10A #36-29, El Poblado, Medellín. Recepción (+57) 322 306 4585 · Reservas (+57) 321 209 7033 · frontdesk@serenahotelsco.com",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/contacto/"
  },
  {
   "slug": "serena-rewards",
@@ -240,7 +310,9 @@
   "file": "serena-rewards.html",
   "title": "Serena Rewards: programa de fidelización | Haven Medellín",
   "desc": "Planes Silver, Gold, Diamond y Black: descuentos en alojamiento y alimentos, traslados, upgrades y acceso al 360° Rooftop.",
-  "head_extra": ""
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/serena-rewards/"
  },
  {
   "slug": "preguntas-frecuentes",
@@ -248,6 +320,428 @@
   "file": "preguntas-frecuentes.html",
   "title": "Preguntas frecuentes | Haven Medellín",
   "desc": "Ubicación, cómo llegar desde el aeropuerto, servicios incluidos, horarios del 360° Rooftop y seguridad en El Poblado.",
-  "head_extra": "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"¿Cuál es la ubicación del hotel?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Estamos ubicados en la Calle 10A #36-29 en el barrio El Poblado de Medellín (Colombia). Exactamente es la zona suroriental de Medellín, y es conocido formalmente como la Comuna 14. Limita al norte con el centro de la ciudad y al sur con el municipio de Envigado. Es una de las áreas más destacadas y exclusivas de la ciudad, reconocida por sus hoteles, centros comerciales, restaurantes y animada vida nocturna.\"}}, {\"@type\": \"Question\", \"name\": \"¿Cómo llegar desde el aeropuerto o la terminal?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Para llegar desde el Aeropuerto Internacional José María Córdova de Rionegro, tienes varias opciones de transporte: 1. Servicio de autobuses (autobuses) - Ruta: Combuses ofrece un servicio de autobús entre el aeropuerto y Medellín. Puede abordar el autobús en la salida de vuelos nacionales, puerta n.° 2. - Parada en Medellín: El autobús te dejará en la terminal de San Diego o en la estación de metro Exposiciones. - Costo: La tarifa es de 15.500 COP por persona. - Horario: Funciona las 24 horas del día con salidas cada 15 minutos. - Ruta alternativa: Desde la Terminal de San Diego o la Estación Exposiciones, puede tomar un taxi o el sistema de metro para llegar a su destino en El Poblado. 2. Servicio de taxi: - Disponibilidad: Hay taxis disponibles en la zona de llegadas del aeropuerto. - Costo: El viaje directo a El Poblado suele costar entre $70,000 y $100,000 COP. - Horario: Aproximadamente 40 minutos, dependiendo del tráfico. 3. Transporte privado: - Reservas: Empresas como Paisa Tours ofrecen traslados privados desde el aeropuerto a Medellín. - Ventajas: Este servicio puede ser más cómodo y personalizado, ideal si lleva mucho equipaje o prefiere un traslado directo. 4. Alquilar un coche: - Opciones: Varias compañías ofrecen servicios de alquiler de coches en el aeropuerto. - Consideraciones: Debe familiarizarse con las rutas y el tráfico de Medellín. Recomendación: Si busca una opción económica y confiable, el servicio de autobuses Combuses es adecuado. Sin embargo, si prefiere comodidad y un viaje directo, un taxi o un servicio de transporte privado sería más conveniente. Nota: Los costos y los tiempos de viaje pueden variar según la hora del día y las condiciones del tráfico. Se recomienda consultar la información actualizada antes del viaje.\"}}, {\"@type\": \"Question\", \"name\": \"¿Qué servicios y comodidades están incluidos en el precio de la habitación?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"- Desayuno: Ofrecemos desayuno buffet incluido en la tarifa. - Conexión Wi-Fi: Acceso gratuito a internet en las habitaciones y zonas comunes. - Servicio de limpieza diario: Limpieza diaria de la habitación. - Recepción 24 horas: Servicio al cliente disponible las 24 horas del día. - Televisión por cable/satélite: Televisores en las habitaciones con una variedad de canales. - Caja fuerte: Hay cajas fuertes disponibles en las habitaciones o en la recepción. - Artículos de aseo personal: Suministro de champú, jabón y otros productos de higiene personal. - Cafetería acogedora: Un espacio para relajarse y disfrutar de bebidas y aperitivos. - Piscina y bar en la azotea: Acceso exclusivo a una piscina y bar en la azotea con vistas panorámicas de 360° de Medellín\"}}, {\"@type\": \"Question\", \"name\": \"¿El hotel ofrece transporte al aeropuerto o servicio de traslado en la ciudad?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Sí, ofrecemos este servicio; debe coordinarse con nuestros agentes en la recepción del hotel.\"}}, {\"@type\": \"Question\", \"name\": \"¿Qué atracciones o lugares turísticos importantes hay cerca del hotel?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"El Poblado, uno de los barrios más emblemáticos de Medellín, ofrece una variedad de atractivos que combinan cultura, gastronomía y vida nocturna. Aquí te presentamos cinco lugares imperdibles para que los visitantes extranjeros aprovechen al máximo su estadía en esta vibrante zona: Considerado el epicentro de la vida nocturna de Medellín, está rodeado de una gran variedad de bares, restaurantes y discotecas. Es el lugar ideal para vivir la energía nocturna de la ciudad y socializar con locales y turistas. Museo y Jardines El Castillo. Inspirado en los castillos del Valle del Loira en Francia, este museo ofrece una muestra del arte y la arquitectura europeos en pleno centro de Medellín. Sus jardines son ideales para paseos tranquilos y picnics, brindando un remanso de paz lejos del bullicio urbano. Museo de Arte Moderno de Medellín (MAMM). Ubicado en la zona de Ciudad del Río, el MAMM presenta exposiciones de arte contemporáneo y es un punto de encuentro cultural. Su arquitectura moderna y sus frecuentes eventos lo convierten en una visita obligada para los amantes del arte. Parque El Poblado. Este parque es un lugar histórico, ya que marca el sitio donde se fundó el primer asentamiento en el Valle de Aburrá. Rodeado de cafés y tiendas, es un lugar ideal para relajarse y observar la vida cotidiana de la ciudad. Centro Comercial Santafé. Este centro comercial es uno de los más grandes de Medellín y ofrece una amplia variedad de tiendas, restaurantes y entretenimiento. Su diseño moderno y sus eventos temáticos lo convierten en un lugar popular tanto para locales como para turistas.\"}}, {\"@type\": \"Question\", \"name\": \"¿El hotel tiene restaurante o servicio de comidas? ¿Cuál es el horario de apertura?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Sí, nuestro hotel cuenta con el 360 Rooftop Bar, ubicado en el piso 11 del Hotel Haven, que ofrece una variada experiencia gastronómica en un ambiente moderno y acogedor. Nuestro menú incluye opciones como pizzas, carnes a la parrilla y platos de la cocina colombiana, acompañados de una selección de cócteles elaborados con esmero. El horario de atención es: - De domingo a miércoles: de 7:00 a.m. – 23:00 p.m. - Jueves: 7:00 a.m. – 12:00 p.m. - Viernes – Sábado: 7:00 a.m. – 2:00 p.m. Este establecimiento es conocido por su ambiente agradable, sus vistas panorámicas de la ciudad y su excelente servicio al cliente.\"}}, {\"@type\": \"Question\", \"name\": \"¿Qué opciones de transporte público o privado hay disponibles cerca del hotel?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"En El Poblado, Medellín, viajeros y residentes tienen acceso a una variedad de opciones de transporte que se adaptan a diferentes necesidades. Los tres principales medios de transporte en la zona son: 1. Metro de Medellín - El sistema de metro es uno de los orgullos de la ciudad y una forma eficiente de desplazarse. - Estación El Poblado: La estación El Poblado conecta a los usuarios con el resto de Medellín. - Ventajas: Barato y puntual. Conecta con líneas complementarias como el Metrocable, que permite explorar lugares como el Parque Arví. - Barato y puntual. - Conecta con líneas complementarias como el Metrocable, que permite explorar lugares como el Parque Arví. - Concejo: Ideal para evitar el tráfico en las horas punta. 2. Aplicaciones para taxis y transporte - Los taxis tradicionales son una opción fiable, y aplicaciones como Uber, DiDi y Cabify son muy utilizadas en El Poblado. - Ventajas: Disponible las 24 horas del día. Útil para viajes cortos y para ir directamente a lugares específicos. Las aplicaciones te permiten conocer con antelación el coste estimado del viaje. - Disponible las 24 horas del día. - Útil para viajes cortos y para ir directamente a lugares específicos. - Las aplicaciones te permiten conocer con antelación el coste estimado del viaje. - Concejo: Compruebe siempre que el taxi tenga un taxímetro que funcione. 3. Autobuses urbanos - El sistema de autobuses públicos de Medellín incluye rutas que pasan por El Poblado y conectan con otras partes de la ciudad. - Ventajas: Económico y con amplia cobertura. Adecuado para quienes conocen las rutas y quieren ahorrar dinero. - Económico y con amplia cobertura. - Adecuado para quienes conocen las rutas y quieren ahorrar dinero. - Concejo: Es recomendable preguntar a los lugareños o utilizar aplicaciones como Moovit para identificar las rutas correctas. Consejo general: El Poblado es una de las zonas más concurridas de Medellín, por lo que el tráfico puede ser intenso durante las horas pico. Planifique sus rutas con anticipación y elija el medio de transporte más adecuado para cada ocasión.\"}}, {\"@type\": \"Question\", \"name\": \"¿Es segura la zona donde se encuentra el hotel, especialmente para caminar de noche?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"El Poblado es considerado una de las zonas más seguras y turísticas de Medellín, atrayendo a muchos visitantes por su vibrante vida nocturna, restaurantes y tiendas. Sin embargo, es importante que los viajeros tomen ciertas precauciones para garantizar una experiencia segura y placentera. Aquí les ofrecemos algunos consejos prácticos para quienes planean visitar El Poblado: - Zonas recomendadas: Lugares como Provenza, Parque Lleras y Parque El Poblado son populares y suelen estar bien vigilados. Estas zonas cuentan con una presencia constante de turistas y residentes, lo que contribuye a un entorno más seguro. - Evite las zonas desconocidas: Es aconsejable no aventurarse en calles o barrios poco conocidos, especialmente de noche, ya que pueden carecer de iluminación adecuada y presencia policial. 2. Tome precauciones por la noche: - Transporte seguro: Después del anochecer, es preferible utilizar servicios de transporte confiables, como taxis con licencia o aplicaciones de transporte. Esto es especialmente importante al desplazarse entre zonas o al regresar a su alojamiento. - Evite caminar solo: Si bien El Poblado es generalmente seguro, es recomendable evitar caminar solo por la noche en calles desiertas o mal iluminadas. Opte por caminar en grupo y por rutas concurridas. 3. Manejo de pertenencias personales: - Sea discreto con los objetos de valor: Procure no exhibir joyas, aparatos electrónicos caros u otros objetos de valor en público para evitar llamar la atención. - Vigilancia constante: Mantén tus pertenencias, como bolsos y mochilas, a la vista y seguras en todo momento, especialmente en lugares concurridos como bares y restaurantes. 4. Uso de la tecnología y la comunicación: - Aplicaciones de transporte: Utilice aplicaciones aprobadas para solicitar transporte y verifique siempre la información del conductor y del vehículo antes de abordar. - Conexiones seguras: Cuando utilice redes Wi-Fi públicas, evite acceder a información confidencial y considere la posibilidad de usar una VPN para proteger sus datos. 5. Interactuar con desconocidos: - Proceda con cautela en las nuevas relaciones: Si bien la hospitalidad local es extraordinaria, mantenga una actitud prudente al interactuar con personas que acaba de conocer, especialmente de noche. - Informa a los demás: Haz saber a tus amigos o familiares tus planes y tu ubicación, especialmente si decides explorar la vida nocturna o participar en actividades con nuevos conocidos. 6. Información y actualizaciones: - Manténgase informado: Consulte fuentes locales y confiables para estar al tanto de cualquier alerta o aviso de seguridad en la zona. - Asistencia de emergencia: Tenga a mano los números de contacto de las autoridades locales y de su consulado o embajada por si necesita ayuda. En resumen, si bien El Poblado es una de las zonas más seguras y atractivas de Medellín, es importante que los viajeros mantengan una actitud vigilante y sigan estos consejos para garantizar una experiencia segura y agradable durante su visita.\"}}]}</script>\n"
+  "head_extra": "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"¿Cuál es la ubicación del hotel?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Estamos ubicados en la Calle 10A #36-29 en el barrio El Poblado de Medellín (Colombia). Exactamente es la zona suroriental de Medellín, y es conocido formalmente como la Comuna 14. Limita al norte con el centro de la ciudad y al sur con el municipio de Envigado. Es una de las áreas más destacadas y exclusivas de la ciudad, reconocida por sus hoteles, centros comerciales, restaurantes y animada vida nocturna.\"}}, {\"@type\": \"Question\", \"name\": \"¿Cómo llegar desde el aeropuerto o la terminal?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Para llegar desde el Aeropuerto Internacional José María Córdova de Rionegro, tienes varias opciones de transporte: 1. Servicio de autobuses (autobuses) - Ruta: Combuses ofrece un servicio de autobús entre el aeropuerto y Medellín. Puede abordar el autobús en la salida de vuelos nacionales, puerta n.° 2. - Parada en Medellín: El autobús te dejará en la terminal de San Diego o en la estación de metro Exposiciones. - Costo: La tarifa es de 15.500 COP por persona. - Horario: Funciona las 24 horas del día con salidas cada 15 minutos. - Ruta alternativa: Desde la Terminal de San Diego o la Estación Exposiciones, puede tomar un taxi o el sistema de metro para llegar a su destino en El Poblado. 2. Servicio de taxi: - Disponibilidad: Hay taxis disponibles en la zona de llegadas del aeropuerto. - Costo: El viaje directo a El Poblado suele costar entre $70,000 y $100,000 COP. - Horario: Aproximadamente 40 minutos, dependiendo del tráfico. 3. Transporte privado: - Reservas: Empresas como Paisa Tours ofrecen traslados privados desde el aeropuerto a Medellín. - Ventajas: Este servicio puede ser más cómodo y personalizado, ideal si lleva mucho equipaje o prefiere un traslado directo. 4. Alquilar un coche: - Opciones: Varias compañías ofrecen servicios de alquiler de coches en el aeropuerto. - Consideraciones: Debe familiarizarse con las rutas y el tráfico de Medellín. Recomendación: Si busca una opción económica y confiable, el servicio de autobuses Combuses es adecuado. Sin embargo, si prefiere comodidad y un viaje directo, un taxi o un servicio de transporte privado sería más conveniente. Nota: Los costos y los tiempos de viaje pueden variar según la hora del día y las condiciones del tráfico. Se recomienda consultar la información actualizada antes del viaje.\"}}, {\"@type\": \"Question\", \"name\": \"¿Qué servicios y comodidades están incluidos en el precio de la habitación?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"- Desayuno: Ofrecemos desayuno buffet incluido en la tarifa. - Conexión Wi-Fi: Acceso gratuito a internet en las habitaciones y zonas comunes. - Servicio de limpieza diario: Limpieza diaria de la habitación. - Recepción 24 horas: Servicio al cliente disponible las 24 horas del día. - Televisión por cable/satélite: Televisores en las habitaciones con una variedad de canales. - Caja fuerte: Hay cajas fuertes disponibles en las habitaciones o en la recepción. - Artículos de aseo personal: Suministro de champú, jabón y otros productos de higiene personal. - Cafetería acogedora: Un espacio para relajarse y disfrutar de bebidas y aperitivos. - Piscina y bar en la azotea: Acceso exclusivo a una piscina y bar en la azotea con vistas panorámicas de 360° de Medellín\"}}, {\"@type\": \"Question\", \"name\": \"¿El hotel ofrece transporte al aeropuerto o servicio de traslado en la ciudad?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Sí, ofrecemos este servicio; debe coordinarse con nuestros agentes en la recepción del hotel.\"}}, {\"@type\": \"Question\", \"name\": \"¿Qué atracciones o lugares turísticos importantes hay cerca del hotel?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"El Poblado, uno de los barrios más emblemáticos de Medellín, ofrece una variedad de atractivos que combinan cultura, gastronomía y vida nocturna. Aquí te presentamos cinco lugares imperdibles para que los visitantes extranjeros aprovechen al máximo su estadía en esta vibrante zona: Considerado el epicentro de la vida nocturna de Medellín, está rodeado de una gran variedad de bares, restaurantes y discotecas. Es el lugar ideal para vivir la energía nocturna de la ciudad y socializar con locales y turistas. Museo y Jardines El Castillo. Inspirado en los castillos del Valle del Loira en Francia, este museo ofrece una muestra del arte y la arquitectura europeos en pleno centro de Medellín. Sus jardines son ideales para paseos tranquilos y picnics, brindando un remanso de paz lejos del bullicio urbano. Museo de Arte Moderno de Medellín (MAMM). Ubicado en la zona de Ciudad del Río, el MAMM presenta exposiciones de arte contemporáneo y es un punto de encuentro cultural. Su arquitectura moderna y sus frecuentes eventos lo convierten en una visita obligada para los amantes del arte. Parque El Poblado. Este parque es un lugar histórico, ya que marca el sitio donde se fundó el primer asentamiento en el Valle de Aburrá. Rodeado de cafés y tiendas, es un lugar ideal para relajarse y observar la vida cotidiana de la ciudad. Centro Comercial Santafé. Este centro comercial es uno de los más grandes de Medellín y ofrece una amplia variedad de tiendas, restaurantes y entretenimiento. Su diseño moderno y sus eventos temáticos lo convierten en un lugar popular tanto para locales como para turistas.\"}}, {\"@type\": \"Question\", \"name\": \"¿El hotel tiene restaurante o servicio de comidas? ¿Cuál es el horario de apertura?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Sí, nuestro hotel cuenta con el 360 Rooftop Bar, ubicado en el piso 11 del Hotel Haven, que ofrece una variada experiencia gastronómica en un ambiente moderno y acogedor. Nuestro menú incluye opciones como pizzas, carnes a la parrilla y platos de la cocina colombiana, acompañados de una selección de cócteles elaborados con esmero. El horario de atención es: - De domingo a miércoles: de 7:00 a.m. – 23:00 p.m. - Jueves: 7:00 a.m. – 12:00 p.m. - Viernes – Sábado: 7:00 a.m. – 2:00 p.m. Este establecimiento es conocido por su ambiente agradable, sus vistas panorámicas de la ciudad y su excelente servicio al cliente.\"}}, {\"@type\": \"Question\", \"name\": \"¿Qué opciones de transporte público o privado hay disponibles cerca del hotel?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"En El Poblado, Medellín, viajeros y residentes tienen acceso a una variedad de opciones de transporte que se adaptan a diferentes necesidades. Los tres principales medios de transporte en la zona son: 1. Metro de Medellín - El sistema de metro es uno de los orgullos de la ciudad y una forma eficiente de desplazarse. - Estación El Poblado: La estación El Poblado conecta a los usuarios con el resto de Medellín. - Ventajas: Barato y puntual. Conecta con líneas complementarias como el Metrocable, que permite explorar lugares como el Parque Arví. - Barato y puntual. - Conecta con líneas complementarias como el Metrocable, que permite explorar lugares como el Parque Arví. - Concejo: Ideal para evitar el tráfico en las horas punta. 2. Aplicaciones para taxis y transporte - Los taxis tradicionales son una opción fiable, y aplicaciones como Uber, DiDi y Cabify son muy utilizadas en El Poblado. - Ventajas: Disponible las 24 horas del día. Útil para viajes cortos y para ir directamente a lugares específicos. Las aplicaciones te permiten conocer con antelación el coste estimado del viaje. - Disponible las 24 horas del día. - Útil para viajes cortos y para ir directamente a lugares específicos. - Las aplicaciones te permiten conocer con antelación el coste estimado del viaje. - Concejo: Compruebe siempre que el taxi tenga un taxímetro que funcione. 3. Autobuses urbanos - El sistema de autobuses públicos de Medellín incluye rutas que pasan por El Poblado y conectan con otras partes de la ciudad. - Ventajas: Económico y con amplia cobertura. Adecuado para quienes conocen las rutas y quieren ahorrar dinero. - Económico y con amplia cobertura. - Adecuado para quienes conocen las rutas y quieren ahorrar dinero. - Concejo: Es recomendable preguntar a los lugareños o utilizar aplicaciones como Moovit para identificar las rutas correctas. Consejo general: El Poblado es una de las zonas más concurridas de Medellín, por lo que el tráfico puede ser intenso durante las horas pico. Planifique sus rutas con anticipación y elija el medio de transporte más adecuado para cada ocasión.\"}}, {\"@type\": \"Question\", \"name\": \"¿Es segura la zona donde se encuentra el hotel, especialmente para caminar de noche?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"El Poblado es considerado una de las zonas más seguras y turísticas de Medellín, atrayendo a muchos visitantes por su vibrante vida nocturna, restaurantes y tiendas. Sin embargo, es importante que los viajeros tomen ciertas precauciones para garantizar una experiencia segura y placentera. Aquí les ofrecemos algunos consejos prácticos para quienes planean visitar El Poblado: - Zonas recomendadas: Lugares como Provenza, Parque Lleras y Parque El Poblado son populares y suelen estar bien vigilados. Estas zonas cuentan con una presencia constante de turistas y residentes, lo que contribuye a un entorno más seguro. - Evite las zonas desconocidas: Es aconsejable no aventurarse en calles o barrios poco conocidos, especialmente de noche, ya que pueden carecer de iluminación adecuada y presencia policial. 2. Tome precauciones por la noche: - Transporte seguro: Después del anochecer, es preferible utilizar servicios de transporte confiables, como taxis con licencia o aplicaciones de transporte. Esto es especialmente importante al desplazarse entre zonas o al regresar a su alojamiento. - Evite caminar solo: Si bien El Poblado es generalmente seguro, es recomendable evitar caminar solo por la noche en calles desiertas o mal iluminadas. Opte por caminar en grupo y por rutas concurridas. 3. Manejo de pertenencias personales: - Sea discreto con los objetos de valor: Procure no exhibir joyas, aparatos electrónicos caros u otros objetos de valor en público para evitar llamar la atención. - Vigilancia constante: Mantén tus pertenencias, como bolsos y mochilas, a la vista y seguras en todo momento, especialmente en lugares concurridos como bares y restaurantes. 4. Uso de la tecnología y la comunicación: - Aplicaciones de transporte: Utilice aplicaciones aprobadas para solicitar transporte y verifique siempre la información del conductor y del vehículo antes de abordar. - Conexiones seguras: Cuando utilice redes Wi-Fi públicas, evite acceder a información confidencial y considere la posibilidad de usar una VPN para proteger sus datos. 5. Interactuar con desconocidos: - Proceda con cautela en las nuevas relaciones: Si bien la hospitalidad local es extraordinaria, mantenga una actitud prudente al interactuar con personas que acaba de conocer, especialmente de noche. - Informa a los demás: Haz saber a tus amigos o familiares tus planes y tu ubicación, especialmente si decides explorar la vida nocturna o participar en actividades con nuevos conocidos. 6. Información y actualizaciones: - Manténgase informado: Consulte fuentes locales y confiables para estar al tanto de cualquier alerta o aviso de seguridad en la zona. - Asistencia de emergencia: Tenga a mano los números de contacto de las autoridades locales y de su consulado o embajada por si necesita ayuda. En resumen, si bien El Poblado es una de las zonas más seguras y atractivas de Medellín, es importante que los viajeros mantengan una actitud vigilante y sigan estos consejos para garantizar una experiencia segura y agradable durante su visita.\"}}]}</script>\n",
+  "lang": "es",
+  "canonical": "/es/preguntas-frecuentes/"
+ },
+ {
+  "slug": "politica-de-visitantes",
+  "key": "legal",
+  "file": "politica-de-visitantes.html",
+  "title": "Política de visitantes | Haven Medellín",
+  "desc": "Registro de huéspedes y visitantes, cargos por persona adicional y normas según la Ley 679 de 2011 en Haven Medellín.",
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/politica-de-visitantes/"
+ },
+ {
+  "slug": "terminos-y-condiciones",
+  "key": "legal",
+  "file": "terminos-y-condiciones.html",
+  "title": "Términos y condiciones | Haven Medellín",
+  "desc": "Reservas, cancelaciones, minibar, garantía, política de no fumar, privacidad y horarios de Haven, A Design Hotel.",
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/terminos-y-condiciones/"
+ },
+ {
+  "slug": "blogs",
+  "key": "blog",
+  "file": "blogs.html",
+  "title": "Blog: guías y planes en Medellín | Haven Medellín",
+  "desc": "Recomendaciones, guías y experiencias para disfrutar Medellín: gastronomía, cultura paisa y las mejores cosas que hacer en la ciudad.",
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/blogs/"
+ },
+ {
+  "slug": "blog/experiencias-gastronomicas-de-cinco-estrellas-en-medellin",
+  "key": "post",
+  "file": "blog_experiencias-gastronomicas-de-cinco-estrellas-en-medellin.html",
+  "title": "Experiencias gastronómicas de cinco estrellas en Medellín | Haven Medellín",
+  "desc": "Una guía completa para los amantes de la comida. Medellín, conocida como la “Ciudad de",
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/blog/experiencias-gastronomicas-de-cinco-estrellas-en-medellin/"
+ },
+ {
+  "slug": "blog/las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera",
+  "key": "post",
+  "file": "blog_las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera.html",
+  "title": "Las 10 mejores cosas que hacer y ver en la Ciudad de la Eterna Primavera | Haven Medellín",
+  "desc": "Conocida como la “Ciudad de la Eterna Primavera” Llamada así por su clima templado y",
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/blog/las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera/"
+ },
+ {
+  "slug": "blog/conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica",
+  "key": "post",
+  "file": "blog_conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica.html",
+  "title": "Conozca la cultura paisa y descubra sus tradiciones, en una experiencia única | Haven Medellín",
+  "desc": "Tradición floral y de silletera en el pueblo de Santa Elena Aunque las fincas de",
+  "head_extra": "",
+  "lang": "es",
+  "canonical": "/es/blog/conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica/"
+ },
+ {
+  "slug": "en/all-rooms",
+  "key": "habitaciones",
+  "file": "en_habitaciones.html",
+  "title": "Rooms and suites | Haven Medellín, El Poblado",
+  "desc": "Penthouse, presidential suite, suites with jacuzzi and design rooms in El Poblado, Medellín. Book direct at the best rate.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/all-rooms/"
+ },
+ {
+  "slug": "en/penthouse",
+  "key": "penthouse",
+  "file": "en_penthouse.html",
+  "title": "Penthouse with jacuzzi | Haven Medellín",
+  "desc": "Emperor Suites 901 and 902: duplex penthouse of up to 138 m² for 8 guests in El Poblado, Medellín.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/penthouse/"
+ },
+ {
+  "slug": "en/presidential",
+  "key": "presidencial",
+  "file": "en_presidencial.html",
+  "title": "Presidential Suite | Haven Medellín",
+  "desc": "Presidential Suite of 145 m²: four-bedroom duplex with a private indoor pool in El Poblado, Medellín.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/presidential/"
+ },
+ {
+  "slug": "en/luxury-suites",
+  "key": "suites",
+  "file": "en_suites-de-lujo.html",
+  "title": "Luxury suites with jacuzzi | Haven Medellín",
+  "desc": "Imperial Suite 402 and Excelsior Suites 401, 604 and 804: suites with jacuzzi in El Poblado, Medellín.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/luxury-suites/"
+ },
+ {
+  "slug": "en/emperor-suite-901",
+  "key": "room",
+  "file": "en_habitacion_suite-emperor-901.html",
+  "title": "Emperor Suite 901 Penthouse | Haven Medellín",
+  "desc": "Emperor Suite 901 Penthouse: 138 m², 8 people, King x2, Queen x2. Welcome to your private residence high above Medellín. The Emperor 901 Suite is a spectac",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/emperor-suite-901/"
+ },
+ {
+  "slug": "en/emperor-suite-902",
+  "key": "room",
+  "file": "en_habitacion_suite-emperor-902.html",
+  "title": "Emperor Suite 902 Penthouse | Haven Medellín",
+  "desc": "Emperor Suite 902 Penthouse: 111 m², 8 people, King x2, Queen x2. Welcome to a space designed to be shared and unforgettable. The Emperor 902 Suite is a st",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/emperor-suite-902/"
+ },
+ {
+  "slug": "en/presidential-suite",
+  "key": "room",
+  "file": "en_habitacion_suite-presidential.html",
+  "title": "Presidential Suite | Haven Medellín",
+  "desc": "Presidential Suite: 145 m², 8 people, King x2, Queen x2. Discover a unique residence in Medellín. The Presidential Suite is a striking 4-bedroom duplex wit",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/presidential-suite/"
+ },
+ {
+  "slug": "en/imperial-suite-402",
+  "key": "room",
+  "file": "en_habitacion_suite-imperial-402.html",
+  "title": "Imperial Suite 402 | Haven Medellín",
+  "desc": "Imperial Suite 402: 68 m², 6 people, Queen x3. Discover comfort and elegance in our Imperial Suite 402, a jewel of a three-bedroom suite featuring exquisit",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/imperial-suite-402/"
+ },
+ {
+  "slug": "en/excelsior-suite-401",
+  "key": "room",
+  "file": "en_habitacion_suite-excelsior-401.html",
+  "title": "Excelsior Suite 401 | Haven Medellín",
+  "desc": "Excelsior Suite 401: 62 m², 4 people, Queen x2. Enjoy a refined stay in the Excelsior 401 Suite, the largest two-bedroom hotel suite in El Poblado, designe",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/excelsior-suite-401/"
+ },
+ {
+  "slug": "en/excelsior-suite-804",
+  "key": "room",
+  "file": "en_habitacion_suite-excelsior-804.html",
+  "title": "Excelsior Suite 804 | Haven Medellín",
+  "desc": "Excelsior Suite 804: 62 m², 4 people, Queen x2. Enjoy an exceptional stay in the Excelsior Suite 804, a two-bedroom suite designed for up to four guests, w",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/excelsior-suite-804/"
+ },
+ {
+  "slug": "en/excelsior-suite-604",
+  "key": "room",
+  "file": "en_habitacion_suite-excelsior-604.html",
+  "title": "Excelsior Suite 604 | Haven Medellín",
+  "desc": "Excelsior Suite 604: 62 m², 4 people, Queen x2. The Excelsior 604 suite is a two-bedroom apartment that can accommodate up to four guests. It features quee",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/excelsior-suite-604/"
+ },
+ {
+  "slug": "en/ambassador-room",
+  "key": "room",
+  "file": "en_habitacion_habitacion-ambassador.html",
+  "title": "Ambassador Room | Haven Medellín",
+  "desc": "Ambassador Room: 29 m², 2 people, Queen x1. Enjoy ultimate comfort in the Ambassador Suite, designed for those seeking spaciousness and sophistication. Flo",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/ambassador-room/"
+ },
+ {
+  "slug": "en/ambassador-jr-room",
+  "key": "room",
+  "file": "en_habitacion_habitacion-ambassador-jr.html",
+  "title": "Ambassador Jr Room | Haven Medellín",
+  "desc": "Ambassador Jr Room: 29 m², 2 people, Queen x1. Discover the exclusivity designed exclusively for two in our Ambassador Jr. suite. Immerse yourself in luxur",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/ambassador-jr-room/"
+ },
+ {
+  "slug": "en/viscount-room-803",
+  "key": "room",
+  "file": "en_habitacion_habitacion-viscount-803.html",
+  "title": "Viscount Room 803 | Haven Medellín",
+  "desc": "Viscount Room 803: 24 m², 2 people, Queen x1. Enjoy an outdoor jacuzzi on your private balcony. Viscount 803 offers a premium²4 m² suite where you can rela",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/viscount-room-803/"
+ },
+ {
+  "slug": "en/viscount-room",
+  "key": "room",
+  "file": "en_habitacion_habitacion-viscount.html",
+  "title": "Viscount Room | Haven Medellín",
+  "desc": "Viscount Room: 24 m², 2 people, Queen x1. Discover the splendor of our Viscount Room, a true gem of luxury designed for an unforgettable experience for cou",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/viscount-room/"
+ },
+ {
+  "slug": "en/lords-room",
+  "key": "room",
+  "file": "en_habitacion_habitacion-lord.html",
+  "title": "Lord's Room | Haven Medellín",
+  "desc": "Lord's Room: 24 m², 2 people, Queen x1. Immerse yourself in the exclusive luxury of our Lord Suite, featuring a queen-size bed. This suite is designed for ",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/lords-room/"
+ },
+ {
+  "slug": "en/earls-room",
+  "key": "room",
+  "file": "en_habitacion_habitacion-earl.html",
+  "title": "Earl's Room | Haven Medellín",
+  "desc": "Earl's Room: 20 m², 2 people, Queen x1. Immerse yourself in the unparalleled charm of our Earl Suite. Enjoy panoramic city views from your private balcony ",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/earls-room/"
+ },
+ {
+  "slug": "en/marques-plus-room",
+  "key": "room",
+  "file": "en_habitacion_habitacion-marques-plus.html",
+  "title": "Marqués Plus Room | Haven Medellín",
+  "desc": "Marqués Plus Room: 27 m², 2 people, Queen x1. A spacious suite that goes far beyond the ordinary. Designed for freedom and comfort, this suite features a l",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/marques-plus-room/"
+ },
+ {
+  "slug": "en/marques-room",
+  "key": "room",
+  "file": "en_habitacion_habitacion-marques.html",
+  "title": "Marqués Room | Haven Medellín",
+  "desc": "Marqués Room: 24 m², 2 personas, Queen x1. A spacious suite that goes far beyond the ordinary. Designed for freedom and comfort, this suite features a larg",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/marques-room/"
+ },
+ {
+  "slug": "en/duke-room",
+  "key": "room",
+  "file": "en_habitacion_habitacion-duke.html",
+  "title": "Duke Room | Haven Medellín",
+  "desc": "Duke Room: 20 m², 2 people, Queen x1. More space, more comfort. The Duke room is designed for a relaxing city stay and features a queen bed, an elegant bat",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/duke-room/"
+ },
+ {
+  "slug": "en/consort-room",
+  "key": "room",
+  "file": "en_habitacion_habitacion-consort.html",
+  "title": "Consort Room | Haven Medellín",
+  "desc": "Consort Room: 15 m², 2 people, Queen x1. Compact, elegant, and fully equipped, our Consort room features a queen bed, private bathroom, Smart TV, air condi",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/consort-room/"
+ },
+ {
+  "slug": "en/360-rooftop",
+  "key": "rooftop",
+  "file": "en_rooftop.html",
+  "title": "360° Rooftop: pool and bar overlooking Medellín | Haven",
+  "desc": "Bar and pool on the 11th floor with a 360° panoramic view of Medellín. Signature cocktails, Sunny Days and sunsets in El Poblado.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/360-rooftop/"
+ },
+ {
+  "slug": "en/swing-bar",
+  "key": "swing",
+  "file": "en_swing.html",
+  "title": "Swing Bar: coffee by day, cocktails by night | Haven Medellín",
+  "desc": "Swing Bar in the Haven lobby: Colombian coffee in the morning, wine, beer and cocktails at night in El Poblado.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/swing-bar/"
+ },
+ {
+  "slug": "en/gastronomy",
+  "key": "gastronomia",
+  "file": "en_gastronomia.html",
+  "title": "Gastronomy at the 360° Rooftop | Haven Medellín",
+  "desc": "Artisan pizzas, salmon, meatballs and local and international cuisine overlooking Medellín at the 360° Rooftop.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/gastronomy/"
+ },
+ {
+  "slug": "en/wellness",
+  "key": "wellness",
+  "file": "en_wellness.html",
+  "title": "Wellness: massages, facials and IV therapy | Haven Medellín",
+  "desc": "Relaxing massage, facial hydration and Ultra Vit IV therapy to recover from your trip at Haven, El Poblado.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/wellness/"
+ },
+ {
+  "slug": "en/events",
+  "key": "eventos",
+  "file": "en_eventos.html",
+  "title": "Events: parties, brunch and celebrations | Haven Medellín",
+  "desc": "Live DJ on the 360 Terrace, first-Friday party, pool party, Sunday brunch and special celebrations in El Poblado.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/events/"
+ },
+ {
+  "slug": "en/services",
+  "key": "servicios",
+  "file": "en_servicios.html",
+  "title": "Hotel services | Haven Medellín",
+  "desc": "Airport transfers, spa, IV hydration, tours around Antioquia, car rental and more services at Haven Medellín.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/services/"
+ },
+ {
+  "slug": "en/contact",
+  "key": "contacto",
+  "file": "en_contacto.html",
+  "title": "Contact | Haven Medellín, El Poblado",
+  "desc": "Calle 10A #36-29, El Poblado, Medellín. Front desk (+57) 322 306 4585 · Reservations (+57) 321 209 7033 · frontdesk@serenahotelsco.com",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/contact/"
+ },
+ {
+  "slug": "en/serena-rewards",
+  "key": "rewards",
+  "file": "en_serena-rewards.html",
+  "title": "Serena Rewards: loyalty program | Haven Medellín",
+  "desc": "Silver, Gold, Diamond and Black plans: discounts on rooms and food, transfers, upgrades and 360° Rooftop access.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/serena-rewards/"
+ },
+ {
+  "slug": "en/frequently-asked-questions",
+  "key": "faq",
+  "file": "en_preguntas-frecuentes.html",
+  "title": "FAQ | Haven Medellín",
+  "desc": "Location, getting here from the airport, included services, 360° Rooftop hours and safety in El Poblado.",
+  "head_extra": "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"What is the hotel's location?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"We are located at Calle 10A #36-29 in the El Poblado neighborhood of Medellín (Colombia). It is exactly the southeastern area of Medellín, and is formally known as Comuna 14. It limits to the north with the city center and to the south with the municipality of Envigado. It is one of the city’s most prominent and exclusive areas, renowned for its hotels, shopping centers, restaurants and lively nightlife.\"}}, {\"@type\": \"Question\", \"name\": \"How to get there from the airport or terminal?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"To get there from José María Córdova International Airport in Rionegro, you have several transportation options: - Route: Combuses offers a bus service between the airport and Medellín. You can board the bus at the domestic departures area, gate number 2. - Stop in Medellín: The bus will drop you off at the San Diego terminal or at the Exposiciones metro station. - Cost: The rate is 15,500 COP per person. - Schedule: It operates 24 hours a day with departures every 15 minutes. - Alternative route: From the San Diego Terminal or the Exposiciones Station, you can take a taxi or the metro system to reach your destination in El Poblado. - Availability: Taxis are available in the airport arrivals area. - Cost: The direct trip to El Poblado usually costs between $70,000 and $100,000 COP. - Schedule: Approximately 40 minutes, depending on traffic. - Reservations: Companies like Paisa Tours offer private transfers from the airport to Medellín. - Advantages: This service can be more convenient and personalized, ideal if you have a lot of luggage or prefer a direct transfer. - Options: Several companies offer car rental services at the airport. - Consideraciones: Debe familiarizarse con las rutas y el tráfico de Medellín. Recommendation: If you’re looking for an economical and reliable option, the Combuses bus service is suitable. However, if you prefer comfort and a direct journey, a taxi or private transfer service would be more convenient. Note: Costs and travel times may vary depending on the time of day and traffic conditions. It is recommended to check the latest information before traveling.\"}}, {\"@type\": \"Question\", \"name\": \"What services and amenities are included in the room price?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"- Breakfast: We offer a buffet breakfast included in the rate. - Wi-Fi connection: Free internet access in rooms and common areas. - Daily cleaning service: Daily room cleaning. - 24-hour reception: Customer service available 24 hours a day. - Cable/satellite television: Televisions in the rooms with a variety of channels. - Safe: Safes are available in the rooms or at reception. - Personal hygiene items: Supply of shampoo, soap and other personal hygiene products. - Cozy cafe: A space to relax and enjoy drinks and snacks. - Rooftop pool and bar: Exclusive access to a rooftop pool and bar with 360° panoramic views of Medellín.\"}}, {\"@type\": \"Question\", \"name\": \"Does the hotel offer airport transportation or a city shuttle service?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes, we offer this service; you must coordinate with our agents at the hotel reception.\"}}, {\"@type\": \"Question\", \"name\": \"What major tourist attractions or sites are near the hotel?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"El Poblado, one of Medellín’s most iconic neighborhoods, offers a variety of attractions that combine culture, gastronomy, and nightlife. Here are five must-see places for international visitors to make the most of their stay in this vibrant area: Lleras Park. Considered the epicenter of Medellín’s nightlife, it’s surrounded by a wide variety of bars, restaurants, and nightclubs. It’s the ideal place to experience the city’s vibrant nightlife and socialize with locals and tourists. The Castle Museum and Gardens. Inspired by the castles of the Loire Valley in France, this museum offers a showcase of European art and architecture right in the heart of Medellín. Its gardens are ideal for leisurely strolls and picnics, providing a peaceful haven away from the urban bustle. Museum of Modern Art of Medellín (MAMM). Located in the Ciudad del Río area, the MAMM presents contemporary art exhibitions and is a cultural hub. Its modern architecture and frequent events make it a must-see for art lovers. Poblado Park. This park is a historical landmark, marking the site of the first settlement in the Aburrá Valley. Surrounded by cafes and shops, it’s an ideal place to relax and observe daily life in the city. Santafé Shopping Center. This shopping center is one of the largest in Medellín and offers a wide variety of shops, restaurants, and entertainment. Its modern design and themed events make it a popular spot for both locals and tourists..\"}}, {\"@type\": \"Question\", \"name\": \"Does the hotel have a restaurant or food service? What are the opening hours?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes, our hotel features the 360 Rooftop Bar, located on the 11th floor of the Haven Hotel, offering a diverse culinary experience in a modern and inviting atmosphere. Our menu includes options such as pizzas, grilled meats, and Colombian cuisine, accompanied by a selection of expertly crafted cocktails. - Sunday to Wednesday: 7:00 a.m. – 11:00 p.m. - Thursday: 7:00 a.m. – 12:00 p.m. - Friday – Saturday: 7:00 a.m. – 2:00 p.m. This establishment is known for its pleasant atmosphere, panoramic city views, and excellent customer service.\"}}, {\"@type\": \"Question\", \"name\": \"What public or private transport options are available near the hotel?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"In El Poblado, Medellín, travelers and residents have access to a variety of transportation options to suit different needs. The three main modes of transportation in the area are: - The subway system is one of the city’s prides and an efficient way to get around. - El Poblado Station: The El Poblado station connects users with the rest of Medellín. - Advantages: Cheap and punctual. It connects with complementary lines such as the Metrocable, which allows you to explore places like Arví Park. - Cheap and punctual. - It connects with complementary lines such as the Metrocable, which allows you to explore places like Arví Park. - Council: Ideal for avoiding traffic during peak hours. - Traditional taxis are a reliable option, and apps like Uber, DiDi, and Cabify are widely used in El Poblado. - Advantages: Available 24 hours a day. Useful for short trips and for going directly to specific places. The apps allow you to know the estimated cost of the trip in advance. - Available 24 hours a day. - Useful for short trips and for going directly to specific places. - The apps allow you to know the estimated cost of the trip in advance. - Council: Always check that the taxi has a working taximeter. - Medellín’s public bus system includes routes that pass through El Poblado and connect to other parts of the city./li> - Advantages: Affordable and with wide coverage. Suitable for those who know the routes and want to save money. - Affordable and with wide coverage. - Suitable for those who know the routes and want to save money. - Council: It is advisable to ask locals or use apps like Moovit to identify the correct routes. General Council: El Poblado is one of the busiest areas in Medellín, so traffic can be heavy during rush hour. Plan your routes in advance and choose the most suitable mode of transportation for each occasion..\"}}, {\"@type\": \"Question\", \"name\": \"Is the area where the hotel is located safe, especially for walking at night?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"El Poblado is considered one of the safest and most popular tourist areas in Medellín, attracting many visitors with its vibrant nightlife, restaurants, and shops. However, it’s important for travelers to take certain precautions to ensure a safe and enjoyable experience. Here are some practical tips for those planning a visit to El Poblado: - Recommended areas: Places like Provenza, Parque Lleras, and Parque El Poblado are popular and usually well-monitored. These areas have a constant presence of tourists and residents, which contributes to a safer environment. - Avoid unfamiliar areas: It is advisable not to venture into unfamiliar streets or neighborhoods, especially at night, as they may lack adequate lighting and police presence. - Safe transport: After dark, it’s best to use reliable transportation services, such as licensed taxis or ride-hailing apps. This is especially important when traveling between areas or returning to your accommodation. - Avoid walking alone: While El Poblado is generally safe, it’s advisable to avoid walking alone at night on deserted or poorly lit streets. Opt for walking in groups and sticking to well-lit routes. - Be discreet with valuables: Avoid displaying jewelry, expensive electronics, or other valuables in public to avoid attracting attention. - Constant surveillance: Keep your belongings, such as bags and backpacks, in sight and secure at all times, especially in crowded places like bars and restaurants. - Transportation apps: Use approved apps to request transportation and always verify driver and vehicle information before getting in. - Secure connections: When using public Wi-Fi networks, avoid accessing sensitive information and consider using a VPN to protect your data. - Proceed with caution in new relationships: While local hospitality is extraordinary, maintain a cautious attitude when interacting with people you have just met, especially at night. - Inform others: Let your friends or family know your plans and location, especially if you decide to explore the nightlife or participate in activities with new acquaintances. - Stay informed: Consult local and reliable sources to stay informed of any security alerts or warnings in the area. - Emergency assistance: Keep the contact numbers for local authorities and your consulate or embassy handy in case you need help. In summary, while El Poblado is one of the safest and most attractive areas in Medellín, it is important for travelers to remain vigilant and follow these tips to ensure a safe and enjoyable experience during their visit.\"}}]}</script>\n",
+  "lang": "en",
+  "canonical": "/en/frequently-asked-questions/"
+ },
+ {
+  "slug": "en/visitor-policy",
+  "key": "legal",
+  "file": "en_politica-de-visitantes.html",
+  "title": "Política de visitantes | Haven Medellín",
+  "desc": "Registro de huéspedes y visitantes, cargos por persona adicional y normas según la Ley 679 de 2011 en Haven Medellín.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/visitor-policy/"
+ },
+ {
+  "slug": "en/terms-and-conditions",
+  "key": "legal",
+  "file": "en_terminos-y-condiciones.html",
+  "title": "Términos y condiciones | Haven Medellín",
+  "desc": "Reservas, cancelaciones, minibar, garantía, política de no fumar, privacidad y horarios de Haven, A Design Hotel.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/terms-and-conditions/"
+ },
+ {
+  "slug": "en/blogs",
+  "key": "blog",
+  "file": "en_blogs.html",
+  "title": "Blog: guías y planes en Medellín | Haven Medellín",
+  "desc": "Recomendaciones, guías y experiencias para disfrutar Medellín: gastronomía, cultura paisa y las mejores cosas que hacer en la ciudad.",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/blogs/"
+ },
+ {
+  "slug": "en/get-to-know-the-paisa-culture-and-discover-its-traditions-in-a-unique-experience",
+  "key": "post",
+  "file": "en_blog_conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica.html",
+  "title": "Get to know the Paisa culture and discover its traditions in a unique experience | Haven Medellín",
+  "desc": "Floral and silletera tradition in the town of Santa Elena Although the flower farms of",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/get-to-know-the-paisa-culture-and-discover-its-traditions-in-a-unique-experience/"
+ },
+ {
+  "slug": "en/the-10-best-things-to-do-and-see-in-the-city-of-eternal-spring",
+  "key": "post",
+  "file": "en_blog_las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera.html",
+  "title": "The 10 best things to do and see in the City of Eternal Spring | Haven Medellín",
+  "desc": "Known as the “City of Eternal Spring” Named for its mild and pleasant climate throughout",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/the-10-best-things-to-do-and-see-in-the-city-of-eternal-spring/"
+ },
+ {
+  "slug": "en/five-star-gastronomic-experiences-in-medellin",
+  "key": "post",
+  "file": "en_blog_experiencias-gastronomicas-de-cinco-estrellas-en-medellin.html",
+  "title": "Five-star gastronomic experiences in Medellín | Haven Medellín",
+  "desc": "A complete guide for food lovers. Medellín, known as the “City of Eternal Spring”, surprises",
+  "head_extra": "",
+  "lang": "en",
+  "canonical": "/en/five-star-gastronomic-experiences-in-medellin/"
  }
 ]

@@ -1,6 +1,6 @@
 /* ---------- Funciones que no dependen de librerías ---------- */
 (function(){
-  const BOOK='http://havenmedellin.backhotelite.com/es/bookcore/availability/havenmedellin/';
+  const BOOK='http://havenmedellin.backhotelite.com/'+(document.documentElement.lang==='en'?'en':'es')+'/bookcore/availability/havenmedellin/';
   const iso=d=>d.toISOString().slice(0,10);
   const fin=document.getElementById('f-in'),fout=document.getElementById('f-out');
   const t=new Date();t.setHours(12);const a=new Date(t);a.setDate(a.getDate()+1);const b=new Date(t);b.setDate(b.getDate()+3);
@@ -34,7 +34,7 @@
   // Escritorio: un clic elige la categoría y muestra su foto; el segundo clic (o el botón Ver) entra
   items.forEach(li=>{const a=li.querySelector('a');a.addEventListener('click',e=>{if(!matchMedia('(min-width: 821px)').matches)return;if(li.dataset.picked!=='1'){e.preventDefault();items.forEach(x=>x.dataset.picked='');li.dataset.picked='1';setRoom(li);}});a.addEventListener('focus',()=>{if(a.matches(':focus-visible'))setRoom(li);});});
   const vb=document.querySelector('.room-stage .stage-go');
-  if(vb){const upd=()=>{const li=items.find(x=>x.classList.contains('active'))||items[0];vb.href=li.querySelector('a').getAttribute('href');vb.querySelector('b').textContent='Ver '+li.querySelector('.name').textContent;};items.forEach(li=>li.querySelector('a').addEventListener('click',()=>setTimeout(upd,0)));upd();}
+  if(vb){const upd=()=>{const li=items.find(x=>x.classList.contains('active'))||items[0];vb.href=li.querySelector('a').getAttribute('href');vb.querySelector('b').textContent=(document.documentElement.lang==='en'?'View ':'Ver ')+li.querySelector('.name').textContent;};items.forEach(li=>li.querySelector('a').addEventListener('click',()=>setTimeout(upd,0)));upd();}
   window.__setRoom=setRoom;
   const stage=document.querySelector('.room-stage');
   if(stage&&matchMedia('(hover:hover)').matches){document.querySelector('.room-switch').addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();stage.style.setProperty('--px',((e.clientX-r.left)/r.width-.5)*-22+'px');stage.style.setProperty('--py',((e.clientY-r.top)/r.height-.5)*-22+'px');});}
@@ -195,7 +195,7 @@ addEventListener('DOMContentLoaded',()=>{
   // Contadores
   document.querySelectorAll('[data-count]').forEach(el=>{
     const end=parseFloat(el.dataset.count),dec=+el.dataset.dec||0,sup=el.querySelector('sup');const o={v:0};
-    ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:()=>gsap.to(o,{v:end,duration:1.8,ease:'power2.out',onUpdate:()=>{el.firstChild.nodeValue=o.v.toLocaleString('es-CO',{minimumFractionDigits:dec,maximumFractionDigits:dec});}})});
+    ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:()=>gsap.to(o,{v:end,duration:1.8,ease:'power2.out',onUpdate:()=>{el.firstChild.nodeValue=o.v.toLocaleString(document.documentElement.lang==='en'?'en-US':'es-CO',{minimumFractionDigits:dec,maximumFractionDigits:dec});}})});
     if(!el.firstChild||el.firstChild.nodeType!==3)el.prepend(document.createTextNode(''));
   });
 
@@ -211,11 +211,11 @@ addEventListener('DOMContentLoaded',()=>{
 /* Túnel en celular: las fotos pasan a una fila deslizable */
 (function(){const st=document.querySelector('.tunnel-stage');if(!st||matchMedia('(min-width: 821px)').matches)return;
   const row=document.createElement('div');row.className='tunnel-row';st.querySelectorAll('.fly').forEach(f=>row.append(f));st.append(row);
-  const h=document.createElement('p');h.className='tunnel-hint';h.textContent='Desliza para ver más →';st.append(h);})();
+  const h=document.createElement('p');h.className='tunnel-hint';h.textContent=document.documentElement.lang==='en'?'Swipe for more →':'Desliza para ver más →';st.append(h);})();
 
 /* ===================== Páginas internas ===================== */
 (function(){
-  const BOOK='http://havenmedellin.backhotelite.com/es/bookcore/availability/havenmedellin/';
+  const BOOK='http://havenmedellin.backhotelite.com/'+(document.documentElement.lang==='en'?'en':'es')+'/bookcore/availability/havenmedellin/';
   const iso=d=>d.toISOString().slice(0,10);
   // "Reservar" fuera de la portada abre el motor con fechas sugeridas
   if(!document.getElementById('reservar')){
@@ -243,7 +243,7 @@ addEventListener('DOMContentLoaded',()=>{
   }
   // Lightbox
   const ms=[...document.querySelectorAll('.mosaic a,[data-lb]')];
-  if(ms.length){const lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Galería');
+  if(ms.length){const lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label',document.documentElement.lang==='en'?'Gallery':'Galería');
     lb.innerHTML='<img alt=""><button class="x" aria-label="Cerrar">✕</button><button class="pv" aria-label="Anterior">←</button><button class="nx" aria-label="Siguiente">→</button>';document.body.append(lb);
     let i=0;const im=lb.querySelector('img');const show=n=>{i=(n+ms.length)%ms.length;im.src=ms[i].getAttribute('href');im.alt=(ms[i].querySelector('img')||{}).alt||'';lb.classList.add('on');};
     ms.forEach((a,n)=>a.addEventListener('click',e=>{e.preventDefault();show(n);}));

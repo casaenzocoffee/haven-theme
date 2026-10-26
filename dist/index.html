@@ -8,6 +8,10 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://havenmedellin.com/es/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<link rel="alternate" hreflang="es" href="./">
+<link rel="alternate" hreflang="en" href="en/">
+
 <meta property="og:title" content="Haven Medellín | Hotel de diseño en El Poblado">
 <meta property="og:description" content="Haven, A Design Hotel: suites con jacuzzi, 360° Rooftop, Swing Bar y wellness en el corazón de El Poblado, Medellín. Reserva directo al mejor precio.">
 <meta property="og:image" content="/wp-content/uploads/revslider/video-media/video-haven-medellin.webp">
@@ -15,8 +19,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
-<link rel="stylesheet" href="assets/haven.css?v=79e200cf">
-<link rel="preload" as="image" href="/wp-content/uploads/revslider/video-media/video-haven-medellin.webp" fetchpriority="high">
+<link rel="stylesheet" href="assets/haven.css?v=f1c84fdc">
+<link rel="preload" as="image" href="media/haven-hero.webp" media="(min-width: 900px)" fetchpriority="high">
+<link rel="preload" as="image" href="media/haven-hero-m.webp" media="(max-width: 899px)" fetchpriority="high">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js">
 <script type="application/ld+json">
@@ -54,7 +59,7 @@ var n=0,cb=el.querySelector('.intro-count b'),iv=setInterval(function(){if(windo
         <a href="eventos/">Eventos</a>
         <a href="contacto/">Contacto</a>
       </nav>
-      <div class="lang"><a href="" aria-current="page" aria-current="true">ES</a><span aria-hidden="true">/</span><a href="/en/">EN</a></div>
+      <div class="lang"><a href="./" hreflang="es" lang="es" aria-current="true">ES</a><span aria-hidden="true">/</span><a href="en/" hreflang="en" lang="en">EN</a></div>
       <a class="btn btn-gold" href="#reservar" data-track="reservar_header">Reservar <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16M4 16h16"/></svg></button>
     </div>
@@ -70,7 +75,7 @@ var n=0,cb=el.querySelector('.intro-count b'),iv=setInterval(function(){if(windo
   <a class="big" href="wellness/">Wellness</a>
   <a class="big" href="eventos/">Eventos</a>
   <a class="big" href="contacto/">Contacto</a>
-  <p style="margin-top:24px;color:var(--muted)"><a href="/en/">English</a></p>
+  <p style="margin-top:24px;color:var(--muted)"><a href="en/" hreflang="en" lang="en">English</a></p>
 </div>
 
 
@@ -91,8 +96,8 @@ var n=0,cb=el.querySelector('.intro-count b'),iv=setInterval(function(){if(windo
     </div>
   </div>
   <div class="hero-media">
-    <img class="poster" src="/wp-content/uploads/revslider/video-media/video-haven-medellin.webp" alt="Vista de Medellín desde Haven, en El Poblado" width="1920" height="1080" fetchpriority="high">
-    <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" data-src="/wp-content/uploads/2026/06/video-haven-medellin.mp4"></video>
+    <picture><source media="(max-width: 899px)" srcset="media/haven-hero-m.webp"><img class="poster" src="media/haven-hero.webp" alt="Vista de Medellín desde Haven, en El Poblado" width="1600" height="900" fetchpriority="high"></picture>
+    <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" data-src="media/haven-hero.mp4" data-src-m="media/haven-hero-m.mp4"></video>
     <p class="signature">Haven, A Design Hotel<small>Calle 10A #36-29 · El Poblado</small></p>
   </div>
   <div class="wrap">
@@ -377,7 +382,7 @@ var n=0,cb=el.querySelector('.intro-count b'),iv=setInterval(function(){if(windo
       <div><h4>Ubicación</h4><p>Calle 10A #36-29<br>El Poblado, Medellín<br>Colombia</p></div>
       <div><h4>Recepción</h4><p>(+57) 322 306 4585<br>(+57) (4) 604 7327<br>frontdesk@serenahotelsco.com</p></div>
       <div><h4>Reservas</h4><p>(+57) 321 209 7033<br>booking@serenahotelsco.com</p></div>
-      <div><h4>Haven</h4><ul><li><a href="habitaciones/">Habitaciones</a></li><li><a href="servicios/">Servicios</a></li><li><a href="serena-rewards/">Serena Rewards</a></li><li><a href="/es/blogs/">Blog</a></li><li><a href="contacto/">Contacto</a></li></ul></div>
+      <div><h4>Haven</h4><ul><li><a href="habitaciones/">Habitaciones</a></li><li><a href="servicios/">Servicios</a></li><li><a href="serena-rewards/">Serena Rewards</a></li><li><a href="blogs/">Blog</a></li><li><a href="contacto/">Contacto</a></li></ul></div>
     </div>
     <div class="wordmark" aria-hidden="true">
       <svg viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid meet">
@@ -396,7 +401,7 @@ var n=0,cb=el.querySelector('.intro-count b'),iv=setInterval(function(){if(windo
     </div>
     <div class="legal">
       <span>© 2026 Haven Hotel. Todos los derechos reservados.</span>
-      <nav aria-label="Legal"><a href="/es/politica-de-visitantes/">Política de visitantes</a><a href="/es/terminos-y-condiciones/">Términos y condiciones</a><a href="preguntas-frecuentes/">Preguntas frecuentes</a></nav>
+      <nav aria-label="Legal"><a href="politica-de-visitantes/">Política de visitantes</a><a href="terminos-y-condiciones/">Términos y condiciones</a><a href="preguntas-frecuentes/">Preguntas frecuentes</a></nav>
       <nav aria-label="Redes"><a href="https://www.instagram.com/haven_medellin" rel="noopener" target="_blank">Instagram</a><a href="https://www.tiktok.com/@haven_medellin" rel="noopener" target="_blank">TikTok</a><a href="https://www.facebook.com/HavenaDesignHotel" rel="noopener" target="_blank">Facebook</a></nav>
     </div>
   </div>
@@ -410,7 +415,7 @@ var n=0,cb=el.querySelector('.intro-count b'),iv=setInterval(function(){if(windo
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<script src="assets/haven.js?v=79e200cf" defer></script>
-<script type="module" src="assets/clock3d.js?v=79e200cf"></script>
+<script src="assets/haven.js?v=f1c84fdc" defer></script>
+<script type="module" src="assets/clock3d.js?v=f1c84fdc"></script>
 </body>
 </html>

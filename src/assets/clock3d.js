@@ -111,7 +111,7 @@ async function start(){
       if(I<=0&&cv.classList.contains('top'))cv.classList.remove('top');}
     const p=cl((P-.5)/.5),e=ease(p);
     // Recorrido con scroll: S 0→1 a lo largo de ~1.7 pantallas
-    const S=reduce?0:cl(scrollY/(VH*(VW<821?.75:1.7)));
+    const S=reduce?0:cl(scrollY/(VH*(VW<821?.75:.6)));
     if(P>=1&&S>=1){if(!idle){idle=true;cv.classList.add('gone');}return;}
     if(idle){idle=false;cv.classList.remove('gone');}
     mouse.x+=(mouse.tx-mouse.x)*0.05;mouse.y+=(mouse.ty-mouse.y)*0.05;
@@ -121,9 +121,9 @@ async function start(){
     const small=VW<821,endScale=k*(small?1.05:1.35);
     const kc=Math.min(VH*.4,VW*.62)*u/3.44,cy=VH*.09*u; // tamaño y posición en la apertura (centro de pantalla)
     // En celular el reloj acompaña la página (no tapa el título): gira en 3D y se desarma al salir por arriba
-    const px=small?sx:lerp(sx,sx*0.15,A), py=small?sy+scrollY*u*.65+B*0.4:lerp(sy,0,A)+B*1.2;
+    const px=sx, py=sy+scrollY*u*(small?.65:1)+B*0.4; // acompaña la página: nunca tapa el video del banner
     holder.position.set(lerp(px,0,I),lerp(py,cy,I)+Math.sin(now/1500)*0.06,0);
-    holder.scale.setScalar(lerp(small?k*(1+A*.12):lerp(k,endScale,A),kc,I));
+    holder.scale.setScalar(lerp(k*(1+A*.12),kc,I));
     holder.rotation.y=A*TAU+mouse.x*0.32+Math.sin(now/3200)*0.06+B*0.8;
     holder.rotation.x=Math.sin(A*Math.PI)*0.55+mouse.y*0.22-B*0.3;
     holder.rotation.z=Math.sin(A*Math.PI)*-0.18;

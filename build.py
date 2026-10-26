@@ -30,16 +30,50 @@ for _s in ['suite-emperor-901','suite-emperor-902','suite-presidential','suite-i
            'habitacion-marques-plus','habitacion-marques','habitacion-duke','habitacion-consort']:
     NAV_MAP['/es/'+_s+'/'] = 'habitacion/'+_s+'/'
 NAV_MAP['/es/suite-presidencial/'] = 'habitacion/suite-presidential/'
+for _s in ['politica-de-visitantes', 'terminos-y-condiciones', 'blogs']:
+    NAV_MAP['/es/' + _s + '/'] = _s + '/'
+BLOG_EN = {'experiencias-gastronomicas-de-cinco-estrellas-en-medellin': 'five-star-gastronomic-experiences-in-medellin',
+    'las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera': 'the-10-best-things-to-do-and-see-in-the-city-of-eternal-spring',
+    'conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica': 'get-to-know-the-paisa-culture-and-discover-its-traditions-in-a-unique-experience'}
+for _s in BLOG_EN:
+    NAV_MAP['/es/' + _s + '/'] = 'blog/' + _s + '/'
+
+ES2EN_PATH = {
+    '': 'en/', 'habitaciones/': 'en/all-rooms/', 'penthouse/': 'en/penthouse/', 'presidencial/': 'en/presidential/', 'suites-de-lujo/': 'en/luxury-suites/',
+    'rooftop/': 'en/360-rooftop/', 'swing/': 'en/swing-bar/', 'gastronomia/': 'en/gastronomy/', 'wellness/': 'en/wellness/', 'eventos/': 'en/events/',
+    'servicios/': 'en/services/', 'contacto/': 'en/contact/', 'serena-rewards/': 'en/serena-rewards/', 'preguntas-frecuentes/': 'en/frequently-asked-questions/',
+    'politica-de-visitantes/': 'en/visitor-policy/', 'terminos-y-condiciones/': 'en/terms-and-conditions/', 'blogs/': 'en/blogs/',
+}
+EN_ROOM = {'suite-emperor-901': 'emperor-suite-901', 'suite-emperor-902': 'emperor-suite-902', 'suite-presidential': 'presidential-suite',
+    'suite-imperial-402': 'imperial-suite-402', 'suite-excelsior-401': 'excelsior-suite-401', 'suite-excelsior-804': 'excelsior-suite-804', 'suite-excelsior-604': 'excelsior-suite-604',
+    'habitacion-ambassador': 'ambassador-room', 'habitacion-ambassador-jr': 'ambassador-jr-room', 'habitacion-viscount-803': 'viscount-room-803', 'habitacion-viscount': 'viscount-room',
+    'habitacion-lord': 'lords-room', 'habitacion-earl': 'earls-room', 'habitacion-marques-plus': 'marques-plus-room', 'habitacion-marques': 'marques-room',
+    'habitacion-duke': 'duke-room', 'habitacion-consort': 'consort-room'}
+for _k, _v in EN_ROOM.items():
+    ES2EN_PATH['habitacion/' + _k + '/'] = 'en/' + _v + '/'
+for _k, _v in BLOG_EN.items():
+    ES2EN_PATH['blog/' + _k + '/'] = 'en/' + _v + '/'
+EN2ES_PATH = {v: k for k, v in ES2EN_PATH.items()}
+# URLs reales en inglés -> ruta del prototipo
+NAV_MAP_EN = {'/' + v: v for v in ES2EN_PATH.values()}
+
+def to_en(p):
+    return ES2EN_PATH.get(p, p)
 
 def head(page, R, ver):
     canonical = 'https://havenmedellin.com' + page.get('canonical', '/es/')
     og = page.get('og', '/wp-content/uploads/2026/06/hotel-haven-medellin.webp')
     extra = page.get('head_extra', '')
     if page.get('extra_head_file'):
-        extra += rd(page['extra_head_file'])
+        extra += rd(page['extra_head_file']).replace('{{R}}', R)
+    en = page.get('lang') == 'en'
+    sl = page['slug'] + '/' if page['slug'] else ''
+    es_p = EN2ES_PATH.get(sl, sl) if en else sl
+    en_p = sl if en else ES2EN_PATH.get(sl)
+    alts = f'<link rel="alternate" hreflang="es" href="{(R + es_p) or "./"}">\n' + (f'<link rel="alternate" hreflang="en" href="{R}{en_p}">\n' if en_p else '')
     preload = ''.join(f'<link rel="preload" as="image" href="{u}" fetchpriority="high">\n' for u in page.get('preload', []))
     return f'''<!doctype html>
-<html lang="es">
+<html lang="{'en' if en else 'es'}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -48,6 +82,8 @@ def head(page, R, ver):
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="{canonical}">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="{'en_US' if en else 'es_CO'}">
+{alts}
 <meta property="og:title" content="{page['title']}">
 <meta property="og:description" content="{page['desc']}">
 <meta property="og:image" content="{og}">
@@ -59,22 +95,28 @@ def head(page, R, ver):
 {extra}</head>
 '''
 
-def header(slug, R):
-    h = rd('partials/header.html')
+def header(slug, R, en=False):
+    h = rd('partials/header_en.html' if en else 'partials/header.html')
+    sl = slug + '/' if slug else ''
+    es_p = EN2ES_PATH.get(sl, sl) if en else sl
+    en_p = sl if en else ES2EN_PATH.get(sl, 'en/')
+    h = h.replace('{{ES}}', (R + es_p) or './').replace('{{EN}}', R + en_p)
+    NM = NAV_MAP_EN if en else NAV_MAP
     def rep(m):
         href = m.group(1)
-        if href in NAV_MAP:
-            target = NAV_MAP[href]
+        if href in NM:
+            target = NM[href]
             cur = ' aria-current="page"' if target == (slug + '/' if slug else '') else ''
             return f'href="{R}{target}"{cur}'
         return m.group(0)
     h = h.replace(' aria-current="page"', '')
-    h = re.sub(r'href="(/es/[^"]*)"', rep, h)
+    h = re.sub(r'href="(/e[sn]/[^"]*)"', rep, h)
     return h
 
-def footer(R):
-    f = rd('partials/footer.html')
-    return re.sub(r'href="(/es/[^"]*)"', lambda m: f'href="{R}{NAV_MAP[m.group(1)]}"' if m.group(1) in NAV_MAP else m.group(0), f)
+def footer(R, en=False):
+    f = rd('partials/footer_en.html' if en else 'partials/footer.html')
+    NM = NAV_MAP_EN if en else NAV_MAP
+    return re.sub(r'href="(/e[sn]/[^"]*)"', lambda m: f'href="{R}{NM[m.group(1)]}"' if m.group(1) in NM else m.group(0), f)
 
 def build():
     if os.path.isdir(DIST):
@@ -84,6 +126,8 @@ def build():
     ver = hashlib.sha1((css + js + rd('assets/clock3d.js')).encode()).hexdigest()[:8]
     for a in os.listdir(os.path.join(SRC, 'assets')):
         shutil.copy(os.path.join(SRC, 'assets', a), os.path.join(DIST, 'assets', a))
+    if os.path.isdir(os.path.join(SRC, 'media')):
+        shutil.copytree(os.path.join(SRC, 'media'), os.path.join(DIST, 'media'))
     for page in PAGES:
         slug = page['slug']
         R = '' if not slug else '../' * (slug.count('/') + 1)
@@ -91,8 +135,11 @@ def build():
         top = ''
         if '<!--BODY-->' in body:
             top, body = body.split('<!--BODY-->', 1)
-        body = re.sub(r'href="(/es/[^"]*)"', lambda m: f'href="{R}{NAV_MAP[m.group(1)]}"' if m.group(1) in NAV_MAP else m.group(0), body)
-        body = body.replace('{{R}}', R)
+        en = page.get('lang') == 'en'
+        tr = to_en if en else (lambda p: p)
+        body = re.sub(r'href="(/es/[^"]*)"', lambda m: f'href="{R}{tr(NAV_MAP[m.group(1)])}"' if m.group(1) in NAV_MAP else m.group(0), body)
+        body = re.sub(r'href="(/en/[^"]*)"', lambda m: f'href="{R}{NAV_MAP_EN[m.group(1)]}"' if m.group(1) in NAV_MAP_EN else m.group(0), body)
+        body = re.sub(r'\{\{R\}\}([a-z0-9/-]*)', lambda m: R + tr(m.group(1)), body)
         scripts = f'''<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
@@ -101,7 +148,7 @@ def build():
         if page.get('clock'):
             scripts += f'<script type="module" src="{R}assets/clock3d.js?v={ver}"></script>\n'
         html = (head(page, R, ver) + f'<body class="no-js page-{page.get("key", slug or "home")}">\n' + top
-                + rd('partials/nojs.html') + header(slug, R) + body + '\n' + footer(R) + scripts + '</body>\n</html>\n')
+                + rd('partials/nojs.html') + header(slug, R, en) + body + '\n' + footer(R, en) + scripts + '</body>\n</html>\n')
         out = os.path.join(DIST, slug, 'index.html') if slug else os.path.join(DIST, 'index.html')
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with open(out, 'w', encoding='utf-8') as f:
