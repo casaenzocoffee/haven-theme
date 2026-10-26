@@ -95,16 +95,17 @@ async function start(){
   const mouse={x:0,y:0,tx:0,ty:0};
   addEventListener('pointermove',e=>{mouse.tx=(e.clientX/innerWidth-.5)*2;mouse.ty=(e.clientY/innerHeight-.5)*2;},{passive:true});
   const TAU=Math.PI*2,ease=p=>1-Math.pow(1-p,4),cl=v=>v<0?0:v>1?1:v,sm=v=>v*v*(3-2*v),lerp=(a,b,t)=>a+(b-a)*t;let lastCnt=-1;
-  let t0=0,last=performance.now(),idle=false;
+  let t0=0,last=performance.now(),idle=false,el=0;
   const frame=now=>{
     requestAnimationFrame(frame);
     if(document.hidden||!innerWidth){last=now;return;}
     if(VW!==innerWidth||VH!==innerHeight){size();measure();}
-    if(!t0)t0=now;const d=Math.min(0.05,(now-last)/1000);last=now;
-    if(big&&window.__introSkip&&!tExit){t0=now-2600;}
-    const P=reduce?1:Math.min(1,(now-t0)/(big?2600:3400));
+    if(!t0)t0=now;const raw=Math.max(0,now-last),d=Math.min(0.05,raw/1000);last=now;el+=Math.min(raw,50); // el: tiempo de animación sin saltos aunque el teléfono se trabe
+    if(big&&window.__introSkip&&!tExit){el=Math.max(el,2600);}
+    const P=reduce?1:Math.min(1,el/(big?2600:3400));window.__introTakeover=1;
     if(big){if(P>.74)introEl.classList.add('brand');
-      if(P>=1&&!tExit){tExit=now+650;}
+      if(P>=1&&!tExit){tExit=now+1200;}
+      if(!tExit&&(!introEl.isConnected||introEl.classList.contains('out')))tExit=now; // si la apertura terminó por tiempo, el reloj igual vuela a su sitio
       if(tExit&&now>=tExit&&introEl.isConnected&&!introEl.classList.contains('out'))window.__introEnd&&window.__introEnd();
       I=tExit?1-ease(cl((now-tExit)/1100)):1;
       if(I<=0&&cv.classList.contains('top'))cv.classList.remove('top');}
@@ -158,7 +159,8 @@ async function start(){
     renderer.render(scene,cam);
     if(!cv.classList.contains('ready')){cv.classList.add('ready');stage.classList.add('ready');}
   };
+  try{renderer.compile(scene,cam);renderer.render(scene,cam);}catch(e){}last=performance.now(); // compila shaders antes de arrancar la apertura
   requestAnimationFrame(frame);
 }
-const go=()=>('requestIdleCallback' in window)?requestIdleCallback(start,{timeout:600}):setTimeout(start,150);
-if(document.readyState==='complete')go();else addEventListener('load',go);
+const go=()=>document.getElementById('intro')?start():(('requestIdleCallback' in window)?requestIdleCallback(start,{timeout:600}):setTimeout(start,150));
+if(document.getElementById('intro'))go();else if(document.readyState==='complete')go();else addEventListener('load',go);

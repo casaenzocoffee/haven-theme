@@ -7,7 +7,8 @@
 if(seen){el.remove();return;}
 document.documentElement.classList.add('intro-on');
 window.__introEnd=function(){if(!el.isConnected)return;el.classList.add('out');document.documentElement.classList.remove('intro-on');try{sessionStorage.setItem('hv-intro','1')}catch(e){}setTimeout(function(){el.remove()},900);};
-setTimeout(function(){window.__introEnd()},5200);
+setTimeout(function(){window.__introEnd()},9000);
+var n=0,cb=el.querySelector('.intro-count b'),iv=setInterval(function(){if(window.__introTakeover||n>=24){clearInterval(iv);return;}n+=1;cb.textContent=(n<10?'0':'')+n;},90);
 ['wheel','touchstart','keydown','click'].forEach(function(t){addEventListener(t,function(){window.__introSkip=1;},{once:true,passive:true});});})();</script>
 
 <!--BODY-->
