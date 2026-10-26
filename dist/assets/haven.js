@@ -192,7 +192,7 @@ addEventListener('DOMContentLoaded',()=>{
   if(matchMedia('(min-width: 821px)').matches){
     const suites=gsap.utils.toArray('.suite');
     suites.forEach((s,i)=>{if(i===suites.length-1)return;
-      gsap.to(s,{scale:.92,filter:'brightness(.55)',ease:'none',scrollTrigger:{trigger:suites[i+1],start:'clamp(top 85%)',end:'top 15%',scrub:true}});});
+      gsap.to(s,{scale:.93,filter:'brightness(.6)',ease:'none',scrollTrigger:{trigger:suites[i+1],start:'top 60%',end:'top 12%',scrub:true}});});
   }
 
   // Túnel 3D: fotos que vienen desde la profundidad

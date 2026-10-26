@@ -696,3 +696,4 @@ html.intro-on,html.intro-on body{overflow:hidden}
 .ce-ig{display:inline-flex;align-items:center;gap:10px}
 .ce-ig svg{width:18px;height:18px;flex:none}
 .ce-ig b{font-weight:600;color:var(--gold);text-transform:none;letter-spacing:.02em}
+.suite-media .thumbs{z-index:3}
