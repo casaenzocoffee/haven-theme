@@ -1,14 +1,15 @@
 <div class="intro" id="intro" aria-hidden="true">
   <div class="intro-brand"><span class="ib-w"><i>H</i><i>A</i><i>V</i><i>E</i><i>N</i></span><span class="ib-s">A Design Hotel · Medellín</span></div>
   <p class="intro-count"><b>00</b><span>%</span></p>
+  <i class="intro-load" aria-hidden="true"></i>
 </div>
 <script>/* Apertura: solo la primera visita de la sesión, se puede saltar */
 (function(){var el=document.getElementById('intro'),seen=false;try{seen=sessionStorage.getItem('hv-intro')}catch(e){}
-if(seen){el.remove();return;}
+if(seen){el.remove();window.__hvAfterIntro=function(f){f()};return;}
 document.documentElement.classList.add('intro-on');
-window.__introEnd=function(){if(!el.isConnected)return;el.classList.add('out');document.documentElement.classList.remove('intro-on');try{sessionStorage.setItem('hv-intro','1')}catch(e){}setTimeout(function(){el.remove()},900);};
-setTimeout(function(){window.__introEnd()},5000);
-var n=0,cb=el.querySelector('.intro-count b'),iv=setInterval(function(){if(window.__introTakeover||n>=24){clearInterval(iv);return;}n+=1;cb.textContent=(n<10?'0':'')+n;},90);
+var q=[];window.__hvAfterIntro=function(f){q?q.push(f):f();};var flush=function(){var a=q;q=null;(a||[]).forEach(function(f){try{f()}catch(e){}});};
+window.__introEnd=function(){if(!el.isConnected)return;el.classList.add('out');document.documentElement.classList.remove('intro-on');try{sessionStorage.setItem('hv-intro','1')}catch(e){}setTimeout(function(){el.remove();flush();},900);};
+setTimeout(function(){if(!window.__introTakeover)window.__introEnd()},3200);setTimeout(function(){window.__introEnd()},8000);
 ['wheel','touchstart','keydown','click'].forEach(function(t){addEventListener(t,function(){window.__introSkip=1;},{once:true,passive:true});});})();</script>
 
 <!--BODY-->

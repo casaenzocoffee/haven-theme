@@ -129,8 +129,8 @@
 })();
 
 /* ---------- Video del hero: se carga después de la página ---------- */
-addEventListener('load',()=>{const v=document.querySelector('.hero-video');if(v&&v.dataset.srcM&&!matchMedia('(min-width: 900px)').matches){v.dataset.src=v.dataset.srcM;}if(!v||(!matchMedia('(min-width: 900px)').matches&&!v.dataset.srcM)||(navigator.connection&&navigator.connection.saveData))return;
-  setTimeout(()=>{v.src=v.dataset.src;v.addEventListener('playing',()=>v.classList.add('playing'),{once:true});v.play().catch(()=>{});},600);});
+addEventListener('load',()=>(window.__hvAfterIntro||(f=>f()))(()=>{const v=document.querySelector('.hero-video');if(v&&v.dataset.srcM&&!matchMedia('(min-width: 900px)').matches){v.dataset.src=v.dataset.srcM;}if(!v||(!matchMedia('(min-width: 900px)').matches&&!v.dataset.srcM)||(navigator.connection&&navigator.connection.saveData))return;
+  setTimeout(()=>{v.src=v.dataset.src;v.addEventListener('playing',()=>v.classList.add('playing'),{once:true});v.play().catch(()=>{});},300);}));
 
 /* ---------- Animaciones (GSAP + Lenis), se cargan diferidas ---------- */
 addEventListener('DOMContentLoaded',()=>{
@@ -139,7 +139,7 @@ addEventListener('DOMContentLoaded',()=>{
   gsap.registerPlugin(ScrollTrigger);gsap.globalTimeline.timeScale(1.5);
   const lenis=window.Lenis?new Lenis({lerp:.16,wheelMultiplier:1.1}):null;
   if(lenis){lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
-    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1&&document.querySelector(id)){e.preventDefault();lenis.scrollTo(id,{offset:-140});}}));}
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1&&document.querySelector(id)){e.preventDefault();try{lenis.resize()}catch(_){}const off=(document.querySelector('.hg-chapters')&&a.closest('.hg-chapters'))?-150:-140;lenis.scrollTo(id,{offset:off,force:true,onComplete:()=>{const r=document.querySelector(id).getBoundingClientRect().top;if(Math.abs(r+off)>40){try{lenis.resize()}catch(_){}lenis.scrollTo(id,{offset:off,force:true,immediate:false});}}});}}));}
 
   // Barra de progreso
   gsap.to('.progress',{scaleX:1,ease:'none',scrollTrigger:{start:0,end:'max',scrub:true}});
@@ -320,13 +320,13 @@ addEventListener('DOMContentLoaded',()=>{
 addEventListener('load',()=>{if(navigator.connection&&(navigator.connection.saveData||/2g/.test(navigator.connection.effectiveType||'')))return;
   const imgs=[...document.querySelectorAll('img[loading="lazy"]')];let i=0;
   const step=()=>{const batch=imgs.slice(i,i+4);i+=4;batch.forEach(im=>{im.loading='eager';});if(i<imgs.length)(window.requestIdleCallback||setTimeout)(step,{timeout:600});};
-  setTimeout(step,1200);});
+  (window.__hvAfterIntro||(f=>f()))(()=>setTimeout(step,1200));});
 
 /* Red de seguridad de animaciones: recalcula posiciones cuando termina de cargar
    y, si un bloque quedó invisible dentro de la pantalla (p. ej. el layout cambió), lo muestra. */
 (function(){
   const refresh=()=>{if(window.ScrollTrigger)ScrollTrigger.refresh();};
-  addEventListener('load',()=>{refresh();setTimeout(refresh,1500);setTimeout(refresh,4000);});
+  addEventListener('load',()=>{refresh();(window.__hvAfterIntro||(f=>f()))(()=>{refresh();setTimeout(refresh,1500);});});
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(refresh);
   const SEL='.tier-wrap,.exp-card,.gets li,.room-list li,.room-stage,.card,.ig-card,.plan,.benefit,.stat,.suite,[data-reveal],.loc-copy > *,.map-frame,.booking';
   setInterval(()=>{if(!window.gsap)return;document.querySelectorAll(SEL).forEach(el=>{

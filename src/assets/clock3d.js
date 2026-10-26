@@ -102,7 +102,7 @@ async function start(){
     if(VW!==innerWidth||VH!==innerHeight){size();measure();}
     if(!t0)t0=now;const raw=Math.max(0,now-last),d=Math.min(0.05,raw/1000);last=now;el+=Math.min(raw,50); // el: tiempo de animación sin saltos aunque el teléfono se trabe
     if(big&&window.__introSkip&&!tExit){el=Math.max(el,2600);}
-    const P=reduce?1:Math.min(1,el/(big?2600:3400));window.__introTakeover=1;
+    const P=reduce?1:Math.min(1,el/(big?2600:3400));window.__introTakeover=1;if(big&&!introEl.classList.contains('go'))introEl.classList.add('go');
     if(big){if(P>.74)introEl.classList.add('brand');
       if(P>=1&&!tExit){tExit=now+1200;}
       if(!tExit&&(!introEl.isConnected||introEl.classList.contains('out')))tExit=now; // si la apertura terminó por tiempo, el reloj igual vuela a su sitio
@@ -159,7 +159,11 @@ async function start(){
     renderer.render(scene,cam);
     if(!cv.classList.contains('ready')){cv.classList.add('ready');stage.classList.add('ready');}
   };
-  try{renderer.compile(scene,cam);renderer.render(scene,cam);}catch(e){}last=performance.now(); // compila shaders antes de arrancar la apertura
+  // Arranque sólido en un dispositivo nuevo: compila los shaders sin bloquear (si el navegador lo permite),
+  // y espera unos cuadros estables antes de empezar a contar el tiempo de la apertura.
+  try{if(renderer.compileAsync)await renderer.compileAsync(scene,cam);else renderer.compile(scene,cam);renderer.render(scene,cam);}catch(e){try{renderer.compile(scene,cam);}catch(_){}}
+  await new Promise(res=>{let ok=0,prev=performance.now();const t0w=prev;const w=n=>{const dt=n-prev;prev=n;ok=dt<24?ok+1:0;if(ok>=4||n-t0w>700)res();else requestAnimationFrame(w);};requestAnimationFrame(w);});
+  last=performance.now();
   requestAnimationFrame(frame);
 }
 const go=()=>document.getElementById('intro')?start():(('requestIdleCallback' in window)?requestIdleCallback(start,{timeout:600}):setTimeout(start,150));

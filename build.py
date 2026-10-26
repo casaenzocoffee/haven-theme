@@ -187,6 +187,9 @@ def _brand_txt(t):
 
 def brand(html):
     """Nombres de marca: '360° Rooftop & Restaurant' y 'Swing Coffee Bar' en todo el texto visible."""
+    html = re.sub(r'Swing <em>Bar</em>', 'Swing <em>Coffee Bar</em>', html)
+    html = re.sub(r'360°? <em>Rooftop</em>', '360° Rooftop <em>&amp; Restaurant</em>', html)
+    html = re.sub(r'Rooftop <em>360°?</em>', '360° Rooftop <em>&amp; Restaurant</em>', html)
     parts = re.split(r'(<script\b.*?</script>|<style\b.*?</style>|<[^>]+>)', html, flags=re.S)
     out = []
     for p in parts:

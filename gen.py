@@ -288,7 +288,7 @@ def fixhref(h, wa_text):
         return P(h).replace('/es/servicios/', '{{R}}servicios/'), False
     return h, h.startswith('http')
 
-def page_experience(slug, h1, sub, hero_img, crumbs_name, gal_title, wa_text, key):
+def page_experience(slug, h1, sub, hero_img, crumbs_name, gal_title, wa_text, key, after_first=''):
     secs = sections_of(slug)
     imgs_all = [u for s in secs for u in s['imgs']]
     body = hero(h1, sub, hero_img, [('Inicio', '{{R}}'), (crumbs_name, '')], 'Haven · Medellín')
@@ -309,10 +309,58 @@ def page_experience(slug, h1, sub, hero_img, crumbs_name, gal_title, wa_text, ke
         if len(words) > 1:
             title = ' '.join(words[:-1]) + f' <em>{words[-1]}</em>'
         body += editorial(s['eyebrow'] or crumbs_name, title, s['paras'], ims[0] if ims else hero_img, ims[1] if len(ims) > 1 else None, flip=n % 2 == 1, cream=n % 2 == 1, cta=cta)
+        if n == 0 and after_first:
+            body += after_first
         if n == 0 and len(imgs_all) >= 5:
             body += hgallery('Galería', gal_title, imgs_all[:10])
         n += 1
     return body
+
+
+# ------------------------------------------------------------- Casa Enzo Coffee (café insignia)
+CE_IMG = 'https://casaenzocoffee.com/cdn/shop/'
+def casa_enzo():
+    en = LANG == 'en'
+    url = 'https://casaenzocoffee.com/en' if en else 'https://casaenzocoffee.com'
+    if en:
+        t = dict(eb='Our signature coffee', h='Casa Enzo <em>Coffee</em>',
+                 p1='Colombian specialty coffee, grown by Colombian coffee farmers and roasted in Medellín. Our first lot, Primera Luz, is a Caturra hand-picked at 1,699 meters in the mountains of Santa Elena, above the city: an artisanal micro-lot with notes of green apple, yellow fruits and sugarcane.',
+                 p2='It is the coffee we serve at Haven, and you can take it home: a bag of Casa Enzo is a gift that carries the taste of origin.',
+                 facts=[('Origin', 'Santa Elena, Medellín'), ('Altitude', '1,699 m'), ('Variety', 'Caturra · light honey'), ('Lot', 'Artisanal micro-lot')],
+                 where='Enjoy it at', places=['Swing Coffee Bar', 'Our breakfast', 'Every room', 'To take home as a gift'],
+                 cta='See more', alt=['Casa Enzo Coffee bag, Primera Luz', 'Pouring coffee over a Chemex', 'Roasted coffee, green coffee and coffee cherries'])
+    else:
+        t = dict(eb='Nuestro café insignia', h='Casa Enzo <em>Coffee</em>',
+                 p1='Café de especialidad colombiano, cultivado por caficultores colombianos y tostado en Medellín. Su primer lote, Primera Luz, es un Caturra cosechado a mano a 1.699 metros en las montañas de Santa Elena, sobre la ciudad: un microlote artesanal con notas de manzana verde, frutos amarillos y caña de azúcar.',
+                 p2='Es el café que servimos en Haven, y también puedes llevártelo: una bolsa de Casa Enzo es un regalo con el sabor del origen.',
+                 facts=[('Origen', 'Santa Elena, Medellín'), ('Altura', '1.699 msnm'), ('Variedad', 'Caturra · honey claro'), ('Lote', 'Microlote artesanal')],
+                 where='Lo encuentras en', places=['Swing Coffee Bar', 'Nuestro desayuno', 'Todas las habitaciones', 'Para llevar de regalo'],
+                 cta='Ver más', alt=['Bolsa de Casa Enzo Coffee, Primera Luz', 'Café filtrado en Chemex', 'Café tostado, café verde y cerezas de café'])
+    imgs = [CE_IMG + 'files/WhatsApp_Image_2026-10-21_at_10_16_43_AM.jpg?v=1792596874&width=1000',
+            CE_IMG + 'articles/hf_20261024_235910_6ef4ebc1-6fc7-4975-97b4-9f50157d0c07.png?v=1792886467&width=700',
+            CE_IMG + 'articles/hf_20261024_235944_e3420dd7-0d73-444f-81ac-9a9f38e6d61e.png?v=1792886474&width=700']
+    facts = ''.join(f'<div><span>{e(a)}</span><b>{e(b)}</b></div>' for a, b in t['facts'])
+    places = ''.join(f'<li>{e(x)}</li>' for x in t['places'])
+    return f'''<section class="ce" aria-labelledby="ce-title">
+  <div class="wrap ce-grid">
+    <div class="ce-media" aria-hidden="false">
+      <figure class="ce-main"><img src="{imgs[0]}" alt="{e(t['alt'][0])}" loading="lazy" width="1000" height="1000"></figure>
+      <figure class="ce-a"><img src="{imgs[1]}" alt="{e(t['alt'][1])}" loading="lazy" width="700" height="700"></figure>
+      <figure class="ce-b"><img src="{imgs[2]}" alt="{e(t['alt'][2])}" loading="lazy" width="700" height="700"></figure>
+    </div>
+    <div class="ce-copy" data-reveal>
+      <p class="eyebrow">{e(t['eb'])}</p>
+      <h2 id="ce-title">{t['h']}</h2>
+      <p>{e(t['p1'])}</p>
+      <p>{e(t['p2'])}</p>
+      <div class="ce-facts">{facts}</div>
+      <p class="ce-where">{e(t['where'])}</p>
+      <ul class="ce-places">{places}</ul>
+      <div style="margin-top:30px">{btn(t['cta'], url, 'gold', 'casa_enzo_ver_mas', True)}</div>
+    </div>
+  </div>
+</section>
+'''
 
 def page_gastronomia():
     secs = sections_of('gastronomia')
@@ -553,7 +601,7 @@ def main():
     add('rooftop', 'rooftop', '360° Rooftop: piscina y bar con vista a Medellín | Haven', 'Bar y piscina en el piso 11 con vista panorámica de 360° de Medellín. Cócteles de autor, Sunny Days y atardeceres en El Poblado.',
         page_experience('360-rooftop', '360° Rooftop <em>&amp; Restaurant</em>', 'Medellín desde el cielo: piscina, cócteles de autor y la mejor vista de El Poblado.', '/wp-content/uploads/2026/06/hotel-haven-rooftop-360-4.webp', '360° Rooftop', 'Atardeceres <em>en el 11</em>', 'Hola, quiero reservar en el 360 Rooftop', 'rooftop'))
     add('swing', 'swing', 'Swing Bar: café de día, cócteles de noche | Haven Medellín', 'Swing Bar en el vestíbulo de Haven: café colombiano por la mañana, vinos, cervezas y cócteles por la noche en El Poblado.',
-        page_experience('swing-bar', 'Swing <em>Coffee Bar</em>', 'Café colombiano por la mañana, cócteles de autor por la noche.', '/wp-content/uploads/2026/06/swing-bar-6.webp', 'Swing Bar', 'El <em>Swing</em>', 'Hola, quiero reservar en el Swing Bar', 'swing'))
+        page_experience('swing-bar', 'Swing <em>Coffee Bar</em>', 'Café colombiano por la mañana, cócteles de autor por la noche.', '/wp-content/uploads/2026/06/swing-bar-6.webp', 'Swing Bar', 'El <em>Swing</em>', 'Hola, quiero reservar en el Swing Bar', 'swing', casa_enzo()))
     add('gastronomia', 'gastronomia', 'Gastronomía en el 360° Rooftop | Haven Medellín', 'Pizzas artesanales, salmón, albóndigas y cocina local e internacional con vista a Medellín en el 360° Rooftop.', page_gastronomia())
     add('wellness', 'wellness', 'Wellness: masajes, faciales y sueroterapia | Haven Medellín', 'Masaje relajante, hidratación facial y terapia de sueros Ultra Vit para recuperarte del viaje en Haven, El Poblado.',
         page_experience('wellness', '<em>Wellness</em>', 'Rituales para recuperar el equilibrio después del viaje.', '/wp-content/uploads/2026/07/masaje-relajante.webp', 'Wellness', 'Bienestar <em>y equilibrio</em>', 'Hola, quiero agendar un servicio de wellness', 'wellness'))
