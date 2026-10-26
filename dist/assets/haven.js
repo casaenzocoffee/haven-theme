@@ -321,3 +321,18 @@ addEventListener('load',()=>{if(navigator.connection&&(navigator.connection.save
   const imgs=[...document.querySelectorAll('img[loading="lazy"]')];let i=0;
   const step=()=>{const batch=imgs.slice(i,i+4);i+=4;batch.forEach(im=>{im.loading='eager';});if(i<imgs.length)(window.requestIdleCallback||setTimeout)(step,{timeout:600});};
   setTimeout(step,1200);});
+
+/* Red de seguridad de animaciones: recalcula posiciones cuando termina de cargar
+   y, si un bloque quedó invisible dentro de la pantalla (p. ej. el layout cambió), lo muestra. */
+(function(){
+  const refresh=()=>{if(window.ScrollTrigger)ScrollTrigger.refresh();};
+  addEventListener('load',()=>{refresh();setTimeout(refresh,1500);setTimeout(refresh,4000);});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(refresh);
+  const SEL='.tier-wrap,.exp-card,.gets li,.room-list li,.room-stage,.card,.ig-card,.plan,.benefit,.stat,.suite,[data-reveal],.loc-copy > *,.map-frame,.booking';
+  setInterval(()=>{if(!window.gsap)return;document.querySelectorAll(SEL).forEach(el=>{
+    if(parseFloat(getComputedStyle(el).opacity)>0.05){el.__hvSeen=0;return;}
+    const r=el.getBoundingClientRect();if(!(r.height>0&&r.top<innerHeight*.92&&r.bottom>0)){el.__hvSeen=0;return;}
+    if(!el.__hvSeen){el.__hvSeen=Date.now();return;}
+    if(Date.now()-el.__hvSeen>1100){gsap.to(el,{opacity:1,x:0,y:0,rotateX:0,rotateY:0,scale:1,clipPath:'none',duration:.6,ease:'power2.out',overwrite:'auto'});el.__hvSeen=0;}
+  });},500);
+})();
