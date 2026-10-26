@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export PROTO=/home/serenare/havenmedellin.com/prototipo-haven/
+    - export STAGE=/home/serenare/staging.havenmedellin.com/prototipo/
+    - /bin/mkdir -p $PROTO $STAGE
+    - /bin/cp -R dist/. $PROTO
+    - /bin/cp -R dist/. $STAGE

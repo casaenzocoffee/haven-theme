@@ -1,0 +1,13 @@
+[
+ {
+  "slug": "",
+  "key": "home",
+  "file": "index.html",
+  "title": "Haven Medellín | Hotel de diseño en El Poblado",
+  "desc": "Haven, A Design Hotel: suites con jacuzzi, 360° Rooftop, Swing Bar y wellness en el corazón de El Poblado, Medellín. Reserva directo al mejor precio.",
+  "canonical": "/es/",
+  "og": "/wp-content/uploads/revslider/video-media/video-haven-medellin.webp",
+  "extra_head_file": "partials/home_head_extra.html",
+  "clock": true
+ }
+]
