@@ -594,3 +594,17 @@ html.intro-on,html.intro-on body{overflow:hidden}
 @media (max-width:820px){.filters{position:sticky;top:84px;z-index:20;margin-inline:calc(var(--gutter) * -1);padding:10px var(--gutter);background:rgba(25,19,17,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}.filters button{flex:none}}
 .card.show{animation:cardIn .7s var(--ease) both}
 @keyframes cardIn{from{opacity:0;transform:translateY(30px) scale(.97)}to{opacity:1;transform:none}}
+/* Elegir categoría con clic (escritorio) */
+.room-list a{cursor:pointer}
+.room-stage{pointer-events:auto}
+.room-stage .stage-go{position:absolute;left:22px;bottom:56px;z-index:3;text-transform:uppercase}
+.room-stage .stage-go b{font-weight:600}
+.room-stage .cap{bottom:22px}
+/* Mapa: color y mapa interactivo solo después del clic */
+.map-frame{cursor:pointer}
+.map-frame:not(.live) iframe{pointer-events:none}
+.map-frame:hover iframe,.map-frame:focus-within iframe{filter:grayscale(1) sepia(.45) brightness(.78) contrast(1.08)}
+.map-frame.live iframe{filter:none!important;pointer-events:auto}
+.map-frame:hover .map-pin{opacity:1}
+.map-frame.live .map-pin,.map-frame.live .map-hint{opacity:0;pointer-events:none}
+@media (hover:none){.map-frame:not(.live) iframe{pointer-events:none;filter:none}.map-hint{display:block!important}.map-frame.live .map-hint{display:none!important}}

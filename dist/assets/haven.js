@@ -31,7 +31,10 @@
   // Lista de acomodación
   const items=[...document.querySelectorAll('.room-list li')],imgs=[...document.querySelectorAll('.room-stage img')],cap=document.querySelector('.cap-name');
   const setRoom=li=>{items.forEach(x=>x.classList.toggle('active',x===li));if(li.classList.contains('cur'))return;items.forEach(x=>x.classList.toggle('cur',x===li));imgs.forEach((im,i)=>im.classList.toggle('on',i==li.dataset.img));cap.textContent=li.querySelector('.name').textContent;const cn=document.querySelector('.room-stage .count b');if(cn)cn.textContent=String(+li.dataset.img+1).padStart(2,'0');};
-  items.forEach(li=>{li.addEventListener('mouseenter',()=>setRoom(li));li.querySelector('a').addEventListener('focus',()=>setRoom(li));});
+  // Escritorio: un clic elige la categoría y muestra su foto; el segundo clic (o el botón Ver) entra
+  items.forEach(li=>{const a=li.querySelector('a');a.addEventListener('click',e=>{if(!matchMedia('(min-width: 821px)').matches)return;if(li.dataset.picked!=='1'){e.preventDefault();items.forEach(x=>x.dataset.picked='');li.dataset.picked='1';setRoom(li);}});a.addEventListener('focus',()=>{if(a.matches(':focus-visible'))setRoom(li);});});
+  const vb=document.querySelector('.room-stage .stage-go');
+  if(vb){const upd=()=>{const li=items.find(x=>x.classList.contains('active'))||items[0];vb.href=li.querySelector('a').getAttribute('href');vb.querySelector('b').textContent='Ver '+li.querySelector('.name').textContent;};items.forEach(li=>li.querySelector('a').addEventListener('click',()=>setTimeout(upd,0)));upd();}
   window.__setRoom=setRoom;
   const stage=document.querySelector('.room-stage');
   if(stage&&matchMedia('(hover:hover)').matches){document.querySelector('.room-switch').addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();stage.style.setProperty('--px',((e.clientX-r.left)/r.width-.5)*-22+'px');stage.style.setProperty('--py',((e.clientY-r.top)/r.height-.5)*-22+'px');});}
@@ -70,6 +73,10 @@
     svg.addEventListener('pointerleave',()=>{mx=-1;ampT=10;});
     if(red){fr.setAttribute('d',wave(80,0,0,0,0,0));}
   })();
+
+  // Mapa: se activa con un clic (antes queda en tonos del hotel y no atrapa el scroll)
+  const mfr=document.querySelector('.map-frame');
+  if(mfr){mfr.addEventListener('click',()=>{mfr.classList.add('live');(window.dataLayer=window.dataLayer||[]).push({event:'haven_click',accion:'mapa_activar'});},{once:true});}
 
   // Mapa: se carga solo cuando está cerca de la pantalla
   const mf=document.querySelector('.map-frame'),mi=mf&&mf.querySelector('iframe');
@@ -150,7 +157,7 @@ addEventListener('DOMContentLoaded',()=>{
   });
 
   // Lista de acomodación activada por scroll
-  document.querySelectorAll('.room-list li').forEach(li=>ScrollTrigger.create({trigger:li,start:'top 55%',end:'bottom 55%',onEnter:()=>__setRoom(li),onEnterBack:()=>__setRoom(li)}));
+  // (la lista ya no cambia sola con el scroll: se elige con clic)
 
   // Suites apiladas: la anterior se aleja
   if(matchMedia('(min-width: 821px)').matches){
