@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Arma el prototipo multipágina de Haven a partir de partials + pages.
 Salida: dist/ (lista para subir a /prototipo-haven/)."""
-import json, os, re, shutil, hashlib
+import json, os, re, shutil, hashlib, html as htmlmod
 
 SRC = os.path.join(os.path.dirname(__file__), 'src')
 DIST = os.path.join(os.path.dirname(__file__), 'dist')
@@ -60,6 +60,11 @@ NAV_MAP_EN = {'/' + v: v for v in ES2EN_PATH.values()}
 def to_en(p):
     return ES2EN_PATH.get(p, p)
 
+FONTS = 'https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap'
+REAL = {}
+# Contenedor de Google Tag Manager (GA4, Google Ads, Meta). Vacío = no se carga.
+GTM_ID = ''
+
 def head(page, R, ver):
     canonical = 'https://havenmedellin.com' + page.get('canonical', '/es/')
     og = page.get('og', '/wp-content/uploads/2026/06/hotel-haven-medellin.webp')
@@ -70,7 +75,16 @@ def head(page, R, ver):
     sl = page['slug'] + '/' if page['slug'] else ''
     es_p = EN2ES_PATH.get(sl, sl) if en else sl
     en_p = sl if en else ES2EN_PATH.get(sl)
-    alts = f'<link rel="alternate" hreflang="es" href="{(R + es_p) or "./"}">\n' + (f'<link rel="alternate" hreflang="en" href="{R}{en_p}">\n' if en_p else '')
+    es_u, en_u = REAL.get(es_p), REAL.get(en_p) if en_p else None
+    alts = ''
+    if es_u: alts += f'<link rel="alternate" hreflang="es" href="{es_u}">\n<link rel="alternate" hreflang="x-default" href="{es_u}">\n'
+    if en_u: alts += f'<link rel="alternate" hreflang="en" href="{en_u}">\n'
+    if og.startswith('/'): og = 'https://havenmedellin.com' + og
+    crumbs = page.get('_crumbs')
+    if crumbs:
+        extra += '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": n, **({"item": u} if u else {})} for i, (n, u) in enumerate(crumbs)]}, ensure_ascii=False) + '</script>\n'
+    gtm = ("<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','" + GTM_ID + "');</script>\n") if GTM_ID else ''
     preload = ''.join(f'<link rel="preload" as="image" href="{u}" fetchpriority="high">\n' for u in page.get('preload', []))
     return f'''<!doctype html>
 <html lang="{'en' if en else 'es'}">
@@ -81,18 +95,23 @@ def head(page, R, ver):
 <meta name="description" content="{page['desc']}">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="{canonical}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{page.get('og_type', 'website')}">
+<meta property="og:url" content="{canonical}">
+<meta property="og:site_name" content="Haven, A Design Hotel">
 <meta property="og:locale" content="{'en_US' if en else 'es_CO'}">
 {alts}
 <meta property="og:title" content="{page['title']}">
 <meta property="og:description" content="{page['desc']}">
 <meta property="og:image" content="{og}">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#191311">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<link rel="preload" as="style" href="{FONTS}">
+<link rel="stylesheet" href="{FONTS}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{FONTS}"></noscript>
 {preload}<link rel="stylesheet" href="{R}assets/haven.css?v={ver}">
-{extra}</head>
+{gtm}{extra}</head>
 '''
 
 def header(slug, R, en=False):
@@ -118,6 +137,28 @@ def footer(R, en=False):
     NM = NAV_MAP_EN if en else NAV_MAP
     return re.sub(r'href="(/e[sn]/[^"]*)"', lambda m: f'href="{R}{NM[m.group(1)]}"' if m.group(1) in NM else m.group(0), f)
 
+def _brand_txt(t):
+    t = re.sub(r'Rooftop 360°?', '360° Rooftop', t)
+    t = re.sub(r'360° Rooftop(?! &| <em>&)(?!\s+$)', '360° Rooftop &amp; Restaurant', t)
+    t = re.sub(r'\bSwing Bar\b', 'Swing Coffee Bar', t)
+    t = re.sub(r'\bSwing\b(?! Coffee| Bar| Menu)(?!\s+$)', 'Swing Coffee Bar', t)
+    return t
+
+def brand(html):
+    """Nombres de marca: '360° Rooftop & Restaurant' y 'Swing Coffee Bar' en todo el texto visible."""
+    parts = re.split(r'(<script\b.*?</script>|<style\b.*?</style>|<[^>]+>)', html, flags=re.S)
+    out = []
+    for p in parts:
+        if not p:
+            continue
+        if p.startswith('<script') or p.startswith('<style'):
+            out.append(p)
+        elif p.startswith('<'):
+            out.append(re.sub(r'\b(alt|title|aria-label|content)="([^"]*)"', lambda m: f'{m.group(1)}="{_brand_txt(m.group(2)) if not m.group(2).startswith(("http", "/", "width")) else m.group(2)}"', p))
+        else:
+            out.append(_brand_txt(p))
+    return ''.join(out)
+
 def build():
     if os.path.isdir(DIST):
         shutil.rmtree(DIST)
@@ -128,10 +169,29 @@ def build():
         shutil.copy(os.path.join(SRC, 'assets', a), os.path.join(DIST, 'assets', a))
     if os.path.isdir(os.path.join(SRC, 'media')):
         shutil.copytree(os.path.join(SRC, 'media'), os.path.join(DIST, 'media'))
+    for a in os.listdir(os.path.join(SRC, 'root')):
+        shutil.copy(os.path.join(SRC, 'root', a), os.path.join(DIST, a))
+    for page in PAGES:
+        REAL[page['slug'] + '/' if page['slug'] else ''] = 'https://havenmedellin.com' + page.get('canonical', '/es/')
+    MV = hashlib.sha1(b''.join(open(os.path.join(SRC, 'media', f), 'rb').read() for f in sorted(os.listdir(os.path.join(SRC, 'media'))))).hexdigest()[:8]
     for page in PAGES:
         slug = page['slug']
         R = '' if not slug else '../' * (slug.count('/') + 1)
         body = rd('pages/' + page['file'])
+        cm = re.search(r'<nav class="crumbs"[^>]*>(.*?)</nav>', body, re.S)
+        if cm:
+            cr = []
+            for m in re.finditer(r'<a href="([^"]*)">([^<]*)</a>|<span>([^<]+)</span>', cm.group(1)):
+                if m.group(2) is not None:
+                    p = m.group(1).replace('{{R}}', '')
+                    p = to_en(p) if page.get('lang') == 'en' else p
+                    cr.append((_brand_txt(htmlmod.unescape(m.group(2))).replace("&amp;", "&"), REAL.get(p)))
+                else:
+                    cr.append((_brand_txt(htmlmod.unescape(m.group(3))).replace("&amp;", "&"), None))
+            page['_crumbs'] = cr
+        if not page.get('og'):
+            om = re.search(r'class="ph-media"><img src="([^"]+)"', body)
+            if om: page['og'] = om.group(1)
         top = ''
         if '<!--BODY-->' in body:
             top, body = body.split('<!--BODY-->', 1)
@@ -149,11 +209,25 @@ def build():
             scripts += f'<script type="module" src="{R}assets/clock3d.js?v={ver}"></script>\n'
         html = (head(page, R, ver) + f'<body class="no-js page-{page.get("key", slug or "home")}">\n' + top
                 + rd('partials/nojs.html') + header(slug, R, en) + body + '\n' + footer(R, en) + scripts + '</body>\n</html>\n')
+        html = re.sub(r'(media/[\w.-]+\.(?:mp4|webp))"', lambda m: m.group(1) + '?v=' + MV + '"', html)
+        html = brand(html)
         out = os.path.join(DIST, slug, 'index.html') if slug else os.path.join(DIST, 'index.html')
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with open(out, 'w', encoding='utf-8') as f:
             f.write(html)
         print(f'{slug or "/":28} {len(html):7d} bytes')
 
+def sitemap():
+    out = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+    for p in PAGES:
+        sl = p['slug'] + '/' if p['slug'] else ''
+        en = p.get('lang') == 'en'
+        es_p = EN2ES_PATH.get(sl, sl) if en else sl
+        en_p = sl if en else ES2EN_PATH.get(sl)
+        out.append(f'<url><loc>{REAL[sl]}</loc>' + ''.join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{REAL[x]}"/>' for l, x in (('es', es_p), ('en', en_p)) if x in REAL) + '</url>')
+    out.append('</urlset>')
+    open(os.path.join(DIST, 'sitemap-preview.xml'), 'w').write('\n'.join(out))
+
 if __name__ == '__main__':
     build()
+    sitemap()

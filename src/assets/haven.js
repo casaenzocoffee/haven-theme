@@ -1,3 +1,33 @@
+/* ---------- Medición para campañas (GTM / GA4 / Google Ads / Meta) ---------- */
+(function(){
+  window.dataLayer=window.dataLayer||[];
+  const KEYS=['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','gbraid','wbraid','fbclid','msclkid'];
+  let attr={};try{attr=JSON.parse(sessionStorage.getItem('hv-attr')||'{}')}catch(e){}
+  const q=new URLSearchParams(location.search);let got=false;
+  KEYS.forEach(k=>{if(q.get(k)){attr[k]=q.get(k);got=true;}});
+  if(got){try{sessionStorage.setItem('hv-attr',JSON.stringify(attr))}catch(e){}}
+  const lang=document.documentElement.lang,page=(document.body.className.match(/page-(\S+)/)||[,''])[1];
+  // abre el motor de reservas conservando el origen de la campaña
+  window.hvBook=function(url,ci,co,src){
+    const n=Math.max(1,Math.round((new Date(co)-new Date(ci))/864e5));
+    dataLayer.push({event:'begin_checkout',checkin:ci,checkout:co,noches:n,origen:src||page,idioma:lang});
+    const p=new URLSearchParams(attr).toString();
+    window.open(url+(p?(url.includes('?')?'&':'?')+p:''),'_blank','noopener');
+  };
+  document.addEventListener('click',e=>{
+    const a=e.target.closest('a[href]');if(!a)return;const h=a.getAttribute('href');
+    let ev=null;
+    if(h.startsWith('tel:'))ev='click_call';
+    else if(h.includes('wa.me/')||h.includes('whatsapp'))ev='click_whatsapp';
+    else if(h.startsWith('mailto:'))ev='click_email';
+    else if(/instagram\.com|tiktok\.com|facebook\.com/.test(h))ev='click_social';
+    else if(/google\.com\/maps|waze\.com/.test(h))ev='click_directions';
+    else if(/cluvi\.co|fiweex\.com/.test(h))ev='click_restaurant';
+    if(ev)dataLayer.push({event:ev,destino:h.replace(/^(tel:|mailto:)/,'').slice(0,120),origen:page,idioma:lang});
+  },{capture:true});
+  document.addEventListener('submit',e=>{if(e.target.classList.contains('cform'))dataLayer.push({event:'generate_lead',formulario:'contacto',idioma:lang});},{capture:true});
+})();
+
 /* ---------- Funciones que no dependen de librerías ---------- */
 (function(){
   const BOOK='http://havenmedellin.backhotelite.com/'+(document.documentElement.lang==='en'?'en':'es')+'/bookcore/availability/havenmedellin/';
@@ -12,8 +42,7 @@
   document.getElementById('reservar').addEventListener('submit',e=>{
     e.preventDefault();
     if(fout.value<=fin.value){fout.focus();return;}
-    dataLayer.push({event:'haven_buscar_fechas',checkin:fin.value,checkout:fout.value});
-    window.open(BOOK+fin.value+'/'+fout.value+'/','_blank','noopener');
+    hvBook(BOOK+fin.value+'/'+fout.value+'/',fin.value,fout.value,'buscador_portada');
   });
   }
   document.addEventListener('click',e=>{const el=e.target.closest('[data-track]');if(el)dataLayer.push({event:'haven_click',accion:el.dataset.track});});
@@ -222,7 +251,7 @@ addEventListener('DOMContentLoaded',()=>{
     document.addEventListener('click',e=>{const a=e.target.closest('a[href="#reservar"]');if(!a)return;e.preventDefault();
       const t=new Date();t.setHours(12);t.setDate(t.getDate()+1);const o=new Date(t);o.setDate(o.getDate()+2);
       (window.dataLayer=window.dataLayer||[]).push({event:'haven_click',accion:'abrir_motor_'+(document.body.className.match(/page-(\S+)/)||[,''])[1]});
-      window.open(BOOK+iso(t)+'/'+iso(o)+'/','_blank','noopener');});
+      hvBook(BOOK+iso(t)+'/'+iso(o)+'/',iso(t),iso(o),a.dataset.track||'boton_reservar');});
   }
   // Barra flotante de reserva
   const bb=document.querySelector('.bookbar');
@@ -286,3 +315,9 @@ addEventListener('DOMContentLoaded',()=>{
   // Specs con contador
   document.querySelectorAll('.rd-specs b[data-n]').forEach(b=>{const end=+b.dataset.n,o={v:0};ScrollTrigger.create({trigger:b,start:'top 92%',once:true,onEnter:()=>gsap.to(o,{v:end,duration:1.6,ease:'power2.out',onUpdate:()=>b.textContent=Math.round(o.v)+(b.dataset.u||'')})});});
 });
+
+/* hv-warm: después de cargar, precarga en segundo plano las imágenes de abajo para que aparezcan al instante al hacer scroll */
+addEventListener('load',()=>{if(navigator.connection&&(navigator.connection.saveData||/2g/.test(navigator.connection.effectiveType||'')))return;
+  const imgs=[...document.querySelectorAll('img[loading="lazy"]')];let i=0;
+  const step=()=>{const batch=imgs.slice(i,i+4);i+=4;batch.forEach(im=>{im.loading='eager';});if(i<imgs.length)(window.requestIdleCallback||setTimeout)(step,{timeout:600});};
+  setTimeout(step,1200);});
