@@ -2,6 +2,7 @@
 """Arma el prototipo multipágina de Haven a partir de partials + pages.
 Salida: dist/ (lista para subir a /prototipo-haven/)."""
 import json, os, re, shutil, hashlib, html as htmlmod
+from imgvariants import variants
 
 SRC = os.path.join(os.path.dirname(__file__), 'src')
 DIST = os.path.join(os.path.dirname(__file__), 'dist')
@@ -159,6 +160,29 @@ def brand(html):
             out.append(_brand_txt(p))
     return ''.join(out)
 
+def responsive(html):
+    """Añade srcset/sizes a las imágenes de WordPress y usa la variante de 768 px como src por defecto."""
+    def rep(m):
+        tag = m.group(0)
+        if 'srcset=' in tag or 'class="poster"' in tag:
+            return tag
+        sm = re.search(r'\bsrc="([^"]+)"', tag)
+        v = variants(sm.group(1)) if sm else None
+        if not v:
+            return tag
+        orig, vs = v
+        hero = 'fetchpriority="high"' in tag
+        big = max(w for _, w in vs)
+        cand = [f'{u} {w}w' for u, w in vs] + ([f'{orig} 1600w'] if big < 1500 else [])
+        # en celular se pide la variante de 768 px (nítida a 2x) en vez del original pesado
+        sizes = '(max-width: 820px) 256px, 100vw' if hero else '(max-width: 820px) 256px, 48vw'
+        src_default = vs[0][0]
+        tag = tag.replace(sm.group(0), f'src="{src_default}" srcset="{", ".join(cand)}" sizes="{sizes}"')
+        if 'decoding=' not in tag:
+            tag = tag.replace('<img ', '<img decoding="async" ', 1)
+        return tag
+    return re.sub(r'<img\b[^>]*>', rep, html)
+
 def build():
     if os.path.isdir(DIST):
         shutil.rmtree(DIST)
@@ -211,6 +235,7 @@ def build():
                 + rd('partials/nojs.html') + header(slug, R, en) + body + '\n' + footer(R, en) + scripts + '</body>\n</html>\n')
         html = re.sub(r'(media/[\w.-]+\.(?:mp4|webp))"', lambda m: m.group(1) + '?v=' + MV + '"', html)
         html = brand(html)
+        html = responsive(html)
         out = os.path.join(DIST, slug, 'index.html') if slug else os.path.join(DIST, 'index.html')
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with open(out, 'w', encoding='utf-8') as f:
