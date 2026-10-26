@@ -4,6 +4,8 @@
   const iso=d=>d.toISOString().slice(0,10);
   const fin=document.getElementById('f-in'),fout=document.getElementById('f-out');
   const t=new Date();t.setHours(12);const a=new Date(t);a.setDate(a.getDate()+1);const b=new Date(t);b.setDate(b.getDate()+3);
+  window.dataLayer=window.dataLayer||[];
+  if(fin&&fout){
   fin.min=iso(t);fin.value=iso(a);fout.min=iso(a);fout.value=iso(b);
   fin.addEventListener('change',()=>{const d=new Date(fin.value+'T12:00');d.setDate(d.getDate()+1);fout.min=iso(d);if(fout.value<=fin.value)fout.value=iso(d);});
   window.dataLayer=window.dataLayer||[];
@@ -13,6 +15,7 @@
     dataLayer.push({event:'haven_buscar_fechas',checkin:fin.value,checkout:fout.value});
     window.open(BOOK+fin.value+'/'+fout.value+'/','_blank','noopener');
   });
+  }
   document.addEventListener('click',e=>{const el=e.target.closest('[data-track]');if(el)dataLayer.push({event:'haven_click',accion:el.dataset.track});});
 
   // Galerías de suites
@@ -220,7 +223,8 @@ addEventListener('DOMContentLoaded',()=>{
   // Filtros de tarjetas
   document.querySelectorAll('.filters').forEach(f=>{const grid=document.querySelector(f.dataset.target);
     f.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;f.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
-      const v=b.dataset.f;grid.querySelectorAll('.card').forEach(c=>c.classList.toggle('hide',v!=='all'&&!(c.dataset.cat||'').split(' ').includes(v)));
+      const v=b.dataset.f;let k=0;grid.querySelectorAll('.card').forEach(c=>{const h=v!=='all'&&!(c.dataset.cat||'').split(' ').includes(v);c.classList.toggle('hide',h);c.classList.remove('show');if(!h){c.style.transform='';c.style.opacity='';c.style.animationDelay=(k++*60)+'ms';void c.offsetWidth;c.classList.add('show');}});
+      (window.dataLayer=window.dataLayer||[]).push({event:'haven_click',accion:'filtro_'+v});const top=f.getBoundingClientRect().top+scrollY-90;if(scrollY>top)scrollTo({top,behavior:'smooth'});
       if(window.ScrollTrigger)ScrollTrigger.refresh();});});
   // Tarjetas con inclinación + brillo
   if(matchMedia('(hover:hover)').matches&&!document.body.classList.contains('reduce')){
