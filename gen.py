@@ -62,11 +62,11 @@ def editorial(eyebrow, title, paras, img, img2=None, flip=False, cream=False, ct
 '''
 
 def hgallery(eyebrow, title, imgs, caps=None):
-    items = ''.join(f'<figure class="hg-item"><img src="{u}" alt="" loading="lazy">{f"<figcaption>{e(caps[i])}</figcaption>" if caps and i < len(caps) and caps[i] else ""}</figure>' for i, u in enumerate(imgs))
-    return f'''<section class="hg">
-  <div class="hg-pin">
-    <div class="wrap hg-head"><div><p class="eyebrow">{e(eyebrow)}</p><h2 style="margin-top:18px">{title}</h2></div><p class="hg-count"><b>01</b>/ {len(imgs):02d}</p></div>
-    <div class="hg-track">{items}</div>
+    items = ''.join(f'<figure class="hgal-item"><img src="{u}" alt="" loading="lazy">{f"<figcaption>{e(caps[i])}</figcaption>" if caps and i < len(caps) and caps[i] else ""}</figure>' for i, u in enumerate(imgs))
+    return f'''<section class="hgal">
+  <div class="hgal-pin">
+    <div class="wrap hgal-head"><div><p class="eyebrow">{e(eyebrow)}</p><h2 style="margin-top:18px">{title}</h2></div><p class="hgal-count"><b>01</b>/ {len(imgs):02d}</p></div>
+    <div class="hgal-track">{items}</div>
   </div>
 </section>
 '''

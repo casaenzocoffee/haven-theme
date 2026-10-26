@@ -743,5 +743,43 @@
   "head_extra": "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Five-star gastronomic experiences in Medellín\", \"url\": \"https://havenmedellin.com/en/five-star-gastronomic-experiences-in-medellin/\", \"mainEntityOfPage\": \"https://havenmedellin.com/en/five-star-gastronomic-experiences-in-medellin/\", \"image\": \"https://havenmedellin.com/wp-content/uploads/2026/07/experiencia-gastronomica-medellin.webp\", \"datePublished\": \"2026-05-27T16:50:32+00:00\", \"dateModified\": \"2026-08-05T19:18:02+00:00\", \"inLanguage\": \"en\", \"author\": {\"@type\": \"Organization\", \"name\": \"Haven, A Design Hotel\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"Haven, A Design Hotel\", \"logo\": {\"@type\": \"ImageObject\", \"url\": \"https://havenmedellin.com/wp-content/uploads/2026/06/logo-haven.webp\"}}}</script>\n",
   "lang": "en",
   "canonical": "/en/five-star-gastronomic-experiences-in-medellin/"
+ },
+ {
+  "slug": "guia-medellin",
+  "key": "guia",
+  "file": "guia-medellin.html",
+  "title": "Guía de Medellín desde El Poblado: mapa a pie y plan de viaje | Haven",
+  "desc": "Restaurantes, cafés, bares y planes a pie desde Haven en El Poblado, con minutos y pasos medidos en Google Maps, y un planificador de días a tu medida.",
+  "lang": "es",
+  "canonical": "/es/guia-medellin/",
+  "og": "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-with-friends-1.webp"
+ },
+ {
+  "slug": "en/medellin-guide",
+  "key": "guia",
+  "file": "en_guia-medellin.html",
+  "title": "Medellín guide from El Poblado: walking map and trip planner | Haven",
+  "desc": "Restaurants, cafés, bars and things to do on foot from Haven in El Poblado, with walking minutes and steps from Google Maps, plus a custom day-by-day planner.",
+  "lang": "en",
+  "canonical": "/en/medellin-guide/",
+  "og": "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-with-friends-1.webp"
+ },
+ {
+  "slug": "que-suite-elegir",
+  "key": "quiz",
+  "file": "que-suite-elegir.html",
+  "title": "¿Qué suite va contigo? | Haven Medellín",
+  "desc": "Responde 5 preguntas y descubre la suite de Haven Medellín hecha para tu viaje: penthouse, presidencial, suites con jacuzzi y más.",
+  "lang": "es",
+  "canonical": "/es/que-suite-elegir/"
+ },
+ {
+  "slug": "en/which-suite",
+  "key": "quiz",
+  "file": "en_que-suite-elegir.html",
+  "title": "Which suite is yours? | Haven Medellín",
+  "desc": "Answer 5 questions and find the Haven Medellín suite made for your trip: penthouse, presidential, jacuzzi suites and more.",
+  "lang": "en",
+  "canonical": "/en/which-suite/"
  }
 ]

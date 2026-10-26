@@ -299,7 +299,7 @@ addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('[data-speed]').forEach(el=>{if(el.closest('.floaters'))return;const s=parseFloat(el.dataset.speed)||.15;
     gsap.fromTo(el,{yPercent:-s*100},{yPercent:s*100,ease:'none',scrollTrigger:{trigger:el.parentElement,start:'top bottom',end:'bottom top',scrub:true}});});
   // Galería horizontal fijada
-  if(matchMedia('(min-width: 821px)').matches)document.querySelectorAll('.hg').forEach(h=>{const tr=h.querySelector('.hg-track'),pin=h.querySelector('.hg-pin'),cnt=h.querySelector('.hg-count b'),items=[...tr.children];
+  if(matchMedia('(min-width: 821px)').matches)document.querySelectorAll('.hgal').forEach(h=>{const tr=h.querySelector('.hgal-track'),pin=h.querySelector('.hgal-pin'),cnt=h.querySelector('.hgal-count b'),items=[...tr.children];
     const dist=()=>tr.scrollWidth-innerWidth+80;
     gsap.to(tr,{x:()=>-dist(),ease:'none',scrollTrigger:{trigger:h,start:'top top',end:()=>'+='+dist(),pin:pin,scrub:1,invalidateOnRefresh:true,anticipatePin:1,
       onUpdate:st=>{items.forEach((it,k)=>{const r=it.getBoundingClientRect();it.querySelector('img').style.setProperty('--px',((r.left+r.width/2)/innerWidth-.5)*-60+'px');});

@@ -31,7 +31,7 @@ for _s in ['suite-emperor-901','suite-emperor-902','suite-presidential','suite-i
            'habitacion-marques-plus','habitacion-marques','habitacion-duke','habitacion-consort']:
     NAV_MAP['/es/'+_s+'/'] = 'habitacion/'+_s+'/'
 NAV_MAP['/es/suite-presidencial/'] = 'habitacion/suite-presidential/'
-for _s in ['politica-de-visitantes', 'terminos-y-condiciones', 'blogs']:
+for _s in ['politica-de-visitantes', 'terminos-y-condiciones', 'blogs', 'guia-medellin', 'que-suite-elegir']:
     NAV_MAP['/es/' + _s + '/'] = _s + '/'
 BLOG_EN = {'experiencias-gastronomicas-de-cinco-estrellas-en-medellin': 'five-star-gastronomic-experiences-in-medellin',
     'las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera': 'the-10-best-things-to-do-and-see-in-the-city-of-eternal-spring',
@@ -44,6 +44,7 @@ ES2EN_PATH = {
     'rooftop/': 'en/360-rooftop/', 'swing/': 'en/swing-bar/', 'gastronomia/': 'en/gastronomy/', 'wellness/': 'en/wellness/', 'eventos/': 'en/events/',
     'servicios/': 'en/services/', 'contacto/': 'en/contact/', 'serena-rewards/': 'en/serena-rewards/', 'preguntas-frecuentes/': 'en/frequently-asked-questions/',
     'politica-de-visitantes/': 'en/visitor-policy/', 'terminos-y-condiciones/': 'en/terms-and-conditions/', 'blogs/': 'en/blogs/',
+    'guia-medellin/': 'en/medellin-guide/', 'que-suite-elegir/': 'en/which-suite/',
 }
 EN_ROOM = {'suite-emperor-901': 'emperor-suite-901', 'suite-emperor-902': 'emperor-suite-902', 'suite-presidential': 'presidential-suite',
     'suite-imperial-402': 'imperial-suite-402', 'suite-excelsior-401': 'excelsior-suite-401', 'suite-excelsior-804': 'excelsior-suite-804', 'suite-excelsior-604': 'excelsior-suite-604',
@@ -63,8 +64,42 @@ def to_en(p):
 
 FONTS = 'https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap'
 REAL = {}
+GVER = ''
 # Contenedor de Google Tag Manager (GA4, Google Ads, Meta). Vacío = no se carga.
 GTM_ID = ''
+
+# Herramientas "Medellín desde Haven" (mismo código del plugin haven-guia).
+# En una página se insertan con <!--HG:guia-->, <!--HG:mapa--> o <!--HG:quiz-->.
+GUIA_MODS = {'guia': ['mapa', 'plan', 'quiz'], 'mapa': ['mapa'], 'quiz': ['quiz']}
+
+def guia_insert(body, page):
+    lang = 'en' if page.get('lang') == 'en' else 'es'
+    mods = []
+    def rep(m):
+        for x in GUIA_MODS[m.group(1)]:
+            if x not in mods: mods.append(x)
+        h = rd(f'guia/{m.group(1)}_{lang}.html').replace('class="hg-map__stage"', 'class="hg-map__stage" data-lenis-prevent')
+        if m.group(1) != 'guia':
+            h = re.sub(r'(hg-eyebrow">)(?:Capítulo|Chapter) \d+ · ', r'\1', h)
+        return h
+    body = re.sub(r'<!--HG:(guia|mapa|quiz)-->', rep, body)
+    page['_hg'] = mods
+    return body
+
+def guia_scripts(page, R, tr, gver):
+    mods = page.get('_hg')
+    if not mods: return ''
+    lang = 'en' if page.get('lang') == 'en' else 'es'
+    d = json.loads(rd(f'guia/data_{lang}.json'))
+    if 'mapa' not in mods and 'plan' not in mods:
+        d['lugares'] = []
+    if 'quiz' not in mods:
+        d['suites'] = [{k: v for k, v in x.items() if k in ('id', 'n', 'url', 'img', 'cat')} for x in d['suites']]
+    data = json.dumps(d, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003C').replace('>', '\\u003E').replace('&', '\\u0026')
+    data = re.sub(r'\{\{R\}\}([a-z0-9/-]*)', lambda m: R + tr(m.group(1)), data)
+    out = f'<script type="application/json" id="haven-guia-data">{data}</script>\n<script src="{R}assets/hg-core.js?v={gver}" defer></script>\n'
+    out += ''.join(f'<script src="{R}assets/hg-{x}.js?v={gver}" defer></script>\n' for x in mods)
+    return out
 
 def head(page, R, ver):
     canonical = 'https://havenmedellin.com' + page.get('canonical', '/es/')
@@ -86,6 +121,7 @@ def head(page, R, ver):
         extra += '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "name": n, **({"item": u} if u else {})} for i, (n, u) in enumerate(crumbs)]}, ensure_ascii=False) + '</script>\n'
     gtm = ("<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','" + GTM_ID + "');</script>\n") if GTM_ID else ''
+    hgcss = f'\n<link rel="stylesheet" href="{R}assets/haven-guia.css?v={GVER}">' if page.get('_hg') else ''
     preload = ''.join(f'<link rel="preload" as="image" href="{u}" fetchpriority="high">\n' for u in page.get('preload', []))
     return f'''<!doctype html>
 <html lang="{'en' if en else 'es'}">
@@ -111,7 +147,7 @@ def head(page, R, ver):
 <link rel="preload" as="style" href="{FONTS}">
 <link rel="stylesheet" href="{FONTS}" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="{FONTS}"></noscript>
-{preload}<link rel="stylesheet" href="{R}assets/haven.css?v={ver}">
+{preload}<link rel="stylesheet" href="{R}assets/haven.css?v={ver}">{hgcss}
 {gtm}{extra}</head>
 '''
 
@@ -189,6 +225,8 @@ def build():
     os.makedirs(os.path.join(DIST, 'assets'))
     css = rd('assets/haven.css'); js = rd('assets/haven.js')
     ver = hashlib.sha1((css + js + rd('assets/clock3d.js')).encode()).hexdigest()[:8]
+    global GVER
+    GVER = hashlib.sha1(''.join(rd('assets/' + a) for a in ('haven-guia.css', 'hg-core.js', 'hg-mapa.js', 'hg-plan.js', 'hg-quiz.js')).encode()).hexdigest()[:8]
     for a in os.listdir(os.path.join(SRC, 'assets')):
         shutil.copy(os.path.join(SRC, 'assets', a), os.path.join(DIST, 'assets', a))
     if os.path.isdir(os.path.join(SRC, 'media')):
@@ -202,6 +240,7 @@ def build():
         slug = page['slug']
         R = '' if not slug else '../' * (slug.count('/') + 1)
         body = rd('pages/' + page['file'])
+        body = guia_insert(body, page)
         cm = re.search(r'<nav class="crumbs"[^>]*>(.*?)</nav>', body, re.S)
         if cm:
             cr = []
@@ -229,6 +268,7 @@ def build():
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 <script src="{R}assets/haven.js?v={ver}" defer></script>
 '''
+        scripts += guia_scripts(page, R, (to_en if page.get('lang') == 'en' else (lambda p: p)), GVER)
         if page.get('clock'):
             scripts += f'<script type="module" src="{R}assets/clock3d.js?v={ver}"></script>\n'
         html = (head(page, R, ver) + f'<body class="no-js page-{page.get("key", slug or "home")}">\n' + top
