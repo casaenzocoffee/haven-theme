@@ -385,3 +385,6 @@ html:not(.hg-js) .hg .hg-wizard__nav [data-nav]{display:none}
   .hg .hg-chapters a{flex-direction:column;gap:4px;justify-content:center;white-space:normal;text-align:center;padding:9px 6px;font-size:11.5px;line-height:1.2;letter-spacing:0;border-radius:22px;height:100%}
   .hg .hg-chapters a span{font-size:10px}
 }
+/* mapa de calles: teselas de OpenStreetMap oscurecidas con la paleta Haven */
+.hg .hg-map__streets .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.82) contrast(.92) sepia(.35) saturate(.7)}
+.hg .hg-map__streets .leaflet-container{background:#191311}
