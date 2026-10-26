@@ -11,7 +11,8 @@
   HG.mods.mapa = function (root) {
     var D = HG.data(), H = D.hotel, cfg = D.cfg;
     var walk = cfg.walk || 78, detour = cfg.detour || 1.26;
-    var all = D.lugares.filter(function (l) { return l.cat !== 'salida'; });
+    var HIDE = { 'haven-brunch-dominical': 1, 'haven-wellness': 1 }; // siguen en el planificador, no en el mapa ni en la lista
+    var all = D.lugares.filter(function (l) { return l.cat !== 'salida' && !HIDE[l.id]; });
     var havenItems = all.filter(function (l) { return l.cat === 'haven'; });
     var places = all.filter(function (l) { return l.cat !== 'haven'; });
     var radarPlaces = places.filter(function (l) { return l.min <= 32; });

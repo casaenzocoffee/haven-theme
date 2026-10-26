@@ -53,7 +53,7 @@
     s.querySelectorAll('.thumbs button').forEach(btn=>btn.addEventListener('click',()=>{
       s.querySelectorAll('.thumbs button').forEach(x=>x.setAttribute('aria-pressed','false'));
       btn.setAttribute('aria-pressed','true');main.classList.add('swap');
-      const img=new Image();img.onload=()=>{setTimeout(()=>{main.src=btn.dataset.src;main.classList.remove('swap');},350)};img.src=btn.dataset.src;
+      const img=new Image();img.onload=()=>{setTimeout(()=>{const bi=btn.querySelector('img');main.removeAttribute('srcset');if(bi&&bi.getAttribute('srcset')){main.setAttribute('srcset',bi.getAttribute('srcset'));main.setAttribute('sizes','(max-width: 820px) 256px, 48vw');}main.src=btn.dataset.src;main.classList.remove('swap');},350)};img.src=btn.dataset.src;
     }));
   });
 
