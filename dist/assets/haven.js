@@ -127,8 +127,6 @@ addEventListener('DOMContentLoaded',()=>{
     const tr=document.querySelector('.mq-track');let x=0,dir=-1,boost=0;
     ScrollTrigger.create({trigger:'.why',start:'top bottom',end:'bottom top',onUpdate:st=>{dir=st.direction>0?-1:1;boost=Math.min(Math.abs(st.getVelocity())/120,18);}});
     gsap.ticker.add(()=>{const half=tr.scrollWidth/2;x+=dir*(0.6+boost);boost*=.92;if(x<=-half)x+=half;if(x>0)x-=half;tr.style.transform=`translate3d(${x}px,0,0) skewX(${dir*-boost*.6}deg)`;});
-    document.querySelectorAll('.benefit svg').forEach(sv=>sv.querySelectorAll('path,circle').forEach(pth=>{const L=Math.ceil(pth.getTotalLength?pth.getTotalLength():120);pth.style.setProperty('--len',L);gsap.fromTo(pth,{strokeDashoffset:L},{strokeDashoffset:0,duration:1.6,ease:'power2.inOut',scrollTrigger:{trigger:'.benefits',start:'top 85%'}});}));
-    gsap.from('.benefit',{y:60,opacity:0,duration:1,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.benefits',start:'top 88%'}});
     document.querySelectorAll('.gets li').forEach(li=>{li.addEventListener('pointermove',e=>{const r=li.getBoundingClientRect();li.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`;});li.addEventListener('pointerleave',()=>{li.style.transform='';});});
   }
 
@@ -159,7 +157,7 @@ addEventListener('DOMContentLoaded',()=>{
   }
 
   // Túnel 3D: fotos que vienen desde la profundidad
-  const flies=gsap.utils.toArray('.fly');
+  const flies=matchMedia('(min-width: 821px)').matches?gsap.utils.toArray('.fly'):[];
   const W=()=>innerWidth,H=()=>innerHeight;
   const seeds=flies.map((f,i)=>{const ang=i*2.399963;const rad=.32+(i%3)*.09;return{x:Math.cos(ang)*rad,y:Math.sin(ang)*rad*.9,z:-i*520};});
   const depth=flies.length*520;
@@ -178,7 +176,6 @@ addEventListener('DOMContentLoaded',()=>{
   gsap.utils.toArray('.suite-media').forEach(m=>{
     gsap.fromTo(m,{clipPath:'inset(0% 0% 100% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:1.3,ease:'expo.inOut',scrollTrigger:{trigger:m,start:'top 85%'}});
     gsap.fromTo(m.querySelector('.main'),{scale:1.35},{scale:1,duration:1.8,ease:'expo.out',scrollTrigger:{trigger:m,start:'top 85%'}});
-    gsap.from(m.querySelectorAll('.thumbs button'),{y:30,opacity:0,stagger:.08,duration:.8,ease:'power3.out',scrollTrigger:{trigger:m,start:'top 70%'}});
   });
   gsap.from('.room-stage',{clipPath:'inset(30% 20% 30% 20% round 40px)',duration:1.6,ease:'expo.out',scrollTrigger:{trigger:'.room-switch',start:'top 75%'}});
   gsap.from('.room-list li',{x:-60,opacity:0,duration:1,ease:'power3.out',stagger:.09,scrollTrigger:{trigger:'.room-list',start:'top 80%'}});
@@ -196,6 +193,11 @@ addEventListener('DOMContentLoaded',()=>{
   gsap.from('.tier-wrap',{y:90,rotateX:25,opacity:0,duration:1.2,ease:'power3.out',stagger:.12,scrollTrigger:{trigger:'.tiers',start:'top 85%'}});
   gsap.fromTo('.wordmark',{yPercent:30,opacity:.2},{yPercent:0,opacity:1,ease:'none',scrollTrigger:{trigger:'.wordmark',start:'top bottom',end:'bottom bottom',scrub:true}});
 });
+
+/* Túnel en celular: las fotos pasan a una fila deslizable */
+(function(){const st=document.querySelector('.tunnel-stage');if(!st||matchMedia('(min-width: 821px)').matches)return;
+  const row=document.createElement('div');row.className='tunnel-row';st.querySelectorAll('.fly').forEach(f=>row.append(f));st.append(row);
+  const h=document.createElement('p');h.className='tunnel-hint';h.textContent='Desliza para ver más →';st.append(h);})();
 
 /* ===================== Páginas internas ===================== */
 (function(){
@@ -264,7 +266,7 @@ addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.arch').forEach(a=>gsap.fromTo(a,{clipPath:'inset(40% 10% 0% 10% round 999px 999px 28px 28px)'},{clipPath:'inset(0% 0% 0% 0% round 999px 999px 28px 28px)',ease:'none',scrollTrigger:{trigger:a,start:'top 95%',end:'top 35%',scrub:true}}));
   document.querySelectorAll('.arch-float').forEach(a=>gsap.from(a,{scale:.4,rotate:-25,opacity:0,duration:1.4,ease:'back.out(1.6)',scrollTrigger:{trigger:a,start:'top 90%'}}));
   // Frase grande palabra a palabra (dorado)
-  document.querySelectorAll('.quote p').forEach(el=>{const txt=el.textContent.trim();el.setAttribute('aria-label',txt);el.innerHTML=txt.split(' ').map(w=>`<span class="wd" aria-hidden="true" style="opacity:.15;display:inline-block">${w}</span>`).join(' ');
+  document.querySelectorAll('.bigq p').forEach(el=>{const txt=el.textContent.trim();el.setAttribute('aria-label',txt);el.innerHTML=txt.split(' ').map(w=>`<span class="wd" aria-hidden="true" style="opacity:.15;display:inline-block">${w}</span>`).join(' ');
     gsap.to(el.querySelectorAll('.wd'),{opacity:1,stagger:.08,ease:'none',scrollTrigger:{trigger:el,start:'top 80%',end:'bottom 50%',scrub:true}});});
   // Specs con contador
   document.querySelectorAll('.rd-specs b[data-n]').forEach(b=>{const end=+b.dataset.n,o={v:0};ScrollTrigger.create({trigger:b,start:'top 92%',once:true,onEnter:()=>gsap.to(o,{v:end,duration:1.6,ease:'power2.out',onUpdate:()=>b.textContent=Math.round(o.v)+(b.dataset.u||'')})});});
