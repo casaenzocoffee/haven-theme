@@ -194,6 +194,10 @@ addEventListener('DOMContentLoaded',()=>{
   gsap.fromTo('.wordmark',{yPercent:30,opacity:.2},{yPercent:0,opacity:1,ease:'none',scrollTrigger:{trigger:'.wordmark',start:'top bottom',end:'bottom bottom',scrub:true}});
 });
 
+/* Acomodación en celular: copia la foto de cada categoría dentro de su tarjeta */
+(function(){if(matchMedia('(min-width: 821px)').matches)return;const imgs=[...document.querySelectorAll('.room-stage img')];
+  document.querySelectorAll('.room-list li').forEach(li=>{const im=imgs[+li.dataset.img];if(!im)return;const w=document.createElement('span');w.className='ri-img';const c=im.cloneNode();c.className='';c.alt='';c.loading='lazy';w.append(c);li.querySelector('a').prepend(w);});})();
+
 /* Túnel en celular: las fotos pasan a una fila deslizable */
 (function(){const st=document.querySelector('.tunnel-stage');if(!st||matchMedia('(min-width: 821px)').matches)return;
   const row=document.createElement('div');row.className='tunnel-row';st.querySelectorAll('.fly').forEach(f=>row.append(f));st.append(row);
