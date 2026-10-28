@@ -41,13 +41,13 @@ function hv_is_builder_page( $id = null ) {
 
 function hv_strip_builder_assets() {
 	if ( ! hv_template_key() || hv_is_builder_page() ) return;
-	$pat = '#/plugins/(elementor|elementor-pro|revslider|unlimited-elements[^/]*|skyboot-[^/]*|haven-guia[^/]*)/#'; // la guía la sirve el tema
+	$pat = '#/plugins/(elementor|elementor-pro|revslider|unlimited-elements[^/]*|skyboot-[^/]*|haven-guia[^/]*|connect-polylang-elementor)/#'; // la guía la sirve el tema
 	global $wp_styles, $wp_scripts;
 	foreach ( array( $wp_styles, $wp_scripts ) as $reg ) {
 		if ( ! $reg ) continue;
 		foreach ( (array) $reg->queue as $h ) {
 			$src = isset( $reg->registered[ $h ] ) ? (string) $reg->registered[ $h ]->src : '';
-			if ( preg_match( $pat, $src ) || preg_match( '#^(elementor|e-|swiper|font-awesome|elementor-gf|eael|uc_|rs-|revmin|tp-tools)#', $h ) ) {
+			if ( preg_match( $pat, $src ) || false !== strpos( $src, '/uploads/elementor/' ) || preg_match( '#^(elementor|e-|swiper|font-awesome|elementor-gf|eael|uc_|rs-|revmin|tp-tools|cpel-|base-(desktop|tablet|mobile)$|(global|local)-\d+-frontend)#', $h ) ) {
 				if ( $reg === $wp_styles ) wp_dequeue_style( $h ); else wp_dequeue_script( $h );
 			}
 		}
