@@ -246,8 +246,8 @@ addEventListener('DOMContentLoaded',()=>{
 (function(){
   const BOOK='http://havenmedellin.backhotelite.com/'+(document.documentElement.lang==='en'?'en':'es')+'/bookcore/availability/havenmedellin/';
   const iso=d=>d.toISOString().slice(0,10);
-  // "Reservar" fuera de la portada abre una ventana para elegir fechas (no salta directo al motor).
-  if(!document.getElementById('reservar')){
+  // "Reservar" abre una ventana para elegir fechas (en todas las páginas, también la portada).
+  {
     const en=document.documentElement.lang.slice(0,2)==='en';
     const L=en?{t:'Book direct',s:'Best rate when you book direct · breakfast included',i:'Check-in',o:'Check-out',b:'Check availability',n:['night','nights'],c:'Close'}
               :{t:'Reserva directa',s:'Mejor tarifa reservando directo · desayuno incluido',i:'Llegada',o:'Salida',b:'Ver disponibilidad',n:['noche','noches'],c:'Cerrar'};
@@ -270,13 +270,13 @@ addEventListener('DOMContentLoaded',()=>{
       dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
       dlg.addEventListener('close',()=>{document.documentElement.classList.remove('hvb-open');try{window.__hvLenis&&window.__hvLenis.start()}catch(_){}});
     };
-    document.addEventListener('click',e=>{const a=e.target.closest('a[href="#reservar"]');if(!a)return;e.preventDefault();
+    document.addEventListener('click',e=>{const a=e.target.closest('a[href="#reservar"]');if(!a)return;e.preventDefault();e.stopPropagation();
       src=a.dataset.track||'boton_reservar';if(!dlg)build();
       (window.dataLayer=window.dataLayer||[]).push({event:'haven_click',accion:'abrir_reserva_'+(document.body.dataset.hv||'')});
       try{window.__hvLenis&&window.__hvLenis.stop()}catch(_){}
       document.documentElement.classList.add('hvb-open');
       if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');
-    });
+    },true);
   }
   // Barra flotante de reserva
   const bb=document.querySelector('.bookbar');
