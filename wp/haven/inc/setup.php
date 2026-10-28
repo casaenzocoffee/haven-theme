@@ -22,9 +22,8 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_script( 'hv-lenis', 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js', array(), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
 	wp_enqueue_script( 'haven', hv_asset( 'haven.js' ), array( 'hv-gsap', 'hv-gsap-st', 'hv-lenis' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
 	if ( is_front_page() && function_exists( 'wp_enqueue_script_module' ) ) {
-		wp_register_script_module( 'three', 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js', array(), null );
-		wp_register_script_module( 'three/addons/environments/RoomEnvironment.js', 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/environments/RoomEnvironment.js', array( 'three' ), null );
-		wp_enqueue_script_module( 'haven-clock', hv_asset( 'clock3d.js' ), array( array( 'id' => 'three', 'import' => 'dynamic' ), array( 'id' => 'three/addons/environments/RoomEnvironment.js', 'import' => 'dynamic' ) ), null );
+		// Sin dependencias registradas: el mapa de importación lo imprime el tema en el <head>, antes de las precargas (si no, el navegador lo ignora).
+		wp_enqueue_script_module( 'haven-clock', hv_asset( 'clock3d.js' ), array(), null );
 	}
 	// Bloques de Gutenberg y estilos globales: el tema no los usa en sus plantillas.
 	if ( hv_template_key() ) {
@@ -86,7 +85,8 @@ add_action( 'wp_head', function () {
 	if ( is_front_page() ) {
 		echo '<link rel="preload" as="image" href="' . esc_url( hv_asset( 'media/haven-hero.webp' ) ) . '" media="(min-width: 900px)" fetchpriority="high">' . "\n";
 		echo '<link rel="preload" as="image" href="' . esc_url( hv_asset( 'media/haven-hero-m.webp' ) ) . '" media="(max-width: 899px)" fetchpriority="high">' . "\n";
-		// El reloj 3D de la apertura: se descarga en paralelo para que arranque sin pausa.
+		// El reloj 3D de la apertura. Primero el mapa de importación (tiene que ir antes de cualquier módulo o precarga) y luego las precargas.
+		echo '<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>' . "\n";
 		echo '<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js" crossorigin>' . "\n";
 		echo '<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/environments/RoomEnvironment.js" crossorigin>' . "\n";
 	}
