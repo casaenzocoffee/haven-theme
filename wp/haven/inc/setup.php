@@ -17,10 +17,10 @@ function hv_is_haven_view() {
 add_action( 'wp_enqueue_scripts', function () {
 	$ver = null;
 	wp_enqueue_style( 'haven', hv_asset( 'haven.css' ), array(), $ver );
-	wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array(), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
-	wp_enqueue_script( 'gsap-st', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', array( 'gsap' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
-	wp_enqueue_script( 'lenis', 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js', array(), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
-	wp_enqueue_script( 'haven', hv_asset( 'haven.js' ), array( 'gsap', 'gsap-st', 'lenis' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'hv-gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array(), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'hv-gsap-st', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', array( 'hv-gsap' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'hv-lenis', 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js', array(), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'haven', hv_asset( 'haven.js' ), array( 'hv-gsap', 'hv-gsap-st', 'hv-lenis' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
 	if ( is_front_page() && function_exists( 'wp_enqueue_script_module' ) ) {
 		wp_register_script_module( 'three', 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js', array(), null );
 		wp_register_script_module( 'three/addons/environments/RoomEnvironment.js', 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/environments/RoomEnvironment.js', array( 'three' ), null );
