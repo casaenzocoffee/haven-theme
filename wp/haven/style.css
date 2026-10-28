@@ -5,7 +5,7 @@ Author: Haven Medellín
 Description: Tema propio de Haven Medellín: diseño editorial, 3D y animaciones, rápido y editable desde el panel (habitaciones, páginas, portada, guía y blog). Compatible con Polylang, Yoast SEO, GTM4WP, WP Rocket y el plugin Haven Guía.
 Version: 1.0.0
 Requires at least: 6.4
-Requires PHP: 8.1
+Requires PHP: 7.4
 Text Domain: haven
 */
 /* Los estilos del sitio están en assets/haven.css */
