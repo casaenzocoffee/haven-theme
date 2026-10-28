@@ -83,7 +83,7 @@ function hv_run_import( $o = array() ) {
 			if ( ! $id ) {
 				if ( ! $o['create'] || '' === $slug ) { $rows[] = array( $lang, $key, $slug, 0, 'FALTA' ); continue; }
 				if ( $o['dry'] ) { $rows[] = array( $lang, $key, $slug, 0, 'se crearía' ); continue; }
-				$id = wp_insert_post( array( 'post_type' => $it['type'], 'post_status' => 'publish', 'post_name' => $slug, 'post_title' => $it['title'] ?? wp_strip_all_tags( $it['data']['title_html'] ?? ( $it['data']['h1'] ?? ucfirst( str_replace( '-', ' ', $slug ) ) ) ), 'post_content' => '' ), true );
+				$id = wp_insert_post( array( 'post_type' => $it['type'], 'post_status' => 'publish', 'post_name' => $slug, 'post_title' => $it['title'] ?? $b['titles'][ $key ] ?? wp_strip_all_tags( $it['data']['title_html'] ?? ( $it['data']['h1'] ?? ucfirst( str_replace( '-', ' ', $slug ) ) ) ), 'post_content' => '' ), true );
 				if ( is_wp_error( $id ) ) { $rows[] = array( $lang, $key, $slug, 0, 'error: ' . $id->get_error_message() ); continue; }
 				if ( function_exists( 'pll_set_post_language' ) ) pll_set_post_language( $id, $lang );
 				if ( ! empty( $it['data']['published'] ) ) wp_update_post( array( 'ID' => $id, 'post_date' => $it['data']['published'] ) );

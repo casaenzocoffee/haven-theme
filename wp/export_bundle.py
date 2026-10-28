@@ -116,6 +116,14 @@ PATHS = {}
 for k, v in build.NAV_MAP.items():
     key = v.strip('/') or 'home'
     PATHS.setdefault(key, k.strip('/').split('/', 1)[1] if '/' in k.strip('/') else '')
-out = {'lang': L, 'rooms': rooms, 'pages': P, 'posts': posts, 'meta': M}
+# Guía y quiz (páginas nuevas: títulos y SEO para crearlas en el sitio oficial)
+_G = {'guia-medellin': 'guia-medellin' if L == 'es' else 'en/medellin-guide', 'que-suite-elegir': 'que-suite-elegir' if L == 'es' else 'en/which-suite'}
+_PJ = {x.get('slug'): x for x in json.load(open('/home/claude/haven-site/src/pages.json'))}
+TITLES = {}
+for k, sl in _G.items():
+    x = _PJ.get(sl, {})
+    if x.get('title'): M[k] = {'title': x['title'], 'desc': x.get('desc') or x.get('description') or ''}
+TITLES = {'guia-medellin': 'Guía Medellín' if L == 'es' else 'Medellín guide', 'que-suite-elegir': '¿Qué suite va contigo?' if L == 'es' else 'Which suite is yours?'}
+out = {'lang': L, 'rooms': rooms, 'pages': P, 'posts': posts, 'meta': M, 'titles': TITLES}
 json.dump(out, open(f'/home/claude/haven-wp/haven/import/bundle-{L}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(L, len(rooms), 'habitaciones', len(P), 'páginas', len(posts), 'artículos')

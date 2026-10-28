@@ -1797,6 +1797,18 @@
   "home": {
    "title": "Haven Medellín | Design hotel in El Poblado",
    "desc": "Haven, A Design Hotel: suites with jacuzzi, 360° Rooftop, Swing Bar and wellness in the heart of El Poblado, Medellín. Book direct at the best rate."
+  },
+  "guia-medellin": {
+   "title": "Medellín guide from El Poblado: walking map and trip planner | Haven",
+   "desc": "Restaurants, cafés, bars and things to do on foot from Haven in El Poblado, with walking minutes and steps from Google Maps, plus a custom day-by-day planner."
+  },
+  "que-suite-elegir": {
+   "title": "Which suite is yours? | Haven Medellín",
+   "desc": "Answer 5 questions and find the Haven Medellín suite made for your trip: penthouse, presidential, jacuzzi suites and more."
   }
+ },
+ "titles": {
+  "guia-medellin": "Medellín guide",
+  "que-suite-elegir": "Which suite is yours?"
  }
 }
