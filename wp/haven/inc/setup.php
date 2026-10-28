@@ -175,6 +175,8 @@ function hv_unhook_elementor_pro() {
 // Elementor Pro engancha su encabezado/pie al elegir la plantilla, así que se quita en ambos momentos.
 add_action( 'template_redirect', 'hv_unhook_elementor_pro', 5 );
 add_filter( 'template_include', function ( $t ) { hv_unhook_elementor_pro(); return $t; }, 100 );
+// Slider Revolution y otros enganchan sus scripts al cargar los recursos, así que se repite después de eso.
+add_action( 'wp_enqueue_scripts', 'hv_unhook_elementor_pro', 9999 );
 
 /** Limpia de la dirección los parámetros _gl/_ga de Google (antes era un fragmento de Elementor). */
 add_action( 'wp_footer', function () {
