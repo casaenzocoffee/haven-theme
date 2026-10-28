@@ -80,8 +80,18 @@ add_action( 'wp_head', function () {
 	$fonts = 'https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap';
 	echo '<meta name="theme-color" content="#191311">' . "\n";
 	echo '<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>' . "\n" . '<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>' . "\n";
-	echo '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
-	echo '<link rel="preload" as="style" href="' . esc_url( $fonts ) . '">' . "\n" . '<link rel="stylesheet" href="' . esc_url( $fonts ) . '" media="print" onload="this.media=\'all\'"><noscript><link rel="stylesheet" href="' . esc_url( $fonts ) . '"></noscript>' . "\n";
+	$local = WP_CONTENT_DIR . '/uploads/hv-fonts/fonts.css';
+	if ( file_exists( $local ) ) {
+		// Fuentes servidas desde el propio dominio (tools/fetch-fonts.php): sin conexiones a Google y con precarga de las principales.
+		$base = content_url( 'uploads/hv-fonts' );
+		foreach ( (array) json_decode( (string) @file_get_contents( WP_CONTENT_DIR . '/uploads/hv-fonts/preload.json' ), true ) as $pf ) {
+			echo '<link rel="preload" as="font" type="font/woff2" href="' . esc_url( $base . '/' . $pf ) . '" crossorigin>' . "\n";
+		}
+		echo '<style id="hv-fonts">' . str_replace( 'FONTDIR', esc_url( $base ), (string) file_get_contents( $local ) ) . '</style>' . "\n";
+	} else {
+		echo '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+		echo '<link rel="preload" as="style" href="' . esc_url( $fonts ) . '">' . "\n" . '<link rel="stylesheet" href="' . esc_url( $fonts ) . '" media="print" onload="this.media=\'all\'"><noscript><link rel="stylesheet" href="' . esc_url( $fonts ) . '"></noscript>' . "\n";
+	}
 	if ( is_front_page() ) {
 		echo '<link rel="preload" as="image" href="' . esc_url( hv_asset( 'media/haven-hero.webp' ) ) . '" media="(min-width: 900px)" fetchpriority="high">' . "\n";
 		echo '<link rel="preload" as="image" href="' . esc_url( hv_asset( 'media/haven-hero-m.webp' ) ) . '" media="(max-width: 899px)" fetchpriority="high">' . "\n";
@@ -151,7 +161,11 @@ function hv_remove_hooks_from( $hook, $path_part ) {
 function hv_unhook_elementor_pro() {
 	if ( ! hv_template_key() || hv_is_builder_page() ) return;
 	foreach ( array( 'get_header', 'get_footer' ) as $h ) hv_remove_hooks_from( $h, '/elementor-pro/' );
-	foreach ( array( 'wp_head', 'wp_body_open', 'wp_footer' ) as $h ) {
+	foreach ( array( 'wp_head', 'wp_body_open', 'wp_footer', 'wp_print_footer_scripts' ) as $h ) {
+		// Scripts sueltos de constructores que estas páginas no usan (Slider Revolution, carga diferida de Elementor, Unlimited Elements).
+		hv_remove_hooks_from( $h, '/plugins/revslider/' );
+		hv_remove_hooks_from( $h, '/plugins/elementor/' );
+		hv_remove_hooks_from( $h, '/plugins/unlimited-elements' );
 		hv_remove_hooks_from( $h, '/elementor-pro/modules/custom-code/' );
 		hv_remove_hooks_from( $h, '/elementor-pro/modules/popup/' );
 		hv_remove_hooks_from( $h, '/elementor-pro/modules/theme-builder/' );
@@ -176,3 +190,11 @@ add_action( 'wp_footer', function () {
 add_action( 'template_redirect', function () {
 	if ( hv_template_key() && ! hv_is_builder_page() && ! defined( 'DONOTROCKETOPTIMIZE' ) ) define( 'DONOTROCKETOPTIMIZE', true );
 }, 1 );
+
+/** jQuery solo lo usa el píxel (PixelYourSite, que ya va diferido): en las páginas Haven se carga diferido para no bloquear la primera pintura. */
+add_filter( 'script_loader_tag', function ( $tag, $handle ) {
+	if ( in_array( $handle, array( 'jquery-core', 'jquery-migrate' ), true ) && ! is_admin() && hv_template_key() && ! hv_is_builder_page() && false === strpos( $tag, ' defer' ) ) {
+		$tag = str_replace( '<script ', '<script defer ', $tag );
+	}
+	return $tag;
+}, 10, 2 );
