@@ -167,3 +167,12 @@ add_action( 'wp_footer', function () {
 	if ( ! hv_template_key() || hv_is_builder_page() ) return;
 	echo "<script>addEventListener('load',function(){setTimeout(function(){try{var u=new URL(location.href),c=0;['_gl','_ga'].forEach(function(p){if(u.searchParams.has(p)){u.searchParams.delete(p);c=1}});if(c)history.replaceState(history.state,'',u.pathname+u.search+u.hash)}catch(e){}},2000)});</script>\n";
 }, 99 );
+
+/**
+ * WP Rocket: en las páginas Haven se mantiene la caché de página, pero no sus optimizaciones de CSS/JS
+ * (quitar CSS "sin usar" borraría estilos que el tema activa con JavaScript, y retrasar JS frenaría la apertura).
+ * El tema ya entrega su CSS y JS livianos y diferidos.
+ */
+add_action( 'template_redirect', function () {
+	if ( hv_template_key() && ! hv_is_builder_page() && ! defined( 'DONOTROCKETOPTIMIZE' ) ) define( 'DONOTROCKETOPTIMIZE', true );
+}, 1 );
