@@ -134,7 +134,6 @@ return array(
   "corazón" => "heart",
   "de Medellín" => "of Medellín",
   "Diseño, hospitalidad y experiencias memorables en el lugar más vibrante de la ciudad." => "Design, hospitality and memorable experiences in the most vibrant part of the city.",
-  "A 2 min del Parque Lleras" => "2 min from Parque Lleras",
   "Hora en Medellín" => "Time in Medellín",
   "Vista de Medellín desde Haven, en El Poblado" => "View of Medellín from Haven, in El Poblado",
   "Buscar disponibilidad" => "Check availability",
@@ -319,4 +318,5 @@ return array(
   "Todo lo que queda a pie desde El Poblado, un plan día por día hecho a tu medida y la suite que va contigo. Mueve, toca y arma tu viaje." => "Everything within walking distance of El Poblado, a day-by-day plan built around you and the suite that fits your trip. Drag, tap and build your stay.",
   "Ver habitaciones" => "View rooms",
   "¿Qué suite va <em>contigo</em>?" => "Which suite is <em>yours</em>?",
+  "A 2 min de Provenza" => "2 min from Provenza",
 );
