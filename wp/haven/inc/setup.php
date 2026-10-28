@@ -148,7 +148,7 @@ function hv_remove_hooks_from( $hook, $path_part ) {
  * En las páginas con diseño Haven, Elementor Pro no debe poner su encabezado, pie, ventanas emergentes (popups)
  * ni sus fragmentos de código: el tema trae los suyos. Las páginas hechas con Elementor (sin clave Haven) no se tocan.
  */
-add_action( 'template_redirect', function () {
+function hv_unhook_elementor_pro() {
 	if ( ! hv_template_key() || hv_is_builder_page() ) return;
 	foreach ( array( 'get_header', 'get_footer' ) as $h ) hv_remove_hooks_from( $h, '/elementor-pro/' );
 	foreach ( array( 'wp_head', 'wp_body_open', 'wp_footer' ) as $h ) {
@@ -157,7 +157,10 @@ add_action( 'template_redirect', function () {
 		hv_remove_hooks_from( $h, '/elementor-pro/modules/theme-builder/' );
 	}
 	add_filter( 'elementor/theme/need_override_location', '__return_false' );
-}, 5 );
+}
+// Elementor Pro engancha su encabezado/pie al elegir la plantilla, así que se quita en ambos momentos.
+add_action( 'template_redirect', 'hv_unhook_elementor_pro', 5 );
+add_filter( 'template_include', function ( $t ) { hv_unhook_elementor_pro(); return $t; }, 100 );
 
 /** Limpia de la dirección los parámetros _gl/_ga de Google (antes era un fragmento de Elementor). */
 add_action( 'wp_footer', function () {
