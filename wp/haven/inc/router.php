@@ -16,6 +16,8 @@ function hv_template_key() {
 	static $k = null;
 	if ( null !== $k ) return $k;
 	if ( is_admin() || ! did_action( 'wp' ) ) return '';
+	// Vista previa del editor de Elementor: se deja que Elementor dibuje la página para que su editor cargue.
+	if ( isset( $_GET['elementor-preview'] ) || isset( $_GET['elementor_library'] ) ) return $k = '';
 	if ( is_front_page() ) return $k = 'home';
 	if ( is_404() ) return $k = '404';
 	if ( is_singular( 'post' ) ) return $k = 'post';
@@ -32,6 +34,7 @@ function hv_template_key() {
 
 add_filter( 'template_include', function ( $tpl ) {
 	$k = hv_template_key();
+	if ( '' === $k ) return $tpl;
 	$file = array( 'home' => 'front-page', 'room' => 'room', 'post' => 'post', 'blogs' => 'blogs', '404' => '404', 'guia' => 'guide', 'quiz' => 'guide', 'page' => 'page' )[ $k ] ?? $k;
 	if ( is_page() ) {
 		$key = hv_key();
