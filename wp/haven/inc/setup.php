@@ -114,7 +114,7 @@ add_filter( 'rocket_exclude_defer_js', function ( $ex ) { return array_merge( (a
 
 /** Joinchat (WhatsApp): por encima de la barra inferior del celular. */
 add_action( 'wp_head', function () {
-	echo '<style>@media (max-width:820px){.joinchat{--bottom:96px!important;bottom:96px!important}}</style>' . "\n";
+	echo '<style>@media (max-width:820px){.joinchat{--bottom:96px!important;bottom:96px!important}}body.admin-bar .site-header{top:calc(46px + env(safe-area-inset-top,0px))}@media (min-width:783px){body.admin-bar .site-header{top:46px}}</style>' . "\n";
 }, 50 );
 
 /** Tamaños de imagen razonables para el diseño. */
