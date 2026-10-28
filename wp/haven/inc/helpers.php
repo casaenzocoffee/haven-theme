@@ -307,7 +307,7 @@ add_shortcode( 'haven_guia', function ( $a ) {
 /** Estilos y scripts de la guía solo donde se usa. */
 add_action( 'wp_enqueue_scripts', function () {
 	if ( in_array( hv_template_key(), array( 'guia', 'quiz', 'home' ), true ) || ( is_singular() && has_shortcode( (string) get_post_field( 'post_content', hv_current_id() ), 'haven_guia' ) ) ) {
-		wp_enqueue_style( 'haven-guia', hv_asset( 'haven-guia.css' ), array( 'haven' ), null );
+		wp_enqueue_style( 'haven-theme-guia', hv_asset( 'haven-guia.css' ), array( 'haven' ), null );
 	}
 }, 30 );
 add_action( 'wp_footer', function () {
