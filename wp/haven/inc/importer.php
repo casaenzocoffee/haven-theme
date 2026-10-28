@@ -73,6 +73,12 @@ function hv_run_import( $o = array() ) {
 			$slug = $slugs[ $key ][ $lang ] ?? null;
 			if ( null === $slug ) { $rows[] = array( $lang, $key, '-', 0, 'sin slug' ); continue; }
 			$id  = hv_find_post( $slug, $lang, $it['type'], $key );
+			// Algunos sitios tienen un slug distinto (p. ej. suite-presidential en vez de suite-presidencial): se prueban los alternativos del contenido.
+			foreach ( array_unique( array_filter( array( $it['data']['slug_es'] ?? '', $it['data']['slug'] ?? '' ) ) ) as $alt ) {
+				if ( $id || $alt === $slug ) continue;
+				$id = hv_find_post( $alt, $lang, $it['type'] );
+				if ( $id ) $slug = $alt;
+			}
 			$act = array();
 			if ( ! $id ) {
 				if ( ! $o['create'] || '' === $slug ) { $rows[] = array( $lang, $key, $slug, 0, 'FALTA' ); continue; }
