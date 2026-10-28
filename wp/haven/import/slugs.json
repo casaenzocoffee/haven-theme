@@ -1,0 +1,158 @@
+{
+ "home": {
+  "es": "",
+  "en": ""
+ },
+ "guia-medellin": {
+  "es": "guia-medellin",
+  "en": "medellin-guide"
+ },
+ "que-suite-elegir": {
+  "es": "que-suite-elegir",
+  "en": "which-suite"
+ },
+ "habitaciones": {
+  "es": "todas-las-habitaciones",
+  "en": "all-rooms"
+ },
+ "penthouse": {
+  "es": "penthouse",
+  "en": "penthouse"
+ },
+ "presidencial": {
+  "es": "presidencial",
+  "en": "presidential"
+ },
+ "suites-de-lujo": {
+  "es": "suites-de-lujo",
+  "en": "luxury-suites"
+ },
+ "room-suite-emperor-901": {
+  "es": "suite-emperor-901",
+  "en": "emperor-suite-901"
+ },
+ "room-suite-emperor-902": {
+  "es": "suite-emperor-902",
+  "en": "emperor-suite-902"
+ },
+ "room-suite-presidential": {
+  "es": "suite-presidencial",
+  "en": "presidential-suite"
+ },
+ "room-suite-imperial-402": {
+  "es": "suite-imperial-402",
+  "en": "imperial-suite-402"
+ },
+ "room-suite-excelsior-401": {
+  "es": "suite-excelsior-401",
+  "en": "excelsior-suite-401"
+ },
+ "room-suite-excelsior-804": {
+  "es": "suite-excelsior-804",
+  "en": "excelsior-suite-804"
+ },
+ "room-suite-excelsior-604": {
+  "es": "suite-excelsior-604",
+  "en": "excelsior-suite-604"
+ },
+ "room-habitacion-ambassador": {
+  "es": "habitacion-ambassador",
+  "en": "ambassador-room"
+ },
+ "room-habitacion-ambassador-jr": {
+  "es": "habitacion-ambassador-jr",
+  "en": "ambassador-jr-room"
+ },
+ "room-habitacion-viscount-803": {
+  "es": "habitacion-viscount-803",
+  "en": "viscount-room-803"
+ },
+ "room-habitacion-viscount": {
+  "es": "habitacion-viscount",
+  "en": "viscount-room"
+ },
+ "room-habitacion-lord": {
+  "es": "habitacion-lord",
+  "en": "lords-room"
+ },
+ "room-habitacion-earl": {
+  "es": "habitacion-earl",
+  "en": "earls-room"
+ },
+ "room-habitacion-marques-plus": {
+  "es": "habitacion-marques-plus",
+  "en": "marques-plus-room"
+ },
+ "room-habitacion-marques": {
+  "es": "habitacion-marques",
+  "en": "marques-room"
+ },
+ "room-habitacion-duke": {
+  "es": "habitacion-duke",
+  "en": "duke-room"
+ },
+ "room-habitacion-consort": {
+  "es": "habitacion-consort",
+  "en": "consort-room"
+ },
+ "rooftop": {
+  "es": "360-rooftop",
+  "en": "360-rooftop"
+ },
+ "swing": {
+  "es": "swing-bar",
+  "en": "swing-bar"
+ },
+ "gastronomia": {
+  "es": "gastronomia",
+  "en": "gastronomy"
+ },
+ "wellness": {
+  "es": "wellness",
+  "en": "wellness"
+ },
+ "eventos": {
+  "es": "eventos",
+  "en": "events"
+ },
+ "servicios": {
+  "es": "servicios",
+  "en": "services"
+ },
+ "contacto": {
+  "es": "contacto",
+  "en": "contact"
+ },
+ "serena-rewards": {
+  "es": "serena-rewards",
+  "en": "serena-rewards"
+ },
+ "preguntas-frecuentes": {
+  "es": "preguntas-frecuentes",
+  "en": "frequently-asked-questions"
+ },
+ "politica-de-visitantes": {
+  "es": "politica-de-visitantes",
+  "en": "visitor-policy"
+ },
+ "terminos-y-condiciones": {
+  "es": "terminos-y-condiciones",
+  "en": "terms-and-conditions"
+ },
+ "blogs": {
+  "es": "blogs",
+  "en": "blogs"
+ },
+ "post-experiencias-gastronomicas-de-cinco-estrellas-en-medellin": {
+  "es": "experiencias-gastronomicas-de-cinco-estrellas-en-medellin",
+  "en": "five-star-gastronomic-experiences-in-medellin"
+ },
+ "post-las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera": {
+  "es": "las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera",
+  "en": "the-10-best-things-to-do-and-see-in-the-city-of-eternal-spring"
+ },
+ "post-conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica": {
+  "es": "conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica",
+  "en": "get-to-know-the-paisa-culture-and-discover-its-traditions-in-a-unique-experience"
+ }
+}

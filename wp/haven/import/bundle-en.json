@@ -1,0 +1,1802 @@
+{
+ "lang": "en",
+ "rooms": [
+  {
+   "key": "room-suite-emperor-901",
+   "slug_es": "suite-emperor-901",
+   "slug": "emperor-suite-901",
+   "cat": "Penthouse",
+   "f": "penthouse",
+   "name": "Emperor Suite 901 Penthouse",
+   "kicker": "Room",
+   "m2": "138 m²",
+   "per": "8 people",
+   "beds": [
+    "King x2",
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "City view",
+    "Bathroom",
+    "Living room",
+    "Mini bar",
+    "Kitchen",
+    "Jacuzzi",
+    "Relaxation area",
+    "Panoramic view",
+    "Dining room"
+   ],
+   "desc": [
+    "Welcome to your private residence high above Medellín. The Emperor 901 Suite is a spectacular four-bedroom duplex where unforgettable moments are created, whether you're traveling with friends or family. Wake up to breathtaking city views, spend your afternoons relaxing in your private jacuzzi, and gather in a spacious living room designed for connection and comfort. With two king beds, two queen beds, and thoughtfully designed spaces on two levels, every guest enjoys privacy and luxury, plus a premium sound system with a soundbar, perfect for elevating your stay with an immersive audio experience."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-kitchen-lounge-area.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-kitchen.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-jacuzzi-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-jacuzzi-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-bathroom-vanity.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-bed-4.webp",
+    "/wp-content/uploads/2026/09/emperor-penthouse-901-room-8-scaled.jpg",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-shower.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-jacuzzi-lounge-area-3.webp",
+    "/wp-content/uploads/2026/09/emperor-penthouse-901-room-7-scaled.jpg",
+    "/wp-content/uploads/2026/09/emperor-penthouse-901-bathroom-vanity-2-scaled.jpg",
+    "/wp-content/uploads/2026/09/emperor-penthouse-901-room-6-scaled.jpg",
+    "/wp-content/uploads/2026/09/emperor-penthouse-901-room-5-scaled.jpg"
+   ],
+   "cover": "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-lounge-area-2.webp"
+  },
+  {
+   "key": "room-suite-emperor-902",
+   "slug_es": "suite-emperor-902",
+   "slug": "emperor-suite-902",
+   "cat": "Penthouse",
+   "f": "penthouse",
+   "name": "Emperor Suite 902 Penthouse",
+   "kicker": "Room",
+   "m2": "111 m²",
+   "per": "8 people",
+   "beds": [
+    "King x2",
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "City view",
+    "Bathroom",
+    "Living room",
+    "Mini bar",
+    "Kitchen",
+    "Jacuzzi",
+    "Balcony",
+    "Relaxation area",
+    "Panoramic view",
+    "Dining room"
+   ],
+   "desc": [
+    "Welcome to a space designed to be shared and unforgettable. The Emperor 902 Suite is a stunning four-bedroom duplex where comfort meets experience, ideal for groups looking to enjoy Medellín together. Step out onto your private balcony and relax in your jacuzzi as the city unfolds at your feet. Inside, enjoy a warm and inviting living room, a fully equipped kitchen, and elegantly decorated bedrooms on two levels, ensuring both connection and privacy. A premium sound system with a soundbar adds an immersive audio experience to your stay."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-lounge-area.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-kitchen-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-kitchen-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-jacuzzi-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-jacuzzi-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-bathroom-vanity-2.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-lounge-area.webp"
+  },
+  {
+   "key": "room-suite-presidential",
+   "slug_es": "suite-presidential",
+   "slug": "presidential-suite",
+   "cat": "Presidential",
+   "f": "presidencial",
+   "name": "Presidential Suite",
+   "kicker": "Residence",
+   "m2": "145 m²",
+   "per": "8 people",
+   "beds": [
+    "King x2",
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "Bathroom",
+    "Living room",
+    "Mini bar",
+    "Kitchen",
+    "Jacuzzi",
+    "Relaxation area",
+    "Dining room"
+   ],
+   "desc": [
+    "Discover a unique residence in Medellín. The Presidential Suite is a striking 4-bedroom duplex with en-suite bathrooms, where double-height architecture, high-quality materials, and carefully curated design create a superior living experience.",
+    "The open-plan space seamlessly integrates with a fully equipped kitchen featuring a marble island, while designer lighting and textures lend character to every corner. The highlight is the private indoor pool, framed by a vertical garden and warm ambient lighting, designed for complete relaxation. An elegant living room with a decorative fireplace completes the ambiance."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/presidential-suite-room-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-3.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-lounge-area-3.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-4.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-4.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-5.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-8.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-7.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-6.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-balcony.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-jacuzzi-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-jacuzzi-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-shower.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/presidential-suite-room-jacuzzi-lounge-area-1.webp"
+  },
+  {
+   "key": "room-suite-imperial-402",
+   "slug_es": "suite-imperial-402",
+   "slug": "imperial-suite-402",
+   "cat": "Luxury suites",
+   "f": "suites",
+   "name": "Imperial Suite 402",
+   "kicker": "Room",
+   "m2": "68 m²",
+   "per": "6 people",
+   "beds": [
+    "Queen x3"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "City view",
+    "Bathroom",
+    "Living room",
+    "Mini bar",
+    "Kitchenette",
+    "Jacuzzi",
+    "Balcony",
+    "Panoramic view"
+   ],
+   "desc": [
+    "Discover comfort and elegance in our Imperial Suite 402, a jewel of a three-bedroom suite featuring exquisite queen-size beds. This suite accommodates up to six guests and offers an unparalleled lodging experience. Relax in the private jacuzzi, admire the views from the balcony, and be amazed by the beauty of the city. Enjoy a bath with perfectly pressured and heated water, providing a spa-like experience with every use."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-jacuzzi-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-jacuzzi-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-kitchen.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bed-5.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bed-4.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bathroom-vanity-2.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/imperial-suite-402-room-jacuzzi-lounge-area-2.webp"
+  },
+  {
+   "key": "room-suite-excelsior-401",
+   "slug_es": "suite-excelsior-401",
+   "slug": "excelsior-suite-401",
+   "cat": "Luxury suites",
+   "f": "suites",
+   "name": "Excelsior Suite 401",
+   "kicker": "Room",
+   "m2": "62 m²",
+   "per": "4 people",
+   "beds": [
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "City view",
+    "Bathroom",
+    "Living room",
+    "Mini bar",
+    "Kitchen",
+    "Jacuzzi",
+    "Terrace",
+    "Relaxation area",
+    "Panoramic view",
+    "Dining room"
+   ],
+   "desc": [
+    "Enjoy a refined stay in the Excelsior 401 Suite, the largest two-bedroom hotel suite in El Poblado, designed for those who appreciate space, privacy, and ultimate comfort. The suite features an elegant living room with a fully equipped kitchen, complemented by a spacious private balcony with beautiful views of the Medellín skyline. Relax in your private jacuzzi, unwind in luxurious queen-size beds, and enjoy the exclusivity of the en-suite bathrooms in each bedroom, where high water pressure and ideal temperature create a spa-like experience with every use."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-jacuzzi-lounge-area1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-jacuzzi-lounge-area2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-kitchen.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-balcony-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-balcony-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-balcony-4.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-balcony-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bed-4.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-king-bed-window-view.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bed-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-king-bed.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bed-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bed-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bathroom-vanity-4.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/excelsior-suite-room-401-jacuzzi-lounge-area1.webp"
+  },
+  {
+   "key": "room-suite-excelsior-804",
+   "slug_es": "suite-excelsior-804",
+   "slug": "excelsior-suite-804",
+   "cat": "Luxury suites",
+   "f": "suites",
+   "name": "Excelsior Suite 804",
+   "kicker": "Room",
+   "m2": "62 m²",
+   "per": "4 people",
+   "beds": [
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "City view",
+    "Bathroom",
+    "Living room",
+    "Mini bar",
+    "Kitchen",
+    "Jacuzzi",
+    "Balcony",
+    "Relaxation area",
+    "Panoramic view",
+    "Dining room"
+   ],
+   "desc": [
+    "Enjoy an exceptional stay in the Excelsior Suite 804, a two-bedroom suite designed for up to four guests, with meticulous attention to comfort and design. Elegant materials, clean lines, and an integrated living area create a luxurious atmosphere. Step out onto your private balcony with a Jacuzzi—a true highlight—and relax with panoramic city views. Inside, the modern bathrooms offer a sophisticated and relaxing spa-like ambiance, along with a high-end sound system with a soundbar, ideal for an immersive audio experience."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-kitchen-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-kitchen-lounge-area-4.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-kitchen-lounge-area-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-kitchen-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-kitchen.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-jacuzzi-balcony-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-jacuzzi-balcony-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bed-4.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bathroom-vanity-5.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/excelsior-suite-804-room-jacuzzi-balcony-1.webp"
+  },
+  {
+   "key": "room-suite-excelsior-604",
+   "slug_es": "suite-excelsior-604",
+   "slug": "excelsior-suite-604",
+   "cat": "Luxury suites",
+   "f": "suites",
+   "name": "Excelsior Suite 604",
+   "kicker": "Room",
+   "m2": "62 m²",
+   "per": "4 people",
+   "beds": [
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "City view",
+    "Bathroom",
+    "Living room",
+    "Mini bar",
+    "Kitchen",
+    "Jacuzzi x2",
+    "Panoramic view",
+    "Dining room"
+   ],
+   "desc": [
+    "The Excelsior 604 suite is a two-bedroom apartment that can accommodate up to four guests. It features queen-size beds and a private jacuzzi in each bedroom. The suite includes a living room, a dining area, and a fully equipped kitchen. Enjoy a relaxing bath with pressurized water at the perfect temperature, providing a spa-like experience every time you use it. Large windows offer natural light and city views.",
+    "The bathrooms feature modern finishes and walk-in showers. Amenities include secure card access and a premium sound system with a soundbar, perfect for enjoying an immersive audio experience during your stay."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-kitchen-lounge-area.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-kitchen.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-jacuzzi-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-jacuzzi-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-jacuzzi-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-bathroom-vanity-2.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/excelsior-suite-604-room-jacuzzi-2.webp"
+  },
+  {
+   "key": "room-habitacion-ambassador",
+   "slug_es": "habitacion-ambassador",
+   "slug": "ambassador-room",
+   "cat": "Rooms",
+   "f": "habitaciones",
+   "name": "Ambassador Room",
+   "kicker": "Room",
+   "m2": "29 m²",
+   "per": "2 people",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "Bathroom",
+    "Living room",
+    "Mini bar",
+    "Jacuzzi",
+    "Relaxation area",
+    "Panoramic view"
+   ],
+   "desc": [
+    "Enjoy ultimate comfort in the Ambassador Suite, designed for those seeking spaciousness and sophistication. Floor-to-ceiling windows flood the room with natural light and offer breathtaking city views, while a private Jacuzzi invites you to relax in complete comfort. A luxurious queen bed takes center stage, complemented by an elegant sitting area and a high table perfect for admiring the skyline. The private marble bathroom features a spacious rain shower that will provide a refined, spa-like experience."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-7.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-5.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-6.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-lounge-area-3.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bed-4.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bathroom-vanity-4.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-4.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-shower-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-shower-2.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-2.webp"
+  },
+  {
+   "key": "room-habitacion-ambassador-jr",
+   "slug_es": "habitacion-ambassador-jr",
+   "slug": "ambassador-jr-room",
+   "cat": "Rooms",
+   "f": "habitaciones",
+   "name": "Ambassador Jr Room",
+   "kicker": "Room",
+   "m2": "29 m²",
+   "per": "2 people",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "Bathroom",
+    "Living room",
+    "Mini bar",
+    "Jacuzzi",
+    "Relaxation area",
+    "Panoramic view"
+   ],
+   "desc": [
+    "Discover the exclusivity designed exclusively for two in our Ambassador Jr. suite. Immerse yourself in luxury with your own heated Jacuzzi while you relax and enjoy the amenities we offer. Experience unparalleled luxury and comfort, designed especially for you and your partner. Step into a bath where powerful water pressure and the ideal temperature create a spa-like experience with every use.",
+    "This suite is designed for an intimate experience, with a queen-size bed that guarantees complete rest."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-jacuzzi-lounge-area.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/ambassador-suite-307-room-jacuzzi.webp"
+  },
+  {
+   "key": "room-habitacion-viscount-803",
+   "slug_es": "habitacion-viscount-803",
+   "slug": "viscount-room-803",
+   "cat": "Rooms",
+   "f": "habitaciones",
+   "name": "Viscount Room 803",
+   "kicker": "Room",
+   "m2": "24 m²",
+   "per": "2 people",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "City view",
+    "Bathroom",
+    "Mini bar",
+    "Jacuzzi",
+    "Balcony",
+    "Panoramic view"
+   ],
+   "desc": [
+    "Enjoy an outdoor jacuzzi on your private balcony. Viscount 803 offers a premium²4 m² suite where you can relax outdoors while taking in city views. Inside, you'll find a comfortable queen bed, modern amenities, and a thoughtfully designed space.",
+    "Step into a bathroom where powerful water pressure and perfectly heated water create a spa-like experience with every use. The room features a smart HD TV for your entertainment and a minibar for your convenience."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-jacuzzi-balcony-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-jacuzzi-balcony-2.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/viscount-suite-803-room-jacuzzi-balcony-1.webp"
+  },
+  {
+   "key": "room-habitacion-viscount",
+   "slug_es": "habitacion-viscount",
+   "slug": "viscount-room",
+   "cat": "Rooms",
+   "f": "habitaciones",
+   "name": "Viscount Room",
+   "kicker": "Room",
+   "m2": "24 m²",
+   "per": "2 people",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "City view",
+    "Bathroom",
+    "Living room",
+    "Mini bar",
+    "Jacuzzi",
+    "Balcony",
+    "Relaxation area",
+    "Panoramic view"
+   ],
+   "desc": [
+    "Discover the splendor of our Viscount Room, a true gem of luxury designed for an unforgettable experience for couples. Featuring a comfortable queen bed, this room offers everything you need for a perfect stay. Relax in your own heated jacuzzi while enjoying breathtaking city views from the balcony. Step into a bathroom where powerful water pressure and the ideal temperature will provide a spa-like experience with every use. The room also features a smart HD TV for your entertainment and a minibar for your convenience."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/viscount-suite-room-window-view.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-king-bed.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bed-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-shower.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-balcony-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-balcony-2.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/viscount-suite-room-bed-jacuzzi.webp"
+  },
+  {
+   "key": "room-habitacion-lord",
+   "slug_es": "habitacion-lord",
+   "slug": "lords-room",
+   "cat": "Rooms",
+   "f": "habitaciones",
+   "name": "Lord's Room",
+   "kicker": "Room",
+   "m2": "24 m²",
+   "per": "2 people",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "Bathroom",
+    "Mini bar",
+    "Jacuzzi"
+   ],
+   "desc": [
+    "Immerse yourself in the exclusive luxury of our Lord Suite, featuring a queen-size bed. This suite is designed for two people seeking an unforgettable experience. Enjoy a relaxing soak in the private Jacuzzi while indulging in the amenities we offer. Step into a bath where powerful water pressure and perfectly heated water create a spa-like experience with every use.",
+    "Everything in the room is designed for your maximum comfort and enjoyment."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/lord-suite-room-204-bed-1.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-bed-2.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-jacuzzi-1.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-jacuzzi-2.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-jacuzzi-window-view.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-king-bed.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-overview.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/lord-suite-room-204-jacuzzi-2.webp"
+  },
+  {
+   "key": "room-habitacion-earl",
+   "slug_es": "habitacion-earl",
+   "slug": "earls-room",
+   "cat": "Rooms",
+   "f": "habitaciones",
+   "name": "Earl's Room",
+   "kicker": "Room",
+   "m2": "20 m²",
+   "per": "2 people",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "City view",
+    "Bathroom",
+    "Mini bar"
+   ],
+   "desc": [
+    "Immerse yourself in the unparalleled charm of our Earl Suite. Enjoy panoramic city views from your private balcony as you relax and revel in the elegant and comfortable ambiance this suite offers. Step into a bathroom where powerful water pressure and perfectly temperatured water create a spa-like experience with every use.",
+    "This room, which features a luxurious queen-size bed, redefines the concept of comfort."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/earl-suite-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/earl-suite-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/earl-suite-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/earl-suite-room-room-bathroom-vanity.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/earl-suite-room-bed-1.webp"
+  },
+  {
+   "key": "room-habitacion-marques-plus",
+   "slug_es": "habitacion-marques-plus",
+   "slug": "marques-plus-room",
+   "cat": "Rooms",
+   "f": "habitaciones",
+   "name": "Marqués Plus Room",
+   "kicker": "Room",
+   "m2": "27 m²",
+   "per": "2 people",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "Bathroom",
+    "Living room",
+    "Mini bar"
+   ],
+   "desc": [
+    "A spacious suite that goes far beyond the ordinary. Designed for freedom and comfort, this suite features a large living area with a sofa and additional seating, complemented by a desk with an ergonomic chair for a truly multifunctional space. Enjoy the convenience of a spacious bathroom and ample closet space, plus a large flat-screen TV. Floor-to-ceiling windows flood the room with abundant natural light, while modern, photogenic ambient lighting, along with striking artwork, creates the perfect ambiance for relaxing and capturing unforgettable moments."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-bathroom-shower.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-window-view.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-suite-and-lounge-area.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-lounge-area.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-living-area.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-king-bed-room-overview.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-king-bed.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-interior-view.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-bathroom-vanity.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/marquess-suite-room-207-king-bed-room-overview.webp"
+  },
+  {
+   "key": "room-habitacion-marques",
+   "slug_es": "habitacion-marques",
+   "slug": "marques-room",
+   "cat": "Rooms",
+   "f": "habitaciones",
+   "name": "Marqués Room",
+   "kicker": "Room",
+   "m2": "24 m²",
+   "per": "2 people",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "Bathroom",
+    "Living room",
+    "Mini bar"
+   ],
+   "desc": [
+    "A spacious suite that goes far beyond the ordinary. Designed for freedom and comfort, this suite features a large living area with a sofa and additional seating, complemented by a desk with an ergonomic chair for a truly multifunctional space. Enjoy the convenience of a spacious bathroom and ample closet space, plus a large flat-screen TV. Floor-to-ceiling windows flood the room with abundant natural light, while modern, photogenic ambient lighting, along with striking artwork, creates the perfect ambiance for relaxing and capturing unforgettable moments."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/08/marquess-room-bed-4.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bed-3.webp",
+    "/wp-content/uploads/2026/08/marquess-room-living-area-4.webp",
+    "/wp-content/uploads/2026/08/marquess-room-living-area-1.webp",
+    "/wp-content/uploads/2026/08/marquess-room-living-area-2.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bathroom-shower-1.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bed-1.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bed-2.webp",
+    "/wp-content/uploads/2026/08/marquess-room-living-area-3.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bathroom-vanity2.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bathroom-shower-2.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bed-5.webp",
+    "/wp-content/uploads/2026/08/marquess-room-lounge-area-1.webp",
+    "/wp-content/uploads/2026/08/marquess-room-lounge-area-2.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bathroom-shower-3.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/08/marquess-room-bed-4.webp"
+  },
+  {
+   "key": "room-habitacion-duke",
+   "slug_es": "habitacion-duke",
+   "slug": "duke-room",
+   "cat": "Rooms",
+   "f": "habitaciones",
+   "name": "Duke Room",
+   "kicker": "Room",
+   "m2": "20 m²",
+   "per": "2 people",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "Bathroom",
+    "Living room",
+    "Mini bar"
+   ],
+   "desc": [
+    "More space, more comfort. The Duke room is designed for a relaxing city stay and features a queen bed, an elegant bathroom, a Smart TV, and all the essential amenities. Enjoy a shower with excellent water pressure and water at the ideal temperature for a spa-like experience every time."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/duke-suite-room-205-bathroom-vanity.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-bedroom-view.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-king-bed-1.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-king-bed-2.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-lounge-area.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-shower.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-window-view.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/duke-suite-room-205-bedroom-view.webp"
+  },
+  {
+   "key": "room-habitacion-consort",
+   "slug_es": "habitacion-consort",
+   "slug": "consort-room",
+   "cat": "Rooms",
+   "f": "habitaciones",
+   "name": "Consort Room",
+   "kicker": "Room",
+   "m2": "15 m²",
+   "per": "2 people",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Air-conditioning",
+    "Smart TV",
+    "Bathroom",
+    "Mini bar"
+   ],
+   "desc": [
+    "Compact, elegant, and fully equipped, our Consort room features a queen bed, private bathroom, Smart TV, air conditioning, and a minibar. Enjoy a shower with excellent water pressure and water at the ideal temperature for a spa-like experience every time."
+   ],
+   "serv": [
+    "In addition, our guests can enjoy a variety of extra services, including buffet breakfast, 24-hour reception, 24-hour security, room service with a full menu available at all times, a cozy coffee shop, exclusive access to our heated pool and rooftop bar, where you can enjoy a stunning 360° panoramic view of the captivating city of Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-4.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-10.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-6.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-7.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-9.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-5.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-8.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bathroom-vanity-4.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bathroom-vanity-5.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/consort-suite-room-bed-3.webp"
+  }
+ ],
+ "pages": {
+  "habitaciones": {
+   "intro": "Discover an exceptional stay designed for those who appreciate authentic luxury, exclusivity, and ultimate comfort. Our rooms offer elegantly designed spaces, high-end finishes, breathtaking views, and personalized service—thoughtfully curated details that ensure every stay feels unique. Whether for a business trip, a special celebration, or a relaxing getaway, every detail has been carefully considered to provide privacy, sophistication, and an exceptional level of service that exceeds even the expectations of the most discerning guests."
+  },
+  "penthouse": {
+   "intro": "Elevate your stay to the next level in our exclusive Penthouse. Designed for guests seeking absolute privacy, unparalleled spaciousness, and the ultimate in luxury, this space offers spectacular views, sophisticated ambiance, and world-class amenities. Every detail has been carefully considered to provide an extraordinary stay, where comfort, exclusivity, and personalized service combine to create something that feels unique each time.",
+   "title_html": "<em>Penthouse</em>",
+   "cat": "Penthouse",
+   "f": "penthouse",
+   "img": "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-kitchen-lounge-area.webp"
+  },
+  "presidencial": {
+   "intro": "The Presidential Suite represents the ultimate expression of elegance and distinction. With its spaciousness, refined design, and exclusive amenities, it is the perfect choice for executives, VIPs, and travelers seeking a superior experience. Enjoy a luxurious ambiance meticulously crafted to offer privacy, exceptional comfort, and personalized service that reflects the highest standards of hospitality.",
+   "title_html": "Presidential <em>Suite</em>",
+   "cat": "Presidential",
+   "f": "presidencial",
+   "img": "/wp-content/uploads/2026/06/presidential-suite-room-jacuzzi-lounge-area-1.webp"
+  },
+  "suites-de-lujo": {
+   "intro": "Our Luxury Suites have been created for those who appreciate the perfect balance of sophistication, comfort, and exclusivity. Their elegant spaces, high-quality furnishings, and carefully selected details provide a welcoming and refined atmosphere. Ideal for leisure or business travel, each suite offers a distinguished experience that transforms every stay into an opportunity to enjoy luxury at its finest.",
+   "title_html": "Luxury <em>suites</em>",
+   "cat": "Luxury suites",
+   "f": "suites",
+   "img": "/wp-content/uploads/2026/06/imperial-suite-402-room-jacuzzi-lounge-area-2.webp"
+  },
+  "rooftop": {
+   "h1": "360° Rooftop <em>&amp; Restaurant</em>",
+   "sub": "Medellín from the sky: pool, signature cocktails and the best view in El Poblado.",
+   "img": "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-4.webp",
+   "crumb": "360° Rooftop",
+   "gal_title": "Sunsets <em>on the 11th</em>",
+   "wa": "Hello, I would like to book at 360 Rooftop",
+   "sections": [
+    {
+     "eyebrow": "",
+     "title": "360° Rooftop",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-4.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-1.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-2.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Enjoy",
+     "title": "360° view of Medellín",
+     "paras": [
+      "The magic of Medellín reaches its peak with a spectacular 360-degree panoramic view. We invite you to awaken your senses and discover the city from a unique perspective. Enjoy exquisite cocktails as the sun sets over the horizon and immerse yourself in the vibrant atmosphere as the city lights come on.",
+      "Whether it's a special occasion or simply a night to remember, at Rooftop 360° every moment becomes an unforgettable experience. Join us at the top and make your stay in Medellín truly unforgettable."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "Book now",
+       "href": "https://fiweex.com/links/360rooftopbar",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Sunny days",
+     "title": "To share",
+     "paras": [
+      "Discover the perfect place to relax and enjoy sunny days in Medellín. In our pool with panoramic views, you can immerse yourself in a unique experience while savoring exquisite cocktails and admiring the most spectacular sunsets in the city.",
+      "Not staying at our hotel? No problem! Our exclusive Sunny Days service lets you enjoy our pool and rooftop terrace, even if you're not a guest. Just book in advance and get ready for an unforgettable day filled with comfort and breathtaking views."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-gastronomy-cocktails-5.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-with-friends-4.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-with-friends-3.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-with-friends-6.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-with-friends-1.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-dg.webp"
+     ],
+     "btns": [
+      {
+       "t": "Book now",
+       "href": "https://fiweex.com/links/360rooftopbar",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "A PLACE FOR",
+     "title": "Experience Medellín from the sky",
+     "paras": [
+      "With the best panoramic views of Medellín, our 360° Bar is perfect for any occasion. Looking for a stunning date spot? A trendy atmosphere for your party? Or a place to enjoy cocktails with friends? Here, your night will be unforgettable.",
+      "Discover our exclusive 360° Bar, where the city views blend seamlessly with the experience. Enjoy a wide variety of drinks in a celebration of local and international flavors. Our bar invites you to complement your evening with our selection of cocktails, carefully crafted to delight your senses, and to be amazed by our exclusive drinks menu.",
+      "In addition, the 360° Bar is the perfect place for special events, from private celebrations to corporate meetings, always with a sophisticated touch and spectacular views of the vibrant city of Medellín."
+     ],
+     "imgs": [],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Gastronomy",
+     "title": "The best views in the heart of Provence",
+     "paras": [
+      "Discover a unique culinary experience that combines the best of local and international cuisine. From exquisite traditional Colombian dishes to innovative creations made with fresh, high-quality ingredients by our talented chefs.",
+      "Embark on an unforgettable culinary journey while enjoying the views. This is the perfect place to transform any occasion into something extraordinary. Ready to elevate your evenings to new heights?"
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-gastronomy-2.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-gastronomy-cocktails-1.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-gastronomy-cocktails-2.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-reserva.webp"
+     ],
+     "btns": [
+      {
+       "t": "Discover our gastronomy",
+       "href": "page:gastronomia",
+       "ext": false
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "",
+     "title": "Check out our menu",
+     "paras": [
+      "Immerse yourself in a unique 360° experience! Enjoy the best of local cuisine paired with signature cocktails, designed to surprise you with every bite."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-menu.webp"
+     ],
+     "btns": [
+      {
+       "t": "View digital menu",
+       "href": "https://360-rooftop.cluvi.co/",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "",
+     "title": "Make your reservation and start enjoying",
+     "paras": [
+      "At 360° Rooftop, every detail is carefully designed to give your stay the luxury you deserve, and to make lunch or dinner an unforgettable experience."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "Start now",
+       "href": "https://fiweex.com/reservas_portal_bienvenida/aIJzgQ%3D%3D",
+       "ext": true
+      }
+     ],
+     "lists": []
+    }
+   ]
+  },
+  "swing": {
+   "h1": "Swing <em>Coffee Bar</em>",
+   "sub": "Colombian coffee in the morning, signature cocktails at night.",
+   "img": "/wp-content/uploads/2026/06/swing-bar-6.webp",
+   "crumb": "Swing Bar",
+   "gal_title": "The <em>Swing</em>",
+   "wa": "Hello, I would like to book at Swing Bar",
+   "sections": [
+    {
+     "eyebrow": "",
+     "title": "Swing Bar",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/swing-bar-6.webp",
+      "/wp-content/uploads/2026/06/swing-bar-1.webp",
+      "/wp-content/uploads/2026/06/swing-bar-2.webp"
+     ],
+     "btns": [
+      {
+       "t": "Book now",
+       "href": "https://wa.me/573212097033?text=Hello, I would like to book at Swing Bar",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Awaken your senses",
+     "title": "Swing Bar",
+     "paras": [
+      "Located in our lobby, Swing Bar is much more than just a place to enjoy a drink. It's the perfect setting to start your day and awaken your senses with the authentic taste of Colombia in every sip of coffee carefully prepared to your liking, ready to revitalize your senses and fill you with energy.",
+      "At night, it transforms into the perfect meeting point to begin an unforgettable evening. Let yourself be seduced by our selection of beers, fine wines, and expertly crafted cocktails, while enjoying the relaxed and welcoming atmosphere that only Swing Bar can offer.",
+      "Whether you're looking for a morning pick-me-up or an afternoon toast, Swing Bar awaits to offer you a sensory experience that will awaken your senses and leave you wanting more."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "View menu",
+       "href": "https://aws.serenarealty.com/wp-content/uploads/2021/06/Carta-Swing.pdf",
+       "ext": true
+      }
+     ],
+     "lists": []
+    }
+   ],
+   "first_img": "theme:media/swing-cafe.webp",
+   "casa_enzo": true
+  },
+  "wellness": {
+   "h1": "<em>Wellness</em>",
+   "sub": "Rituals to restore your balance after travelling.",
+   "img": "/wp-content/uploads/2026/07/masaje-relajante.webp",
+   "crumb": "Wellness",
+   "gal_title": "Wellbeing <em>and balance</em>",
+   "wa": "Hello, I would like to book a wellness service",
+   "sections": [
+    {
+     "eyebrow": "",
+     "title": "Wellness",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/07/masaje-relajante.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "",
+     "title": "Skincare",
+     "paras": [],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "Skincare",
+       "href": "http://cido/",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "",
+     "title": "Facial Hydration",
+     "paras": [
+      "The journey also shows on the skin. This facial ritual from Pasitea Spa is designed to revive, nourish and restore its natural balance, combating dryness and fatigue from the very first session — forty minutes that you'll notice immediately."
+     ],
+     "imgs": [],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Rest",
+     "title": "Relaxing Massage",
+     "paras": [
+      "After a long flight or a full day exploring the city, your body craves a break. Our relaxing massage stimulates circulation, releases accumulated muscle tension, and restores balance between body and mind—available in 1-hour or 1.5-hour sessions, in partnership with Pasitea Spa."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/07/hidratacion-facial.webp",
+      "/wp-content/uploads/2026/07/suero-terapia-.webp"
+     ],
+     "btns": [
+      {
+       "t": "View full portfolio",
+       "href": "https://aws.serenarealty.com/wp-content/uploads/2022/10/Spa.pdf",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Ultra Vit",
+     "title": "Serum Therapy",
+     "paras": [
+      "After a long flight, your body notices it before your mind. Our Ultra Vit IV therapy replenishes hydration, reduces inflammation, and provides a real energy boost—designed for jet lag, travel fatigue, and those days when your body craves an active break, not just rest."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/07/terapia-de-sueros.webp"
+     ],
+     "btns": [],
+     "lists": []
+    }
+   ]
+  },
+  "eventos": {
+   "h1": "<em>Events</em>",
+   "sub": "The night changes rhythm on the 11th floor: live DJs, pool parties and Sunday brunch.",
+   "img": "/wp-content/uploads/2026/06/vida-nocturna-5.webp",
+   "crumb": "Eventos",
+   "gal_title": "Nights <em>on the 11th</em>",
+   "wa": "Hello, I would like to book for an event",
+   "sections": [
+    {
+     "eyebrow": "Events",
+     "title": "Enjoy the nightlife What the city has to offer!",
+     "paras": [
+      "The night shifts gears on the 11th floor on weekends at our 360 Terrace. Enjoy vibrant live DJ sets while indulging in a unique experience at Medellín's best viewpoint. Immerse yourself in a 360° panoramic view of the city as you surrender to the rhythm of the music and the vibrant, sophisticated atmosphere that only our Terrace can offer."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/vida-nocturna-5.webp",
+      "/wp-content/uploads/2026/06/vida-nocturna-1.webp",
+      "/wp-content/uploads/2026/06/vida-nocturna-2.webp"
+     ],
+     "btns": [
+      {
+       "t": "Enjoy the View",
+       "href": "https://wa.me/573212097033?text=Hello, I would like to book for an event",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "The month begins",
+     "title": "With the energy that only 360 has",
+     "paras": [
+      "Join our vibrant parties on the first Friday of every month! Let yourself be swept away by the rhythm of the music and enjoy an unforgettable night in Medellín! Enjoy a night full of energy, good company, an exclusive atmosphere, live music with the best rhythms, entertainment, and an ambiance designed to create unforgettable memories."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/fiesta-5.webp",
+      "/wp-content/uploads/2026/06/fiesta-1.webp",
+      "/wp-content/uploads/2026/06/fiesta-2.webp"
+     ],
+     "btns": [
+      {
+       "t": "Reserve your spot",
+       "href": "https://wa.me/573212097033?text=Hello, I would like to book for an event",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Nothing better than",
+     "title": "Pool party",
+     "paras": [
+      "Enjoy the breeze, the sun and the music in a unique atmosphere",
+      "Discover an unparalleled experience on our rooftop. Enjoy music, live DJs, and tons of fun in our pool—taking the excitement to the next level!"
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/fiesta-piscina-5.webp",
+      "/wp-content/uploads/2026/06/fiesta-piscina-1.webp",
+      "/wp-content/uploads/2026/06/fiesta-piscina-2.webp"
+     ],
+     "btns": [
+      {
+       "t": "Reservar Piscina",
+       "href": "https://wa.me/573212097033?text=Hello, I would like to book for an event",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Enjoy an exclusive",
+     "title": "Sunday Brunch",
+     "paras": [
+      "Every second Sunday of the month is special with our Brunch! Delight in a fusion of local and international flavors from 11:00 to 16:00.",
+      "Enjoy signature cocktails while dancing to the rhythm of our live DJs and admiring the breathtaking views of the City of Eternal Spring."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/Brunch-dominical-5.webp",
+      "/wp-content/uploads/2026/06/Brunch-dominical-1.webp",
+      "/wp-content/uploads/2026/06/Brunch-dominical-2.webp"
+     ],
+     "btns": [
+      {
+       "t": "Reservar Brunch",
+       "href": "https://wa.me/573212097033?text=Hello, I would like to book for an event",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Calendar",
+     "title": "Events in Medellín",
+     "paras": [
+      "If there's one thing that makes Medellín special, besides its perfect climate and warm people, it's the incredible number of events, festivals, and celebrations that fill the city with life throughout the year. From gastronomic and cultural experiences to concerts, fairs, and unforgettable parties, there's always something new to discover.",
+      "Planning your trip around the events calendar will allow you to experience the essence of the City of Eternal Spring, connect with its culture, and create lasting memories. Whether you visit Medellín for a few days or decide to stay longer, every date can become a unique experience."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "View events",
+       "href": "https://wa.me/573212097033?text=Hello, I would like to book for an event",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Celebration",
+     "title": "Special occasions",
+     "paras": [
+      "Whether celebrating a special occasion or simply enjoying a romantic getaway, our luxury hotel is the perfect place to create unforgettable memories. With its elegant surroundings and first-class service, we offer the ideal setting for all of life's special moments.",
+      "Our hotel offers the perfect balance of luxury, comfort, and exclusivity. Enjoy elegant facilities, personalized service, and unique experiences that will transform every moment into a lifelong memory.",
+      "Because special occasions deserve an extraordinary setting."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "Reserve",
+       "href": "https://wa.me/573212097033?text=Hello, I would like to book for an event",
+       "ext": true
+      }
+     ],
+     "lists": []
+    }
+   ]
+  },
+  "gastronomia": {
+   "sections": [
+    {
+     "eyebrow": "",
+     "title": "Gastronomy",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/07/la-culpable-pizza.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Originally from Naples",
+     "title": "The Guilty Pizza",
+     "paras": [
+      "Golden, crispy crust topped with melted cheese, chunks of juicy chicken and just the right touch of pepperoni. The sweet and fresh pineapple balances the smoky, salty and tropical freshness, leaving that contrast that lingers on the palate."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/07/burrata-pizza.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "From the Puglia region",
+     "title": "Pizza Burrata Style",
+     "paras": [
+      "A masterpiece on artisanal dough: the delicate balance between the intensity of the Serrano ham, the freshness of the arugula and the absolute smoothness of a whole burrata in the center, ready to overflow with flavor."
+     ],
+     "imgs": [],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "the most Italian",
+     "title": "Salmon, Ricotta and Spinach.",
+     "paras": [
+      "A sophisticated dish with 200 grams of salmon, combining its smooth texture with the creaminess of ricotta cheese and the freshness of liquid nitrogen, creating a truly unique culinary experience."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/07/salmon-ricotta-y-espinaca.webp",
+      "/wp-content/uploads/2026/07/mini-albondigas-endiabladas.webp"
+     ],
+     "btns": [
+      {
+       "t": "View recommended dishes",
+       "href": "https://360-rooftop.cluvi.co/newmenu/19402/on_table/basic/categories/46104",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Most Holy",
+     "title": "Devilish Meatballs",
+     "paras": [
+      "200g of meatballs marinated with cinnamon, cumin, anise and parmesan, bathed in tomato and basil sauce with the spicy touch of sriracha chili, gratinated and served with melted bocconcini and focaccia bread."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "See main dishes",
+       "href": "https://360-rooftop.cluvi.co/newmenu/19402/on_table/basic/categories/46059",
+       "ext": true
+      }
+     ],
+     "lists": []
+    }
+   ]
+  },
+  "servicios": {
+   "sections": [
+    {
+     "eyebrow": "",
+     "title": "",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/servicios-hotel-haven.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Our",
+     "title": "Services",
+     "paras": [
+      "We're here to ensure you have a perfect stay. Contact us directly to book any of our exclusive services, offered by both our hotel and certified companies that guarantee professionalism in every detail. Let us cater to your needs so you can fully enjoy your experience. We strive to take care of every detail so you don't have to worry about a thing."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/menu-rooftop-360.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "360° Rooftop Menu",
+     "title": "Each dish is carefully prepared with selected premium ingredients.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/menu-desayuno.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Breakfast Menu",
+     "title": "Start the day with a gastronomic proposal that surprises from the first bite.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/menu-swing.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Swing Menu",
+     "title": "Immerse yourself in a world of flavors and textures that awaken the senses.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/mini-bar.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Minibar prices",
+     "title": "Enjoy a selection of carefully chosen drinks and snacks.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/traslado-aeropuerto.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Airport transfers",
+     "title": "Enjoy a comfortable, safe and punctual transfer 24 hours a day, 7 days a week.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/hidratacion-intravenosa-vitamina.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Intravenous hydration",
+     "title": "Restore essential fluids and nutrients quickly and efficiently. With vitamins.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/spa-masajes.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Spa, Massages and Treatments",
+     "title": "Relaxation experiences that revitalize all your senses. Renew your body and mind.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/tours-antioquia.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Tours throughout Antioquia",
+     "title": "Discover the best destinations and experiences in the region with our guided tours.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/alquiler-de-coche.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Car rental",
+     "title": "Enjoy the freedom to travel at your own pace with our car rental service, which combines comfort, safety and quality vehicles for every type of journey.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/servicios-dentales.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Dental services",
+     "title": "Access high-quality dental services with professional care and specialized technology, designed to care for your oral health and give you a healthy and confident smile.",
+     "paras": [],
+     "imgs": [],
+     "btns": [],
+     "lists": []
+    }
+   ]
+  },
+  "preguntas-frecuentes": {
+   "items": [
+    {
+     "q": "What is the hotel's location?",
+     "a": [
+      "We are located at Calle 10A #36-29 in the El Poblado neighborhood of Medellín (Colombia).",
+      "It is exactly the southeastern area of Medellín, and is formally known as Comuna 14. It limits to the north with the city center and to the south with the municipality of Envigado.",
+      "It is one of the city’s most prominent and exclusive areas, renowned for its hotels, shopping centers, restaurants and lively nightlife."
+     ]
+    },
+    {
+     "q": "How to get there from the airport or terminal?",
+     "a": [
+      "To get there from José María Córdova International Airport in Rionegro, you have several transportation options:",
+      "- Route: Combuses offers a bus service between the airport and Medellín. You can board the bus at the domestic departures area, gate number 2.",
+      "- Stop in Medellín: The bus will drop you off at the San Diego terminal or at the Exposiciones metro station.",
+      "- Cost: The rate is 15,500 COP per person.",
+      "- Schedule: It operates 24 hours a day with departures every 15 minutes.",
+      "- Alternative route: From the San Diego Terminal or the Exposiciones Station, you can take a taxi or the metro system to reach your destination in El Poblado.",
+      "- Availability: Taxis are available in the airport arrivals area.",
+      "- Cost: The direct trip to El Poblado usually costs between $70,000 and $100,000 COP.",
+      "- Schedule: Approximately 40 minutes, depending on traffic.",
+      "- Reservations: Companies like Paisa Tours offer private transfers from the airport to Medellín.",
+      "- Advantages: This service can be more convenient and personalized, ideal if you have a lot of luggage or prefer a direct transfer.",
+      "- Options: Several companies offer car rental services at the airport.",
+      "- Consideraciones: Debe familiarizarse con las rutas y el tráfico de Medellín.",
+      "Recommendation: If you’re looking for an economical and reliable option, the Combuses bus service is suitable. However, if you prefer comfort and a direct journey, a taxi or private transfer service would be more convenient.",
+      "Note: Costs and travel times may vary depending on the time of day and traffic conditions. It is recommended to check the latest information before traveling."
+     ]
+    },
+    {
+     "q": "What services and amenities are included in the room price?",
+     "a": [
+      "- Breakfast: We offer a buffet breakfast included in the rate.",
+      "- Wi-Fi connection: Free internet access in rooms and common areas.",
+      "- Daily cleaning service: Daily room cleaning.",
+      "- 24-hour reception: Customer service available 24 hours a day.",
+      "- Cable/satellite television: Televisions in the rooms with a variety of channels.",
+      "- Safe: Safes are available in the rooms or at reception.",
+      "- Personal hygiene items: Supply of shampoo, soap and other personal hygiene products.",
+      "- Cozy cafe: A space to relax and enjoy drinks and snacks.",
+      "- Rooftop pool and bar: Exclusive access to a rooftop pool and bar with 360° panoramic views of Medellín."
+     ]
+    },
+    {
+     "q": "Does the hotel offer airport transportation or a city shuttle service?",
+     "a": [
+      "Yes, we offer this service; you must coordinate with our agents at the hotel reception."
+     ]
+    },
+    {
+     "q": "What major tourist attractions or sites are near the hotel?",
+     "a": [
+      "El Poblado, one of Medellín’s most iconic neighborhoods, offers a variety of attractions that combine culture, gastronomy, and nightlife. Here are five must-see places for international visitors to make the most of their stay in this vibrant area:",
+      "Lleras Park.",
+      "Considered the epicenter of Medellín’s nightlife, it’s surrounded by a wide variety of bars, restaurants, and nightclubs. It’s the ideal place to experience the city’s vibrant nightlife and socialize with locals and tourists.",
+      "The Castle Museum and Gardens.",
+      "Inspired by the castles of the Loire Valley in France, this museum offers a showcase of European art and architecture right in the heart of Medellín. Its gardens are ideal for leisurely strolls and picnics, providing a peaceful haven away from the urban bustle.",
+      "Museum of Modern Art of Medellín (MAMM).",
+      "Located in the Ciudad del Río area, the MAMM presents contemporary art exhibitions and is a cultural hub. Its modern architecture and frequent events make it a must-see for art lovers.",
+      "Poblado Park.",
+      "This park is a historical landmark, marking the site of the first settlement in the Aburrá Valley. Surrounded by cafes and shops, it’s an ideal place to relax and observe daily life in the city.",
+      "Santafé Shopping Center.",
+      "This shopping center is one of the largest in Medellín and offers a wide variety of shops, restaurants, and entertainment. Its modern design and themed events make it a popular spot for both locals and tourists.."
+     ]
+    },
+    {
+     "q": "Does the hotel have a restaurant or food service? What are the opening hours?",
+     "a": [
+      "Yes, our hotel features the 360 Rooftop Bar, located on the 11th floor of the Haven Hotel, offering a diverse culinary experience in a modern and inviting atmosphere. Our menu includes options such as pizzas, grilled meats, and Colombian cuisine, accompanied by a selection of expertly crafted cocktails.",
+      "- Sunday to Wednesday: 7:00 a.m. – 11:00 p.m.",
+      "- Thursday: 7:00 a.m. – 12:00 p.m.",
+      "- Friday – Saturday: 7:00 a.m. – 2:00 p.m.",
+      "This establishment is known for its pleasant atmosphere, panoramic city views, and excellent customer service."
+     ]
+    },
+    {
+     "q": "What public or private transport options are available near the hotel?",
+     "a": [
+      "In El Poblado, Medellín, travelers and residents have access to a variety of transportation options to suit different needs. The three main modes of transportation in the area are:",
+      "- The subway system is one of the city’s prides and an efficient way to get around.",
+      "- El Poblado Station: The El Poblado station connects users with the rest of Medellín.",
+      "- Advantages: Cheap and punctual. It connects with complementary lines such as the Metrocable, which allows you to explore places like Arví Park.",
+      "- Cheap and punctual.",
+      "- It connects with complementary lines such as the Metrocable, which allows you to explore places like Arví Park.",
+      "- Council: Ideal for avoiding traffic during peak hours.",
+      "- Traditional taxis are a reliable option, and apps like Uber, DiDi, and Cabify are widely used in El Poblado.",
+      "- Advantages: Available 24 hours a day. Useful for short trips and for going directly to specific places. The apps allow you to know the estimated cost of the trip in advance.",
+      "- Available 24 hours a day.",
+      "- Useful for short trips and for going directly to specific places.",
+      "- The apps allow you to know the estimated cost of the trip in advance.",
+      "- Council: Always check that the taxi has a working taximeter.",
+      "- Medellín’s public bus system includes routes that pass through El Poblado and connect to other parts of the city./li>",
+      "- Advantages: Affordable and with wide coverage. Suitable for those who know the routes and want to save money.",
+      "- Affordable and with wide coverage.",
+      "- Suitable for those who know the routes and want to save money.",
+      "- Council: It is advisable to ask locals or use apps like Moovit to identify the correct routes.",
+      "General Council: El Poblado is one of the busiest areas in Medellín, so traffic can be heavy during rush hour. Plan your routes in advance and choose the most suitable mode of transportation for each occasion.."
+     ]
+    },
+    {
+     "q": "Is the area where the hotel is located safe, especially for walking at night?",
+     "a": [
+      "El Poblado is considered one of the safest and most popular tourist areas in Medellín, attracting many visitors with its vibrant nightlife, restaurants, and shops. However, it’s important for travelers to take certain precautions to ensure a safe and enjoyable experience. Here are some practical tips for those planning a visit to El Poblado:",
+      "- Recommended areas: Places like Provenza, Parque Lleras, and Parque El Poblado are popular and usually well-monitored. These areas have a constant presence of tourists and residents, which contributes to a safer environment.",
+      "- Avoid unfamiliar areas: It is advisable not to venture into unfamiliar streets or neighborhoods, especially at night, as they may lack adequate lighting and police presence.",
+      "- Safe transport: After dark, it’s best to use reliable transportation services, such as licensed taxis or ride-hailing apps. This is especially important when traveling between areas or returning to your accommodation.",
+      "- Avoid walking alone: While El Poblado is generally safe, it’s advisable to avoid walking alone at night on deserted or poorly lit streets. Opt for walking in groups and sticking to well-lit routes.",
+      "- Be discreet with valuables: Avoid displaying jewelry, expensive electronics, or other valuables in public to avoid attracting attention.",
+      "- Constant surveillance: Keep your belongings, such as bags and backpacks, in sight and secure at all times, especially in crowded places like bars and restaurants.",
+      "- Transportation apps: Use approved apps to request transportation and always verify driver and vehicle information before getting in.",
+      "- Secure connections: When using public Wi-Fi networks, avoid accessing sensitive information and consider using a VPN to protect your data.",
+      "- Proceed with caution in new relationships: While local hospitality is extraordinary, maintain a cautious attitude when interacting with people you have just met, especially at night.",
+      "- Inform others: Let your friends or family know your plans and location, especially if you decide to explore the nightlife or participate in activities with new acquaintances.",
+      "- Stay informed: Consult local and reliable sources to stay informed of any security alerts or warnings in the area.",
+      "- Emergency assistance: Keep the contact numbers for local authorities and your consulate or embassy handy in case you need help.",
+      "In summary, while El Poblado is one of the safest and most attractive areas in Medellín, it is important for travelers to remain vigilant and follow these tips to ensure a safe and enjoyable experience during their visit."
+     ]
+    }
+   ]
+  },
+  "serena-rewards": {
+   "intro": "Welcome to the vibrant city of Medellín. Serena Hotels is a hotel company that manages and operates boutique hotels in the heart of Provenza, El Poblado. Our primary mission is to provide exceptional hospitality to our guests and exceed their expectations. We believe that communication is the foundation of excellent service, and getting to know our clients and guests is fundamental to us. Our team strives to offer personalized, high-quality service. We are proud to have a highly qualified team that is dedicated to creating an exceptional experience for each of our visitors, whether it's their first visit or they are frequent guests. Let us get to know you better by registering for our loyalty program with great benefits.",
+   "tiers": [
+    {
+     "name": "Silver",
+     "cls": "ts",
+     "nights": "More than 7 nights a year",
+     "items": [
+      "10% off food and drinks",
+      "7% off accommodation",
+      "10% off the minibar",
+      "Welcome drink at check-in"
+     ]
+    },
+    {
+     "name": "Golden",
+     "cls": "t3",
+     "nights": "More than 15 nights a year",
+     "items": [
+      "15% off food and drinks",
+      "10% off accommodation",
+      "15% off the minibar",
+      "Free use of the 360° Rooftop & Restaurant pool",
+      "Welcome drink at check-in",
+      "Early check-in at no extra cost (subject to availability)",
+      "Choose your preferred room within the same category at no extra cost (subject to availability)",
+      "Free entry to the hotel’s own events",
+      "Booking without guarantee: no penalty for direct cancellation up to 15 days before check-in; otherwise the first night is charged"
+     ]
+    },
+    {
+     "name": "Diamond",
+     "cls": "tdia",
+     "nights": "More than 25 nights a year",
+     "items": [
+      "20% off food and drinks",
+      "15% off accommodation",
+      "20% off the minibar",
+      "Free use of the 360° Rooftop & Restaurant pool",
+      "Welcome drink at check-in",
+      "1 airport-hotel transfer included",
+      "Early check-in and late check-out at no extra cost (subject to availability)",
+      "Free upgrade to the next category (subject to availability)",
+      "Choose your preferred room within the same category at no extra cost (subject to availability)",
+      "Free entry to the hotel’s own events",
+      "Booking without guarantee: no penalty for direct cancellation up to 10 days before check-in; otherwise the first night is charged"
+     ]
+    },
+    {
+     "name": "Black",
+     "cls": "t4",
+     "nights": "More than 50 nights a year",
+     "items": [
+      "25% off food and drinks",
+      "15% off accommodation",
+      "25% off the minibar",
+      "Free use of the 360° Rooftop & Restaurant pool",
+      "Bottle of champagne on arrival",
+      "2 airport-hotel transfers included",
+      "Early check-in and late check-out at no extra cost (subject to availability)",
+      "Free upgrade to the next category (subject to availability)",
+      "Choose your preferred room within the same category at no extra cost (subject to availability)",
+      "Free entry to the hotel’s own events and welcome cocktails",
+      "Booking without guarantee: no penalty for direct cancellation up to 5 days before check-in; otherwise the first night is charged"
+     ]
+    }
+   ],
+   "note": "For Haven guests, access to the 360° Rooftop & Restaurant and the buffet breakfast are already included in the stay."
+  },
+  "politica-de-visitantes": {
+   "title_html": "Visitor <em>policy</em>",
+   "sub": "Guest and visitor registration at Haven, in accordance with Colombian law.",
+   "crumb": "Política de visitantes",
+   "prose": "<p>For the purposes of this policy, the &quot;lead guest&quot; is the person whose name appears on the booking and who is financially responsible for the booking and any additional expenses. A &quot;guest&quot; is a person who checks in with the lead guest and plans to stay for the majority of the stay. A &quot;visitor&quot; is a person who checks in later during the booking and does not stay for the entire duration of the stay.</p>\n<p>According to Colombian law, specifically Article 17 of Law 679 of 2011, unregistered guests, unregistered visitors, and minors under 18 years of age (unless accompanied by their parents) are not permitted in hotel rooms. The only acceptable forms of identification for check-in are a physical passport or a physical Colombian national identity card. Digital or paper copies are not accepted. Passwords and police reports for lost identification are not accepted.</p>\n<p>If the total number of guests and visitors exceeds the maximum number of the reservation, a charge of COP 120,000 per calendar day per additional person will be applied.</p>\n<p>In our computer system, the calendar day begins at midnight (12:00 AM).</p>\n<p>Each registered guest in the room may change the name of one visitor per day, free of charge, without exceeding the maximum number allowed on the reservation. Each additional visitor, beyond one per day per registered guest, will incur a nominal charge of COP 120,000. Charges for additional visitors or guests can only be applied to the room. However, upon departure, any portion of the bill may be paid in cash.</p>\n<p>Example A): If a primary guest books a single room with double occupancy, they may have one visitor per calendar day at no extra charge.Example B): If a primary guest books a 3-bedroom apartment that sleeps six, but is occupied by 3 guests, each guest may register one visitor per calendar day, up to a maximum of 3 visitors, at no extra charge.Example C): If a primary guest books a 3-bedroom apartment that sleeps six, but is occupied by 4 guests, each guest may register one visitor per calendar day, up to a maximum of 2 visitors, at no extra charge.</p>\n<p>Example B): If a primary guest books a 3-bedroom apartment that sleeps six, but is occupied by 3 guests, each guest may register one visitor per calendar day, up to a maximum of 3 visitors, at no extra charge.</p>\n<p>Example C): If a primary guest books a 3-bedroom apartment that sleeps six, but is occupied by 4 guests, each guest may register one visitor per calendar day, up to a maximum of 2 visitors, at no extra charge.</p>\n<p>Any unregistered guest or visitor who enters a room without informing reception would be breaking Colombian law and would incur an automatic charge of 300,000 COP and the possible cancellation of the reservation without refund.</p>"
+  },
+  "terminos-y-condiciones": {
+   "title_html": "Terms and <em>conditions</em>",
+   "sub": "Reservations, guarantee, privacy and hotel hours.",
+   "crumb": "Términos y condiciones",
+   "prose": "<h2 id=\"1-terms-and-conditions\">1. terms and conditions</h2>\n<p>Upon receiving the booking confirmation, the guest accepts the following rules and policies and agrees to provide truthful information about themselves.</p>\n<ul><li>Check-in/check-out date and daily room rate.</li><li>The guest has the unavoidable obligation to register upon arrival at the hotel and to check out at the end of their stay, respecting the check-in/check-out time, and must be the holder of the card with which the payment was made.</li><li>Late check-out is not permitted in our establishments without prior notice and availability check-out. Guests who do not comply with this rule after the established time (11:00 AM) will be penalized according to the following conditions:</li><li>From 12:00 to 18:00, 50% of the daily rate will be charged.</li><li>After 6:00 PM, the full night’s rate will be charged.</li><li>Before 3:00 PM, 50% of the daily rate will be charged.</li><li>The guest is responsible for any damage caused to himself, other guests, staff, hotel infrastructure and equipment, as well as to the people accompanying him, and is obliged to pay for the damages or compensate for them.</li><li>If you are in a room with a jacuzzi, you must carefully monitor the water level at all times. Overflowing water will result in an automatic cleaning fee of COP 100,000, in addition to any further charges for property damage.</li><li>An additional cleaning fee of COP 100,000 will be applied per pet, and any damage caused by pets will be charged to your account per day of stay.</li></ul>\n<ul><li>The hotel is not responsible for money or valuables left in the room or in common areas, so we remind you that you can leave them in the safe in your room or at the administration office, by contacting reception directly.</li><li>Excursions and transportation are provided by a third party; individual experiences may be affected by circumstances beyond our control, and therefore the hotel will not be liable for any damage or loss arising from them.</li><li>It is forbidden to carry weapons of any kind within our facilities.</li><li>It is prohibited to remove any element or furniture from the rooms and common areas.</li><li>Making noise or playing loud music after 10:00 PM is strictly prohibited. Violating this rule will result in a $100 USD fine. Any disturbance of the peace requiring police intervention may lead to immediate cancellation of the reservation without refund for the remainder of the stay.</li><li>The use of intoxicating drugs, narcotics or psychotropic substances is prohibited in any area of the hotel..</li></ul>\n<h2 id=\"2-reservation-policy\">2. reservation policy</h2>\n<p>Upon receiving the booking confirmation, the guest accepts the following rules and policies and agrees to provide truthful information about themselves.</p>\n<ul><li>NON-REFUNDABLE RATE: If an advance payment is made, the reservation is non-refundable and no date changes, room changes, or use of payments made as credit for future reservations are allowed.</li><li>FLEXIBLE RATE: Guests can cancel their reservation up to 48 hours before check-in without penalty; otherwise, they will be charged 100% of the reservation.</li><li>AUSENCIAS EN RESERVAS: La penalización por no presentarse será el importe total de la reserva.</li></ul>\n<p>NOTE : The above policies apply to bookings made directly or through our website.</p>\n<h2 id=\"3-minibar\">3. minibar</h2>\n<p>HAVEN A DESIGN HOTEL The rooms have a minibar service, which is available to guests and can be used whenever desired.</p>\n<h2 id=\"4-warranty-form\">4. warranty form</h2>\n<p>At check-in, you must complete our guarantee form with clear and accurate credit card information for the reservation holder. This authorizes us to keep a record of your credit card information and to charge for any services or products requested and/or purchased during your stay. It also allows us to cover any additional charges that may arise due to damages or inconveniences during your stay at our facilities or if you leave the hotel without completing the checkout process. This requirement applies regardless of any guarantees provided by the online travel agency (OTA) through which the reservation was made. The information provided by the cardholder will be processed in accordance with our Privacy Policy.</p>\n<h2 id=\"5-no-smoking-policy\">5. no smoking policy</h2>\n<p>Resolution 1956 of May 30, 2008, from the Ministry of Social Protection, establishes measures and obligations that commercial establishments must comply with regarding the consumption of cigarettes or tobacco, contributing to the protection of health and the environment. Therefore, HAVEN, A DESIGN HOTEL prohibits smoking within the premises, and smoking is only permitted in the Rooftop 360° pool area. Guests who do not comply with this policy will be informed of the corresponding surcharge for cleaning and smoke removal.</p>\n<h2 id=\"6-guest-policy\">6. guest policy</h2>\n<ul><li>For the purposes of this policy, “Lead Guest” is the person whose name appears on the reservation and who is financially responsible for the reservation and any additional charges. “Guest” is a person who checks in with the Lead Guest and intends to occupy the room for the majority of the stay.</li><li>A person who arrives later in the reservation and does not stay for the entire duration of the stay is considered a “visitor”.</li><li>In accordance with Colombian law, article 17 of Law 679 of 2011, unregistered guests, unregistered visitors and persons under 18 years of age are not allowed to enter hotel rooms.</li><li>NOTE: Only guests under 18 years of age accompanied by their parents and with a certificate of kinship will be allowed entry to the hotel. If the minors are accompanied by other people, they must present a notarized authorization from their parents.</li></ul>\n<ul><li>The only identification documents accepted for registration are the physical passport or the physical Colombian national identity document. Digital or paper copies will not be accepted. Passwords or police reports for lost identification will not be accepted either.</li><li>The total number of guests cannot exceed the maximum capacity of the room; these will not be charged as long as the names of the guests do not change on the same day of check-in; otherwise, there will be an additional charge of 120,000 per person.</li><li>WARNING: The exploitation and abuse of minors in Colombia are crimes fully punishable by imprisonment. (Law 679 of 2001), which authorizes reporting any criminal act against minors to the competent authorities.</li></ul>\n<h2 id=\"7-privacy-policy\">7. privacy policy</h2>\n<p>HAVEN, A DESIGN HOTEL is aware of the importance of information privacy,</p>\n<ul><li>The information provided by our customers will not be given to third parties under any circumstances or for any use.</li><li>The information will be kept strictly confidential and will only be used to maintain business contact.</li><li>HAVEN, A DESIGN HOTEL’s computer systems have all the necessary security protocols to maintain the protection of information.</li><li>Our customers have the right to access, rectify, oppose or cancel the information they have provided.</li></ul>\n<h2 id=\"8-hours\">8 hours</h2>\n<ul><li>Reception: 24 hours</li><li>Check-in time: 3:00 PM. Check-out time: 11:00 AM.</li></ul>"
+  },
+  "blogs": {
+   "intro": "Discover recommendations, guides, and experiences to help you make the most of Medellín. On our blog, you'll find travel tips, must-see attractions, gastronomy, culture, and everything you need to make your stay at Hotel Haven an unforgettable experience."
+  }
+ },
+ "posts": [
+  {
+   "key": "post-conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica",
+   "slug_es": "conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica",
+   "slug": "get-to-know-the-paisa-culture-and-discover-its-traditions-in-a-unique-experience",
+   "title": "Get to know the Paisa culture and discover its traditions in a unique experience",
+   "date": "July 7, 2026",
+   "ex": "Floral and silletera tradition in the town of Santa Elena Although the flower farms of",
+   "img": "/wp-content/uploads/2026/07/la-cultura-paisa.webp",
+   "prose": "<h2 id=\"floral-and-silletera-tradition-in-the-town-of-santa-elena\">Floral and silletera tradition in the town of Santa Elena</h2>\n<p>Although the flower farms of Santa Elena are primarily visited during the Flower Festival, this memorable experience can be enjoyed year-round and is one of the most traditional aspects of Antioquian culture. At these farms, visitors can closely observe the process by which Santa Elena families cultivate the flowers and create the flower arrangements they proudly display in the Flower Parade.</p>\n<p>It is also possible to enjoy folkloric displays from the region, its mountain cuisine, and typical gardens full of flowers and medicinal plants.</p>\n<figure><img src=\"/wp-content/uploads/2026/07/silleteras-farms-4.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/silleteras-farms-3.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/silleteras-farms-2.webp\" alt=\"\" loading=\"lazy\"></figure>\n<h2 id=\"shopping-at-via-primavera\">Shopping at Via Primavera!</h2>\n<p>We proudly say that if London has Oxford Street and Paris has Avenue Montaigne, in Medellín we have Vía Primavera.</p>\n<p>Here, our visitors fall in love with the local talent of our designers and entrepreneurs, enjoy exquisite dishes from around the world, share the smoothest coffee in the world, and experience a combination of shopping and gastronomy in the characteristic natural and welcoming environment of this urban space.</p>\n<figure><img src=\"/wp-content/uploads/2026/07/primavera2.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/primavera4.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/primavera3.webp\" alt=\"\" loading=\"lazy\"></figure>\n<h2 id=\"discover-the-largest-flower-garden-in-medellin-in-the-moravi\">Discover the largest flower garden in Medellín in the Moravia neighborhood.</h2>\n<p>In the northeast of the city is a community traditionally made up of displaced families who built their homes on the old municipal garbage dump, now transformed into one of the largest flower gardens in the city: the Moravia neighborhood, a benchmark for community tourism in Medellín.</p>\n<p>There, through a guided tour led by a community leader, you can walk along the flower-filled path that leads to the hill to enjoy a 360° panoramic view of the city, while learning about the history of one of the places that best represent resilience in Medellín.</p>\n<figure><img src=\"/wp-content/uploads/2026/07/Moravia1.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/Moravia2.webp\" alt=\"\" loading=\"lazy\"></figure>\n<h2 id=\"indulge-in-the-aromas-of-the-world-s-smoothest-coffee\">Indulge in the aromas of the world&#x27;s smoothest coffee.</h2>\n<p>In addition to the city&#x27;s countless cafes offering a cup of Colombia&#x27;s quintessential product, characterized by its smoothness, Medellín is a place to visit farms and estates to learn about the entire coffee process: cultivation, harvesting, aromas, and properties; as well as appreciating one of the world&#x27;s most famous coffees through smell and taste.</p>\n<figure><img src=\"/wp-content/uploads/2026/07/aromas-coffee-4.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/aromas-coffee-1.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/aromas-coffee-2.webp\" alt=\"\" loading=\"lazy\"></figure>",
+   "published": "2026-07-07T14:14:30+00:00",
+   "modified": "2026-08-05T18:09:47+00:00"
+  },
+  {
+   "key": "post-las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera",
+   "slug_es": "las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera",
+   "slug": "the-10-best-things-to-do-and-see-in-the-city-of-eternal-spring",
+   "title": "The 10 best things to do and see in the City of Eternal Spring",
+   "date": "July 7, 2026",
+   "ex": "Known as the “City of Eternal Spring” Named for its mild and pleasant climate throughout",
+   "img": "/wp-content/uploads/2026/07/10-mejores-cosas-para-hacer-y-ver-en-medellin.webp",
+   "prose": "<h2 id=\"known-as-the-city-of-eternal-spring\">Known as the &quot;City of Eternal Spring&quot;</h2>\n<p>Named for its mild and pleasant climate throughout the year.</p>\n<p>Medellín is a fascinating destination that combines culture, history, innovation, and a vibrant nightlife. If you&#x27;re planning your first visit from the United States, here&#x27;s a detailed guide with the 10 best things to do and see.</p>\n<p>Get ready to explore this magical city and its surroundings.</p>\n<h2 id=\"1-explore-the-historic-center-and-botero-sculpture-park-why-\">1. Explore the Historic Center and Botero Sculpture Park. Why go?</h2>\n<p>Downtown Medellín is the city&#x27;s historical and cultural heart. Here you&#x27;ll find a blend of colonial and modern architecture, as well as many of the famous sculptures by Colombian artist Fernando Botero.</p>\n<p>Things to do</p>\n<ul><li>Botero Sculpture Park: Admire 23 of Botero&#x27;s most iconic sculptures. It&#x27;s an ideal place to take photos and learn more about the master&#x27;s unique style.</li><li>Museum of Antioquia: Located next to the park, this museum houses one of the largest collections and exhibitions of Botero&#x27;s work, which tell the story of Medellín and Colombia.</li><li>Metropolitan Basilica: An architectural gem built entirely of brick, perfect for lovers of history and design.</li></ul>\n<p>Advice</p>\n<p>Take a guided tour to better understand the history and contrasts of the city.</p>\n<h2 id=\"2-visit-to-comuna-13-a-symbol-of-transformation-why-go\">2. Visit to Comuna 13: a symbol of transformation. Why go?</h2>\n<p>Comuna 13 is a story of resilience and social transformation. Once one of the most dangerous areas, it is now an example of how art and community can transform lives.</p>\n<p>To do?</p>\n<ul><li>Graffiti Tour: Explore the vibrant streets filled with murals that tell stories of hope and resilience.</li><li>Escalators: A unique system that connects the community to the city. A symbol of social innovation.</li><li>Hip Hop and Urban Dance Shows: Enjoy local talent live.</li></ul>\n<p>Advice</p>\n<p>Visit the area with a local guide for a safe and authentic experience.</p>\n<h2 id=\"3-climb-cerro-nutibara-and-visit-pueblito-paisa-why-go\">3. Climb Cerro Nutibara and visit Pueblito Paisa. Why go?</h2>\n<p>Nutibara Hill offers one of the best panoramic views of Medellín. At the top, Pueblito Paisa recreates a typical Antioquian village.</p>\n<p>To do?</p>\n<ul><li>Lookout: Enjoy a 360-degree panoramic view of the city.</li><li>Handicrafts and souvenirs: Buy souvenirs made by local artisans.</li><li>Gastronomy: Try typical dishes like bandeja paisa or arepas de chócolo.</li></ul>\n<h2 id=\"4-discover-the-nightlife-of-the-provenza-district-why-go\">4. Discover the nightlife of the Provenza district. Why go?</h2>\n<p>Provenza, in El Poblado, is the epicenter of Medellín&#x27;s nightlife. Here you&#x27;ll find top-notch restaurants, bars, and nightclubs.</p>\n<p>To do?</p>\n<ul><li>For lunch: Dine at places like El Cielo (signature cuisine) or Carmen (Colombian and international fusion).</li><li>Bars: DEnjoy cocktails at Alambique or craft beers at 3 Cordilleras.</li><li>Nightclubs: Dance all night at places like La Octava or Vintrash.</li></ul>\n<p>Advice</p>\n<p>Start early to enjoy dinner and then go to the nightclubs.</p>\n<h2 id=\"5-visit-to-guatape-and-el-penol-an-excursion-to-nearby-towns\">5. Visit to Guatapé and El Peñol: An excursion to nearby towns. Why go?</h2>\n<p>Guatapé is a picturesque town located two hours from Medellín, known for its decorative baseboards and the imposing Piedra del Peñol.</p>\n<p>What to do in Guatapé?</p>\n<ul><li>Climb to the Rock of the Rock: Climb the 740 steps to enjoy spectacular views of the reservoir.</li><li>Explore the city of Guatapé: Stroll through its colorful streets and enjoy the local culture.</li><li>Boat trip: Sail across the reservoir and explore the islands.</li></ul>\n<p>Advice</p>\n<p>Book a tour or rent a car to make the most of your day.</p>\n<h2 id=\"6-visit-the-botanical-garden-and-explora-park-why-go\">6. Visit the Botanical Garden and Explora Park. Why go?</h2>\n<p>This area is ideal for families and lovers of nature and science.</p>\n<p>To do?</p>\n<ul><li>Botanical garden: Relax among the native flora and enjoy the temporary exhibitions.</li><li>Explora Park: An interactive science and technology museum with one of the largest aquariums in Latin America.</li></ul>\n<p>Advice</p>\n<p>Set aside half a day to explore both places at your own pace.</p>\n<h2 id=\"7-take-the-metrocable-and-discover-arvi-park-why-go\">7. Take the Metrocable and discover Arví Park. Why go?</h2>\n<p>The Metrocable is not just a means of transport, but also an experience that offers stunning views and connects the city with the countryside.</p>\n<p>To do?</p>\n<ul><li>Take the Metrocable: Take line L to Arví Park.</li><li>Arví Park: Enjoy eco-walks, picnics, or guided forest tours.</li></ul>\n<h2 id=\"8-experience-tango-in-medellin-why-go\">8. Experience tango in Medellín. Why go?</h2>\n<p>Medellín has a strong connection with tango, thanks to Carlos Gardel, who died in the city.</p>\n<p>To do?</p>\n<ul><li>Gardeliana House Museum: Learn about the history of tango in Medellín.</li><li>Milongas and tango shows: Enjoy live shows at venues like El Patio del Tango.</li></ul>\n<h2 id=\"9-prueba-la-comida-local-por-que-ir\">9. Prueba la comida local ¿Por qué ir?</h2>\n<p>Paisa cuisine is a must-try.</p>\n<p>To do?</p>\n<ul><li>Bandeja Paisa: Try this traditional dish that includes ground beef, chorizo, plantains, rice, beans, and more.</li><li>Desserts: Try the custard and fritters, especially during the Christmas season.</li><li>Local Markets: Visit the Retail Market or the Flower Square Market to discover authentic flavors.</li></ul>\n<h2 id=\"10-visit-the-flower-fair-if-it-s-in-season-why-go\">10. Visit the flower fair (if it&#x27;s in season). Why go?</h2>\n<p>It is the most important event in Medellín, celebrated every August, and a celebration of the Paisa culture.</p>\n<p>To do?</p>\n<ul><li>Silletero Parade: Observe the farmers displaying flowers in colorful arrangements.</li><li>Cultural events: Attend concerts, exhibitions, and craft fairs.</li></ul>\n<p>Practical tips for your visit</p>\n<ul><li>Transport: Use the subway and apps like Uber to get around easily.</li><li>Security: Although Medellín is much safer today, be careful in crowded places.</li><li>Currency: Bring Colombian pesos, as not all places accept dollars or credit cards.</li></ul>\n<p>Medellín will surprise you with its hospitality, its rich culture, and its vibrant energy.</p>\n<p>Pack your bags for an unforgettable experience!</p>",
+   "published": "2026-07-07T13:25:12+00:00",
+   "modified": "2026-08-05T19:00:28+00:00"
+  },
+  {
+   "key": "post-experiencias-gastronomicas-de-cinco-estrellas-en-medellin",
+   "slug_es": "experiencias-gastronomicas-de-cinco-estrellas-en-medellin",
+   "slug": "five-star-gastronomic-experiences-in-medellin",
+   "title": "Five-star gastronomic experiences in Medellín",
+   "date": "May 27, 2026",
+   "ex": "A complete guide for food lovers. Medellín, known as the “City of Eternal Spring”, surprises",
+   "img": "/wp-content/uploads/2026/07/experiencia-gastronomica-medellin.webp",
+   "prose": "<h2 id=\"a-complete-guide-for-food-lovers\">A complete guide for food lovers.</h2>\n<p>Medellín, known as the &quot;City of Eternal Spring&quot;, surprises its visitors not only with its perfect climate and spectacular landscapes, but also with a vibrant and ever-changing gastronomic scene.</p>\n<p>In recent years, the capital of Antioquia has become an unmissable destination for food lovers, thanks to a unique combination of culinary innovation, local tradition and top-notch gastronomic experiences.</p>\n<p>In this article, we&#x27;ll take you on a detailed tour of the flavors that make Medellín an unmissable gastronomic destination. We&#x27;ll explore fine dining restaurants, reinterpretations of traditional dishes, themed routes, and tips for making the most of this culinary offering.</p>\n<h2 id=\"the-evolution-of-medellin-s-gastronomy\">The evolution of Medellín&#x27;s gastronomy</h2>\n<p>Medellín has undergone a cultural and economic transformation in recent decades, and its gastronomy has followed the same trend. What was once a market dominated by traditional dishes like bandeja paisa and mondongo is now a fusion of international techniques and boundless creativity.</p>\n<p>The city has attracted visionary chefs who see Medellín as a canvas to experiment with local ingredients and reinterpret Colombian cuisine. This culinary boom is also due to increased tourism and global interest in Colombian culture, which has led Medellín&#x27;s restaurants to compete with those in cities like Bogotá, Lima, and Mexico City.</p>\n<h2 id=\"fine-dining-restaurants-you-can-t-miss\">Fine dining restaurants you can&#x27;t miss</h2>\n<h3 id=\"1-carmen-contemporary-fusion-with-local-ingredients\">1. Carmen: Contemporary fusion with local ingredients.</h3>\n<p>Located in the vibrant El Poblado neighborhood, Carmen is a landmark in Medellín&#x27;s culinary scene. This restaurant combines modern techniques with traditional Colombian ingredients to create an unforgettable dining experience.</p>\n<p>Featured dishes: Shrimp ceviche with mango and coconut, Posta negra (meat cooked in panela) with plantain puree.</p>\n<p>Atmosphere: A warm and welcoming space, ideal for group dinners or intimate gatherings.</p>\n<p>Recommendation: Don&#x27;t miss the wine list, carefully selected to complement each dish.</p>\n<h3 id=\"2-oci-mde-slow-cooking-with-local-flavors\">2. Oci.Mde: Slow cooking with local flavors</h3>\n<p>Oci.Mde is the perfect place for those who appreciate slow food, where every dish is a masterpiece of patience and flavor.</p>\n<p>Atmosphere: A warm and welcoming space, ideal for group dinners or intimate gatherings.</p>\n<p>Featured dishes: Pork ribs cooked over wood for 12 hours. Yam puree with a hint of truffle.</p>\n<p>Recommendation: Don&#x27;t miss the wine list, carefully selected to complement each dish.</p>\n<h3 id=\"3-the-sky-a-multisensory-experience\">3. The Sky: a multisensory experience</h3>\n<p>The Michelin-starred restaurant El Cielo is much more than a restaurant; it is a sensory journey that combines art, gastronomy and emotion.</p>\n<p>Atmosphere: Sophisticated and modern, with special emphasis on the theatrical presentation of the dishes.</p>\n<p>Featured dishes: Chocolate therapy: An interactive experience where guests play with chocolate before tasting it, Fish in chontaduro and coconut sauce.</p>\n<p>Recommendation: Book in advance and prepare for a tasting menu that will take you through 12 to 15 courses.</p>\n<h3 id=\"4-mondongo-s-tradition-with-superior-quality\">4. Mondongo&#x27;s: Tradition with superior quality</h3>\n<p>Although best known for its typical dishes, Mondongo&#x27;s elevates traditional cuisine to a higher level thanks to its quality and authenticity.</p>\n<p>Mondongo&#x27;s elevates traditional dishes to a higher level thanks to its quality and authenticity.</p>\n<p>Atmosphere: Family-friendly and welcoming, perfect for an authentic Paisa experience.</p>\n<p>Featured dishes: Mondongo (traditional tripe and pork soup). Beans with minced beef and rice.</p>\n<p>Recommendation: Accompany it with a local drink such as aguapanela with lemon.</p>\n<h2 id=\"new-interpretations-of-typical-dishes-from-medellin\">New interpretations of typical dishes from Medellín</h2>\n<p>One of the most interesting aspects of Medellín&#x27;s gastronomy is how chefs have reinvented traditional dishes, elevating them to a gourmet level without losing their essence.</p>\n<p>The reinvented bandeja paisa</p>\n<p>In restaurants like Carmen and El Cielo, the bandeja paisa is transformed into an elegant dish with balanced portions and an artistic presentation. Ingredients like chicharrón and morcilla are reinterpreted to surprise even the most discerning diners.</p>\n<p>Bean soup with a modern twist</p>\n<p>Bean soup, a regional classic, is reinvented with the addition of ingredients such as coconut foam or caramelized chorizo, elevating this dish to the category of haute cuisine.</p>\n<h2 id=\"themed-food-tours\">Themed food tours</h2>\n<p>For those who wish to explore more than one restaurant, Medellín offers themed tours that combine the best of its culinary offerings:</p>\n<p>1. Street Food Tour</p>\n<p>One of the most interesting aspects of Medellín&#x27;s gastronomy is how chefs have reinvented traditional dishes, elevating them to a gourmet level without losing their essence.</p>\n<p>Empanadas de la 70: Crispy and filled with meat or chicken. Cheese arepas: A classic for breakfast or a snack. Giant fritters: Perfect for sharing.ir.</p>\n<p>2. Specialty Coffee Route</p>\n<p>For coffee lovers, Medellín offers unforgettable experiences:</p>\n<p>Parchment: Single-origin coffee tastings and alternative brewing methods. Urbania Café: Barista workshops and guided tastings.</p>\n<p>Café Revolución: Artisanal coffee in a relaxed atmosphere.</p>\n<p>3. Fine dining tour of El Poblado</p>\n<p>El Poblado is home to some of the best restaurants in the city, making it an ideal destination for a gastronomic evening.</p>\n<h2 id=\"tips-for-food-lovers-in-medellin\">Tips for food lovers in Medellín</h2>\n<ul><li>Book in advance: The most popular restaurants tend to fill up quickly.</li><li>Discover the tasting menus: Many restaurants offer multi-course options that allow you to try a variety of dishes.</li><li>Ask about local ingredients: The chefs will be happy to explain how they incorporate local products into their creations.</li><li>Visit during the holidays: During events like the Flower Festival, many restaurants offer special menus.</li></ul>\n<h2 id=\"in-conclusion\">In conclusion</h2>\n<p>Medellín is a tourist destination not only for its landscapes and culture, but also for its gastronomy. With a culinary scene that blends tradition and innovation, the city has something for every palate, from reinvented classic dishes to luxurious dining experiences.</p>\n<p>When visiting Medellín, be sure to explore its rich culinary scene. From haute cuisine in a Michelin-starred restaurant to street food in local markets, every bite will connect you with the essence of this vibrant city.</p>",
+   "published": "2026-05-27T16:50:32+00:00",
+   "modified": "2026-08-05T19:18:02+00:00"
+  }
+ ],
+ "meta": {
+  "habitaciones": {
+   "title": "Rooms and suites | Haven Medellín, El Poblado",
+   "desc": "Penthouse, presidential suite, suites with jacuzzi and design rooms in El Poblado, Medellín. Book direct at the best rate."
+  },
+  "penthouse": {
+   "title": "Penthouse with jacuzzi | Haven Medellín",
+   "desc": "Emperor Suites 901 and 902: duplex penthouse of up to 138 m² for 8 guests in El Poblado, Medellín."
+  },
+  "presidencial": {
+   "title": "Presidential Suite | Haven Medellín",
+   "desc": "Presidential Suite of 145 m²: four-bedroom duplex with a private indoor pool in El Poblado, Medellín."
+  },
+  "suites-de-lujo": {
+   "title": "Luxury suites with jacuzzi | Haven Medellín",
+   "desc": "Imperial Suite 402 and Excelsior Suites 401, 604 and 804: suites with jacuzzi in El Poblado, Medellín."
+  },
+  "rooftop": {
+   "title": "360° Rooftop: pool and bar overlooking Medellín | Haven",
+   "desc": "Bar and pool on the 11th floor with a 360° panoramic view of Medellín. Signature cocktails, Sunny Days and sunsets in El Poblado."
+  },
+  "swing": {
+   "title": "Swing Bar: coffee by day, cocktails by night | Haven Medellín",
+   "desc": "Swing Bar in the Haven lobby: Colombian coffee in the morning, wine, beer and cocktails at night in El Poblado."
+  },
+  "gastronomia": {
+   "title": "Gastronomy at the 360° Rooftop | Haven Medellín",
+   "desc": "Artisan pizzas, salmon, meatballs and local and international cuisine overlooking Medellín at the 360° Rooftop."
+  },
+  "wellness": {
+   "title": "Wellness: massages, facials and IV therapy | Haven Medellín",
+   "desc": "Relaxing massage, facial hydration and Ultra Vit IV therapy to recover from your trip at Haven, El Poblado."
+  },
+  "eventos": {
+   "title": "Events: parties, brunch and celebrations | Haven Medellín",
+   "desc": "Live DJ on the 360 Terrace, first-Friday party, pool party, Sunday brunch and special celebrations in El Poblado."
+  },
+  "servicios": {
+   "title": "Hotel services | Haven Medellín",
+   "desc": "Airport transfers, spa, IV hydration, tours around Antioquia, car rental and more services at Haven Medellín."
+  },
+  "contacto": {
+   "title": "Contact | Haven Medellín, El Poblado",
+   "desc": "Calle 10A #36-29, El Poblado, Medellín. Front desk (+57) 322 306 4585 · Reservations (+57) 321 209 7033 · frontdesk@serenahotelsco.com"
+  },
+  "serena-rewards": {
+   "title": "Serena Rewards: loyalty program | Haven Medellín",
+   "desc": "Silver, Golden, Diamond and Black plans: discounts on rooms and food, transfers, upgrades and exclusive benefits."
+  },
+  "preguntas-frecuentes": {
+   "title": "FAQ | Haven Medellín",
+   "desc": "Location, getting here from the airport, included services, 360° Rooftop hours and safety in El Poblado."
+  },
+  "politica-de-visitantes": {
+   "title": "Visitor policy | Haven Medellín",
+   "desc": "Guest and visitor registration, additional-person charges and rules under Colombian Law 679 of 2011 at Haven Medellín."
+  },
+  "terminos-y-condiciones": {
+   "title": "Terms and conditions | Haven Medellín",
+   "desc": "Reservations, cancellations, minibar, guarantee, non-smoking policy, privacy and hours at Haven, A Design Hotel."
+  },
+  "blogs": {
+   "title": "Blog: Medellín guides and plans | Haven Medellín",
+   "desc": "Tips, guides and experiences to enjoy Medellín: gastronomy, paisa culture and the best things to do in the city."
+  },
+  "room-suite-emperor-901": {
+   "title": "Emperor Suite 901 Penthouse · 138 m² in El Poblado",
+   "desc": "Emperor Suite 901 Penthouse: 138 m², 8 people, King x2, Queen x2. Welcome to your private residence high above Medellín. The Emperor 901 Suite is a spectac"
+  },
+  "room-suite-emperor-902": {
+   "title": "Emperor Suite 902 Penthouse · 111 m² in El Poblado",
+   "desc": "Emperor Suite 902 Penthouse: 111 m², 8 people, King x2, Queen x2. Welcome to a space designed to be shared and unforgettable. The Emperor 902 Suite is a st"
+  },
+  "room-suite-presidential": {
+   "title": "Presidential Suite · 145 m² in El Poblado | Haven Medellín",
+   "desc": "Presidential Suite: 145 m², 8 people, King x2, Queen x2. Discover a unique residence in Medellín. The Presidential Suite is a striking 4-bedroom duplex wit"
+  },
+  "room-suite-imperial-402": {
+   "title": "Imperial Suite 402 · 68 m² in El Poblado | Haven Medellín",
+   "desc": "Imperial Suite 402: 68 m², 6 people, Queen x3. Discover comfort and elegance in our Imperial Suite 402, a jewel of a three-bedroom suite featuring exquisit"
+  },
+  "room-suite-excelsior-401": {
+   "title": "Excelsior Suite 401 · 62 m² in El Poblado | Haven Medellín",
+   "desc": "Excelsior Suite 401: 62 m², 4 people, Queen x2. Enjoy a refined stay in the Excelsior 401 Suite, the largest two-bedroom hotel suite in El Poblado, designe"
+  },
+  "room-suite-excelsior-804": {
+   "title": "Excelsior Suite 804 · 62 m² in El Poblado | Haven Medellín",
+   "desc": "Excelsior Suite 804: 62 m², 4 people, Queen x2. Enjoy an exceptional stay in the Excelsior Suite 804, a two-bedroom suite designed for up to four guests, w"
+  },
+  "room-suite-excelsior-604": {
+   "title": "Excelsior Suite 604 · 62 m² in El Poblado | Haven Medellín",
+   "desc": "Excelsior Suite 604: 62 m², 4 people, Queen x2. The Excelsior 604 suite is a two-bedroom apartment that can accommodate up to four guests. It features quee"
+  },
+  "room-habitacion-ambassador": {
+   "title": "Ambassador Room · 29 m² in El Poblado | Haven Medellín",
+   "desc": "Ambassador Room: 29 m², 2 people, Queen x1. Enjoy ultimate comfort in the Ambassador Suite, designed for those seeking spaciousness and sophistication. Flo"
+  },
+  "room-habitacion-ambassador-jr": {
+   "title": "Ambassador Jr Room · 29 m² in El Poblado | Haven Medellín",
+   "desc": "Ambassador Jr Room: 29 m², 2 people, Queen x1. Discover the exclusivity designed exclusively for two in our Ambassador Jr. suite. Immerse yourself in luxur"
+  },
+  "room-habitacion-viscount-803": {
+   "title": "Viscount Room 803 · 24 m² in El Poblado | Haven Medellín",
+   "desc": "Viscount Room 803: 24 m², 2 people, Queen x1. Enjoy an outdoor jacuzzi on your private balcony. Viscount 803 offers a premium²4 m² suite where you can rela"
+  },
+  "room-habitacion-viscount": {
+   "title": "Viscount Room · 24 m² in El Poblado | Haven Medellín",
+   "desc": "Viscount Room: 24 m², 2 people, Queen x1. Discover the splendor of our Viscount Room, a true gem of luxury designed for an unforgettable experience for cou"
+  },
+  "room-habitacion-lord": {
+   "title": "Lord's Room · 24 m² in El Poblado | Haven Medellín",
+   "desc": "Lord's Room: 24 m², 2 people, Queen x1. Immerse yourself in the exclusive luxury of our Lord Suite, featuring a queen-size bed. This suite is designed for "
+  },
+  "room-habitacion-earl": {
+   "title": "Earl's Room · 20 m² in El Poblado | Haven Medellín",
+   "desc": "Earl's Room: 20 m², 2 people, Queen x1. Immerse yourself in the unparalleled charm of our Earl Suite. Enjoy panoramic city views from your private balcony "
+  },
+  "room-habitacion-marques-plus": {
+   "title": "Marqués Plus Room · 27 m² in El Poblado | Haven Medellín",
+   "desc": "Marqués Plus Room: 27 m², 2 people, Queen x1. A spacious suite that goes far beyond the ordinary. Designed for freedom and comfort, this suite features a l"
+  },
+  "room-habitacion-marques": {
+   "title": "Marqués Room · 24 m² in El Poblado | Haven Medellín",
+   "desc": "Marqués Room: 24 m², 2 people, Queen x1. A spacious suite that goes far beyond the ordinary. Designed for freedom and comfort, this suite features a large "
+  },
+  "room-habitacion-duke": {
+   "title": "Duke Room · 20 m² in El Poblado | Haven Medellín",
+   "desc": "Duke Room: 20 m², 2 people, Queen x1. More space, more comfort. The Duke room is designed for a relaxing city stay and features a queen bed, an elegant bat"
+  },
+  "room-habitacion-consort": {
+   "title": "Consort Room · 15 m² in El Poblado | Haven Medellín",
+   "desc": "Consort Room: 15 m², 2 people, Queen x1. Compact, elegant, and fully equipped, our Consort room features a queen bed, private bathroom, Smart TV, air condi"
+  },
+  "post-conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica": {
+   "title": "Get to know the Paisa culture and discover its traditions…",
+   "desc": "Floral and silletera tradition in the town of Santa Elena Although the flower farms of"
+  },
+  "post-las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera": {
+   "title": "The 10 best things to do and see in the City of Eternal Spring",
+   "desc": "Known as the “City of Eternal Spring” Named for its mild and pleasant climate throughout"
+  },
+  "post-experiencias-gastronomicas-de-cinco-estrellas-en-medellin": {
+   "title": "Five-star gastronomic experiences in Medellín | Haven Medellín",
+   "desc": "A complete guide for food lovers. Medellín, known as the “City of Eternal Spring”, surprises"
+  },
+  "home": {
+   "title": "Haven Medellín | Design hotel in El Poblado",
+   "desc": "Haven, A Design Hotel: suites with jacuzzi, 360° Rooftop, Swing Bar and wellness in the heart of El Poblado, Medellín. Book direct at the best rate."
+  }
+ }
+}

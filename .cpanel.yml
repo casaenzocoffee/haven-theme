@@ -6,3 +6,6 @@ deployment:
     - /bin/mkdir -p $PROTO $STAGE
     - /bin/cp -R dist/. $PROTO
     - /bin/cp -R dist/. $STAGE
+    # Tema WordPress "haven": SOLO en staging (el sitio oficial no se toca desde aquí).
+    - export THEMES=/home/serenare/staging.havenmedellin.com/wp-content/themes
+    - /bin/test -d $THEMES && /bin/rm -rf $THEMES/haven.new && /bin/cp -R wp/haven $THEMES/haven.new && /bin/rm -rf $THEMES/haven.old && (/bin/test -d $THEMES/haven && /bin/mv $THEMES/haven $THEMES/haven.old || /bin/true) && /bin/mv $THEMES/haven.new $THEMES/haven

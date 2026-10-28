@@ -178,18 +178,23 @@ def footer(R, en=False):
     NM = NAV_MAP_EN if en else NAV_MAP
     return re.sub(r'href="(/e[sn]/[^"]*)"', lambda m: f'href="{R}{NM[m.group(1)]}"' if m.group(1) in NM else m.group(0), f)
 
+REST = 'Restaurant'  # en español: 'Restaurante' (lo fija brand() según el idioma de la página)
 def _brand_txt(t):
     t = re.sub(r'Rooftop 360°?', '360° Rooftop', t)
-    t = re.sub(r'360° Rooftop(?! &| <em>&)(?!\s+$)', '360° Rooftop &amp; Restaurant', t)
+    t = re.sub(r'360° Rooftop (&amp;|&) Restaurante?\b', '360° Rooftop &amp; ' + REST, t)
+    t = re.sub(r'360° Rooftop(?! &| <em>&)(?!\s+$)', '360° Rooftop &amp; ' + REST, t)
     t = re.sub(r'\bSwing Bar\b', 'Swing Coffee Bar', t)
     t = re.sub(r'\bSwing\b(?! Coffee| Bar| Menu)(?!\s+$)', 'Swing Coffee Bar', t)
     return t
 
-def brand(html):
-    """Nombres de marca: '360° Rooftop & Restaurant' y 'Swing Coffee Bar' en todo el texto visible."""
+def brand(html, lang='es'):
+    """Nombres de marca: '360° Rooftop & Restaurante' (ES) / '& Restaurant' (EN) y 'Swing Coffee Bar' en todo el texto visible."""
+    global REST
+    REST = 'Restaurant' if lang == 'en' else 'Restaurante'
     html = re.sub(r'Swing <em>Bar</em>', 'Swing <em>Coffee Bar</em>', html)
-    html = re.sub(r'360°? <em>Rooftop</em>', '360° Rooftop <em>&amp; Restaurant</em>', html)
-    html = re.sub(r'Rooftop <em>360°?</em>', '360° Rooftop <em>&amp; Restaurant</em>', html)
+    html = re.sub(r'360°? <em>Rooftop</em>', '360° Rooftop <em>&amp; ' + REST + '</em>', html)
+    html = re.sub(r'Rooftop <em>360°?</em>', '360° Rooftop <em>&amp; ' + REST + '</em>', html)
+    html = re.sub(r'(<em>&amp; )Restaurante?(</em>)', r'\1' + REST + r'\2', html)
     parts = re.split(r'(<script\b.*?</script>|<style\b.*?</style>|<[^>]+>)', html, flags=re.S)
     out = []
     for p in parts:
@@ -281,7 +286,7 @@ def build():
         html = (head(page, R, ver) + f'<body class="no-js page-{page.get("key", slug or "home")}">\n' + top
                 + rd('partials/nojs.html') + header(slug, R, en) + body + '\n' + footer(R, en) + scripts + '</body>\n</html>\n')
         html = re.sub(r'((?<=[/"])media/[\w.-]+\.(?:mp4|webp))"', lambda m: m.group(1) + '?v=' + MVF.get(m.group(1).split('/')[-1], '1') + '"', html)
-        html = brand(html)
+        html = brand(html, 'en' if page.get('lang') == 'en' else 'es')
         html = responsive(html)
         # precarga la foto principal (LCP) de las páginas internas con su srcset
         hm = re.search(r'<div class="ph-media"><img ([^>]*)>', html)

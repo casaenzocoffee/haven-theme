@@ -1,0 +1,1811 @@
+{
+ "lang": "es",
+ "rooms": [
+  {
+   "key": "room-suite-emperor-901",
+   "slug_es": "suite-emperor-901",
+   "slug": "suite-emperor-901",
+   "cat": "Penthouse",
+   "f": "penthouse",
+   "name": "Suite Emperor 901 Penthouse",
+   "kicker": "Residencia",
+   "m2": "138 m²",
+   "per": "8 personas",
+   "beds": [
+    "King x2",
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Vista de la ciudad",
+    "Baño",
+    "Sala de estar",
+    "Mini bar",
+    "Cocina",
+    "Jacuzzi",
+    "Zona relajación",
+    "Vista panoramica",
+    "Comedor"
+   ],
+   "desc": [
+    "Bienvenido a tu residencia privada en las alturas de Medellín. La Suite Emperor 901 es un espectacular dúplex de cuatro habitaciones donde se crean momentos inolvidables, ya sea que viajes con amigos o en familia. Despiértate con impresionantes vistas de la ciudad, pasa tus tardes relajándote en tu jacuzzi privado y reúnete en una espaciosa sala de estar diseñada para la conexión y el confort. Con dos camas king, dos camas queen y espacios cuidadosamente diseñados en dos niveles, cada huésped disfruta de privacidad y lujo, además de un sistema de sonido premium con barra de sonido, perfecto para elevar tu estadía con una experiencia de audio inmersiva."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-bathroom-vanity.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-bed-4.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-jacuzzi-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-jacuzzi-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-jacuzzi-lounge-area-3.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-kitchen.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-kitchen-lounge-area.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-shower.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-bathroom-vanity.webp"
+  },
+  {
+   "key": "room-suite-emperor-902",
+   "slug_es": "suite-emperor-902",
+   "slug": "suite-emperor-902",
+   "cat": "Penthouse",
+   "f": "penthouse",
+   "name": "Suite Emperor 902 Penthouse",
+   "kicker": "Residencia",
+   "m2": "111 m²",
+   "per": "8 personas",
+   "beds": [
+    "King x2",
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Vista de la ciudad",
+    "Baño",
+    "Sala de estar",
+    "Mini bar",
+    "Cocina",
+    "Jacuzzi",
+    "Balcon",
+    "Zona relajación",
+    "Vista panoramica",
+    "Comedor"
+   ],
+   "desc": [
+    "Bienvenidos a un espacio diseñado para ser compartido e inolvidable. La Suite Emperor 902 es un impresionante dúplex de cuatro habitaciones, donde la comodidad se une a la experiencia, ideal para grupos que buscan disfrutar de Medellín juntos. Salgan a su balcón privado y relájense en su jacuzzi mientras la ciudad se despliega a sus pies. En el interior, disfruten de una cálida y acogedora sala de estar, una cocina totalmente equipada y habitaciones elegantemente decoradas en dos niveles, que garantizan tanto la conexión como la privacidad, además de un sistema de sonido premium con barra de sonido, perfecto para elevar su estadía con una experiencia de audio inmersiva."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-lounge-area.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-kitchen-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-kitchen-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-jacuzzi-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-jacuzzi-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-bathroom-vanity-2.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/emperor-phenthouse-902-room-lounge-area.webp"
+  },
+  {
+   "key": "room-suite-presidential",
+   "slug_es": "suite-presidential",
+   "slug": "suite-presidential",
+   "cat": "Presidencial",
+   "f": "presidencial",
+   "name": "Suite Presidencial",
+   "kicker": "Residencia",
+   "m2": "145 m²",
+   "per": "8 personas",
+   "beds": [
+    "King x2",
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Baño",
+    "Sala de estar",
+    "Mini bar",
+    "Cocina",
+    "Jacuzzi",
+    "Zona relajación",
+    "Comedor"
+   ],
+   "desc": [
+    "Descubra una residencia única en Medellín. La Suite Presidencial, es un audaz dúplex de 4 habitaciones con baños privados, donde la arquitectura de doble altura, los materiales de alta calidad y el diseño cuidadosamente seleccionado crean una experiencia de vida superior.",
+    "El espacio diáfano se integra a la perfección con una cocina totalmente equipada con isla de mármol, mientras que la iluminación y las texturas de diseño aportan personalidad a cada rincón. El elemento más destacado es la piscina interior privada, enmarcada por un jardín vertical y una cálida iluminación ambiental, diseñada para una relajación total. Una elegante sala de estar con chimenea decorativa completa la atmósfera."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/presidential-suite-room-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-3.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-lounge-area-3.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-kitchen-4.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-4.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-5.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-8.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-7.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bed-6.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-balcony.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-jacuzzi-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-jacuzzi-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/presidential-suite-room-shower.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/presidential-suite-room-jacuzzi-lounge-area-1.webp"
+  },
+  {
+   "key": "room-suite-imperial-402",
+   "slug_es": "suite-imperial-402",
+   "slug": "suite-imperial-402",
+   "cat": "Suites de lujo",
+   "f": "suites",
+   "name": "Suite Imperial 402",
+   "kicker": "Habitación",
+   "m2": "68 m²",
+   "per": "6 personas",
+   "beds": [
+    "Queen x3"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Vista de la ciudad",
+    "Baño",
+    "Sala de estar",
+    "Mini bar",
+    "Cocineta",
+    "Jacuzzi",
+    "Balcon",
+    "Vista panoramica"
+   ],
+   "desc": [
+    "Descubra la comodidad y la elegancia en nuestra Suite Imperial 402, una joya de suite de 3 habitaciones, con exquisitas camas tamaño queen. Esta suite tiene capacidad para hasta 6 huéspedes y ofrece una experiencia de alojamiento inigualable. Relájese en el jacuzzi privado, admire las vistas desde el balcón y déjese sorprender por la belleza de la ciudad. Disfrute de un baño con agua a presión y temperatura perfectas, que le brindará una experiencia de spa en cada uso."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bed-5.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bed-4.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-jacuzzi-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-kitchen.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-jacuzzi-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/imperial-suite-402-room-bathroom-vanity-3.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/imperial-suite-402-room-jacuzzi-lounge-area-2.webp"
+  },
+  {
+   "key": "room-suite-excelsior-401",
+   "slug_es": "suite-excelsior-401",
+   "slug": "suite-excelsior-401",
+   "cat": "Suites de lujo",
+   "f": "suites",
+   "name": "Suite Excelsior 401",
+   "kicker": "Habitación",
+   "m2": "62 m²",
+   "per": "4 personas",
+   "beds": [
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Vista de la ciudad",
+    "Baño",
+    "Sala de estar",
+    "Mini bar",
+    "Cocina",
+    "Jacuzzi",
+    "Terraza",
+    "Zona relajación",
+    "Vista panoramica",
+    "Comedor"
+   ],
+   "desc": [
+    "Disfrute de una estancia refinada en la Suite Excelsior 401, la suite de hotel de dos recámaras más grande de todo El Poblado, diseñada para quienes aprecian el espacio, la privacidad y el máximo confort. La suite cuenta con una elegante sala de estar con cocina totalmente equipada, complementada por un amplio balcón privado con hermosas vistas del horizonte de Medellín. Relájese en su jacuzzi privado, descanse en lujosas camas tamaño queen y disfrute de la exclusividad de los baños en suite en cada recámara, donde la alta presión y la temperatura ideal del agua crean una experiencia de spa en cada uso."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bed-4.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-king-bed-window-view.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-king-bed.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bed-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bed-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bed-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-kitchen.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-jacuzzi-lounge-area-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-jacuzzi-lounge-area1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-jacuzzi-lounge-area2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bathroom-vanity-4.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-balcony-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-balcony-4.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-balcony-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-room-401-balcony-1.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/excelsior-suite-room-401-jacuzzi-lounge-area1.webp"
+  },
+  {
+   "key": "room-suite-excelsior-804",
+   "slug_es": "suite-excelsior-804",
+   "slug": "suite-excelsior-804",
+   "cat": "Suites de lujo",
+   "f": "suites",
+   "name": "Suite Excelsior 804",
+   "kicker": "Habitación",
+   "m2": "62 m²",
+   "per": "4 personas",
+   "beds": [
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Vista de la ciudad",
+    "Baño",
+    "Sala de estar",
+    "Mini bar",
+    "Cocina",
+    "Jacuzzi",
+    "Balcon",
+    "Zona relajación",
+    "Vista panoramica",
+    "Comedor"
+   ],
+   "desc": [
+    "Disfrute de una estancia excepcional en la Suite Excelsior 804, una suite de 2 dormitorios diseñada para hasta 4 personas, con especial atención al confort y al diseño. Materiales elegantes, líneas depuradas y una sala de estar integrada crean una atmósfera de lujo. Salga a su balcón privado con jacuzzi —un verdadero atractivo— y relájese con vistas panorámicas de la ciudad. En el interior, los modernos baños ofrecen un ambiente sofisticado y relajante, similar al de un spa, junto con un sistema de sonido de alta gama con barra de sonido, ideal para una experiencia de audio envolvente."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bathroom-vanity-4.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bathroom-vanity-5.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-bed-4.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-jacuzzi-balcony-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-jacuzzi-balcony-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-kitchen.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-kitchen-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-kitchen-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-kitchen-lounge-area-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-804-room-kitchen-lounge-area-4.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/excelsior-suite-804-room-jacuzzi-balcony-1.webp"
+  },
+  {
+   "key": "room-suite-excelsior-604",
+   "slug_es": "suite-excelsior-604",
+   "slug": "suite-excelsior-604",
+   "cat": "Suites de lujo",
+   "f": "suites",
+   "name": "Suite Excelsior 604",
+   "kicker": "Habitación",
+   "m2": "62 m²",
+   "per": "4 personas",
+   "beds": [
+    "Queen x2"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Vista de la ciudad",
+    "Baño",
+    "Sala de estar",
+    "Mini bar",
+    "Cocina",
+    "Jacuzzi x2",
+    "Vista panoramica",
+    "Comedor"
+   ],
+   "desc": [
+    "La suite Excelsior 604 es un apartamento de dos habitaciones con capacidad para hasta 4 personas. Cuenta con camas tamaño queen y jacuzzi privado en cada habitación. La suite incluye una sala de estar, un comedor y una cocina totalmente equipada. Disfrute de un baño relajante con agua a presión y a la temperatura ideal, que le brindará una experiencia de spa en cada uso. Los amplios ventanales brindan luz natural y vistas a la ciudad.",
+    "Los baños cuentan con acabados modernos y duchas a ras de suelo. Entre las comodidades ofrece: acceso seguro con tarjeta, además de un sistema de sonido premium con barra de sonido, ideal para disfrutar de una experiencia de audio envolvente durante su estancia."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-jacuzzi-1.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-jacuzzi-2.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-jacuzzi-3.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-kitchen.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-kitchen-lounge-area.webp",
+    "/wp-content/uploads/2026/06/excelsior-suite-604-room-lounge-area.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/excelsior-suite-604-room-jacuzzi-2.webp"
+  },
+  {
+   "key": "room-habitacion-ambassador",
+   "slug_es": "habitacion-ambassador",
+   "slug": "habitacion-ambassador",
+   "cat": "Habitaciones",
+   "f": "habitaciones",
+   "name": "Habitación Ambassador",
+   "kicker": "Habitación",
+   "m2": "29 m²",
+   "per": "2 personas",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Baño",
+    "Sala de estar",
+    "Mini bar",
+    "Jacuzzi",
+    "Zona relajación",
+    "Vista panoramica"
+   ],
+   "desc": [
+    "Disfrute del máximo confort en la habitación Ambassador, una estancia diseñada para quienes buscan amplitud y sofisticación. Sus ventanales de suelo a techo inundan la habitación de luz natural y ofrecen impresionantes vistas de la ciudad, mientras que un jacuzzi privado le invita a relajarse con total comodidad. Una lujosa cama queen preside el espacio, complementada por una elegante zona de estar y una mesa alta perfecta para contemplar el horizonte. El baño privado, revestido de mármol, cuenta con una espaciosa ducha de efecto lluvia que le brindará una experiencia refinada, similar a la de un spa."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bathroom-vanity-4.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-bed-4.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-4.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-5.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-6.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-7.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-lounge-area-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-lounge-area-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-lounge-area-3.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-shower-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-room-shower-2.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/ambassador-suite-room-jacuzzi-lounge-area-2.webp"
+  },
+  {
+   "key": "room-habitacion-ambassador-jr",
+   "slug_es": "habitacion-ambassador-jr",
+   "slug": "habitacion-ambassador-jr",
+   "cat": "Habitaciones",
+   "f": "habitaciones",
+   "name": "Habitación Ambassador Jr",
+   "kicker": "Habitación",
+   "m2": "29 m²",
+   "per": "2 personas",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Baño",
+    "Sala de estar",
+    "Mini bar",
+    "Jacuzzi",
+    "Zona relajación",
+    "Vista panoramica"
+   ],
+   "desc": [
+    "Descubra la exclusividad diseñada exclusivamente para dos en nuestra habitación Ambassador Jr. Sumérjase en el lujo con su propio jacuzzi climatizado mientras se relaja y disfruta de las comodidades que ofrecemos. Viva una experiencia de lujo y confort incomparables, diseñada especialmente para usted y su pareja. Adéntrese en un baño donde la potente presión del agua y la temperatura ideal crean una experiencia de spa en cada uso.",
+    "Esta suite está diseñada para una experiencia íntima, con una cama tamaño queen que garantiza un descanso completo."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/ambassador-suite-307-room-jacuzzi-lounge-area.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/ambassador-suite-307-room-jacuzzi.webp"
+  },
+  {
+   "key": "room-habitacion-viscount-803",
+   "slug_es": "habitacion-viscount-803",
+   "slug": "habitacion-viscount-803",
+   "cat": "Habitaciones",
+   "f": "habitaciones",
+   "name": "Habitación Viscount 803",
+   "kicker": "Habitación",
+   "m2": "24 m²",
+   "per": "2 personas",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Vista de la ciudad",
+    "Baño",
+    "Mini bar",
+    "Jacuzzi",
+    "Balcon",
+    "Vista panoramica"
+   ],
+   "desc": [
+    "Jacuzzi exterior en su balcón privado. Viscount 803 ofrece una estancia premium de 24 m² donde podrá relajarse al aire libre mientras disfruta de las vistas de la ciudad. En el interior, encontrará una cómoda cama queen, comodidades modernas y un espacio cuidadosamente diseñado.",
+    "Adéntrese en un baño donde la potente presión del agua y el agua a la temperatura ideal crean una experiencia de spa en cada uso. La habitación cuenta con un televisor inteligente HD para su entretenimiento y un minibar para su comodidad."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-jacuzzi-balcony-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-jacuzzi-balcony-2.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-803-room-bathroom-vanity-2.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/viscount-suite-803-room-jacuzzi-balcony-1.webp"
+  },
+  {
+   "key": "room-habitacion-viscount",
+   "slug_es": "habitacion-viscount",
+   "slug": "habitacion-viscount",
+   "cat": "Habitaciones",
+   "f": "habitaciones",
+   "name": "Habitación Viscount",
+   "kicker": "Habitación",
+   "m2": "24 m²",
+   "per": "2 personas",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Vista de la ciudad",
+    "Baño",
+    "Sala de estar",
+    "Mini bar",
+    "Jacuzzi",
+    "Balcon",
+    "Zona relajación",
+    "Vista panoramica"
+   ],
+   "desc": [
+    "Descubra el esplendor de nuestra Habitación Viscount, una auténtica joya de lujo diseñada para una experiencia inolvidable en pareja. Con una cómoda cama queen, esta habitación ofrece todo lo necesario para una estancia perfecta. Relájese en su propio jacuzzi climatizado mientras disfruta de las impresionantes vistas de la ciudad desde el balcón. Adéntrese en un baño donde la potente presión del agua y la temperatura ideal le brindarán una experiencia de spa en cada uso. La habitación también cuenta con un televisor inteligente HD para su entretenimiento y un minibar para su comodidad."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/viscount-suite-room-window-view.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-balcony-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-king-bed.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bed-jacuzzi.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-balcony-2.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/viscount-suite-room-shower.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/viscount-suite-room-bed-jacuzzi.webp"
+  },
+  {
+   "key": "room-habitacion-lord",
+   "slug_es": "habitacion-lord",
+   "slug": "habitacion-lord",
+   "cat": "Habitaciones",
+   "f": "habitaciones",
+   "name": "Habitación Lord",
+   "kicker": "Habitación",
+   "m2": "24 m²",
+   "per": "2 personas",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Baño",
+    "Mini bar",
+    "Jacuzzi"
+   ],
+   "desc": [
+    "Sumérjase en el lujo exclusivo de nuestra Habitación Lord, con una cama tamaño queen. Esta habitación está diseñada para dos personas que buscan una experiencia inolvidable. Disfrute de un momento de relajación en el jacuzzi privado, mientras se deleita con las comodidades que ofrecemos. Entre en un baño donde la potente presión del agua y el agua a la temperatura perfecta crean una experiencia de spa en cada uso.",
+    "Todo en la habitación está diseñado para su máxima comodidad y disfrute."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/lord-suite-room-204-bed-1.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-bed-2.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-jacuzzi-1.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-jacuzzi-2.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-jacuzzi-window-view.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-king-bed.webp",
+    "/wp-content/uploads/2026/06/lord-suite-room-204-overview.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/lord-suite-room-204-jacuzzi-2.webp"
+  },
+  {
+   "key": "room-habitacion-earl",
+   "slug_es": "habitacion-earl",
+   "slug": "habitacion-earl",
+   "cat": "Habitaciones",
+   "f": "habitaciones",
+   "name": "Habitación Earl",
+   "kicker": "Habitación",
+   "m2": "20 m²",
+   "per": "2 personas",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Vista de la ciudad",
+    "Baño",
+    "Mini bar"
+   ],
+   "desc": [
+    "Sumérjase en el encanto incomparable de nuestra Habitación Earl. Disfrute de vistas panorámicas de la ciudad desde su balcón privado mientras se relaja y se deleita con el ambiente de elegancia y confort que ofrece esta suite. Adéntrese en un baño donde la potente presión del agua y el agua a la temperatura ideal crean una experiencia de spa en cada uso.",
+    "Esta habitación, que cuenta con una lujosa cama tamaño queen, redefine el concepto de confort."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/earl-suite-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/earl-suite-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/earl-suite-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/earl-suite-room-room-bathroom-vanity.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/earl-suite-room-bed-1.webp"
+  },
+  {
+   "key": "room-habitacion-marques-plus",
+   "slug_es": "habitacion-marques-plus",
+   "slug": "habitacion-marques-plus",
+   "cat": "Habitaciones",
+   "f": "habitaciones",
+   "name": "Habitación Marqués Plus",
+   "kicker": "Habitación",
+   "m2": "27 m²",
+   "per": "2 personas",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Baño",
+    "Sala de estar",
+    "Mini bar"
+   ],
+   "desc": [
+    "Suite espaciosa, mucho más allá de lo convencional. Diseñada para ofrecer libertad y comodidad, esta suite cuenta con una amplia sala de estar con sofá y asientos adicionales, complementada con un escritorio con silla ergonómica para un espacio verdaderamente multifuncional. Disfrute de la comodidad de un baño espacioso y un amplio armario, además de un gran televisor de pantalla plana. Los ventanales de piso a techo inundan la habitación con abundante luz natural, mientras que la iluminación ambiental moderna y fotogénica, junto con obras de arte impactantes, crean el ambiente perfecto para relajarse y capturar momentos inolvidables."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-bathroom-shower.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-window-view.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-suite-and-lounge-area.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-lounge-area.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-living-area.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-king-bed-room-overview.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-king-bed.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-interior-view.webp",
+    "/wp-content/uploads/2026/06/marquess-suite-room-207-bathroom-vanity.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/marquess-suite-room-207-king-bed-room-overview.webp"
+  },
+  {
+   "key": "room-habitacion-marques",
+   "slug_es": "habitacion-marques",
+   "slug": "habitacion-marques",
+   "cat": "Habitaciones",
+   "f": "habitaciones",
+   "name": "Habitación Marqués",
+   "kicker": "Habitación",
+   "m2": "24 m²",
+   "per": "2 personas",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Baño",
+    "Sala de estar",
+    "Mini bar"
+   ],
+   "desc": [
+    "Suite espaciosa, mucho más allá de lo convencional. Diseñada para ofrecer libertad y comodidad, esta suite cuenta con una amplia sala de estar con sofá y asientos adicionales, complementada con un escritorio con silla ergonómica para un espacio verdaderamente multifuncional. Disfrute de la comodidad de un baño espacioso y un amplio armario, además de un gran televisor de pantalla plana. Los ventanales de piso a techo inundan la habitación con abundante luz natural, mientras que la iluminación ambiental moderna y fotogénica, junto con obras de arte impactantes, crean el ambiente perfecto para relajarse y capturar momentos inolvidables."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/08/marquess-room-bed-4.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bed-3.webp",
+    "/wp-content/uploads/2026/08/marquess-room-living-area-4.webp",
+    "/wp-content/uploads/2026/08/marquess-room-living-area-1.webp",
+    "/wp-content/uploads/2026/08/marquess-room-living-area-2.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bathroom-shower-1.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bed-1.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bed-2.webp",
+    "/wp-content/uploads/2026/08/marquess-room-living-area-3.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bathroom-vanity2.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bathroom-shower-2.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bed-5.webp",
+    "/wp-content/uploads/2026/08/marquess-room-lounge-area-1.webp",
+    "/wp-content/uploads/2026/08/marquess-room-lounge-area-2.webp",
+    "/wp-content/uploads/2026/08/marquess-room-bathroom-shower-3.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/08/marquess-room-bed-4.webp"
+  },
+  {
+   "key": "room-habitacion-duke",
+   "slug_es": "habitacion-duke",
+   "slug": "habitacion-duke",
+   "cat": "Habitaciones",
+   "f": "habitaciones",
+   "name": "Habitación Duke",
+   "kicker": "Habitación",
+   "m2": "20 m²",
+   "per": "2 personas",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Baño",
+    "Sala de estar",
+    "Mini bar"
+   ],
+   "desc": [
+    "Más espacio, más comodidad. La habitación Duke está diseñada para una estancia relajante en la ciudad y cuenta con una cama queen, un baño elegante, Smart TV y todas las comodidades esenciales. Disfrute de un baño con una excelente presión de agua y agua a la temperatura ideal para una experiencia de spa en cada uso."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/duke-suite-room-205-bathroom-vanity.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-bedroom-view.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-king-bed-1.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-king-bed-2.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-lounge-area.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-shower.webp",
+    "/wp-content/uploads/2026/06/duke-suite-room-205-window-view.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/duke-suite-room-205-bedroom-view.webp"
+  },
+  {
+   "key": "room-habitacion-consort",
+   "slug_es": "habitacion-consort",
+   "slug": "habitacion-consort",
+   "cat": "Habitaciones",
+   "f": "habitaciones",
+   "name": "Habitación Consort",
+   "kicker": "Habitación",
+   "m2": "15 m²",
+   "per": "2 personas",
+   "beds": [
+    "Queen x1"
+   ],
+   "dup": "",
+   "amen": [
+    "Aire acondicionado",
+    "Smart TV",
+    "Baño",
+    "Mini bar"
+   ],
+   "desc": [
+    "Compacta, elegante y totalmente equipada, nuestra habitación Consort cuenta con una cama queen, baño privado, Smart TV, aire acondicionado y minibar. Disfrute de un baño con una excelente presión de agua y agua a la temperatura ideal para una experiencia de spa en cada uso."
+   ],
+   "serv": [
+    "Además, nuestros huéspedes pueden disfrutar de una variedad de servicios adicionales, que incluyen desayuno bufé, recepción las 24 horas, seguridad las 24 horas, servicio de habitaciones con menú completo disponible en todo momento, una acogedora cafetería, acceso exclusivo a nuestra piscina climatizada y bar en la azotea, donde podrá disfrutar de una impresionante vista panorámica de 360° de la cautivadora ciudad de Medellín."
+   ],
+   "imgs": [
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-4.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-3.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-10.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-6.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-7.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-9.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-5.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-8.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-2.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bed-1.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bathroom-vanity-1.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bathroom-vanity-2.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bathroom-vanity-3.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bathroom-vanity-4.webp",
+    "/wp-content/uploads/2026/06/consort-suite-room-bathroom-vanity-5.webp"
+   ],
+   "cover": "/wp-content/uploads/2026/06/consort-suite-room-bed-3.webp"
+  }
+ ],
+ "pages": {
+  "habitaciones": {
+   "intro": "Descubra una experiencia de hospedaje diseñada para quienes valoran el lujo auténtico, la exclusividad y el máximo confort. Nuestras habitaciones ofrecen espacios elegantemente concebidos, acabados de alta gama, vistas privilegiadas y servicios personalizados — detalles pensados para que cada estancia se sienta distinta a cualquier otra. Ya sea para un viaje de negocios, una celebración especial o una escapada de descanso, cada detalle ha sido cuidadosamente seleccionado para brindar privacidad, sofisticación y un nivel de atención excepcional que supera las expectativas más exigentes."
+  },
+  "penthouse": {
+   "intro": "Eleve su experiencia de hospedaje a un nivel superior en nuestro exclusivo Penthouse. Diseñado para huéspedes que buscan privacidad absoluta, amplitud incomparable y un entorno de máximo lujo, este espacio ofrece vistas espectaculares, ambientes sofisticados y comodidades de primer nivel. Cada detalle ha sido pensado para brindar una estancia extraordinaria, donde el confort, la exclusividad y el servicio personalizado se combinan en algo que se siente distinto cada vez.",
+   "title_html": "<em>Penthouse</em>",
+   "cat": "Penthouse",
+   "f": "penthouse",
+   "img": "/wp-content/uploads/2026/06/emperor-phenthouse-901-room-kitchen-lounge-area.webp"
+  },
+  "presidencial": {
+   "intro": "La Habitación Presidencial representa la máxima expresión de elegancia y distinción. Con amplios espacios, diseño refinado y servicios exclusivos, es la elección perfecta para ejecutivos, personalidades y viajeros que desean una experiencia superior. Disfrute de un ambiente de lujo cuidadosamente diseñado para ofrecer privacidad, comodidad excepcional y una atención personalizada que refleja los más altos estándares de hospitalidad.",
+   "title_html": "Suite <em>Presidencial</em>",
+   "cat": "Presidencial",
+   "f": "presidencial",
+   "img": "/wp-content/uploads/2026/06/presidential-suite-room-jacuzzi-lounge-area-1.webp"
+  },
+  "suites-de-lujo": {
+   "intro": "Nuestras Suites de Lujo han sido creadas para quienes aprecian el equilibrio perfecto entre sofisticación, confort y exclusividad. Sus elegantes espacios, mobiliario de alta calidad y detalles cuidadosamente seleccionados brindan una atmósfera acogedora y refinada. Ideal para viajes de placer o negocios, cada suite ofrece una experiencia distinguida que convierte cada estancia en una oportunidad para disfrutar del lujo en su máxima expresión.",
+   "title_html": "Suites de <em>lujo</em>",
+   "cat": "Suites de lujo",
+   "f": "suites",
+   "img": "/wp-content/uploads/2026/06/imperial-suite-402-room-jacuzzi-lounge-area-2.webp"
+  },
+  "rooftop": {
+   "h1": "360° Rooftop <em>&amp; Restaurant</em>",
+   "sub": "Medellín desde el cielo: piscina, cócteles de autor y la mejor vista de El Poblado.",
+   "img": "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-4.webp",
+   "crumb": "360° Rooftop",
+   "gal_title": "Atardeceres <em>en el 11</em>",
+   "wa": "Hola, quiero reservar en el 360 Rooftop",
+   "sections": [
+    {
+     "eyebrow": "",
+     "title": "360° Rooftop",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-4.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-1.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-2.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Disfruta",
+     "title": "Vista 360° de Medellín",
+     "paras": [
+      "La magia de Medellín alcanza su punto culminante con una espectacular vista panorámica de 360 grados. Te invitamos a despertar tus sentidos y descubrir la ciudad desde una perspectiva única. Disfruta de exquisitos cócteles mientras el sol se pone en el horizonte y sumérgete en el vibrante ambiente al encenderse las luces de la ciudad.",
+      "Ya sea una ocasión especial o simplemente una noche para recordar, en Rooftop 360° cada momento se convierte en una experiencia inolvidable. Únete a nosotros en la cima y haz que tu estancia en Medellín sea realmente inolvidable."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "Reservar ahora",
+       "href": "https://fiweex.com/links/360rooftopbar",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Dias soleados",
+     "title": "Para compartir",
+     "paras": [
+      "Descubre el lugar perfecto para relajarte y disfrutar de los días soleados en Medellín. En nuestra piscina con vista panorámica, podrás sumergirte en una experiencia única mientras saboreas exquisitos cócteles y admiras las puestas de sol más espectaculares de la ciudad.",
+      "¿No te hospedas en nuestro hotel? ¡No hay problema! Nuestro exclusivo servicio Sunny Days te permite disfrutar de nuestra piscina y terraza en la azotea, incluso si no eres huésped. Solo tienes que reservar con antelación y prepararte para vivir un día inolvidable lleno de confort y vistas impresionantes."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-gastronomy-cocktails-5.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-with-friends-4.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-with-friends-3.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-with-friends-6.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-with-friends-1.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-dg.webp"
+     ],
+     "btns": [
+      {
+       "t": "Reservar ahora",
+       "href": "https://fiweex.com/links/360rooftopbar",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "UN LUGAR PARA",
+     "title": "Experimentar Medellín desde el cielo",
+     "paras": [
+      "Con las mejores vistas panorámicas de Medellín, nuestro Bar 360° es perfecto para cualquier ocasión. ¿Buscas un lugar impresionante para una cita? ¿Un ambiente moderno para tu fiesta? ¿O un sitio para disfrutar de unos cócteles con tus amigos? Aquí tu noche será inolvidable.",
+      "En el Bar 360°, la vista de la ciudad se funde con una selección de bebidas y sabores locales e internacionales. Te invitamos a descubrir nuestra selección de cócteles, cuidadosamente diseñados para deleitar tus sentidos, y déjate sorprender por nuestra exclusiva carta de bebidas.",
+      "Además, el Bar 360° es el lugar perfecto para eventos especiales, desde celebraciones privadas hasta reuniones corporativas, siempre con un toque sofisticado y vistas espectaculares de la vibrante ciudad de Medellín."
+     ],
+     "imgs": [],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Gastronomía",
+     "title": "Las mejores vistas en el corazón de Provenza",
+     "paras": [
+      "Descubre una experiencia culinaria única que combina lo mejor de la gastronomía local e internacional. Desde exquisitos platos tradicionales colombianos hasta creaciones innovadoras elaboradas con ingredientes frescos y de alta calidad por nuestros talentosos chefs.",
+      "Déjese llevar por un viaje culinario inolvidable mientras disfruta de las vistas. Este es el lugar perfecto para convertir cualquier ocasión en algo extraordinario. ¿Listo para elevar sus veladas a nuevas alturas?"
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-gastronomy-2.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-gastronomy-cocktails-1.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-360-gastronomy-cocktails-2.webp",
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-reserva.webp"
+     ],
+     "btns": [
+      {
+       "t": "Conoce nuestra gastronomía",
+       "href": "page:gastronomia",
+       "ext": false
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "",
+     "title": "Echa un vistazo a nuestro menú",
+     "paras": [
+      "¡Sumérgete en una experiencia única de 360°! Disfruta de lo mejor de la gastronomía local acompañada de cócteles de autor, diseñados para sorprenderte con cada bocado."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/hotel-haven-rooftop-menu.webp"
+     ],
+     "btns": [
+      {
+       "t": "Ver menú digital",
+       "href": "https://360-rooftop.cluvi.co/",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "",
+     "title": "Haz tu reserva y comienza a disfrutar",
+     "paras": [
+      "En 360° Rooftop, cada detalle está cuidadosamente diseñado para que su estancia tenga el lujo que se merece, y que el almuerzo o cena sea una experiencia inolvidable."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "Comenzar ahora",
+       "href": "https://fiweex.com/reservas_portal_bienvenida/aIJzgQ%3D%3D",
+       "ext": true
+      }
+     ],
+     "lists": []
+    }
+   ]
+  },
+  "swing": {
+   "h1": "Swing <em>Coffee Bar</em>",
+   "sub": "Café colombiano por la mañana, cócteles de autor por la noche.",
+   "img": "/wp-content/uploads/2026/06/swing-bar-6.webp",
+   "crumb": "Swing Bar",
+   "gal_title": "El <em>Swing</em>",
+   "wa": "Hola, quiero reservar en el Swing Bar",
+   "sections": [
+    {
+     "eyebrow": "",
+     "title": "Swing Bar",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/swing-bar-6.webp",
+      "/wp-content/uploads/2026/06/swing-bar-1.webp",
+      "/wp-content/uploads/2026/06/swing-bar-2.webp"
+     ],
+     "btns": [
+      {
+       "t": "Reservar ahora",
+       "href": "https://wa.me/573212097033?text=Hola, quiero reservar en el Swing Bar",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Despierta tus sentidos",
+     "title": "Swing Bar",
+     "paras": [
+      "Ubicado en nuestro vestíbulo, Swing Bar es mucho más que un lugar para disfrutar de una copa. Es el entorno perfecto para comenzar el día y despertar los sentidos con el auténtico sabor de Colombia en cada sorbo de un café cuidadosamente preparado a su gusto, listo para revitalizar sus sentidos y llenarlo de energía.",
+      "Por la noche, se convierte en el punto de encuentro ideal para comenzar una velada inolvidable. Déjese seducir por nuestra selección de cervezas, vinos selectos y cócteles elaborados por expertos, mientras disfruta del ambiente relajado y acogedor que solo Swing Bar puede ofrecer.",
+      "Tanto si buscas un estímulo matutino como un brindis vespertino, Swing Bar te espera para ofrecerte una experiencia sensorial que despertará tus sentidos y te dejará con ganas de más."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "Ver menu",
+       "href": "https://aws.serenarealty.com/wp-content/uploads/2021/06/Carta-Swing.pdf",
+       "ext": true
+      }
+     ],
+     "lists": []
+    }
+   ],
+   "first_img": "theme:media/swing-cafe.webp",
+   "casa_enzo": true
+  },
+  "wellness": {
+   "h1": "<em>Wellness</em>",
+   "sub": "Rituales para recuperar el equilibrio después del viaje.",
+   "img": "/wp-content/uploads/2026/07/masaje-relajante.webp",
+   "crumb": "Wellness",
+   "gal_title": "Bienestar <em>y equilibrio</em>",
+   "wa": "Hola, quiero agendar un servicio de wellness",
+   "sections": [
+    {
+     "eyebrow": "",
+     "title": "Wellness",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/07/masaje-relajante.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "",
+     "title": "Skincare",
+     "paras": [],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "Skincare",
+       "href": "http://cido/",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "",
+     "title": "Hidratación Facial",
+     "paras": [
+      "El viaje también se nota en la piel. Este ritual facial de Pasitea Spa está pensado para revivir, nutrir y restaurar su equilibrio natural, combatiendo la sequedad y el cansancio desde la primera sesión — cuarenta minutos que se notan de inmediato."
+     ],
+     "imgs": [],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Descanso",
+     "title": "Masaje Relajante",
+     "paras": [
+      "Después de un vuelo largo o un día completo explorando la ciudad, el cuerpo pide una pausa. Nuestro masaje relajante estimula la circulación, libera la tensión acumulada en los músculos y devuelve el equilibrio entre cuerpo y mente — disponible en sesiones de 1 hora o 1 hora y media, en alianza con Pasitea Spa."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/07/hidratacion-facial.webp",
+      "/wp-content/uploads/2026/07/suero-terapia-.webp"
+     ],
+     "btns": [
+      {
+       "t": "Ver portafolio completo",
+       "href": "https://aws.serenarealty.com/wp-content/uploads/2022/10/Spa.pdf",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Ultra Vit",
+     "title": "Terapia de Sueros",
+     "paras": [
+      "Después de un vuelo largo, el cuerpo lo nota antes que la mente. Nuestra terapia de sueros Ultra Vit repone la hidratación, reduce la inflamación y aporta un impulso de energía real — pensada para el jet lag, el cansancio del viaje y esos días en los que el cuerpo pide una pausa activa, no solo descanso."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/07/terapia-de-sueros.webp"
+     ],
+     "btns": [],
+     "lists": []
+    }
+   ]
+  },
+  "eventos": {
+   "h1": "<em>Eventos</em>",
+   "sub": "La noche cambia de ritmo en el piso 11: DJ en vivo, fiestas en la piscina y brunch dominical.",
+   "img": "/wp-content/uploads/2026/06/vida-nocturna-5.webp",
+   "crumb": "Eventos",
+   "gal_title": "Noches <em>en el 11</em>",
+   "wa": "Hola, quiero reservar para un evento",
+   "sections": [
+    {
+     "eyebrow": "Eventos",
+     "title": "Disfruta de la vida nocturna ¡Que la ciudad tiene para ofrecer!",
+     "paras": [
+      "La noche cambia de ritmo en el piso 11 los fines de semana, en nuestra Terraza 360. Disfruta de vibrantes sesiones de DJ en vivo mientras te deleitas con una experiencia única en el mejor mirador de Medellín. Sumérgete en una vista panorámica de 360º de la ciudad, mientras te rindes al ritmo de la música, al ambiente vibrante y sofisticado que solo nuestra Terraza puede ofrecerte."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/vida-nocturna-5.webp",
+      "/wp-content/uploads/2026/06/vida-nocturna-1.webp",
+      "/wp-content/uploads/2026/06/vida-nocturna-2.webp"
+     ],
+     "btns": [
+      {
+       "t": "Disfrutar de la Vista",
+       "href": "https://wa.me/573212097033?text=Hola, quiero reservar para un evento",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Comienza el mes",
+     "title": "Con la energía que solo tiene 360",
+     "paras": [
+      "Únete a nuestras vibrantes fiestas el primer viernes de cada mes! ¡Déjate envolver por el ritmo de la música y disfruta de una noche inolvidable en Medellín! Disfruta de una noche llena de energía, buena compañía, ambiente exclusivo, música en vivo con los mejores ritmos, entretenimiento y una atmósfera diseñada para crear recuerdos inolvidables."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/fiesta-5.webp",
+      "/wp-content/uploads/2026/06/fiesta-1.webp",
+      "/wp-content/uploads/2026/06/fiesta-2.webp"
+     ],
+     "btns": [
+      {
+       "t": "Reserva tu lugar",
+       "href": "https://wa.me/573212097033?text=Hola, quiero reservar para un evento",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Nada mejor que",
+     "title": "Fiesta en la piscina",
+     "paras": [
+      "Disfruta de la brisa, el sol y la música en un ambiente único",
+      "Descubre una experiencia inigualable en nuestra azotea. Disfruta de música, DJs en vivo y mucha diversión en nuestra piscina, ¡llevando la emoción a otro nivel!"
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/fiesta-piscina-5.webp",
+      "/wp-content/uploads/2026/06/fiesta-piscina-1.webp",
+      "/wp-content/uploads/2026/06/fiesta-piscina-2.webp"
+     ],
+     "btns": [
+      {
+       "t": "Reservar Piscina",
+       "href": "https://wa.me/573212097033?text=Hola, quiero reservar para un evento",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Disfruta de un exclusivo",
+     "title": "Brunch dominical",
+     "paras": [
+      "¡Cada segundo domingo del mes es especial con nuestro Brunch! Deléitate con una fusión de sabores locales e internacionales de 11:00 a 16:00.",
+      "Disfruta de cócteles exclusivos mientras bailas al ritmo de nuestros DJs en vivo y admiras las impresionantes vistas de la Ciudad de la Eterna Primavera."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/Brunch-dominical-5.webp",
+      "/wp-content/uploads/2026/06/Brunch-dominical-1.webp",
+      "/wp-content/uploads/2026/06/Brunch-dominical-2.webp"
+     ],
+     "btns": [
+      {
+       "t": "Reservar Brunch",
+       "href": "https://wa.me/573212097033?text=Hola, quiero reservar para un evento",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Calendario de",
+     "title": "Eventos en Medellín",
+     "paras": [
+      "Si hay algo que hace especial a Medellín, además de su clima perfecto y su gente cálida, es la increíble cantidad de eventos, festivales y celebraciones que llenan de vida la ciudad durante todo el año .Desde experiencias gastronómicas y culturales hasta conciertos, ferias y fiestas inolvidables, siempre hay algo nuevo por descubrir.",
+      "Planificar tu viaje teniendo en cuenta el calendario de eventos te permitirá vivir la esencia de la Ciudad de la Eterna Primavera, conectar con su cultura y crear recuerdos para siempre. Ya sea que visites Medellín por unos días o decidas quedarte más tiempo, cada fecha puede convertirse en una experiencia única."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "Ver eventos",
+       "href": "https://wa.me/573212097033?text=Hola, quiero reservar para un evento",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Celebración",
+     "title": "Ocasiones especiales",
+     "paras": [
+      "Ya sea para celebrar una ocasión especial o simplemente para disfrutar de una escapada romántica, nuestro hotel de lujo es el lugar perfecto para crear recuerdos inolvidables. Con un entorno elegante y servicios de primera clase, le ofrecemos el escenario ideal para todos los momentos especiales de la vida.",
+      "Nuestro hotel ofrece el equilibrio perfecto entre lujo, confort y exclusividad. Disfrute de instalaciones elegantes, atención personalizada y experiencias únicas que transformarán cada instante en un recuerdo para toda la vida.",
+      "Porque las ocasiones especiales merecen un escenario extraordinario."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "Reservar",
+       "href": "https://wa.me/573212097033?text=Hola, quiero reservar para un evento",
+       "ext": true
+      }
+     ],
+     "lists": []
+    }
+   ]
+  },
+  "gastronomia": {
+   "sections": [
+    {
+     "eyebrow": "",
+     "title": "Gastronomía",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/07/la-culpable-pizza.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Originaria de Nápoles",
+     "title": "La Culpable Pizza",
+     "paras": [
+      "Corteza dorada y crocante cubierta con queso derretido, trozos de pollo jugoso y el toque justo de pepperoni. La piña dulce y fresca equilibra lo ahumado, lo salado y la frescura tropical, dejando ese contraste que se queda en el paladar."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/07/burrata-pizza.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "De la región de Puglia",
+     "title": "Pizza Burrata Style",
+     "paras": [
+      "Una obra maestra sobre masa artesanal: el delicado equilibrio entre la intensidad del jamón serrano, la frescura de la rúcula y la suavidad absoluta de una burrata entera al centro, lista para desbordarse de sabor."
+     ],
+     "imgs": [],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "lo más italiano",
+     "title": "Salmon Ricotta y Espinaca.",
+     "paras": [
+      "Un plato sofisticado con 200 gramos de salmón, que combina su textura suave con la cremosidad del queso ricotta y la frescura del nitrógeno líquido, creando una experiencia culinaria verdaderamente única."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/07/salmon-ricotta-y-espinaca.webp",
+      "/wp-content/uploads/2026/07/mini-albondigas-endiabladas.webp"
+     ],
+     "btns": [
+      {
+       "t": "Ver platos recomendados",
+       "href": "https://360-rooftop.cluvi.co/newmenu/19402/on_table/basic/categories/46104",
+       "ext": true
+      }
+     ],
+     "lists": []
+    },
+    {
+     "eyebrow": "Santísimas",
+     "title": "Albóndigas Endiabladas",
+     "paras": [
+      "200 gr de albóndigas marinadas con canela, comino, anís y parmesano, bañadas en salsa de tomate y albahaca con el toque picante del ají sriracha, gratinadas y servidas con bocconcini derretido y pan focaccia."
+     ],
+     "imgs": [],
+     "btns": [
+      {
+       "t": "Ver platos fuertes",
+       "href": "https://360-rooftop.cluvi.co/newmenu/19402/on_table/basic/categories/46059",
+       "ext": true
+      }
+     ],
+     "lists": []
+    }
+   ]
+  },
+  "servicios": {
+   "sections": [
+    {
+     "eyebrow": "",
+     "title": "",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/servicios-hotel-haven.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Nuestros",
+     "title": "Servicios",
+     "paras": [
+      "Estamos aquí para garantizarle una estancia perfecta. Contáctenos directamente para reservar cualquiera de nuestros servicios exclusivos, ofrecidos tanto por nuestro hotel como por empresas certificadas que garantizan profesionalismo en cada detalle. Permítanos atender sus necesidades para que usted disfrute plenamente de su experiencia. Nos esforzamos por cuidar cada detalle para que no tenga que pensar en nada más."
+     ],
+     "imgs": [
+      "/wp-content/uploads/2026/06/menu-rooftop-360.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Menú 360° Rooftop",
+     "title": "Cada plato es cuidadosamente elaborado con ingredientes premium seleccionados.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/menu-desayuno.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Menú de desayuno",
+     "title": "Inicia el día con una propuesta gastronómica que sorprende desde el primer bocado.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/menu-swing.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Menú Swing",
+     "title": "Sumérgete en un mundo de sabores y texturas que despiertan los sentidos.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/mini-bar.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Precios del minibar",
+     "title": "Disfrute una selección de bebidas y snacks cuidadosamente elegidos.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/traslado-aeropuerto.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Traslados al aeropuerto",
+     "title": "Disfrute un traslado cómodo, seguro y puntual las 24 horas, los 7 días de la semana.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/hidratacion-intravenosa-vitamina.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Hidratación intravenosa",
+     "title": "Restaurar líquidos y nutrientes esenciales de forma rápida y eficiente. Con vitaminas.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/spa-masajes.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Spa, Masajes y Cuidados",
+     "title": "Experiencias de relajación que revitalizan todos sus sentidos. Renueve cuerpo y mente.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/tours-antioquia.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Tours en todo Antioquía",
+     "title": "Descubra los mejores destinos y experiencias de la región con nuestros tours guiados.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/alquiler-de-coche.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Alquiler de coches",
+     "title": "Disfrute de la libertad de viajar a su ritmo con nuestro servicio de alquiler de coches, que combina comodidad, seguridad y vehículos de calidad para cada tipo de recorrido.",
+     "paras": [],
+     "imgs": [
+      "/wp-content/uploads/2026/06/servicios-dentales.webp"
+     ],
+     "btns": [],
+     "lists": []
+    },
+    {
+     "eyebrow": "Servicios dentales",
+     "title": "Acceda a servicios dentales de alta calidad con atención profesional y tecnología especializada, diseñados para cuidar su salud bucal y brindarle una sonrisa saludable y segura.",
+     "paras": [],
+     "imgs": [],
+     "btns": [],
+     "lists": []
+    }
+   ]
+  },
+  "preguntas-frecuentes": {
+   "items": [
+    {
+     "q": "¿Cuál es la ubicación del hotel?",
+     "a": [
+      "Estamos ubicados en la Calle 10A #36-29 en el barrio El Poblado de Medellín (Colombia).",
+      "Exactamente es la zona suroriental de Medellín, y es conocido formalmente como la Comuna 14. Limita al norte con el centro de la ciudad y al sur con el municipio de Envigado.",
+      "Es una de las áreas más destacadas y exclusivas de la ciudad, reconocida por sus hoteles, centros comerciales, restaurantes y animada vida nocturna."
+     ]
+    },
+    {
+     "q": "¿Cómo llegar desde el aeropuerto o la terminal?",
+     "a": [
+      "Para llegar desde el Aeropuerto Internacional José María Córdova de Rionegro, tienes varias opciones de transporte:",
+      "1. Servicio de autobuses (autobuses)",
+      "- Ruta: Combuses ofrece un servicio de autobús entre el aeropuerto y Medellín. Puede abordar el autobús en la salida de vuelos nacionales, puerta n.° 2.",
+      "- Parada en Medellín: El autobús te dejará en la terminal de San Diego o en la estación de metro Exposiciones.",
+      "- Costo: La tarifa es de 15.500 COP por persona.",
+      "- Horario: Funciona las 24 horas del día con salidas cada 15 minutos.",
+      "- Ruta alternativa: Desde la Terminal de San Diego o la Estación Exposiciones, puede tomar un taxi o el sistema de metro para llegar a su destino en El Poblado.",
+      "2. Servicio de taxi:",
+      "- Disponibilidad: Hay taxis disponibles en la zona de llegadas del aeropuerto.",
+      "- Costo: El viaje directo a El Poblado suele costar entre $70,000 y $100,000 COP.",
+      "- Horario: Aproximadamente 40 minutos, dependiendo del tráfico.",
+      "3. Transporte privado:",
+      "- Reservas: Empresas como Paisa Tours ofrecen traslados privados desde el aeropuerto a Medellín.",
+      "- Ventajas: Este servicio puede ser más cómodo y personalizado, ideal si lleva mucho equipaje o prefiere un traslado directo.",
+      "4. Alquilar un coche:",
+      "- Opciones: Varias compañías ofrecen servicios de alquiler de coches en el aeropuerto.",
+      "- Consideraciones: Debe familiarizarse con las rutas y el tráfico de Medellín.",
+      "Recomendación: Si busca una opción económica y confiable, el servicio de autobuses Combuses es adecuado. Sin embargo, si prefiere comodidad y un viaje directo, un taxi o un servicio de transporte privado sería más conveniente.",
+      "Nota: Los costos y los tiempos de viaje pueden variar según la hora del día y las condiciones del tráfico. Se recomienda consultar la información actualizada antes del viaje."
+     ]
+    },
+    {
+     "q": "¿Qué servicios y comodidades están incluidos en el precio de la habitación?",
+     "a": [
+      "- Desayuno: Ofrecemos desayuno buffet incluido en la tarifa.",
+      "- Conexión Wi-Fi: Acceso gratuito a internet en las habitaciones y zonas comunes.",
+      "- Servicio de limpieza diario: Limpieza diaria de la habitación.",
+      "- Recepción 24 horas: Servicio al cliente disponible las 24 horas del día.",
+      "- Televisión por cable/satélite: Televisores en las habitaciones con una variedad de canales.",
+      "- Caja fuerte: Hay cajas fuertes disponibles en las habitaciones o en la recepción.",
+      "- Artículos de aseo personal: Suministro de champú, jabón y otros productos de higiene personal.",
+      "- Cafetería acogedora: Un espacio para relajarse y disfrutar de bebidas y aperitivos.",
+      "- Piscina y bar en la azotea: Acceso exclusivo a una piscina y bar en la azotea con vistas panorámicas de 360° de Medellín"
+     ]
+    },
+    {
+     "q": "¿El hotel ofrece transporte al aeropuerto o servicio de traslado en la ciudad?",
+     "a": [
+      "Sí, ofrecemos este servicio; debe coordinarse con nuestros agentes en la recepción del hotel."
+     ]
+    },
+    {
+     "q": "¿Qué atracciones o lugares turísticos importantes hay cerca del hotel?",
+     "a": [
+      "El Poblado, uno de los barrios más emblemáticos de Medellín, ofrece una variedad de atractivos que combinan cultura, gastronomía y vida nocturna. Aquí te presentamos cinco lugares imperdibles para que los visitantes extranjeros aprovechen al máximo su estadía en esta vibrante zona:",
+      "Considerado el epicentro de la vida nocturna de Medellín, está rodeado de una gran variedad de bares, restaurantes y discotecas. Es el lugar ideal para vivir la energía nocturna de la ciudad y socializar con locales y turistas.",
+      "Museo y Jardines El Castillo.",
+      "Inspirado en los castillos del Valle del Loira en Francia, este museo ofrece una muestra del arte y la arquitectura europeos en pleno centro de Medellín. Sus jardines son ideales para paseos tranquilos y picnics, brindando un remanso de paz lejos del bullicio urbano.",
+      "Museo de Arte Moderno de Medellín (MAMM). Ubicado en la zona de Ciudad del Río, el MAMM presenta exposiciones de arte contemporáneo y es un punto de encuentro cultural. Su arquitectura moderna y sus frecuentes eventos lo convierten en una visita obligada para los amantes del arte.",
+      "Parque El Poblado. Este parque es un lugar histórico, ya que marca el sitio donde se fundó el primer asentamiento en el Valle de Aburrá. Rodeado de cafés y tiendas, es un lugar ideal para relajarse y observar la vida cotidiana de la ciudad.",
+      "Centro Comercial Santafé.",
+      "Este centro comercial es uno de los más grandes de Medellín y ofrece una amplia variedad de tiendas, restaurantes y entretenimiento. Su diseño moderno y sus eventos temáticos lo convierten en un lugar popular tanto para locales como para turistas."
+     ]
+    },
+    {
+     "q": "¿El hotel tiene restaurante o servicio de comidas? ¿Cuál es el horario de apertura?",
+     "a": [
+      "Sí, nuestro hotel cuenta con el 360 Rooftop Bar, ubicado en el piso 11 del Hotel Haven, que ofrece una variada experiencia gastronómica en un ambiente moderno y acogedor. Nuestro menú incluye opciones como pizzas, carnes a la parrilla y platos de la cocina colombiana, acompañados de una selección de cócteles elaborados con esmero.",
+      "El horario de atención es:",
+      "- De domingo a miércoles: de 7:00 a.m. – 23:00 p.m.",
+      "- Jueves: 7:00 a.m. – 12:00 p.m.",
+      "- Viernes – Sábado: 7:00 a.m. – 2:00 p.m.",
+      "Este establecimiento es conocido por su ambiente agradable, sus vistas panorámicas de la ciudad y su excelente servicio al cliente."
+     ]
+    },
+    {
+     "q": "¿Qué opciones de transporte público o privado hay disponibles cerca del hotel?",
+     "a": [
+      "En El Poblado, Medellín, viajeros y residentes tienen acceso a una variedad de opciones de transporte que se adaptan a diferentes necesidades. Los tres principales medios de transporte en la zona son:",
+      "1. Metro de Medellín",
+      "- El sistema de metro es uno de los orgullos de la ciudad y una forma eficiente de desplazarse.",
+      "- Estación El Poblado: La estación El Poblado conecta a los usuarios con el resto de Medellín.",
+      "- Ventajas: Barato y puntual. Conecta con líneas complementarias como el Metrocable, que permite explorar lugares como el Parque Arví.",
+      "- Barato y puntual.",
+      "- Conecta con líneas complementarias como el Metrocable, que permite explorar lugares como el Parque Arví.",
+      "- Concejo: Ideal para evitar el tráfico en las horas punta.",
+      "2. Aplicaciones para taxis y transporte",
+      "- Los taxis tradicionales son una opción fiable, y aplicaciones como Uber, DiDi y Cabify son muy utilizadas en El Poblado.",
+      "- Ventajas: Disponible las 24 horas del día. Útil para viajes cortos y para ir directamente a lugares específicos. Las aplicaciones te permiten conocer con antelación el coste estimado del viaje.",
+      "- Disponible las 24 horas del día.",
+      "- Útil para viajes cortos y para ir directamente a lugares específicos.",
+      "- Las aplicaciones te permiten conocer con antelación el coste estimado del viaje.",
+      "- Concejo: Compruebe siempre que el taxi tenga un taxímetro que funcione.",
+      "3. Autobuses urbanos",
+      "- El sistema de autobuses públicos de Medellín incluye rutas que pasan por El Poblado y conectan con otras partes de la ciudad.",
+      "- Ventajas: Económico y con amplia cobertura. Adecuado para quienes conocen las rutas y quieren ahorrar dinero.",
+      "- Económico y con amplia cobertura.",
+      "- Adecuado para quienes conocen las rutas y quieren ahorrar dinero.",
+      "- Concejo: Es recomendable preguntar a los lugareños o utilizar aplicaciones como Moovit para identificar las rutas correctas.",
+      "Consejo general:",
+      "El Poblado es una de las zonas más concurridas de Medellín, por lo que el tráfico puede ser intenso durante las horas pico. Planifique sus rutas con anticipación y elija el medio de transporte más adecuado para cada ocasión."
+     ]
+    },
+    {
+     "q": "¿Es segura la zona donde se encuentra el hotel, especialmente para caminar de noche?",
+     "a": [
+      "El Poblado es considerado una de las zonas más seguras y turísticas de Medellín, atrayendo a muchos visitantes por su vibrante vida nocturna, restaurantes y tiendas. Sin embargo, es importante que los viajeros tomen ciertas precauciones para garantizar una experiencia segura y placentera. Aquí les ofrecemos algunos consejos prácticos para quienes planean visitar El Poblado:",
+      "- Zonas recomendadas: Lugares como Provenza, Parque Lleras y Parque El Poblado son populares y suelen estar bien vigilados. Estas zonas cuentan con una presencia constante de turistas y residentes, lo que contribuye a un entorno más seguro.",
+      "- Evite las zonas desconocidas: Es aconsejable no aventurarse en calles o barrios poco conocidos, especialmente de noche, ya que pueden carecer de iluminación adecuada y presencia policial.",
+      "2. Tome precauciones por la noche:",
+      "- Transporte seguro: Después del anochecer, es preferible utilizar servicios de transporte confiables, como taxis con licencia o aplicaciones de transporte. Esto es especialmente importante al desplazarse entre zonas o al regresar a su alojamiento.",
+      "- Evite caminar solo: Si bien El Poblado es generalmente seguro, es recomendable evitar caminar solo por la noche en calles desiertas o mal iluminadas. Opte por caminar en grupo y por rutas concurridas.",
+      "3. Manejo de pertenencias personales:",
+      "- Sea discreto con los objetos de valor: Procure no exhibir joyas, aparatos electrónicos caros u otros objetos de valor en público para evitar llamar la atención.",
+      "- Vigilancia constante: Mantén tus pertenencias, como bolsos y mochilas, a la vista y seguras en todo momento, especialmente en lugares concurridos como bares y restaurantes.",
+      "4. Uso de la tecnología y la comunicación:",
+      "- Aplicaciones de transporte: Utilice aplicaciones aprobadas para solicitar transporte y verifique siempre la información del conductor y del vehículo antes de abordar.",
+      "- Conexiones seguras: Cuando utilice redes Wi-Fi públicas, evite acceder a información confidencial y considere la posibilidad de usar una VPN para proteger sus datos.",
+      "5. Interactuar con desconocidos:",
+      "- Proceda con cautela en las nuevas relaciones: Si bien la hospitalidad local es extraordinaria, mantenga una actitud prudente al interactuar con personas que acaba de conocer, especialmente de noche.",
+      "- Informa a los demás: Haz saber a tus amigos o familiares tus planes y tu ubicación, especialmente si decides explorar la vida nocturna o participar en actividades con nuevos conocidos.",
+      "6. Información y actualizaciones:",
+      "- Manténgase informado: Consulte fuentes locales y confiables para estar al tanto de cualquier alerta o aviso de seguridad en la zona.",
+      "- Asistencia de emergencia: Tenga a mano los números de contacto de las autoridades locales y de su consulado o embajada por si necesita ayuda.",
+      "En resumen, si bien El Poblado es una de las zonas más seguras y atractivas de Medellín, es importante que los viajeros mantengan una actitud vigilante y sigan estos consejos para garantizar una experiencia segura y agradable durante su visita."
+     ]
+    }
+   ]
+  },
+  "serena-rewards": {
+   "intro": "Bienvenidos a la vibrante ciudad de Medellín. Serena Hotels es una empresa hotelera que administra y opera hoteles boutique en el corazón de Provenza, El Poblado. Nuestra misión principal es brindar un servicio de hospitalidad excepcional a nuestros huéspedes y superar sus expectativas. Creemos que la comunicación es la base de un servicio excelente y para nosotros es fundamental conocer a nuestros clientes y huéspedes; nuestro equipo se esfuerza por ofrecer servicios personalizados y de alta calidad. Nos enorgullece contar con un equipo de trabajo altamente calificado que se esfuerza por crear una experiencia excepcional para cada uno de nuestros visitantes, ya sea su primera visita o si son huéspedes frecuentes. Permítanos conocerle mejor registrándose en nuestro programa de fidelización con grandes beneficios.",
+   "tiers": [
+    {
+     "name": "Silver",
+     "cls": "ts",
+     "nights": "Más de 7 noches al año",
+     "items": [
+      "10% de descuento en comida y bebida",
+      "7% de descuento en alojamiento",
+      "10% de descuento en minibar",
+      "Bebida de bienvenida al momento del check-in"
+     ]
+    },
+    {
+     "name": "Golden",
+     "cls": "t3",
+     "nights": "Más de 15 noches al año",
+     "items": [
+      "15% de descuento en comida y bebida",
+      "10% de descuento en alojamiento",
+      "15% de descuento en minibar",
+      "Uso gratuito de la piscina del 360° Rooftop & Restaurante",
+      "Bebida de bienvenida al momento del check-in",
+      "Check-in anticipado sin costo adicional (sujeto a disponibilidad)",
+      "Elige tu habitación preferida de la misma categoría sin costo adicional (sujeto a disponibilidad)",
+      "Entrada gratuita a los eventos propios del hotel",
+      "Reserva sin garantía: sin penalización por cancelación directa hasta 15 días antes del check-in; de lo contrario se cobra la primera noche"
+     ]
+    },
+    {
+     "name": "Diamond",
+     "cls": "tdia",
+     "nights": "Más de 25 noches al año",
+     "items": [
+      "20% de descuento en comida y bebida",
+      "15% de descuento en alojamiento",
+      "20% de descuento en minibar",
+      "Uso gratuito de la piscina del 360° Rooftop & Restaurante",
+      "Bebida de bienvenida al momento del check-in",
+      "1 traslado aeropuerto-hotel incluido",
+      "Early check-in y late check-out sin costo adicional (sujeto a disponibilidad)",
+      "Upgrade sin costo a la siguiente categoría (sujeto a disponibilidad)",
+      "Elige tu habitación preferida de la misma categoría sin costo adicional (sujeto a disponibilidad)",
+      "Entrada gratuita a los eventos propios del hotel",
+      "Reserva sin garantía: sin penalización por cancelación directa hasta 10 días antes del check-in; de lo contrario se cobra la primera noche"
+     ]
+    },
+    {
+     "name": "Black",
+     "cls": "t4",
+     "nights": "Más de 50 noches al año",
+     "items": [
+      "25% de descuento en alimentos y bebidas",
+      "15% de descuento en alojamiento",
+      "25% de descuento en minibar",
+      "Uso gratuito de la piscina del 360° Rooftop & Restaurante",
+      "Botella de champán de bienvenida al momento del check-in",
+      "2 traslados aeropuerto-hotel incluidos",
+      "Early check-in y late check-out sin costo adicional (sujeto a disponibilidad)",
+      "Upgrade sin costo a la siguiente categoría (sujeto a disponibilidad)",
+      "Elige tu habitación preferida de la misma categoría sin costo adicional (sujeto a disponibilidad)",
+      "Entrada gratuita a los eventos propios del hotel y cócteles de bienvenida",
+      "Reserva sin garantía: sin penalización por cancelación directa hasta 5 días antes del check-in; de lo contrario se cobra la primera noche"
+     ]
+    }
+   ],
+   "note": "Para los huéspedes de Haven, el acceso al 360° Rooftop & Restaurante y el desayuno buffet ya están incluidos en la estadía."
+  },
+  "politica-de-visitantes": {
+   "title_html": "Política de <em>visitantes</em>",
+   "sub": "Registro de huéspedes y visitantes en Haven, de acuerdo con la ley colombiana.",
+   "crumb": "Política de visitantes",
+   "prose": "<p>A efectos de esta política, el &quot;huésped principal&quot; es la persona cuyo nombre figura en la reserva y que es responsable económicamente de la misma y de los gastos adicionales. El &quot;huésped&quot; es la persona que se registra con el huésped principal y tiene previsto residir durante la mayor parte de la estancia. El &quot;visitante&quot; es una persona que se registra posteriormente durante la reserva y no se aloja durante toda la estancia.</p>\n<p>Según la ley colombiana, artículo 17 de la Ley 679 de 2011, los huéspedes no registrados, los visitantes no registrados y los menores de 18 años (a menos que estén acompañados por sus padres) no tienen permitido el ingreso a las habitaciones del hotel. Los únicos documentos de identificación aceptables para el registro son el pasaporte físico o la cédula colombiana física. No se aceptan copias digitales ni en papel. No se aceptan contraseñas ni denuncias policiales por pérdida de identificación.</p>\n<p>Si el número total de huéspedes y visitantes excede el número máximo de la reserva, se aplicará un cargo de 120.000 COP por día calendario por persona adicional.</p>\n<p>En nuestro sistema informático, el día del calendario comienza a medianoche (12:00 AM).</p>\n<p>Cada huésped registrado en la habitación puede modificar el nombre de un visitante una vez al día, sin cargo adicional, sin exceder el número máximo permitido en la reserva. Cada visitante adicional, más de uno por día por huésped registrado, tendrá un cargo nominal de 120.000 COP. Los cargos por visitantes o huéspedes adicionales solo se pueden cargar a la habitación. Sin embargo, al momento de la salida, cualquier parte de la factura se puede pagar en efectivo.</p>\n<p>Ejemplo A): Si un huésped principal reserva una habitación individual con ocupación doble, podrá tener un visitante por día calendario sin cargo adicional.</p>\n<p>Ejemplo B): Si un huésped principal reserva un apartamento de 3 habitaciones con capacidad para seis personas, pero está ocupado por 3 huéspedes, cada huésped podrá registrar un visitante por día calendario hasta un máximo de 3 visitantes, sin cargo adicional.</p>\n<p>Ejemplo C): Si un huésped principal reserva un apartamento de 3 habitaciones con capacidad para seis personas, pero está ocupado por 4 huéspedes, cada huésped podrá registrar un visitante por día calendario hasta un máximo de 2 visitantes, sin cargo adicional.</p>\n<p>Cualquier huésped o visitante no registrado que ingrese a una habitación sin informar a la recepción, estaría infringiendo la ley colombiana y conllevaría un cargo automático de 300.000 COP y la posible cancelación de la reserva sin reembolso.</p>"
+  },
+  "terminos-y-condiciones": {
+   "title_html": "Términos y <em>condiciones</em>",
+   "sub": "Reservas, garantía, privacidad y horarios del hotel.",
+   "crumb": "Términos y condiciones",
+   "prose": "<h2 id=\"1-terminos-y-condiciones\">1. términos y condiciones</h2>\n<p>Al recibir la confirmación de la reserva, el huésped acepta las siguientes reglas y políticas y se compromete a proporcionar información veraz sobre sí mismo.</p>\n<ul><li>Fecha de entrada/salida y tarifa diaria de la habitación.</li><li>El huésped tiene la obligación ineludible de registrarse al llegar al hotel y de realizar el check-out al final de su estancia, respetando el horario de check-in/check-out, y debe ser el titular de la tarjeta con la que se realizó el pago.</li><li>En nuestros establecimientos no se permite la salida tardía sin previo aviso y verificación de disponibilidad, por lo que los huéspedes que no cumplan con esta norma después de la hora establecida (11:00 AM) serán penalizados teniendo en cuenta las siguientes condiciones:</li><li>Desde las 12:00 hasta las 18:00 horas se cobrará el 50% de la tarifa diaria.</li><li>Después de las 18:00 horas se cobrará la noche completa.</li><li>Antes de las 15:00, se cobrará el 50% de la tarifa diaria.</li><li>El huésped es responsable de cualquier daño causado a sí mismo, a otros huéspedes, al personal, a la infraestructura y al equipamiento del hotel, así como a las personas que lo acompañan, y está obligado a pagar los daños o a compensarlos.</li><li>Si se encuentra en una habitación con jacuzzi, debe vigilar cuidadosamente el nivel del agua en todo momento. El desbordamiento del agua generará un cargo automático por limpieza de COP 100,000, además de cualquier cargo adicional por daños a la propiedad.</li><li>Se aplicará un cargo adicional de limpieza de COP 100.000 por mascotas, y cualquier daño causado por las mascotas se cargará a su cuenta por día de estadía.</li></ul>\n<ul><li>El hotel no se responsabiliza del dinero ni de los objetos de valor que se dejen en la habitación o en las zonas comunes, por lo que le recordamos que puede dejarlos en la caja fuerte de su habitación o en la administración, contactando directamente con la recepción.</li><li>Las excursiones y el transporte son proporcionados por un tercero, las experiencias individuales pueden verse afectadas por circunstancias ajenas a nuestro control, por lo que el hotel no se responsabilizará de ningún daño o perjuicio derivado de las mismas.</li><li>Está prohibido portar armas de cualquier tipo dentro de nuestras instalaciones.</li><li>Está prohibido sacar de las habitaciones y zonas comunes cualquier elemento o mueble.</li><li>Está estrictamente prohibido hacer ruido o poner música a alto volumen después de las 22:00 horas. En caso de incumplimiento de esta norma, el huésped deberá abonar una multa de 100 USD. Cualquier alteración del orden público que requiera la intervención de la policía podrá conllevar la cancelación inmediata de la reserva sin derecho a reembolso por el resto de la estancia.</li><li>Queda prohibido el uso de drogas intoxicantes, estupefacientes o sustancias psicotrópicas en cualquier zona del hotel.</li></ul>\n<h2 id=\"2-politica-de-reservas\">2. política de reservas</h2>\n<p>Al recibir la confirmación de la reserva, el huésped acepta las siguientes reglas y políticas y se compromete a proporcionar información veraz sobre sí mismo.</p>\n<ul><li>TARIFA NO REEMBOLSABLE: Si se realiza un pago por adelantado, la reserva no es reembolsable y no se permite ningún cambio de fecha, cambio de habitación ni el uso de los pagos realizados como crédito para futuras reservas.</li><li>TARIFA FLEXIBLE: El huésped puede cancelar la reserva hasta 48 horas antes del check-in sin penalización; de lo contrario, se le cobrará el 100% de la reserva.</li><li>AUSENCIAS EN RESERVAS: La penalización por no presentarse será el importe total de la reserva.</li></ul>\n<p>NOTA: Las políticas anteriores se aplican a las reservas realizadas directamente o a través de nuestra página web.</p>\n<h2 id=\"3-minibar\">3. minibar</h2>\n<p>HAVEN A DESIGN HOTEL dispone de servicio de minibar en las habitaciones, que se ofrecen a disposición del huésped y que puede utilizarse cuando lo desee.</p>\n<h2 id=\"4-formulario-de-garantia\">4. formulario de garantía</h2>\n<p>Al momento del check-in, deberá completar nuestro formulario de garantía con información clara y veraz de la tarjeta de crédito del titular de la reserva. Esto nos autoriza a tener un registro de la información de su tarjeta de crédito y a cargar los servicios o productos solicitados y/o adquiridos durante su estadía. Asimismo, nos permite cubrir los cargos adicionales que puedan generarse por daños o molestias durante su estadía en nuestras instalaciones o en caso de que abandone el hotel sin completar el proceso de salida. Este requisito se aplica independientemente de las garantías definidas en las OTA a través de las cuales se generó la reserva. La información proporcionada por el titular será tratada de acuerdo con nuestra Política de Privacidad.</p>\n<h2 id=\"5-politica-de-no-fumar\">5. política de no fumar</h2>\n<p>La Resolución 1956 del 30 de mayo de 2008 del Ministerio de Protección Social establece medidas y obligaciones que los establecimientos comerciales deben cumplir en relación con el consumo de cigarrillos o tabaco que contribuyen al cuidado de la salud y el medio ambiente. Por lo tanto, HAVEN, A DESIGN HOTEL prohíbe fumar dentro de las instalaciones y solo se permitirá fumar en la zona de la piscina Rooftop 360°. En caso de que un huésped no cumpla con esta política, se le informará del recargo correspondiente por limpieza y eliminación de humo.</p>\n<h2 id=\"6-politica-para-huespedes\">6. política para huéspedes</h2>\n<ul><li>A efectos de esta política, “Huésped Principal” es la persona cuyo nombre figura en la reserva y que es responsable económicamente de la misma y de los cargos adicionales. “Huésped” es una persona que se registra con el Huésped Principal y tiene la intención de ocupar la habitación durante la mayor parte de la estancia.</li><li>Se considera “visitante” a la persona que llega más tarde en la reserva y no se aloja durante toda la estancia.</li><li>De conformidad con la ley colombiana, artículo 17 de la Ley 679 de 2011, los huéspedes no registrados, los visitantes no registrados y las personas menores de 18 años no tienen permitido ingresar a las habitaciones de hotel.</li><li>NOTA: Solo se permitirá el ingreso al hotel a menores de 18 años acompañados por sus padres y con un certificado de parentesco. Si los menores van acompañados por otras personas, deberán presentar una autorización notariada de sus padres.</li></ul>\n<ul><li>Los únicos documentos de identificación aceptados para el registro son el pasaporte físico o el documento nacional de identidad colombiano físico. No se aceptarán copias digitales ni en papel. Tampoco se aceptarán contraseñas ni denuncias policiales por pérdida de identificación.</li><li>El número total de huéspedes no puede exceder la capacidad máxima de la habitación; estos no tendrán costo siempre y cuando los nombres de los huéspedes no cambien el mismo día del registro de entrada; de lo contrario, habrá un costo adicional de 120.000 por persona.</li><li>ADVERTENCIA: LA EXPLOTACIÓN Y EL ABUSO DE MENORES EN COLOMBIA SON DELITOS TOTALMENTE PUNIBLES CON PRISIÓN. (LEY 679 DE 2001), que autoriza la denuncia ante las autoridades competentes de cualquier acto delictivo contra menores.</li></ul>\n<h2 id=\"7-politica-de-privacidad\">7. política de privacidad</h2>\n<p>HAVEN, A DESIGN HOTEL es consciente de la importancia de la privacidad de la información,</p>\n<ul><li>La información proporcionada por nuestros clientes no será cedida a terceros bajo ninguna circunstancia ni para ningún uso.</li><li>La información se mantendrá bajo estricta confidencialidad y solo se utilizará para mantener el contacto comercial.</li><li>Los sistemas informáticos de HAVEN, A DESIGN HOTEL, cuentan con todos los protocolos de seguridad necesarios para mantener la protección de la información.</li><li>Nuestros clientes tienen derecho a acceder, rectificar, oponerse o cancelar la información que han proporcionado.</li></ul>\n<h2 id=\"8-horas\">8. horas</h2>\n<ul><li>Recepción: 24 horas</li><li>Hora de entrada: 15:00 h. Hora de salida: 11:00 h.</li></ul>"
+  },
+  "blogs": {
+   "intro": "Descubre recomendaciones, guías y experiencias para disfrutar Medellín al máximo. En nuestro blog encontrarás consejos de viaje, planes imperdibles, gastronomía, cultura y todo lo que necesitas para hacer de tu estancia en Hotel Haven una experiencia inolvidable."
+  }
+ },
+ "posts": [
+  {
+   "key": "post-experiencias-gastronomicas-de-cinco-estrellas-en-medellin",
+   "slug_es": "experiencias-gastronomicas-de-cinco-estrellas-en-medellin",
+   "slug": "experiencias-gastronomicas-de-cinco-estrellas-en-medellin",
+   "title": "Experiencias gastronómicas de cinco estrellas en Medellín",
+   "date": "agosto 5, 2026",
+   "ex": "Una guía completa para los amantes de la comida. Medellín, conocida como la “Ciudad de",
+   "img": "/wp-content/uploads/2026/07/experiencia-gastronomica-medellin.webp",
+   "prose": "<h2 id=\"una-guia-completa-para-los-amantes-de-la-comida\">Una guía completa para los amantes de la comida.</h2>\n<p>Medellín, conocida como la &quot;Ciudad de la Eterna Primavera&quot;, sorprende a sus visitantes con su clima perfecto y paisajes espectaculares, sino también con una vibrante y siempre cambiante escena gastronómica.</p>\n<p>En los últimos años, la capital antioqueña se ha convertido en un destino imperdible para los amantes de la buena mesa, gracias a una combinación única de innovación culinaria, tradición local y experiencias gastronómicas de primer nivel.</p>\n<p>En este artículo, te llevaremos a un recorrido detallado por los sabores que hacen de Medellín un destino gastronómico imperdible. Exploraremos restaurantes de alta cocina, reinterpretaciones de platillos típicos, rutas temáticas y consejos para aprovechar al máximo esta oferta culinaria.</p>\n<h2 id=\"la-evolucion-de-la-gastronomia-de-medellin\">La evolución de la gastronomía de Medellín</h2>\n<p>Medellín ha experimentado una transformación cultural y económica en las últimas décadas, y su gastronomía ha seguido la misma tendencia. Lo que antes era un mercado dominado por platillos tradicionales como la bandeja paisa y el mondongo, ahora es una fusión de técnicas internacionales y una creatividad sin límites.</p>\n<p>La ciudad ha atraído a chefs visionarios que ven en Medellín un lienzo para experimentar con ingredientes locales y reinterpretar la gastronomía colombiana. Este auge culinario se debe también al aumento del turismo y al interés global por la cultura colombiana, lo que ha llevado a los restaurantes de Medellín a competir con los de ciudades como Bogotá, Lima y Ciudad de México.</p>\n<h2 id=\"restaurantes-de-alta-cocina-que-no-te-puedes-perder\">Restaurantes de alta cocina que no te puedes perder</h2>\n<h3 id=\"1-carmen-fusion-contemporanea-con-ingredientes-locales\">1. Carmen: Fusión contemporánea con ingredientes locales.</h3>\n<p>Ubicado en el vibrante barrio de El Poblado, Carmen es un referente en la gastronomía de Medellín. Este restaurante combina técnicas modernas con ingredientes tradicionales colombianos para crear una experiencia culinaria inolvidable.</p>\n<p>Platos destacados: Ceviche de camarones con mango y coco, Posta negra (carne cocinada en panela) con puré de plátano.</p>\n<p>Ambiente: Un espacio cálido y acogedor, ideal para cenas en grupo o reuniones íntimas.</p>\n<p>Recomendación: No se pierda la carta de vinos, cuidadosamente seleccionada para complementar cada plato.</p>\n<h3 id=\"2-oci-mde-cocina-a-fuego-lento-con-sabores-locales\">2. Oci.Mde: Cocina a fuego lento con sabores locales</h3>\n<p>Oci.Mde es el lugar perfecto para quienes aprecian la comida lenta, donde cada plato es una obra maestra de paciencia y sabor.</p>\n<p>Ambiente: Un espacio cálido y acogedor, ideal para cenas en grupo o reuniones íntimas.</p>\n<p>Platos destacados: Costillas de cerdo cocinadas a la leña durante 12 horas. Puré de ñame con un toque de trufa.</p>\n<p>Recomendación: No se pierda la carta de vinos, cuidadosamente seleccionada para complementar cada plato.</p>\n<h3 id=\"3-el-cielo-una-experiencia-multisensoria\">3. El Cielo: una experiencia multisensoria</h3>\n<p>El restaurante El Cielo, galardonado con una estrella Michelin, es mucho más que un restaurante; es un viaje sensorial que combina arte, gastronomía y emoción.</p>\n<p>Ambiente: Sofisticado y moderno, con especial énfasis en la presentación teatral de los platos.</p>\n<p>Platos destacados: Terapia con chocolate: Una experiencia interactiva donde los invitados juegan con el chocolate antes de degustarlo, Pescado en salsa chontaduro y de coco.</p>\n<p>Recomendación: Reserve con antelación y prepárese para un menú degustación que le llevará a través de 12 a 15 pasos.</p>\n<h3 id=\"4-mondongo-s-tradicion-con-calidad-superior\">4. Mondongo&#x27;s: Tradición con calidad superior</h3>\n<p>Aunque es más conocido por sus platos típicos, Mondongo&#x27;s eleva la cocina tradicional a un nivel superior gracias a su calidad y autenticidad.</p>\n<p>Mondongo&#x27;s eleva los platos tradicionales a un nivel superior gracias a su calidad y autenticidad.</p>\n<p>Ambiente: Familiar y acogedor, perfecto para una auténtica experiencia paisa.</p>\n<p>Platos destacados: Mondongo (sopa tradicional de callos y cerdo). Frijoles con carne picada de res y arroz.</p>\n<p>Recomendación: Acompáñalo con una bebida local como aguapanela con limón.</p>\n<h2 id=\"nuevas-interpretaciones-de-platos-tipicos-de-medellin\">Nuevas interpretaciones de platos típicos de Medellín</h2>\n<p>Uno de los aspectos más interesantes de la gastronomía de Medellín es cómo los chefs han reinventado platos tradicionales, elevándolos a un nivel gourmet sin perder su esencia.</p>\n<p>La bandeja paisa reinventada</p>\n<p>En restaurantes como Carmen y El Cielo, la bandeja paisa se transforma en un plato elegante con porciones equilibradas y una presentación artística. Ingredientes como el chicharrón y la morcilla se reinterpretan para sorprender incluso a los comensales más exigentes.</p>\n<p>Sopa de alubias con un toque moderno</p>\n<p>La sopa de alubias, un clásico regional, se reinventa con la adición de ingredientes como espuma de coco o chorizo caramelizado, elevando este plato a la categoría de alta cocina.</p>\n<h2 id=\"tours-gastronomicos-tematicos\">Tours gastronómicos temáticos</h2>\n<p>Para quienes deseen explorar más de un restaurante, Medellín ofrece recorridos temáticos que combinan lo mejor de su oferta culinaria:</p>\n<p>1. Tour gastronómico callejero</p>\n<p>Uno de los aspectos más interesantes de la gastronomía de Medellín es cómo los chefs han reinventado platos tradicionales, elevándolos a un nivel gourmet sin perder su esencia.</p>\n<p>Empanadas de la 70: Crujientes y rellenas de carne o pollo. Arepas de queso: Un clásico para el desayuno o la merienda. Buñuelos gigantes: Perfectos para compartir.</p>\n<p>2. Ruta de cafeterías especializadas</p>\n<p>Para los amantes del café, Medellín ofrece experiencias inolvidables:</p>\n<p>Pergamino: Degustación de cafés de origen y métodos de preparación alternativos. Urbania Café: Talleres de barista y catas guiadas.</p>\n<p>Café Revolución: Café artesanal en un ambiente relajado.</p>\n<p>3. Tour de alta gastronomía por El Poblado</p>\n<p>El Poblado alberga algunos de los mejores restaurantes de la ciudad, lo que lo convierte en un destino ideal para una velada gastronómica.</p>\n<h2 id=\"consejos-para-los-amantes-de-la-gastronomia-en-medellin\">Consejos para los amantes de la gastronomía en Medellín</h2>\n<ul><li>Reserva con antelación: Los restaurantes más populares suelen llenarse rápidamente.</li><li>Descubre los menús de degustación: Muchos restaurantes ofrecen opciones de varios platos que te permiten probar una variedad de platos.</li><li>Pregunte por los ingredientes locales: los chefs estarán encantados de explicarle cómo incorporan los productos locales en sus creaciones.</li><li>Visita durante las fiestas: Durante eventos como la Feria de las Flores, muchos restaurantes ofrecen menús especiales.</li></ul>\n<h2 id=\"en-conclusion\">En conclusión</h2>\n<p>Medellín es un destino turístico no solo por sus paisajes y cultura, sino también por su gastronomía. Con una oferta culinaria que combina tradición y vanguardia, la ciudad tiene algo para todos los paladares, desde platos típicos reinventados hasta lujosas experiencias gastronómicas.</p>\n<p>Al visitar Medellín, no deje de explorar su riqueza gastronómica. Desde la alta cocina en un restaurante con estrella Michelin hasta la comida callejera en los mercados locales, cada bocado le conectará con la esencia de esta vibrante ciudad.</p>",
+   "published": "2026-08-05T17:54:07+00:00",
+   "modified": "2026-08-05T17:54:49+00:00"
+  },
+  {
+   "key": "post-las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera",
+   "slug_es": "las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera",
+   "slug": "las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera",
+   "title": "Las 10 mejores cosas que hacer y ver en la Ciudad de la Eterna Primavera",
+   "date": "agosto 5, 2026",
+   "ex": "Conocida como la “Ciudad de la Eterna Primavera” Llamada así por su clima templado y",
+   "img": "/wp-content/uploads/2026/07/10-mejores-cosas-para-hacer-y-ver-en-medellin.webp",
+   "prose": "<h2 id=\"conocida-como-la-ciudad-de-la-eterna-primavera\">Conocida como la &quot;Ciudad de la Eterna Primavera&quot;</h2>\n<p>Llamada así por su clima templado y agradable durante todo el año.</p>\n<p>Medellín es un destino fascinante que combina cultura, historia, innovación y una vibrante vida nocturna. Si planeas tu primera visita desde Estados Unidos, aquí tienes una guía detallada con las 10 mejores cosas que hacer y ver.</p>\n<p>Prepárate para explorar esta mágica ciudad y sus alrededores.</p>\n<h2 id=\"1-explora-el-centro-historico-y-el-parque-de-esculturas-de-b\">1. Explora el Centro Histórico y el Parque de Esculturas de Botero. ¿Por qué ir?</h2>\n<p>El centro de Medellín es el corazón histórico y cultural de la ciudad. Aquí encontrarás una combinación de arquitectura colonial y moderna, así como muchas de las famosas esculturas del artista colombiano Fernando Botero.</p>\n<p>Cosas que hacer</p>\n<ul><li>Parque de Esculturas Botero: Admira 23 de las esculturas más emblemáticas de Botero. Es un lugar ideal para tomar fotos y aprender más sobre el estilo único del maestro.</li><li>Museo de Antioquia: Ubicado junto al parque, este museo alberga una de las colecciones y exposiciones más grandes de Botero, que narran la historia de Medellín y Colombia.</li><li>Basílica Metropolitana: Una joya arquitectónica construida íntegramente en ladrillo, perfecta para los amantes de la historia y el diseño.</li></ul>\n<p>Consejo</p>\n<p>Realiza una visita guiada para comprender mejor la historia y los contrastes de la ciudad.</p>\n<h2 id=\"2-visita-a-la-comuna-13-un-simbolo-de-transformacion-por-que\">2. Visita a la Comuna 13: un símbolo de transformación ¿Por qué ir?</h2>\n<p>Comuna 13 es una historia de resiliencia y transformación social. Antaño una de las zonas más peligrosas, ahora es un ejemplo de cómo el arte y la comunidad pueden transformar vidas.</p>\n<p>¿Qué hacer?</p>\n<ul><li>Graffitour: Recorre las vibrantes calles repletas de murales que cuentan historias de esperanza y resiliencia.</li><li>Escaleras mecánicas: Un sistema único que conecta a la comunidad con la ciudad. Un símbolo de innovación social.</li><li>Espectáculos de Hip Hop y Danza Urbana: Disfruta del talento local en directo.</li></ul>\n<p>Consejo</p>\n<p>Visita la zona con un guía local para disfrutar de una experiencia segura y auténtica.</p>\n<h2 id=\"3-subir-al-cerro-nutibara-y-visitar-pueblito-paisa-por-que-i\">3. Subir al Cerro Nutibara y visitar Pueblito Paisa ¿Por qué ir?</h2>\n<p>El cerro Nutibara ofrece una de las mejores vistas panorámicas de Medellín. En la cima, el Pueblito Paisa recrea un típico pueblo antioqueño.</p>\n<p>¿Qué hacer?</p>\n<ul><li>Mirador: Disfrute de una vista panorámica de 360 grados de la ciudad..</li><li>Artesanía y souvenirs: Compre souvenirs elaborados por artesanos locales.</li><li>Gastronomía: Pruebe platos típicos como la bandeja paisa o las arepas de chócolo.</li></ul>\n<h2 id=\"4-descubre-la-vida-nocturna-del-barrio-de-provenza-por-que-i\">4. Descubre la vida nocturna del barrio de Provenza. ¿Por qué ir?</h2>\n<p>Provenza, en El Poblado, es el epicentro de la vida nocturna de Medellín. Aquí encontrarás restaurantes, bares y discotecas de primer nivel.</p>\n<p>¿Qué hacer?</p>\n<ul><li>Para comer: Cena en lugares como El Cielo (cocina de autor) o Carmen (fusión colombiana e internacional).</li><li>Bares: Disfruta de cócteles en Alambique o de cervezas artesanales en 3 Cordilleras.</li><li>Discotecas: Baila toda la noche en lugares como La Octava o Vintrash.</li></ul>\n<p>Consejo</p>\n<p>Empieza temprano para disfrutar de la cena y luego ve a las discotecas.</p>\n<h2 id=\"5-visita-a-guatape-y-el-penol-una-excursion-a-los-pueblos-ce\">5. Visita a Guatapé y El Peñol: Una excursión a los pueblos cercanos ¿Por qué ir?</h2>\n<p>Guatapé es un pueblo pintoresco situado a dos horas de Medellín, conocido por sus zócalos decorativos y la imponente Piedra del Peñol.</p>\n<p>¿Qué hacer en Guatapé?</p>\n<ul><li>Sube a la Piedra del Peñol: Sube los 740 escalones para disfrutar de vistas espectaculares del embalse.</li><li>Recorre la ciudad de Guatapé: pasea por sus coloridas calles y disfruta de la cultura local.</li><li>Paseo en barco: Navegue por el embalse y explore las islas.</li></ul>\n<p>Consejo</p>\n<p>Reserva una excursión o alquila un coche para aprovechar al máximo tu día.</p>\n<h2 id=\"6-visita-el-jardin-botanico-y-el-parque-explora-por-que-ir\">6. Visita el Jardín Botánico y el Parque Explora. ¿Por qué ir?</h2>\n<p>Esta zona es ideal para familias y amantes de la naturaleza y la ciencia.</p>\n<p>¿Qué hacer?</p>\n<ul><li>Jardín Botánico: Relájese entre la flora autóctona y disfrute de las exposiciones temporales.</li><li>Parque Explora: Un museo interactivo de ciencia y tecnología con uno de los acuarios más grandes de Latinoamérica.</li></ul>\n<p>Consejo</p>\n<p>Reserva medio día para explorar ambos lugares a tu ritmo.</p>\n<h2 id=\"7-toma-el-metrocable-y-descubre-el-parque-arvi-por-que-ir\">7. Toma el Metrocable y descubre el Parque Arví. ¿Por qué ir?</h2>\n<p>El Metrocable no es solo un medio de transporte, sino también una experiencia que ofrece vistas impresionantes y conecta la ciudad con el campo.</p>\n<p>¿Qué hacer?</p>\n<ul><li>Toma el Metrocable: Toma la línea L hasta Arví Park.</li><li>Parque Arví: Disfrute de paseos ecológicos, picnics o visitas guiadas por el bosque.</li></ul>\n<h2 id=\"8-vive-la-experiencia-del-tango-en-medellin-por-que-ir\">8. Vive la experiencia del tango en Medellín ¿Por qué ir?</h2>\n<p>Medellín tiene una fuerte conexión con el tango, gracias a Carlos Gardel, quien falleció en la ciudad.</p>\n<p>¿Qué hacer?</p>\n<ul><li>Casa Museo Gardeliana: Conoce la historia del tango en Medellín.</li><li>Milongas y espectáculos de tango: Disfrute de espectáculos en vivo en lugares como El Patio del Tango.</li></ul>\n<h2 id=\"9-prueba-la-comida-local-por-que-ir\">9. Prueba la comida local ¿Por qué ir?</h2>\n<p>La gastronomía paisa es imprescindible.</p>\n<p>¿Qué hacer?</p>\n<ul><li>Bandeja Paisa: Pruebe este plato tradicional que incluye carne molida, chorizo, plátanos, arroz, frijoles y más.</li><li>Postres: Pruebe la natilla y los buñuelos, especialmente durante la temporada navideña.</li><li>Mercados Locales: Visita el Mercado Minorista o el Mercado de la Plaza de Flores para descubrir sabores auténticos.</li></ul>\n<h2 id=\"10-visita-la-feria-de-flores-si-es-temporada-por-que-ir\">10. Visita la feria de flores (si es temporada). ¿Por qué ir?</h2>\n<p>Es el evento más importante de Medellín, que se celebra cada agosto, y una celebración de la cultura paisa.</p>\n<p>¿Qué hacer?</p>\n<ul><li>Desfile de Silletero: Observe a los agricultores exhibir flores en coloridos arreglos.</li><li>Eventos culturales: Asista a conciertos, exposiciones y ferias de artesanía.</li></ul>\n<p>Consejos prácticos para su visita</p>\n<ul><li>Transporte: Utilice el metro y aplicaciones como Uber para desplazarse fácilmente.</li><li>Seguridad: Si bien Medellín es mucho más segura hoy en día, tenga cuidado en lugares concurridos.</li><li>Moneda: Lleve pesos colombianos, ya que no todos los lugares aceptan dólares o tarjetas de crédito.</li></ul>\n<p>Medellín te sorprenderá con su hospitalidad, su rica cultura y su energía vibrante.</p>\n<p>¡Prepara tus maletas para una experiencia inolvidable!</p>",
+   "published": "2026-08-05T17:53:16+00:00",
+   "modified": "2026-08-05T18:18:59+00:00"
+  },
+  {
+   "key": "post-conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica",
+   "slug_es": "conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica",
+   "slug": "conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica",
+   "title": "Conozca la cultura paisa y descubra sus tradiciones, en una experiencia única",
+   "date": "agosto 5, 2026",
+   "ex": "Tradición floral y de silletera en el pueblo de Santa Elena Aunque las fincas de",
+   "img": "/wp-content/uploads/2026/07/la-cultura-paisa.webp",
+   "prose": "<h2 id=\"tradicion-floral-y-de-silletera-en-el-pueblo-de-santa-elena\">Tradición floral y de silletera en el pueblo de Santa Elena</h2>\n<p>Aunque las fincas de silleteras de Santa Elena se visitan principalmente durante la Feria de las Flores, esta experiencia memorable se puede vivir en cualquier época del año y constituye una de las vivencias más tradicionales de la cultura antioquiana. En las fincas de silleteras es posible observar de cerca el proceso que las familias de Santa Elena llevan a cabo con el cuidado de las flores y la elaboración de las silletas que exhiben con orgullo en el Desfile de Silleteras.</p>\n<p>Asimismo, es posible disfrutar de muestras folclóricas de la región, su gastronomía de montaña y jardines típicos repletos de flores y plantas medicinales.</p>\n<figure><img src=\"/wp-content/uploads/2026/07/silleteras-farms-4.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/silleteras-farms-3.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/silleteras-farms-2.webp\" alt=\"\" loading=\"lazy\"></figure>\n<h2 id=\"de-compras-en-via-primavera\">¡De compras en Via Primavera!</h2>\n<p>Con orgullo decimos que si en Londres existe Oxford Street y en París la Avenida Montaigne, en Medellín tenemos la Vía Primavera.</p>\n<p>Aquí, nuestros visitantes se enamoran del talento local de nuestros diseñadores y emprendedores, disfrutan de exquisitos platos de todo el mundo, comparten el café más suave del mundo y viven una experiencia que combina compras y gastronomía en el característico entorno natural y acogedor de este espacio urbano.</p>\n<figure><img src=\"/wp-content/uploads/2026/07/primavera2.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/primavera4.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/primavera3.webp\" alt=\"\" loading=\"lazy\"></figure>\n<h2 id=\"descubre-el-jardin-de-flores-mas-grande-de-medellin-en-el-ba\">Descubre el jardín de flores más grande de Medellín en el Barrio Moravia.</h2>\n<p>En el noreste de la ciudad se encuentra una comunidad tradicionalmente formada por familias desplazadas que construyeron sus casas en el antiguo basurero municipal, hoy transformado en uno de los jardines florales más grandes de la ciudad: el barrio de Moravia, un referente del turismo comunitario en Medellín.</p>\n<p>Allí, mediante una visita guiada por un líder social del barrio, es posible recorrer el sendero repleto de flores que conduce a la colina para disfrutar de una vista panorámica de 360° de la ciudad, mientras se aprende la historia de uno de los lugares que mejor representan la resiliencia en Medellín.</p>\n<figure><img src=\"/wp-content/uploads/2026/07/Moravia1.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/Moravia2.webp\" alt=\"\" loading=\"lazy\"></figure>\n<h2 id=\"deleitate-con-los-aromas-del-cafe-mas-suave-del-mundo\">Deléitate con los aromas del café más suave del mundo.</h2>\n<p>Además de los innumerables cafés de la ciudad que ofrecen la taza del producto colombiano por excelencia, caracterizado por su suavidad; en Medellín es posible visitar fincas y haciendas para aprender todo el proceso relacionado con el café: el cultivo, la cosecha, sus aromas y sus propiedades; así como la valoración de uno de los cafés más famosos del mundo a través del olfato y el gusto.</p>\n<figure><img src=\"/wp-content/uploads/2026/07/aromas-coffee-4.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/aromas-coffee-1.webp\" alt=\"\" loading=\"lazy\"></figure>\n<figure><img src=\"/wp-content/uploads/2026/07/aromas-coffee-2.webp\" alt=\"\" loading=\"lazy\"></figure>",
+   "published": "2026-08-05T17:52:14+00:00",
+   "modified": "2026-08-05T17:53:01+00:00"
+  }
+ ],
+ "meta": {
+  "habitaciones": {
+   "title": "Habitaciones y suites | Haven Medellín, El Poblado",
+   "desc": "Penthouse, suite presidencial, suites con jacuzzi y habitaciones de diseño en El Poblado, Medellín. Reserva directo al mejor precio."
+  },
+  "penthouse": {
+   "title": "Penthouse con jacuzzi | Haven Medellín",
+   "desc": "Suites Emperor 901 y 902: penthouse dúplex de hasta 138 m² para 8 personas en El Poblado, Medellín."
+  },
+  "presidencial": {
+   "title": "Suite Presidencial | Haven Medellín",
+   "desc": "Suite Presidencial de 145 m²: dúplex de 4 habitaciones con piscina interior privada en El Poblado, Medellín."
+  },
+  "suites-de-lujo": {
+   "title": "Suites de lujo con jacuzzi | Haven Medellín",
+   "desc": "Suite Imperial 402 y Suites Excelsior 401, 604 y 804: suites con jacuzzi en El Poblado, Medellín."
+  },
+  "rooftop": {
+   "title": "360° Rooftop: piscina y bar con vista a Medellín | Haven",
+   "desc": "Bar y piscina en el piso 11 con vista panorámica de 360° de Medellín. Cócteles de autor, Sunny Days y atardeceres en El Poblado."
+  },
+  "swing": {
+   "title": "Swing Bar: café de día, cócteles de noche | Haven Medellín",
+   "desc": "Swing Bar en el vestíbulo de Haven: café colombiano por la mañana, vinos, cervezas y cócteles por la noche en El Poblado."
+  },
+  "gastronomia": {
+   "title": "Gastronomía en el 360° Rooftop | Haven Medellín",
+   "desc": "Pizzas artesanales, salmón, albóndigas y cocina local e internacional con vista a Medellín en el 360° Rooftop."
+  },
+  "wellness": {
+   "title": "Wellness: masajes, faciales y sueroterapia | Haven Medellín",
+   "desc": "Masaje relajante, hidratación facial y terapia de sueros Ultra Vit para recuperarte del viaje en Haven, El Poblado."
+  },
+  "eventos": {
+   "title": "Eventos: fiestas, brunch y celebraciones | Haven Medellín",
+   "desc": "DJ en vivo en la Terraza 360, fiesta del primer viernes, fiesta en la piscina, brunch dominical y celebraciones especiales en El Poblado."
+  },
+  "servicios": {
+   "title": "Servicios del hotel | Haven Medellín",
+   "desc": "Traslados al aeropuerto, spa, hidratación intravenosa, tours por Antioquia, alquiler de carros y más servicios en Haven Medellín."
+  },
+  "contacto": {
+   "title": "Contacto | Haven Medellín, El Poblado",
+   "desc": "Calle 10A #36-29, El Poblado, Medellín. Recepción (+57) 322 306 4585 · Reservas (+57) 321 209 7033 · frontdesk@serenahotelsco.com"
+  },
+  "serena-rewards": {
+   "title": "Serena Rewards: programa de fidelización | Haven Medellín",
+   "desc": "Planes Silver, Golden, Diamond y Black: descuentos en alojamiento y alimentos, traslados, upgrades y beneficios exclusivos."
+  },
+  "preguntas-frecuentes": {
+   "title": "Preguntas frecuentes | Haven Medellín",
+   "desc": "Ubicación, cómo llegar desde el aeropuerto, servicios incluidos, horarios del 360° Rooftop y seguridad en El Poblado."
+  },
+  "politica-de-visitantes": {
+   "title": "Política de visitantes | Haven Medellín",
+   "desc": "Registro de huéspedes y visitantes, cargos por persona adicional y normas según la Ley 679 de 2011 en Haven Medellín."
+  },
+  "terminos-y-condiciones": {
+   "title": "Términos y condiciones | Haven Medellín",
+   "desc": "Reservas, cancelaciones, minibar, garantía, política de no fumar, privacidad y horarios de Haven, A Design Hotel."
+  },
+  "blogs": {
+   "title": "Blog: guías y planes en Medellín | Haven Medellín",
+   "desc": "Recomendaciones, guías y experiencias para disfrutar Medellín: gastronomía, cultura paisa y las mejores cosas que hacer en la ciudad."
+  },
+  "room-suite-emperor-901": {
+   "title": "Suite Emperor 901 Penthouse · 138 m² en El Poblado",
+   "desc": "Suite Emperor 901 Penthouse: 138 m², 8 personas, King x2, Queen x2. Bienvenido a tu residencia privada en las alturas de Medellín. La Suite Emperor 901 es "
+  },
+  "room-suite-emperor-902": {
+   "title": "Suite Emperor 902 Penthouse · 111 m² en El Poblado",
+   "desc": "Suite Emperor 902 Penthouse: 111 m², 8 personas, King x2, Queen x2. Bienvenidos a un espacio diseñado para ser compartido e inolvidable. La Suite Emperor 9"
+  },
+  "room-suite-presidential": {
+   "title": "Suite Presidencial · 145 m² en El Poblado | Haven Medellín",
+   "desc": "Suite Presidencial: 145 m², 8 personas, King x2, Queen x2. Descubra una residencia única en Medellín. La Suite Presidencial, es un audaz dúplex de 4 habita"
+  },
+  "room-suite-imperial-402": {
+   "title": "Suite Imperial 402 · 68 m² en El Poblado | Haven Medellín",
+   "desc": "Suite Imperial 402: 68 m², 6 personas, Queen x3. Descubra la comodidad y la elegancia en nuestra Suite Imperial 402, una joya de suite de 3 habitaciones, c"
+  },
+  "room-suite-excelsior-401": {
+   "title": "Suite Excelsior 401 · 62 m² en El Poblado | Haven Medellín",
+   "desc": "Suite Excelsior 401: 62 m², 4 personas, Queen x2. Disfrute de una estancia refinada en la Suite Excelsior 401, la suite de hotel de dos recámaras más grand"
+  },
+  "room-suite-excelsior-804": {
+   "title": "Suite Excelsior 804 · 62 m² en El Poblado | Haven Medellín",
+   "desc": "Suite Excelsior 804: 62 m², 4 personas, Queen x2. Disfrute de una estancia excepcional en la Suite Excelsior 804, una suite de 2 dormitorios diseñada para "
+  },
+  "room-suite-excelsior-604": {
+   "title": "Suite Excelsior 604 · 62 m² en El Poblado | Haven Medellín",
+   "desc": "Suite Excelsior 604: 62 m², 4 personas, Queen x2. La suite Excelsior 604 es un apartamento de dos habitaciones con capacidad para hasta 4 personas. Cuenta "
+  },
+  "room-habitacion-ambassador": {
+   "title": "Habitación Ambassador · 29 m² en El Poblado | Haven Medellín",
+   "desc": "Habitación Ambassador: 29 m², 2 personas, Queen x1. Disfrute del máximo confort en la habitación Ambassador, una estancia diseñada para quienes buscan ampl"
+  },
+  "room-habitacion-ambassador-jr": {
+   "title": "Habitación Ambassador Jr · 29 m² en El Poblado",
+   "desc": "Habitación Ambassador Jr: 29 m², 2 personas, Queen x1. Descubra la exclusividad diseñada exclusivamente para dos en nuestra habitación Ambassador Jr. Sumér"
+  },
+  "room-habitacion-viscount-803": {
+   "title": "Habitación Viscount 803 · 24 m² en El Poblado | Haven Medellín",
+   "desc": "Habitación Viscount 803: 24 m², 2 personas, Queen x1. Jacuzzi exterior en su balcón privado. Viscount 803 ofrece una estancia premium de 24 m² donde podrá "
+  },
+  "room-habitacion-viscount": {
+   "title": "Habitación Viscount · 24 m² en El Poblado | Haven Medellín",
+   "desc": "Habitación Viscount: 24 m², 2 personas, Queen x1. Descubra el esplendor de nuestra Habitación Viscount, una auténtica joya de lujo diseñada para una experi"
+  },
+  "room-habitacion-lord": {
+   "title": "Habitación Lord · 24 m² en El Poblado | Haven Medellín",
+   "desc": "Habitación Lord: 24 m², 2 personas, Queen x1. Sumérjase en el lujo exclusivo de nuestra Habitación Lord, con una cama tamaño queen. Esta habitación está di"
+  },
+  "room-habitacion-earl": {
+   "title": "Habitación Earl · 20 m² en El Poblado | Haven Medellín",
+   "desc": "Habitación Earl: 20 m², 2 personas, Queen x1. Sumérjase en el encanto incomparable de nuestra Habitación Earl. Disfrute de vistas panorámicas de la ciudad "
+  },
+  "room-habitacion-marques-plus": {
+   "title": "Habitación Marqués Plus · 27 m² en El Poblado | Haven Medellín",
+   "desc": "Habitación Marqués Plus: 27 m², 2 personas, Queen x1. Suite espaciosa, mucho más allá de lo convencional. Diseñada para ofrecer libertad y comodidad, esta "
+  },
+  "room-habitacion-marques": {
+   "title": "Habitación Marqués · 24 m² en El Poblado | Haven Medellín",
+   "desc": "Habitación Marqués: 24 m², 2 personas, Queen x1. Suite espaciosa, mucho más allá de lo convencional. Diseñada para ofrecer libertad y comodidad, esta suite"
+  },
+  "room-habitacion-duke": {
+   "title": "Habitación Duke · 20 m² en El Poblado | Haven Medellín",
+   "desc": "Habitación Duke: 20 m², 2 personas, Queen x1. Más espacio, más comodidad. La habitación Duke está diseñada para una estancia relajante en la ciudad y cuent"
+  },
+  "room-habitacion-consort": {
+   "title": "Habitación Consort · 15 m² en El Poblado | Haven Medellín",
+   "desc": "Habitación Consort: 15 m², 2 personas, Queen x1. Compacta, elegante y totalmente equipada, nuestra habitación Consort cuenta con una cama queen, baño priva"
+  },
+  "post-experiencias-gastronomicas-de-cinco-estrellas-en-medellin": {
+   "title": "Experiencias gastronómicas de cinco estrellas en Medellín",
+   "desc": "Una guía completa para los amantes de la comida. Medellín, conocida como la “Ciudad de"
+  },
+  "post-las-10-mejores-cosas-que-hacer-y-ver-en-la-ciudad-de-la-eterna-primavera": {
+   "title": "Las 10 mejores cosas que hacer y ver en la Ciudad de la…",
+   "desc": "Conocida como la “Ciudad de la Eterna Primavera” Llamada así por su clima templado y"
+  },
+  "post-conozca-la-cultura-paisa-y-descubra-sus-tradiciones-en-una-experiencia-unica": {
+   "title": "Conozca la cultura paisa y descubra sus tradiciones, en…",
+   "desc": "Tradición floral y de silletera en el pueblo de Santa Elena Aunque las fincas de"
+  },
+  "home": {
+   "title": "Haven Medellín | Hotel de diseño en El Poblado",
+   "desc": "Haven, A Design Hotel: suites con jacuzzi, 360° Rooftop, Swing Bar y wellness en el corazón de El Poblado, Medellín. Reserva directo al mejor precio."
+  }
+ }
+}
