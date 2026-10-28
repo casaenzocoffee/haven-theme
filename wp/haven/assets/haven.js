@@ -338,3 +338,12 @@ addEventListener('load',()=>{if(navigator.connection&&(navigator.connection.save
     if(Date.now()-el.__hvSeen>1100){gsap.to(el,{opacity:1,x:0,y:0,rotateX:0,rotateY:0,scale:1,clipPath:'none',duration:.6,ease:'power2.out',overwrite:'auto'});el.__hvSeen=0;}
   });},500);
 })();
+
+/* Fechas de reserva: al tocar cualquier parte del campo se abre el calendario (no solo el ícono). */
+(function(){
+  document.addEventListener('click',function(e){
+    var i=e.target&&e.target.closest&&e.target.closest('input[type=date]');
+    if(!i||typeof i.showPicker!=='function')return;
+    try{i.showPicker();}catch(err){}
+  });
+})();
