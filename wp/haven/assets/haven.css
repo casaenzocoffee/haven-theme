@@ -697,3 +697,17 @@ html.intro-on,html.intro-on body{overflow:hidden}
 .ce-ig svg{width:18px;height:18px;flex:none}
 .ce-ig b{font-weight:600;color:var(--gold);text-transform:none;letter-spacing:.02em}
 .suite-media .thumbs{z-index:3}
+/* Ventana de reserva (páginas internas) */
+.hv-book{border:0;padding:34px 30px 26px;width:min(560px,calc(100vw - 32px));border-radius:28px;background:#1d1714;color:var(--fg);box-shadow:inset 0 0 0 1px rgba(205,179,113,.25),0 40px 90px -30px #000}
+.hv-book::backdrop{background:rgba(10,8,7,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.hv-book[open]{animation:hvbIn .45s var(--ease) both}
+@keyframes hvbIn{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+.hv-book h2{font:400 clamp(30px,5vw,40px)/1.05 var(--serif);margin:12px 0 8px}
+.hv-book .hvb-s{color:var(--muted);margin:0 0 22px;font-size:15px}
+.hv-book .hvb-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.06);color:var(--fg);font-size:16px;cursor:pointer}
+.hv-book .hvb-x:hover{background:rgba(255,255,255,.12)}
+.hv-book .booking.hvb-form{margin:0;max-width:none;grid-template-columns:1fr 1fr;box-shadow:inset 0 0 0 1px rgba(205,179,113,.18)}
+.hv-book .booking.hvb-form .btn{grid-column:1/-1;justify-content:space-between}
+.hv-book .hvb-n{margin:12px 4px 0;color:var(--gold);font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;min-height:12px}
+@media (max-width:480px){.hv-book{padding:30px 18px 20px}.hv-book .booking.hvb-form{grid-template-columns:1fr}}
+html.hvb-open,html.hvb-open body{overflow:hidden}

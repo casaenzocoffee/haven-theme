@@ -137,7 +137,7 @@ addEventListener('DOMContentLoaded',()=>{
   if(!window.gsap){document.body.classList.add('reduce');return;}
   if(document.body.classList.contains('reduce'))return;
   gsap.registerPlugin(ScrollTrigger);gsap.globalTimeline.timeScale(1.5);
-  const lenis=window.Lenis?new Lenis({lerp:.16,wheelMultiplier:1.1}):null;
+  const lenis=window.Lenis?new Lenis({lerp:.16,wheelMultiplier:1.1}):null;window.__hvLenis=lenis;
   if(lenis){lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
     document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1&&document.querySelector(id)){e.preventDefault();try{lenis.resize()}catch(_){}const off=(document.querySelector('.hg-chapters')&&a.closest('.hg-chapters'))?-150:-140;lenis.scrollTo(id,{offset:off,force:true,onComplete:()=>{const r=document.querySelector(id).getBoundingClientRect().top;if(Math.abs(r+off)>40){try{lenis.resize()}catch(_){}lenis.scrollTo(id,{offset:off,force:true,immediate:false});}}});}}));}
 
@@ -246,12 +246,37 @@ addEventListener('DOMContentLoaded',()=>{
 (function(){
   const BOOK='http://havenmedellin.backhotelite.com/'+(document.documentElement.lang==='en'?'en':'es')+'/bookcore/availability/havenmedellin/';
   const iso=d=>d.toISOString().slice(0,10);
-  // "Reservar" fuera de la portada abre el motor con fechas sugeridas
+  // "Reservar" fuera de la portada abre una ventana para elegir fechas (no salta directo al motor).
   if(!document.getElementById('reservar')){
+    const en=document.documentElement.lang.slice(0,2)==='en';
+    const L=en?{t:'Book direct',s:'Best rate when you book direct · breakfast included',i:'Check-in',o:'Check-out',b:'Check availability',n:['night','nights'],c:'Close'}
+              :{t:'Reserva directa',s:'Mejor tarifa reservando directo · desayuno incluido',i:'Llegada',o:'Salida',b:'Ver disponibilidad',n:['noche','noches'],c:'Cerrar'};
+    let dlg=null,src='boton_reservar';
+    const build=()=>{
+      dlg=document.createElement('dialog');dlg.className='hv-book';dlg.setAttribute('aria-labelledby','hvb-t');
+      dlg.innerHTML='<button class="hvb-x" type="button" aria-label="'+L.c+'">✕</button><p class="eyebrow">Haven · Medellín</p><h2 id="hvb-t">'+L.t+'</h2><p class="hvb-s">'+L.s+'</p>'
+        +'<form class="booking hvb-form"><div class="field"><label for="hvb-in">'+L.i+'</label><input id="hvb-in" type="date" required></div><div class="field"><label for="hvb-out">'+L.o+'</label><input id="hvb-out" type="date" required></div>'
+        +'<button class="btn btn-gold" type="submit" data-track="buscar_fechas_popup">'+L.b+' <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button></form><p class="hvb-n" aria-live="polite"></p>';
+      document.body.appendChild(dlg);
+      const fi=dlg.querySelector('#hvb-in'),fo=dlg.querySelector('#hvb-out'),nn=dlg.querySelector('.hvb-n');
+      const t=new Date();t.setHours(12);const a=new Date(t);a.setDate(a.getDate()+1);const b=new Date(t);b.setDate(b.getDate()+3);
+      fi.min=iso(t);fi.value=iso(a);fo.min=iso(a);fo.value=iso(b);
+      const upd=()=>{const n=Math.round((new Date(fo.value)-new Date(fi.value))/864e5);nn.textContent=n>0?n+' '+L.n[n===1?0:1]:'';};
+      fi.addEventListener('change',()=>{const d=new Date(fi.value+'T12:00');d.setDate(d.getDate()+1);fo.min=iso(d);if(fo.value<=fi.value)fo.value=iso(d);upd();});
+      fo.addEventListener('change',upd);upd();
+      dlg.querySelector('form').addEventListener('submit',e=>{e.preventDefault();if(fo.value<=fi.value){fo.focus();return;}
+        hvBook(BOOK+fi.value+'/'+fo.value+'/',fi.value,fo.value,src);dlg.close();});
+      dlg.querySelector('.hvb-x').addEventListener('click',()=>dlg.close());
+      dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
+      dlg.addEventListener('close',()=>{document.documentElement.classList.remove('hvb-open');try{window.__hvLenis&&window.__hvLenis.start()}catch(_){}});
+    };
     document.addEventListener('click',e=>{const a=e.target.closest('a[href="#reservar"]');if(!a)return;e.preventDefault();
-      const t=new Date();t.setHours(12);t.setDate(t.getDate()+1);const o=new Date(t);o.setDate(o.getDate()+2);
-      (window.dataLayer=window.dataLayer||[]).push({event:'haven_click',accion:'abrir_motor_'+(document.body.className.match(/page-(\S+)/)||[,''])[1]});
-      hvBook(BOOK+iso(t)+'/'+iso(o)+'/',iso(t),iso(o),a.dataset.track||'boton_reservar');});
+      src=a.dataset.track||'boton_reservar';if(!dlg)build();
+      (window.dataLayer=window.dataLayer||[]).push({event:'haven_click',accion:'abrir_reserva_'+(document.body.dataset.hv||'')});
+      try{window.__hvLenis&&window.__hvLenis.stop()}catch(_){}
+      document.documentElement.classList.add('hvb-open');
+      if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');
+    });
   }
   // Barra flotante de reserva
   const bb=document.querySelector('.bookbar');
