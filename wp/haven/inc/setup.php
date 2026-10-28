@@ -120,3 +120,47 @@ add_action( 'wp_head', function () {
 /** Tamaños de imagen razonables para el diseño. */
 add_filter( 'wp_calculate_image_sizes', function ( $sizes ) { return $sizes; } );
 add_filter( 'big_image_size_threshold', function () { return 2400; } );
+
+/**
+ * Quita los ganchos de un plugin en una acción (por la ruta del archivo que los define).
+ * Sirve también para funciones anónimas, que no se pueden quitar con remove_action().
+ */
+function hv_remove_hooks_from( $hook, $path_part ) {
+	global $wp_filter;
+	if ( empty( $wp_filter[ $hook ] ) ) return;
+	foreach ( $wp_filter[ $hook ]->callbacks as $prio => $cbs ) {
+		foreach ( $cbs as $id => $cb ) {
+			$fn = $cb['function'];
+			try {
+				if ( $fn instanceof Closure ) $r = new ReflectionFunction( $fn );
+				elseif ( is_array( $fn ) ) $r = new ReflectionMethod( is_object( $fn[0] ) ? get_class( $fn[0] ) : $fn[0], $fn[1] );
+				elseif ( is_string( $fn ) && function_exists( $fn ) ) $r = new ReflectionFunction( $fn );
+				else continue;
+			} catch ( ReflectionException $e ) { continue; }
+			if ( false !== strpos( str_replace( '\\', '/', (string) $r->getFileName() ), $path_part ) ) {
+				$wp_filter[ $hook ]->remove_filter( $hook, $fn, $prio );
+			}
+		}
+	}
+}
+
+/**
+ * En las páginas con diseño Haven, Elementor Pro no debe poner su encabezado, pie, ventanas emergentes (popups)
+ * ni sus fragmentos de código: el tema trae los suyos. Las páginas hechas con Elementor (sin clave Haven) no se tocan.
+ */
+add_action( 'template_redirect', function () {
+	if ( ! hv_template_key() || hv_is_builder_page() ) return;
+	foreach ( array( 'get_header', 'get_footer' ) as $h ) hv_remove_hooks_from( $h, '/elementor-pro/' );
+	foreach ( array( 'wp_head', 'wp_body_open', 'wp_footer' ) as $h ) {
+		hv_remove_hooks_from( $h, '/elementor-pro/modules/custom-code/' );
+		hv_remove_hooks_from( $h, '/elementor-pro/modules/popup/' );
+		hv_remove_hooks_from( $h, '/elementor-pro/modules/theme-builder/' );
+	}
+	add_filter( 'elementor/theme/need_override_location', '__return_false' );
+}, 5 );
+
+/** Limpia de la dirección los parámetros _gl/_ga de Google (antes era un fragmento de Elementor). */
+add_action( 'wp_footer', function () {
+	if ( ! hv_template_key() || hv_is_builder_page() ) return;
+	echo "<script>addEventListener('load',function(){setTimeout(function(){try{var u=new URL(location.href),c=0;['_gl','_ga'].forEach(function(p){if(u.searchParams.has(p)){u.searchParams.delete(p);c=1}});if(c)history.replaceState(history.state,'',u.pathname+u.search+u.hash)}catch(e){}},2000)});</script>\n";
+}, 99 );
