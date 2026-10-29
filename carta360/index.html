@@ -1,0 +1,875 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Carta 360 Rooftop</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Gloock&family=IBM+Plex+Mono:wght@400&family=Inter+Tight:wght@400;500&display=swap">
+<style>
+/* Layout: editorial, warm paper and espresso. Full-bleed bands; carta = sticky editorial index + list + sticky plate stage where plates move and the background stays still; tapping a dish opens a dark, high-contrast dish sheet. */
+:root{
+  --negro:#211D1A; --espresso:#3C2B22; --cafe:#2A211C; --madera:#715A45; --arena:#B1A085; --beige:#ECE2D0; --crema:#F1E9DB;
+  --taupe:#D1C9B4; --taupe-medio:#8A7F69; --salvia:#A7A691; --vino:#541D0C; --oliva:#5C462E;
+  --tinta:#26190F; --tinta-suave:#6A5848; --titulo:#3B2B21; --linea:rgba(44,28,20,.2); --linea-clara:rgba(241,233,219,.22);
+  --veg:#56622E; --veg-claro:#BCC38E; --burdeos:#6B1F2B;
+  /* Prototipo: Gloock hace de Moret (títulos; su cursiva es una oblicua, como la de Moret) y Alegreya Sans de Freight Sans (textos). En la web final: kit de Adobe Fonts. */
+  --serif:"Gloock","Moret",Georgia,"Times New Roman",serif;
+  --grot:"Inter Tight","Neue Haas Grotesk Text",Helvetica,Arial,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --st-bg:#421A02; --st-ink:#F4F4F2; --st-dim:rgba(244,244,242,.6);
+  --sans:"Alegreya Sans","Gill Sans","Optima","Segoe UI",sans-serif;
+  --hh:64px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + 12px)}
+body{margin:0;background:var(--negro);color:var(--crema);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.42;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-synthesis:style}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--espresso)}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:1px solid var(--arena);outline-offset:3px}
+.wrap{width:100%;max-width:1320px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:700px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
+.lbl{font-family:var(--sans);font-weight:500;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;line-height:1.3}
+.mix{margin:0;line-height:.84;text-wrap:balance}
+.light .mix,.light .ch-h h3,.light .r-name,.light .ncard h3,.light .place p,.light .stage-cap b,.idx-over a{color:var(--titulo)}
+.mix .up{display:block;font-family:var(--serif);font-weight:600;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(38px,5.6vw,86px);line-height:.86}
+.mix em{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(62px,10vw,152px);letter-spacing:-.015em;line-height:.8;margin-top:.05em}
+.ulink{display:inline-block;font-size:11.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+/* Historia (ref. REOME + E. Cleo): archivo íntimo de un día. Una sola pantalla; las fichas de cada momento solo aparecen al tocarlo (slider). */
+.story{position:relative;height:100svh;min-height:620px;background-color:var(--st-bg);color:var(--st-ink)}
+.st-pin{position:relative;height:100%;overflow:hidden;background:var(--st-bg) url(img/tex_story.webp) center/cover no-repeat}
+.st-in{position:relative;height:100%;max-width:1320px;margin:0 auto;--padx:max(16px,env(safe-area-inset-left,0px))}
+@media (min-width:700px){.st-in{--padx:max(40px,env(safe-area-inset-left,0px))}}
+.mono{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.02em;text-transform:uppercase;line-height:1.25}
+.st-frame>*{position:absolute;color:var(--st-dim)}
+.st-tl{left:var(--padx);top:calc(var(--hh) + 30px)}
+.st-tr{right:var(--padx);top:calc(var(--hh) + 30px)}
+.st-stage{position:absolute;inset:0;pointer-events:none}
+.st-stage.on{pointer-events:auto}
+.st-stage>*{position:absolute;opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.st-stage.on>*{opacity:1;transform:none}
+.st-stage.on>*:nth-child(2){transition-delay:.12s}
+.st-stage.on>*:nth-child(3){transition-delay:.24s}
+.st-cover-l,.st-cover-r,.st-cta{margin:0;font-family:var(--grot);font-weight:400;font-size:clamp(15px,1.45vw,21px);line-height:1.3;letter-spacing:-.005em;color:var(--st-ink)}
+.st-cover-l{left:var(--padx);top:46%;text-transform:uppercase}
+.st-cover-r{right:var(--padx);top:46%;text-align:right}
+.st-cta{left:50%;top:46%;translate:-50% 0;text-decoration:none;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:3px;white-space:nowrap}
+.st-cta i{font-style:normal;display:inline-block;transition:transform .3s}
+.st-cta:hover i{transform:translateX(4px)}
+.st-ctas{left:50%;top:46%;translate:-50% 0;display:flex;gap:clamp(22px,3vw,44px);white-space:nowrap}
+.st-ctas .st-cta{position:static;left:auto;top:auto;translate:none}
+.spec{margin:0;display:grid;grid-template-columns:max-content minmax(0,34ch);column-gap:14px;row-gap:3px;align-items:baseline}
+.spec dt{text-align:right;color:var(--st-dim)}
+.spec dd{margin:0;font-family:var(--grot);font-weight:400;font-size:clamp(16px,1.5vw,22px);line-height:1.02;letter-spacing:-.012em;text-transform:uppercase;text-align:justify;text-align-last:left}
+.spec dd.hd{font-family:var(--mono);font-size:clamp(12px,1vw,14px);letter-spacing:.04em;margin-bottom:12px}
+.spec dt.hd{margin-bottom:12px}
+.st-note{margin:0;max-width:27ch;text-wrap:pretty;font-family:var(--grot);font-weight:400;font-size:clamp(15px,1.15vw,17px);line-height:1.32;color:var(--st-ink)}
+.st-note p{margin:0}
+.st-link{display:inline-block;margin-top:18px;color:var(--st-ink);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+/* composición: cada momento ocupa otra zona del contenedor */
+.s1 .spec{left:calc(var(--padx) + 8%);top:24%}
+.s1 .st-note{right:var(--padx);top:58%;text-align:right}
+.s2 .spec{left:50%;top:21%}
+.s2 .st-note{left:calc(var(--padx) + 8%);top:58%}
+.s3 .spec{left:calc(var(--padx) + 16%);top:40%}
+.s3 .st-note{right:calc(var(--padx) + 6%);top:21%}
+/* controles: los momentos abajo a la izquierda, navegación abajo a la derecha */
+.st-ctrl{position:absolute;left:var(--padx);bottom:30px;display:grid;gap:10px;z-index:3}
+.st-hint{color:var(--st-dim);transition:opacity .4s}
+.story.open .st-hint{opacity:0}
+.st-moms{display:flex;gap:8px;flex-wrap:wrap}
+.st-moms button{display:inline-flex;align-items:baseline;gap:8px;min-height:44px;padding:10px 16px;border:1px solid rgba(244,244,242,.45);border-radius:999px;background:rgba(33,13,1,.18);color:var(--st-ink);font-family:var(--grot);font-size:15px;letter-spacing:.01em;text-transform:uppercase;cursor:pointer;transition:background-color .3s,color .3s,border-color .3s}
+.st-moms button i{font-style:normal;color:var(--st-dim);transition:color .3s}
+.st-moms button:hover{border-color:var(--st-ink)}
+.st-moms button[aria-pressed="true"]{background:var(--st-ink);color:var(--st-bg);border-color:var(--st-ink)}
+.st-moms button[aria-pressed="true"] i{color:var(--st-bg)}
+.st-nav{position:absolute;right:var(--padx);bottom:30px;display:flex;align-items:center;gap:6px;color:var(--st-dim);opacity:0;pointer-events:none;transition:opacity .4s;z-index:3}
+.story.open .st-nav{opacity:1;pointer-events:auto}
+.st-nav button{min-width:44px;min-height:44px;background:none;border:0;color:var(--st-ink);font:inherit;font-size:15px;cursor:pointer}
+.st-nav #stCount{font-variant-numeric:tabular-nums;padding-inline:2px}
+.st-nav .st-close{font-size:11px;margin-left:10px;border:1px solid rgba(244,244,242,.45);border-radius:999px;padding:0 14px}
+@media (max-width:820px){
+  .st-cover-l{top:30%;max-width:15ch}
+  .st-cover-r{top:42%}
+  .st-cta{left:var(--padx);top:56%;translate:none}
+  .st-ctas{left:var(--padx);top:56%;translate:none;flex-direction:column;align-items:flex-start;gap:16px}
+  .spec{grid-template-columns:max-content minmax(0,1fr);column-gap:10px}
+  .mono{font-size:10.5px}
+  .s1 .spec,.s2 .spec,.s3 .spec{left:var(--padx);right:var(--padx);top:calc(var(--hh) + 70px)}
+  .s1 .st-note,.s2 .st-note,.s3 .st-note{left:auto;right:var(--padx);top:auto;bottom:150px;text-align:right}
+  .st-moms button{padding:10px 13px;font-size:14px}
+  .st-nav{bottom:82px;right:calc(var(--padx) - 10px)}
+  .st-ctrl{bottom:24px}
+}
+@media (prefers-reduced-motion:reduce){.st-stage>*{transition:opacity .2s linear;transform:none!important}}
+/* Real textures: a photographed plaster/paper grain, multiplied on warm beige and soft-lit on espresso */
+.light{background-color:var(--beige);background-image:url(img/tex_light.webp);background-size:960px;background-blend-mode:multiply;color:var(--tinta)}
+.dark{background-color:var(--espresso);background-image:url(img/tex_fine.webp);background-size:768px;background-blend-mode:soft-light;color:var(--crema)}
+/* Bolder color bands (ref. Black Castle): sage, taupe, oxblood, olive, warm black */
+.s-salvia{background-color:var(--salvia);--titulo:#33261D;--tinta:#1C1814;--tinta-suave:#38312A;--linea:rgba(28,24,20,.3);--veg:#3F4A1E}
+.s-taupe{background-color:var(--taupe);--titulo:#3B2B21;background-image:url(img/tex_soft.webp);--tinta:#211A14;--tinta-suave:#544939;--linea:rgba(33,26,20,.24)}
+/* Banda destacados: el referente de grano de Sandra tal cual (color y textura reales de su muestra) */
+.s-vino{background-color:#4C2316;background-image:url(img/tex_ref.webp);background-size:768px;background-blend-mode:normal}
+.s-oliva{background-color:var(--oliva)}
+.s-negro{background-color:var(--negro)}
+
+/* ---------- Preloader ---------- */
+.pre{position:fixed;inset:0;z-index:100;display:grid;place-items:center;overflow:hidden;background:var(--negro);animation:curtain .95s cubic-bezier(.76,0,.24,1) 3.05s forwards;cursor:pointer}
+.pre-shot{position:absolute;inset:-6%;background-size:cover;background-position:center;opacity:0;animation:shot 1.35s cubic-bezier(.4,0,.2,1) both}
+.pre-shot:nth-child(2){animation-delay:.75s}
+.pre-shot:nth-child(3){animation-delay:1.5s}
+.pre-shot:nth-child(4){animation:shotlast 2s cubic-bezier(.4,0,.2,1) 2.2s both}
+.pre::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at center,rgba(20,14,10,.15),rgba(20,14,10,.55))}
+@keyframes shot{0%{opacity:0;transform:translateX(5%) scale(1.08)}25%{opacity:1}75%{opacity:1}100%{opacity:0;transform:translateX(-5%) scale(1.08)}}
+@keyframes shotlast{0%{opacity:0;transform:translateX(4%) scale(1.08)}35%{opacity:1}100%{opacity:1;transform:translateX(-2%) scale(1.08)}}
+.pre-row{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;white-space:nowrap;color:var(--crema);padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.pre-row .lbl{font-size:clamp(10px,1.1vw,13px);letter-spacing:.22em;opacity:0;animation:fadein .7s ease .25s forwards;padding-inline:.35em}
+.pre-gap{display:block;width:0;overflow:hidden;animation:opengap 1s cubic-bezier(.65,0,.2,1) .95s forwards}
+.pre-mask{display:block;overflow:hidden;width:clamp(78px,10vw,132px);margin:0 auto}
+.pre-mask svg{display:block;width:100%;height:auto;transform:translateY(110%);animation:rise .85s cubic-bezier(.2,.8,.2,1) 1.55s forwards}
+@keyframes fadein{to{opacity:1}}
+@keyframes opengap{to{width:clamp(110px,15vw,190px)}}
+@keyframes opengapv{to{height:clamp(96px,26vw,130px)}}
+@keyframes rise{to{transform:translateY(0)}}
+@keyframes slowzoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+@keyframes curtain{to{transform:translateY(-100%);visibility:hidden}}
+@media (max-width:640px){
+  .pre-row{flex-direction:column;white-space:normal;text-align:center}
+  .pre-gap{width:auto;height:0;animation-name:opengapv;display:grid;place-items:center}
+  .pre-mask{width:96px}
+}
+.pre.skip{animation:curtain .6s cubic-bezier(.76,0,.24,1) forwards}
+.pre.gone{display:none}
+
+/* ---------- Header ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .4s ease,border-color .4s ease;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(33,29,26,.95);border-bottom-color:var(--linea-clara);backdrop-filter:blur(8px)}
+.nav-in{height:var(--hh);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+.nav-links{display:flex;gap:22px}
+.nav-links a{text-decoration:none}
+.nav-mark{width:46px;opacity:0;transform:translateY(-6px);transition:opacity .4s,transform .4s;color:var(--crema)}
+.nav-mark svg{display:block;width:100%;height:auto}
+.nav.solid .nav-mark{opacity:1;transform:none}
+.lang{justify-self:end;display:flex;gap:4px;align-items:center}
+.lang button{background:none;border:0;padding:6px 4px;cursor:pointer;opacity:.55;font-size:11.5px;letter-spacing:.16em}
+.lang button[aria-pressed="true"]{opacity:1;text-decoration:underline;text-underline-offset:5px}
+@media (max-width:620px){.nav-links a:nth-child(3){display:none}.nav-links{gap:14px}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:var(--negro);color:var(--crema)}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .poster{z-index:1;transition:opacity .8s ease}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,16,13,.55) 0%,rgba(20,16,13,.05) 35%,rgba(20,16,13,.15) 60%,rgba(20,16,13,.78) 100%);pointer-events:none}
+.hero-in{position:relative;z-index:2;height:100%;display:grid;grid-template-rows:1fr auto;justify-items:center;text-align:center;padding-block:calc(var(--hh) + 6vh) 7vh}
+.hero-logo{width:clamp(150px,19vw,250px);align-self:center;color:var(--crema);margin:0}
+.hero-logo svg{width:100%;height:auto;display:block}
+.hero-text{display:grid;gap:12px;justify-items:center}
+.hero-line{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(32px,3.8vw,56px);line-height:.98;max-width:17ch;text-wrap:balance}
+.hero-sub{opacity:.85}
+.hero-cue{margin-top:12px;text-decoration:none;display:grid;justify-items:center;gap:10px}
+.hero-cue i{display:block;width:1px;height:38px;background:linear-gradient(var(--crema),transparent);animation:cue 2.4s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:scaleY(.4);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
+
+/* ---------- Intro ---------- */
+
+/* ---------- Destacados ---------- */
+.dest{padding-block:clamp(72px,10vw,140px)}
+.dest-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,5vw,64px)}
+.dest-head p{margin:0;max-width:34ch;color:rgba(241,233,219,.75);line-height:1.38}
+.dest-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);grid-template-rows:1fr 1fr;gap:10px;height:min(88vh,860px)}
+.dcard{position:relative;overflow:hidden;margin:0;background:var(--negro);cursor:pointer}
+.dcard:first-child{grid-row:span 2}
+.dcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;transition:transform 1.4s cubic-bezier(.2,.7,.1,1)}
+.dcard:hover img{transform:scale(1.04)}
+.dcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,13,.35) 0%,transparent 30%,transparent 50%,rgba(20,16,13,.86) 100%)}
+.dtag{position:absolute;z-index:2;top:18px;left:18px;display:inline-flex;align-items:center;gap:8px;padding:7px 11px;background:rgba(20,16,13,.6);backdrop-filter:blur(4px);color:var(--crema)}
+.dtag svg{width:10px;height:10px}
+.dcap{position:absolute;z-index:2;left:22px;right:22px;bottom:20px;display:grid;grid-template-columns:1fr auto;gap:4px 18px;align-items:end}
+.dcap h3{margin:0;font-family:var(--serif);font-weight:600;font-size:clamp(34px,3.6vw,56px);line-height:.92}
+.dcap p{margin:0;grid-column:1;color:rgba(241,233,219,.78);font-size:15px;line-height:1.35;max-width:44ch}
+.dcap .price{grid-column:2;grid-row:1 / span 2;align-self:end}
+@media (max-width:820px){.dest-grid{grid-template-columns:1fr;grid-template-rows:none;height:auto}.dcard{aspect-ratio:4/5}.dcard:first-child{grid-row:auto}}
+
+/* ---------- Carta ---------- */
+.carta{padding-block:clamp(72px,10vw,140px) clamp(48px,6vw,96px)}
+.carta-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;margin-bottom:clamp(36px,6vw,80px)}
+.carta-tools{display:grid;gap:14px;justify-items:end;text-align:right}
+.carta-tools p{margin:0;color:var(--tinta-suave);max-width:32ch;font-size:15px;line-height:1.35}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--linea);background:transparent;cursor:pointer;border-radius:999px}
+.chip[aria-pressed="true"]{background:var(--veg);border-color:var(--veg);color:var(--crema)}
+.leaf{width:12px;height:12px;flex:none}
+.legend{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end;color:var(--tinta-suave)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+@media (max-width:820px){.carta-head{grid-template-columns:1fr}.carta-tools{justify-items:start;text-align:left}.legend{justify-content:flex-start}}
+
+.carta-grid{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(32px,4vw,64px);align-items:start}
+.index{position:sticky;top:calc(var(--hh) + 28px);display:grid;gap:16px}
+.index ol{list-style:none;margin:0;padding:0;display:grid;gap:0;border-left:1px solid var(--linea)}
+.index a{display:flex;align-items:baseline;gap:6px;padding:4px 0 4px 16px;margin-left:-1px;border-left:2px solid transparent;text-decoration:none;font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.08;color:var(--tinta-suave);transition:color .3s,border-color .3s}
+.index a sup{font-family:var(--sans);font-weight:500;font-size:10.5px;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.index a.on{color:var(--burdeos);font-style:italic;font-weight:600;border-left-color:var(--burdeos)}
+.index a:hover{color:var(--tinta)}
+.index-bar{display:none}
+
+.chapter{padding-bottom:clamp(56px,7vw,100px)}
+.chapter + .chapter{padding-top:clamp(40px,5vw,64px);border-top:1px solid var(--linea)}
+.ch-h{display:flex;align-items:baseline;gap:16px;margin-bottom:clamp(18px,2.6vw,32px)}
+.ch-h .no{font-variant-numeric:tabular-nums;color:var(--tinta-suave)}
+.ch-h h3{margin:0;font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(48px,6.4vw,98px);line-height:.86;letter-spacing:-.01em}
+.g-h{display:flex;justify-content:space-between;gap:16px;margin:26px 0 4px;padding-bottom:8px;border-bottom:1px solid var(--linea);color:var(--tinta-suave)}
+.g-h:first-child{margin-top:0}
+
+.ch-body.ph{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.92fr);gap:clamp(28px,4vw,56px);align-items:start}
+.rows{display:grid}
+.row{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:3px;padding:16px 0 16px 18px;margin-left:-18px;border-left:2px solid transparent;cursor:pointer;transition:border-color .35s,background-color .35s}
+.row:hover{background-color:rgba(44,28,20,.035)}
+.row.on{border-left-color:var(--tinta)}
+.row + .row{border-top:1px solid rgba(44,28,20,.09)}
+.thumb{display:none}
+.r-top{display:flex;align-items:baseline;gap:10px}
+.r-name{margin:0;font-family:var(--serif);font-weight:600;font-size:23px;line-height:1.05;letter-spacing:.002em}
+.lead{flex:1;min-width:16px;border-bottom:1px dotted rgba(44,28,20,.38);transform:translateY(-5px)}
+.price{font-family:var(--sans);font-weight:500;font-size:15.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.r-desc{margin:0;color:var(--tinta-suave);font-size:15px;line-height:1.34;max-width:52ch}
+.r-tags{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;line-height:1.3;color:var(--tinta-suave);margin-top:3px}
+.vmark{display:inline-flex;align-items:center;gap:5px;color:var(--veg);font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:11px}
+.tmark{letter-spacing:.1em;text-transform:uppercase;font-size:11px;color:var(--madera);font-weight:500}
+.more{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-suave);margin-top:4px;opacity:0;transition:opacity .3s}
+.row:hover .more,.row.on .more{opacity:1}
+
+.stage{position:relative;align-self:stretch}
+.stage-in{position:sticky;top:calc(var(--hh) + 20px);height:calc(100vh - var(--hh) - 40px);max-height:760px;display:grid;grid-template-rows:1fr auto;gap:10px}
+.plates{position:relative;overflow:hidden;cursor:zoom-in;display:grid;place-items:center;min-height:0}
+.plate{grid-area:1 / 1;position:relative;width:min(92%,60vh);aspect-ratio:1;max-height:96%;transition:transform 1s cubic-bezier(.2,.75,.15,1),opacity .7s ease;will-change:transform}
+.plate img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 26px 28px rgba(44,28,20,.3)) drop-shadow(0 6px 8px rgba(44,28,20,.2))}
+.plate.up{transform:translateY(-82%) rotate(-30deg) scale(.82);opacity:0}
+.plate.down{transform:translateY(82%) rotate(30deg) scale(.82);opacity:0}
+.plate.on{transform:none;opacity:1}
+.ring{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,#F6F0E6 0 52%,#E3D8C7 52.4% 53%,#F1EADE 53.4% 68%,#DCCFBC 68.4% 69%,#EEE6D8 69.4% 100%);box-shadow:0 24px 40px rgba(44,28,20,.16),inset 0 0 0 1px rgba(44,28,20,.06)}
+.ring span{display:grid;gap:6px;max-width:58%;color:var(--tinta-suave)}
+.ring b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(20px,2vw,28px);line-height:1;color:var(--tinta)}
+.stage-cap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid var(--linea);padding-top:10px}
+.stage-cap b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:26px;line-height:1}
+
+.ch-body.tx{columns:2;column-gap:clamp(28px,4vw,64px)}
+.ch-body.tx .grp{break-inside:avoid;margin-bottom:22px}
+.ch-body.tx .g-h{margin-top:0}
+.drow{display:grid;gap:1px;padding:8px 0;break-inside:avoid}
+.drow + .drow{border-top:1px solid rgba(44,28,20,.08)}
+.drow .r-name{font-size:19.5px}
+.drow .r-desc{font-size:13.5px}
+
+body.vegonly .row:not([data-v]),body.vegonly .drow:not([data-v]){display:none}
+.chapter[hidden]{display:none}
+
+@media (max-width:960px){
+  html{scroll-padding-top:calc(var(--hh) + 70px)}
+  .ch-h h3{font-size:clamp(30px,8.6vw,40px);line-height:.95}
+  .ch-h{gap:12px}
+  .carta-grid{grid-template-columns:1fr}
+  .index{display:none}
+  .index-bar{display:flex;position:sticky;top:var(--hh);z-index:20;justify-content:space-between;align-items:center;gap:12px;margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 18px;height:48px;padding:0 max(16px,env(safe-area-inset-left,0px));background-color:var(--taupe);background-image:url(img/tex_soft.webp);background-size:960px;background-blend-mode:multiply;border-bottom:1px solid var(--linea)}
+  .index-bar{height:58px}
+  .index-bar button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;height:100%;background:none;border:0;padding:0;cursor:pointer;color:var(--tinta)}
+  .ib-cta{display:inline-flex;align-items:center;gap:7px;flex:none;height:38px;padding:0 12px 0 14px;border-radius:999px;background:var(--tinta);color:var(--crema);font-size:10.5px;letter-spacing:.08em}
+  .ib-cta .chev{width:12px;height:12px}
+  .index-bar b{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--serif);font-style:italic;font-weight:400;font-size:17px;line-height:1.1;color:var(--burdeos);letter-spacing:0;text-transform:none}
+  /* Phone: the plate stage sticks under the index bar; plates rotate in as you scroll the list below */
+  .ch-body.ph{display:flex;flex-direction:column}
+  .ch-body.ph .stage{order:-1}
+  .stage{position:sticky;top:calc(var(--hh) + 58px);z-index:6;margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 4px;padding:0 max(16px,env(safe-area-inset-left,0px));background-color:var(--taupe);background-image:url(img/tex_soft.webp);background-size:960px;background-blend-mode:multiply;box-shadow:0 16px 16px -16px rgba(33,26,20,.45)}
+  .stage-in{position:static;height:31svh;min-height:210px;max-height:290px;gap:4px;padding-block:6px 8px}
+  .plate{width:min(88%,24svh)}
+  .plate.up{transform:translateY(-72%) rotate(-42deg) scale(.78)}
+  .plate.down{transform:translateY(72%) rotate(42deg) scale(.78)}
+  .stage-cap{padding-top:6px}
+  .stage-cap b{font-size:20px}
+  .ch-body.ph .thumb{display:none}
+  .ch-body.ph .row{grid-template-columns:minmax(0,1fr);padding:14px 10px;margin-inline:-10px}
+  .ch-body.ph .row.on{background-color:rgba(33,26,20,.07)}
+  .row{grid-template-columns:78px minmax(0,1fr);column-gap:16px;padding-left:0;margin-left:0;border-left:0}
+  .row.on{border-left:0}
+  .row:hover{background:none}
+  .thumb{display:block;grid-row:span 4;width:78px;height:78px;align-self:start}
+  .thumb img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 8px 10px rgba(44,28,20,.25))}
+  .thumb .ring{box-shadow:inset 0 0 0 1px rgba(44,28,20,.08);opacity:.75}
+  .thumb .ring span{display:none}
+  .r-name{font-size:21px}
+  .more{opacity:1}
+  .ch-body.tx{columns:1}
+}
+
+/* Index overlay (phone) */
+.idx-over{position:fixed;inset:0;z-index:70;background-color:var(--taupe);background-image:url(img/tex_soft.webp);background-size:960px;background-blend-mode:multiply;color:var(--tinta);display:grid;grid-template-rows:auto 1fr;padding-top:env(safe-area-inset-top,0px)}
+.idx-over[hidden]{display:none}
+.idx-over header{height:var(--hh);display:flex;justify-content:space-between;align-items:center}
+.idx-over header button{background:none;border:0;cursor:pointer;padding:8px 0}
+.idx-over ol{list-style:none;margin:0;padding:8px 0 40px;overflow:auto;display:grid;align-content:start}
+.idx-over a{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--linea);text-decoration:none;font-family:var(--serif);font-weight:600;font-size:32px;line-height:1}
+.idx-over a sup{font-family:var(--sans);font-size:11px}
+.idx-over a.on{font-style:italic;color:var(--burdeos)}
+
+/* ---------- Ficha del plato ---------- */
+.ficha{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.ficha[hidden]{display:none}
+.ficha-back{position:absolute;inset:0;background:rgba(20,16,13,.74);backdrop-filter:blur(6px);animation:fadein .35s ease both;opacity:0}
+.ficha-card{position:relative;width:min(900px,100%);max-height:100%;overflow:auto;background-color:var(--negro);background-image:url(img/tex_fine.webp);background-size:768px;background-blend-mode:soft-light;color:var(--crema);box-shadow:0 40px 80px rgba(0,0,0,.45);animation:sheetin .5s cubic-bezier(.2,.75,.15,1) both;overscroll-behavior:contain}
+@keyframes sheetin{from{transform:translateY(28px);opacity:0}to{transform:none;opacity:1}}
+.ficha-x{position:absolute;z-index:3;top:12px;right:12px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(241,233,219,.35);background:rgba(20,16,13,.55);color:var(--crema);cursor:pointer;font-size:22px;line-height:1;display:grid;place-items:center}
+.ficha-img{position:relative;margin:0;aspect-ratio:16/11;background:var(--negro) url(img/f_fondo.webp) center/cover no-repeat;overflow:hidden}
+.ficha-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ficha-img .ph{position:absolute;inset:0;display:grid;place-items:center}
+.ficha-img .ph .ring{width:min(62%,420px);height:auto;aspect-ratio:1;background:radial-gradient(circle,#2b211a 0 52%,#3a2d23 52.4% 53%,#2f241c 53.4% 68%,#45362a 68.4% 69%,#33271f 69.4% 100%);box-shadow:24px 30px 50px rgba(0,0,0,.55)}
+.ficha-img .ph .ring span{color:rgba(241,233,219,.6)}
+.ficha-img .ph .ring b{color:var(--crema)}
+.ficha-img .dtag{top:16px;left:16px}
+.ficha-body{display:grid;gap:12px;padding:24px clamp(20px,3.4vw,40px) 30px}
+.ficha-top{display:flex;justify-content:space-between;align-items:baseline;gap:20px}
+.ficha-top h3{margin:0;font-family:var(--serif);font-weight:600;font-size:clamp(36px,4.2vw,56px);line-height:.92}
+.ficha-top .price{font-size:18px}
+.ficha-body p{margin:0;color:rgba(241,233,219,.8);font-size:16.5px;line-height:1.42;max-width:62ch}
+.ficha-body .r-tags{color:rgba(241,233,219,.7);font-size:13.5px}
+.ficha-body .vmark{color:var(--veg-claro)}
+.ficha-body .tmark{color:var(--arena)}
+.ficha-note{color:rgba(241,233,219,.45)}
+@media (min-width:701px){
+  .ficha-card{width:min(1040px,100%);display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1fr)}
+  .ficha-img{aspect-ratio:4/5;max-height:calc(100vh - 32px);height:100%}
+  .ficha-body{align-content:end;padding:clamp(28px,3.6vw,48px)}
+  .ficha-top{flex-direction:column;align-items:flex-start;gap:10px}
+}
+@media (max-width:700px){
+  .ficha{padding:0;place-items:stretch}
+  .ficha-card{width:100%;height:100%;max-height:none;animation-name:sheetup}
+  .ficha-img{aspect-ratio:4/5;max-height:66svh;width:100%}
+  .ficha-x{top:max(12px,env(safe-area-inset-top,0px))}
+}
+@keyframes sheetup{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+
+/* ---------- Reservas ---------- */
+.res{position:relative;overflow:hidden;padding-block:clamp(80px,11vw,150px);color:var(--crema)}
+.res-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:contrast(1.1) brightness(.62);mix-blend-mode:luminosity;opacity:.24}
+.res-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:start}
+.res-copy{display:grid;gap:20px}
+.res-copy p{margin:0;max-width:36ch;color:rgba(241,233,219,.82);line-height:1.38}
+.res-copy small{color:rgba(241,233,219,.62);font-size:13.5px;max-width:40ch;line-height:1.35}
+form.rf{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+.f{display:grid;gap:4px}
+.f.w{grid-column:1 / -1}
+.f label{color:rgba(241,233,219,.72)}
+.f input,.f select,.f textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(241,233,219,.45);padding:8px 0;color:var(--crema);font-size:17px;border-radius:0}
+.f select option{color:#14100D}
+.f textarea{resize:vertical;min-height:42px}
+.btn{grid-column:1 / -1;justify-self:start;margin-top:8px;background:var(--crema);color:var(--espresso);border:0;padding:15px 26px;cursor:pointer;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.out{grid-column:1 / -1;border:1px solid rgba(241,233,219,.3);padding:18px;display:grid;gap:12px;background:rgba(20,16,13,.38)}
+.out pre{margin:0;white-space:pre-wrap;font-family:var(--sans);font-size:15px;line-height:1.5}
+.out .row2{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.out button{background:none;border:1px solid rgba(241,233,219,.5);padding:8px 14px;cursor:pointer}
+.out small{color:rgba(241,233,219,.62)}
+.rp{display:grid;gap:0}
+.rp-h{color:rgba(241,233,219,.62);margin-bottom:14px}
+.rp-m{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;padding:20px 0;border-top:1px solid rgba(241,233,219,.28);color:var(--crema);text-decoration:none;transition:padding .25s ease}
+.rp-m:last-of-type{border-bottom:1px solid rgba(241,233,219,.28)}
+.rp-m .lbl{color:rgba(241,233,219,.5)}
+.rp-t{display:grid;gap:4px}.rp-t b{font-family:var(--serif,inherit);font-weight:400;font-size:clamp(21px,2.2vw,27px);line-height:1.1}
+.rp-t small{color:rgba(241,233,219,.66);font-size:14px;line-height:1.35}
+.rp-m i{font-style:normal;font-size:20px;transition:translate .25s ease}
+.rp-m:hover{padding-left:8px}.rp-m:hover i{translate:6px 0}
+.rp-cta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:28px}.rp-cta .btn{margin-top:0;text-decoration:none;display:inline-block}
+.rp-n{margin-top:14px;color:rgba(241,233,219,.55);font-size:13px}
+@media (prefers-reduced-motion:reduce){.rp-m,.rp-m i{transition:none}}
+@media (max-width:820px){.res-grid{grid-template-columns:1fr}form.rf{grid-template-columns:1fr}}
+
+/* ---------- Casa / ubicación ---------- */
+.casa{position:relative;padding-block:clamp(72px,10vw,140px)}
+.vlabel{position:absolute;top:clamp(72px,10vw,140px);right:max(14px,env(safe-area-inset-right,0px));writing-mode:vertical-rl;color:var(--tinta-suave)}
+.casa-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:clamp(36px,5vw,64px)}
+.ncard{margin:0;display:grid;gap:12px}
+.ncard img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.ncard .t{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.ncard h3{margin:0;font-family:var(--serif);font-weight:600;font-size:clamp(36px,3.8vw,56px);line-height:.9}
+.ncard p{margin:0;color:var(--tinta-suave);max-width:40ch;line-height:1.36}
+.place{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,4vw,56px);margin-top:clamp(48px,7vw,96px);padding-top:26px;border-top:1px solid var(--linea)}
+.place h4{margin:0 0 8px}
+.place p{margin:0 0 8px;font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.08}
+.place small{display:block;color:var(--tinta-suave);font-size:14px;line-height:1.35}
+@media (max-width:820px){.casa-grid,.place{grid-template-columns:1fr}.vlabel{display:none}}
+
+/* ---------- Footer ---------- */
+.foot{padding-block:clamp(72px,10vw,130px) 36px;text-align:center}
+.foot-in{display:grid;justify-items:center;gap:26px}
+.foot p.claim{margin:0;max-width:34ch;font-size:12.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;line-height:1.75}
+.foot .logo{width:92px;color:var(--crema)}
+.foot .logo svg{width:100%;height:auto;display:block}
+.foot small{color:rgba(241,233,219,.45);font-size:11.5px;letter-spacing:.06em}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .pre{display:none}
+  .plate{transition:none}
+  .hero-cue i{animation:none}
+  .ficha-card,.ficha-back{animation:none;opacity:1}
+}
+</style>
+
+<div class="pre" id="pre" aria-hidden="true">
+  <div class="pre-shot" style="background-image:url(img/b_1.webp)"></div><div class="pre-shot" style="background-image:url(img/b_2.webp)"></div><div class="pre-shot" style="background-image:url(img/b_3.webp)"></div><div class="pre-shot" style="background-image:url(img/b_4.webp)"></div>
+  <div class="pre-row">
+    <span class="lbl" data-t="pre_l">Piso 11 sobre Provenza</span>
+    <span class="pre-gap"><span class="pre-mask"><svg class="logo-mark" viewBox="0 0 1414 745" role="img" aria-label="360"><path fill="currentColor" fill-rule="evenodd" d="M262.0,744.4C222.0,741.8 183.6,732.9 152.5,719.2C102.5,697.2 55.4,650.2 27.1,594.1C10.2,560.7 1.3,529.8 0.7,502.5L0.5,493.5L91.7,493.2L183.0,493.0L183.4,495.2C183.7,496.5 184.1,501.2 184.5,505.7C186.0,528.0 197.1,550.5 214.6,566.8C231.9,583.1 253.1,591.0 279.2,591.0C320.3,591.0 353.6,571.0 368.3,537.3C375.2,521.6 377.3,494.9 373.0,477.9C366.0,450.7 347.6,428.8 320.5,415.9C298.5,405.3 275.7,403.9 250.8,411.6C249.1,412.1 249.0,408.8 249.0,352.2L249.0,292.3L266.8,291.7C281.9,291.3 285.8,290.8 293.3,288.6C314.8,282.2 330.1,270.1 338.5,252.6C343.8,241.6 345.2,235.1 345.7,219.5C346.1,207.6 345.9,204.2 344.1,197.3C341.3,185.7 336.9,177.2 329.8,169.5C315.5,153.9 298.7,147.0 275.2,147.0C247.8,147.1 230.0,156.3 215.1,178.3C208.3,188.3 204.2,201.5 203.3,216.2L202.7,226.0L119.4,226.0L36.1,226.0L36.6,222.2C41.6,184.5 48.2,160.7 60.9,134.5C80.2,94.6 107.7,62.8 142.5,40.1C169.6,22.5 207.1,9.0 244.0,3.6C266.4,0.3 284.7,0.0 473.3,0.0L662.1,0.0L647.1,19.8C638.8,30.6 626.2,47.1 619.0,56.5C611.9,65.8 601.5,79.3 596.1,86.5C590.6,93.7 580.7,106.7 574.0,115.5C567.3,124.3 558.7,135.6 554.9,140.5C551.2,145.4 545.6,152.7 542.7,156.5C487.5,227.7 462.5,265.1 441.0,308.0C426.3,337.5 417.6,359.2 409.0,387.5C400.0,417.4 396.5,435.0 394.1,463.7C388.2,531.3 410.3,595.6 459.0,653.1C464.2,659.2 471.5,667.1 475.4,670.7L482.3,677.3L478.9,680.2C439.4,713.7 388.0,734.6 325.5,742.6C314.8,743.9 273.1,745.2 262.0,744.4ZM1100.0,744.4C1054.7,741.3 1013.0,728.0 979.5,706.0C961.1,693.8 951.0,685.8 934.3,669.6L925.0,660.7L932.4,653.0C958.0,626.2 979.4,589.4 989.9,554.3C997.6,528.4 1000.3,507.7 1000.3,475.0C1000.3,449.2 999.3,437.0 995.4,418.2C972.5,306.3 888.5,228.4 785.0,223.2C749.1,221.4 718.7,226.2 685.2,239.1C679.3,241.4 673.5,243.4 672.2,243.7C667.3,244.8 667.2,245.1 704.6,200.5C710.6,193.3 722.7,178.9 731.5,168.5C746.5,150.6 758.2,136.7 791.9,96.5C799.8,87.2 817.1,66.5 830.5,50.5C843.9,34.5 858.8,16.8 863.7,11.0L872.6,0.5L999.5,0.2C1127.4,-0.1 1145.6,0.3 1167.8,3.6C1219.8,11.2 1266.1,34.7 1306.4,73.9C1368.8,134.7 1405.0,225.8 1413.0,342.2C1416.4,391.8 1410.9,450.7 1398.0,502.0C1390.1,533.6 1381.9,556.2 1368.5,583.5C1351.2,619.0 1334.6,642.6 1309.1,668.1C1266.0,711.2 1221.8,733.8 1164.4,742.0C1150.9,743.9 1113.6,745.3 1100.0,744.4ZM683.0,598.4C650.9,595.4 621.9,579.9 602.0,555.2C573.6,519.9 566.8,475.8 583.6,435.7C591.5,416.9 606.4,397.7 622.1,386.0C671.6,349.2 743.1,357.5 780.9,404.6C798.4,426.3 807.0,451.2 807.0,479.9C807.0,501.6 803.1,518.1 793.8,536.2C782.1,559.1 764.0,576.5 739.7,588.0C722.2,596.3 701.7,600.1 683.0,598.4ZM1130.9,586.0C1149.7,583.6 1163.5,576.6 1176.7,562.7C1205.1,532.6 1223.4,485.2 1230.9,421.5C1235.5,383.3 1235.6,363.5 1231.4,326.0C1226.0,276.1 1212.9,233.6 1194.3,204.5C1175.2,174.8 1156.3,161.5 1129.7,159.2C1103.2,156.9 1082.7,164.1 1065.7,181.9C1048.7,199.7 1036.6,221.2 1026.5,251.4C1013.7,289.9 1007.1,337.3 1008.3,381.0C1008.9,400.2 1009.4,406.2 1012.1,428.0C1017.9,474.1 1031.8,516.0 1050.3,543.4C1068.5,570.5 1085.9,582.7 1110.5,585.9C1120.4,587.1 1121.6,587.1 1130.9,586.0Z"/></svg></span></span>
+    <span class="lbl" data-t="pre_r">Medellín alrededor</span>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <nav class="nav-links lbl" aria-label="Secciones">
+      <a href="#carta" data-t="nav_carta">Carta</a>
+      <a href="#reservas" data-t="nav_res">Reservar</a>
+      <a href="#casa" data-t="nav_ubi">Ubicación</a>
+    </nav>
+    <a class="nav-mark" href="#top" aria-label="360 Rooftop"><svg class="logo-mark" viewBox="0 0 1414 745" role="img" aria-label="360"><path fill="currentColor" fill-rule="evenodd" d="M262.0,744.4C222.0,741.8 183.6,732.9 152.5,719.2C102.5,697.2 55.4,650.2 27.1,594.1C10.2,560.7 1.3,529.8 0.7,502.5L0.5,493.5L91.7,493.2L183.0,493.0L183.4,495.2C183.7,496.5 184.1,501.2 184.5,505.7C186.0,528.0 197.1,550.5 214.6,566.8C231.9,583.1 253.1,591.0 279.2,591.0C320.3,591.0 353.6,571.0 368.3,537.3C375.2,521.6 377.3,494.9 373.0,477.9C366.0,450.7 347.6,428.8 320.5,415.9C298.5,405.3 275.7,403.9 250.8,411.6C249.1,412.1 249.0,408.8 249.0,352.2L249.0,292.3L266.8,291.7C281.9,291.3 285.8,290.8 293.3,288.6C314.8,282.2 330.1,270.1 338.5,252.6C343.8,241.6 345.2,235.1 345.7,219.5C346.1,207.6 345.9,204.2 344.1,197.3C341.3,185.7 336.9,177.2 329.8,169.5C315.5,153.9 298.7,147.0 275.2,147.0C247.8,147.1 230.0,156.3 215.1,178.3C208.3,188.3 204.2,201.5 203.3,216.2L202.7,226.0L119.4,226.0L36.1,226.0L36.6,222.2C41.6,184.5 48.2,160.7 60.9,134.5C80.2,94.6 107.7,62.8 142.5,40.1C169.6,22.5 207.1,9.0 244.0,3.6C266.4,0.3 284.7,0.0 473.3,0.0L662.1,0.0L647.1,19.8C638.8,30.6 626.2,47.1 619.0,56.5C611.9,65.8 601.5,79.3 596.1,86.5C590.6,93.7 580.7,106.7 574.0,115.5C567.3,124.3 558.7,135.6 554.9,140.5C551.2,145.4 545.6,152.7 542.7,156.5C487.5,227.7 462.5,265.1 441.0,308.0C426.3,337.5 417.6,359.2 409.0,387.5C400.0,417.4 396.5,435.0 394.1,463.7C388.2,531.3 410.3,595.6 459.0,653.1C464.2,659.2 471.5,667.1 475.4,670.7L482.3,677.3L478.9,680.2C439.4,713.7 388.0,734.6 325.5,742.6C314.8,743.9 273.1,745.2 262.0,744.4ZM1100.0,744.4C1054.7,741.3 1013.0,728.0 979.5,706.0C961.1,693.8 951.0,685.8 934.3,669.6L925.0,660.7L932.4,653.0C958.0,626.2 979.4,589.4 989.9,554.3C997.6,528.4 1000.3,507.7 1000.3,475.0C1000.3,449.2 999.3,437.0 995.4,418.2C972.5,306.3 888.5,228.4 785.0,223.2C749.1,221.4 718.7,226.2 685.2,239.1C679.3,241.4 673.5,243.4 672.2,243.7C667.3,244.8 667.2,245.1 704.6,200.5C710.6,193.3 722.7,178.9 731.5,168.5C746.5,150.6 758.2,136.7 791.9,96.5C799.8,87.2 817.1,66.5 830.5,50.5C843.9,34.5 858.8,16.8 863.7,11.0L872.6,0.5L999.5,0.2C1127.4,-0.1 1145.6,0.3 1167.8,3.6C1219.8,11.2 1266.1,34.7 1306.4,73.9C1368.8,134.7 1405.0,225.8 1413.0,342.2C1416.4,391.8 1410.9,450.7 1398.0,502.0C1390.1,533.6 1381.9,556.2 1368.5,583.5C1351.2,619.0 1334.6,642.6 1309.1,668.1C1266.0,711.2 1221.8,733.8 1164.4,742.0C1150.9,743.9 1113.6,745.3 1100.0,744.4ZM683.0,598.4C650.9,595.4 621.9,579.9 602.0,555.2C573.6,519.9 566.8,475.8 583.6,435.7C591.5,416.9 606.4,397.7 622.1,386.0C671.6,349.2 743.1,357.5 780.9,404.6C798.4,426.3 807.0,451.2 807.0,479.9C807.0,501.6 803.1,518.1 793.8,536.2C782.1,559.1 764.0,576.5 739.7,588.0C722.2,596.3 701.7,600.1 683.0,598.4ZM1130.9,586.0C1149.7,583.6 1163.5,576.6 1176.7,562.7C1205.1,532.6 1223.4,485.2 1230.9,421.5C1235.5,383.3 1235.6,363.5 1231.4,326.0C1226.0,276.1 1212.9,233.6 1194.3,204.5C1175.2,174.8 1156.3,161.5 1129.7,159.2C1103.2,156.9 1082.7,164.1 1065.7,181.9C1048.7,199.7 1036.6,221.2 1026.5,251.4C1013.7,289.9 1007.1,337.3 1008.3,381.0C1008.9,400.2 1009.4,406.2 1012.1,428.0C1017.9,474.1 1031.8,516.0 1050.3,543.4C1068.5,570.5 1085.9,582.7 1110.5,585.9C1120.4,587.1 1121.6,587.1 1130.9,586.0Z"/></svg></a>
+    <div class="lang lbl" role="group" aria-label="Idioma / Language">
+      <button type="button" id="lang-es" aria-pressed="true">ES</button><span aria-hidden="true">/</span><button type="button" id="lang-en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <img class="poster" src="img/hero_poster.webp" alt="">
+  <video id="heroVideo" muted loop playsinline preload="metadata" poster="img/hero_poster.webp" aria-hidden="true"></video>
+  <div class="wrap hero-in">
+    <h1 class="hero-logo" aria-label="360 Rooftop Pool &amp; Bar"><svg class="logo-full" viewBox="0 0 1414 982" role="img" aria-label="360 Rooftop Pool &amp; Bar"><path fill="currentColor" fill-rule="evenodd" d="M193.2,980.9C184.8,979.5 177.8,975.6 171.7,969.0C153.9,949.8 159.8,919.7 183.8,907.9C187.9,905.8 190.0,905.5 200.5,905.5C211.8,905.5 212.8,905.7 218.3,908.4C225.5,912.1 233.3,920.2 236.8,927.7C239.2,932.8 239.5,934.7 239.5,943.5C239.5,952.4 239.2,954.1 236.7,958.9C232.8,966.4 228.7,971.3 223.2,975.0C215.3,980.2 203.2,982.6 193.2,980.9ZM279.2,980.9C263.7,978.3 250.9,965.3 248.0,949.2C245.1,933.2 253.9,916.1 268.8,908.8C275.2,905.6 276.0,905.5 287.0,905.5C297.7,905.5 298.9,905.7 304.5,908.4C319.3,915.7 328.5,932.9 326.0,948.5C323.3,965.2 311.9,977.0 295.3,980.5C287.8,982.1 286.8,982.1 279.2,980.9ZM474.2,980.9C466.1,979.5 458.5,975.3 452.5,968.8C435.1,950.0 440.8,920.2 464.0,908.7C470.1,905.7 471.0,905.5 482.0,905.5C491.7,905.5 494.2,905.9 498.3,907.8C505.5,911.1 514.2,919.9 517.6,927.3C520.2,932.8 520.5,934.6 520.5,943.5C520.5,952.6 520.2,954.0 517.5,959.4C513.9,966.5 506.9,974.0 501.1,977.0C496.8,979.2 485.2,982.1 481.5,981.9C480.4,981.8 477.1,981.4 474.2,980.9ZM725.0,980.9C712.8,978.9 702.6,970.9 696.7,959.1C693.8,953.1 693.5,951.7 693.5,943.0C693.5,934.4 693.8,932.9 696.7,927.0C700.6,919.0 707.2,912.2 714.8,908.4C720.1,905.7 721.3,905.5 732.0,905.5C742.4,905.5 744.1,905.8 749.2,908.2C768.6,917.3 777.1,939.6 768.5,958.8C765.2,966.1 756.4,975.0 749.5,978.0C745.4,979.7 734.2,982.2 731.5,981.9C731.0,981.8 728.0,981.4 725.0,980.9ZM811.2,980.9C802.9,979.5 795.7,975.6 790.0,969.3C784.1,962.8 781.2,957.1 779.9,948.9C777.3,932.4 785.7,916.2 800.8,908.8C807.2,905.6 808.0,905.5 819.0,905.5C829.6,905.5 831.0,905.7 836.2,908.3C839.3,909.8 844.0,913.2 846.6,915.8C865.3,934.6 860.1,966.9 836.5,977.6C832.2,979.6 820.5,982.2 817.5,981.9C817.0,981.8 814.1,981.4 811.2,980.9ZM980.3,981.0C967.3,978.2 959.0,968.5 959.0,956.0C959.0,947.8 962.0,942.6 969.7,937.4C973.1,935.1 976.4,933.0 977.0,932.8C977.8,932.6 977.2,930.8 975.2,927.7C971.5,921.9 970.6,917.3 972.0,912.1C974.5,902.6 982.7,897.7 996.0,897.7C1009.6,897.7 1017.2,902.5 1020.0,912.8C1022.1,920.8 1018.3,929.6 1010.6,934.4C1008.1,936.0 1006.0,937.5 1006.0,937.7C1006.0,938.0 1008.3,940.6 1011.2,943.6C1015.0,947.6 1016.6,948.7 1017.6,947.9C1019.4,946.4 1023.0,938.4 1023.0,935.9C1023.0,933.8 1023.3,933.8 1030.2,934.4C1041.3,935.5 1041.0,935.3 1039.5,940.4C1037.8,946.1 1034.4,952.7 1030.9,957.1C1029.3,959.1 1028.0,961.2 1028.0,961.8C1028.0,963.3 1033.8,965.3 1037.6,965.2L1041.0,965.1L1041.0,972.4L1041.0,979.7L1036.2,980.3C1029.6,981.1 1023.5,979.7 1018.6,976.3C1014.5,973.4 1014.3,973.3 1012.1,975.1C1006.0,980.1 989.9,983.1 980.3,981.0ZM101.0,943.0L101.0,906.0L114.3,906.0C133.5,906.0 141.9,909.0 146.7,917.5C151.2,925.5 150.7,934.7 145.3,941.8C142.9,945.0 136.4,949.0 133.5,949.0C132.7,949.0 132.0,949.4 132.0,949.9C132.0,950.4 137.6,957.1 144.5,964.9C151.4,972.7 157.0,979.3 157.0,979.5C157.0,979.8 153.5,980.0 149.2,980.0L141.4,980.0L129.0,965.5C122.1,957.6 115.9,951.0 115.3,951.0C114.4,951.0 114.0,954.8 113.8,965.2L113.5,979.5L107.2,979.8L101.0,980.1L101.0,943.0ZM334.0,943.0L334.0,906.0L357.5,906.0L381.0,906.0L381.0,911.5L381.0,917.0L364.0,917.0L347.0,917.0L347.0,926.0L347.0,935.0L360.0,935.0L373.0,935.0L373.0,940.5L373.0,946.0L360.0,946.0L347.0,946.0L347.0,963.0L347.0,980.0L340.5,980.0L334.0,980.0L334.0,943.0ZM403.0,948.5L403.0,917.1L392.8,916.8L382.5,916.5L382.2,911.2L381.9,906.0L408.4,906.0L435.0,906.0L435.0,911.5L435.0,917.0L425.5,917.0L416.0,917.0L416.0,948.5L416.0,980.0L409.5,980.0L403.0,980.0L403.0,948.5ZM532.0,943.0L532.0,906.0L546.8,906.0C568.2,906.0 575.6,908.8 580.5,918.4C586.4,930.2 581.6,943.5 569.5,948.6C567.2,949.5 561.3,950.5 555.5,950.9L545.5,951.5L545.2,965.8L544.9,980.0L538.5,980.0L532.0,980.0L532.0,943.0ZM634.0,943.0L634.0,906.0L648.8,906.0C659.3,906.0 665.2,906.5 668.9,907.6C686.4,912.8 690.6,934.7 676.2,945.7C671.3,949.4 664.8,951.0 654.5,951.0L647.0,951.0L647.0,965.5L647.0,980.0L640.5,980.0L634.0,980.0L634.0,943.0ZM866.0,943.0L866.0,906.0L872.5,906.0L879.0,906.0L879.0,937.5L879.0,969.0L897.2,969.2L915.5,969.5L915.8,974.8L916.1,980.0L891.1,980.0L866.0,980.0L866.0,943.0ZM1085.0,942.9L1085.0,905.8L1101.2,906.2C1115.9,906.5 1118.0,906.7 1122.3,908.9C1129.4,912.3 1132.5,917.6 1132.4,925.6C1132.4,930.5 1131.8,932.6 1129.9,935.4C1128.6,937.4 1127.1,939.0 1126.5,939.0C1126.0,939.0 1127.3,940.4 1129.4,942.2C1134.3,946.2 1136.0,950.3 1136.0,958.0C1136.0,965.3 1133.6,970.7 1128.6,974.5C1123.1,978.7 1116.2,980.0 1099.8,980.0L1085.0,980.0L1085.0,942.9ZM1139.0,979.4C1139.0,979.0 1141.9,972.1 1145.4,964.1C1148.9,956.1 1156.6,938.5 1162.5,925.0C1168.3,911.5 1173.5,900.2 1173.9,899.7C1174.4,899.2 1204.8,966.1 1209.7,978.8C1210.1,979.7 1208.4,980.0 1203.3,980.0L1196.3,980.0L1192.0,970.0L1187.8,959.9L1174.1,960.2L1160.5,960.5L1156.5,970.0L1152.4,979.5L1145.7,979.8C1142.0,980.0 1139.0,979.8 1139.0,979.4ZM1215.6,976.9C1215.3,975.2 1215.0,958.5 1215.0,939.9L1215.0,906.0L1229.5,906.0C1241.6,906.0 1244.8,906.3 1249.4,908.0C1260.1,912.1 1264.3,918.0 1264.4,929.2C1264.4,935.1 1264.0,936.4 1261.4,940.2C1259.5,942.9 1256.3,945.5 1253.0,947.2C1250.1,948.7 1247.5,950.2 1247.3,950.4C1247.0,950.6 1252.5,957.1 1259.4,964.9C1266.3,972.6 1272.0,979.2 1272.0,979.5C1272.0,979.8 1268.5,980.0 1264.1,980.0L1256.2,980.0L1243.9,965.5C1237.1,957.5 1230.9,951.0 1230.2,951.0C1229.3,951.0 1229.0,954.6 1229.0,965.5L1229.0,980.0L1222.6,980.0C1216.3,980.0 1216.2,980.0 1215.6,976.9ZM211.5,968.0C231.7,959.4 231.8,927.8 211.6,918.0C206.4,915.5 196.0,915.3 190.6,917.5C185.3,919.7 179.5,925.3 176.9,930.8C174.1,936.6 173.9,948.5 176.4,954.2C182.4,968.1 197.6,974.0 211.5,968.0ZM299.4,967.2C308.4,962.3 313.1,953.9 312.9,942.6C312.9,939.2 312.3,935.1 311.7,933.3C303.4,910.9 272.8,909.8 262.9,931.5C260.4,937.0 260.4,949.0 262.9,954.6C269.4,969.0 285.5,974.5 299.4,967.2ZM492.6,968.0C501.3,964.3 508.0,953.5 508.0,943.0C508.0,932.6 500.8,921.3 491.8,917.5C487.1,915.6 476.3,915.6 471.7,917.5C460.1,922.3 453.0,936.6 456.0,949.2C460.2,966.4 476.5,974.9 492.6,968.0ZM741.9,968.8C746.9,967.2 754.6,959.7 756.7,954.2C759.3,947.3 759.1,936.7 756.1,931.0C750.9,920.9 743.2,916.0 732.5,916.0C724.5,916.0 720.5,917.6 714.6,923.0C703.7,933.1 703.3,951.6 713.7,962.3C721.3,970.2 730.5,972.3 741.9,968.8ZM831.5,967.1C837.1,964.0 842.3,957.2 844.1,950.7C845.6,945.0 844.7,935.3 842.2,930.3C837.3,920.8 829.5,916.1 818.7,916.0C804.3,916.0 793.9,926.0 792.3,941.3C791.4,950.6 797.1,961.8 805.5,967.0C812.8,971.5 823.3,971.5 831.5,967.1ZM1116.4,967.6C1120.8,965.8 1123.0,962.4 1123.0,957.5C1123.0,949.6 1117.7,946.0 1106.0,946.0L1099.0,946.0L1099.0,957.5L1099.0,969.0L1106.0,969.0C1109.9,969.0 1114.6,968.4 1116.4,967.6ZM997.2,966.0C999.2,965.4 1001.8,964.2 1002.9,963.2C1005.0,961.5 1004.9,961.4 996.7,952.6C987.7,942.9 986.7,942.5 981.9,947.6C980.1,949.6 979.5,951.3 979.5,955.0C979.5,960.4 981.5,963.4 986.5,965.6C990.2,967.2 992.4,967.3 997.2,966.0ZM1183.0,948.7C1183.0,948.5 1181.0,943.5 1178.6,937.5C1174.6,927.5 1174.1,926.7 1173.2,929.0C1172.7,930.4 1170.6,935.4 1168.7,940.2L1165.2,949.0L1174.1,949.0C1179.0,949.0 1183.0,948.9 1183.0,948.7ZM130.7,939.1C134.2,937.5 135.1,936.5 136.0,933.0C136.9,929.7 136.8,927.9 135.8,924.7C134.1,919.1 129.9,917.0 120.8,917.0L114.0,917.0L114.0,929.0L114.0,941.0L120.2,941.0C124.2,941.0 128.0,940.3 130.7,939.1ZM1243.3,939.9C1250.3,938.0 1253.2,931.9 1250.8,924.4C1249.1,919.1 1244.7,917.0 1235.8,917.0L1229.0,917.0L1229.0,929.0L1229.0,941.0L1234.2,941.0C1237.1,941.0 1241.2,940.5 1243.3,939.9ZM563.4,938.6C567.8,936.8 570.0,933.5 570.0,928.8C570.0,920.2 565.2,917.0 552.5,917.0L545.0,917.0L545.0,927.8C545.0,933.8 545.3,939.0 545.7,939.3C546.9,940.6 560.0,940.0 563.4,938.6ZM666.0,938.2C670.8,935.9 672.5,931.9 671.4,926.2C670.0,919.4 667.0,917.6 655.9,917.2L647.0,916.8L647.0,928.4L647.0,940.0L654.8,940.0C660.1,940.0 663.6,939.5 666.0,938.2ZM1115.1,932.7C1119.5,929.7 1121.0,925.8 1118.9,922.2C1116.8,918.4 1113.4,917.0 1105.8,917.0L1099.0,917.0L1099.0,926.0L1099.0,935.0L1105.4,935.0C1110.3,935.0 1112.4,934.5 1115.1,932.7ZM1002.4,923.6C1006.4,919.9 1006.7,918.3 1004.5,914.1C1002.9,910.9 1001.2,910.0 996.7,910.0C989.1,910.1 987.4,916.2 993.1,922.9C995.0,925.0 997.0,926.9 997.7,926.9C998.3,927.0 1000.5,925.5 1002.4,923.6ZM101.2,871.8L101.5,866.5L686.5,866.5L1271.5,866.5L1271.8,871.8L1272.1,877.0L686.5,877.0L100.9,877.0L101.2,871.8ZM799.2,835.3C793.9,832.7 788.5,823.8 791.6,822.6C794.9,821.3 796.7,822.1 798.3,825.6C801.5,832.3 809.8,833.6 816.0,828.3C818.6,826.2 819.0,825.1 819.0,821.1C819.0,815.2 817.5,813.7 806.2,808.5C796.3,803.9 793.5,800.7 793.6,794.0C793.7,788.2 796.0,784.6 801.7,781.9C809.1,778.3 819.7,780.9 823.0,787.1C823.9,788.7 823.7,789.2 821.6,790.1C819.4,791.1 818.7,790.9 815.9,788.5C807.7,781.7 795.6,790.2 801.5,798.6C802.3,799.8 805.5,801.8 808.7,803.0C821.9,808.3 826.5,813.6 825.6,822.4C825.0,828.1 821.6,833.0 816.7,835.4C812.3,837.4 803.5,837.4 799.2,835.3ZM115.0,811.5L115.0,787.1L108.2,786.8C101.7,786.5 101.5,786.4 101.2,783.8L100.9,781.0L118.5,781.0L136.1,781.0L135.8,783.8C135.5,786.4 135.3,786.5 128.8,786.8L122.0,787.1L122.0,811.5L122.0,836.0L118.5,836.0L115.0,836.0L115.0,811.5ZM218.0,808.5L218.0,781.0L221.0,781.0L224.0,781.0L224.0,792.0L224.0,803.0L238.5,803.0L253.0,803.0L253.0,791.9L253.0,780.9L256.0,781.2L259.1,781.5L259.1,808.5L259.1,835.5L256.0,835.8L253.0,836.1L253.0,822.5L253.0,808.9L238.8,809.2L224.5,809.5L224.2,822.8L223.9,836.0L221.0,836.0L218.0,836.0L218.0,808.5ZM347.0,808.5L347.0,781.0L354.1,781.0C366.7,781.0 372.8,784.1 375.1,791.8C376.8,797.7 375.5,802.7 371.0,807.2C368.9,809.3 366.3,811.0 365.2,811.0C361.8,811.0 361.9,812.3 365.9,817.5C367.9,820.3 371.8,825.5 374.4,829.2L379.2,836.0L375.3,836.0C371.4,836.0 371.3,835.9 363.0,824.0C358.3,817.4 354.2,812.0 353.8,812.0C353.4,812.0 353.0,817.4 353.0,824.0L353.0,836.0L350.0,836.0L347.0,836.0L347.0,808.5ZM463.0,808.5L463.0,781.0L477.5,781.0L492.0,781.0L492.0,784.0L492.0,787.0L480.5,787.0L469.0,787.0L469.0,795.0L469.0,803.0L480.5,803.0L492.0,803.0L492.0,806.0L492.0,809.0L480.5,809.0L468.9,809.0L469.2,819.8L469.5,830.5L480.8,830.8C492.0,831.1 492.0,831.1 492.0,833.5L492.0,836.0L477.5,836.0L463.0,836.0L463.0,808.5ZM579.0,808.5L579.0,781.0L593.5,781.0L608.0,781.0L608.0,784.0L608.0,787.0L596.5,787.0L585.0,787.0L585.0,795.0L585.0,803.0L596.0,803.0L607.0,803.0L607.0,806.0L607.0,809.0L596.0,809.0L585.0,809.0L585.0,820.0L585.0,831.0L596.5,831.0L608.0,831.0L608.0,833.5L608.0,836.0L593.5,836.0L579.0,836.0L579.0,808.5ZM911.0,808.5L911.0,781.0L914.0,781.0L917.0,781.0L917.0,808.5L917.0,836.0L914.0,836.0L911.0,836.0L911.0,808.5ZM1000.0,835.6C1000.0,835.4 1003.6,829.0 1008.1,821.5L1016.2,807.8L1008.6,794.7C1001.1,781.6 1001.1,781.5 1003.6,781.2C1005.0,781.0 1006.8,781.1 1007.5,781.4C1008.2,781.6 1011.1,786.2 1014.0,791.4C1018.5,799.8 1021.0,802.9 1021.0,800.2C1021.0,799.7 1023.3,795.2 1026.1,790.2C1031.0,781.4 1031.4,781.0 1034.6,781.0C1036.5,781.0 1038.0,781.2 1038.0,781.5C1038.0,781.8 1034.7,787.9 1030.6,794.9L1023.2,807.8L1031.1,821.2C1035.4,828.5 1039.0,834.8 1039.0,835.2C1039.0,835.7 1037.5,836.0 1035.7,836.0C1032.3,836.0 1031.3,834.8 1023.0,819.5C1021.8,817.3 1020.5,815.2 1020.2,814.8C1019.8,814.4 1016.7,818.9 1013.4,824.8C1007.5,835.1 1007.1,835.5 1003.6,835.8C1001.6,836.0 1000.0,835.9 1000.0,835.6ZM1131.0,811.5L1131.0,787.0L1124.0,787.0L1117.0,787.0L1117.0,784.0L1117.0,781.0L1134.0,781.0L1151.0,781.0L1151.0,784.0L1151.0,787.0L1144.0,787.0L1137.0,787.0L1137.0,811.5L1137.0,836.0L1134.0,836.0L1131.0,836.0L1131.0,811.5ZM1247.0,835.8C1246.9,835.6 1246.8,830.3 1246.7,824.0L1246.5,812.5L1237.3,797.0L1228.2,781.5L1231.3,781.2C1235.1,780.8 1235.8,781.5 1243.4,794.9C1246.5,800.5 1249.3,805.0 1249.5,805.0C1249.8,805.0 1253.1,799.6 1257.0,793.0C1263.9,781.4 1264.3,781.0 1267.6,781.0C1269.5,781.0 1271.0,781.2 1271.0,781.5C1271.0,781.8 1267.0,788.9 1262.0,797.3L1253.0,812.6L1253.0,824.3L1253.0,836.0L1250.0,836.0C1248.3,836.0 1247.0,835.9 1247.0,835.8ZM361.6,805.9C364.1,805.3 366.7,803.8 367.5,802.7C369.0,800.5 369.5,794.5 368.4,791.5C367.4,789.0 362.6,787.0 357.5,787.0L353.0,787.0L353.0,797.0C353.0,808.3 352.8,808.1 361.6,805.9ZM262.0,744.4C222.0,741.8 183.6,732.9 152.5,719.2C102.5,697.2 55.4,650.2 27.1,594.1C10.2,560.7 1.3,529.8 0.7,502.5L0.5,493.5L91.7,493.2L183.0,493.0L183.4,495.2C183.7,496.5 184.1,501.2 184.5,505.7C186.0,528.0 197.1,550.5 214.6,566.8C231.9,583.1 253.1,591.0 279.2,591.0C320.3,591.0 353.6,571.0 368.3,537.3C375.2,521.6 377.3,494.9 373.0,477.9C366.0,450.7 347.6,428.8 320.5,415.9C298.5,405.3 275.7,403.9 250.8,411.6C249.1,412.1 249.0,408.8 249.0,352.2L249.0,292.3L266.8,291.7C281.9,291.3 285.8,290.8 293.3,288.6C314.8,282.2 330.1,270.1 338.5,252.6C343.8,241.6 345.2,235.1 345.7,219.5C346.1,207.6 345.9,204.2 344.1,197.3C341.3,185.7 336.9,177.2 329.8,169.5C315.5,153.9 298.7,147.0 275.2,147.0C247.8,147.1 230.0,156.3 215.1,178.3C208.3,188.3 204.2,201.5 203.3,216.2L202.7,226.0L119.4,226.0L36.1,226.0L36.6,222.2C41.6,184.5 48.2,160.7 60.9,134.5C80.2,94.6 107.7,62.8 142.5,40.1C169.6,22.5 207.1,9.0 244.0,3.6C266.4,0.3 284.7,0.0 473.3,0.0L662.1,0.0L647.1,19.8C638.8,30.6 626.2,47.1 619.0,56.5C611.9,65.8 601.5,79.3 596.1,86.5C590.6,93.7 580.7,106.7 574.0,115.5C567.3,124.3 558.7,135.6 554.9,140.5C551.2,145.4 545.6,152.7 542.7,156.5C487.5,227.7 462.5,265.1 441.0,308.0C426.3,337.5 417.6,359.2 409.0,387.5C400.0,417.4 396.5,435.0 394.1,463.7C388.2,531.3 410.3,595.6 459.0,653.1C464.2,659.2 471.5,667.1 475.4,670.7L482.3,677.3L478.9,680.2C439.4,713.7 388.0,734.6 325.5,742.6C314.8,743.9 273.1,745.2 262.0,744.4ZM1100.0,744.4C1054.7,741.3 1013.0,728.0 979.5,706.0C961.1,693.8 951.0,685.8 934.3,669.6L925.0,660.7L932.4,653.0C958.0,626.2 979.4,589.4 989.9,554.3C997.6,528.4 1000.3,507.7 1000.3,475.0C1000.3,449.2 999.3,437.0 995.4,418.2C972.5,306.3 888.5,228.4 785.0,223.2C749.1,221.4 718.7,226.2 685.2,239.1C679.3,241.4 673.5,243.4 672.2,243.7C667.3,244.8 667.2,245.1 704.6,200.5C710.6,193.3 722.7,178.9 731.5,168.5C746.5,150.6 758.2,136.7 791.9,96.5C799.8,87.2 817.1,66.5 830.5,50.5C843.9,34.5 858.8,16.8 863.7,11.0L872.6,0.5L999.5,0.2C1127.4,-0.1 1145.6,0.3 1167.8,3.6C1219.8,11.2 1266.1,34.7 1306.4,73.9C1368.8,134.7 1405.0,225.8 1413.0,342.2C1416.4,391.8 1410.9,450.7 1398.0,502.0C1390.1,533.6 1381.9,556.2 1368.5,583.5C1351.2,619.0 1334.6,642.6 1309.1,668.1C1266.0,711.2 1221.8,733.8 1164.4,742.0C1150.9,743.9 1113.6,745.3 1100.0,744.4ZM683.0,598.4C650.9,595.4 621.9,579.9 602.0,555.2C573.6,519.9 566.8,475.8 583.6,435.7C591.5,416.9 606.4,397.7 622.1,386.0C671.6,349.2 743.1,357.5 780.9,404.6C798.4,426.3 807.0,451.2 807.0,479.9C807.0,501.6 803.1,518.1 793.8,536.2C782.1,559.1 764.0,576.5 739.7,588.0C722.2,596.3 701.7,600.1 683.0,598.4ZM1130.9,586.0C1149.7,583.6 1163.5,576.6 1176.7,562.7C1205.1,532.6 1223.4,485.2 1230.9,421.5C1235.5,383.3 1235.6,363.5 1231.4,326.0C1226.0,276.1 1212.9,233.6 1194.3,204.5C1175.2,174.8 1156.3,161.5 1129.7,159.2C1103.2,156.9 1082.7,164.1 1065.7,181.9C1048.7,199.7 1036.6,221.2 1026.5,251.4C1013.7,289.9 1007.1,337.3 1008.3,381.0C1008.9,400.2 1009.4,406.2 1012.1,428.0C1017.9,474.1 1031.8,516.0 1050.3,543.4C1068.5,570.5 1085.9,582.7 1110.5,585.9C1120.4,587.1 1121.6,587.1 1130.9,586.0Z"/></svg></h1>
+    <div class="hero-text">
+      <p class="hero-line" data-t="hero_line">Humo, hielo y manos que crean.</p>
+      <span class="lbl hero-sub" data-t="hero_sub">Piso 11 · Provenza · Medellín</span>
+      <a class="hero-cue lbl" href="#intro"><span data-t="hero_cta">Descubrir</span><i></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="intro" aria-labelledby="stTitle">
+  <div class="st-pin">
+    <div class="st-in">
+      <div class="st-frame mono" aria-hidden="true">
+        <span class="st-tl" data-t="st_tl">360 · Archivo de un día</span>
+        <span class="st-tr" data-t="st_tr">Piso 11 / MDE</span>
+      </div>
+      <div class="st-stage s0 on">
+        <h2 class="st-cover-l" id="stTitle" data-t="st_title">Un rooftop, tres momentos</h2>
+        <div class="st-ctas"><a class="st-cta" href="#carta"><span data-t="st_cta">Descubre nuestro menú</span> <i aria-hidden="true">→</i></a><a class="st-cta" href="#destacados"><span data-t="st_chef">Recomendados del chef</span> <i aria-hidden="true">→</i></a></div>
+        <p class="st-cover-r"><span data-t="st_from1">Contado desde el piso 11,</span><br><span data-t="st_from2">sobre Provenza</span></p>
+      </div>
+      <div class="st-stage s1">
+        <dl class="spec">
+        <dt class="hd" aria-hidden="true"></dt><dd class="mono hd" data-t="st1_h"></dd>
+        <dt class="mono" data-t="k_mom"></dt><dd data-t="st1_mom"></dd>
+        <dt class="mono" data-t="k_luz"></dt><dd data-t="st1_luz"></dd>
+        <dt class="mono" data-t="k_mesa"></dt><dd data-t="st1_mesa"></dd>
+        <dt class="mono" data-t="k_rit"></dt><dd data-t="st1_rit"></dd>
+        </dl>
+        <p class="st-note" data-t="st1_p"></p>
+      </div>
+      <div class="st-stage s2">
+        <dl class="spec">
+        <dt class="hd" aria-hidden="true"></dt><dd class="mono hd" data-t="st2_h"></dd>
+        <dt class="mono" data-t="k_mom"></dt><dd data-t="st2_mom"></dd>
+        <dt class="mono" data-t="k_luz"></dt><dd data-t="st2_luz"></dd>
+        <dt class="mono" data-t="k_mesa"></dt><dd data-t="st2_mesa"></dd>
+        <dt class="mono" data-t="k_acc"></dt><dd data-t="st2_acc"></dd>
+        </dl>
+        <p class="st-note" data-t="st2_p"></p>
+      </div>
+      <div class="st-stage s3">
+        <dl class="spec">
+        <dt class="hd" aria-hidden="true"></dt><dd class="mono hd" data-t="st3_h"></dd>
+        <dt class="mono" data-t="k_mom"></dt><dd data-t="st3_mom"></dd>
+        <dt class="mono" data-t="k_luz"></dt><dd data-t="st3_luz"></dd>
+        <dt class="mono" data-t="k_mesa"></dt><dd data-t="st3_mesa"></dd>
+        <dt class="mono" data-t="k_rit"></dt><dd data-t="st3_rit"></dd>
+        </dl>
+        <div class="st-note"><p data-t="st3_p"></p><a class="mono st-link" href="#carta" data-t="st_link">Ver la carta</a></div>
+      </div>
+      <div class="st-ctrl">
+        <span class="mono st-hint" data-t="st_hint">Toca un momento</span>
+        <div class="st-moms" role="group" aria-label="Momentos del día">
+          <button type="button" aria-pressed="false" aria-controls="intro"><i class="mono">01</i><span data-t="st_m1">Mañana</span></button>
+          <button type="button" aria-pressed="false" aria-controls="intro"><i class="mono">02</i><span data-t="st_m2">Tarde</span></button>
+          <button type="button" aria-pressed="false" aria-controls="intro"><i class="mono">03</i><span data-t="st_m3">Noche</span></button>
+        </div>
+      </div>
+      <div class="st-nav mono">
+        <button type="button" id="stPrev" data-t-aria="st_prev" aria-label="Momento anterior">←</button>
+        <span id="stCount" aria-live="polite">01 / 03</span>
+        <button type="button" id="stNext" data-t-aria="st_next" aria-label="Momento siguiente">→</button>
+        <button type="button" id="stClose" class="st-close"><span data-t="close">Cerrar</span> ×</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="carta light s-taupe" id="carta">
+  <div class="wrap">
+    <div class="carta-head">
+      <h2 class="mix"><span class="up" data-t="carta_up">La carta</span><em data-t="carta_em">del piso 11</em></h2>
+      <div class="carta-tools">
+        <p data-t="carta_p">Cocina local e internacional, coctelería de autor y una barra completa.</p>
+        <button type="button" class="chip lbl" id="vegToggle" aria-pressed="false"><svg class="leaf" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 3C11 3 5 8 5 15c0 1.3.3 2.5.8 3.6L3 21.4 4.6 23l2.8-2.8c1.1.5 2.3.8 3.6.8 7 0 11-6 11-15V3h-2Zm-9 15.9c-.7 0-1.4-.1-2-.4 2.6-4 5.6-6.5 9.3-8.6-3.9 1.4-7.2 3.9-10.1 7.6A5.9 5.9 0 0 1 8 15c0-5.4 4.4-9 10.9-9.9-.4 8.3-3.6 13.8-7.9 13.8Z"/></svg><span data-t="veg_btn">Solo vegetarianos</span></button>
+        <div class="legend lbl"><span><svg class="leaf" viewBox="0 0 24 24" aria-hidden="true" style="color:var(--veg)"><path fill="currentColor" d="M20 3C11 3 5 8 5 15c0 1.3.3 2.5.8 3.6L3 21.4 4.6 23l2.8-2.8c1.1.5 2.3.8 3.6.8 7 0 11-6 11-15V3h-2Z"/></svg><span data-t="lg_veg">Vegetariano / vegano</span></span></div>
+      </div>
+    </div>
+    <div class="carta-grid">
+      <aside class="index" aria-label="Índice de la carta">
+        <span class="lbl" data-t="idx">Índice</span>
+        <ol id="indexList"></ol>
+      </aside>
+      <div class="carta-body">
+        <div class="index-bar"><button type="button" id="idxOpen" aria-haspopup="dialog"><span class="ib-cta lbl"><span data-t="idx_cta">Descubre nuestro menú</span><svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg></span><b id="idxCurrent">Desayunos all day</b></button></div>
+        <div id="chapters"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dest dark s-vino" id="destacados">
+  <div class="wrap">
+    <div class="dest-head">
+      <h2 class="mix"><span class="up" data-t="dest_up">Del fuego</span><em data-t="dest_em">a la mesa</em></h2>
+      <p data-t="dest_p">Tres que salen de la cocina y la barra con más carácter: fuego en la mesa, moras en vino tinto y una smash con bordes tostados.</p>
+    </div>
+    <div class="dest-grid" id="destGrid"></div>
+  </div>
+</section>
+
+<section class="res dark s-oliva" id="reservas">
+  <div class="res-bg" style="background-image:url(img/r_cocteles.webp)"></div>
+  <div class="wrap res-grid">
+    <div class="res-copy">
+      <h2 class="mix"><span class="up" data-t="res_up">Reserva</span><em data-t="res_em">tu mesa</em></h2>
+      <p data-t="res_p">Para un desayuno con vista, una tarde de Sunny Days o la noche. Elige tu momento y reserva en línea en un minuto.</p>
+      <small data-t="res_note">Sunny Days: acceso a la piscina para no huéspedes con reserva previa.</small>
+    </div>
+    <div class="rp">
+      <span class="lbl rp-h" data-t="rp_h">Elige tu momento</span>
+      <a class="rp-m" href="https://fiweex.com/reservas_portal_bienvenida/aIJzgQ%3D%3D" target="_blank" rel="noopener"><span class="lbl">01</span><span class="rp-t"><b data-t="m1">x</b><small data-t="m1p">x</small></span><i aria-hidden="true">→</i></a><a class="rp-m" href="https://fiweex.com/reservas_portal_bienvenida/aIJzgQ%3D%3D" target="_blank" rel="noopener"><span class="lbl">02</span><span class="rp-t"><b data-t="m2">x</b><small data-t="m2p">x</small></span><i aria-hidden="true">→</i></a><a class="rp-m" href="https://fiweex.com/reservas_portal_bienvenida/aIJzgQ%3D%3D" target="_blank" rel="noopener"><span class="lbl">03</span><span class="rp-t"><b data-t="m3">x</b><small data-t="m3p">x</small></span><i aria-hidden="true">→</i></a>
+      <div class="rp-cta"><a class="btn" href="https://fiweex.com/reservas_portal_bienvenida/aIJzgQ%3D%3D" target="_blank" rel="noopener" data-t="rp_btn">Reservar mesa</a><a class="ulink" href="https://wa.me/573126273647" target="_blank" rel="noopener" data-t="rp_wa">Escríbenos por WhatsApp</a></div>
+      <small class="rp-n" data-t="rp_n">Confirmas tu mesa en línea en el portal de reservas de 360.</small>
+    </div>
+  </div>
+</section>
+
+<section class="casa light s-salvia" id="casa">
+  <span class="vlabel lbl">El Poblado · Medellín</span>
+  <div class="wrap">
+    <h2 class="mix"><span class="up" data-t="casa_up">Nuestra casa</span><em data-t="casa_em">en Provenza</em></h2>
+    <div class="casa-grid">
+      <figure class="ncard"><img src="img/n_haven.webp" alt="" loading="lazy"><div class="t"><h3>Haven</h3><a class="ulink" href="https://havenmedellin.com" target="_blank" rel="noopener" data-t="visit">Visitar</a></div><p data-t="haven_p">Hotel de diseño en Provenza. 360 está en su piso 11.</p></figure>
+      <figure class="ncard"><img src="img/n_swing.webp" alt="" loading="lazy"><div class="t"><h3>Swing Coffee</h3></div><p data-t="swing_p">Café de especialidad dentro de Haven, en el corazón de Provenza.</p></figure>
+    </div>
+    <div class="place">
+      <div><h4 class="lbl" data-t="dir_t">Dirección</h4><p>Calle 10A #36-29, <span data-t="dir_floor">piso 11</span></p><small>El Poblado, Medellín</small><a class="ulink" style="margin-top:12px" href="https://www.google.com/maps/search/?api=1&amp;query=Haven%20Medell%C3%ADn%20Calle%2010A%20%2336-29" target="_blank" rel="noopener" data-t="map">Abrir en Google Maps</a></div>
+      <div><h4 class="lbl" data-t="hor_t">Horarios</h4><p data-t="hor_p">Mañana · Tarde · Noche</p><small data-t="hor_s">Horarios por confirmar</small></div>
+      <div><h4 class="lbl" data-t="acc_t">Acceso</h4><p data-t="acc_p">Abierto a huéspedes y visitantes.</p><small data-t="acc_s">Sunny Days con reserva previa.</small></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot dark s-negro">
+  <div class="wrap foot-in">
+    <p class="claim"><span data-t="foot_1">En el piso 11 de Haven, sobre Provenza.</span><br><span data-t="foot_2">Medellín alrededor, de la mañana a la noche.</span></p>
+    <div class="logo" aria-label="360 Rooftop Pool &amp; Bar"><svg class="logo-full" viewBox="0 0 1414 982" role="img" aria-label="360 Rooftop Pool &amp; Bar"><path fill="currentColor" fill-rule="evenodd" d="M193.2,980.9C184.8,979.5 177.8,975.6 171.7,969.0C153.9,949.8 159.8,919.7 183.8,907.9C187.9,905.8 190.0,905.5 200.5,905.5C211.8,905.5 212.8,905.7 218.3,908.4C225.5,912.1 233.3,920.2 236.8,927.7C239.2,932.8 239.5,934.7 239.5,943.5C239.5,952.4 239.2,954.1 236.7,958.9C232.8,966.4 228.7,971.3 223.2,975.0C215.3,980.2 203.2,982.6 193.2,980.9ZM279.2,980.9C263.7,978.3 250.9,965.3 248.0,949.2C245.1,933.2 253.9,916.1 268.8,908.8C275.2,905.6 276.0,905.5 287.0,905.5C297.7,905.5 298.9,905.7 304.5,908.4C319.3,915.7 328.5,932.9 326.0,948.5C323.3,965.2 311.9,977.0 295.3,980.5C287.8,982.1 286.8,982.1 279.2,980.9ZM474.2,980.9C466.1,979.5 458.5,975.3 452.5,968.8C435.1,950.0 440.8,920.2 464.0,908.7C470.1,905.7 471.0,905.5 482.0,905.5C491.7,905.5 494.2,905.9 498.3,907.8C505.5,911.1 514.2,919.9 517.6,927.3C520.2,932.8 520.5,934.6 520.5,943.5C520.5,952.6 520.2,954.0 517.5,959.4C513.9,966.5 506.9,974.0 501.1,977.0C496.8,979.2 485.2,982.1 481.5,981.9C480.4,981.8 477.1,981.4 474.2,980.9ZM725.0,980.9C712.8,978.9 702.6,970.9 696.7,959.1C693.8,953.1 693.5,951.7 693.5,943.0C693.5,934.4 693.8,932.9 696.7,927.0C700.6,919.0 707.2,912.2 714.8,908.4C720.1,905.7 721.3,905.5 732.0,905.5C742.4,905.5 744.1,905.8 749.2,908.2C768.6,917.3 777.1,939.6 768.5,958.8C765.2,966.1 756.4,975.0 749.5,978.0C745.4,979.7 734.2,982.2 731.5,981.9C731.0,981.8 728.0,981.4 725.0,980.9ZM811.2,980.9C802.9,979.5 795.7,975.6 790.0,969.3C784.1,962.8 781.2,957.1 779.9,948.9C777.3,932.4 785.7,916.2 800.8,908.8C807.2,905.6 808.0,905.5 819.0,905.5C829.6,905.5 831.0,905.7 836.2,908.3C839.3,909.8 844.0,913.2 846.6,915.8C865.3,934.6 860.1,966.9 836.5,977.6C832.2,979.6 820.5,982.2 817.5,981.9C817.0,981.8 814.1,981.4 811.2,980.9ZM980.3,981.0C967.3,978.2 959.0,968.5 959.0,956.0C959.0,947.8 962.0,942.6 969.7,937.4C973.1,935.1 976.4,933.0 977.0,932.8C977.8,932.6 977.2,930.8 975.2,927.7C971.5,921.9 970.6,917.3 972.0,912.1C974.5,902.6 982.7,897.7 996.0,897.7C1009.6,897.7 1017.2,902.5 1020.0,912.8C1022.1,920.8 1018.3,929.6 1010.6,934.4C1008.1,936.0 1006.0,937.5 1006.0,937.7C1006.0,938.0 1008.3,940.6 1011.2,943.6C1015.0,947.6 1016.6,948.7 1017.6,947.9C1019.4,946.4 1023.0,938.4 1023.0,935.9C1023.0,933.8 1023.3,933.8 1030.2,934.4C1041.3,935.5 1041.0,935.3 1039.5,940.4C1037.8,946.1 1034.4,952.7 1030.9,957.1C1029.3,959.1 1028.0,961.2 1028.0,961.8C1028.0,963.3 1033.8,965.3 1037.6,965.2L1041.0,965.1L1041.0,972.4L1041.0,979.7L1036.2,980.3C1029.6,981.1 1023.5,979.7 1018.6,976.3C1014.5,973.4 1014.3,973.3 1012.1,975.1C1006.0,980.1 989.9,983.1 980.3,981.0ZM101.0,943.0L101.0,906.0L114.3,906.0C133.5,906.0 141.9,909.0 146.7,917.5C151.2,925.5 150.7,934.7 145.3,941.8C142.9,945.0 136.4,949.0 133.5,949.0C132.7,949.0 132.0,949.4 132.0,949.9C132.0,950.4 137.6,957.1 144.5,964.9C151.4,972.7 157.0,979.3 157.0,979.5C157.0,979.8 153.5,980.0 149.2,980.0L141.4,980.0L129.0,965.5C122.1,957.6 115.9,951.0 115.3,951.0C114.4,951.0 114.0,954.8 113.8,965.2L113.5,979.5L107.2,979.8L101.0,980.1L101.0,943.0ZM334.0,943.0L334.0,906.0L357.5,906.0L381.0,906.0L381.0,911.5L381.0,917.0L364.0,917.0L347.0,917.0L347.0,926.0L347.0,935.0L360.0,935.0L373.0,935.0L373.0,940.5L373.0,946.0L360.0,946.0L347.0,946.0L347.0,963.0L347.0,980.0L340.5,980.0L334.0,980.0L334.0,943.0ZM403.0,948.5L403.0,917.1L392.8,916.8L382.5,916.5L382.2,911.2L381.9,906.0L408.4,906.0L435.0,906.0L435.0,911.5L435.0,917.0L425.5,917.0L416.0,917.0L416.0,948.5L416.0,980.0L409.5,980.0L403.0,980.0L403.0,948.5ZM532.0,943.0L532.0,906.0L546.8,906.0C568.2,906.0 575.6,908.8 580.5,918.4C586.4,930.2 581.6,943.5 569.5,948.6C567.2,949.5 561.3,950.5 555.5,950.9L545.5,951.5L545.2,965.8L544.9,980.0L538.5,980.0L532.0,980.0L532.0,943.0ZM634.0,943.0L634.0,906.0L648.8,906.0C659.3,906.0 665.2,906.5 668.9,907.6C686.4,912.8 690.6,934.7 676.2,945.7C671.3,949.4 664.8,951.0 654.5,951.0L647.0,951.0L647.0,965.5L647.0,980.0L640.5,980.0L634.0,980.0L634.0,943.0ZM866.0,943.0L866.0,906.0L872.5,906.0L879.0,906.0L879.0,937.5L879.0,969.0L897.2,969.2L915.5,969.5L915.8,974.8L916.1,980.0L891.1,980.0L866.0,980.0L866.0,943.0ZM1085.0,942.9L1085.0,905.8L1101.2,906.2C1115.9,906.5 1118.0,906.7 1122.3,908.9C1129.4,912.3 1132.5,917.6 1132.4,925.6C1132.4,930.5 1131.8,932.6 1129.9,935.4C1128.6,937.4 1127.1,939.0 1126.5,939.0C1126.0,939.0 1127.3,940.4 1129.4,942.2C1134.3,946.2 1136.0,950.3 1136.0,958.0C1136.0,965.3 1133.6,970.7 1128.6,974.5C1123.1,978.7 1116.2,980.0 1099.8,980.0L1085.0,980.0L1085.0,942.9ZM1139.0,979.4C1139.0,979.0 1141.9,972.1 1145.4,964.1C1148.9,956.1 1156.6,938.5 1162.5,925.0C1168.3,911.5 1173.5,900.2 1173.9,899.7C1174.4,899.2 1204.8,966.1 1209.7,978.8C1210.1,979.7 1208.4,980.0 1203.3,980.0L1196.3,980.0L1192.0,970.0L1187.8,959.9L1174.1,960.2L1160.5,960.5L1156.5,970.0L1152.4,979.5L1145.7,979.8C1142.0,980.0 1139.0,979.8 1139.0,979.4ZM1215.6,976.9C1215.3,975.2 1215.0,958.5 1215.0,939.9L1215.0,906.0L1229.5,906.0C1241.6,906.0 1244.8,906.3 1249.4,908.0C1260.1,912.1 1264.3,918.0 1264.4,929.2C1264.4,935.1 1264.0,936.4 1261.4,940.2C1259.5,942.9 1256.3,945.5 1253.0,947.2C1250.1,948.7 1247.5,950.2 1247.3,950.4C1247.0,950.6 1252.5,957.1 1259.4,964.9C1266.3,972.6 1272.0,979.2 1272.0,979.5C1272.0,979.8 1268.5,980.0 1264.1,980.0L1256.2,980.0L1243.9,965.5C1237.1,957.5 1230.9,951.0 1230.2,951.0C1229.3,951.0 1229.0,954.6 1229.0,965.5L1229.0,980.0L1222.6,980.0C1216.3,980.0 1216.2,980.0 1215.6,976.9ZM211.5,968.0C231.7,959.4 231.8,927.8 211.6,918.0C206.4,915.5 196.0,915.3 190.6,917.5C185.3,919.7 179.5,925.3 176.9,930.8C174.1,936.6 173.9,948.5 176.4,954.2C182.4,968.1 197.6,974.0 211.5,968.0ZM299.4,967.2C308.4,962.3 313.1,953.9 312.9,942.6C312.9,939.2 312.3,935.1 311.7,933.3C303.4,910.9 272.8,909.8 262.9,931.5C260.4,937.0 260.4,949.0 262.9,954.6C269.4,969.0 285.5,974.5 299.4,967.2ZM492.6,968.0C501.3,964.3 508.0,953.5 508.0,943.0C508.0,932.6 500.8,921.3 491.8,917.5C487.1,915.6 476.3,915.6 471.7,917.5C460.1,922.3 453.0,936.6 456.0,949.2C460.2,966.4 476.5,974.9 492.6,968.0ZM741.9,968.8C746.9,967.2 754.6,959.7 756.7,954.2C759.3,947.3 759.1,936.7 756.1,931.0C750.9,920.9 743.2,916.0 732.5,916.0C724.5,916.0 720.5,917.6 714.6,923.0C703.7,933.1 703.3,951.6 713.7,962.3C721.3,970.2 730.5,972.3 741.9,968.8ZM831.5,967.1C837.1,964.0 842.3,957.2 844.1,950.7C845.6,945.0 844.7,935.3 842.2,930.3C837.3,920.8 829.5,916.1 818.7,916.0C804.3,916.0 793.9,926.0 792.3,941.3C791.4,950.6 797.1,961.8 805.5,967.0C812.8,971.5 823.3,971.5 831.5,967.1ZM1116.4,967.6C1120.8,965.8 1123.0,962.4 1123.0,957.5C1123.0,949.6 1117.7,946.0 1106.0,946.0L1099.0,946.0L1099.0,957.5L1099.0,969.0L1106.0,969.0C1109.9,969.0 1114.6,968.4 1116.4,967.6ZM997.2,966.0C999.2,965.4 1001.8,964.2 1002.9,963.2C1005.0,961.5 1004.9,961.4 996.7,952.6C987.7,942.9 986.7,942.5 981.9,947.6C980.1,949.6 979.5,951.3 979.5,955.0C979.5,960.4 981.5,963.4 986.5,965.6C990.2,967.2 992.4,967.3 997.2,966.0ZM1183.0,948.7C1183.0,948.5 1181.0,943.5 1178.6,937.5C1174.6,927.5 1174.1,926.7 1173.2,929.0C1172.7,930.4 1170.6,935.4 1168.7,940.2L1165.2,949.0L1174.1,949.0C1179.0,949.0 1183.0,948.9 1183.0,948.7ZM130.7,939.1C134.2,937.5 135.1,936.5 136.0,933.0C136.9,929.7 136.8,927.9 135.8,924.7C134.1,919.1 129.9,917.0 120.8,917.0L114.0,917.0L114.0,929.0L114.0,941.0L120.2,941.0C124.2,941.0 128.0,940.3 130.7,939.1ZM1243.3,939.9C1250.3,938.0 1253.2,931.9 1250.8,924.4C1249.1,919.1 1244.7,917.0 1235.8,917.0L1229.0,917.0L1229.0,929.0L1229.0,941.0L1234.2,941.0C1237.1,941.0 1241.2,940.5 1243.3,939.9ZM563.4,938.6C567.8,936.8 570.0,933.5 570.0,928.8C570.0,920.2 565.2,917.0 552.5,917.0L545.0,917.0L545.0,927.8C545.0,933.8 545.3,939.0 545.7,939.3C546.9,940.6 560.0,940.0 563.4,938.6ZM666.0,938.2C670.8,935.9 672.5,931.9 671.4,926.2C670.0,919.4 667.0,917.6 655.9,917.2L647.0,916.8L647.0,928.4L647.0,940.0L654.8,940.0C660.1,940.0 663.6,939.5 666.0,938.2ZM1115.1,932.7C1119.5,929.7 1121.0,925.8 1118.9,922.2C1116.8,918.4 1113.4,917.0 1105.8,917.0L1099.0,917.0L1099.0,926.0L1099.0,935.0L1105.4,935.0C1110.3,935.0 1112.4,934.5 1115.1,932.7ZM1002.4,923.6C1006.4,919.9 1006.7,918.3 1004.5,914.1C1002.9,910.9 1001.2,910.0 996.7,910.0C989.1,910.1 987.4,916.2 993.1,922.9C995.0,925.0 997.0,926.9 997.7,926.9C998.3,927.0 1000.5,925.5 1002.4,923.6ZM101.2,871.8L101.5,866.5L686.5,866.5L1271.5,866.5L1271.8,871.8L1272.1,877.0L686.5,877.0L100.9,877.0L101.2,871.8ZM799.2,835.3C793.9,832.7 788.5,823.8 791.6,822.6C794.9,821.3 796.7,822.1 798.3,825.6C801.5,832.3 809.8,833.6 816.0,828.3C818.6,826.2 819.0,825.1 819.0,821.1C819.0,815.2 817.5,813.7 806.2,808.5C796.3,803.9 793.5,800.7 793.6,794.0C793.7,788.2 796.0,784.6 801.7,781.9C809.1,778.3 819.7,780.9 823.0,787.1C823.9,788.7 823.7,789.2 821.6,790.1C819.4,791.1 818.7,790.9 815.9,788.5C807.7,781.7 795.6,790.2 801.5,798.6C802.3,799.8 805.5,801.8 808.7,803.0C821.9,808.3 826.5,813.6 825.6,822.4C825.0,828.1 821.6,833.0 816.7,835.4C812.3,837.4 803.5,837.4 799.2,835.3ZM115.0,811.5L115.0,787.1L108.2,786.8C101.7,786.5 101.5,786.4 101.2,783.8L100.9,781.0L118.5,781.0L136.1,781.0L135.8,783.8C135.5,786.4 135.3,786.5 128.8,786.8L122.0,787.1L122.0,811.5L122.0,836.0L118.5,836.0L115.0,836.0L115.0,811.5ZM218.0,808.5L218.0,781.0L221.0,781.0L224.0,781.0L224.0,792.0L224.0,803.0L238.5,803.0L253.0,803.0L253.0,791.9L253.0,780.9L256.0,781.2L259.1,781.5L259.1,808.5L259.1,835.5L256.0,835.8L253.0,836.1L253.0,822.5L253.0,808.9L238.8,809.2L224.5,809.5L224.2,822.8L223.9,836.0L221.0,836.0L218.0,836.0L218.0,808.5ZM347.0,808.5L347.0,781.0L354.1,781.0C366.7,781.0 372.8,784.1 375.1,791.8C376.8,797.7 375.5,802.7 371.0,807.2C368.9,809.3 366.3,811.0 365.2,811.0C361.8,811.0 361.9,812.3 365.9,817.5C367.9,820.3 371.8,825.5 374.4,829.2L379.2,836.0L375.3,836.0C371.4,836.0 371.3,835.9 363.0,824.0C358.3,817.4 354.2,812.0 353.8,812.0C353.4,812.0 353.0,817.4 353.0,824.0L353.0,836.0L350.0,836.0L347.0,836.0L347.0,808.5ZM463.0,808.5L463.0,781.0L477.5,781.0L492.0,781.0L492.0,784.0L492.0,787.0L480.5,787.0L469.0,787.0L469.0,795.0L469.0,803.0L480.5,803.0L492.0,803.0L492.0,806.0L492.0,809.0L480.5,809.0L468.9,809.0L469.2,819.8L469.5,830.5L480.8,830.8C492.0,831.1 492.0,831.1 492.0,833.5L492.0,836.0L477.5,836.0L463.0,836.0L463.0,808.5ZM579.0,808.5L579.0,781.0L593.5,781.0L608.0,781.0L608.0,784.0L608.0,787.0L596.5,787.0L585.0,787.0L585.0,795.0L585.0,803.0L596.0,803.0L607.0,803.0L607.0,806.0L607.0,809.0L596.0,809.0L585.0,809.0L585.0,820.0L585.0,831.0L596.5,831.0L608.0,831.0L608.0,833.5L608.0,836.0L593.5,836.0L579.0,836.0L579.0,808.5ZM911.0,808.5L911.0,781.0L914.0,781.0L917.0,781.0L917.0,808.5L917.0,836.0L914.0,836.0L911.0,836.0L911.0,808.5ZM1000.0,835.6C1000.0,835.4 1003.6,829.0 1008.1,821.5L1016.2,807.8L1008.6,794.7C1001.1,781.6 1001.1,781.5 1003.6,781.2C1005.0,781.0 1006.8,781.1 1007.5,781.4C1008.2,781.6 1011.1,786.2 1014.0,791.4C1018.5,799.8 1021.0,802.9 1021.0,800.2C1021.0,799.7 1023.3,795.2 1026.1,790.2C1031.0,781.4 1031.4,781.0 1034.6,781.0C1036.5,781.0 1038.0,781.2 1038.0,781.5C1038.0,781.8 1034.7,787.9 1030.6,794.9L1023.2,807.8L1031.1,821.2C1035.4,828.5 1039.0,834.8 1039.0,835.2C1039.0,835.7 1037.5,836.0 1035.7,836.0C1032.3,836.0 1031.3,834.8 1023.0,819.5C1021.8,817.3 1020.5,815.2 1020.2,814.8C1019.8,814.4 1016.7,818.9 1013.4,824.8C1007.5,835.1 1007.1,835.5 1003.6,835.8C1001.6,836.0 1000.0,835.9 1000.0,835.6ZM1131.0,811.5L1131.0,787.0L1124.0,787.0L1117.0,787.0L1117.0,784.0L1117.0,781.0L1134.0,781.0L1151.0,781.0L1151.0,784.0L1151.0,787.0L1144.0,787.0L1137.0,787.0L1137.0,811.5L1137.0,836.0L1134.0,836.0L1131.0,836.0L1131.0,811.5ZM1247.0,835.8C1246.9,835.6 1246.8,830.3 1246.7,824.0L1246.5,812.5L1237.3,797.0L1228.2,781.5L1231.3,781.2C1235.1,780.8 1235.8,781.5 1243.4,794.9C1246.5,800.5 1249.3,805.0 1249.5,805.0C1249.8,805.0 1253.1,799.6 1257.0,793.0C1263.9,781.4 1264.3,781.0 1267.6,781.0C1269.5,781.0 1271.0,781.2 1271.0,781.5C1271.0,781.8 1267.0,788.9 1262.0,797.3L1253.0,812.6L1253.0,824.3L1253.0,836.0L1250.0,836.0C1248.3,836.0 1247.0,835.9 1247.0,835.8ZM361.6,805.9C364.1,805.3 366.7,803.8 367.5,802.7C369.0,800.5 369.5,794.5 368.4,791.5C367.4,789.0 362.6,787.0 357.5,787.0L353.0,787.0L353.0,797.0C353.0,808.3 352.8,808.1 361.6,805.9ZM262.0,744.4C222.0,741.8 183.6,732.9 152.5,719.2C102.5,697.2 55.4,650.2 27.1,594.1C10.2,560.7 1.3,529.8 0.7,502.5L0.5,493.5L91.7,493.2L183.0,493.0L183.4,495.2C183.7,496.5 184.1,501.2 184.5,505.7C186.0,528.0 197.1,550.5 214.6,566.8C231.9,583.1 253.1,591.0 279.2,591.0C320.3,591.0 353.6,571.0 368.3,537.3C375.2,521.6 377.3,494.9 373.0,477.9C366.0,450.7 347.6,428.8 320.5,415.9C298.5,405.3 275.7,403.9 250.8,411.6C249.1,412.1 249.0,408.8 249.0,352.2L249.0,292.3L266.8,291.7C281.9,291.3 285.8,290.8 293.3,288.6C314.8,282.2 330.1,270.1 338.5,252.6C343.8,241.6 345.2,235.1 345.7,219.5C346.1,207.6 345.9,204.2 344.1,197.3C341.3,185.7 336.9,177.2 329.8,169.5C315.5,153.9 298.7,147.0 275.2,147.0C247.8,147.1 230.0,156.3 215.1,178.3C208.3,188.3 204.2,201.5 203.3,216.2L202.7,226.0L119.4,226.0L36.1,226.0L36.6,222.2C41.6,184.5 48.2,160.7 60.9,134.5C80.2,94.6 107.7,62.8 142.5,40.1C169.6,22.5 207.1,9.0 244.0,3.6C266.4,0.3 284.7,0.0 473.3,0.0L662.1,0.0L647.1,19.8C638.8,30.6 626.2,47.1 619.0,56.5C611.9,65.8 601.5,79.3 596.1,86.5C590.6,93.7 580.7,106.7 574.0,115.5C567.3,124.3 558.7,135.6 554.9,140.5C551.2,145.4 545.6,152.7 542.7,156.5C487.5,227.7 462.5,265.1 441.0,308.0C426.3,337.5 417.6,359.2 409.0,387.5C400.0,417.4 396.5,435.0 394.1,463.7C388.2,531.3 410.3,595.6 459.0,653.1C464.2,659.2 471.5,667.1 475.4,670.7L482.3,677.3L478.9,680.2C439.4,713.7 388.0,734.6 325.5,742.6C314.8,743.9 273.1,745.2 262.0,744.4ZM1100.0,744.4C1054.7,741.3 1013.0,728.0 979.5,706.0C961.1,693.8 951.0,685.8 934.3,669.6L925.0,660.7L932.4,653.0C958.0,626.2 979.4,589.4 989.9,554.3C997.6,528.4 1000.3,507.7 1000.3,475.0C1000.3,449.2 999.3,437.0 995.4,418.2C972.5,306.3 888.5,228.4 785.0,223.2C749.1,221.4 718.7,226.2 685.2,239.1C679.3,241.4 673.5,243.4 672.2,243.7C667.3,244.8 667.2,245.1 704.6,200.5C710.6,193.3 722.7,178.9 731.5,168.5C746.5,150.6 758.2,136.7 791.9,96.5C799.8,87.2 817.1,66.5 830.5,50.5C843.9,34.5 858.8,16.8 863.7,11.0L872.6,0.5L999.5,0.2C1127.4,-0.1 1145.6,0.3 1167.8,3.6C1219.8,11.2 1266.1,34.7 1306.4,73.9C1368.8,134.7 1405.0,225.8 1413.0,342.2C1416.4,391.8 1410.9,450.7 1398.0,502.0C1390.1,533.6 1381.9,556.2 1368.5,583.5C1351.2,619.0 1334.6,642.6 1309.1,668.1C1266.0,711.2 1221.8,733.8 1164.4,742.0C1150.9,743.9 1113.6,745.3 1100.0,744.4ZM683.0,598.4C650.9,595.4 621.9,579.9 602.0,555.2C573.6,519.9 566.8,475.8 583.6,435.7C591.5,416.9 606.4,397.7 622.1,386.0C671.6,349.2 743.1,357.5 780.9,404.6C798.4,426.3 807.0,451.2 807.0,479.9C807.0,501.6 803.1,518.1 793.8,536.2C782.1,559.1 764.0,576.5 739.7,588.0C722.2,596.3 701.7,600.1 683.0,598.4ZM1130.9,586.0C1149.7,583.6 1163.5,576.6 1176.7,562.7C1205.1,532.6 1223.4,485.2 1230.9,421.5C1235.5,383.3 1235.6,363.5 1231.4,326.0C1226.0,276.1 1212.9,233.6 1194.3,204.5C1175.2,174.8 1156.3,161.5 1129.7,159.2C1103.2,156.9 1082.7,164.1 1065.7,181.9C1048.7,199.7 1036.6,221.2 1026.5,251.4C1013.7,289.9 1007.1,337.3 1008.3,381.0C1008.9,400.2 1009.4,406.2 1012.1,428.0C1017.9,474.1 1031.8,516.0 1050.3,543.4C1068.5,570.5 1085.9,582.7 1110.5,585.9C1120.4,587.1 1121.6,587.1 1130.9,586.0Z"/></svg></div>
+    <small data-t="proto">Prototipo · imágenes y video provisionales de bancos libres</small>
+  </div>
+</footer>
+
+<div class="idx-over" id="idxOver" role="dialog" aria-modal="true" aria-label="Índice" hidden>
+  <div class="wrap"><header><span class="lbl" data-t="idx">Índice</span><button type="button" class="lbl" id="idxClose" data-t="close">Cerrar</button></header></div>
+  <div class="wrap" style="overflow:auto"><ol id="idxOverList"></ol></div>
+</div>
+
+<div class="ficha" id="ficha" role="dialog" aria-modal="true" aria-labelledby="fName" hidden>
+  <div class="ficha-back" data-close></div>
+  <article class="ficha-card" id="fichaCard">
+    <button type="button" class="ficha-x" data-close id="fichaX" aria-label="Cerrar">×</button>
+    <figure class="ficha-img" id="fImgWrap"><img id="fImg" alt=""><div class="ph" id="fPh" hidden><div class="ring"><span><small class="lbl" data-t="photo">Foto en producción</small><b id="fPhName"></b></span></div></div><span class="dtag lbl" id="fTag" hidden></span></figure>
+    <div class="ficha-body">
+      <div class="ficha-top"><h3 id="fName"></h3><span class="price" id="fPrice"></span></div>
+      <p id="fDesc"></p>
+      <div class="r-tags" id="fTags"></div>
+      <small class="lbl ficha-note" data-t="photo_note">Imagen de referencia</small>
+    </div>
+  </article>
+</div>
+
+<script>
+const MENU = {"items":{"fe376504-61f6-4717-96d1-52bb305cc228":{"es":["Santa Carolina Cabernet",""],"en":["Santa Carolina Cabernet Sauvignon",""],"p":145900,"a":[],"v":0},"aa37f1a3-3053-45f8-8395-5452aec257a8":{"es":["Smirnoff Ice",""],"en":["Smirnoff Ice",""],"p":19900,"a":[],"v":0},"e18f8f40-b1ab-42bd-bf3b-f771b9ab25a9":{"es":["Corona",""],"en":["Corona",""],"p":21900,"a":["glu"],"v":0},"ee36e454-b262-434c-b2c1-c3bb770ce67c":{"es":["Dom Pérignon",""],"en":["Dom Pérignon",""],"p":3960900,"a":[],"v":0},"7e8872dd-a4e7-4d60-a977-99bc81f3a6c5":{"es":["Aguardiente Amarillo","El aguardiente más icónico de Colombia. Elaborado sin azúcar, con un sabor suave, equilibrado y notas anisadas que ofrecen una experiencia auténtica y fácil de disfrutar."],"en":["Aguardiente Amarillo","Colombia's most iconic aguardiente. Sugar-free, smooth and balanced, with notes of anise."],"p":250000,"a":[],"v":0},"c2c09b36-6e61-427c-ad91-9bfaa02fc1a8":{"es":["Café Americano","(Caturra, Bourbon Rosado, Tabi Amarillo, Honey)"],"en":["Americano","(Caturra, Pink Bourbon, Yellow Tabi, Honey process)"],"p":9900,"a":[],"v":0},"783fba7b-b530-4194-86c1-0c55af946edf":{"es":["Remy Martin VSOP","Trago: $55.000"],"en":["Remy Martin VSOP","Pour: $55.000"],"p":886900,"a":[],"v":0},"32eca9f6-1409-433d-b1db-e9ac9dbb2de0":{"es":["Johnnie Walker Blue Label","Trago: $143.000"],"en":["Johnnie Walker Blue Label","Pour: $143.000"],"p":2583900,"a":[],"v":0},"0c2c3d85-5afa-4d64-9843-8bead9762792":{"es":["Margarita Don Julio Reposado","Una margarita elegante con el sabor suave y maduro de Don Julio Reposado, añejado en barricas de roble, aporta notas de vainilla y caramelo, combinadas con el frescor de la lima. Una experiencia equilibrada y sofisticada."],"en":["Margarita Don Julio Reposado","Made with oak-aged Don Julio Reposado: notes of vanilla and caramel, brightened with lime."],"p":88900,"a":[],"v":0},"839accf5-7659-4d79-9c37-6d024aea7592":{"es":["Smash Burger","Disfruta de nuestra Smash Burger, preparada con 300 g de carne de res estilo smash, y cocinada a la perfección para lograr bordes tostados y crocantes, con un centro jugoso término 3/4 y abundante queso cheddar fundido entre capas. Servida en un suave pan de papa con lechuga fresca y tomate, acompañada de papas en casco, sazonadas con abundante paprika, y servida con salsa dulce/picante aparte para darle el toque perfecto."],"en":["Smash Burger","300 g of smashed beef with crisp, caramelized edges, a juicy medium-well center and plenty of melted cheddar between the layers. On a soft potato bun with lettuce and tomato, with paprika potato wedges and a sweet and spicy sauce on the side."],"p":54900,"a":["glu","lac"],"v":0,"t":"temp","f":"img/f_839accf5.webp","img":"img/g_839accf5.webp"},"d2c81871-454b-4998-a7ca-eee5770b4a0f":{"es":["Huevos Gourmet en Cacerola","Tres huevos al gusto, servidos con tostadas de pan focaccia, mantequilla cremosa y un toque dulce de mermelada. Una combinación simple y sofisticada para comenzar el día con el mejor sabor."],"en":["Gourmet Skillet Eggs","Three eggs, cooked your way, with toasted focaccia, soft butter and jam. A simple start, done well."],"p":24900,"a":["egg","lac","glu"],"v":0,"img":"img/g_d2c81871.webp","f":"img/f_d2c81871.webp"},"ccef131e-940c-48f3-bd47-1dba69ead28a":{"es":["Doble Crocante","Chicharrón artesanal dorado al punto perfecto, servido con patacones crujientes de plátano verde. Acompañado de guacamole fresco y un toque casero de hogao tradicional, que elevan cada bocado con sabor auténtico y textura irresistible."],"en":["Double Crunch","Crisp artisanal chicharrón (pork belly) with crunchy green-plantain patacones, fresh guacamole and traditional hogao, a slow-cooked tomato and onion sauce."],"p":47900,"a":["pork"],"v":0,"img":"img/g_ccef131e.webp","f":"img/f_ccef131e.webp"},"1eab5c21-6de1-4f47-854d-58d573d4fddd":{"es":["Hookah","Sabores de temporada."],"en":["Hookah","Seasonal flavors."],"p":99000,"a":[],"v":0},"85aeabcc-579d-455e-8758-f1e0c0fac97e":{"es":["Solomito Ricotta y Espinaca","250 gr de solomito tierno, perfectamente sellado y acompañado de una mezcla cremosa de ricotta y espinacas frescas, servido con una ensalada fresca que aporta un contraste de sabores y texturas. Una combinación sublime que deleitará tu paladar en cada bocado."],"en":["Tenderloin with Ricotta & Spinach","250 g of beef tenderloin, seared and topped with creamy ricotta and fresh spinach. Served with a fresh salad."],"p":76900,"a":["lac","glu"],"v":0,"img":"img/g_85aeabcc.webp","f":"img/f_85aeabcc.webp"},"b81290fa-b74b-4d7a-9ffd-57785387a43c":{"es":["Soda de Lychee","Una soda delicadamente perfumada, con el dulzor elegante del lychee y un final ligero y refrescante que acaricia el paladar."],"en":["Lychee Soda","A delicately perfumed soda with the elegant sweetness of lychee and a light, clean finish."],"p":18000,"a":[],"v":0},"840801a9-b7b3-4fbc-aee9-282879fb35cf":{"es":["Cointreau","Trago: $25.000"],"en":["Cointreau","Pour: $25.000"],"p":408900,"a":[],"v":0},"fa51fdcf-645f-4de1-b4dd-ffe90a407455":{"es":["Jägermeister","Trago: $26.000"],"en":["Jägermeister","Pour: $26.000"],"p":379900,"a":[],"v":0},"5f24c551-ebe8-4c66-bf51-186b31308140":{"es":["Hendrick's","Media: $ 406.900 / Trago: $36.000"],"en":["Hendrick's","Half bottle: $406.900 / Pour: $36.000"],"p":639900,"a":[],"v":0},"0b4c7cd9-8e0e-4910-801b-0ddd4b16ef8c":{"es":["Maestro Dobel","Trago: $50.000"],"en":["Maestro Dobel","Pour: $50.000"],"p":852900,"a":[],"v":0},"36d7698d-3172-4d4e-9176-decca4eb7a49":{"es":["Zacapa Solera 23 Años","Botella: $715.000 / Trago: $44.000"],"en":["Zacapa Solera 23","Bottle: $715.000 / Pour: $44.000"],"p":715000,"a":[],"v":0},"ca624888-ee85-4fe9-a52a-92faa08c3989":{"es":["Grey Goose","Trago: $44.000"],"en":["Grey Goose","Pour: $44.000"],"p":588900,"a":[],"v":0},"449f817d-b871-4d0c-a909-78329f9655bf":{"es":["Salmón Ricotta y Espinaca","Un plato sofisticado con 200 gr de salmón, que combina su textura suave con la cremosidad de la ricota y el frescor del nitrógeno líquido, creando una experiencia culinaria verdaderamente única."],"en":["Salmon with Ricotta & Spinach","200 g of salmon with creamy ricotta and spinach, finished with a touch of liquid nitrogen."],"p":72900,"a":["fish","lac","glu"],"v":0,"img":"img/g_449f817d.webp","f":"img/f_449f817d.webp"},"4b3867f2-333a-4646-95c6-7de88cb433f3":{"es":["Electrolit",""],"en":["Electrolit",""],"p":24900,"a":[],"v":0},"625e2088-7ac2-464c-b364-c44f4b1f5947":{"es":["Cappuccino",""],"en":["Cappuccino",""],"p":13900,"a":["lac"],"v":0},"f204646c-a79a-4e83-aa05-a607c3593db1":{"es":["Soda de Maracuyá","Esta soda artesanal fusiona la intensidad del maracuyá con un equilibrio perfecto entre dulzura y acidez. Ideal para quienes buscan una experiencia refrescante y exótica sin alcohol."],"en":["Passion Fruit Soda","Handcrafted soda with the intensity of passion fruit, balanced between sweet and tart. Fully alcohol-free."],"p":18000,"a":[],"v":0},"a6befd9e-0847-491e-8d95-25e235e8d2f6":{"es":["Cozy Omelette","Un omelette suave y esponjoso con queso mozzarella derretido y jamón jugoso. Acompañado de tostadas de pan focaccia, mantequilla y un toque dulce de mermelada para el equilibrio perfecto. Un desayuno cálido y reconfortante para empezar el día con placer."],"en":["Cozy Omelette","A soft, fluffy omelette with melted mozzarella and ham. Served with toasted focaccia, butter and jam."],"p":32900,"a":["glu","lac","egg","pork"],"v":0,"img":"img/g_a6befd9e.webp","f":"img/f_a6befd9e.webp"},"929df35d-df67-41fc-bf5a-cdc069dd5de8":{"es":["Aguardiente Antioqueño","Media: $106.900 / Trago: $22.000"],"en":["Aguardiente Antioqueño","Half bottle: $106.900 / Pour: $22.000"],"p":200900,"a":[],"v":0},"5eccd674-d80b-4049-8073-fbede4c7379a":{"es":["Soho","Trago: $22.000"],"en":["Soho","Pour: $22.000"],"p":254900,"a":[],"v":0},"9fa085f3-8a59-4360-82fb-5be395be7865":{"es":["Stella Artois",""],"en":["Stella Artois",""],"p":19900,"a":["glu"],"v":0},"2559c259-9c1c-4f77-ac69-a3b5723b33ed":{"es":["La Culpable","Una base dorada y crujiente se combina con queso fundido, tiernos trozos de pollo y el toque irresistible del pepperoni. La dulzura de la piña equilibra cada sabor, creando una mezcla perfecta entre lo ahumado, lo salado y la frescura tropical en cada bocado."],"en":["La Culpable","A golden, crisp crust with melted cheese, chicken, pepperoni and pineapple. Smoky, salty and tropical in the same slice."],"p":45900,"a":["glu","lac","pork"],"v":0,"img":"img/g_2559c259.webp","f":"img/f_2559c259.webp"},"f28fdaa9-7709-4fd4-bf2d-df99c26bf7cd":{"es":["Salmón a la Croûte","Filete de salmón de 200 gr a la parrilla, servido sobre una cama de linguini al pesto, y bañado con una rica salsa de tres quesos. Acompañado de una fresca ensalada caprese, con tomates maduros, mozzarella y albahaca, aderezada con un toque de aceite de oliva virgen extra."],"en":["Salmón a la Croûte","200 g of grilled salmon over pesto linguine, with a rich three-cheese sauce. Served with a caprese salad of ripe tomato, mozzarella and basil, dressed with extra-virgin olive oil."],"p":79900,"a":["ses","fish","glu","lac"],"v":0,"img":"img/g_f28fdaa9.webp","f":"img/f_f28fdaa9.webp"},"c2e67e45-cb41-48d9-bf9f-45de2bfbf511":{"es":["Involtini de Pollo","Jugoso pollo relleno de espinacas, acompañado de pasta en suave salsa de crema, ajo y parmesano. Servido con mezclum, tomates cherry y bocconcini. ¡Un plato lleno de sabor y textura!"],"en":["Chicken Involtini","Chicken rolled around spinach, served with pasta in a light cream, garlic and parmesan sauce, with mesclun, cherry tomatoes and bocconcini."],"p":53900,"a":["glu","lac"],"v":0,"img":"img/g_c2e67e45.webp","f":"img/f_c2e67e45.webp"},"d6446c60-4e8c-460a-9331-0ca3717c0f09":{"es":["Don Julio 70","Trago: $55.000"],"en":["Don Julio 70","Pour: $55.000"],"p":1044900,"a":[],"v":0},"47b1f14a-d8c8-49a5-b426-412a8be5a158":{"es":["Veuve Clicquot",""],"en":["Veuve Clicquot",""],"p":1289900,"a":[],"v":0},"fdd8c122-8400-4d4e-b2b7-a4195ad168dd":{"es":["Hennessy VS","Trago: $44.000"],"en":["Hennessy VS","Pour: $44.000"],"p":744900,"a":[],"v":0},"e725f786-6765-44c7-aaf6-d92f68e3c05d":{"es":["Chivas Regal 18 Años","Trago: $48.000"],"en":["Chivas Regal 18 Year Old","Pour: $48.000"],"p":844900,"a":[],"v":0},"40a00719-6d34-4ddc-85b2-861da253e446":{"es":["Margarita Don Julio 70","Disfruta de la sofisticación en cada sorbo con nuestra Margarita Don Julio 70. Elaborada con el tequila añejado en barricas de roble blanco, su suave complejidad y notas de madera y miel se mezclan con la frescura de la lima, creando una experiencia única y refinada."],"en":["Margarita Don Julio 70","Made with Don Julio 70, aged in white oak: soft notes of wood and honey with fresh lime."],"p":106000,"a":[],"v":0},"572dc133-1d30-43cf-8be8-e12004c0ca49":{"es":["Monkey 47","Trago: $44.000"],"en":["Monkey 47","Pour: $44.000"],"p":653900,"a":[],"v":0},"a7470425-388f-417a-a53a-577b366b90b6":{"es":["Aperol","Trago: $22.000"],"en":["Aperol","Pour: $22.000"],"p":343900,"a":[],"v":0},"a0250af2-46ed-44ad-93d0-85c78f594869":{"es":["Santa Carolina Rosé",""],"en":["Santa Carolina Rosé",""],"p":144900,"a":[],"v":0},"0c49f2f2-fbb3-4570-a46d-529d49f9900e":{"es":["Sparkling Sangría","Una experiencia refrescante y vibrante que fusiona la suavidad del Lambrusco rosado con la magia del nitrógeno."],"en":["Sparkling Sangría","Rosé Lambrusco with a touch of liquid nitrogen. Light, fresh and sparkling."],"p":161000,"a":[],"v":0},"c584e9be-91f4-42f9-920e-18e65b028856":{"es":["Mini Albóndigas a la Diabla","200 gr de jugosas albóndigas de carne, sazonadas con canela, comino, anís y parmesano, bañadas en una salsa de tomate y albahaca con un toque picante de ají sriracha y gratinadas al horno. Servidas con bocconcini y pan de focaccia recién horneado."],"en":["Mini Diablo Meatballs","200 g of beef meatballs seasoned with cinnamon, cumin, anise and parmesan, baked in a tomato and basil sauce with a kick of sriracha. Served with bocconcini and fresh-baked focaccia."],"p":48900,"a":["glu","lac","spicy"],"v":0,"img":"img/g_c584e9be.webp","f":"img/f_c584e9be.webp"},"eb45478e-06ce-478d-a9cf-32cf24e5be59":{"es":["Zacapa Ámbar","Trago: $28.000"],"en":["Zacapa Ámbar","Pour: $28.000"],"p":415900,"a":[],"v":0},"7b090a34-d7d7-4dce-84df-6d65d06c297d":{"es":["Margarita Don Julio Blanco","Una margarita refrescante que resalta el sabor suave y limpio del tequila Don Julio Blanco, con sus notas de agave azul y un toque cítrico de lima. Su textura ligera y fresca ofrece una experiencia equilibrada, perfecta para disfrutar en cualquier momento especial."],"en":["Margarita Don Julio Blanco","Clean, smooth Don Julio Blanco with blue agave notes and the citrus edge of lime."],"p":74900,"a":[],"v":0},"fe409492-920d-4f47-97f6-f86212291d81":{"es":["Moët & Chandon",""],"en":["Moët & Chandon",""],"p":1090000,"a":[],"v":0},"ab12b0a6-7a28-48e4-b973-fe8c2b892d4d":{"es":["Club Colombia",""],"en":["Club Colombia",""],"p":17900,"a":["glu"],"v":0},"610d815b-cdf3-404b-9694-4517b578df46":{"es":["Paella Marinera x 2 Pax","Exquisito mix de mariscos de 300 g, que incluye camarones, anillos de calamar, tilapia, pulpo, mejillones y langostinos, cuidadosamente cocidos para realzar sus sabores naturales. Con 190 g de arroz parborizado, acompañado de una crujiente canasta de pan al ajo, que complementa perfectamente cada bocado."],"en":["Seafood Paella for 2","300 g of seafood (shrimp, squid rings, tilapia, octopus, mussels and prawns) cooked with 190 g of rice. Served with a basket of crisp garlic bread."],"p":106900,"a":["crus","mol","fish","glu"],"v":0,"img":"img/g_610d815b.webp","f":"img/f_610d815b.webp"},"ecad8077-206a-4d45-a76e-2d0e6b84af37":{"es":["Santa Carolina Chardonnay",""],"en":["Santa Carolina Chardonnay",""],"p":147900,"a":[],"v":0},"3f4d45a0-135f-4731-875c-27b391d18fbc":{"es":["Café Latte",""],"en":["Caffè Latte",""],"p":16900,"a":["lac"],"v":0},"e2015a0c-848a-4924-8c64-77d6f9765c10":{"es":["Agua San Pellegrino",""],"en":["San Pellegrino Sparkling Water",""],"p":19900,"a":[],"v":0},"95ae52ed-08d7-4a69-8a2d-61fb9718e0b7":{"es":["Soda de Sandía","Ligera y vibrante, esta soda captura la esencia del verano. El sabor jugoso de la sandía se combina con notas sutiles de la hierbabuena , ofreciendo una experiencia refrescante y elegante. Perfecta para disfrutar en cualquier momento del día."],"en":["Watermelon Soda","Juicy watermelon with a hint of spearmint. Light, bright and refreshing, any time of day."],"p":18000,"a":[],"v":0},"020dbaa4-87d3-4082-897a-0fa022097b7a":{"es":["Buchanan's 18 Años","Trago: $44.000"],"en":["Buchanan's 18 Year Old","Pour: $44.000"],"p":978900,"a":[],"v":0},"eab8cd91-7d44-4a0c-8f6d-a01483fae529":{"es":["Ketel One","Trago: $39.000"],"en":["Ketel One","Pour: $39.000"],"p":495900,"a":[],"v":0},"3a1dd901-019e-449c-99c2-13b69ca57fcc":{"es":["Aguardiente Antioqueño Light","Media: $114.900 / Trago: $22.000"],"en":["Aguardiente Antioqueño Light","Half bottle: $114.900 / Pour: $22.000"],"p":215900,"a":[],"v":0},"ba4d1bf5-ef87-4b90-b49c-0cfc4d4b2f2b":{"es":["Ron Caldas 8 Años","Media: $189.900 / Trago: $22.000"],"en":["Ron Caldas 8 Year Old","Half bottle: $189.900 / Pour: $22.000"],"p":361900,"a":[],"v":0},"655f3dd0-087b-4c24-ba0d-d98a269f9b6a":{"es":["Don Julio Añejo Reserva","Trago: $44.000"],"en":["Don Julio Añejo Reserva","Pour: $44.000"],"p":715900,"a":[],"v":0},"dd11f08e-fe36-413b-a355-33e9662ef74c":{"es":["Bombay Sapphire","Trago: $28.000"],"en":["Bombay Sapphire","Pour: $28.000"],"p":407900,"a":[],"v":0},"5a654889-5cd3-4c78-afdc-51a09ccc06bf":{"es":["Baileys","Media: $168.900 / Trago: $22.000"],"en":["Baileys","Half bottle: $168.900 / Pour: $22.000"],"p":237900,"a":[],"v":0},"e767b176-afd2-44b6-b747-ec78b5f6676d":{"es":["Paloma","La intensidad suave del Tequila Centenario se fusiona con jugo fresco de toronja y un toque de limón, más un final burbujeante con soda artesanal crean una sinfonía cítrica y refrescante, ideal para tardes doradas en lo más alto de Medellín."],"en":["Paloma","Centenario tequila with fresh grapefruit juice, lime and craft soda. Citrus and bubbles for golden afternoons at the top of Medellín."],"p":54900,"a":[],"v":0},"4a6638bd-08c1-487d-b309-52ea581fb6d1":{"es":["Alitas","Disfruta de 8 alitas de pollo, perfectamente cocidas y empanizadas en panko para lograr un acabado crujiente y dorado. Estas alitas se sirven acompañadas de una suave sour cream y papas en casco de 120 g, crujientes y doradas para completar tu experiencia. ¡Un plato irresistible para compartir o disfrutar solo!"],"en":["Chicken Wings","Eight chicken wings in a panko crust, crisp and golden. Served with sour cream and 120 g of potato wedges."],"p":47900,"a":["glu","lac"],"v":0,"img":"img/g_4a6638bd.webp","f":"img/f_4a6638bd.webp"},"71d3ad75-ec2c-4fa9-acee-77b562eeb030":{"es":["Burger Master","Nuestra Hamburguesa tiene una combinación de sabores explosivos al paladar que dejan una sensación de picante , dulzor y un crunch que son otra experiencia. Pan negro con ajonjolí, 180gr de carne, queso paipa, mayonesa de chilote, compota de pimentón, cebolla caramelizada, y lechuga cogollo. Acompañada de papas casco. Una combinación intensa, jugosa y llena de carácter. ¡Una explosión de sabor que no te puedes perder!"],"en":["Burger Master","Black sesame bun, 180 g beef patty, Paipa cheese, chipotle mayo, sweet pepper compote, caramelized onion and crisp lettuce hearts. Heat, sweetness and crunch in one bite. Served with potato wedges."],"p":43900,"a":["glu","lac","egg","ses","spicy"],"v":0,"img":"img/g_71d3ad75.webp","f":"img/f_71d3ad75.webp"},"8091234b-0c24-4c40-b601-602b749669c0":{"es":["Típico Medallo","Un homenaje a la tradición paisa en cada bocado. Frijoles humeantes y arroz, acompañados de un chorizo de ternera dorado a la perfección. La clásica arepa se funde con la suavidad de la cuajada y la cremosidad de la mantequilla. Para completar, huevos al gusto y un toque dulce con mermelada, creando el equilibrio perfecto entre tradición y sabor."],"en":["Típico Medallo","A Paisa breakfast, the way Medellín makes it. Warm beans and rice, golden beef chorizo, arepa with fresh cuajada cheese and butter, eggs your way and a touch of jam."],"p":33900,"a":["egg","lac"],"v":0,"img":"img/g_8091234b.webp","f":"img/f_8091234b.webp"},"16b6982a-f85e-4d29-aeb3-70c699a93fdb":{"es":["Grand Marnier",""],"en":["Grand Marnier",""],"p":795900,"a":[],"v":0},"7390b5aa-4454-4f74-a29d-7a405dd74e53":{"es":["Don Julio Reposado","Trago: $44.000"],"en":["Don Julio Reposado","Pour: $44.000"],"p":698900,"a":[],"v":0},"d0a11db0-bdc9-4129-855a-2c0ed5095180":{"es":["Hamburguesa de Pollo Crunch","Deliciosa preparación de pollo apanado de 180 g, crujiente y dorado a la perfección. Servido en un pan brioche de queso y orégano, esta hamburguesa se complementa con vegetales frescos y queso sabana. Para completar la experiencia, viene acompañada de papas en casco."],"en":["Crunchy Chicken Burger","180 g of breaded chicken, crisp and golden, on a cheese and oregano brioche bun with fresh vegetables and sabana cheese. Served with potato wedges."],"p":46900,"a":["glu","lac"],"v":0,"img":"img/g_d0a11db0.webp","f":"img/f_d0a11db0.webp"},"42be2a71-90e5-4cea-9db8-7839c6c506b5":{"es":["Brownie con Helado","Un indulgente postre que combina un brownie recién horneado, esponjoso por dentro y crujiente por fuera, servido caliente y coronado con una generosa bola de helado."],"en":["Brownie with Ice Cream","A freshly baked brownie, soft inside and crisp outside, served warm under a generous scoop of ice cream."],"p":21900,"a":["glu","lac","egg"],"v":0,"img":"img/g_42be2a71.webp","f":"img/f_42be2a71.webp"},"e6f19587-5030-41be-8395-a4019b1f4816":{"es":["Soda de Frutos Rojos","Una mezcla sofisticada de frutos rojos que despierta los sentidos. Esta soda ofrece una explosión de sabores profundos y complejos, con notas de frambuesa, mora y arándano."],"en":["Red Berry Soda","A deep blend of red berries: raspberry, blackberry and blueberry."],"p":18000,"a":[],"v":0},"4a6484cc-d26d-4881-9d0f-4c9c1016f7cc":{"es":["Solomito en Salsa Pimienta","Jugoso solomito de res de 250gr cocido a la perfección y cubierto con una rica y cremosa salsa de pimienta."],"en":["Tenderloin in Pepper Sauce","250 g of beef tenderloin, cooked just right and finished with a rich, creamy peppercorn sauce."],"p":81900,"a":["spicy","lac"],"v":0,"img":"img/g_4a6484cc.webp","f":"img/f_4a6484cc.webp"},"410a59df-cb8b-41d9-8aaf-daad5eddbade":{"es":["Aguardiente Antioqueño Verde","Media: $100.900 / Trago: $22.000"],"en":["Aguardiente Antioqueño Verde","Half bottle: $100.900 / Pour: $22.000"],"p":183900,"a":[],"v":0},"a7f93f34-f4b5-43e9-be20-cfd803d74b48":{"es":["Santa Carolina Sauvignon Blanc",""],"en":["Santa Carolina Sauvignon Blanc",""],"p":164900,"a":[],"v":0},"dc0bddb0-259b-4576-b7d3-6308b873b519":{"es":["Agua PH Plus",""],"en":["PH Plus Water",""],"p":14900,"a":[],"v":0},"b9c444ca-57a0-41fc-a1a6-4b90675bad22":{"es":["Smirnoff Tamarindo","Trago: $28.000"],"en":["Smirnoff Tamarindo","Pour: $28.000"],"p":233900,"a":[],"v":0},"7f941dca-4c96-419c-9a1e-dfa361e9f2d7":{"es":["Chandon Rosé",""],"en":["Chandon Rosé",""],"p":287900,"a":[],"v":0},"c5befdbd-cd8a-43a6-8999-6c58a24e3d2e":{"es":["Mocaccino",""],"en":["Mochaccino",""],"p":16900,"a":["lac"],"v":0},"ab116584-a2d9-432b-a51f-2d195d3553fe":{"es":["Bowl Saludable con Salmón","Una explosión de frescura y balance: 200g de salmón jugoso a la parrilla sobre una cama de mézclum fresco, con zanahoria crujiente, garbanzos dorados, pasta fusilli al dente, brócoli al vapor, cebolla en pluma y aguacate cremoso. Todo coronado con una vinagreta balsámica y aceite de oliva extra virgen."],"en":["Healthy Salmon Bowl","200 g of grilled salmon over fresh mesclun, with crunchy carrot, golden chickpeas, fusilli, steamed broccoli, sliced onion and avocado. Dressed with balsamic vinaigrette and extra-virgin olive oil."],"p":76900,"a":["fish","glu"],"v":0,"img":"img/g_ab116584.webp","f":"img/f_ab116584.webp"},"6c100f5f-cbf9-4814-bbd5-69cebf9f70f6":{"es":["Don Julio Garden","La suavidad del tequila Don Julio se realza con una exquisita reducción de moras en vino tinto, armonizada con el toque cítrico del limón y el carácter vibrante del Aperol. Terminado con un toque burbujeante de tónica, este cóctel es un equilibrio perfecto entre frescura, dulzura y sofisticación."],"en":["Don Julio Garden","Don Julio tequila with a blackberry and red wine reduction, lime and Aperol, topped with a splash of tonic. Fresh, sweet and bittersweet in balance."],"p":64900,"a":[],"v":0,"f":"img/d_coctel.webp"},"6d74e993-79c0-4aa2-9843-9808ce28acf6":{"es":["Quesadilla de Pollo","Deliciosa quesadilla rellena de jugosas julianas de pollo, cebolla roja y pimentón salteados con un toque de vino blanco y paprika, fundida con una irresistible combinación de quesos mozzarella y cheddar en una tortilla de harina XL, Queso parmesano gratinado en la superficie para un acabado dorado y crujiente. Se sirve acompañada de una ensalada fresca, jalapeños en rodajas y una cremosa salsa de sour cream."],"en":["Chicken Quesadilla","An XL flour tortilla filled with chicken, red onion and bell pepper sautéed in white wine and paprika, melted with mozzarella and cheddar and finished with toasted parmesan. With fresh salad, sliced jalapeños and sour cream."],"p":47900,"a":["lac","glu"],"v":0,"img":"img/g_6d74e993.webp","f":"img/f_6d74e993.webp"},"c48a8d19-2ff3-48cc-bfdc-be9c2aabdf77":{"es":["Old Par Superior 18 Años","Trago: $44.000"],"en":["Old Parr Superior 18 Year Old","Pour: $44.000"],"p":872900,"a":[],"v":0},"e26f3942-2f38-4b5d-9d0c-d32f169e9aeb":{"es":["Bowl Bounty","Un festín de frescura y energía: yogur griego cremoso con banano, fresas, kiwi y arándanos. Acompañado de semillas de açaí y granola crujiente para un desayuno lleno de color, textura y sabor."],"en":["Bounty Bowl","Creamy Greek yogurt with banana, strawberries, kiwi and blueberries. Finished with açaí seeds and crunchy granola."],"p":31900,"a":["lac","glu"],"v":1,"img":"img/g_e26f3942.webp","f":"img/f_e26f3942.webp"},"743d39be-bfc7-48b9-a404-469067c5a0fa":{"es":["Bowl Saludable Vegano","Un vibrante bowl repleto de frescura y sabor, con una base de mix de mezdum. Incluye tomate cherry, garbanzos, zanahoria en juliana, cebolla roja en pluma, champiñones salteados, aguacate cremoso, arvejas tiernas y quinoa. Todo se adereza con una reducción balsámica, y se corona con semillas de calabaza tostadas para un toque crujiente y nutritivo."],"en":["Healthy Vegan Bowl","Mixed greens with cherry tomatoes, chickpeas, julienned carrot, red onion, sautéed mushrooms, avocado, sweet peas and quinoa. Finished with a balsamic reduction and toasted pumpkin seeds."],"p":33900,"a":["gf"],"v":2,"img":"img/g_743d39be.webp","f":"img/f_743d39be.webp"},"c52d44fb-ac6a-426f-8ada-1072fd93a906":{"es":["Ron Medellín 8 Años","Media: $128.900 / Trago: $22.000"],"en":["Ron Medellín 8 Year Old","Half bottle: $128.900 / Pour: $22.000"],"p":216900,"a":[],"v":0},"94a6070f-25fa-4121-9870-995c02ccb407":{"es":["Blue Margarita","Una Margarita clásica con una sensación de frescura acompañada de la deliciosa textura Frappé, y Blue Curacao que añade un toque vibrante y colorido."],"en":["Blue Margarita","A classic margarita served frozen, with Blue Curaçao for color."],"p":49000,"a":[],"v":0},"dc1e94ea-8b5a-4372-967c-5f85f4cedf59":{"es":["Tanqueray Rangpur Lime","Trago: $30.000"],"en":["Tanqueray Rangpur Lime","Pour: $30.000"],"p":405900,"a":[],"v":0},"4b4b8ab3-2991-463b-8f3e-aeec12032e66":{"es":["Aguila",""],"en":["Aguila",""],"p":17900,"a":["glu"],"v":0},"32defa05-2983-46bf-b202-90c305290ef8":{"es":["JP Chenet",""],"en":["JP Chenet",""],"p":214900,"a":[],"v":0},"ae033659-5f46-435c-89aa-2374780d5972":{"es":["Patrón Silver","Trago: $44.000"],"en":["Patrón Silver","Pour: $44.000"],"p":594900,"a":[],"v":0},"fbc7708f-34bd-4e5d-808d-f32f05457c93":{"es":["Espresso doble",""],"en":["Double Espresso",""],"p":9900,"a":[],"v":0},"8a03961a-ef36-407d-9e73-e3cd627cc148":{"es":["Aguila Light",""],"en":["Aguila Light",""],"p":14900,"a":["glu"],"v":0},"d5efd3a7-2798-42d9-8da4-1e8a9b4a0f36":{"es":["Beefeater 24","Trago: $28.000"],"en":["Beefeater 24","Pour: $28.000"],"p":643900,"a":[],"v":0},"af524fcf-eb0f-41da-b950-12ba27f61101":{"es":["Green Woods","Déjate llevar por una experiencia única, donde el toque de Buchanan’s aporta profundidad y sofisticación desde el primer sorbo. El mezcal ahumado se fusiona con la frescura del kiwi y la acidez del limón, mientras las hojuelas de chile despiertan los sentidos. Un cóctel pensado para quienes buscan algo diferente, auténtico y memorable."],"en":["Green Woods","Buchanan's whisky and smoky mezcal with fresh kiwi, lime and a sprinkle of chili flakes."],"p":62900,"a":["spicy"],"v":0},"4a533dab-58fc-46c4-9791-b86e92dfbf68":{"es":["Açaí wonder bowl","Un festín de frescura y color: açaí cremoso acompañado de banano, fresas, kiwi y moras azules. La mantequilla de maní, el coco deshidratado y la granola crujiente completan esta experiencia vibrante, perfecta para un desayuno lleno de energía, textura y sabor."],"en":["Açaí Wonder Bowl","Creamy açaí with banana, strawberries, kiwi and blueberries. Topped with peanut butter, dried coconut and crunchy granola."],"p":38900,"a":["pea","nuts","glu"],"v":1,"img":"img/g_4a533dab.webp","f":"img/f_4a533dab.webp"},"5c1a5741-04bb-4ebb-bbf2-99ff17f7ab1b":{"es":["Hard rock Nachos","Deléitate con nuestros exquisitos nachos, acompañados de una sabrosa mezcla de carne (240 gr), frijoles negros y una salsa de ají Sriracha Napolitana que da el toque perfecto. Todo gratinado a la perfección y servido con tortillas de maíz crujientes. ¡Cada bocado es una explosión de sabor!"],"en":["Hard Rock Nachos","Crisp corn tortilla chips with 240 g of seasoned beef, black beans and a Napolitana-sriracha sauce, all gratinéed."],"p":44900,"a":["lac","spicy"],"v":0,"img":"img/g_5c1a5741.webp","f":"img/f_5c1a5741.webp"},"35848923-98cb-4d78-aa4c-c355fb6aa06b":{"es":["Lomo Saltado","Jugosos trozos de filete de res de 150gr salteados con cebolla, tomate y ají amarillo, servidos con papas doradas y arroz. Un festín de sabores peruanos en cada bocado."],"en":["Lomo Saltado","150 g of beef fillet stir-fried with onion, tomato and ají amarillo, served with golden potatoes and rice. A Peruvian classic."],"p":67900,"a":[],"v":0,"img":"img/g_35848923.webp","f":"img/f_35848923.webp"},"f2f165e8-6bba-4c83-ab57-20143caa50b7":{"es":["Picada x3 PAX","Deliciosa combinación de carnes asadas que incluye jugoso pollo, crujientes chicharrones, sabroso chorizo, morcilla de sabor único y tierna carne de res."],"en":["Picada for 3","A grill board for three: chicken, crisp chicharrón, chorizo, morcilla (blood sausage) and tender beef."],"p":95900,"a":["pork"],"v":0,"img":"img/g_f2f165e8.webp","f":"img/f_f2f165e8.webp"},"4e97814d-3ec5-4d45-8f37-2535f373fa56":{"es":["Red Bull Classic",""],"en":["Red Bull Classic",""],"p":21900,"a":[],"v":0},"7aeb2a42-6a2e-4e2c-8081-1977398a0112":{"es":["Glenlivet 12 Años Single Malt","Trago: $38.000"],"en":["The Glenlivet 12 Year Old Single Malt","Pour: $38.000"],"p":518900,"a":[],"v":0},"8352ffed-e8ed-4505-b44f-7df034a4f53e":{"es":["Margarita Patrón","Una margarita clásica hecha con Patrón Silver, tequila 100% de agave con un carácter limpio y fresco. El toque cítrico del limón se equilibra con la dulzura suave del triple sec, en un trago nítido y refrescante."],"en":["Margarita Patrón","Patrón Silver, 100% agave, with lime and triple sec. Crisp and clean."],"p":100000,"a":[],"v":0},"b6291e64-d505-48b5-8571-9d60643f69d0":{"es":["Hamburguesa de Res","Disfruta de 180 g de carne de nuestra formulación exclusiva, perfectamente cocida y servida sobre un pan brioche de orégano y parmesano que aporta un sabor único. Cada hamburguesa está acompañada de queso sabana fundido vegetales frescos. Acompañada con papas en casco, crujientes y doradas, que añaden el toque perfecto a este plato delicioso."],"en":["Beef Burger","180 g of our house-blend beef on an oregano and parmesan brioche bun, with melted sabana cheese and fresh vegetables. Served with crisp potato wedges."],"p":44900,"a":["lac","glu"],"v":0,"img":"img/g_b6291e64.webp","f":"img/f_b6291e64.webp"},"c1f22b7d-f4fd-4961-bf0e-44e3b325e3c4":{"es":["Trilogía de Hamburguesas","Disfruta de tres hamburguesas irresistibles en una sola orden: una jugosa hamburguesa de pollo, una crujiente hamburguesa de pescado y una sabrosa hamburguesa de res, todas acompañadas de tocineta crujiente, queso y ensalada fresca que aporta un toque perfecto de frescura y sabor. Una combinación clásica y reconfortante que transformará cada bocado en una experiencia única."],"en":["Burger Trilogy","Three burgers in one order: chicken, crispy fish and beef, each with crisp bacon, cheese and fresh salad."],"p":56900,"a":["glu","lac","pork","fish"],"v":0,"t":"temp","img":"img/g_c1f22b7d.webp","f":"img/f_c1f22b7d.webp"},"cbc21cef-d204-474c-8dcf-2451fd63c21a":{"es":["Sopa de Pollo","Disfruta de una reconfortante sopa de pollo, llena de sabor y tradición. Acompañada de aguacate y arroz para una experiencia aún más deliciosa."],"en":["Chicken Soup","A comforting chicken soup, the way it is made at home. Served with avocado and rice."],"p":42000,"a":[],"v":0,"img":"img/g_cbc21cef.webp","f":"img/f_cbc21cef.webp"},"a93099d4-f175-45fc-af97-41262327dd86":{"es":["Tanqueray London Dry","Trago: $28.000"],"en":["Tanqueray London Dry","Pour: $28.000"],"p":433900,"a":[],"v":0},"3e216379-2d75-471f-9172-2d2a7de73a1c":{"es":["Mezcal 400 Conejos","Trago: $44.000"],"en":["Mezcal 400 Conejos","Pour: $44.000"],"p":561900,"a":[],"v":0},"24e9c3b3-3492-49f8-a466-63f9ec4e69e1":{"es":["Solomito Endiablado","Un espectáculo culinario único: 250 gr de jugoso solomito flameado con Jack Daniel's directamente en tu mesa, liberando aromas intensos y un sabor ahumado irresistible en cada bocado."],"en":["Flambéed Tenderloin (Solomito Endiablado)","250 g of beef tenderloin flambéed with Jack Daniel's right at your table. The flame, the aroma, the smoke."],"p":74900,"a":[],"v":0,"f":"img/f_24e9c3b3.webp","img":"img/g_24e9c3b3.webp"},"cea822ac-0596-4cc2-bddb-770bde51988f":{"es":["Red Bull Sugar Free",""],"en":["Red Bull Sugar Free",""],"p":17000,"a":[],"v":0},"5a3296fd-235b-47ad-a618-0f4ceb1257b9":{"es":["Chai Latte",""],"en":["Chai Latte",""],"p":16900,"a":["lac"],"v":0},"dee8ccc5-d00f-479e-8ec9-3188ab86e720":{"es":["Champagne Chandon Extra Brut",""],"en":["Champagne Chandon Extra Brut",""],"p":259900,"a":[],"v":0},"e631debd-be16-47b8-a379-8819f5bcd99f":{"es":["Catrina","Nuestro cóctel Catrina combina la frescura del Smirnoff Tamarindo con el vibrante limón y la dulzura de la piña, creando una explosión de sabor irresistible. Con un toque sutil de tabasco, cada sorbo te lleva a una experiencia única."],"en":["Catrina","Smirnoff Tamarind with lime and pineapple, and a subtle hit of Tabasco."],"p":54900,"a":["spicy"],"v":0},"ef6fa5d3-d32a-4ecc-a575-31d635c4a2e2":{"es":["Empanaditas","¡Cada bocado es una fiesta de sabores! Disfruta de 10 empanaditas, rellenas con ingredientes frescos y sabrosos. Acompañadas de ají encurtido que aporta un toque picante y ácido, elevando la experiencia a otro nivel. Perfectas para compartir o para disfrutar en solitario."],"en":["Empanaditas","Ten small Colombian turnovers with a savory filling, served with pickled ají for a spicy, tangy edge. Made for sharing."],"p":33900,"a":["spicy"],"v":0,"img":"img/g_ef6fa5d3.webp","f":"img/f_ef6fa5d3.webp"},"23c2d960-f9d6-4859-a7c2-79a83f198490":{"es":["Smirnoff","Trago: $28.000"],"en":["Smirnoff","Pour: $28.000"],"p":313900,"a":[],"v":0},"c4385a66-7294-44b2-9195-ee7bcd968054":{"es":["Buchanan's Master","Trago: $33.000"],"en":["Buchanan's Master","Pour: $33.000"],"p":688900,"a":[],"v":0},"f694d508-5891-42ee-9dc4-3b4388a19c0a":{"es":["Don Julio Blanco","Trago: $33.000"],"en":["Don Julio Blanco","Pour: $33.000"],"p":617900,"a":[],"v":0},"d266a475-7166-48cb-a3ab-5a68a5ffe0da":{"es":["Matcha",""],"en":["Matcha",""],"p":17900,"a":["lac"],"v":0},"03fd2277-bfd5-49d2-a3a3-d3860556ebc7":{"es":["Sopa de Lentejas","Disfruta de una deliciosa sopa de lentejas, llena de sabor casero y tradición. Preparada con lentejas tiernas, papa nevada y criolla, y un sofrito aromático de cebolla roja, pimentón y especias como comino y cúrcuma. Acompañada de arroz, aguacate fresco y un toque de cilantro para una experiencia aún más reconfortante y nutritiva."],"en":["Lentil Soup","Tender lentils with papa nevada and criolla potatoes, in a sofrito of red onion, bell pepper, cumin and turmeric. Served with rice, fresh avocado and cilantro."],"p":35000,"a":[],"v":0,"img":"img/g_03fd2277.webp","f":"img/f_03fd2277.webp"},"405f5821-2c04-4cde-aeed-600ea391cc2c":{"es":["Chivas 12 Años","Trago: $33.000"],"en":["Chivas Regal 12 Year Old","Pour: $33.000"],"p":402900,"a":[],"v":0},"3ac07e30-4e0b-4ba9-8a93-3973289ab933":{"es":["Ceviche de Tilapia","Delicioso ceviche de tilapia de 120 g, marinado en nuestra receta original de leche de tigre, que combina una mezcla de los mejores ajíes para un toque auténtico y vibrante. Acompañado de aguacate fresco, crujientes tostones de plátano y maíz soplado para un contraste perfecto de texturas y sabores."],"en":["Tilapia Ceviche","120 g of tilapia cured in our own leche de tigre, made with a blend of chilies. Served with fresh avocado, crisp plantain tostones and puffed corn."],"p":37900,"a":["fish","spicy"],"v":0,"img":"img/g_3ac07e30.webp","f":"img/f_3ac07e30.webp"},"c45ca6e7-0109-49cb-a0ee-fcaa08bb3da9":{"es":["Vino Dadá #1",""],"en":["Vino Dadá #1",""],"p":210900,"a":[],"v":0},"b2746175-7805-4387-810e-aad28d5214da":{"es":["Costillas BBQ","Jugosas costillas de 500gr de cerdo glaseadas en salsa BBQ ahumada, acompañadas de papas en casco crujientes."],"en":["BBQ Ribs","500 g of pork ribs glazed in smoky BBQ sauce, served with crisp potato wedges."],"p":66900,"a":["pork"],"v":0,"img":"img/g_b2746175.webp","f":"img/f_b2746175.webp"},"5cd290ac-e692-4c0f-b9fc-ccea2a7d55c5":{"es":["Club Colombia Roja",""],"en":["Club Colombia Roja",""],"p":17900,"a":["glu"],"v":0},"3540ca3c-5608-4935-9886-f789451f92d6":{"es":["Elixir","La frescura botánica de Hendrick’s se combina con el toque exótico y vibrante del Blue Curaçao, creando una mezcla irresistible que encanta tanto a la vista como al paladar."],"en":["Elixir","The botanicals of Hendrick's gin meet bright Blue Curaçao. As striking to look at as it is to drink."],"p":66900,"a":[],"v":0},"5dc966b0-b7bd-4669-8d30-c81b5953b0a0":{"es":["Tónica Ocean",""],"en":["Ocean Tonic",""],"p":13900,"a":[],"v":0},"a14dd522-8350-4929-b5e5-135b0a0eba4a":{"es":["Tito's","Trago: $38.000"],"en":["Tito's","Pour: $38.000"],"p":657900,"a":[],"v":0},"c837d986-1bbc-47f2-92de-c5903c5cf357":{"es":["Té o Aromática",""],"en":["Tea or Herbal Infusion",""],"p":9000,"a":[],"v":0},"f6d60ce5-57e2-4077-968c-226f67ee511b":{"es":["Johnnie Walker Black Label","Media: $241.900 / Trago: $33.000"],"en":["Johnnie Walker Black Label","Half bottle: $241.900 / Pour: $33.000"],"p":407900,"a":[],"v":0},"be9787a1-8978-4723-b6ac-4f3076af094d":{"es":["Ginebra Bulldog",""],"en":["Bulldog Gin",""],"p":584900,"a":[],"v":0},"d8c874be-18fc-4f9b-83af-99a25b364aec":{"es":["Pizza de Pepperoni","Lleva el sabor clásico del pepperoni a un nivel superior. Una base de masa fina y crujiente se combina con las capas de queso derretido y abundantes rodajas de pepperoni sazonado."],"en":["Pepperoni Pizza","A thin, crisp crust with layers of melted cheese and plenty of seasoned pepperoni."],"p":43900,"a":["glu","lac","pork"],"v":0,"img":"img/g_d8c874be.webp","f":"img/f_d8c874be.webp"},"c1b4ae79-1f7a-4ad4-b5c0-1e9de4983b3d":{"es":["Coca-Cola Original",""],"en":["Coca-Cola Original",""],"p":9900,"a":[],"v":0},"9f7ed107-05da-4599-8418-1b4bf5e13da4":{"es":["Wontons de Cangrejo","Mezcla exquisita de camarón, tilapia y palmito de cangrejo, combinada con suero costeño y envuelta en una masa filo crujiente. 30g de pura delicia en cada uno, con 4 unidades perfectas para compartir o disfrutar tú solo."],"en":["Crab Wontons","Four crisp filo parcels filled with shrimp, tilapia and crab stick, bound with suero costeño (Caribbean sour cream). 30 g each, made for sharing."],"p":38900,"a":["glu","lac","fish","crus","shell"],"v":0,"img":"img/g_9f7ed107.webp","f":"img/f_9f7ed107.webp"},"c4939b21-26b1-4101-90ac-4f03be771919":{"es":["Jose Cuervo Silver","Trago: $28.000"],"en":["Jose Cuervo Silver","Pour: $28.000"],"p":315900,"a":[],"v":0},"8a9d50d3-482b-4572-9494-742a84d4354c":{"es":["Lychee Martini","Un cóctel elegante y exótico que combina el sabor dulce y floral del licor de lychee con la frescura del vodka, logrando un equilibrio perfecto."],"en":["Lychee Martini","Floral lychee liqueur and vodka, sweet and clean."],"p":48900,"a":[],"v":0},"d4738130-31ad-482d-8c65-8fd9db554134":{"es":["Milo Frío",""],"en":["Iced Milo",""],"p":15900,"a":["glu","lac"],"v":0},"4904a4cd-4bfc-4e82-b3eb-46b977830391":{"es":["Buchanan's 12 Años","Media: $330.900 / Trago: $33.000"],"en":["Buchanan's 12 Year Old","Half bottle: $330.900 / Pour: $33.000"],"p":442900,"a":[],"v":0},"bbcbda95-1f17-4c06-8641-3c5e5c71f527":{"es":["Pasta a la Boloñesa","Deliciosos fettuccini de 150 g, bañados en una rica mezcla de salsa boloñesa y salsa napolitana, cada bocado está perfectamente aderezado con queso parmesano. Servido con crujientes tostones de pan de focaccia al pesto, que aportan un contraste delicioso."],"en":["Fettuccine Bolognese","150 g of fettuccine in a blend of Bolognese and Napolitana sauces, finished with parmesan. Served with crisp pesto focaccia toasts."],"p":43900,"a":["glu","lac"],"v":0,"img":"img/g_bbcbda95.webp","f":"img/f_bbcbda95.webp"},"e17fa1ec-911d-44cc-8421-3d9c89d84a4f":{"es":["Mazorcas Laqueadas","Tres mazorcas tiernas, bañadas en mantequilla y paprika, gratinadas con sour cream y quesos, mozzarella y parmesano ."],"en":["Glazed Corn on the Cob","Three tender corn cobs brushed with butter and paprika, gratinéed with sour cream, mozzarella and parmesan."],"p":38900,"a":["lac"],"v":1,"img":"img/g_e17fa1ec.webp","f":"img/f_e17fa1ec.webp"},"43343cde-85ff-4b41-9c18-a66f6cf7eb16":{"es":["Vino Espumoso Baron De Rothberg",""],"en":["Baron de Rothberg Sparkling Wine",""],"p":129900,"a":[],"v":0},"7eba4edd-eba0-4466-bf10-8149d0a6bf6d":{"es":["Ginebra Gordon's",""],"en":["Gordon's Gin",""],"p":265900,"a":[],"v":0},"c3293ac5-3fc4-471c-a576-7b7d2eb80072":{"es":["Pizza Pollo Champiñones","Una deliciosa pizza con una base de tomate, cubierta con trozos tiernos de pollo, champiñones frescos y queso derretido, todo horneado a la perfección."],"en":["Chicken & Mushroom Pizza","A tomato base with tender chicken, fresh mushrooms and melted cheese."],"p":40900,"a":["glu","lac"],"v":0,"img":"img/g_c3293ac5.webp","f":"img/f_c3293ac5.webp"},"f2cbae5f-ad3e-4cc4-87ff-e7d827182613":{"es":["Smirnoff Green Apple",""],"en":["Smirnoff Green Apple",""],"p":20900,"a":[],"v":0},"e22e2952-eedb-4f06-862b-45f60f77ee24":{"es":["Ginebra Mom",""],"en":["MOM Gin",""],"p":659900,"a":[],"v":0},"0bc0d94a-de8d-4002-b29d-b0e5a691d837":{"es":["Milo Caliente",""],"en":["Hot Milo",""],"p":17900,"a":["glu","lac"],"v":0},"0e944ecd-9e25-4970-9dbe-2fab60b7881f":{"es":["Tónica Mil976 Beer",""],"en":["Mil976 Tonic (Beer)",""],"p":14900,"a":[],"v":0},"21859f41-87f8-49f7-bfeb-729b2941768c":{"es":["Medallo","Una emocionante reinterpretación del clásico Moscow Mule, donde el tradicional vodka se sustituye por el auténtico aguardiente antioqueño."],"en":["Medallo","Our take on the Moscow Mule, with Antioquia's aguardiente in place of vodka."],"p":48900,"a":[],"v":0},"2490c799-35c2-487e-a9a5-1087eff2779c":{"es":["Cosmopolitan","Esta mezcla vibrante combina la suavidad del vodka con la dulzura del jugo de arándanos y el vibrante triple sec, todo realzado con un toque de limón, ideal para quienes buscan una bebida que combine estilo y diversión."],"en":["Cosmopolitan","Vodka, cranberry juice, triple sec and a squeeze of lime."],"p":42900,"a":[],"v":0},"c91a33d1-7ccf-4679-9f04-274e7992d476":{"es":["Pizza Margarita","La sencillez italiana en su máxima expresión. Una base de tomate, mozzarella de búfala fresca, albahaca y aceite de oliva se unen para crear una pizza clásica con sabores frescos y auténticos."],"en":["Pizza Margherita","Tomato, fresh buffalo mozzarella, basil and olive oil. Italian simplicity, nothing more."],"p":49900,"a":["lac","glu"],"v":1,"img":"img/g_c91a33d1.webp","f":"img/f_c91a33d1.webp"},"aa71b910-71d5-48fb-b4b1-bc55db18ff7f":{"es":["Chocolate en Agua / Leche",""],"en":["Hot Chocolate (water or milk)",""],"p":16900,"a":["lac"],"v":0},"b2feda46-e69d-43e4-bffd-6af6a6de39b8":{"es":["Tónica Mil976 Pink",""],"en":["Mil976 Tonic (Pink)",""],"p":14900,"a":[],"v":0},"d396ac0c-be7a-45c1-a435-24f4858e3481":{"es":["Jack Daniel's","Media: $187.900 / Trago: $33.000"],"en":["Jack Daniel's","Half bottle: $187.900 / Pour: $33.000"],"p":345900,"a":[],"v":0},"9af3d052-d1b0-49f2-a50c-a31606f8b342":{"es":["Jack Daniel's Honey","Trago: $31.000"],"en":["Jack Daniel's Honey","Pour: $31.000"],"p":345900,"a":[],"v":0},"332f222a-5581-4113-bed7-decb09812efb":{"es":["Vino Piccini Rosé",""],"en":["Piccini Rosé",""],"p":132900,"a":[],"v":0},"17174d19-f717-4b6b-a57c-f52e7a758492":{"es":["Risotto de Mariscos","Deléitate con nuestro risotto de mariscos, donde 150g de mariscos frescos se saltean con cebolla y pimiento en una mezcla irresistible de mantequilla de ajo y pasta de ají amarillo. Este plato se enriquece con vino blanco, crema de leche y arroz, todo suavemente integrado y terminado con queso parmesano para un sabor excepcional. Acompañado de crujientes tostones de plátano de 40g"],"en":["Seafood Risotto","150 g of seafood sautéed with onion and pepper in garlic butter and ají amarillo paste, folded into a creamy risotto with white wine, cream and parmesan. Served with 40 g of crisp plantain tostones."],"p":69900,"a":["lac","shell"],"v":0,"img":"img/g_17174d19.webp","f":"img/f_17174d19.webp"},"bb316dcd-979d-43d7-8881-590d521487eb":{"es":["Moscow Mule","El picante de la cerveza de jengibre se equilibra con la acidez de la lima y la suavidad del vodka, creando una bebida refrescante y deliciosa."],"en":["Moscow Mule","Vodka, lime and spicy ginger beer."],"p":48900,"a":[],"v":0},"7f7bb4c0-c1c3-4e70-9ca2-c0702858d0d0":{"es":["Tónica Mil976 Toronja",""],"en":["Mil976 Tonic (Grapefruit)",""],"p":13900,"a":[],"v":0},"83c4e4ac-85ca-49e1-8110-caa92ce436f7":{"es":["Jugo Natural",""],"en":["Fresh Fruit Juice",""],"p":13900,"a":[],"v":0},"c1b7a3ac-7c3d-4a80-ad0e-448b49d24849":{"es":["Jameson","Trago: $20.000"],"en":["Jameson","Pour: $20.000"],"p":362900,"a":[],"v":0},"869ff04a-0ddf-466d-a080-cd9347a5c140":{"es":["Bretaña",""],"en":["Bretaña (club soda)",""],"p":11900,"a":[],"v":0},"b7c4d5fd-74e3-4bce-a68b-882fb95cd1a4":{"es":["Mojito Tradicional","El equilibrio perfecto entre el dulzor del azúcar, la acidez refrescante de la lima y el toque herbal de la menta, complementado con la intensidad del ron Bacardi añejo y la efervescencia de la soda: una bebida refrescante y deliciosa."],"en":["Classic Mojito","Bacardí añejo rum with lime, fresh mint, sugar and soda."],"p":48900,"a":[],"v":0},"dc940292-8a45-4931-a427-6974e75c742b":{"es":["Pulpo a la Gallega","180g de Pulpo tierno cocinado al estilo gallego, realzado con aceite de oliva, pimentón y Nuestra firma: un emocionante toque de tequila que lo hace inolvidable."],"en":["Galician-Style Octopus","180 g of tender octopus, Galician style, with olive oil and paprika. Our signature: a touch of tequila."],"p":102900,"a":["mol"],"v":0,"img":"img/g_dc940292.webp","f":"img/f_dc940292.webp"},"7ecd4672-2e2b-4728-b619-fdecb131a23d":{"es":["Tequila Sunrise","Déjate llevar por la vibrante mezcla de nuestro Tequila Sunrise, un cóctel que combina la intensidad del tequila con la dulzura de la granadina y la frescura del jugo de naranja, la elección ideal para aquellos que buscan una experiencia refrescante."],"en":["Tequila Sunrise","Tequila, orange juice and grenadine."],"p":48900,"a":[],"v":0},"c2d9e23c-6eaf-4157-a08b-0eca5765cb80":{"es":["Coca-Cola sin Azúcar",""],"en":["Coca-Cola Zero Sugar",""],"p":9900,"a":[],"v":0},"857b06b8-1c13-4757-a8eb-a3182760b19d":{"es":["Chaufa de Mariscos","Una fusión exquisita de sabores marinos y aromas orientales. Arroz salteado con una variedad de mariscos frescos, acompañado de vegetales crujientes y condimentado."],"en":["Seafood Chaufa","Peruvian-Chinese fried rice, stir-fried with mixed seafood and crisp vegetables."],"p":57900,"a":["shell"],"v":0,"img":"img/g_857b06b8.webp","f":"img/f_857b06b8.webp"},"597dd6d4-e44b-4a24-8556-1ef8218120fb":{"es":["Gin and Tonic Clásico","Armoniosa combinación de ginebra premium y tónica refrescante que eleva cada sorbo a una experiencia excepcional."],"en":["Classic Gin & Tonic","Premium gin and crisp tonic, served the classic way."],"p":48900,"a":[],"v":0},"ad0fd11e-2bdd-4803-ac37-32b62227420d":{"es":["Sprite",""],"en":["Sprite",""],"p":8900,"a":[],"v":0},"9d6c584e-c719-44f7-95d7-c7654713adfb":{"es":["Whisky Glenfiddich",""],"en":["Glenfiddich Whisky",""],"p":704900,"a":[],"v":0},"1f1bf763-7455-406e-af26-48034fb408fc":{"es":["Aperol Spritz","Disfruta el amargo sabor de Aperol con burbujas de prosecco y un toque de soda. Refrescante y vibrante, es la bebida perfecta para celebrar momentos especiales."],"en":["Aperol Spritz","Bittersweet Aperol with prosecco bubbles and a splash of soda."],"p":44900,"a":[],"v":0},"e2ecdaca-c3d0-47de-b7e2-275b5702e459":{"es":["Canada Dry Ginger Ale",""],"en":["Canada Dry Ginger Ale",""],"p":9900,"a":[],"v":0},"486202fa-299b-4a00-b914-687fd659befd":{"es":["Havenly Haven","Nuestro cóctel fusiona la sedosa cremosidad del Baileys con el suave toque almendrado del Amaretto, creando una experiencia de sabor indulgente y equilibrada."],"en":["Havenly Haven","Silky Baileys with the soft almond notes of Amaretto. Creamy, sweet and balanced."],"p":66900,"a":["lac"],"v":0},"faf78187-60bd-4dd7-a676-7755766895b6":{"es":["Gatorade Tropical",""],"en":["Gatorade Tropical",""],"p":10900,"a":[],"v":0},"15eb7910-c77b-4902-b8d1-453f2c7e5f73":{"es":["Tónica Canada Dry Cero",""],"en":["Canada Dry Zero Tonic",""],"p":9900,"a":[],"v":0},"8b9bbc00-678c-422c-a7f2-f61957b76de5":{"es":["Pineapple Passion","Deléitate con esta frescura exótica, un cóctel que une la dulzura jugosa de la piña con la intensidad del vodka y un sutil toque de angostura, cada sorbo te transportará a un paraíso tropical."],"en":["Pineapple Passion","Juicy pineapple and vodka with a dash of Angostura bitters. Tropical through and through."],"p":42900,"a":[],"v":0},"70b0abd9-3234-4a2a-862f-9f56674b8888":{"es":["Bloody Mary","Disfruta del icónico Bloody Mary, un cóctel que combina jugo de tomate y vodka, realzado con especias y un toque de picante, la elección ideal para quienes buscan un trago lleno de carácter."],"en":["Bloody Mary","Tomato juice and vodka with spices and a kick of heat."],"p":50900,"a":["spicy"],"v":0},"a6ee9000-cd86-4e2f-bbd4-b3ffe0ffdc1f":{"es":["Jungle 47","Descubre un cóctel que fusiona la sofisticación del gin Monkey 47 con la refrescante tónica Ocean. Cada sorbo ofrece una experiencia vibrante y revitalizante. Perfecto para quienes buscan un trago lleno de sabor y aventura."],"en":["Jungle 47","Monkey 47 gin with Ocean tonic. Botanical, crisp and bright."],"p":84900,"a":[],"v":0},"e94782af-f450-454a-8676-aa6b1efff8cb":{"es":["Grasshopper","Un cóctel audaz que fusiona la suavidad del whiskey Chivas 12 con la riqueza del ron y la frescura de arándanos y limón. Una celebración de sabores complejos y vibrantes, perfecta para quienes buscan una experiencia de bebida única y memorable."],"en":["Grasshopper","Chivas 12 whisky and rum with cranberry and lime. Bold and layered."],"p":63900,"a":[],"v":0},"e666278c-b6a3-475f-bcbd-c88f06c5176e":{"es":["Watermelon Mezcal","Nuestro cóctel emblemático combina la suavidad del mezcal con la frescura de la sandía, todo acentuado por un toque picante que despierta tus sentidos."],"en":["Watermelon Mezcal","Our signature cocktail: smoky mezcal and fresh watermelon, with a spicy kick."],"p":53900,"a":["spicy"],"v":0},"4ce87dd0-1123-47bc-a596-65445fefd55b":{"es":["Old Fashioned","Una armonía perfecta entre Jack Daniel’s, azúcar delicado y amargos intrigantes, realzada por una experiencia ahumada única que transforma cada trago en un momento memorable."],"en":["Old Fashioned","Jack Daniel's, a touch of sugar and bitters, finished with smoke."],"p":42900,"a":[],"v":0},"95e4d8f3-7501-4ccc-ab1d-4ad0a34bff54":{"es":["Espresso Martini",""],"en":["Espresso Martini",""],"p":49000,"a":[],"v":0}},"allerg":{"glu":["Gluten","Gluten"],"lac":["Lactosa","Lactose"],"egg":["Huevo","Egg"],"pork":["Cerdo","Pork"],"fish":["Pescado","Fish"],"ses":["Sésamo","Sesame"],"crus":["Crustáceos","Crustaceans"],"mol":["Moluscos","Molluscs"],"spicy":["Picante","Spicy"],"gf":["Sin gluten","Gluten-free"],"pea":["Maní","Peanut"],"nuts":["Frutos secos","Tree nuts"],"shell":["Mariscos","Shellfish"]},"dest":[{"id":"24e9c3b3-3492-49f8-a466-63f9ec4e69e1","img":"img/f_24e9c3b3.webp"},{"id":"6c100f5f-cbf9-4814-bbd5-69cebf9f70f6","img":"img/d_coctel.webp"},{"id":"839accf5-7659-4d79-9c37-6d024aea7592","img":"img/f_839accf5.webp"}],"ch":[{"k":"desayunos","es":"Desayunos all day","en":"All-day breakfast","ph":true,"g":[{"es":"Huevos","en":"Eggs","i":["d2c81871-454b-4998-a7ca-eee5770b4a0f","a6befd9e-0847-491e-8d95-25e235e8d2f6","8091234b-0c24-4c40-b601-602b749669c0"]},{"es":"Bowls","en":"Bowls","i":["e26f3942-2f38-4b5d-9d0c-d32f169e9aeb","4a533dab-58fc-46c4-9791-b86e92dfbf68"]},{"es":"Sopas","en":"Soups","i":["cbc21cef-d204-474c-8dcf-2451fd63c21a","03fd2277-bfd5-49d2-a3a3-d3860556ebc7"]}]},{"k":"entradas","es":"Entradas","en":"Starters","ph":true,"g":[{"es":"","en":"","i":["3ac07e30-4e0b-4ba9-8a93-3973289ab933","9f7ed107-05da-4599-8418-1b4bf5e13da4","4a6638bd-08c1-487d-b309-52ea581fb6d1","6d74e993-79c0-4aa2-9843-9808ce28acf6","c584e9be-91f4-42f9-920e-18e65b028856","ccef131e-940c-48f3-bd47-1dba69ead28a","5c1a5741-04bb-4ebb-bbf2-99ff17f7ab1b","f2f165e8-6bba-4c83-ab57-20143caa50b7","ef6fa5d3-d32a-4ecc-a575-31d635c4a2e2","e17fa1ec-911d-44cc-8421-3d9c89d84a4f"]}]},{"k":"bowls","es":"Ensaladas y bowls","en":"Salads & bowls","ph":true,"g":[{"es":"","en":"","i":["ab116584-a2d9-432b-a51f-2d195d3553fe","743d39be-bfc7-48b9-a404-469067c5a0fa"]}]},{"k":"fuertes","es":"Platos fuertes","en":"Mains","ph":true,"g":[{"es":"Carnes","en":"Meat","i":["85aeabcc-579d-455e-8758-f1e0c0fac97e","4a6484cc-d26d-4881-9d0f-4c9c1016f7cc","24e9c3b3-3492-49f8-a466-63f9ec4e69e1","35848923-98cb-4d78-aa4c-c355fb6aa06b","b2746175-7805-4387-810e-aad28d5214da"]},{"es":"Pollo","en":"Chicken","i":["c2e67e45-cb41-48d9-bf9f-45de2bfbf511"]},{"es":"Pescados y mariscos","en":"Fish & seafood","i":["449f817d-b871-4d0c-a909-78329f9655bf","f28fdaa9-7709-4fd4-bf2d-df99c26bf7cd","dc940292-8a45-4931-a427-6974e75c742b","610d815b-cdf3-404b-9694-4517b578df46","17174d19-f717-4b6b-a57c-f52e7a758492","857b06b8-1c13-4757-a8eb-a3182760b19d"]},{"es":"Pasta","en":"Pasta","i":["bbcbda95-1f17-4c06-8641-3c5e5c71f527"]}]},{"k":"hamburguesas","es":"Hamburguesas","en":"Burgers","ph":true,"g":[{"es":"","en":"","i":["71d3ad75-ec2c-4fa9-acee-77b562eeb030","b6291e64-d505-48b5-8571-9d60643f69d0","d0a11db0-bdc9-4129-855a-2c0ed5095180"]},{"es":"De temporada","en":"Seasonal","i":["839accf5-7659-4d79-9c37-6d024aea7592","c1f22b7d-f4fd-4961-bf0e-44e3b325e3c4"]}]},{"k":"pizzas","es":"Pizzas para compartir","en":"Pizzas to share","ph":true,"g":[{"es":"8 porciones","en":"8 slices","i":["c91a33d1-7ccf-4679-9f04-274e7992d476","d8c874be-18fc-4f9b-83af-99a25b364aec","c3293ac5-3fc4-471c-a576-7b7d2eb80072","2559c259-9c1c-4f77-ac69-a3b5723b33ed"]}]},{"k":"postres","es":"Postres","en":"Desserts","ph":true,"g":[{"es":"","en":"","i":["42be2a71-90e5-4cea-9db8-7839c6c506b5"]}]},{"k":"cocteles","es":"Cócteles","en":"Cocktails","ph":true,"g":[{"es":"De la casa","en":"House signatures","i":["e666278c-b6a3-475f-bcbd-c88f06c5176e","6c100f5f-cbf9-4814-bbd5-69cebf9f70f6","3540ca3c-5608-4935-9886-f789451f92d6","af524fcf-eb0f-41da-b950-12ba27f61101","a6ee9000-cd86-4e2f-bbd4-b3ffe0ffdc1f","e94782af-f450-454a-8676-aa6b1efff8cb","486202fa-299b-4a00-b914-687fd659befd","e631debd-be16-47b8-a379-8819f5bcd99f","21859f41-87f8-49f7-bfeb-729b2941768c","8b9bbc00-678c-422c-a7f2-f61957b76de5"]},{"es":"Clásicos","en":"Classics","i":["4ce87dd0-1123-47bc-a596-65445fefd55b","95e4d8f3-7501-4ccc-ab1d-4ad0a34bff54","597dd6d4-e44b-4a24-8556-1ef8218120fb","1f1bf763-7455-406e-af26-48034fb408fc","e767b176-afd2-44b6-b747-ec78b5f6676d","b7c4d5fd-74e3-4bce-a68b-882fb95cd1a4","bb316dcd-979d-43d7-8881-590d521487eb","2490c799-35c2-487e-a9a5-1087eff2779c","8a9d50d3-482b-4572-9494-742a84d4354c","7ecd4672-2e2b-4728-b619-fdecb131a23d","70b0abd9-3234-4a2a-862f-9f56674b8888"]},{"es":"Margaritas","en":"Margaritas","i":["0c2c3d85-5afa-4d64-9843-8bead9762792","40a00719-6d34-4ddc-85b2-861da253e446","7b090a34-d7d7-4dce-84df-6d65d06c297d","94a6070f-25fa-4121-9870-995c02ccb407","8352ffed-e8ed-4505-b44f-7df034a4f53e"]},{"es":"Sangría","en":"Sangria","i":["0c49f2f2-fbb3-4570-a46d-529d49f9900e"]}]},{"k":"vinos","es":"Vinos y espumosos","en":"Wine & sparkling","ph":false,"g":[{"es":"Espumosos y champagne","en":"Sparkling & champagne","i":["ee36e454-b262-434c-b2c1-c3bb770ce67c","47b1f14a-d8c8-49a5-b426-412a8be5a158","fe409492-920d-4f47-97f6-f86212291d81","7f941dca-4c96-419c-9a1e-dfa361e9f2d7","32defa05-2983-46bf-b202-90c305290ef8","dee8ccc5-d00f-479e-8ec9-3188ab86e720"]},{"es":"Vinos","en":"Wine","i":["fe376504-61f6-4717-96d1-52bb305cc228","a0250af2-46ed-44ad-93d0-85c78f594869","ecad8077-206a-4d45-a76e-2d0e6b84af37","a7f93f34-f4b5-43e9-be20-cfd803d74b48","c45ca6e7-0109-49cb-a0ee-fcaa08bb3da9","43343cde-85ff-4b41-9c18-a66f6cf7eb16","332f222a-5581-4113-bed7-decb09812efb"]}]},{"k":"licores","es":"Licores","en":"Spirits","ph":false,"g":[{"es":"Whisky","en":"Whisky","i":["32eca9f6-1409-433d-b1db-e9ac9dbb2de0","e725f786-6765-44c7-aaf6-d92f68e3c05d","020dbaa4-87d3-4082-897a-0fa022097b7a","c48a8d19-2ff3-48cc-bfdc-be9c2aabdf77","7aeb2a42-6a2e-4e2c-8081-1977398a0112","c4385a66-7294-44b2-9195-ee7bcd968054","405f5821-2c04-4cde-aeed-600ea391cc2c","f6d60ce5-57e2-4077-968c-226f67ee511b","4904a4cd-4bfc-4e82-b3eb-46b977830391","d396ac0c-be7a-45c1-a435-24f4858e3481","9af3d052-d1b0-49f2-a50c-a31606f8b342","c1b7a3ac-7c3d-4a80-ad0e-448b49d24849","9d6c584e-c719-44f7-95d7-c7654713adfb"]},{"es":"Ginebra","en":"Gin","i":["5f24c551-ebe8-4c66-bf51-186b31308140","572dc133-1d30-43cf-8be8-e12004c0ca49","dd11f08e-fe36-413b-a355-33e9662ef74c","dc1e94ea-8b5a-4372-967c-5f85f4cedf59","d5efd3a7-2798-42d9-8da4-1e8a9b4a0f36","a93099d4-f175-45fc-af97-41262327dd86","be9787a1-8978-4723-b6ac-4f3076af094d","7eba4edd-eba0-4466-bf10-8149d0a6bf6d","e22e2952-eedb-4f06-862b-45f60f77ee24"]},{"es":"Tequila","en":"Tequila","i":["0b4c7cd9-8e0e-4910-801b-0ddd4b16ef8c","d6446c60-4e8c-460a-9331-0ca3717c0f09","655f3dd0-087b-4c24-ba0d-d98a269f9b6a","7390b5aa-4454-4f74-a29d-7a405dd74e53","ae033659-5f46-435c-89aa-2374780d5972","3e216379-2d75-471f-9172-2d2a7de73a1c","f694d508-5891-42ee-9dc4-3b4388a19c0a","c4939b21-26b1-4101-90ac-4f03be771919"]},{"es":"Ron","en":"Rum","i":["36d7698d-3172-4d4e-9176-decca4eb7a49","eb45478e-06ce-478d-a9cf-32cf24e5be59","ba4d1bf5-ef87-4b90-b49c-0cfc4d4b2f2b","c52d44fb-ac6a-426f-8ada-1072fd93a906"]},{"es":"Vodka","en":"Vodka","i":["ca624888-ee85-4fe9-a52a-92faa08c3989","eab8cd91-7d44-4a0c-8f6d-a01483fae529","b9c444ca-57a0-41fc-a1a6-4b90675bad22","23c2d960-f9d6-4859-a7c2-79a83f198490","a14dd522-8350-4929-b5e5-135b0a0eba4a"]},{"es":"Aguardiente","en":"Aguardiente","i":["7e8872dd-a4e7-4d60-a977-99bc81f3a6c5","929df35d-df67-41fc-bf5a-cdc069dd5de8","3a1dd901-019e-449c-99c2-13b69ca57fcc","410a59df-cb8b-41d9-8aaf-daad5eddbade"]},{"es":"Cognac y brandy","en":"Cognac & brandy","i":["783fba7b-b530-4194-86c1-0c55af946edf","fdd8c122-8400-4d4e-b2b7-a4195ad168dd","16b6982a-f85e-4d29-aeb3-70c699a93fdb"]},{"es":"Aperitivos","en":"Aperitifs","i":["fa51fdcf-645f-4de1-b4dd-ffe90a407455","a7470425-388f-417a-a53a-577b366b90b6","5a654889-5cd3-4c78-afdc-51a09ccc06bf"]},{"es":"Pousse café","en":"Pousse café","i":["840801a9-b7b3-4fbc-aee9-282879fb35cf","5eccd674-d80b-4049-8073-fbede4c7379a"]}]},{"k":"cervezas","es":"Cervezas","en":"Beer","ph":false,"g":[{"es":"","en":"","i":["e18f8f40-b1ab-42bd-bf3b-f771b9ab25a9","9fa085f3-8a59-4360-82fb-5be395be7865","ab12b0a6-7a28-48e4-b973-fe8c2b892d4d","4b4b8ab3-2991-463b-8f3e-aeec12032e66","8a03961a-ef36-407d-9e73-e3cd627cc148","5cd290ac-e692-4c0f-b9fc-ccea2a7d55c5"]}]},{"k":"sinalcohol","es":"Sin alcohol y café","en":"Coffee & soft drinks","ph":false,"g":[{"es":"Café y bebidas calientes","en":"Coffee & hot drinks","i":["c2c09b36-6e61-427c-ad91-9bfaa02fc1a8","625e2088-7ac2-464c-b364-c44f4b1f5947","3f4d45a0-135f-4731-875c-27b391d18fbc","c5befdbd-cd8a-43a6-8999-6c58a24e3d2e","fbc7708f-34bd-4e5d-808d-f32f05457c93","5a3296fd-235b-47ad-a618-0f4ceb1257b9","d266a475-7166-48cb-a3ab-5a68a5ffe0da","c837d986-1bbc-47f2-92de-c5903c5cf357","d4738130-31ad-482d-8c65-8fd9db554134","0bc0d94a-de8d-4002-b29d-b0e5a691d837","aa71b910-71d5-48fb-b4b1-bc55db18ff7f","83c4e4ac-85ca-49e1-8110-caa92ce436f7"]},{"es":"Sodas de la casa","en":"House sodas","i":["b81290fa-b74b-4d7a-9ffd-57785387a43c","f204646c-a79a-4e83-aa05-a607c3593db1","95ae52ed-08d7-4a69-8a2d-61fb9718e0b7","e6f19587-5030-41be-8395-a4019b1f4816"]},{"es":"Otras bebidas","en":"Other drinks","i":["aa37f1a3-3053-45f8-8395-5452aec257a8","4b3867f2-333a-4646-95c6-7de88cb433f3","e2015a0c-848a-4924-8c64-77d6f9765c10","dc0bddb0-259b-4576-b7d3-6308b873b519","4e97814d-3ec5-4d45-8f37-2535f373fa56","cea822ac-0596-4cc2-bddb-770bde51988f","5dc966b0-b7bd-4669-8d30-c81b5953b0a0","c1b4ae79-1f7a-4ad4-b5c0-1e9de4983b3d","f2cbae5f-ad3e-4cc4-87ff-e7d827182613","0e944ecd-9e25-4970-9dbe-2fab60b7881f","b2feda46-e69d-43e4-bffd-6af6a6de39b8","7f7bb4c0-c1c3-4e70-9ca2-c0702858d0d0","869ff04a-0ddf-466d-a080-cd9347a5c140","c2d9e23c-6eaf-4157-a08b-0eca5765cb80","ad0fd11e-2bdd-4803-ac37-32b62227420d","e2ecdaca-c3d0-47de-b7e2-275b5702e459","faf78187-60bd-4dd7-a676-7755766895b6","15eb7910-c77b-4902-b8d1-453f2c7e5f73"]}]},{"k":"hooka","es":"Hooka","en":"Hookah","ph":false,"g":[{"es":"","en":"","i":["1eab5c21-6de1-4f47-854d-58d573d4fddd"]}]}]};
+const T = {
+ es:{nav_carta:"Carta",nav_res:"Reservar",nav_ubi:"Ubicación",pre_l:"Piso 11 sobre Provenza",pre_r:"Medellín alrededor",
+  hero_line:"Humo, hielo y manos que crean.",hero_sub:"Piso 11 · Provenza · Medellín",hero_cta:"Descubrir",
+  st_tl:"360 · Archivo de un día",st_tr:"Piso 11 / MDE",st_m1:"Mañana",st_m2:"Tarde",st_m3:"Noche",st_title:"Un rooftop, tres momentos",st_from1:"Contado desde el piso 11,",st_from2:"sobre Provenza",st_link:"Ver la carta →",st_cta:"Descubre nuestro menú",st_chef:"Recomendados del chef",st_hint:"Toca un momento",st_prev:"Momento anterior",st_next:"Momento siguiente",
+  k_mom:"Momento",k_luz:"Luz",k_mesa:"En la mesa",k_rit:"Ritmo",k_acc:"Acceso",
+  st1_h:"01. Mañana",st1_mom:"/ Desayuno con vista /",st1_luz:"/ Suave, sobre los techos de Provenza /",st1_mesa:"/ Café / pan tostado / la ciudad despertando /",st1_rit:"/ Lento /",st1_p:"La ciudad recién despierta. El café llega sin prisa y nadie mira el reloj.",
+  st2_h:"02. Tarde",st2_mom:"/ Sunny Days /",st2_luz:"/ Sol alto sobre la piscina /",st2_mesa:"/ Cócteles con hielo / algo para compartir /",st2_acc:"/ Huéspedes y visitantes con reserva /",st2_p:"El sol se queda en el agua. El hielo suena en el vaso y la tarde se estira.",
+  st3_h:"03. Noche",st3_mom:"/ DJ /",st3_luz:"/ Baja, cálida / Medellín encendida alrededor /",st3_mesa:"/ Coctelería de autor / fuego en la mesa /",st3_rit:"/ La música empieza a sentirse /",st3_p:"Medellín se enciende alrededor. La noche toma pulso y la mesa se llena.",
+  intro_up:"Un rooftop,",intro_em:"tres momentos",intro_p:"Desayuno con la ciudad recién despierta, sol y piscina en la tarde, y una noche en la que la música empieza a sentirse. La carta acompaña cada momento: cocina local e internacional y coctelería de autor.",intro_link:"Ver la carta",
+  duo_1:"Desde la cocina",duo_2:"Desde la barra",m1_k:"Desayuno",m1_t:"Mañana",m1_p:"Desayuno con vista y luz suave. El día empieza despacio sobre Provenza.",m2_k:"Sunny Days",m2_t:"Tarde",m2_p:"Piscina, sol y Sunny Days. Acceso para no huéspedes con reserva previa.",m3_k:"DJ",m3_t:"Noche",m3_p:"La música empieza a sentirse y la ciudad se enciende alrededor.",
+  carta_up:"La carta",carta_em:"del piso 11",carta_p:"Cocina local e internacional, coctelería de autor y una barra completa.",veg_btn:"Solo vegetarianos",lg_veg:"Vegetariano / vegano",idx_cta:"Descubre nuestro menú",idx:"Índice",close:"Cerrar",
+  veg:"Vegetariano",vegan:"Vegano",temp:"De temporada",contains:"Contiene",photo:"Foto en producción",photo_note:"Imagen de referencia",see:"Ver plato",close:"Cerrar",
+  dest_up:"Del fuego",dest_em:"a la mesa",dest_p:"Tres que salen de la cocina y la barra con más carácter: fuego en la mesa, moras en vino tinto y una smash con bordes tostados.",dest_tag:"Destacado",
+  res_up:"Reserva",res_em:"tu mesa",res_p:"Para un desayuno con vista, una tarde de Sunny Days o la noche. Elige tu momento y reserva en línea en un minuto.",res_note:"Sunny Days: acceso a la piscina para no huéspedes con reserva previa.",
+  m1:"Desayuno con vista",m1p:"Para empezar el día sobre Provenza.",m2:"Sunny Days",m2p:"Piscina y terraza de día, también para no huéspedes.",m3:"Noche",m3p:"Cócteles, cocina de fuego y la ciudad encendida.",rp_h:"Elige tu momento",rp_btn:"Reservar mesa",rp_wa:"Escríbenos por WhatsApp",rp_n:"Confirmas tu mesa en línea en el portal de reservas de 360.",f_name:"Nombre",f_date:"Fecha",f_time:"Hora",f_people:"Personas",f_moment:"Momento",f_phone:"WhatsApp",f_occ:"Ocasión (opcional)",f_notes:"Comentarios (opcional)",f_submit:"Enviar solicitud",
+  moments:["Desayuno","Sunny Days · piscina","Noche"],occs:["Sin ocasión especial","Cita","Cumpleaños","Aniversario","Negocios","Celebración"],people:"persona|personas",res_out:"Tu solicitud de reserva",res_proto:"Prototipo: en la web final esta solicitud llega directo a la base de reservas de 360 en Notion y el equipo te confirma por WhatsApp.",copy:"Copiar texto",copied:"Copiado",missing:"Completa nombre, fecha, hora y WhatsApp.",
+  msg:(d)=>`Hola, 360. Quiero reservar:\n· Nombre: ${d.name}\n· Fecha: ${d.date} a las ${d.time}\n· Personas: ${d.people}\n· Momento: ${d.moment}\n· WhatsApp: ${d.phone}${d.occ?`\n· Ocasión: ${d.occ}`:""}${d.notes?`\n· Comentarios: ${d.notes}`:""}`,
+  casa_up:"Nuestra casa",casa_em:"en Provenza",visit:"Visitar",haven_p:"Hotel de diseño en Provenza. 360 está en su piso 11.",swing_p:"Café de especialidad dentro de Haven, en el corazón de Provenza.",
+  dir_t:"Dirección",dir_floor:"piso 11",map:"Abrir en Google Maps",hor_t:"Horarios",hor_p:"Mañana · Tarde · Noche",hor_s:"Horarios por confirmar",acc_t:"Acceso",acc_p:"Abierto a huéspedes y visitantes.",acc_s:"Sunny Days con reserva previa.",
+  foot_1:"En el piso 11 de Haven, sobre Provenza.",foot_2:"Medellín alrededor, de la mañana a la noche.",proto:"Prototipo · imágenes y video provisionales de bancos libres",
+  dest_lines:["250 g de solomito flameado con Jack Daniel's en tu mesa","Tequila Don Julio y reducción de moras en vino tinto","300 g de res estilo smash, bordes tostados"]},
+ en:{nav_carta:"Menu",nav_res:"Book",nav_ubi:"Location",pre_l:"Eleventh floor over Provenza",pre_r:"Medellín all around",
+  hero_line:"Smoke, ice and hands at work.",hero_sub:"11th floor · Provenza · Medellín",hero_cta:"Discover",
+  st_tl:"360 · Archive of a day",st_tr:"Floor 11 / MDE",st_m1:"Morning",st_m2:"Afternoon",st_m3:"Night",st_title:"One rooftop, three moments",st_from1:"Told from the 11th floor,",st_from2:"above Provenza",st_link:"See the menu →",st_cta:"Discover our menu",st_chef:"Chef's picks",st_hint:"Tap a moment",st_prev:"Previous moment",st_next:"Next moment",
+  k_mom:"Moment",k_luz:"Light",k_mesa:"On the table",k_rit:"Pace",k_acc:"Access",
+  st1_h:"01. Morning",st1_mom:"/ Breakfast with a view /",st1_luz:"/ Soft, over the rooftops of Provenza /",st1_mesa:"/ Coffee / toast / the city waking up /",st1_rit:"/ Slow /",st1_p:"The city is just waking up. Coffee arrives unhurried and no one checks the time.",
+  st2_h:"02. Afternoon",st2_mom:"/ Sunny Days /",st2_luz:"/ High sun over the pool /",st2_mesa:"/ Iced cocktails / something to share /",st2_acc:"/ Guests and visitors with a booking /",st2_p:"The sun stays on the water. Ice rings in the glass and the afternoon stretches out.",
+  st3_h:"03. Night",st3_mom:"/ DJ /",st3_luz:"/ Low, warm / Medellín lit up all around /",st3_mesa:"/ Signature cocktails / fire at the table /",st3_rit:"/ The music starts to build /",st3_p:"Medellín lights up all around. The night finds its pulse and the table fills up.",
+  intro_up:"One rooftop,",intro_em:"three moments",intro_p:"Breakfast as the city wakes up, sun and pool in the afternoon, and a night when the music starts to take over. The menu follows every moment: local and international cooking and signature cocktails.",intro_link:"See the menu",
+  duo_1:"From the kitchen",duo_2:"From the bar",m1_k:"Breakfast",m1_t:"Morning",m1_p:"Breakfast with a view and soft light. The day starts slowly over Provenza.",m2_k:"Sunny Days",m2_t:"Afternoon",m2_p:"Pool, sun and Sunny Days. Open to non-guests with a reservation.",m3_k:"DJ",m3_t:"Night",m3_p:"The music starts to take over and the city lights up all around.",
+  carta_up:"The menu",carta_em:"of the 11th floor",carta_p:"Local and international cooking, signature cocktails and a full bar.",veg_btn:"Vegetarian only",lg_veg:"Vegetarian / vegan",idx_cta:"Discover our menu",idx:"Index",close:"Close",
+  veg:"Vegetarian",vegan:"Vegan",temp:"Seasonal",contains:"Contains",photo:"Photo in production",photo_note:"Reference image",see:"View dish",close:"Close",
+  dest_up:"From the fire",dest_em:"to the table",dest_p:"Three with the most character from the kitchen and the bar: fire at the table, blackberries in red wine and a smash burger with crisp edges.",dest_tag:"Featured",
+  res_up:"Book",res_em:"your table",res_p:"For breakfast with a view, a Sunny Days afternoon or the night. Choose your moment and book online in a minute.",res_note:"Sunny Days: pool access for non-guests with a reservation.",
+  m1:"Breakfast with a view",m1p:"Start the day above Provenza.",m2:"Sunny Days",m2p:"Pool and terrace by day, open to non-guests too.",m3:"Night",m3p:"Cocktails, fire-led cooking and the city lit up.",rp_h:"Choose your moment",rp_btn:"Book a table",rp_wa:"Message us on WhatsApp",rp_n:"You confirm your table online on 360's booking portal.",f_name:"Name",f_date:"Date",f_time:"Time",f_people:"Guests",f_moment:"Moment",f_phone:"WhatsApp",f_occ:"Occasion (optional)",f_notes:"Notes (optional)",f_submit:"Send request",
+  moments:["Breakfast","Sunny Days · pool","Night"],occs:["No special occasion","Date","Birthday","Anniversary","Business","Celebration"],people:"guest|guests",res_out:"Your booking request",res_proto:"Prototype: on the live site this request goes straight to 360's booking list in Notion, and the team confirms on WhatsApp.",copy:"Copy text",copied:"Copied",missing:"Please fill in name, date, time and WhatsApp.",
+  msg:(d)=>`Hi 360, I'd like to book:\n· Name: ${d.name}\n· Date: ${d.date} at ${d.time}\n· Guests: ${d.people}\n· Moment: ${d.moment}\n· WhatsApp: ${d.phone}${d.occ?`\n· Occasion: ${d.occ}`:""}${d.notes?`\n· Notes: ${d.notes}`:""}`,
+  casa_up:"Our home",casa_em:"in Provenza",visit:"Visit",haven_p:"Design hotel in Provenza. 360 is on its 11th floor.",swing_p:"Specialty coffee inside Haven, in the heart of Provenza.",
+  dir_t:"Address",dir_floor:"11th floor",map:"Open in Google Maps",hor_t:"Hours",hor_p:"Morning · Afternoon · Night",hor_s:"Hours to be confirmed",acc_t:"Access",acc_p:"Open to hotel guests and visitors.",acc_s:"Sunny Days with a reservation.",
+  foot_1:"On Haven's 11th floor, above Provenza.",foot_2:"Medellín all around, from morning to night.",proto:"Prototype · placeholder images and video from free stock libraries",
+  dest_lines:["250 g tenderloin flambéed with Jack Daniel's at your table","Don Julio tequila and a blackberry red-wine reduction","300 g smash-style beef, crisp caramelized edges"]}
+};
+const LEAF='<svg class="leaf" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 3C11 3 5 8 5 15c0 1.3.3 2.5.8 3.6L3 21.4 4.6 23l2.8-2.8c1.1.5 2.3.8 3.6.8 7 0 11-6 11-15V3h-2Z"/></svg>';
+const STAR='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2 2.9 6.9 7.1.6-5.4 4.7 1.6 7.1L12 17.6 5.8 21.3l1.6-7.1L2 9.5l7.1-.6Z"/></svg>';
+let lang='es';
+try{const s=localStorage.getItem('360lang'); if(s==='en'||s==='es') lang=s;}catch(e){}
+const fmt=new Intl.NumberFormat('es-CO',{maximumFractionDigits:0});
+const money=n=>'$'+fmt.format(n);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function shortDesc(s){ if(!s) return ''; s=s.trim(); const m=s.match(/^(.{20,170}?[.!?])(\s|$)/); let r=m?m[1]:s; if(r.length>170) r=r.slice(0,165).replace(/\s+\S*$/,'')+'…'; return r; }
+function item(id){ return MENU.items[id]; }
+function nameOf(it){ return it[lang][0]; }
+function descOf(it){ return shortDesc(it[lang][1]); }
+function tagsHTML(it){
+  const t=T[lang]; let h='';
+  if(it.v) h+=`<span class="vmark">${LEAF}${it.v===2?t.vegan:t.veg}</span>`;
+  if(it.t==='temp') h+=`<span class="tmark">${t.temp}</span>`;
+  const al=(it.a||[]).filter(a=>a!=='gf').map(a=>MENU.allerg[a][lang==='es'?0:1].toLowerCase());
+  if((it.a||[]).includes('gf')) h+=`<span>${MENU.allerg.gf[lang==='es'?0:1]}</span>`;
+  if(al.length) h+=`<span>${t.contains}: ${al.join(', ')}</span>`;
+  return h?`<div class="r-tags">${h}</div>`:'';
+}
+function plateHTML(it,cls){
+  if(it.img) return `<div class="${cls}"><img src="${it.img}" alt="${esc(nameOf(it))}" loading="lazy"></div>`;
+  return `<div class="${cls}"><div class="ring"><span><small class="lbl">${T[lang].photo}</small><b>${esc(nameOf(it))}</b></span></div></div>`;
+}
+function renderCarta(){
+  const t=T[lang]; let html=''; let idx='';
+  MENU.ch.forEach((c,ci)=>{
+    const n=c.g.reduce((a,g)=>a+g.i.length,0);
+    const no=String(ci+1).padStart(2,'0');
+    idx+=`<li><a href="#ch-${c.k}" data-k="${c.k}">${esc(c[lang])}<sup data-count="${c.k}">${n}</sup></a></li>`;
+    let body='';
+    if(c.ph){
+      let rows='', plates='', k=0;
+      c.g.forEach(g=>{
+        if(g[lang]) rows+=`<h4 class="g-h lbl"><span>${esc(g[lang])}</span><span>${g.i.length}</span></h4>`;
+        g.i.forEach(id=>{ const it=item(id);
+          rows+=`<article class="row" tabindex="0" role="button" aria-haspopup="dialog" data-id="${id}" data-k="${k}"${it.v?' data-v="'+it.v+'"':''}>
+            ${plateHTML(it,'thumb')}
+            <div class="r-top"><h5 class="r-name">${esc(nameOf(it))}</h5><span class="lead"></span><span class="price">${money(it.p)}</span></div>
+            ${descOf(it)?`<p class="r-desc">${esc(descOf(it))}</p>`:''}${tagsHTML(it)}<span class="more">${T[lang].see} →</span></article>`;
+          plates+=plateHTML(it,'plate'+(k===0?' on':' down')).replace('<div class="plate','<div data-k="'+k+'" class="plate');
+          k++;
+        });
+      });
+      body=`<div class="ch-body ph"><div class="rows">${rows}</div><div class="stage" aria-hidden="true"><div class="stage-in"><div class="plates">${plates}</div><div class="stage-cap"><b class="cap-name"></b><span class="lbl cap-no"></span></div></div></div></div>`;
+    } else {
+      let grps='';
+      c.g.forEach(g=>{
+        let r=''; g.i.forEach(id=>{const it=item(id); const d=descOf(it);
+          r+=`<div class="drow"${it.v?' data-v="'+it.v+'"':''}><div class="r-top"><h5 class="r-name">${esc(nameOf(it))}</h5><span class="lead"></span><span class="price">${money(it.p)}</span></div>${d?`<p class="r-desc">${esc(d)}</p>`:''}</div>`;});
+        grps+=`<div class="grp">${g[lang]?`<h4 class="g-h lbl"><span>${esc(g[lang])}</span><span>${g.i.length}</span></h4>`:''}${r}</div>`;
+      });
+      body=`<div class="ch-body tx">${grps}</div>`;
+    }
+    html+=`<section class="chapter" id="ch-${c.k}" data-k="${c.k}"><header class="ch-h"><span class="lbl no">${no}</span><h3>${esc(c[lang])}</h3></header>${body}</section>`;
+  });
+  document.getElementById('chapters').innerHTML=html;
+  document.getElementById('indexList').innerHTML=idx;
+  document.getElementById('idxOverList').innerHTML=idx;
+  setupChapters(); applyVeg(); updateIndex(currentCh||MENU.ch[0].k);
+}
+/* plate stage per chapter */
+const stages=[];
+function setActive(st,k){
+  if(st.active===k) return; st.active=k;
+  st.rows.forEach(r=>r.classList.toggle('on',+r.dataset.k===k));
+  st.plates.forEach(p=>{const j=+p.dataset.k; p.className='plate '+(j<k?'up':j>k?'down':'on');});
+  const row=st.rows.find(r=>+r.dataset.k===k);
+  if(row){ st.cap.textContent=row.querySelector('.r-name').textContent;
+    const vis=st.rows.filter(r=>r.offsetParent!==null); const pos=vis.indexOf(row)+1;
+    st.no.textContent=String(pos).padStart(2,'0')+' / '+String(vis.length).padStart(2,'0'); }
+}
+let chObs, currentCh=null;
+function setupChapters(){
+  stages.length=0;
+  document.querySelectorAll('.ch-body.ph').forEach(b=>{
+    const st={rows:[...b.querySelectorAll('.row')],plates:[...b.querySelectorAll('.plate')],cap:b.querySelector('.cap-name'),no:b.querySelector('.cap-no'),active:-1};
+    stages.push(st); st.rows.forEach(r=>{r._st=st; r.addEventListener('click',()=>{setActive(st,+r.dataset.k); openFicha(r.dataset.id, r);}); r.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openFicha(r.dataset.id, r);} });});
+    b.querySelector('.plates').addEventListener('click',()=>{ const r=st.rows.find(x=>+x.dataset.k===st.active); if(r) openFicha(r.dataset.id, r); });
+    const first=st.rows.find(r=>r.offsetParent!==null)||st.rows[0]; if(first) setActive(st,+first.dataset.k);
+  });
+  if(chObs) chObs.disconnect();
+  syncPlates();
+  chObs=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting) updateIndex(e.target.dataset.k); });},{rootMargin:'-35% 0px -60% 0px'});
+  document.querySelectorAll('.chapter').forEach(c=>chObs.observe(c));
+}
+/* el plato fijo muestra el producto que se está leyendo: en celular, el primero que asoma justo debajo del plato; en computador, el que cruza el 45 % de la pantalla */
+function syncPlates(){
+  const mob=matchMedia('(max-width: 960px)').matches, vh=innerHeight;
+  stages.forEach(st=>{
+    const body=st.rows[0]&&st.rows[0].closest('.ch-body'); if(!body) return;
+    const br=body.getBoundingClientRect(); if(br.bottom<0||br.top>vh) return;
+    const line=mob ? body.querySelector('.stage').getBoundingClientRect().bottom+40 : vh*0.45;
+    const vis=st.rows.filter(r=>r.offsetParent!==null); if(!vis.length) return;
+    const pick=vis.find(r=>r.getBoundingClientRect().bottom>line)||vis[vis.length-1];
+    setActive(st,+pick.dataset.k);
+  });
+}
+let syncTick=false;
+addEventListener('scroll',()=>{ if(!syncTick){ syncTick=true; requestAnimationFrame(()=>{ syncTick=false; syncPlates(); }); } },{passive:true});
+addEventListener('resize',()=>syncPlates());
+function updateIndex(k){
+  currentCh=k;
+  document.querySelectorAll('#indexList a,#idxOverList a').forEach(a=>a.classList.toggle('on',a.dataset.k===k));
+  const c=MENU.ch.find(c=>c.k===k); if(c) document.getElementById('idxCurrent').textContent=c[lang];
+}
+matchMedia('(max-width: 960px)').addEventListener('change',()=>setupChapters());
+/* vegetarian filter */
+let vegOnly=false;
+function applyVeg(){
+  document.body.classList.toggle('vegonly',vegOnly);
+  document.getElementById('vegToggle').setAttribute('aria-pressed',vegOnly);
+  MENU.ch.forEach(c=>{
+    const sec=document.getElementById('ch-'+c.k); if(!sec) return;
+    let n=0; c.g.forEach(g=>g.i.forEach(id=>{ if(!vegOnly||item(id).v) n++; }));
+    sec.hidden=n===0;
+    sec.querySelectorAll('.grp').forEach(gr=>{ const vis=[...gr.querySelectorAll('.drow')].some(d=>!vegOnly||d.dataset.v); gr.hidden=!vis; });
+    document.querySelectorAll(`a[data-k="${c.k}"]`).forEach(a=>{a.parentElement.hidden=n===0; const s=a.querySelector('sup'); if(s) s.textContent=n;});
+  });
+  document.querySelectorAll('.ch-body.ph .g-h').forEach(h=>{ let el=h.nextElementSibling, cnt=0; while(el&&el.classList.contains('row')){ if(!vegOnly||el.dataset.v) cnt++; el=el.nextElementSibling;} h.hidden=cnt===0; const sp=h.lastElementChild; if(sp) sp.textContent=cnt; });
+  stages.forEach(st=>{ st.active=-1; const f=st.rows.find(r=>!vegOnly||r.dataset.v); if(f) setActive(st,+f.dataset.k); });
+  syncPlates();
+}
+document.getElementById('vegToggle').addEventListener('click',()=>{vegOnly=!vegOnly; applyVeg();});
+/* index overlay (phone) */
+const over=document.getElementById('idxOver');
+document.getElementById('idxOpen').addEventListener('click',()=>{over.hidden=false; document.body.style.overflow='hidden'; over.querySelector('a.on,a')?.focus();});
+function closeOver(){over.hidden=true; document.body.style.overflow='';}
+document.getElementById('idxClose').addEventListener('click',closeOver);
+over.addEventListener('click',e=>{ if(e.target.closest('a')) closeOver(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!over.hidden) closeOver(); });
+/* destacados */
+function renderDest(){
+  const t=T[lang];
+  document.getElementById('destGrid').innerHTML=MENU.dest.map((d,i)=>{const it=item(d.id);
+    return `<figure class="dcard" data-id="${d.id}" tabindex="0" role="button" aria-haspopup="dialog"><img src="${d.img}" alt="${esc(nameOf(it))}" loading="lazy"><span class="dtag lbl">${STAR}${t.dest_tag}</span><figcaption class="dcap"><h3>${esc(nameOf(it).replace(/\s*\(.*\)$/,''))}</h3><p>${esc(t.dest_lines[i])}</p><span class="price">${money(it.p)}</span></figcaption></figure>`;}).join('');
+}
+/* ficha del plato */
+const ficha=document.getElementById('ficha'), fCard=document.getElementById('fichaCard');
+let fReturn=null;
+function openFicha(id, from){
+  const it=item(id); if(!it) return; const t=T[lang];
+  fReturn=from||document.activeElement;
+  const img=document.getElementById('fImg'), ph=document.getElementById('fPh');
+  if(it.f){ img.src=it.f; img.alt=nameOf(it); img.hidden=false; ph.hidden=true; }
+  else { img.hidden=true; img.removeAttribute('src'); ph.hidden=false; document.getElementById('fPhName').textContent=nameOf(it); }
+  const isDest=MENU.dest.some(d=>d.id===id); const tag=document.getElementById('fTag');
+  tag.hidden=!isDest; if(isDest) tag.innerHTML=STAR+t.dest_tag;
+  document.getElementById('fName').textContent=nameOf(it).replace(/\s*\(.*\)$/,'');
+  document.getElementById('fPrice').textContent=money(it.p);
+  document.getElementById('fDesc').textContent=it[lang][1]||'';
+  document.getElementById('fTags').innerHTML=tagsHTML(it).replace(/^<div class="r-tags">|<\/div>$/g,'');
+  document.querySelector('.ficha-note').hidden=!it.f;
+  document.getElementById('fichaX').setAttribute('aria-label',t.close);
+  ficha.hidden=false; fCard.scrollTop=0; document.body.style.overflow='hidden';
+  document.getElementById('fichaX').focus({preventScroll:true});
+}
+function closeFicha(){ if(ficha.hidden) return; ficha.hidden=true; document.body.style.overflow=''; if(fReturn&&fReturn.focus) fReturn.focus({preventScroll:true}); }
+ficha.addEventListener('click',e=>{ if(e.target.closest('[data-close]')) closeFicha(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeFicha(); });
+let ty=null;
+fCard.addEventListener('touchstart',e=>{ ty=fCard.scrollTop<=0?e.touches[0].clientY:null; },{passive:true});
+fCard.addEventListener('touchmove',e=>{ if(ty===null) return; const dy=e.touches[0].clientY-ty; if(dy>0) fCard.style.transform=`translateY(${Math.min(dy,240)}px)`; },{passive:true});
+fCard.addEventListener('touchend',e=>{ if(ty===null) return; const m=/translateY\((\d+)/.exec(fCard.style.transform); fCard.style.transform=''; if(m&&+m[1]>90) closeFicha(); ty=null; });
+document.getElementById('destGrid').addEventListener('click',e=>{ const c=e.target.closest('.dcard'); if(c) openFicha(c.dataset.id,c); });
+document.getElementById('destGrid').addEventListener('keydown',e=>{ const c=e.target.closest('.dcard'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); openFicha(c.dataset.id,c);} });
+/* historia: slider; cada momento aparece solo al tocarlo */
+(function(){
+  const st=document.getElementById('intro'); if(!st) return;
+  const stages=[...st.querySelectorAll('.st-stage')], btns=[...st.querySelectorAll('.st-moms button')], cnt=document.getElementById('stCount');
+  let cur=0;
+  function go(i){
+    if(i===cur) return;
+    stages[cur].classList.remove('on'); stages[i].classList.add('on'); cur=i;
+    stages.forEach((sg,k)=>sg.setAttribute('aria-hidden',k!==i));
+    btns.forEach((b,k)=>b.setAttribute('aria-pressed',k===i-1));
+    st.classList.toggle('open',i>0);
+    if(i>0) cnt.textContent=String(i).padStart(2,'0')+' / 03';
+  }
+  stages.forEach((sg,k)=>sg.setAttribute('aria-hidden',k!==0));
+  btns.forEach((b,k)=>b.addEventListener('click',()=>go(cur===k+1?0:k+1)));
+  document.getElementById('stPrev').addEventListener('click',()=>go(cur<=1?3:cur-1));
+  document.getElementById('stNext').addEventListener('click',()=>go(cur>=3?1:cur+1));
+  document.getElementById('stClose').addEventListener('click',()=>{ go(0); btns[0].focus(); });
+  st.addEventListener('keydown',e=>{
+    if(cur===0) return;
+    if(e.key==='ArrowRight'){ e.preventDefault(); go(cur>=3?1:cur+1); }
+    else if(e.key==='ArrowLeft'){ e.preventDefault(); go(cur<=1?3:cur-1); }
+    else if(e.key==='Escape'){ go(0); }
+  });
+  let x0=null, y0=null;
+  st.addEventListener('touchstart',e=>{ x0=e.touches[0].clientX; y0=e.touches[0].clientY; },{passive:true});
+  st.addEventListener('touchend',e=>{
+    if(x0===null) return; const dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0; x0=null;
+    if(Math.abs(dx)<50||Math.abs(dx)<Math.abs(dy)*1.4) return;
+    if(dx<0) go(cur>=3?1:cur+1); else if(cur>0) go(cur-1);
+  },{passive:true});
+})();
+/* language */
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-t]').forEach(el=>{const v=T[lang][el.dataset.t]; if(typeof v==='string') el.textContent=v;});
+  document.querySelectorAll('[data-t-aria]').forEach(el=>{const v=T[lang][el.dataset.tAria]; if(v) el.setAttribute('aria-label',v);});
+  document.getElementById('lang-es').setAttribute('aria-pressed',lang==='es');
+  document.getElementById('lang-en').setAttribute('aria-pressed',lang==='en');
+  renderCarta(); renderDest();
+}
+['es','en'].forEach(l=>document.getElementById('lang-'+l).addEventListener('click',()=>{lang=l; try{localStorage.setItem('360lang',l);}catch(e){} applyLang();}));
+/* header state */
+const nav=document.getElementById('nav'), hero=document.querySelector('.hero');
+function onScroll(){ nav.classList.toggle('solid', scrollY > hero.offsetHeight - 90); }
+addEventListener('scroll',onScroll,{passive:true}); onScroll();
+/* hero video */
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const v=document.getElementById('heroVideo');
+if(!reduce){ v.src = (innerWidth<720 ? 'video/hero_m.mp4' : 'video/hero.mp4'); v.addEventListener('playing',()=>{document.querySelector('.hero .poster').style.opacity=0;},{once:true}); v.play().catch(()=>{}); }
+/* preloader */
+const pre=document.getElementById('pre');
+function endPre(){ pre.classList.add('gone'); }
+pre.addEventListener('animationend',e=>{ if(e.animationName==='curtain') endPre(); });
+pre.addEventListener('click',()=>{ pre.classList.add('skip'); });
+setTimeout(endPre, 4600);
+applyLang();
+</script>
+
+</body></html>
