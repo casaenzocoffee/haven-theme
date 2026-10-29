@@ -7,6 +7,7 @@ syncFallback();setInterval(syncFallback,15000);
 const reduce=false; // animaciones siempre activas (decisión de marca)
 
 async function start(){
+  if(matchMedia('(max-width: 820px)').matches){window.__introEnd&&window.__introEnd();return;} // celulares: reloj plano, sin 3D
   let THREE,RoomEnvironment;
   try{THREE=await import('three');({RoomEnvironment}=await import('three/addons/environments/RoomEnvironment.js'));}catch(e){console.warn('3D no disponible',e);window.__introEnd&&window.__introEnd();return;}
   let renderer;

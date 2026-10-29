@@ -95,10 +95,12 @@ add_action( 'wp_head', function () {
 	if ( is_front_page() ) {
 		echo '<link rel="preload" as="image" href="' . esc_url( hv_asset( 'media/haven-hero.webp' ) ) . '" media="(min-width: 900px)" fetchpriority="high">' . "\n";
 		echo '<link rel="preload" as="image" href="' . esc_url( hv_asset( 'media/haven-hero-m.webp' ) ) . '" media="(max-width: 899px)" fetchpriority="high">' . "\n";
+		if ( ! hv_lite() ) {
 		// El reloj 3D de la apertura. Primero el mapa de importación (tiene que ir antes de cualquier módulo o precarga) y luego las precargas.
 		echo '<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>' . "\n";
 		echo '<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js" crossorigin>' . "\n";
 		echo '<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/environments/RoomEnvironment.js" crossorigin>' . "\n";
+		}
 	}
 }, 2 );
 add_action( 'wp_head', function () { echo '<script>document.documentElement.classList.add("hv-js");</script>' . "\n"; }, 1 );
@@ -200,3 +202,14 @@ add_filter( 'script_loader_tag', function ( $tag, $handle ) {
 	}
 	return $tag;
 }, 10, 2 );
+
+/**
+ * Celulares: versión liviana de la portada, sin la apertura ni el reloj 3D (en un celular promedio la apertura 3D tardaba unos 9 s).
+ * WP Rocket guarda una caché aparte para celulares, así que esto no se mezcla con la versión de escritorio.
+ */
+function hv_lite() {
+	static $l = null;
+	if ( null === $l ) $l = (bool) apply_filters( 'hv_lite', function_exists( 'wp_is_mobile' ) && wp_is_mobile() );
+	return $l;
+}
+add_filter( 'body_class', function ( $c ) { if ( hv_lite() ) $c[] = 'hv-lite'; return $c; } );

@@ -5,6 +5,7 @@
 </div>
 <script>/* Apertura: solo la primera visita de la sesión, se puede saltar */
 (function(){var el=document.getElementById('intro'),seen=false;try{seen=sessionStorage.getItem('hv-intro')}catch(e){}
+if(matchMedia('(max-width: 820px)').matches)seen=true; /* celulares: sin apertura */
 if(seen){el.remove();window.__hvAfterIntro=function(f){f()};return;}
 document.documentElement.classList.add('intro-on');
 var q=[];window.__hvAfterIntro=function(f){q?q.push(f):f();};var flush=function(){var a=q;q=null;(a||[]).forEach(function(f){try{f()}catch(e){}});};

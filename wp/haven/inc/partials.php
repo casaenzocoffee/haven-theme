@@ -38,6 +38,7 @@ function hv_fill( $tpl, $ov = array(), $lang = null ) {
 }
 
 function hv_front_intro() {
+	if ( hv_lite() ) { echo '<script>window.__hvAfterIntro=function(f){f()};</script>'; return; }
 	echo file_get_contents( HAVEN_DIR . '/partials/intro.html' ); // apertura del reloj (solo la primera visita de la sesión)
 }
 
