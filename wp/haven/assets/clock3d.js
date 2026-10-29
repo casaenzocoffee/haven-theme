@@ -169,5 +169,7 @@ async function start(){
   last=performance.now();
   requestAnimationFrame(frame);
 }
-const go=()=>document.getElementById('intro')?start():(('requestIdleCallback' in window)?requestIdleCallback(start,{timeout:600}):setTimeout(start,150));
+// Con apertura: arranca justo después del primer cuadro pintado (pedir la tarjeta gráfica puede trabar la pantalla un momento).
+const afterPaint=()=>requestAnimationFrame(()=>setTimeout(start,0));
+const go=()=>document.getElementById('intro')?afterPaint():(('requestIdleCallback' in window)?requestIdleCallback(start,{timeout:600}):setTimeout(start,150));
 if(document.getElementById('intro'))go();else if(document.readyState==='complete')go();else addEventListener('load',go);
