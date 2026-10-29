@@ -158,7 +158,7 @@ hvPainted(()=>{
   h1.setAttribute('aria-label',h1.textContent.replace(/\s+/g,' '));walk(h1);
   h1.querySelectorAll('.w').forEach(w=>w.setAttribute('aria-hidden','true'));
   document.querySelectorAll('.split:not(h1)').forEach(t=>{t.setAttribute('aria-label',t.textContent.replace(/\s+/g,' '));walk(t);t.querySelectorAll('.w').forEach(w=>w.setAttribute('aria-hidden','true'));gsap.from(t.querySelectorAll('.ch'),{rotateX:-95,yPercent:50,opacity:0,duration:1.1,ease:'expo.out',stagger:.02,scrollTrigger:{trigger:t,start:'clamp(top 85%)'}});});
-  gsap.set(h1,{opacity:1});gsap.from(h1.querySelectorAll('.ch'),{rotateX:-95,yPercent:40,opacity:0,duration:1.1,ease:'expo.out',stagger:.022,delay:.1});
+  gsap.set(h1,{opacity:1});gsap.from(h1.querySelectorAll('.ch'),{rotateX:-95,yPercent:40,opacity:0,duration:.9,ease:'expo.out',stagger:.012,delay:.05});
   gsap.from('.hero-sub, .hero .facts, .hero .eyebrow',{y:24,opacity:0,duration:1,ease:'power3.out',stagger:.1,delay:.5});
   gsap.from('.booking',{y:40,opacity:0,duration:1.1,ease:'power3.out',delay:.8});
 

@@ -119,8 +119,8 @@ add_action( 'wp_head', function () {
 		$addons = preg_replace( '#environments/RoomEnvironment\.js.*$#', '', $room );
 		// El mapa debe apuntar a la misma URL exacta que la precarga (con ?v=) para que el navegador reutilice la descarga.
 		echo '<script type="importmap">' . wp_json_encode( array( 'imports' => array( 'three' => $three, 'three/addons/' => $addons, 'three/addons/environments/RoomEnvironment.js' => $room ) ), JSON_UNESCAPED_SLASHES ) . '</script>' . "\n";
-		echo '<link rel="modulepreload" href="' . esc_url( $three ) . '" crossorigin>' . "\n";
-		echo '<link rel="modulepreload" href="' . esc_url( $room ) . '" crossorigin>' . "\n";
+		// Precarga del 3D solo en pantallas grandes: en celular compite con lo primero que se ve; ahí se pide justo después del primer cuadro.
+		echo '<script>if(innerWidth>820){' . wp_json_encode( array( $three, $room ), JSON_UNESCAPED_SLASHES ) . '.forEach(function(u){var l=document.createElement("link");l.rel="modulepreload";l.href=u;l.crossOrigin="anonymous";document.head.appendChild(l);});}</script>' . "\n";
 		}
 	}
 }, 2 );
