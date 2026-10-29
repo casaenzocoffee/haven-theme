@@ -14,12 +14,22 @@ function hv_is_haven_view() {
 	return ! is_admin() && ! is_feed() && ! wp_doing_ajax() && ! ( defined( 'REST_REQUEST' ) && REST_REQUEST );
 }
 
+/** Librerías (GSAP, Lenis, three.js) servidas desde el propio dominio si están en uploads/hv-vendor/; si no, desde el CDN. */
+function hv_vendor( $rel, $cdn ) {
+	static $up = null;
+	if ( null === $up ) $up = wp_upload_dir();
+	$f = $up['basedir'] . '/hv-vendor/' . $rel;
+	if ( ! file_exists( $f ) ) return $cdn;
+	return set_url_scheme( $up['baseurl'] . '/hv-vendor/' . $rel ) . '?v=' . substr( md5( (string) filesize( $f ) ), 0, 6 );
+}
+function hv_vendor_local() { $up = wp_upload_dir(); return file_exists( $up['basedir'] . '/hv-vendor/gsap.min.js' ); }
+
 add_action( 'wp_enqueue_scripts', function () {
 	$ver = null;
 	wp_enqueue_style( 'haven', hv_asset( 'haven.css' ), array(), $ver );
-	wp_enqueue_script( 'hv-gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array(), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
-	wp_enqueue_script( 'hv-gsap-st', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', array( 'hv-gsap' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
-	wp_enqueue_script( 'hv-lenis', 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js', array(), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'hv-gsap', hv_vendor( 'gsap.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js' ), array(), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'hv-gsap-st', hv_vendor( 'ScrollTrigger.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js' ), array( 'hv-gsap' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'hv-lenis', hv_vendor( 'lenis.min.js', 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js' ), array(), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
 	wp_enqueue_script( 'haven', hv_asset( 'haven.js' ), array( 'hv-gsap', 'hv-gsap-st', 'hv-lenis' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
 	if ( is_front_page() && function_exists( 'wp_enqueue_script_module' ) ) {
 		// Sin dependencias registradas: el mapa de importación lo imprime el tema en el <head>, antes de las precargas (si no, el navegador lo ignora).
@@ -79,7 +89,7 @@ add_action( 'init', function () {
 add_action( 'wp_head', function () {
 	$fonts = 'https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap';
 	echo '<meta name="theme-color" content="#191311">' . "\n";
-	echo '<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>' . "\n" . '<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>' . "\n";
+	if ( ! hv_vendor_local() ) echo '<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>' . "\n" . '<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>' . "\n";
 	$local = WP_CONTENT_DIR . '/uploads/hv-fonts/fonts.css';
 	if ( file_exists( $local ) ) {
 		// Fuentes servidas desde el propio dominio (tools/fetch-fonts.php): sin conexiones a Google y con precarga de las principales.
@@ -104,9 +114,13 @@ add_action( 'wp_head', function () {
 		echo '<link rel="preload" as="image" href="' . esc_url( hv_asset( 'media/haven-hero-m.webp' ) ) . '" media="(max-width: 899px)" fetchpriority="high">' . "\n";
 		if ( ! hv_lite() ) {
 		// El reloj 3D de la apertura. Primero el mapa de importación (tiene que ir antes de cualquier módulo o precarga) y luego las precargas.
-		echo '<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>' . "\n";
-		echo '<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js" crossorigin>' . "\n";
-		echo '<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/environments/RoomEnvironment.js" crossorigin>' . "\n";
+		$three = hv_vendor( 'three/three.module.min.js', 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js' );
+		$room  = hv_vendor( 'three/addons/environments/RoomEnvironment.js', 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/environments/RoomEnvironment.js' );
+		$addons = preg_replace( '#environments/RoomEnvironment\.js.*$#', '', $room );
+		// El mapa debe apuntar a la misma URL exacta que la precarga (con ?v=) para que el navegador reutilice la descarga.
+		echo '<script type="importmap">' . wp_json_encode( array( 'imports' => array( 'three' => $three, 'three/addons/' => $addons, 'three/addons/environments/RoomEnvironment.js' => $room ) ), JSON_UNESCAPED_SLASHES ) . '</script>' . "\n";
+		echo '<link rel="modulepreload" href="' . esc_url( $three ) . '" crossorigin>' . "\n";
+		echo '<link rel="modulepreload" href="' . esc_url( $room ) . '" crossorigin>' . "\n";
 		}
 	}
 }, 2 );

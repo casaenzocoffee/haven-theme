@@ -190,13 +190,29 @@
   }
 
   /* Arranque: cada [data-hg] se activa cuando se acerca a la pantalla (no carga trabajo de más) */
+  /* En la portada los datos (mapa) vienen en un archivo aparte y se piden solo cuando el bloque se acerca a la pantalla */
+  var pending = null;
+  function ensure(cb) {
+    var el = document.getElementById('haven-guia-data'), src = el && el.getAttribute('data-src');
+    if (D || !src || el.textContent.length > 2) return cb();
+    if (!pending) {
+      pending = [];
+      fetch(src, { credentials: 'same-origin' }).then(function (r) { return r.text(); })
+        .then(function (t) { el.textContent = t; }, function () {})
+        .then(function () { var q = pending; pending = []; q.forEach(function (f) { f(); }); });
+    }
+    pending.push(cb);
+  }
   function boot() {
-    data(); chapters();
+    var d0 = document.getElementById('haven-guia-data'); if (!(d0 && d0.getAttribute('data-src'))) data();
+    chapters();
     var roots = [].slice.call(document.querySelectorAll('[data-hg]'));
     var start = function (el) {
       if (el.__hg) return; el.__hg = 1;
-      var m = HG.mods[el.getAttribute('data-hg')];
-      if (m) { try { m(el); } catch (e) { if (window.console) console.error('[Haven Guía]', e); } }
+      ensure(function () {
+        var m = HG.mods[el.getAttribute('data-hg')];
+        if (m) { try { m(el); } catch (e) { if (window.console) console.error('[Haven Guía]', e); } }
+      });
     };
     if (!('IntersectionObserver' in window)) return roots.forEach(start);
     var io = new IntersectionObserver(function (es) {

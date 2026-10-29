@@ -320,7 +320,18 @@ add_action( 'wp_footer', function () {
 		$d['suites'] = array_map( function ( $x ) { return array_intersect_key( $x, array_flip( array( 'id', 'n', 'url', 'img', 'cat' ) ) ); }, $d['suites'] );
 	}
 	$json = wp_json_encode( $d, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP );
-	echo '<script type="application/json" id="haven-guia-data">' . hv_guia_links( $json ) . "</script>\n";
+	$json = hv_guia_links( $json );
+	// Portada: el mapa está muy abajo, así que los datos van en un archivo aparte (se pide al acercarse). Ahorra ~110 KB del HTML.
+	$src = '';
+	if ( 'home' === hv_template_key() ) {
+		$up  = wp_upload_dir();
+		$dir = $up['basedir'] . '/hv-guia';
+		$fn  = 'guia-' . hv_lang() . '-' . substr( md5( $json ), 0, 10 ) . '.json';
+		if ( ! file_exists( "$dir/$fn" ) ) { wp_mkdir_p( $dir ); @file_put_contents( "$dir/$fn", $json ); }
+		if ( file_exists( "$dir/$fn" ) ) $src = set_url_scheme( $up['baseurl'] . '/hv-guia/' . $fn );
+	}
+	if ( $src ) echo '<script type="application/json" id="haven-guia-data" data-src="' . esc_url( $src ) . '"></script>' . "\n";
+	else echo '<script type="application/json" id="haven-guia-data">' . $json . "</script>\n";
 	echo '<script src="' . esc_url( hv_asset( 'hg-core.js' ) ) . '" defer></script>' . "\n";
 	foreach ( $mods as $m ) echo '<script src="' . esc_url( hv_asset( 'hg-' . $m . '.js' ) ) . '" defer></script>' . "\n";
 }, 20 );
