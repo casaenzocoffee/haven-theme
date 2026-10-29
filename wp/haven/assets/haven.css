@@ -713,6 +713,6 @@ html.intro-on,html.intro-on body{overflow:hidden}
 html.hvb-open,html.hvb-open body{overflow:hidden}
 
 /* Título de portada: en el primer cuadro queda casi transparente y el script lo anima letra a letra; si el script no llega, aparece solo a los 2,5 s */
-.hv-js .hero h1.split{opacity:.01;animation:hvH1 .6s 2.5s forwards}
+.hv-js .hero h1.split{opacity:.01;animation:hvH1 .3s 1.1s forwards}
 @keyframes hvH1{to{opacity:1}}
 .reduce .hero h1.split{opacity:1;animation:none}
