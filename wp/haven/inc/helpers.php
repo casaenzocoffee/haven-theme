@@ -104,6 +104,7 @@ function hv_href( $h ) {
 		return hv_url( $k );
 	}
 	if ( 0 === strpos( $h, 'theme:' ) ) return HAVEN_URI . '/assets/' . substr( $h, 6 );
+	if ( false !== strpos( $h, 'cluvi.co' ) ) return hv_menu_360(); // el menú viejo (Cluvi) se reemplazó por la carta propia
 	return $h;
 }
 
