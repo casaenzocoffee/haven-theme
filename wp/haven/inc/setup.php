@@ -87,6 +87,13 @@ add_action( 'wp_head', function () {
 		foreach ( (array) json_decode( (string) @file_get_contents( WP_CONTENT_DIR . '/uploads/hv-fonts/preload.json' ), true ) as $pf ) {
 			echo '<link rel="preload" as="font" type="font/woff2" href="' . esc_url( $base . '/' . $pf ) . '" crossorigin>' . "\n";
 		}
+		// Portada: el título lleva una palabra en cursiva; se precarga esa fuente para que no cambie de tamaño al llegar.
+		if ( is_front_page() ) {
+			foreach ( (array) glob( WP_CONTENT_DIR . '/uploads/hv-fonts/playfair-display-italic-latin-*.woff2' ) as $it ) {
+				if ( false !== strpos( basename( $it ), 'latin-ext' ) ) continue;
+				echo '<link rel="preload" as="font" type="font/woff2" href="' . esc_url( $base . '/' . basename( $it ) ) . '" crossorigin>' . "\n";
+			}
+		}
 		echo '<style id="hv-fonts">' . str_replace( 'FONTDIR', esc_url( $base ), (string) file_get_contents( $local ) ) . '</style>' . "\n";
 	} else {
 		echo '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
