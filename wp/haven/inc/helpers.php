@@ -211,6 +211,9 @@ function hv_rooms( $lang = null ) {
 }
 
 /** Enlace de WhatsApp de reservas. */
+/** Carta digital del 360° Rooftop (subdominio propio). Se puede cambiar con el filtro hv_menu_360 o con menu_url en la página. */
+function hv_menu_360() { return apply_filters( 'hv_menu_360', 'https://carta.havenmedellin.com/' ); }
+
 function hv_wa( $text = '' ) { return 'https://wa.me/573212097033?text=' . rawurlencode( $text ); }
 
 /** URL de esta misma página en español e inglés (Polylang); si no hay traducción, la portada de ese idioma. */

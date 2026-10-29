@@ -21,7 +21,7 @@ function hv_btn( $text, $href, $kind = 'gold', $track = '', $ext = false ) {
 }
 
 /** Portada de sección. $crumbs: [[texto, url|''], …] */
-function hv_hero( $title_html, $sub, $img, $crumbs, $eyebrow = '', $tags = array() ) {
+function hv_hero( $title_html, $sub, $img, $crumbs, $eyebrow = '', $tags = array(), $cta = '' ) {
 	$cr = array();
 	foreach ( $crumbs as $c ) $cr[] = $c[1] ? '<a href="' . esc_url( $c[1] ) . '">' . e( $c[0] ) . '</a>' : '<span>' . e( $c[0] ) . '</span>';
 	$tg = '';
@@ -33,7 +33,7 @@ function hv_hero( $title_html, $sub, $img, $crumbs, $eyebrow = '', $tags = array
     <nav class="crumbs" aria-label="<?php echo ea( t( 'Ruta' ) ); ?>"><?php echo implode( ' <span aria-hidden="true">/</span> ', $cr ); ?></nav>
     <?php if ( $eyebrow ) echo '<p class="eyebrow">' . e( $eyebrow ) . '</p>'; ?>
     <h1 class="split"><?php echo wp_kses_post( $title_html ); ?></h1>
-    <div class="ph-row"><p class="ph-sub"><?php echo e( $sub ); ?></p><div class="ph-tags"><?php echo $tg; ?></div><a class="ph-cue" href="#c" aria-label="<?php echo ea( t( 'Bajar' ) ); ?>"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></div>
+    <div class="ph-row"><p class="ph-sub"><?php echo e( $sub ); ?></p><div class="ph-tags"><?php echo $tg; ?></div><?php if ( $cta ) echo '<div class="ph-cta">' . $cta . '</div>'; ?><a class="ph-cue" href="#c" aria-label="<?php echo ea( t( 'Bajar' ) ); ?>"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></div>
   </div>
 </section>
 <?php return ob_get_clean();

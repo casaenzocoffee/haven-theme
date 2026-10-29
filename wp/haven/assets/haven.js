@@ -22,7 +22,7 @@
     else if(h.startsWith('mailto:'))ev='click_email';
     else if(/instagram\.com|tiktok\.com|facebook\.com/.test(h))ev='click_social';
     else if(/google\.com\/maps|waze\.com/.test(h))ev='click_directions';
-    else if(/cluvi\.co|fiweex\.com/.test(h))ev='click_restaurant';
+    else if(/cluvi\.co|fiweex\.com|carta\.havenmedellin\.com/.test(h))ev='click_restaurant';
     if(ev)dataLayer.push({event:ev,destino:h.replace(/^(tel:|mailto:)/,'').slice(0,120),origen:page,idioma:lang});
   },{capture:true});
   document.addEventListener('submit',e=>{if(e.target.classList.contains('cform'))dataLayer.push({event:'generate_lead',formulario:'contacto',idioma:lang});},{capture:true});

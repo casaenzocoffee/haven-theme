@@ -9,7 +9,10 @@ $crumb = $d['crumb'] ?? get_the_title();
 $all   = array();
 foreach ( $secs as $s ) $all = array_merge( $all, (array) ( $s['imgs'] ?? array() ) );
 $all = array_values( array_filter( $all ) );
-echo hv_hero( $h['title'], $h['sub'], $h['img'], array( array( t( 'Inicio' ), hv_url( 'home' ) ), array( $crumb, '' ) ), $h['eyebrow'] );
+// 360° Rooftop: botón "Menú 360" en la portada de la página, hacia la carta digital propia.
+$menu = 'rooftop' === $key ? ( ( $d['menu_url'] ?? '' ) ?: hv_menu_360() ) : '';
+$hcta = $menu ? hv_btn( hv_en() ? 'Menu 360' : 'Menú 360', $menu, 'gold', 'menu_360', true ) : '';
+echo hv_hero( $h['title'], $h['sub'], $h['img'], array( array( t( 'Inicio' ), hv_url( 'home' ) ), array( $crumb, '' ) ), $h['eyebrow'], array(), $hcta );
 $n = 0;
 foreach ( $secs as $s ) {
 	if ( empty( $s['paras'] ) ) continue;
@@ -22,7 +25,9 @@ foreach ( $secs as $s ) {
 		if ( '' === $bt || isset( $seen[ mb_strtolower( $bt ) ] ) ) continue;
 		$seen[ mb_strtolower( $bt ) ] = 1;
 		if ( mb_strtolower( $bt ) === $bt ) $bt = mb_strtoupper( mb_substr( $bt, 0, 1 ) ) . mb_substr( $bt, 1 );
-		$cta .= hv_btn( $bt, $b['href'] ?? '#', $cta ? 'ghost' : 'gold', $key . '_' . $n, ! empty( $b['ext'] ) );
+		$bh = (string) ( $b['href'] ?? '#' );
+		if ( $menu && false !== strpos( $bh, 'cluvi.co' ) ) $bh = $menu; // el menú viejo (Cluvi) pasa a la carta nueva
+		$cta .= hv_btn( $bt, $bh, $cta ? 'ghost' : 'gold', $key . '_' . $n, ! empty( $b['ext'] ) || $bh === $menu );
 	}
 	$main = ( 0 === $n && ! empty( $d['first_img'] ) ) ? $d['first_img'] : ( $ims[0] ?? $h['img'] );
 	echo hv_editorial( ( $s['eyebrow'] ?? '' ) ?: $crumb, hv_title_em( $s['title'] ?? '' ), $s['paras'], $main, $ims[1] ?? null, 1 === $n % 2, 1 === $n % 2, $cta, 0 === $n ? 'c' : '' );
