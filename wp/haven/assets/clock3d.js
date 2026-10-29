@@ -7,13 +7,12 @@ syncFallback();setInterval(syncFallback,15000);
 const reduce=false; // animaciones siempre activas (decisión de marca)
 
 async function start(){
-  if(matchMedia('(max-width: 820px)').matches){window.__introEnd&&window.__introEnd();return;} // celulares: reloj plano, sin 3D
   let THREE,RoomEnvironment;
   try{THREE=await import('three');({RoomEnvironment}=await import('three/addons/environments/RoomEnvironment.js'));}catch(e){console.warn('3D no disponible',e);window.__introEnd&&window.__introEnd();return;}
   let renderer;
-  try{renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true,powerPreference:'high-performance'});}catch(e){window.__introEnd&&window.__introEnd();return;}
-  const small=innerWidth<821;
-  renderer.setPixelRatio(Math.min(devicePixelRatio||1,small?1.5:1.75));
+  try{renderer=new THREE.WebGLRenderer({canvas:cv,antialias:innerWidth>820,alpha:true,powerPreference:'high-performance'});}catch(e){window.__introEnd&&window.__introEnd();return;}
+  const small=innerWidth<821,SM=small;
+  renderer.setPixelRatio(Math.min(devicePixelRatio||1,small?1.25:1.75));
   renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.1;
   const scene=new THREE.Scene();
   const pm=new THREE.PMREMGenerator(renderer);scene.environment=pm.fromScene(new RoomEnvironment(),0.04).texture;
@@ -22,7 +21,7 @@ async function start(){
   const champ=new THREE.MeshStandardMaterial({color:0xF7DFAE,metalness:1,roughness:.28});
   const holder=new THREE.Group();scene.add(holder);const root=new THREE.Group();holder.add(root);
   const clock=new THREE.Group();root.add(clock);
-  const seg=small?96:160;
+  const seg=small?64:160;
   clock.add(new THREE.Mesh(new THREE.TorusGeometry(1.6,0.12,48,seg),gold));
   const inner=new THREE.Mesh(new THREE.TorusGeometry(1.44,0.022,16,seg),champ);inner.position.z=0.04;clock.add(inner);
   const cs=new THREE.Mesh(new THREE.CylinderGeometry(1.62,1.5,0.34,seg),new THREE.MeshStandardMaterial({color:0x2E241E,metalness:.7,roughness:.32}));cs.rotation.x=Math.PI/2;cs.position.z=-0.18;clock.add(cs);
@@ -48,24 +47,24 @@ async function start(){
   const cap=new THREE.Mesh(new THREE.CylinderGeometry(0.075,0.075,0.07,32),gold);cap.rotation.x=Math.PI/2;cap.position.z=0.18;clock.add(cap);
 
   // Anillo de letras
-  const tc=document.createElement('canvas');tc.width=4096;tc.height=128;const tx=tc.getContext('2d');
+  const tc=document.createElement('canvas');tc.width=small?2048:4096;tc.height=128;const tx=tc.getContext('2d');
   tx.font='600 62px "DM Sans", Arial, sans-serif';try{tx.letterSpacing='22px'}catch(e){};tx.textBaseline='middle';tx.fillStyle='#F7DFAE';
-  const phrase='MEDELLÍN  ·  EL POBLADO  ·  HAVEN  ·  ';const pw=tx.measureText(phrase).width;const n=Math.max(1,Math.floor(4096/pw));
-  for(let i=0;i<n;i++)tx.fillText(phrase,i*4096/n,66);
+  const phrase='MEDELLÍN  ·  EL POBLADO  ·  HAVEN  ·  ';const pw=tx.measureText(phrase).width;const n=Math.max(1,Math.floor(tc.width/pw));
+  for(let i=0;i<n;i++)tx.fillText(phrase,i*tc.width/n,66);
   const rt=new THREE.CanvasTexture(tc);rt.colorSpace=THREE.SRGBColorSpace;rt.wrapS=THREE.RepeatWrapping;rt.anisotropy=8;
   const bandMat=new THREE.MeshBasicMaterial({map:rt,transparent:true,side:THREE.DoubleSide,depthWrite:false,opacity:0});
   const band=new THREE.Mesh(new THREE.CylinderGeometry(2.3,2.3,0.27,seg,1,true),bandMat);
   const bandG=new THREE.Group();bandG.add(band);bandG.rotation.set(1.2,0,0.32);root.add(bandG);
 
   // Partículas doradas
-  const N=small?80:170,pos=new Float32Array(N*3);for(let i=0;i<N;i++){const r=2.4+Math.random()*2.4,t=Math.random()*Math.PI*2,u=Math.acos(2*Math.random()-1);pos[i*3]=r*Math.sin(u)*Math.cos(t);pos[i*3+1]=r*Math.sin(u)*Math.sin(t);pos[i*3+2]=r*Math.cos(u)-1;}
+  const N=small?50:170,pos=new Float32Array(N*3);for(let i=0;i<N;i++){const r=2.4+Math.random()*2.4,t=Math.random()*Math.PI*2,u=Math.acos(2*Math.random()-1);pos[i*3]=r*Math.sin(u)*Math.cos(t);pos[i*3+1]=r*Math.sin(u)*Math.sin(t);pos[i*3+2]=r*Math.cos(u)-1;}
   const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
   const dust=new THREE.Points(pg,new THREE.PointsMaterial({color:0xF7DFAE,size:small?0.03:0.025,transparent:true,opacity:0,depthWrite:false}));root.add(dust);
 
   // Granos dorados que vuelan desde todas partes y arman el reloj (apertura)
   const TAU0=Math.PI*2;
   const sc=document.createElement('canvas');sc.width=sc.height=64;const sx=sc.getContext('2d');const sgr=sx.createRadialGradient(32,32,0,32,32,32);sgr.addColorStop(0,'rgba(255,246,220,1)');sgr.addColorStop(.35,'rgba(232,205,140,.9)');sgr.addColorStop(1,'rgba(205,179,113,0)');sx.fillStyle=sgr;sx.fillRect(0,0,64,64);
-  const G=reduce?0:(small?700:1600),gFrom=new Float32Array(G*3),gTo=new Float32Array(G*3),gPos=new Float32Array(G*3),gDel=new Float32Array(G);
+  const G=reduce?0:(small?380:1600),gFrom=new Float32Array(G*3),gTo=new Float32Array(G*3),gPos=new Float32Array(G*3),gDel=new Float32Array(G);
   for(let i=0;i<G;i++){const k=Math.random();let x,y,z;
     if(k<.45){const a=Math.random()*TAU0,b=Math.random()*TAU0,R=1.6+.12*Math.cos(b);x=R*Math.cos(a);y=R*Math.sin(a);z=.12*Math.sin(b);}
     else if(k<.85){const r=Math.sqrt(Math.random())*1.45,a=Math.random()*TAU0;x=r*Math.cos(a);y=r*Math.sin(a);z=.03;}
@@ -80,7 +79,7 @@ async function start(){
   const gDir=new Float32Array(G*3);for(let i=0;i<G;i++){const x=gTo[i*3],y=gTo[i*3+1],L=Math.hypot(x,y)||1;gDir[i*3]=x/L*(.6+Math.random())+(Math.random()-.5)*.9;gDir[i*3+1]=y/L*(.6+Math.random())+(Math.random()-.5)*.9+.25;gDir[i*3+2]=(Math.random()-.2)*1.6;}
   const introEl=document.getElementById('intro');const big=!!(introEl&&introEl.isConnected&&G);
   const cntEl=big?introEl.querySelector('.intro-count b'):stage.querySelector('.clock-count b');if(G&&!big)stage.classList.add('counting');if(big)cv.classList.add('top');
-  let tExit=0,I=big?1:0;
+  let tExit=0,I=big?1:0;const DUR=SM?1700:2600;
 
   scene.add(new THREE.AmbientLight(0xffffff,.25));
   const key=new THREE.DirectionalLight(0xfff1d6,2.4);key.position.set(3,4,6);scene.add(key);
@@ -102,13 +101,13 @@ async function start(){
     if(document.hidden||!innerWidth){last=now;return;}
     if(VW!==innerWidth||VH!==innerHeight){size();measure();}
     if(!t0)t0=now;const raw=Math.max(0,now-last),d=Math.min(0.05,raw/1000);last=now;el+=Math.min(raw,50); // el: tiempo de animación sin saltos aunque el teléfono se trabe
-    if(big&&window.__introSkip&&!tExit){el=Math.max(el,2600);}
-    const P=reduce?1:Math.min(1,el/(big?2600:3400));window.__introTakeover=1;if(big&&!introEl.classList.contains('go'))introEl.classList.add('go');
+    if(big&&window.__introSkip&&!tExit){el=Math.max(el,DUR);}
+    const P=reduce?1:Math.min(1,el/(big?DUR:3400));window.__introTakeover=1;if(big&&!introEl.classList.contains('go'))introEl.classList.add('go');
     if(big){if(P>.74)introEl.classList.add('brand');
-      if(P>=1&&!tExit){tExit=now+1200;}
+      if(P>=1&&!tExit){tExit=now+(SM?450:1200);}
       if(!tExit&&(!introEl.isConnected||introEl.classList.contains('out')))tExit=now; // si la apertura terminó por tiempo, el reloj igual vuela a su sitio
       if(tExit&&now>=tExit&&introEl.isConnected&&!introEl.classList.contains('out'))window.__introEnd&&window.__introEnd();
-      I=tExit?1-ease(cl((now-tExit)/1100)):1;
+      I=tExit?1-ease(cl((now-tExit)/(SM?700:1100))):1;
       if(I<=0&&cv.classList.contains('top'))cv.classList.remove('top');}
     const p=cl((P-.5)/.5),e=ease(p);
     // Recorrido con scroll: S 0→1 a lo largo de ~1.7 pantallas
@@ -163,7 +162,7 @@ async function start(){
   // Arranque sólido en un dispositivo nuevo: compila los shaders sin bloquear (si el navegador lo permite),
   // y espera unos cuadros estables antes de empezar a contar el tiempo de la apertura.
   try{if(renderer.compileAsync)await renderer.compileAsync(scene,cam);else renderer.compile(scene,cam);renderer.render(scene,cam);}catch(e){try{renderer.compile(scene,cam);}catch(_){}}
-  await new Promise(res=>{let ok=0,prev=performance.now();const t0w=prev;const w=n=>{const dt=n-prev;prev=n;ok=dt<24?ok+1:0;if(ok>=4||n-t0w>700)res();else requestAnimationFrame(w);};requestAnimationFrame(w);});
+  await new Promise(res=>{let ok=0,prev=performance.now();const t0w=prev;const w=n=>{const dt=n-prev;prev=n;ok=dt<24?ok+1:0;if(ok>=4||n-t0w>(SM?300:700))res();else requestAnimationFrame(w);};requestAnimationFrame(w);});
   last=performance.now();
   requestAnimationFrame(frame);
 }

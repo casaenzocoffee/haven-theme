@@ -209,7 +209,7 @@ add_filter( 'script_loader_tag', function ( $tag, $handle ) {
  */
 function hv_lite() {
 	static $l = null;
-	if ( null === $l ) $l = (bool) apply_filters( 'hv_lite', function_exists( 'wp_is_mobile' ) && wp_is_mobile() );
+	if ( null === $l ) $l = (bool) apply_filters( 'hv_lite', false );
 	return $l;
 }
 add_filter( 'body_class', function ( $c ) { if ( hv_lite() ) $c[] = 'hv-lite'; return $c; } );

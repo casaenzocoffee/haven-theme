@@ -5,11 +5,11 @@
 </div>
 <script>/* Apertura: solo la primera visita de la sesión, se puede saltar */
 (function(){var el=document.getElementById('intro'),seen=false;try{seen=sessionStorage.getItem('hv-intro')}catch(e){}
-if(matchMedia('(max-width: 820px)').matches)seen=true; /* celulares: sin apertura */
+var m=matchMedia('(max-width: 820px)').matches; /* celulares: apertura corta */
 if(seen){el.remove();window.__hvAfterIntro=function(f){f()};return;}
 document.documentElement.classList.add('intro-on');
 var q=[];window.__hvAfterIntro=function(f){q?q.push(f):f();};var flush=function(){var a=q;q=null;(a||[]).forEach(function(f){try{f()}catch(e){}});};
-window.__introEnd=function(){if(!el.isConnected)return;el.classList.add('out');document.documentElement.classList.remove('intro-on');try{sessionStorage.setItem('hv-intro','1')}catch(e){}setTimeout(function(){el.remove();flush();},900);};
-setTimeout(function(){if(!window.__introTakeover)window.__introEnd()},3200);setTimeout(function(){window.__introEnd()},8000);
+window.__introEnd=function(){if(!el.isConnected)return;el.classList.add('out');document.documentElement.classList.remove('intro-on');try{sessionStorage.setItem('hv-intro','1')}catch(e){}setTimeout(function(){el.remove();flush();},m?450:900);};
+setTimeout(function(){if(!window.__introTakeover)window.__introEnd()},m?1800:3200);setTimeout(function(){window.__introEnd()},m?4200:8000);
 ['wheel','touchstart','keydown','click'].forEach(function(t){addEventListener(t,function(){window.__introSkip=1;},{once:true,passive:true});});})();</script>
 
