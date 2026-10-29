@@ -363,9 +363,6 @@ html:not(.hg-js) .hg .hg-wizard__nav [data-nav]{display:none}
   .hg .hg-seo-item{grid-template-columns:1fr}
   .hg .hg-glass{display:none}
 }
-@media (prefers-reduced-motion:reduce){
-  .hg *{animation-duration:.01ms!important;transition-duration:.01ms!important}
-}
 
 @media (max-width:640px){section.hg{border-radius:20px;padding:30px 16px}}
 .hg .hg-more{margin-top:18px;border:0;background:none;color:var(--hg-gold);font:600 12px/1 var(--hg-sans);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;padding:12px 0}

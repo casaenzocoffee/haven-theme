@@ -30,7 +30,7 @@
   HG.num = function (n, d) {
     return Number(n).toLocaleString(HG.lang() === 'en' ? 'en-US' : 'es-CO', { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 });
   };
-  HG.reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  HG.reduce = false; // animaciones siempre activas (decisión de marca)
 
   /* Medición: GTM (dataLayer) + píxel de Meta (PixelYourSite define fbq) */
   HG.track = function (event, params) {

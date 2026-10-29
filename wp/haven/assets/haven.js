@@ -79,7 +79,7 @@
   }
 
   // Experiencias con video (Higgsfield): se cargan solo cuando la tarjeta entra en pantalla
-  if(!document.body.classList.contains('reduce')&&!(navigator.connection&&navigator.connection.saveData)&&'IntersectionObserver' in window){
+  if(!document.body.classList.contains('reduce')&&'IntersectionObserver' in window){
     const vio=new IntersectionObserver(en=>en.forEach(x=>{const c=x.target;let v=c.querySelector('video');
       if(x.isIntersecting){if(!v){v=document.createElement('video');v.muted=true;v.loop=true;v.playsInline=true;v.preload='auto';v.setAttribute('aria-hidden','true');v.src=c.dataset.video;v.addEventListener('playing',()=>v.classList.add('on'),{once:true});c.insertBefore(v,c.firstChild.nextSibling);}v.play().catch(()=>{});}
       else if(v)v.pause();}),{rootMargin:'200px 0px'});
@@ -129,10 +129,11 @@
 })();
 
 /* ---------- Video del hero: se carga después de la página ---------- */
-addEventListener('load',()=>(window.__hvAfterIntro||(f=>f()))(()=>{const v=document.querySelector('.hero-video');if(v&&v.dataset.srcM&&!matchMedia('(min-width: 900px)').matches){v.dataset.src=v.dataset.srcM;}if(!v||(!matchMedia('(min-width: 900px)').matches&&!v.dataset.srcM)||(navigator.connection&&navigator.connection.saveData))return;
+addEventListener('load',()=>(window.__hvAfterIntro||(f=>f()))(()=>{const v=document.querySelector('.hero-video');if(v&&v.dataset.srcM&&!matchMedia('(min-width: 900px)').matches){v.dataset.src=v.dataset.srcM;}if(!v||(!matchMedia('(min-width: 900px)').matches&&!v.dataset.srcM))return;
   /* el video (varios MB) espera a que la página ya se vea: 2,5 s o el primer gesto, lo que pase antes; mientras tanto se ve la foto */
   let vgo=false;const go=()=>{if(vgo)return;vgo=true;v.src=v.dataset.src;v.addEventListener('playing',()=>v.classList.add('playing'),{once:true});v.play().catch(()=>{});};
-  setTimeout(go,2500);['scroll','touchstart','pointerdown','keydown'].forEach(t=>addEventListener(t,()=>setTimeout(go,150),{once:true,passive:true}));}));
+  /* en celular el video queda debajo de lo primero que se ve: arranca con el primer gesto (ahorra datos); en computador, a los 2,5 s */
+  if(matchMedia('(min-width: 900px)').matches)setTimeout(go,2500);else setTimeout(go,9000);['scroll','touchstart','pointerdown','keydown'].forEach(t=>addEventListener(t,()=>setTimeout(go,150),{once:true,passive:true}));}));
 
 /* Las animaciones arrancan después del primer cuadro pintado: la página se ve de inmediato y luego se anima. */
 window.hvPainted=function(f){var run=function(){requestAnimationFrame(function(){setTimeout(f,0);});};document.readyState==='loading'?addEventListener('DOMContentLoaded',run):run();};
