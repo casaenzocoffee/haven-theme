@@ -8,7 +8,8 @@ const reduce=false; // animaciones siempre activas (decisión de marca)
 
 async function start(){
   // Sin tarjeta gráfica (3D dibujado por software) el reloj 3D congela la página: se queda el reloj plano y ni se descarga three.js.
-  if(!/[?&]hv3d=1/.test(location.search)){let soft=true;try{const g=document.createElement('canvas').getContext('webgl',{failIfMajorPerformanceCaveat:true});if(g){const x=g.getExtension('WEBGL_debug_renderer_info'),r=String(x?g.getParameter(x.UNMASKED_RENDERER_WEBGL):g.getParameter(g.RENDERER));soft=/swiftshader|llvmpipe|softpipe|software|basic render/i.test(r);const l=g.getExtension('WEBGL_lose_context');l&&l.loseContext();}}catch(e){}
+  if(window.__hvSoftGL===true){window.__introEnd&&window.__introEnd();return;}
+  if(window.__hvSoftGL!==false&&!/[?&]hv3d=1/.test(location.search)){let soft=true;try{const g=document.createElement('canvas').getContext('webgl',{failIfMajorPerformanceCaveat:true});if(g){const x=g.getExtension('WEBGL_debug_renderer_info'),r=String(x?g.getParameter(x.UNMASKED_RENDERER_WEBGL):g.getParameter(g.RENDERER));soft=/swiftshader|llvmpipe|softpipe|software|basic render/i.test(r);const l=g.getExtension('WEBGL_lose_context');l&&l.loseContext();}}catch(e){}
     if(soft){window.__introEnd&&window.__introEnd();return;}}
   let THREE,RoomEnvironment;
   try{THREE=await import('three');({RoomEnvironment}=await import('three/addons/environments/RoomEnvironment.js'));}catch(e){console.warn('3D no disponible',e);window.__introEnd&&window.__introEnd();return;}

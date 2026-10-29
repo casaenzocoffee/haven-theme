@@ -6,6 +6,8 @@
 <script>/* Apertura: solo la primera visita de la sesión, se puede saltar */
 (function(){var el=document.getElementById('intro'),seen=false;try{seen=sessionStorage.getItem('hv-intro')}catch(e){}
 var m=matchMedia('(max-width: 820px)').matches; /* celulares: apertura corta */
+/* Sin chip gráfico (3D por software) la apertura 3D no puede correr: no se muestra y la página aparece de una vez */
+var soft=false;if(!seen&&!/[?&]hv3d=1/.test(location.search)){soft=true;try{var g=document.createElement('canvas').getContext('webgl',{failIfMajorPerformanceCaveat:true});if(g){var x=g.getExtension('WEBGL_debug_renderer_info');soft=/swiftshader|llvmpipe|softpipe|software|basic render/i.test(String(x?g.getParameter(x.UNMASKED_RENDERER_WEBGL):g.getParameter(g.RENDERER)));var lc=g.getExtension('WEBGL_lose_context');lc&&lc.loseContext();}}catch(e){}window.__hvSoftGL=soft;if(soft)seen=true;}
 if(seen){el.remove();window.__hvAfterIntro=function(f){f()};return;}
 document.documentElement.classList.add('intro-on');
 var q=[];window.__hvAfterIntro=function(f){q?q.push(f):f();};var flush=function(){var a=q;q=null;(a||[]).forEach(function(f){try{f()}catch(e){}});};
