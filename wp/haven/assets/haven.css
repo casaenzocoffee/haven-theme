@@ -711,3 +711,8 @@ html.intro-on,html.intro-on body{overflow:hidden}
 .hv-book .hvb-n{margin:12px 4px 0;color:var(--gold);font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;min-height:12px}
 @media (max-width:480px){.hv-book{padding:30px 18px 20px}.hv-book .booking.hvb-form{grid-template-columns:1fr}}
 html.hvb-open,html.hvb-open body{overflow:hidden}
+
+/* Título de portada: en el primer cuadro queda casi transparente y el script lo anima letra a letra; si el script no llega, aparece solo a los 2,5 s */
+.hv-js .hero h1.split{opacity:.01;animation:hvH1 .6s 2.5s forwards}
+@keyframes hvH1{to{opacity:1}}
+.reduce .hero h1.split{opacity:1;animation:none}

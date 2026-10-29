@@ -134,8 +134,10 @@ addEventListener('load',()=>(window.__hvAfterIntro||(f=>f()))(()=>{const v=docum
   let vgo=false;const go=()=>{if(vgo)return;vgo=true;v.src=v.dataset.src;v.addEventListener('playing',()=>v.classList.add('playing'),{once:true});v.play().catch(()=>{});};
   setTimeout(go,2500);['scroll','touchstart','pointerdown','keydown'].forEach(t=>addEventListener(t,()=>setTimeout(go,150),{once:true,passive:true}));}));
 
+/* Las animaciones arrancan después del primer cuadro pintado: la página se ve de inmediato y luego se anima. */
+window.hvPainted=function(f){var run=function(){requestAnimationFrame(function(){setTimeout(f,0);});};document.readyState==='loading'?addEventListener('DOMContentLoaded',run):run();};
 /* ---------- Animaciones (GSAP + Lenis), se cargan diferidas ---------- */
-addEventListener('DOMContentLoaded',()=>{
+hvPainted(()=>{
   if(!window.gsap){document.body.classList.add('reduce');return;}
   if(document.body.classList.contains('reduce'))return;
   gsap.registerPlugin(ScrollTrigger);gsap.globalTimeline.timeScale(1.5);
@@ -156,7 +158,7 @@ addEventListener('DOMContentLoaded',()=>{
   h1.setAttribute('aria-label',h1.textContent.replace(/\s+/g,' '));walk(h1);
   h1.querySelectorAll('.w').forEach(w=>w.setAttribute('aria-hidden','true'));
   document.querySelectorAll('.split:not(h1)').forEach(t=>{t.setAttribute('aria-label',t.textContent.replace(/\s+/g,' '));walk(t);t.querySelectorAll('.w').forEach(w=>w.setAttribute('aria-hidden','true'));gsap.from(t.querySelectorAll('.ch'),{rotateX:-95,yPercent:50,opacity:0,duration:1.1,ease:'expo.out',stagger:.02,scrollTrigger:{trigger:t,start:'clamp(top 85%)'}});});
-  gsap.from(h1.querySelectorAll('.ch'),{rotateX:-95,yPercent:40,opacity:0,duration:1.1,ease:'expo.out',stagger:.022,delay:.1});
+  gsap.set(h1,{opacity:1});gsap.from(h1.querySelectorAll('.ch'),{rotateX:-95,yPercent:40,opacity:0,duration:1.1,ease:'expo.out',stagger:.022,delay:.1});
   gsap.from('.hero-sub, .hero .facts, .hero .eyebrow',{y:24,opacity:0,duration:1,ease:'power3.out',stagger:.1,delay:.5});
   gsap.from('.booking',{y:40,opacity:0,duration:1.1,ease:'power3.out',delay:.8});
 
@@ -309,7 +311,7 @@ addEventListener('DOMContentLoaded',()=>{
     addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowRight')show(i+1);if(e.key==='ArrowLeft')show(i-1);});}
 })();
 
-addEventListener('DOMContentLoaded',()=>{
+hvPainted(()=>{
   if(!window.gsap||document.body.classList.contains('reduce'))return;
   // Hero de página: la foto se recoge en un marco redondeado y hace zoom suave
   const ph=document.querySelector('.ph-media');
