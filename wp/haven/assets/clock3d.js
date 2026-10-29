@@ -7,10 +7,13 @@ syncFallback();setInterval(syncFallback,15000);
 const reduce=false; // animaciones siempre activas (decisión de marca)
 
 async function start(){
+  // Sin tarjeta gráfica (3D dibujado por software) el reloj 3D congela la página: se queda el reloj plano y ni se descarga three.js.
+  if(!/[?&]hv3d=1/.test(location.search)){let soft=true;try{const g=document.createElement('canvas').getContext('webgl',{failIfMajorPerformanceCaveat:true});if(g){const x=g.getExtension('WEBGL_debug_renderer_info'),r=String(x?g.getParameter(x.UNMASKED_RENDERER_WEBGL):g.getParameter(g.RENDERER));soft=/swiftshader|llvmpipe|softpipe|software|basic render/i.test(r);const l=g.getExtension('WEBGL_lose_context');l&&l.loseContext();}}catch(e){}
+    if(soft){window.__introEnd&&window.__introEnd();return;}}
   let THREE,RoomEnvironment;
   try{THREE=await import('three');({RoomEnvironment}=await import('three/addons/environments/RoomEnvironment.js'));}catch(e){console.warn('3D no disponible',e);window.__introEnd&&window.__introEnd();return;}
   let renderer;
-  try{renderer=new THREE.WebGLRenderer({canvas:cv,antialias:innerWidth>820,alpha:true,powerPreference:'high-performance'});}catch(e){window.__introEnd&&window.__introEnd();return;}
+  try{renderer=new THREE.WebGLRenderer({canvas:cv,antialias:innerWidth>820,alpha:true,powerPreference:'high-performance',});}catch(e){window.__introEnd&&window.__introEnd();return;}
   const small=innerWidth<821,SM=small;
   renderer.setPixelRatio(Math.min(devicePixelRatio||1,small?1.25:1.75));
   renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.1;

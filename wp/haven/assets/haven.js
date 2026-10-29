@@ -164,8 +164,9 @@ addEventListener('DOMContentLoaded',()=>{
     const tl=gsap.timeline({scrollTrigger:{trigger:wt,start:'clamp(top 88%)'}});tl.from(wt.querySelectorAll('.ch'),{rotateX:-100,yPercent:60,opacity:0,ease:'expo.out',duration:1.2,stagger:.03}).from(em,{rotateX:-80,y:50,opacity:0,filter:'blur(10px)',duration:1.4,ease:'expo.out',transformOrigin:'50% 100%'},'-=.8');
     gsap.from('.gets li',{scale:.6,opacity:0,y:30,duration:.9,ease:'back.out(1.8)',stagger:.08,scrollTrigger:{trigger:'.gets',start:'clamp(top 88%)'}});
     const tr=document.querySelector('.mq-track');let x=0,dir=-1,boost=0;
-    ScrollTrigger.create({trigger:'.why',start:'top bottom',end:'bottom top',onUpdate:st=>{dir=st.direction>0?-1:1;boost=Math.min(Math.abs(st.getVelocity())/120,18);}});
-    gsap.ticker.add(()=>{const half=tr.scrollWidth/2;x+=dir*(0.6+boost);boost*=.92;if(x<=-half)x+=half;if(x>0)x-=half;tr.style.transform=`translate3d(${x}px,0,0) skewX(${dir*-boost*.6}deg)`;});
+    let mqOn=false,half=0;const mqHalf=()=>{half=tr.scrollWidth/2;};addEventListener('resize',mqHalf);
+    ScrollTrigger.create({trigger:'.why',start:'top bottom',end:'bottom top',onToggle:st=>{mqOn=st.isActive;if(mqOn)mqHalf();},onUpdate:st=>{dir=st.direction>0?-1:1;boost=Math.min(Math.abs(st.getVelocity())/120,18);}});
+    gsap.ticker.add(()=>{if(!mqOn||!half)return; /* la cinta solo se mueve cuando se ve */x+=dir*(0.6+boost);boost*=.92;if(x<=-half)x+=half;if(x>0)x-=half;tr.style.transform=`translate3d(${x}px,0,0) skewX(${dir*-boost*.6}deg)`;});
     document.querySelectorAll('.gets li').forEach(li=>{li.addEventListener('pointermove',e=>{const r=li.getBoundingClientRect();li.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`;});li.addEventListener('pointerleave',()=>{li.style.transform='';});});
   }
 
