@@ -46,6 +46,7 @@ return array(
   "Atardeceres <em>en el 11</em>" => "Sunsets <em>on the 11th</em>",
   "Hola, quiero reservar en el 360 Rooftop" => "Hello, I would like to book at 360 Rooftop",
   "Café colombiano por la mañana, cócteles de autor por la noche." => "Colombian coffee in the morning, signature cocktails at night.",
+  "Uno de los mejores cafés de Antioquia, servido en el vestíbulo de Haven." => "One of Antioquia's finest coffees, served in the Haven lobby.",
   "El <em>Swing</em>" => "The <em>Swing</em>",
   "Hola, quiero reservar en el Swing Bar" => "Hello, I would like to book at Swing Bar",
   "Rituales para recuperar el equilibrio después del viaje." => "Rituals to restore your balance after travelling.",

@@ -30,13 +30,13 @@ PROFILES = {
                               ("Friday", "07:00", "02:00"), ("Saturday", "08:00", "02:00"), ("Sunday", "08:00", "00:00")]))),
     'swing': dict(
         url='https://havenmedellin.com/swing-coffee-bar-carta/',
-        title='Carta Swing Coffee Bar · Haven Medellín',
-        desc=('Carta de Swing Coffee Bar (Swing Lounge), el café de especialidad en el vestíbulo de Haven, en Provenza, '
-              'El Poblado (Medellín): cafés, desayunos, bebidas y más. Abierto todos los días de 8 a. m. a 6 p. m.'),
-        site='Swing Coffee Bar · Haven Medellín',
+        title='Carta Swing Lounge · Café de especialidad de Antioquia · Haven Medellín',
+        desc=('Carta de Swing Lounge, en el vestíbulo de Haven en Provenza, El Poblado (Medellín): uno de los mejores cafés de '
+              'Antioquia, preparado por nuestros baristas, con desayunos, bebidas y más. Abierto todos los días de 8 a. m. a 6 p. m.'),
+        site='Swing Lounge · Haven Medellín',
         place='Swing%20Coffee%20by%20Haven', place_id='ChIJlZ8vAxMpRI4RdwqhrksS4as',
-        ld=dict(type='CafeOrCoffeeShop', name='Swing Coffee Bar', alt='Swing Coffee by Haven',
-                cuisine=["Café de especialidad", "Desayunos"], street='Calle 10A #36-29 (vestíbulo de Haven, A Design Hotel)',
+        ld=dict(type='CafeOrCoffeeShop', name='Swing Lounge', alt='Swing Coffee by Haven',
+                cuisine=["Café de especialidad de Antioquia", "Desayunos"], street='Calle 10A #36-29 (vestíbulo de Haven, A Design Hotel)',
                 hours=_hours([(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "08:00", "18:00")]))),
 }
 

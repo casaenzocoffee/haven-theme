@@ -129,14 +129,14 @@ function hv_casa_enzo() {
 		'p1' => 'Colombian specialty coffee, grown by Colombian coffee farmers and roasted in Medellín. Our first lot, Primera Luz, is a Caturra hand-picked at 1,699 meters in the mountains of Santa Elena, above the city: an artisanal micro-lot with notes of green apple, yellow fruits and sugarcane.',
 		'p2' => 'It is the coffee we serve at Haven, and you can take it home: a bag of Casa Enzo is a gift that carries the taste of origin.',
 		'facts' => array( array( 'Origin', 'Santa Elena, Medellín' ), array( 'Altitude', '1,699 m' ), array( 'Variety', 'Caturra · light honey' ), array( 'Lot', 'Artisanal micro-lot' ) ),
-		'where' => 'Enjoy it at', 'places' => array( 'Swing Coffee Bar', 'Our breakfast', 'Every room', 'To take home as a gift' ),
+		'where' => 'Enjoy it at', 'places' => array( 'Swing Lounge', 'Our breakfast', 'Every room', 'To take home as a gift' ),
 		'cta' => 'See more', 'ig' => 'Follow us', 'alt' => array( 'Casa Enzo Coffee bag, Primera Luz', 'Pouring coffee over a Chemex', 'Roasted coffee, green coffee and coffee cherries' ),
 	) : array(
 		'eb' => 'Nuestro café insignia', 'h' => 'Casa Enzo <em>Coffee</em>',
 		'p1' => 'Café de especialidad colombiano, cultivado por caficultores colombianos y tostado en Medellín. Su primer lote, Primera Luz, es un Caturra cosechado a mano a 1.699 metros en las montañas de Santa Elena, sobre la ciudad: un microlote artesanal con notas de manzana verde, frutos amarillos y caña de azúcar.',
 		'p2' => 'Es el café que servimos en Haven, y también puedes llevártelo: una bolsa de Casa Enzo es un regalo con el sabor del origen.',
 		'facts' => array( array( 'Origen', 'Santa Elena, Medellín' ), array( 'Altura', '1.699 msnm' ), array( 'Variedad', 'Caturra · honey claro' ), array( 'Lote', 'Microlote artesanal' ) ),
-		'where' => 'Lo encuentras en', 'places' => array( 'Swing Coffee Bar', 'Nuestro desayuno', 'Todas las habitaciones', 'Para llevar de regalo' ),
+		'where' => 'Lo encuentras en', 'places' => array( 'Swing Lounge', 'Nuestro desayuno', 'Todas las habitaciones', 'Para llevar de regalo' ),
 		'cta' => 'Ver más', 'ig' => 'Síguenos', 'alt' => array( 'Bolsa de Casa Enzo Coffee, Primera Luz', 'Café filtrado en Chemex', 'Café tostado, café verde y cerezas de café' ),
 	);
 	$imgs = array( $I . 'files/WhatsApp_Image_2026-10-21_at_10_16_43_AM.jpg?v=1792596874&width=1000', $I . 'articles/hf_20261024_235910_6ef4ebc1-6fc7-4975-97b4-9f50157d0c07.png?v=1792886467&width=700', $I . 'articles/hf_20261024_235944_e3420dd7-0d73-444f-81ac-9a9f38e6d61e.png?v=1792886474&width=700' );

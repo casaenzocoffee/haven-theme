@@ -163,10 +163,10 @@ function hv_img_url( $src, $size = 'full' ) {
 	return hv_href( is_string( $src ) ? $src : '' );
 }
 
-/** Nombres de marca en el texto visible: 360° Rooftop & Restaurante/Restaurant y Swing Coffee Bar. */
+/** Nombres de marca en el texto visible: 360° Rooftop & Restaurante/Restaurant y Swing Lounge (antes Swing Coffee Bar / Swing Bar; cambio del 5 nov 2026). */
 function hv_brand( $html ) {
 	$rest = hv_en() ? 'Restaurant' : 'Restaurante';
-	$html = preg_replace( '#Swing <em>Bar</em>#', 'Swing <em>Coffee Bar</em>', $html );
+	$html = preg_replace( '#Swing <em>(?:Coffee )?Bar</em>#', 'Swing <em>Lounge</em>', $html );
 	$html = preg_replace( '#360°? <em>Rooftop</em>|Rooftop <em>360°?</em>#u', '360° Rooftop <em>&amp; ' . $rest . '</em>', $html );
 	$html = preg_replace( '#(<em>&amp; )Restaurante?(</em>)#u', '${1}' . $rest . '$2', $html );
 	$parts = preg_split( '#(<script\b.*?</script>|<style\b.*?</style>|<[^>]+>)#s', $html, -1, PREG_SPLIT_DELIM_CAPTURE );
@@ -174,8 +174,8 @@ function hv_brand( $html ) {
 		$t = preg_replace( '#Rooftop 360°?#u', '360° Rooftop', $t );
 		$t = preg_replace( '#360° Rooftop (&amp;|&) Restaurante?\b#u', '360° Rooftop &amp; ' . $rest, $t );
 		$t = preg_replace( '#360° Rooftop(?! &| <em>&)(?!\s+$)#u', '360° Rooftop &amp; ' . $rest, $t );
-		$t = preg_replace( '#\bSwing Bar\b#', 'Swing Coffee Bar', $t );
-		$t = preg_replace( '#\bSwing\b(?! Coffee| Bar| Menu)(?!\s+$)#', 'Swing Coffee Bar', $t );
+		$t = preg_replace( '#\bSwing (?:Coffee )?Bar\b#', 'Swing Lounge', $t );
+		$t = preg_replace( '#\bSwing\b(?! Lounge| Coffee by| Menu|-)(?!\s+$)#', 'Swing Lounge', $t );
 		return $t;
 	};
 	foreach ( $parts as $i => $p ) {
@@ -214,7 +214,7 @@ function hv_rooms( $lang = null ) {
 
 /** Enlace de WhatsApp de reservas. */
 /** Carta digital del 360° Rooftop (subdominio propio). Se puede cambiar con el filtro hv_menu_360 o con menu_url en la página. */
-/** Carta de Swing Coffee Bar (carpeta propia en el dominio del hotel). Se puede cambiar con el filtro hv_menu_swing. */
+/** Carta de Swing Lounge (carpeta propia en el dominio del hotel). Se puede cambiar con el filtro hv_menu_swing. */
 function hv_menu_swing() { return apply_filters( 'hv_menu_swing', 'https://havenmedellin.com/swing-coffee-bar-carta/' ); }
 function hv_menu_360() { return apply_filters( 'hv_menu_360', 'https://havenmedellin.com/360-rooftop-carta/' ); }
 
