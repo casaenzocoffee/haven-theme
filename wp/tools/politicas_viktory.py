@@ -16,7 +16,7 @@ r('es', T, '<li>Está estrictamente prohibido hacer ruido o poner música a alto
 r('es', T, 'psicotrópicas en cualquier zona del hotel.</li></ul>',
   'psicotrópicas en cualquier zona del hotel.</li><li>Cada multa es de USD 100 y se carga a la cuenta del huésped. Los daños a la propiedad se cobran aparte, según su valor.</li></ul>')
 r('es', T, 'Por lo tanto, HAVEN, A DESIGN HOTEL prohíbe fumar dentro de las instalaciones y solo se permitirá fumar en la zona de la piscina Rooftop 360°. En caso de que un huésped no cumpla con esta política, se le informará del recargo correspondiente por limpieza y eliminación de humo.',
-  'Por lo tanto, HAVEN, A DESIGN HOTEL prohíbe fumar en todas sus instalaciones. Fumar dentro del hotel genera una multa de USD 100.')
+  'Por lo tanto, HAVEN, A DESIGN HOTEL prohíbe fumar en sus instalaciones. Solo se permite fumar en la zona de la piscina del piso 11, en el 360 Rooftop Bar &amp; Restaurante. Fumar en cualquier otra zona del hotel genera una multa de USD 100.')
 r('es', T, 'artículo 17 de la Ley 679 de 2011', 'artículo 17 de la Ley 679 de 2001')
 r('es', T, '<li>El número total de huéspedes no puede exceder la capacidad máxima de la habitación; estos no tendrán costo siempre y cuando los nombres de los huéspedes no cambien el mismo día del registro de entrada; de lo contrario, habrá un costo adicional de 120.000 por persona.</li>',
   '<li>El número total de huéspedes y visitantes no puede exceder la capacidad máxima de la habitación. Cada persona adicional sobre la capacidad tiene un cargo de COP 120.000 por día. Un huésped o visitante no registrado en la habitación genera una multa de USD 100 y la posible cancelación de la reserva sin reembolso.</li>')
@@ -38,7 +38,7 @@ r('en', T, 'psychotropic substances is prohibited in any area of the hotel..</li
 r('en', T, '<li>AUSENCIAS EN RESERVAS: La penalización por no presentarse será el importe total de la reserva.</li>',
   '<li>NO-SHOWS: The no-show penalty is the full amount of the reservation.</li>')
 r('en', T, 'Therefore, HAVEN, A DESIGN HOTEL prohibits smoking within the premises, and smoking is only permitted in the Rooftop 360° pool area. Guests who do not comply with this policy will be informed of the corresponding surcharge for cleaning and smoke removal.',
-  'Therefore, HAVEN, A DESIGN HOTEL does not allow smoking anywhere on the premises. Smoking inside the hotel results in a USD 100 fine.')
+  'Therefore, HAVEN, A DESIGN HOTEL does not allow smoking on its premises. Smoking is only allowed in the pool area on the 11th floor, at 360 Rooftop Bar &amp; Restaurant. Smoking anywhere else in the hotel results in a USD 100 fine.')
 r('en', T, 'article 17 of Law 679 of 2011', 'article 17 of Law 679 of 2001')
 r('en', T, '<li>The total number of guests cannot exceed the maximum capacity of the room; these will not be charged as long as the names of the guests do not change on the same day of check-in; otherwise, there will be an additional charge of 120,000 per person.</li>',
   '<li>The total number of guests and visitors cannot exceed the maximum capacity of the room. Extra person over capacity: COP 120,000 per day. Unregistered guest or visitor in the room: USD 100 fine and possible cancellation of the reservation without refund.</li>')

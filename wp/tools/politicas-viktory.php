@@ -6,7 +6,7 @@
  * Antes de cambiar guarda copia JSON en ~/hv-backups/ y el contenido anterior en _hv_data_bak.
  */
 $apply = in_array( 'aplicar', (array) ( $args ?? array() ), true );
-$C = json_decode( file_get_contents( __DIR__ . '/politicas-viktory.json' ), true );
+$C = json_decode( file_get_contents( __DIR__ . '/' . ( getenv( 'HV_POL' ) ?: 'politicas-viktory.json' ) ), true );
 $backup = array(); $total = 0; $fallas = 0;
 foreach ( array( 'terminos-y-condiciones', 'politica-de-visitantes' ) as $key ) {
 	$ids = get_posts( array( 'post_type' => 'page', 'post_status' => 'any', 'numberposts' => -1, 'fields' => 'ids', 'lang' => '', 'meta_key' => '_hv_key', 'meta_value' => $key ) );
