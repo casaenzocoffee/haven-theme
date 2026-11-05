@@ -17,8 +17,8 @@ foreach ( array( 'Suite ', 'Habitación ' ) as $w ) if ( 0 === strpos( $title, $
 if ( hv_en() && preg_match( '#^(.+) (Room|Suite)( \d+)?$#u', $name ) ) { $title = preg_replace( '#^(.+?) (Room|Suite)(.*)$#u', '$1 <em>$2$3</em>', e( $name ) ); }
 $desc0 = $r['desc'][0] ?? '';
 $sub   = mb_strlen( $desc0 ) > 150 ? mb_substr( mb_substr( $desc0, 0, 150 ), 0, mb_strrpos( mb_substr( $desc0, 0, 150 ), ' ' ) ) . '…' : $desc0;
-$cop = function_exists( 'hv_precio_desde' ) ? hv_precio_desde( hv_key(), $r['f'] ?? '' ) : 0;
-echo hv_hero( $title, $sub, ( $r['cover'] ?? '' ) ?: ( $imgs[0] ?? '' ), hv_crumbs_rooms( $name ), ( $r['kicker'] ?? '' ) ?: $cat, array_filter( array( $cop ? hv_precio_txt( $cop ) : '', $r['m2'] ?? '', $r['per'] ?? '' ) ) );
+$ptxt = function_exists( 'hv_precio_txt' ) ? hv_precio_txt( hv_key() ) : '';
+echo hv_hero( $title, $sub, ( $r['cover'] ?? '' ) ?: ( $imgs[0] ?? '' ), hv_crumbs_rooms( $name ), ( $r['kicker'] ?? '' ) ?: $cat, array_filter( array( $ptxt, $r['m2'] ?? '', $r['per'] ?? '' ) ) );
 $others = array();
 foreach ( hv_rooms() as $o ) if ( (int) $o['id'] !== hv_current_id() && ( $o['f'] ?? '' ) === ( $r['f'] ?? '' ) ) $others[] = $o;
 if ( ! $others ) foreach ( hv_rooms() as $o ) if ( (int) $o['id'] !== hv_current_id() ) $others[] = $o;

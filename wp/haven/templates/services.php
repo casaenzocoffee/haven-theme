@@ -10,6 +10,14 @@ echo hv_hero( $h['title'], $h['sub'], $h['img'], array( array( t( 'Inicio' ), hv
 ?>
 <section class="sec" id="c"><div class="wrap"><div class="sec-head" data-reveal><div><p class="eyebrow"><?php echo e( t( 'A tu medida' ) ); ?></p><h2 style="margin-top:20px"><?php echo wp_kses_post( t( 'Todo en un <em>solo lugar</em>' ) ); ?></h2></div><p><?php echo e( $intro ); ?></p></div><div class="cards">
 <?php
+// Diseño anterior (mientras el gerente aprueba el nuevo: wp option update hv_services_v2 1).
+if ( ! get_option( 'hv_services_v2' ) ) {
+	foreach ( $secs as $s ) {
+		if ( empty( $s['imgs'] ) || empty( $s['title'] ) || in_array( $s['title'], array( 'Servicios', 'Services' ), true ) ) continue;
+		echo '<article class="card"><div class="card-media">' . hv_img( $s['imgs'][0] ) . '</div><div class="card-body"><h3>' . e( $s['title'] ) . '</h3><p>' . e( $s['paras'][0] ?? ( $s['eyebrow'] ?? '' ) ) . '</p><div class="card-actions">' . hv_btn( t( 'Solicitar' ), hv_wa( t( 'Hola, quiero información sobre ' ) . $s['title'] ), 'ghost', 'servicio', true ) . '</div></div></article>';
+	}
+} else { ?>
+<?php
 // Cada servicio: nombre (antetítulo), descripción (título) y foto. En los datos migrados de Elementor la foto de cada
 // servicio quedó en la sección anterior, así que se toma de ahí (corrige fotos corridas; 5 nov 2026).
 // Menús: foto real del hotel y botón a su carta. Resto: símbolo propio de Haven (arco + ícono + sello) en vez de foto de banco.
@@ -29,5 +37,6 @@ foreach ( $secs as $s ) {
 		: hv_btn( t( 'Solicitar' ), hv_wa( t( 'Hola, quiero información sobre ' ) . $name ), 'ghost', 'servicio_' . $kind, true ) );
 	echo '<article class="card sv-card"><div class="card-media' . ( 0 === strpos( $media, '<div' ) ? ' sv-media' : '' ) . '">' . $media . '</div><div class="card-body"><p class="eyebrow">' . e( hv_en() ? 'Service' : 'Servicio' ) . '</p><h3>' . e( $name ) . '</h3><p>' . e( $desc ) . '</p><div class="card-actions">' . $btn . '</div></div></article>';
 } ?>
+<?php } ?>
 </div></div></section>
 <?php get_footer();

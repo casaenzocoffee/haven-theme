@@ -102,8 +102,8 @@ function hv_icon( $txt ) {
 function hv_room_card( $r, $hidden = false ) {
 	$chips = '';
 	foreach ( array_merge( array( $r['m2'] ?? '', $r['per'] ?? '' ), (array) ( $r['beds'] ?? array() ), array( $r['dup'] ?? '' ) ) as $x ) if ( $x ) $chips .= '<span class="chip">' . e( $x ) . '</span>';
-	$cop = function_exists( 'hv_precio_desde' ) ? hv_precio_desde( isset( $r['id'] ) ? hv_key( $r['id'] ) : ( $r['key'] ?? '' ), $r['f'] ?? '' ) : 0;
-	if ( $cop ) $chips = '<span class="chip chip-price">' . e( hv_precio_txt( $cop ) ) . '</span>' . $chips;
+	$ptxt = function_exists( 'hv_precio_txt' ) ? hv_precio_txt( isset( $r['id'] ) ? hv_key( $r['id'] ) : (string) ( $r['key'] ?? '' ) ) : '';
+	if ( $ptxt ) $chips = '<span class="chip chip-price">' . e( $ptxt ) . '</span>' . $chips;
 	$imgs = (array) ( $r['imgs'] ?? array() );
 	$im1  = ( $r['cover'] ?? '' ) ?: ( $imgs[0] ?? '' );
 	$im2  = $im1;
