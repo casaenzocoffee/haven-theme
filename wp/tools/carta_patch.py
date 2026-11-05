@@ -8,6 +8,7 @@ Es idempotente: se puede correr varias veces sin duplicar nada.
 3. "Ubicación" y "Abrir en Google Maps" van a la ficha de 360 Rooftop Bar & Restaurante en Google Maps.
 4. Botón "Horarios" en el menú y ancla #horarios (si la carta no los trae).
 5. Botón "Descubre nuestro menú" más grande en celular.
+6. En celular se ven todos los botones del menú de arriba (la carta original escondía el tercero: Ubicación en 360, Horarios en Swing).
 """
 import json, re, sys
 
@@ -58,6 +59,11 @@ EXTRA_CSS = ('/* hv: botón "Descubre nuestro menú" más grande y fácil de toc
              '.index-bar .ib-cta{height:50px;padding:0 18px 0 22px;font-size:13px;letter-spacing:.1em;gap:10px;box-shadow:0 6px 18px rgba(33,29,26,.22)}\n'
              '.index-bar .ib-cta .chev{width:15px;height:15px}\n'
              '.index-bar b{font-size:16px}\n')
+
+NAV_CSS = ('/* hv: menú completo en celular (todos los botones visibles) */\n'
+           '@media (max-width:620px){.nav-links{gap:12px}.nav-links a{font-size:10.5px;letter-spacing:.1em;white-space:nowrap}}\n'
+           '@media (max-width:370px){.nav-links{gap:9px}.nav-links a{font-size:10px;letter-spacing:.05em}}\n'
+           '@media (max-width:340px){.nav-links{gap:7px}.nav-links a{font-size:9.5px;letter-spacing:0}.lang{gap:0}.lang button{padding:6px 2px;letter-spacing:.05em}}\n')
 
 
 def drop_media_blocks(s, query):
@@ -120,6 +126,13 @@ def patch(s, name='360'):
         if k >= 0 and e >= 0:
             s = s[:e] + EXTRA_CSS + s[e:]
             log.append('boton grande')
+    # 6. todos los botones del menú en celular
+    if 'hv: menú completo' not in s:
+        s, n6 = re.subn(r'\.nav-links a:nth-child\(3\)\{display:none\}', '', s)
+        e = s.rfind('</style>', 0, s.find('</head>'))
+        if e >= 0:
+            s = s[:e] + NAV_CSS + s[e:]
+            log.append('menu completo en celular (%d)' % n6)
     return s, log
 
 
