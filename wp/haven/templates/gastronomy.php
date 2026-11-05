@@ -23,4 +23,5 @@ echo hv_editorial( t( 'Platos recomendados' ), t( 'Sabores que <em>inspiran</em>
 <?php
 echo hv_hgallery( t( 'Galería' ), t( 'Para <em>compartir</em>' ), array_merge( $imgs, array( '/wp-content/uploads/2026/06/hotel-haven-rooftop-360-gastronomy-2.webp', '/wp-content/uploads/2026/06/hotel-haven-rooftop-360-gastronomy-cocktails-1.webp', '/wp-content/uploads/2026/06/hotel-haven-rooftop-360-gastronomy-cocktails-2.webp' ) ) );
 echo hv_bigq( '360° Rooftop', t( 'Déjese llevar por un viaje culinario inolvidable mientras disfruta de las vistas.' ) );
+if ( ! empty( $d['more'] ) && function_exists( 'hv_render_blocks' ) ) hv_render_blocks( (array) $d['more'], array( 'crumb' => t( 'Gastronomía' ), 'n' => 1 ) ); // bloques extra (5 nov)
 get_footer();

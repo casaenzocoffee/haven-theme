@@ -18,3 +18,9 @@ Es el diseño del prototipo hecho tema de WordPress. Usa las mismas URLs, Polyla
 
 ## Importar o actualizar el contenido inicial
 Herramientas → **Haven (contenido)**. Primero haz *Solo prueba* y después ejecútalo de verdad. Por WP-CLI: `wp haven import [--dry-run] [--create] [--force] [--seo]`.
+
+## Bloques extra ("more") y planes (5 nov 2026)
+- Cualquier página Haven (Swing, Wellness, Gastronomía, Servicios, el quiz) puede llevar en `_hv_data` la clave `more`: una lista de bloques como los de las landings (`text` con `sub`/`h3`, `rooms`, `faq`, `links`, `cta`). Se dibujan al final con `hv_render_blocks()` (`inc/seo-fix.php`) y los `faq` salen también como FAQPage.
+- Los textos de esos bloques están en `wp/tools/seo-content/more.json` (se generan con `more_build.py`); `seo-content.php aplicar` los vuelve a poner.
+- Portada: `{{sc:haven_planes}}` muestra "Planes en Haven". Pie: bloque `.foot-plans` con 10 enlaces a las páginas por intención y la guía.
+- hreflang `x-default` en todas las páginas (filtro `pll_rel_hreflang_attributes`).

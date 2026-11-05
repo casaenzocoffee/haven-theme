@@ -140,6 +140,21 @@ foreach ( (array) ( $blog['new'] ?? array() ) as $np ) {
 }
 if ( $apply && function_exists( 'pll_save_post_translations' ) ) foreach ( $newpairs as $p ) if ( ! empty( $p['es'] ) && ! empty( $p['en'] ) && ! pll_get_post( $p['es'], 'en' ) ) pll_save_post_translations( array( 'es' => $p['es'], 'en' => $p['en'] ) );
 
+/* 4. Bloques extra ("more") de Swing, Wellness, Gastronomía, Servicios y el quiz (5 nov, tarde): solo cambia la clave "more". */
+foreach ( (array) $load( 'more.json' ) as $key => $pg ) {
+	foreach ( array( 'es', 'en' ) as $lang ) {
+		if ( empty( $pg[ $lang ] ) ) continue;
+		$id = $find( $key, $lang );
+		if ( ! $id ) { $log( "! more $key [$lang]: no existe" ); continue; }
+		$log( "~ more $key [$lang]: #$id · " . count( $pg[ $lang ] ) . ' bloques' );
+		if ( ! $apply ) continue;
+		$remember( $id );
+		list( $raw, $old ) = $get_data( $id );
+		$old['more'] = $pg[ $lang ];
+		$put_data( $id, $old, $raw );
+	}
+}
+
 if ( $apply ) {
 	delete_transient( 'hv_urlmap' );
 	$f = getenv( 'HOME' ) . '/hv-backups/seo-content-antes-' . gmdate( 'Ymd-His' ) . '.json';

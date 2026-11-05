@@ -35,4 +35,5 @@ foreach ( $secs as $s ) {
 	if ( 0 === $n && count( $all ) >= 5 ) echo hv_hgallery( t( 'Galería' ), $d['gal_title'] ?? '', array_slice( $all, 0, 10 ) );
 	$n++;
 }
+if ( ! empty( $d['more'] ) && function_exists( 'hv_render_blocks' ) ) hv_render_blocks( (array) $d['more'], array( 'crumb' => $crumb, 'n' => 1 ) ); // bloques extra (5 nov)
 get_footer();

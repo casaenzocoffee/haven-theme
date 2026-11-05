@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
 /** Nombres legibles de los campos. */
 function hv_field_label( $k ) {
 	$L = array(
-		'h1' => 'Título principal (usa <em>…</em> para la parte en cursiva)', 'title_html' => 'Título (usa <em>…</em> para la cursiva)', 'title' => 'Título', 'sub' => 'Subtítulo',
+		'h1' => 'Título principal (usa <em>…</em> para la parte en cursiva)', 'title_html' => 'Título (usa <em>…</em> para la cursiva)', 'title' => 'Título',
 		'img' => 'Imagen', 'imgs' => 'Imágenes', 'cover' => 'Imagen de portada', 'first_img' => 'Imagen del primer bloque', 'crumb' => 'Nombre en la ruta (migas)',
 		'gal_title' => 'Título de la galería', 'wa' => 'Mensaje de WhatsApp', 'sections' => 'Bloques', 'eyebrow' => 'Antetítulo', 'paras' => 'Párrafos', 'btns' => 'Botones',
 		't' => 'Texto', 'href' => 'Enlace (URL, page:clave o theme:ruta)', 'ext' => 'Abrir en otra pestaña', 'lists' => 'Listas', 'intro' => 'Introducción', 'items' => 'Elementos',
@@ -17,7 +17,7 @@ function hv_field_label( $k ) {
 		'note' => 'Nota', 'prose' => 'Texto (HTML)', 'casa_enzo' => 'Mostrar sección Casa Enzo Coffee', 'cat' => 'Categoría', 'f' => 'Filtro (penthouse, presidencial, suites, habitaciones)',
 		'kicker' => 'Antetítulo', 'm2' => 'Área', 'per' => 'Personas', 'beds' => 'Camas', 'dup' => 'Dúplex', 'amen' => 'Comodidades', 'desc' => 'Descripción', 'serv' => 'Servicios',
 		'slug_es' => 'Slug (español)', 'slug' => 'Slug', 'date' => 'Fecha visible', 'ex' => 'Resumen', 'published' => 'Fecha de publicación', 'modified' => 'Fecha de modificación',
-		'hero' => 'Encabezado', 'tags' => 'Etiquetas', 'menu_url' => 'Menú digital (URL)', 'table_url' => 'Reservar mesa (URL)', 'form_shortcode' => 'Shortcode de formulario (opcional)',
+		'hero' => 'Encabezado', 'tags' => 'Etiquetas', 'menu_url' => 'Menú digital (URL)', 'table_url' => 'Reservar mesa (URL)', 'more' => 'Más contenido (bloques: text, rooms, faq, links, cta)', 'type' => 'Tipo de bloque', 'keys' => 'Claves de páginas o habitaciones', 'sub' => 'Subtítulo', 'form_shortcode' => 'Shortcode de formulario (opcional)',
 	);
 	return $L[ $k ] ?? ucfirst( str_replace( '_', ' ', (string) $k ) );
 }

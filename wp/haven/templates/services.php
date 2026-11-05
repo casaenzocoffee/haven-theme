@@ -39,4 +39,5 @@ foreach ( $secs as $s ) {
 } ?>
 <?php } ?>
 </div></div></section>
-<?php get_footer();
+<?php if ( ! empty( $d['more'] ) && function_exists( 'hv_render_blocks' ) ) hv_render_blocks( (array) $d['more'], array( 'crumb' => get_the_title(), 'n' => 1 ) ); // bloques extra (5 nov)
+get_footer();

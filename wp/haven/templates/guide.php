@@ -15,4 +15,5 @@ if ( ! $quiz && function_exists( 'hv_links_index' ) ) {
 	$en = hv_en();
 	echo hv_links_index( $en ? 'The guide, topic by topic' : 'La guía, tema por tema', $en ? 'Plan your trip <em>by topic</em>' : 'Arme su viaje <em>por temas</em>', array_values( array_filter( hv_landing_keys(), function ( $k ) { return 0 === strpos( $k, 'guia-' ); } ) ), ( ( $en ? 'Updated ' : 'Actualizada el ' ) . hv_fecha( strtotime( get_the_modified_date( 'Y-m-d' ) ), $en ) ) . ( $en ? ' · By the Haven concierge' : ' · Por el Concierge de Haven' ) );
 }
+if ( ! empty( $d['more'] ) && function_exists( 'hv_render_blocks' ) ) hv_render_blocks( (array) $d['more'], array( 'crumb' => get_the_title(), 'n' => 1 ) ); // bloques extra (5 nov)
 get_footer();
