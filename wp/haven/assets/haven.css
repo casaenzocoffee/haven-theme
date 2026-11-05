@@ -778,3 +778,7 @@ html.hvb-open,html.hvb-open body{overflow:hidden}
 .sv-card .card-body .eyebrow{margin-bottom:10px}
 .sv-card .card-body h3{font-size:clamp(24px,2vw,30px)}
 @keyframes svspin{to{transform:rotate(360deg)}}
+
+/* Preguntas frecuentes de la portada */
+.fq-home{position:relative;z-index:2}
+.fq-more{margin-top:44px;display:flex;gap:10px;flex-wrap:wrap}
