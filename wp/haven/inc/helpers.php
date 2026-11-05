@@ -319,6 +319,11 @@ add_action( 'wp_enqueue_scripts', function () {
 		wp_enqueue_style( 'haven-theme-guia', hv_asset( 'haven-guia.css' ), array( 'haven' ), null );
 	}
 }, 30 );
+/* En la portada el mapa está muy abajo: sus estilos cargan sin bloquear el primer pintado (con respaldo sin JS). */
+add_filter( 'style_loader_tag', function ( $tag, $handle ) {
+	if ( 'haven-theme-guia' !== $handle || 'home' !== hv_template_key() || false !== strpos( $tag, 'onload=' ) ) return $tag;
+	return str_replace( "media='all'", "media='print' onload=\"this.media='all'\"", $tag ) . '<noscript>' . $tag . '</noscript>';
+}, 10, 2 );
 add_action( 'wp_footer', function () {
 	$mods = $GLOBALS['hv_guia_mods'] ?? array();
 	if ( ! $mods ) return;
