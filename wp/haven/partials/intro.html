@@ -10,8 +10,10 @@ var m=matchMedia('(max-width: 820px)').matches; /* celulares: apertura corta */
 var soft=false;if(!seen&&!/[?&]hv3d=1/.test(location.search)){soft=true;try{var g=document.createElement('canvas').getContext('webgl',{failIfMajorPerformanceCaveat:true});if(g){var x=g.getExtension('WEBGL_debug_renderer_info');soft=/swiftshader|llvmpipe|softpipe|software|basic render/i.test(String(x?g.getParameter(x.UNMASKED_RENDERER_WEBGL):g.getParameter(g.RENDERER)));var lc=g.getExtension('WEBGL_lose_context');lc&&lc.loseContext();}}catch(e){}window.__hvSoftGL=soft;if(soft)seen=true;}
 if(seen){el.remove();window.__hvAfterIntro=function(f){f()};return;}
 document.documentElement.classList.add('intro-on');
+/* Celular con apertura: pedir ya el 3D (en computador se precarga desde el <head>) para que el reloj llegue a tiempo */
+if(m){try{var im=JSON.parse(document.querySelector('script[type=importmap]').textContent).imports;[im['three'],im['three/addons/environments/RoomEnvironment.js']].forEach(function(u){if(!u)return;var l=document.createElement('link');l.rel='modulepreload';l.href=u;l.crossOrigin='anonymous';document.head.appendChild(l);});}catch(e){}}
 var q=[];window.__hvAfterIntro=function(f){q?q.push(f):f();};var flush=function(){var a=q;q=null;(a||[]).forEach(function(f){try{f()}catch(e){}});};
 window.__introEnd=function(){if(!el.isConnected)return;el.classList.add('out');document.documentElement.classList.remove('intro-on');try{sessionStorage.setItem('hv-intro','1')}catch(e){}setTimeout(function(){el.remove();flush();},m?450:900);};
-setTimeout(function(){if(!window.__introTakeover)window.__introEnd()},m?1800:3200);setTimeout(function(){window.__introEnd()},m?4200:8000);
+setTimeout(function(){if(!window.__introTakeover)window.__introEnd()},m?3000:3200);setTimeout(function(){window.__introEnd()},m?6000:8000);
 ['wheel','touchstart','keydown','click'].forEach(function(t){addEventListener(t,function(){window.__introSkip=1;},{once:true,passive:true});});})();</script>
 

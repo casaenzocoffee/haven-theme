@@ -27,7 +27,7 @@ def links(s):
         return 'href="{{url:' + k + '}}"'
     s = re.sub(r'href="(/e[sn]/[^"#]*)"', rep, s)
     s = re.sub(r'\{\{R\}\}(media/[\w.-]+)', r'{{asset:\1}}', s)
-    s = s.replace('<!--HG:mapa-->', '{{sc:haven_mapa}}')
+    s = s.replace('<!--HG:mapa-->', '{{sc:haven_mapa}}').replace('<!--HG:resenas-->', '{{sc:haven_resenas}}')
     return s
 def textify(s, store):
     """Reemplaza textos visibles e imágenes por marcadores numerados."""

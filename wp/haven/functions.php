@@ -13,6 +13,7 @@ define( 'HAVEN_URI', get_template_directory_uri() );
 require HAVEN_DIR . '/inc/helpers.php';
 require HAVEN_DIR . '/inc/components.php';
 require HAVEN_DIR . '/inc/partials.php';
+require HAVEN_DIR . '/inc/resenas.php';
 require HAVEN_DIR . '/inc/setup.php';
 require HAVEN_DIR . '/inc/router.php';
 require HAVEN_DIR . '/inc/seo.php';
