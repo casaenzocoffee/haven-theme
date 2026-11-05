@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Aplica a una carta nueva (carta360/index.html) los ajustes del sitio del hotel.
-Uso: python3 carta_patch.py ruta/a/index.html
+Uso: python3 carta_patch.py ruta/a/index.html [360|swing]   (por defecto 360)
 Es idempotente: se puede correr varias veces sin duplicar nada.
 
 1. Nombre, descripción, canonical, Open Graph y datos de restaurante para Google.
@@ -11,25 +11,48 @@ Es idempotente: se puede correr varias veces sin duplicar nada.
 """
 import json, re, sys
 
-URL = 'https://havenmedellin.com/360-rooftop-carta/'
-TITLE = 'Carta 360 Rooftop Bar & Restaurante · Medellín'
-DESC = ('Carta del 360 Rooftop Bar & Restaurante en el piso 11 de Haven, en Provenza, El Poblado (Medellín): '
-        'desayunos, platos fuertes, hamburguesas, pizzas, postres, cócteles, vinos y más.')
-MAPS = ('https://www.google.com/maps/search/?api=1&amp;query=360%20Rooftop%20Bar%20%26%20Restaurante%2C%20Calle%2010A'
-        '%20%2336-29%2C%20Medell%C3%ADn&amp;query_place_id=ChIJkWmO1w4pRI4RJ_Ez8Fw5es8')
-LD = {"@context": "https://schema.org", "@type": "Restaurant", "name": "360 Rooftop Bar & Restaurante",
-      "alternateName": "360 Rooftop Medellín", "url": URL, "image": URL + "img/hero_poster.webp",
-      "servesCuisine": ["Internacional", "Colombiana", "Cócteles"], "hasMenu": URL, "acceptsReservations": "True",
-      "telephone": "+57 312 6273647",
-      "address": {"@type": "PostalAddress", "streetAddress": "Calle 10A #36-29, piso 11 (Haven, A Design Hotel)",
-                  "addressLocality": "Medellín", "addressRegion": "Antioquia", "addressCountry": "CO"},
-      "containedInPlace": {"@type": "Hotel", "name": "Haven, A Design Hotel", "url": "https://havenmedellin.com/"},
-      "openingHoursSpecification": [
-          {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday"], "opens": "07:00", "closes": "23:00"},
-          {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "07:00", "closes": "00:00"},
-          {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "07:00", "closes": "02:00"},
-          {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "02:00"},
-          {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "00:00"}]}
+def _hours(spec):
+    return [{"@type": "OpeningHoursSpecification", "dayOfWeek": d, "opens": o, "closes": c} for d, o, c in spec]
+
+ADDR = {"@type": "PostalAddress", "addressLocality": "Medellín", "addressRegion": "Antioquia", "addressCountry": "CO"}
+HOTEL = {"@type": "Hotel", "name": "Haven, A Design Hotel", "url": "https://havenmedellin.com/"}
+PROFILES = {
+    '360': dict(
+        url='https://havenmedellin.com/360-rooftop-carta/',
+        title='Carta 360 Rooftop Bar & Restaurante · Medellín',
+        desc=('Carta del 360 Rooftop Bar & Restaurante en el piso 11 de Haven, en Provenza, El Poblado (Medellín): '
+              'desayunos, platos fuertes, hamburguesas, pizzas, postres, cócteles, vinos y más.'),
+        site='360 Rooftop · Haven Medellín',
+        place='360%20Rooftop%20Bar%20%26%20Restaurante', place_id='ChIJkWmO1w4pRI4RJ_Ez8Fw5es8',
+        ld=dict(type='Restaurant', name='360 Rooftop Bar & Restaurante', alt='360 Rooftop Medellín',
+                cuisine=["Internacional", "Colombiana", "Cócteles"], street='Calle 10A #36-29, piso 11 (Haven, A Design Hotel)',
+                hours=_hours([(["Monday", "Tuesday", "Wednesday"], "07:00", "23:00"), ("Thursday", "07:00", "00:00"),
+                              ("Friday", "07:00", "02:00"), ("Saturday", "08:00", "02:00"), ("Sunday", "08:00", "00:00")]))),
+    'swing': dict(
+        url='https://havenmedellin.com/swing-coffee-bar-carta/',
+        title='Carta Swing Coffee Bar · Haven Medellín',
+        desc=('Carta de Swing Coffee Bar (Swing Lounge), el café de especialidad en el vestíbulo de Haven, en Provenza, '
+              'El Poblado (Medellín): cafés, desayunos, bebidas y más. Abierto todos los días de 8 a. m. a 6 p. m.'),
+        site='Swing Coffee Bar · Haven Medellín',
+        place='Swing%20Coffee%20by%20Haven', place_id='ChIJlZ8vAxMpRI4RdwqhrksS4as',
+        ld=dict(type='CafeOrCoffeeShop', name='Swing Coffee Bar', alt='Swing Coffee by Haven',
+                cuisine=["Café de especialidad", "Desayunos"], street='Calle 10A #36-29 (vestíbulo de Haven, A Design Hotel)',
+                hours=_hours([(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "08:00", "18:00")]))),
+}
+
+
+def profile(name):
+    P = PROFILES[name]
+    U = P['url']; L = P['ld']
+    ld = {"@context": "https://schema.org", "@type": L['type'], "name": L['name'], "alternateName": L['alt'], "url": U,
+          "image": U + "img/hero_poster.webp", "servesCuisine": L['cuisine'], "hasMenu": U, "telephone": "+57 312 6273647",
+          "address": dict(ADDR, streetAddress=L['street']), "containedInPlace": HOTEL, "openingHoursSpecification": L['hours']}
+    if L['type'] == 'Restaurant': ld["acceptsReservations"] = "True"
+    maps = ('https://www.google.com/maps/search/?api=1&amp;query=' + P['place'] + '%2C%20Calle%2010A%20%2336-29%2C%20Medell%C3%ADn'
+            '&amp;query_place_id=' + P['place_id'])
+    return U, P['title'], P['desc'], P['site'], maps, ld
+
+
 EXTRA_CSS = ('/* hv: botón "Descubre nuestro menú" más grande y fácil de tocar en celular */\n'
              '.index-bar{height:70px}\n'
              '.index-bar .ib-cta{height:50px;padding:0 18px 0 22px;font-size:13px;letter-spacing:.1em;gap:10px;box-shadow:0 6px 18px rgba(33,29,26,.22)}\n'
@@ -53,7 +76,8 @@ def drop_media_blocks(s, query):
     return ''.join(out)
 
 
-def patch(s):
+def patch(s, name='360'):
+    URL, TITLE, DESC, SITE, MAPS, LD = profile(name)
     log = []
     # 1. SEO
     if 'hv-seo' not in s:
@@ -61,7 +85,7 @@ def patch(s):
         t = TITLE.replace('&', '&amp;')
         head = ('<meta name="hv-seo" content="1"><title>' + t + '</title>'
                 '<meta name="description" content="' + DESC + '"><link rel="canonical" href="' + URL + '">'
-                '<meta property="og:type" content="restaurant.menu"><meta property="og:site_name" content="360 Rooftop · Haven Medellín">'
+                '<meta property="og:type" content="restaurant.menu"><meta property="og:site_name" content="' + SITE + '">'
                 '<meta property="og:title" content="' + t + '"><meta property="og:description" content="' + DESC + '">'
                 '<meta property="og:url" content="' + URL + '"><meta property="og:image" content="' + URL + 'img/hero_poster.webp">'
                 '<meta name="twitter:card" content="summary_large_image">'
@@ -78,7 +102,7 @@ def patch(s):
     if n0: log.append('reduce-motion x%d' % n0)
     # 3. Google Maps
     s, n1 = re.subn(r'<a href="#casa" data-t="nav_ubi">', '<a href="' + MAPS + '" target="_blank" rel="noopener" data-t="nav_ubi">', s)
-    s, n2 = re.subn(r'https://www\.google\.com/maps/search/\?api=1&amp;query=Haven[^"]*', MAPS, s)
+    s, n2 = re.subn(r'https://www\.google\.com/maps/search/\?api=1&amp;query=Haven[^"]*', lambda m: MAPS, s)
     if n1 or n2: log.append('maps %d+%d' % (n1, n2))
     # 4. Horarios
     if 'data-t="nav_hor"' not in s:
@@ -102,6 +126,6 @@ def patch(s):
 if __name__ == '__main__':
     p = sys.argv[1]
     s = open(p, encoding='utf-8').read()
-    s, log = patch(s)
+    s, log = patch(s, sys.argv[2] if len(sys.argv) > 2 else '360')
     open(p, 'w', encoding='utf-8').write(s)
     print('ajustes:', ', '.join(log) or 'ninguno (ya estaba)')
