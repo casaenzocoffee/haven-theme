@@ -1,0 +1,198 @@
+<?php
+/**
+ * Ajustes de la auditoría SEO del 5 nov 2026 (semana 1).
+ * - Redirecciones 301: Duke 206 (plantilla vieja) -> Habitación Duke; Presidencial (categoría con una sola suite) -> Suite Presidencial.
+ * - Sin indexar: archivos de autor (redirigen al blog), categoría "sin categoría" y la oferta DEAL10; fuera del mapa del sitio.
+ * - Open Graph: título = título SEO de la página (no "Inicio"), idioma es_CO / en_US, nombre del sitio.
+ * - Datos estructurados: Hotel completo (precio, estrellas, horarios, habitaciones, 360° y Swing Lounge),
+ *   Restaurant en la página del 360° y Event (fiesta del primer viernes) en Eventos.
+ * - Texto alternativo de las fotos de la portada que no tenían (ES/EN).
+ */
+defined( 'ABSPATH' ) || exit;
+
+/** Páginas viejas -> clave Haven de destino. */
+function hv_seo_redirects() {
+	return array(
+		'habitacion-duke-206' => 'room-habitacion-duke',
+		'duke-room-206'       => 'room-habitacion-duke',
+		'presidencial'        => 'room-suite-presidential',
+		'presidential'        => 'room-suite-presidential',
+	);
+}
+function hv_seo_noindex_slugs() { return array( 'deal10' ); }
+
+/** IDs de páginas por slug (cualquier idioma), con caché de un día. */
+function hv_seo_ids( $slugs ) {
+	$k = 'hv_seo_ids_' . md5( implode( ',', $slugs ) );
+	$ids = get_transient( $k );
+	if ( false === $ids ) {
+		$ids = array();
+		foreach ( $slugs as $s ) foreach ( get_posts( array( 'name' => $s, 'post_type' => 'page', 'post_status' => 'publish', 'numberposts' => 5, 'fields' => 'ids', 'lang' => '' ) ) as $id ) $ids[] = (int) $id;
+		set_transient( $k, $ids, DAY_IN_SECONDS );
+	}
+	return $ids;
+}
+
+add_action( 'template_redirect', function () {
+	if ( is_author() ) { wp_safe_redirect( function_exists( 'pll_home_url' ) ? pll_home_url() : home_url( '/' ), 301 ); exit; }
+	if ( ! is_page() ) return;
+	$slug = get_post_field( 'post_name', get_queried_object_id() );
+	$map = hv_seo_redirects();
+	if ( isset( $map[ $slug ] ) ) {
+		$lang = function_exists( 'pll_get_post_language' ) ? pll_get_post_language( get_queried_object_id() ) : null;
+		$to = hv_url( $map[ $slug ], $lang ?: null );
+		if ( $to && untrailingslashit( $to ) !== untrailingslashit( get_permalink( get_queried_object_id() ) ) ) { wp_safe_redirect( $to, 301 ); exit; }
+	}
+}, 1 );
+
+/** Los enlaces internos van directo al destino (sin pasar por la redirección). */
+add_filter( 'hv_url_key', function ( $key ) { return 'presidencial' === $key ? 'room-suite-presidential' : $key; } );
+
+/* ---------- Indexación ---------- */
+add_filter( 'wpseo_robots', function ( $r ) {
+	if ( is_author() || is_category( array( 'sin-categoria-es', 'sin-categoria', 'uncategorized' ) ) ) return 'noindex, follow';
+	if ( is_page() && in_array( get_post_field( 'post_name', get_queried_object_id() ), hv_seo_noindex_slugs(), true ) ) return 'noindex, follow';
+	return $r;
+} );
+add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', function ( $ids ) {
+	return array_merge( (array) $ids, hv_seo_ids( array_merge( array_keys( hv_seo_redirects() ), hv_seo_noindex_slugs() ) ) );
+} );
+add_filter( 'wpseo_sitemap_exclude_author', '__return_empty_array' );
+add_filter( 'wpseo_exclude_from_sitemap_by_term_ids', function ( $ids ) {
+	foreach ( array( 'sin-categoria-es', 'sin-categoria', 'uncategorized' ) as $s ) { $t = get_term_by( 'slug', $s, 'category' ); if ( $t ) $ids[] = (int) $t->term_id; }
+	return $ids;
+} );
+
+/* ---------- Open Graph ---------- */
+function hv_seo_title_now() {
+	if ( function_exists( 'YoastSEO' ) ) { try { $t = YoastSEO()->meta->for_current_page()->title; if ( $t ) return $t; } catch ( \Throwable $e ) {} }
+	return wp_get_document_title();
+}
+foreach ( array( 'wpseo_opengraph_title', 'wpseo_twitter_title' ) as $f ) {
+	add_filter( $f, function ( $t ) {
+		$seo = hv_seo_title_now();
+		// Yoast deja el título interno de la página ("Inicio", "Presidencial"…) cuando no hay uno social: se usa el título SEO.
+		return ( ! $t || ( $seo && mb_strlen( $t ) < 30 && false === strpos( $t, '|' ) ) ) ? $seo : $t;
+	} );
+}
+add_filter( 'wpseo_og_locale', function () { return hv_en() ? 'en_US' : 'es_CO'; } );
+add_filter( 'wpseo_opengraph_site_name', function () { return 'Haven, A Design Hotel'; } );
+
+/** Nombre viejo del Swing en descripciones que salen de la base de datos (meta y datos estructurados de Yoast). */
+function hv_seo_brand( $s ) { return is_string( $s ) ? preg_replace( '/\bSwing (?:Coffee )?Bar\b/', 'Swing Lounge', $s ) : $s; }
+foreach ( array( 'wpseo_metadesc', 'wpseo_opengraph_desc', 'wpseo_twitter_description', 'wpseo_title', 'wpseo_opengraph_title' ) as $f ) add_filter( $f, 'hv_seo_brand', 99 );
+add_filter( 'wpseo_schema_webpage', function ( $d ) { if ( isset( $d['description'] ) ) $d['description'] = hv_seo_brand( $d['description'] ); if ( isset( $d['name'] ) ) $d['name'] = hv_seo_brand( $d['name'] ); return $d; } );
+add_filter( 'wpseo_schema_website', function ( $d ) { $d['name'] = 'Haven, A Design Hotel'; if ( isset( $d['description'] ) && in_array( trim( $d['description'] ), array( 'Hotel', '' ), true ) ) $d['description'] = hv_en() ? 'Design hotel in El Poblado, Medellín' : 'Hotel de diseño en El Poblado, Medellín'; return $d; } );
+
+/* ---------- Datos estructurados ---------- */
+function hv_seo_rooftop_schema() {
+	$h = function ( $d, $o, $c ) { return array( '@type' => 'OpeningHoursSpecification', 'dayOfWeek' => $d, 'opens' => $o, 'closes' => $c ); };
+	return array(
+		'@type' => 'Restaurant', '@id' => home_url( '/#rooftop' ), 'name' => '360 Rooftop Bar & Restaurante', 'alternateName' => '360° Rooftop Haven',
+		'url' => hv_url( 'rooftop' ), 'hasMenu' => 'https://havenmedellin.com/360-rooftop-carta/', 'telephone' => '+57 312 6273647',
+		'servesCuisine' => array( 'Internacional', 'Colombiana', 'Cócteles' ), 'priceRange' => '$$',
+		'image' => home_url( '/wp-content/uploads/2026/06/piscina-rooftop.webp' ),
+		'address' => array( '@type' => 'PostalAddress', 'streetAddress' => 'Calle 10A #36-29, piso 11', 'addressLocality' => 'Medellín', 'addressRegion' => 'Antioquia', 'addressCountry' => 'CO' ),
+		'openingHoursSpecification' => array( $h( array( 'Monday', 'Tuesday', 'Wednesday' ), '07:00', '23:00' ), $h( 'Thursday', '07:00', '00:00' ), $h( 'Friday', '07:00', '02:00' ), $h( 'Saturday', '08:00', '02:00' ), $h( 'Sunday', '08:00', '00:00' ) ),
+		'amenityFeature' => array( array( '@type' => 'LocationFeatureSpecification', 'name' => hv_en() ? 'Rooftop pool' : 'Piscina en la terraza', 'value' => true ) ),
+		'acceptsReservations' => 'True',
+	);
+}
+function hv_seo_swing_schema() {
+	return array(
+		'@type' => 'CafeOrCoffeeShop', '@id' => home_url( '/#swing' ), 'name' => 'Swing Lounge', 'alternateName' => 'Swing Coffee by Haven', 'url' => hv_url( 'swing' ),
+		'hasMenu' => 'https://havenmedellin.com/swing-coffee-bar-carta/', 'servesCuisine' => array( hv_en() ? 'Antioquian specialty coffee' : 'Café de especialidad de Antioquia' ),
+		'openingHoursSpecification' => array( array( '@type' => 'OpeningHoursSpecification', 'dayOfWeek' => array( 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ), 'opens' => '08:00', 'closes' => '18:00' ) ),
+	);
+}
+add_filter( 'hv_hotel_schema', function ( $s ) {
+	$en = hv_en();
+	$s['description'] = $en ? 'Design hotel in El Poblado, Medellín: 37 rooms and suites (many with jacuzzi), 360° Rooftop & Restaurant with pool, Swing Lounge and wellness, 2 minutes from Provenza.'
+		: 'Hotel de diseño en El Poblado, Medellín: 37 habitaciones y suites (muchas con jacuzzi), 360° Rooftop & Restaurante con piscina, Swing Lounge y wellness, a 2 minutos de Provenza.';
+	$s['priceRange']    = '$$$';
+	$s['starRating']    = array( '@type' => 'Rating', 'ratingValue' => '4' );
+	$s['checkinTime']   = '15:00';
+	$s['checkoutTime']  = '11:00';
+	$s['numberOfRooms'] = 37;
+	$s['petsAllowed']   = true;
+	$s['currenciesAccepted'] = 'COP, USD';
+	$s['containsPlace'] = array( hv_seo_rooftop_schema(), hv_seo_swing_schema() );
+	return $s;
+} );
+add_action( 'wp_head', function () {
+	$k = hv_key();
+	if ( 'rooftop' === $k ) hv_ld( array( '@context' => 'https://schema.org' ) + hv_seo_rooftop_schema() );
+	if ( 'swing' === $k ) hv_ld( array( '@context' => 'https://schema.org' ) + hv_seo_swing_schema() );
+	if ( 'eventos' === $k ) {
+		// Fiesta del primer viernes de cada mes (página Eventos): las dos próximas fechas.
+		$ev = array();
+		$tz = new DateTimeZone( 'America/Bogota' );
+		$today = ( new DateTime( 'now', $tz ) )->format( 'Y-m-d' );
+		for ( $i = 0; $i < 3 && count( $ev ) < 2; $i++ ) {
+			$m = new DateTime( 'first day of this month', $tz ); $m->modify( "+$i month" );
+			$d = new DateTime( 'first friday of ' . $m->format( 'F Y' ), $tz );
+			if ( $d->format( 'Y-m-d' ) < $today ) continue;
+			$ev[] = array(
+				'@context' => 'https://schema.org', '@type' => 'Event',
+				'name' => hv_en() ? 'First-Friday party at 360° Rooftop' : 'Fiesta del primer viernes en el 360° Rooftop',
+				'description' => hv_en() ? 'Live DJ, music and a night with the best view of Medellín, every first Friday of the month at Haven’s 360° Rooftop.' : 'DJ en vivo, música y una noche con la mejor vista de Medellín, el primer viernes de cada mes en el 360° Rooftop de Haven.',
+				'startDate' => $d->format( 'Y-m-d' ), 'eventStatus' => 'https://schema.org/EventScheduled', 'eventAttendanceMode' => 'https://schema.org/OfflineEventAttendanceMode',
+				'image' => array( home_url( '/wp-content/uploads/2026/06/fiesta-1.webp' ) ),
+				'location' => array( '@type' => 'Place', 'name' => '360° Rooftop · Haven, A Design Hotel', 'address' => array( '@type' => 'PostalAddress', 'streetAddress' => 'Calle 10A #36-29, piso 11', 'addressLocality' => 'Medellín', 'addressRegion' => 'Antioquia', 'addressCountry' => 'CO' ) ),
+				'organizer' => array( '@type' => 'Organization', 'name' => 'Haven, A Design Hotel', 'url' => hv_url( 'home' ) ),
+			);
+		}
+		foreach ( $ev as $e ) hv_ld( $e );
+	}
+}, 6 );
+
+/* ---------- Texto alternativo de la portada ---------- */
+function hv_seo_alts() {
+	$a = array(
+		'hotel-haven-medellin' => array( 'Edificio de Haven, A Design Hotel en El Poblado, Medellín', 'Haven, A Design Hotel building in El Poblado, Medellín' ),
+		'hotel-haven-rooftop-360-with-friends' => array( 'Amigos en el 360° Rooftop de Haven con vista a Medellín', 'Friends at Haven’s 360° Rooftop overlooking Medellín' ),
+		'hotel-haven-rooftop-360-gastronomy-cocktails' => array( 'Cócteles y platos del 360° Rooftop & Restaurante de Haven', 'Cocktails and dishes at Haven’s 360° Rooftop & Restaurant' ),
+		'presidential-suite-room-bed' => array( 'Cama de la Suite Presidencial de Haven, El Poblado', 'Presidential Suite bed at Haven, El Poblado' ),
+		'presidential-suite-room-jacuzzi-lounge-area' => array( 'Suite Presidencial de Haven con jacuzzi y sala, El Poblado', 'Haven Presidential Suite with jacuzzi and lounge, El Poblado' ),
+		'presidential-suite-room-balcony' => array( 'Balcón de la Suite Presidencial con vista a El Poblado', 'Presidential Suite balcony overlooking El Poblado' ),
+		'emperor-phenthouse-901-room-jacuzzi' => array( 'Jacuzzi del penthouse Emperor 901 de Haven en Medellín', 'Jacuzzi in Haven’s Emperor 901 penthouse, Medellín' ),
+		'emperor-penthouse-901-room' => array( 'Penthouse Emperor 901 de Haven, El Poblado, Medellín', 'Emperor 901 penthouse at Haven, El Poblado, Medellín' ),
+		'excelsior-suite-room-401-jacuzzi-lounge-area' => array( 'Suite Excelsior 401 de Haven con jacuzzi y sala', 'Haven Excelsior Suite 401 with jacuzzi and lounge' ),
+		'imperial-suite-402-room-jacuzzi-lounge-area' => array( 'Suite Imperial 402 de Haven con jacuzzi', 'Haven Imperial Suite 402 with jacuzzi' ),
+		'viscount-suite-803-room-jacuzzi-balcony' => array( 'Habitación Viscount 803 con jacuzzi en el balcón, Haven Medellín', 'Viscount 803 room with balcony jacuzzi, Haven Medellín' ),
+		'marquess-room-bed' => array( 'Habitación Marqués de Haven, hotel de diseño en El Poblado', 'Marques room at Haven, design hotel in El Poblado' ),
+		'swing-bar' => array( 'Swing Lounge, café de especialidad en el vestíbulo de Haven', 'Swing Lounge, specialty coffee in the Haven lobby' ),
+		'aromas-coffee' => array( 'Café de especialidad de Antioquia en Swing Lounge', 'Antioquian specialty coffee at Swing Lounge' ),
+		'vida-nocturna' => array( 'Noche con DJ en el 360° Rooftop de Haven', 'DJ night at Haven’s 360° Rooftop' ),
+		'piscina-rooftop' => array( 'Piscina del 360° Rooftop de Haven con vista a Medellín', 'Haven 360° Rooftop pool overlooking Medellín' ),
+		'burrata-pizza' => array( 'Pizza de burrata del 360° Rooftop & Restaurante', 'Burrata pizza at 360° Rooftop & Restaurant' ),
+		'masaje-relajante' => array( 'Masaje relajante en el wellness de Haven', 'Relaxing massage at Haven wellness' ),
+		'fiesta' => array( 'Fiesta en el 360° Rooftop de Haven, El Poblado', 'Party at Haven’s 360° Rooftop, El Poblado' ),
+		'hotel-haven-rooftop-360-gastronomy' => array( 'Platos del 360° Rooftop & Restaurante de Haven', 'Dishes at Haven’s 360° Rooftop & Restaurant' ),
+		'hotel-haven-rooftop' => array( '360° Rooftop de Haven en El Poblado, Medellín', 'Haven’s 360° Rooftop in El Poblado, Medellín' ),
+		'la-culpable-pizza' => array( 'Pizza La Culpable del 360° Rooftop & Restaurante', 'La Culpable pizza at 360° Rooftop & Restaurant' ),
+		'salmon-ricotta' => array( 'Salmón con ricotta y espinaca del 360° Rooftop & Restaurante', 'Salmon with ricotta and spinach at 360° Rooftop & Restaurant' ),
+		'mini-albondigas' => array( 'Mini albóndigas del 360° Rooftop & Restaurante', 'Mini meatballs at 360° Rooftop & Restaurant' ),
+		'brunch-dominical' => array( 'Brunch dominical en el 360° Rooftop de Haven', 'Sunday brunch at Haven’s 360° Rooftop' ),
+		'hidratacion-facial' => array( 'Hidratación facial en el wellness de Haven', 'Facial hydration at Haven wellness' ),
+		'terapia-de-sueros' => array( 'Sueroterapia en el wellness de Haven', 'IV therapy at Haven wellness' ),
+		'suero-terapia' => array( 'Sueroterapia en el wellness de Haven', 'IV therapy at Haven wellness' ),
+		'swing-cafe' => array( 'Café en Swing Lounge, vestíbulo de Haven', 'Coffee at Swing Lounge, Haven lobby' ),
+		'presidential-suite-room' => array( 'Suite Presidencial de Haven, El Poblado', 'Haven Presidential Suite, El Poblado' ),
+		'imperial-suite-402' => array( 'Suite Imperial 402 de Haven', 'Haven Imperial Suite 402' ),
+		'emperor-phenthouse-90' => array( 'Penthouse Emperor de Haven en Medellín', 'Haven Emperor penthouse in Medellín' ),
+		'excelsior-suite' => array( 'Suite Excelsior de Haven', 'Haven Excelsior Suite' ),
+		'viscount' => array( 'Habitación Viscount de Haven', 'Haven Viscount room' ),
+	);
+	return $a;
+}
+function hv_seo_fill_alts( $html ) {
+	$en = hv_en() ? 1 : 0;
+	$map = hv_seo_alts();
+	return preg_replace_callback( '#<img\b[^>]*\balt=""[^>]*>#', function ( $m ) use ( $map, $en ) {
+		if ( ! preg_match( '#\bsrc="[^"]*/([^/"]+?)(?:-\d+x\d+)?\.(?:webp|jpe?g|png)"#i', $m[0], $s ) ) return $m[0];
+		$stem = preg_replace( '/-\d+$/', '', strtolower( $s[1] ) );
+		foreach ( $map as $k => $v ) if ( 0 === strpos( $stem, $k ) ) return str_replace( 'alt=""', 'alt="' . esc_attr( $v[ $en ] ) . '"', $m[0] );
+		return $m[0];
+	}, $html );
+}

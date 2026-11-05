@@ -77,6 +77,7 @@ function hv_page_id( $key, $lang = null ) {
 /** URL de una página por clave (p. ej. 'habitaciones', 'room-habitacion-duke', 'home'). */
 function hv_url( $key, $lang = null ) {
 	static $urls = null;
+	$key = apply_filters( 'hv_url_key', $key );
 	$lang = $lang ?: hv_lang();
 	if ( 'home' === $key ) return function_exists( 'pll_home_url' ) ? pll_home_url( $lang ) : home_url( '/' );
 	if ( null === $urls ) $urls = get_transient( 'hv_urlmap' ) ?: array();
@@ -165,6 +166,7 @@ function hv_img_url( $src, $size = 'full' ) {
 
 /** Nombres de marca en el texto visible: 360° Rooftop & Restaurante/Restaurant y Swing Lounge (antes Swing Coffee Bar / Swing Bar; cambio del 5 nov 2026). */
 function hv_brand( $html ) {
+	if ( function_exists( 'hv_seo_fill_alts' ) ) $html = hv_seo_fill_alts( $html ); // fotos sin texto alternativo (auditoría SEO 5 nov)
 	$rest = hv_en() ? 'Restaurant' : 'Restaurante';
 	$html = preg_replace( '#Swing <em>(?:Coffee )?Bar</em>#', 'Swing <em>Lounge</em>', $html );
 	$html = preg_replace( '#360°? <em>Rooftop</em>|Rooftop <em>360°?</em>#u', '360° Rooftop <em>&amp; ' . $rest . '</em>', $html );

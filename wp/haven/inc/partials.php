@@ -44,7 +44,7 @@ function hv_front_intro() {
 
 function hv_render_home() {
 	$ov = json_decode( (string) get_post_meta( hv_current_id(), '_hv_home', true ), true ) ?: array();
-	echo hv_responsive( hv_fill( file_get_contents( HAVEN_DIR . '/partials/home.html' ), $ov ) );
+	echo hv_seo_fill_alts( hv_responsive( hv_fill( file_get_contents( HAVEN_DIR . '/partials/home.html' ), $ov ) ) );
 }
 
 function hv_render_footer() {

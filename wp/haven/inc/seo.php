@@ -43,7 +43,7 @@ function hv_ld( $data ) {
 
 add_action( 'wp_head', function () {
 	$k = hv_template_key();
-	if ( 'home' === $k ) hv_ld( hv_hotel_schema() );
+	if ( 'home' === $k ) hv_ld( apply_filters( 'hv_hotel_schema', hv_hotel_schema() ) );
 	if ( 'room' === $k ) hv_ld( hv_room_schema( hv_data(), get_permalink() ) );
 	if ( 'faq' === ( hv_template_map()[ hv_key() ] ?? '' ) ) {
 		$qs = array();
