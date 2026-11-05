@@ -173,7 +173,7 @@ function hv_seo_alts() {
 		'la-culpable-pizza' => array( 'Pizza La Culpable del 360° Rooftop & Restaurante', 'La Culpable pizza at 360° Rooftop & Restaurant' ),
 		'salmon-ricotta' => array( 'Salmón con ricotta y espinaca del 360° Rooftop & Restaurante', 'Salmon with ricotta and spinach at 360° Rooftop & Restaurant' ),
 		'mini-albondigas' => array( 'Mini albóndigas del 360° Rooftop & Restaurante', 'Mini meatballs at 360° Rooftop & Restaurant' ),
-		'brunch-dominical' => array( 'Brunch dominical en el 360° Rooftop de Haven', 'Sunday brunch at Haven’s 360° Rooftop' ),
+		'brunch-dominical' => array( 'Brunch en el 360° Rooftop de Haven', 'Brunch at Haven’s 360° Rooftop' ),
 		'hidratacion-facial' => array( 'Hidratación facial en el wellness de Haven', 'Facial hydration at Haven wellness' ),
 		'terapia-de-sueros' => array( 'Sueroterapia en el wellness de Haven', 'IV therapy at Haven wellness' ),
 		'suero-terapia' => array( 'Sueroterapia en el wellness de Haven', 'IV therapy at Haven wellness' ),

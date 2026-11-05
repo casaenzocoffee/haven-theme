@@ -767,3 +767,4 @@ html.hvb-open,html.hvb-open body{overflow:hidden}
 .lp-cta p{color:var(--muted);margin:0 auto 30px;max-width:56ch}
 .lp-cta-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 @media (max-width:820px){.arch-float{right:0}}
+.chip.chip-price{background:var(--gold);color:var(--ink);box-shadow:none;font-weight:600}

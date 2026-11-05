@@ -18,5 +18,6 @@ require HAVEN_DIR . '/inc/setup.php';
 require HAVEN_DIR . '/inc/router.php';
 require HAVEN_DIR . '/inc/seo.php';
 require HAVEN_DIR . '/inc/seo-fix.php';
+require HAVEN_DIR . '/inc/precios.php';
 require HAVEN_DIR . '/inc/fields.php';
 require HAVEN_DIR . '/inc/importer.php';
