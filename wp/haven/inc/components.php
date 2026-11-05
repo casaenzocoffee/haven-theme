@@ -202,5 +202,7 @@ function hv_service_icon( $kind ) {
 		'otro'     => '<circle cx="32" cy="32" r="16"/><path d="M32 22v20M22 32h20"/>',
 	);
 	$p = $I[ $kind ] ?? $I['otro'];
-	return '<div class="sv-art" aria-hidden="true">' . hv_stamp() . '<span class="sv-arch"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">' . $p . '</svg></span></div>';
+	static $n = 0; $n++;
+	$seal = '<svg class="arch-stamp" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="svs' . $n . '" d="M60 60m-50 0a50 50 0 1 1 100 0a50 50 0 1 1-100 0"/></defs><text font-family="DM Sans" font-size="9" fill="currentColor"><textPath href="#svs' . $n . '" textLength="311" lengthAdjust="spacing">HAVEN · A DESIGN HOTEL · MEDELLÍN ·</textPath></text></svg>';
+	return '<div class="sv-art" aria-hidden="true">' . $seal . '<span class="sv-arch"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">' . $p . '</svg></span></div>';
 }

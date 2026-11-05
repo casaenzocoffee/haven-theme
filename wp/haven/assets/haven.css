@@ -773,7 +773,7 @@ html.hvb-open,html.hvb-open body{overflow:hidden}
 .sv-media{aspect-ratio:4/3;background:radial-gradient(120% 90% at 50% 0%,rgba(205,179,113,.16),transparent 60%),var(--espresso);display:grid;place-items:center}
 .sv-art{position:relative;width:min(62%,220px);aspect-ratio:1;display:grid;place-items:center;color:var(--gold)}
 .sv-art .arch-stamp{position:absolute;inset:0;width:100%;height:100%;color:rgba(205,179,113,.55);animation:svspin 40s linear infinite}
-.sv-arch{width:52%;aspect-ratio:3/4;border-radius:999px 999px 14px 14px;box-shadow:inset 0 0 0 1px rgba(205,179,113,.55);display:grid;place-items:center;background:rgba(25,19,17,.55)}
+.sv-arch{width:44%;aspect-ratio:3/4;border-radius:999px 999px 14px 14px;box-shadow:inset 0 0 0 1px rgba(205,179,113,.55);display:grid;place-items:center;background:rgba(25,19,17,.55)}
 .sv-arch svg{width:62%;height:auto}
 .sv-card .card-body .eyebrow{margin-bottom:10px}
 .sv-card .card-body h3{font-size:clamp(24px,2vw,30px)}
