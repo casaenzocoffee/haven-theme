@@ -1,0 +1,1131 @@
+{
+  "guia-2-dias": {
+    "slug": {
+      "es": "medellin-en-2-dias",
+      "en": "2-days-in-medellin"
+    },
+    "parent": "guia-medellin",
+    "es": {
+      "title": "Medellín en 2 días",
+      "seo_title": "Medellín en 2 días: plan de fin de semana desde El Poblado",
+      "seo_desc": "Medellín en 2 días, hora por hora: Centro, Comuna 13 y noches en Provenza a pie. El plan de fin de semana que damos en Haven, con tiempos reales.",
+      "h1": "Medellín en <em>2 días</em> (o un fin de semana) desde El Poblado",
+      "sub": "Un plan corto y realista: lo esencial de la ciudad de día y El Poblado a pie cada noche.",
+      "crumb": "2 días",
+      "blocks": [
+        {
+          "type": "text",
+          "eyebrow": "Antes de empezar",
+          "title": "Cómo aprovechar <em>Medellín en 2 días</em>",
+          "paras": [
+            "Medellín en 2 días alcanza para entender la ciudad si elige bien: el Centro histórico, la Comuna 13 y las noches en Provenza. Es el plan que proponemos a quienes llegan un viernes y se van el domingo.",
+            "Cada día sale de Haven, en la Calle 10A de El Poblado, y vuelve a pie a cenar. Provenza y el Parque Lleras quedan a unos 2 minutos caminando, así que de noche no necesita carro."
+          ],
+          "sub": [
+            {
+              "h3": "El orden importa",
+              "paras": [
+                "Haga el Centro un sábado o un día hábil por la mañana: hay más movimiento y el Palacio de la Cultura no abre los domingos."
+              ]
+            },
+            {
+              "h3": "Mañanas afuera, noches cerca",
+              "paras": [
+                "Las visitas largas van temprano, con el clima más fresco y menos filas. Las tardes se cierran en el 360° Rooftop & Restaurante, en el piso 11 del hotel."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "days",
+          "eyebrow": "El itinerario",
+          "title": "Dos días, mañana, tarde y noche",
+          "days": [
+            {
+              "t": "Día 1 · Centro y atardecer en El Poblado",
+              "items": [
+                {
+                  "h": "Mañana",
+                  "p": "Desayuno bufé en Haven y taxi o app al Centro: unos 25 minutos en carro. Llegue a la Plaza Botero antes de las 11 a. m., recorra las esculturas y entre al Museo de Antioquia. Enfrente está el Palacio de la Cultura Rafael Uribe Uribe: suba a la terraza. Si prefiere contexto, el free walking tour del Centro sale de la estación Alpujarra del metro, de lunes a viernes a las 10:00 a. m. y 2:30 p. m."
+                },
+                {
+                  "h": "Tarde",
+                  "p": "Regrese a El Poblado después del almuerzo. Descanse un rato y suba al 360° Rooftop & Restaurante unos 40 minutos antes del atardecer para tener mesa en el borde."
+                },
+                {
+                  "h": "Noche",
+                  "p": "Cena a un minuto a pie en Carmen (reserve; cierra los domingos) o, si quiere cocina paisa sin protocolo, en Mondongo's, a 3 minutos. Si le quedan ganas, Calante, en Provenza, a 3 minutos."
+                }
+              ]
+            },
+            {
+              "t": "Día 2 · Comuna 13 y memoria",
+              "items": [
+                {
+                  "h": "Mañana",
+                  "p": "Comuna 13 con guía local: unos 40 minutos en carro, o metro hasta la estación San Javier, final de la línea B. El recorrido dura unas 2,5 horas. Vaya temprano y lleve el celular guardado."
+                },
+                {
+                  "h": "Tarde",
+                  "p": "Elija una pieza extra. El Museo Casa de la Memoria, gratuito, a unos 20 minutos en carro (cierra los lunes). O el Pueblito Paisa en el Cerro Nutibara al final de la tarde, a 15 minutos en carro: suba en taxi."
+                },
+                {
+                  "h": "Noche",
+                  "p": "Última noche en Provenza a pie: Mar y Fuego, a 2 minutos, para compartir pescado y arroz con mariscos. Después, una copa tranquila y de vuelta al hotel en cinco minutos."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "eyebrow": "Lo que vemos cada semana",
+          "title": "Errores comunes en un viaje de 2 días",
+          "paras": [
+            "Con poco tiempo, un mal cálculo cuesta medio día. Estos son los que más vemos en recepción."
+          ],
+          "sub": [
+            {
+              "h3": "Meter Guatapé en un fin de semana",
+              "paras": [
+                "Son unas 2 horas por trayecto. En 2 días le quita la mitad del viaje. Déjelo para una estadía de 3 o 4 días."
+              ]
+            },
+            {
+              "h3": "Olvidar los cierres",
+              "paras": [
+                "La Casa de la Memoria cierra los lunes y el free walking tour no sale en festivos. En Colombia muchos festivos caen lunes: revise el calendario antes de armar el plan."
+              ]
+            },
+            {
+              "h3": "Quedarse en el Centro de noche",
+              "paras": [
+                "Visite el Centro de día. Si se le hace tarde, vuelva en taxi o app, no caminando hasta el metro."
+              ]
+            },
+            {
+              "h3": "Hacer de Escobar el eje del viaje",
+              "paras": [
+                "La ciudad tiene mucho más que contar. La Casa de la Memoria y la Comuna 13 explican esa historia desde quienes la vivieron."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "places",
+          "eyebrow": "Los lugares del plan",
+          "title": "Los sitios de este itinerario",
+          "intro": "En el orden en que aparecen. Cada tarjeta indica la distancia desde Haven.",
+          "ids": [
+            "plaza-botero-museo-antioquia",
+            "palacio-cultura-rafael-uribe",
+            "haven-360-rooftop",
+            "carmen",
+            "mondongos-poblado",
+            "comuna-13-graffitour",
+            "museo-casa-de-la-memoria",
+            "pueblito-paisa-nutibara",
+            "mar-y-fuego",
+            "calante"
+          ]
+        },
+        {
+          "type": "faq",
+          "title": "Preguntas frecuentes",
+          "items": [
+            {
+              "q": "¿Cuántos días se necesitan en Medellín?",
+              "a": "Con 2 días ve lo esencial: el Centro y la Comuna 13. Con 3 suma barrios y miradores sin correr, y con 4 cabe Guatapé."
+            },
+            {
+              "q": "¿Vale la pena ir a Guatapé en un viaje de 2 días?",
+              "a": "Vale la pena, pero no en 2 días. Son unas 2 horas por trayecto y ocupa la jornada completa; en un fin de semana le quitaría el Centro o la Comuna 13."
+            },
+            {
+              "q": "¿Es seguro Medellín para un fin de semana?",
+              "a": "Con precauciones normales, sí. Visite el Centro y la Comuna 13 de día, esta última con guía, cuide el celular y use taxi o app de noche fuera de El Poblado."
+            },
+            {
+              "q": "¿Cómo moverse en Medellín en 2 días?",
+              "a": "Taxi o app para el Centro y la Comuna 13, y el metro si evita la hora pico de la tarde entre semana. De noche, desde Haven, todo queda a pie."
+            },
+            {
+              "q": "¿Qué hacer si llego un viernes por la noche?",
+              "a": "Cene a pie en Provenza y deje el Centro para el sábado por la mañana, cuando el Palacio de la Cultura está abierto."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": "Siga planeando",
+          "keys": [
+            "guia-3-dias",
+            "guia-4-dias",
+            "guia-medellin",
+            "guia-a-pie",
+            "guia-donde-hospedarse"
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Su fin de semana empieza aquí",
+          "text": "Consulte disponibilidad y tarifa con sus fechas y le ayudamos a reservar Carmen o el tour de la Comuna 13.",
+          "wa": "Hola, quiero pasar un fin de semana en Medellín. ¿Tienen disponibilidad para estas fechas: "
+        }
+      ]
+    },
+    "en": {
+      "title": "2 days in Medellín",
+      "seo_title": "2 Days in Medellín: A Weekend Itinerary from El Poblado",
+      "seo_desc": "2 days in Medellín, morning to night: downtown, Comuna 13 and walkable evenings in Provenza. The weekend plan we give our guests, with real travel times.",
+      "h1": "<em>2 days in Medellín</em>: a weekend plan from El Poblado",
+      "sub": "A short, realistic plan: the big sights by day, and dinner within walking distance every night.",
+      "crumb": "2 days",
+      "blocks": [
+        {
+          "type": "text",
+          "eyebrow": "Before you go",
+          "title": "Making the most of <em>2 days in Medellín</em>",
+          "paras": [
+            "Two days in Medellín is enough to get the city if you choose well: downtown's historic core, Comuna 13 and your evenings in Provenza. It's the plan we hand guests who fly in Friday and leave Sunday.",
+            "Every day starts at Haven, on Calle 10A in El Poblado, and ends with a walk to dinner. Provenza and Parque Lleras are about 2 minutes away on foot, so you won't need a car at night."
+          ],
+          "sub": [
+            {
+              "h3": "Order matters",
+              "paras": [
+                "Do downtown on a Saturday or weekday morning: the streets are livelier, and the Palacio de la Cultura is closed on Sundays."
+              ]
+            },
+            {
+              "h3": "Big outings early, evenings close by",
+              "paras": [
+                "Long visits go first thing, while it's cooler and lines are short. Wind down each afternoon at the 360° Rooftop & Restaurant, on the hotel's 11th floor."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "days",
+          "eyebrow": "The itinerary",
+          "title": "Two days, morning to night",
+          "days": [
+            {
+              "t": "Day 1 · Downtown and an El Poblado sunset",
+              "items": [
+                {
+                  "h": "Morning",
+                  "p": "Breakfast buffet at Haven, then a cab or rideshare downtown, about 25 minutes. Get to Plaza Botero before 11 a.m., walk among the sculptures and head into the Museo de Antioquia. The Palacio de la Cultura Rafael Uribe Uribe is right across: go up to the terrace. Want a guide? The free downtown walking tour meets at Alpujarra metro station, weekdays at 10:00 a.m. and 2:30 p.m."
+                },
+                {
+                  "h": "Afternoon",
+                  "p": "Head back to El Poblado after lunch and take a break. Go up to the 360° Rooftop & Restaurant about 40 minutes before sunset to grab a table on the edge."
+                },
+                {
+                  "h": "Evening",
+                  "p": "Dinner one minute away at Carmen (book ahead; closed Sundays). For classic paisa food with no fuss, Mondongo's is 3 minutes away. Still going? Calante, in Provenza, is a 3-minute walk."
+                }
+              ]
+            },
+            {
+              "t": "Day 2 · Comuna 13 and memory",
+              "items": [
+                {
+                  "h": "Morning",
+                  "p": "Comuna 13 with a local guide: about 40 minutes by car, or take the metro to San Javier, the last stop on Line B. The walk takes about 2.5 hours. Go early and keep your phone in your pocket."
+                },
+                {
+                  "h": "Afternoon",
+                  "p": "Pick one more stop. Museo Casa de la Memoria is free and about 20 minutes by car (closed Mondays). Or catch late afternoon at Pueblito Paisa on Cerro Nutibara, 15 minutes by car; take a cab to the top."
+                },
+                {
+                  "h": "Evening",
+                  "p": "Last night in Provenza on foot: Mar y Fuego, 2 minutes away, for shared fish and seafood rice. One more drink, then a five-minute stroll back to the hotel."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "eyebrow": "What we see every week",
+          "title": "Common mistakes on a 2-day trip",
+          "paras": [
+            "When time is short, one bad call costs you half a day. These are the ones we see most at the front desk."
+          ],
+          "sub": [
+            {
+              "h3": "Squeezing in Guatapé",
+              "paras": [
+                "It's about 2 hours each way. On a two-day trip it eats half your time. Save it for a 3- or 4-day stay."
+              ]
+            },
+            {
+              "h3": "Missing closing days",
+              "paras": [
+                "Casa de la Memoria is closed Mondays, and the free walking tour doesn't run on public holidays. Many Colombian holidays land on a Monday, so check the calendar first."
+              ]
+            },
+            {
+              "h3": "Lingering downtown after dark",
+              "paras": [
+                "See downtown in daylight. If you stay late, come back by cab or rideshare instead of walking to the metro."
+              ]
+            },
+            {
+              "h3": "Building the trip around Escobar",
+              "paras": [
+                "The city has a far bigger story. Casa de la Memoria and Comuna 13 tell that history through the people who lived it."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "places",
+          "eyebrow": "On the route",
+          "title": "Every stop on this itinerary",
+          "intro": "Listed in the order they come up. Each card shows the distance from Haven.",
+          "ids": [
+            "plaza-botero-museo-antioquia",
+            "palacio-cultura-rafael-uribe",
+            "haven-360-rooftop",
+            "carmen",
+            "mondongos-poblado",
+            "comuna-13-graffitour",
+            "museo-casa-de-la-memoria",
+            "pueblito-paisa-nutibara",
+            "mar-y-fuego",
+            "calante"
+          ]
+        },
+        {
+          "type": "faq",
+          "title": "Frequently asked questions",
+          "items": [
+            {
+              "q": "How many days do you need in Medellín?",
+              "a": "Two days covers the essentials: downtown and Comuna 13. Three lets you add neighborhoods and viewpoints at an easy pace, and four leaves room for Guatapé."
+            },
+            {
+              "q": "Is Guatapé worth it on a 2-day trip?",
+              "a": "Guatapé is worth it, just not in two days. It's about 2 hours each way and takes the whole day, so it would cost you downtown or Comuna 13."
+            },
+            {
+              "q": "Is Medellín safe for a weekend trip?",
+              "a": "With normal big-city precautions, yes. Visit downtown and Comuna 13 in daylight, the latter with a guide, keep your phone out of sight and use cabs or rideshares at night outside El Poblado."
+            },
+            {
+              "q": "What's the best way to get around in 2 days?",
+              "a": "Cabs or rideshare for downtown and Comuna 13, and the metro if you avoid the weekday evening rush. At night everything near Haven is walkable."
+            },
+            {
+              "q": "What if I land on Friday night?",
+              "a": "Walk to dinner in Provenza and save downtown for Saturday morning, when the Palacio de la Cultura is open."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": "Keep planning",
+          "keys": [
+            "guia-3-dias",
+            "guia-4-dias",
+            "guia-medellin",
+            "guia-a-pie",
+            "guia-donde-hospedarse"
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Your weekend starts here",
+          "text": "Check availability and rates for your dates, and we'll help you book Carmen or a Comuna 13 tour.",
+          "wa": "Hi, I'm planning a weekend in Medellín. Do you have availability for these dates: "
+        }
+      ]
+    }
+  },
+  "guia-3-dias": {
+    "slug": {
+      "es": "medellin-en-3-dias",
+      "en": "3-days-in-medellin"
+    },
+    "parent": "guia-medellin",
+    "es": {
+      "title": "Medellín en 3 días",
+      "seo_title": "Medellín en 3 días: el itinerario que damos a los huéspedes",
+      "seo_desc": "Medellín en 3 días: Centro e historia, Comuna 13 y Metrocable, y un día de barrios. Itinerario desde El Poblado con tiempos reales y errores a evitar.",
+      "h1": "Medellín en <em>3 días</em>: el itinerario que damos a nuestros huéspedes",
+      "sub": "Tres días con ritmo humano: historia, montaña y barrios de día; Provenza y el Lleras a pie de noche.",
+      "crumb": "3 días",
+      "blocks": [
+        {
+          "type": "text",
+          "eyebrow": "Por qué tres días",
+          "title": "Cómo se reparte <em>Medellín en 3 días</em>",
+          "paras": [
+            "Medellín en 3 días es la duración que más recomendamos en recepción. Da para el Centro, la Comuna 13, una subida en Metrocable y un día de barrios sin correr de un lado a otro.",
+            "Todos los días arrancan en Haven, en El Poblado, y terminan a pie en Provenza o en el Parque Lleras, a unos 2 minutos del hotel."
+          ],
+          "sub": [
+            {
+              "h3": "La lógica del plan",
+              "paras": [
+                "Primero la historia, para entender lo demás. Luego la ciudad desde arriba. Al final, la Medellín cotidiana: cafés, galerías y un barrio residencial."
+              ]
+            },
+            {
+              "h3": "Si prefiere salir de la ciudad",
+              "paras": [
+                "El tercer día puede cambiarse por Guatapé. Lo explicamos en el itinerario de 4 días."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "days",
+          "eyebrow": "El itinerario",
+          "title": "Tres días en Medellín, de mañana a noche",
+          "days": [
+            {
+              "t": "Día 1 · Centro e historia",
+              "items": [
+                {
+                  "h": "Mañana",
+                  "p": "Taxi al Centro, unos 25 minutos. Plaza Botero y Museo de Antioquia antes de las 11 a. m.; la estación Parque Berrío del metro queda a pocos minutos. Si quiere guía, el free walking tour sale de la estación Alpujarra entre semana a las 10:00 a. m."
+                },
+                {
+                  "h": "Tarde",
+                  "p": "Museo Casa de la Memoria, gratuito y con audioguía si no habla español. Desde el Centro se llega en metro hasta San Antonio y luego en tranvía hasta la estación Bicentenario. Cierra los lunes."
+                },
+                {
+                  "h": "Noche",
+                  "p": "Vuelta a Haven y cena en Provenza, a 2 minutos a pie: Boro, la apertura del año, pide reserva."
+                }
+              ]
+            },
+            {
+              "t": "Día 2 · Comuna 13 y la ciudad desde arriba",
+              "items": [
+                {
+                  "h": "Mañana",
+                  "p": "Comuna 13 con guía local, unos 40 minutos en carro o en metro hasta San Javier (línea B). Unas 2,5 horas de recorrido; temprano hay menos gente."
+                },
+                {
+                  "h": "Tarde",
+                  "p": "Dos opciones. El Metrocable a Parque Arví: metro hasta Acevedo, línea K a Santo Domingo y línea L, que se paga aparte; lleve chaqueta. O, más corto, el Pueblito Paisa al atardecer, a 15 minutos en carro."
+                },
+                {
+                  "h": "Noche",
+                  "p": "Salsa en Quema Que Quema, en la misma calle del hotel, a un minuto. Suba al segundo piso para ver bailar."
+                }
+              ]
+            },
+            {
+              "t": "Día 3 · Barrios y café",
+              "items": [
+                {
+                  "h": "Mañana",
+                  "p": "Café en Pergamino, a 3 minutos, y luego la Ruta 14 de galerías, que arranca a 4 minutos del hotel (no abre los domingos). Si madruga, camine el Parque Lineal La Presidenta."
+                },
+                {
+                  "h": "Tarde",
+                  "p": "Laureles, a 20 minutos en carro: café en el Primer Parque y paseo por calles circulares. Es otra Medellín, residencial y menos turística."
+                },
+                {
+                  "h": "Noche",
+                  "p": "Despedida en el 360° Rooftop & Restaurante al atardecer y última vuelta a pie por el Lleras."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "eyebrow": "Para no perder tiempo",
+          "title": "Errores comunes en 3 días",
+          "paras": [
+            "Tres días parecen muchos hasta que un cierre o un trancón desordenan el plan."
+          ],
+          "sub": [
+            {
+              "h3": "Poner el Centro un lunes festivo",
+              "paras": [
+                "El free walking tour no sale en festivos y la Casa de la Memoria cierra los lunes. Si su viaje empieza un lunes, empiece por la Comuna 13."
+              ]
+            },
+            {
+              "h3": "Tomar el metro en hora pico",
+              "paras": [
+                "Entre semana, al final de la tarde, va lleno. Para volver a El Poblado a esa hora, mejor taxi o app."
+              ]
+            },
+            {
+              "h3": "Subir a Arví sin abrigo",
+              "paras": [
+                "Arriba hace bastante más frío que en El Poblado. Una chaqueta liviana basta."
+              ]
+            },
+            {
+              "h3": "Llegar sin reserva a los restaurantes de Provenza",
+              "paras": [
+                "De jueves a sábado y en temporada, como agosto con la Feria de las Flores o diciembre, los más buscados se llenan. Reserve con un día de anticipación."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "places",
+          "eyebrow": "Los lugares del plan",
+          "title": "Los sitios de este itinerario",
+          "intro": "Ordenados como aparecen en los tres días. Cada tarjeta indica la distancia desde Haven.",
+          "ids": [
+            "plaza-botero-museo-antioquia",
+            "museo-casa-de-la-memoria",
+            "boro",
+            "comuna-13-graffitour",
+            "metrocable-parque-arvi",
+            "pueblito-paisa-nutibara",
+            "quema-que-quema",
+            "pergamino",
+            "ruta-14-galerias",
+            "laureles-la-70"
+          ]
+        },
+        {
+          "type": "faq",
+          "title": "Preguntas frecuentes",
+          "items": [
+            {
+              "q": "¿Cuántos días hay que quedarse en Medellín?",
+              "a": "Tres días es el punto justo para una primera visita. Con dos ve lo esencial; con cuatro puede sumar Guatapé sin sacrificar la ciudad."
+            },
+            {
+              "q": "¿Vale la pena Guatapé si tengo 3 días?",
+              "a": "Sí, si le atrae más el paisaje que los barrios: cambie el tercer día por Guatapé. Son unas 2 horas por trayecto, así que salga temprano."
+            },
+            {
+              "q": "¿Es seguro Medellín para turistas?",
+              "a": "Con precauciones normales de ciudad grande, sí. Comuna 13 con guía, Centro de día, celular guardado y taxi o app de noche fuera de El Poblado."
+            },
+            {
+              "q": "¿Cómo moverse por Medellín?",
+              "a": "El metro, el Metrocable y el tranvía cubren Centro, Comuna 13 y Arví. Para lo demás, taxi o app. Desde Haven, Provenza y el Lleras quedan a pie."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": "Siga planeando",
+          "keys": [
+            "guia-2-dias",
+            "guia-4-dias",
+            "guia-medellin",
+            "guia-a-pie",
+            "guia-donde-hospedarse"
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Tres días, una sola base",
+          "text": "Consulte disponibilidad y tarifa con sus fechas; le ayudamos a cuadrar tours y reservas.",
+          "wa": "Hola, voy a Medellín 3 días y quiero hospedarme en Haven. ¿Tienen disponibilidad para estas fechas: "
+        }
+      ]
+    },
+    "en": {
+      "title": "3 days in Medellín",
+      "seo_title": "Medellin 3 Day Itinerary: The Plan We Give Our Guests",
+      "seo_desc": "A Medellin 3 day itinerary: downtown history, Comuna 13 and the Metrocable, then a day of neighborhoods. Real travel times from El Poblado, plus pitfalls.",
+      "h1": "A Medellín <em>3-day itinerary</em>: the plan we give our guests",
+      "sub": "Three days at a human pace: history, mountains and neighborhoods by day, Provenza and Parque Lleras on foot at night.",
+      "crumb": "3 days",
+      "blocks": [
+        {
+          "type": "text",
+          "eyebrow": "Why three days",
+          "title": "How to split a <em>Medellin 3 day itinerary</em>",
+          "paras": [
+            "If you're building a Medellin 3 day itinerary, you've picked the length we recommend most at the front desk. It covers downtown, Comuna 13, a Metrocable ride and a neighborhood day without racing across town.",
+            "Each day starts at Haven in El Poblado and ends with a walk to Provenza or Parque Lleras, about 2 minutes from the hotel."
+          ],
+          "sub": [
+            {
+              "h3": "The logic",
+              "paras": [
+                "History first, so the rest makes sense. Then the city from above. Last, everyday Medellín: coffee, galleries and a leafy residential neighborhood."
+              ]
+            },
+            {
+              "h3": "Rather get out of town?",
+              "paras": [
+                "Swap day three for Guatapé. We lay it out in the 4-day itinerary."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "days",
+          "eyebrow": "The itinerary",
+          "title": "Three days in Medellín, morning to night",
+          "days": [
+            {
+              "t": "Day 1 · Downtown and history",
+              "items": [
+                {
+                  "h": "Morning",
+                  "p": "Cab downtown, about 25 minutes. Plaza Botero and the Museo de Antioquia before 11 a.m.; Parque Berrío metro station is a short walk away. For a guide, the free walking tour meets at Alpujarra station at 10:00 a.m. on weekdays."
+                },
+                {
+                  "h": "Afternoon",
+                  "p": "Museo Casa de la Memoria: free, with an audio guide if you don't speak Spanish. From downtown, take the metro to San Antonio and the tram to Bicentenario. Closed Mondays."
+                },
+                {
+                  "h": "Evening",
+                  "p": "Back to Haven, then dinner in Provenza, 2 minutes on foot: Boro, the opening of the year, so book ahead."
+                }
+              ]
+            },
+            {
+              "t": "Day 2 · Comuna 13 and the view from above",
+              "items": [
+                {
+                  "h": "Morning",
+                  "p": "Comuna 13 with a local guide, about 40 minutes by car or by metro to San Javier on Line B. Plan on 2.5 hours; mornings are less crowded."
+                },
+                {
+                  "h": "Afternoon",
+                  "p": "Two options. Ride the Metrocable to Parque Arví: metro to Acevedo, Line K to Santo Domingo, then Line L, a separate fare. Bring a jacket. Shorter on time? Catch sunset at Pueblito Paisa, 15 minutes by car."
+                },
+                {
+                  "h": "Evening",
+                  "p": "Salsa at Quema Que Quema, one minute away on Haven's own street. Head upstairs to watch the dancers."
+                }
+              ]
+            },
+            {
+              "t": "Day 3 · Neighborhoods and coffee",
+              "items": [
+                {
+                  "h": "Morning",
+                  "p": "Coffee at Pergamino, 3 minutes away, then the Ruta 14 gallery walk, which starts 4 minutes from the hotel (closed Sundays). Early riser? Walk the Parque Lineal La Presidenta."
+                },
+                {
+                  "h": "Afternoon",
+                  "p": "Laureles, 20 minutes by car: coffee at Primer Parque and a wander along its curving, tree-lined streets. It's a quieter, more local side of the city."
+                },
+                {
+                  "h": "Evening",
+                  "p": "Toast your last sunset at the 360° Rooftop & Restaurant, then one more stroll around Parque Lleras."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "eyebrow": "Save yourself the hassle",
+          "title": "Common mistakes on a 3-day trip",
+          "paras": [
+            "Three days feels like plenty until a closing day or a traffic jam scrambles the plan."
+          ],
+          "sub": [
+            {
+              "h3": "Doing downtown on a holiday Monday",
+              "paras": [
+                "The free walking tour skips public holidays, and Casa de la Memoria is closed Mondays. If your trip starts on a Monday, lead with Comuna 13."
+              ]
+            },
+            {
+              "h3": "Riding the metro at rush hour",
+              "paras": [
+                "Weekday late afternoons are packed. Heading back to El Poblado then? Take a cab or rideshare."
+              ]
+            },
+            {
+              "h3": "Going up to Arví without a layer",
+              "paras": [
+                "It's noticeably cooler up there than in El Poblado. A light jacket does it."
+              ]
+            },
+            {
+              "h3": "Walking into Provenza's top restaurants without a booking",
+              "paras": [
+                "Thursday through Saturday, and in high season like August's Flower Festival or December, the best tables go fast. Book a day ahead."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "places",
+          "eyebrow": "On the route",
+          "title": "Every stop on this itinerary",
+          "intro": "In the order they appear over the three days. Each card shows the distance from Haven.",
+          "ids": [
+            "plaza-botero-museo-antioquia",
+            "museo-casa-de-la-memoria",
+            "boro",
+            "comuna-13-graffitour",
+            "metrocable-parque-arvi",
+            "pueblito-paisa-nutibara",
+            "quema-que-quema",
+            "pergamino",
+            "ruta-14-galerias",
+            "laureles-la-70"
+          ]
+        },
+        {
+          "type": "faq",
+          "title": "Frequently asked questions",
+          "items": [
+            {
+              "q": "How many days should you spend in Medellín?",
+              "a": "Three days is the sweet spot for a first visit. Two covers the essentials; four lets you add Guatapé without giving up the city."
+            },
+            {
+              "q": "Is Guatapé worth it with only 3 days?",
+              "a": "Yes, if scenery appeals to you more than neighborhoods: trade day three for Guatapé. It's about 2 hours each way, so leave early."
+            },
+            {
+              "q": "Is Medellín safe for tourists?",
+              "a": "With normal big-city precautions, yes. Go to Comuna 13 with a guide, see downtown by day, keep your phone put away and take cabs or rideshares at night outside El Poblado."
+            },
+            {
+              "q": "How do you get around Medellín?",
+              "a": "The metro, Metrocable and tram reach downtown, Comuna 13 and Arví. For everything else, cabs or rideshare. From Haven, Provenza and Parque Lleras are walkable."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": "Keep planning",
+          "keys": [
+            "guia-2-dias",
+            "guia-4-dias",
+            "guia-medellin",
+            "guia-a-pie",
+            "guia-donde-hospedarse"
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Three days, one easy base",
+          "text": "Check availability and rates for your dates; we'll help you line up tours and dinner reservations.",
+          "wa": "Hi, I'm spending 3 days in Medellín and would like to stay at Haven. Do you have availability for these dates: "
+        }
+      ]
+    }
+  },
+  "guia-4-dias": {
+    "slug": {
+      "es": "medellin-en-4-dias",
+      "en": "4-days-in-medellin"
+    },
+    "parent": "guia-medellin",
+    "es": {
+      "title": "Medellín en 4 días",
+      "seo_title": "Medellín en 4 días: itinerario con escapada a Guatapé",
+      "seo_desc": "Medellín en 4 días: Centro, Comuna 13, barrios y museos, y un día completo en Guatapé. Itinerario desde El Poblado con tiempos reales y errores a evitar.",
+      "h1": "Medellín en <em>4 días</em>, con escapada a Guatapé",
+      "sub": "Tres días de ciudad y uno de montaña y embalse, siempre con regreso a pie a Provenza.",
+      "crumb": "4 días",
+      "blocks": [
+        {
+          "type": "text",
+          "eyebrow": "Por qué cuatro días",
+          "title": "Qué cabe en <em>Medellín en 4 días</em>",
+          "paras": [
+            "Medellín en 4 días permite lo que en tres hay que recortar: la ciudad completa y un día entero en Guatapé y la Piedra del Peñol, sin correr.",
+            "Haven, en El Poblado, es la base. Cada día empieza con el desayuno en el hotel y termina a pie en Provenza o en el Parque Lleras, a unos 2 minutos."
+          ],
+          "sub": [
+            {
+              "h3": "Dónde poner Guatapé",
+              "paras": [
+                "Lo ideal es un día entre semana: los fines de semana y festivos hay más gente y los buses se llenan. Si su vuelo sale el día 4, pase Guatapé al día 3."
+              ]
+            },
+            {
+              "h3": "Si Guatapé no le llama",
+              "paras": [
+                "Cámbielo por un tour de café en finca, con recogida en El Poblado, o por parapente en San Félix, mejor en la mañana."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "days",
+          "eyebrow": "El itinerario",
+          "title": "Cuatro días en Medellín, de mañana a noche",
+          "days": [
+            {
+              "t": "Día 1 · Centro",
+              "items": [
+                {
+                  "h": "Mañana",
+                  "p": "Taxi al Centro, unos 25 minutos. Plaza Botero y Museo de Antioquia temprano, antes de las 11 a. m. El free walking tour sale de la estación Alpujarra entre semana a las 10:00 a. m. y 2:30 p. m."
+                },
+                {
+                  "h": "Tarde",
+                  "p": "Palacio de la Cultura, frente a la plaza: entrada gratuita con documento y terraza con vista. Vuelva a El Poblado en taxi antes de que oscurezca."
+                },
+                {
+                  "h": "Noche",
+                  "p": "Cena en Mar y Fuego, a 2 minutos a pie, y una copa en Bar Carmen, a un minuto (reserve de jueves a sábado)."
+                }
+              ]
+            },
+            {
+              "t": "Día 2 · Comuna 13 y atardecer",
+              "items": [
+                {
+                  "h": "Mañana",
+                  "p": "Comuna 13 con guía local: unos 40 minutos en carro, o metro hasta San Javier, final de la línea B. Unas 2,5 horas a pie entre escaleras eléctricas y murales."
+                },
+                {
+                  "h": "Tarde",
+                  "p": "Descanso en el hotel y, al caer la tarde, Pueblito Paisa en el Cerro Nutibara, a 15 minutos en carro. Suba en taxi y pruebe los buñuelos."
+                },
+                {
+                  "h": "Noche",
+                  "p": "Provenza a pie. Para cocina paisa, Mondongo's, a 3 minutos."
+                }
+              ]
+            },
+            {
+              "t": "Día 3 · Barrios y cultura",
+              "items": [
+                {
+                  "h": "Mañana",
+                  "p": "Jardín Botánico y Parque Explora, vecinos, a unos 30 minutos en carro o junto a la estación Universidad del metro. Almuerzo en In Situ, dentro del Jardín; cierra los lunes."
+                },
+                {
+                  "h": "Tarde",
+                  "p": "Laureles, a 20 minutos en carro: café en el Primer Parque y caminata por sus calles arboladas hasta La 70."
+                },
+                {
+                  "h": "Noche",
+                  "p": "Regreso a Haven, atardecer en el 360° Rooftop & Restaurante y cena tranquila: mañana se madruga."
+                }
+              ]
+            },
+            {
+              "t": "Día 4 · Guatapé y la Piedra del Peñol",
+              "items": [
+                {
+                  "h": "Mañana",
+                  "p": "Salga antes de las 7 a. m. En carro privado son cerca de 2 horas; en bus, unas 2 horas desde la Terminal del Norte, junto a la estación Caribe del metro. Suba los más de 700 escalones de la Piedra antes del calor."
+                },
+                {
+                  "h": "Tarde",
+                  "p": "Paseo en lancha por el embalse y caminata por el pueblo de zócalos de colores. Emprenda el regreso a media tarde para evitar el tráfico de llegada a la ciudad."
+                },
+                {
+                  "h": "Noche",
+                  "p": "Un masaje en Wellness si lo reservó con tiempo, y cena sin prisa en Provenza, a pie."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "eyebrow": "Para que el plan funcione",
+          "title": "Errores comunes en un viaje de 4 días",
+          "paras": [
+            "Con cuatro días hay margen, pero también más piezas que encajar."
+          ],
+          "sub": [
+            {
+              "h3": "Ir a Guatapé un domingo o festivo",
+              "paras": [
+                "Es cuando más gente hay en la Piedra y en los buses. Si solo puede ese día, compre el pasaje con anticipación y salga muy temprano."
+              ]
+            },
+            {
+              "h3": "Ignorar los cierres de los lunes",
+              "paras": [
+                "Varios museos de la ciudad y la Casa de la Memoria cierran los lunes, y el free walking tour no sale en festivos. Reserve el lunes para Comuna 13 o Guatapé."
+              ]
+            },
+            {
+              "h3": "Volver del Centro caminando de noche",
+              "paras": [
+                "De noche, del Centro se sale en taxi o app."
+              ]
+            },
+            {
+              "h3": "No reservar en temporada",
+              "paras": [
+                "En agosto, con la Feria de las Flores, y en diciembre, reserve habitación, tours y restaurantes de Provenza con anticipación."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "places",
+          "eyebrow": "Los lugares del plan",
+          "title": "Los sitios de este itinerario",
+          "intro": "Ordenados como aparecen en los cuatro días. Cada tarjeta indica la distancia desde Haven.",
+          "ids": [
+            "plaza-botero-museo-antioquia",
+            "palacio-cultura-rafael-uribe",
+            "mar-y-fuego",
+            "comuna-13-graffitour",
+            "pueblito-paisa-nutibara",
+            "jardin-botanico",
+            "parque-explora",
+            "laureles-la-70",
+            "guatape-piedra-penol",
+            "haven-wellness"
+          ]
+        },
+        {
+          "type": "faq",
+          "title": "Preguntas frecuentes",
+          "items": [
+            {
+              "q": "¿Cuántos días se recomiendan para Medellín?",
+              "a": "Tres días para la ciudad; cuatro si quiere sumar Guatapé o un tour de café. Con dos ve lo esencial, pero sin salidas."
+            },
+            {
+              "q": "¿Vale la pena ir a Guatapé desde Medellín?",
+              "a": "Sí: la vista desde la Piedra del Peñol sobre el embalse es de las más memorables de Antioquia. Necesita el día completo, unas 2 horas por trayecto."
+            },
+            {
+              "q": "¿Es seguro Medellín?",
+              "a": "Con precauciones normales, sí. Comuna 13 con guía, Centro de día, celular guardado y taxi o app de noche fuera de El Poblado. El hotel tiene recepción y seguridad 24 horas."
+            },
+            {
+              "q": "¿Cómo se llega a Guatapé y cómo moverse por Medellín?",
+              "a": "A Guatapé, en bus desde la Terminal del Norte (estación Caribe) o en carro privado. En la ciudad, metro, Metrocable y taxi o app; El Poblado se recorre a pie."
+            },
+            {
+              "q": "¿Qué hacer el día de llegada?",
+              "a": "Si llega después del check-in de las 3:00 p. m., suba al 360° Rooftop & Restaurante al atardecer y cene a pie en Provenza."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": "Siga planeando",
+          "keys": [
+            "guia-2-dias",
+            "guia-3-dias",
+            "guia-medellin",
+            "guia-a-pie",
+            "guia-donde-hospedarse"
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Cuatro días desde El Poblado",
+          "text": "Consulte disponibilidad y tarifa con sus fechas; le ayudamos a organizar Guatapé y Wellness.",
+          "wa": "Hola, voy a Medellín 4 días e incluyo Guatapé. ¿Tienen disponibilidad en Haven para estas fechas: "
+        }
+      ]
+    },
+    "en": {
+      "title": "4 days in Medellín",
+      "seo_title": "4 Days in Medellín: Itinerary with a Guatapé Day Trip",
+      "seo_desc": "4 days in Medellín: downtown, Comuna 13, neighborhoods and museums, plus a full day in Guatapé. Real travel times from El Poblado and mistakes to skip.",
+      "h1": "<em>4 days in Medellín</em>, with a Guatapé day trip",
+      "sub": "Three days of city and one of mountains and lakes, always ending with a walk to dinner in Provenza.",
+      "crumb": "4 days",
+      "blocks": [
+        {
+          "type": "text",
+          "eyebrow": "Why four days",
+          "title": "What fits into <em>4 days in Medellín</em>",
+          "paras": [
+            "With 4 days in Medellín you don't have to cut corners: you get the whole city plus a full day at Guatapé and El Peñol rock, no rushing.",
+            "Haven, in El Poblado, is your base. Each day starts with breakfast at the hotel and ends on foot in Provenza or Parque Lleras, about 2 minutes away."
+          ],
+          "sub": [
+            {
+              "h3": "Where to slot Guatapé",
+              "paras": [
+                "Go on a weekday if you can: weekends and holidays bring bigger crowds and full buses. Flying out on day four? Move Guatapé to day three."
+              ]
+            },
+            {
+              "h3": "Not sold on Guatapé?",
+              "paras": [
+                "Swap it for a coffee farm tour with pickup in El Poblado, or paragliding in San Félix, best in the morning."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "days",
+          "eyebrow": "The itinerary",
+          "title": "Four days in Medellín, morning to night",
+          "days": [
+            {
+              "t": "Day 1 · Downtown",
+              "items": [
+                {
+                  "h": "Morning",
+                  "p": "Cab downtown, about 25 minutes. Hit Plaza Botero and the Museo de Antioquia early, before 11 a.m. The free walking tour meets at Alpujarra station on weekdays at 10:00 a.m. and 2:30 p.m."
+                },
+                {
+                  "h": "Afternoon",
+                  "p": "Palacio de la Cultura, across the plaza: free with ID, plus a terrace with a view. Cab back to El Poblado before dark."
+                },
+                {
+                  "h": "Evening",
+                  "p": "Dinner at Mar y Fuego, a 2-minute walk, then a drink at Bar Carmen, one minute away (book Thursday through Saturday)."
+                }
+              ]
+            },
+            {
+              "t": "Day 2 · Comuna 13 and sunset",
+              "items": [
+                {
+                  "h": "Morning",
+                  "p": "Comuna 13 with a local guide: about 40 minutes by car, or metro to San Javier at the end of Line B. Expect about 2.5 hours on foot among the outdoor escalators and murals."
+                },
+                {
+                  "h": "Afternoon",
+                  "p": "Rest at the hotel, then late afternoon at Pueblito Paisa on Cerro Nutibara, 15 minutes by car. Take a cab up and try the buñuelos."
+                },
+                {
+                  "h": "Evening",
+                  "p": "Provenza on foot. For hearty paisa food, Mondongo's is 3 minutes away."
+                }
+              ]
+            },
+            {
+              "t": "Day 3 · Neighborhoods and culture",
+              "items": [
+                {
+                  "h": "Morning",
+                  "p": "The Botanical Garden and Parque Explora sit side by side, about 30 minutes by car or right by Universidad metro station. Lunch at In Situ, inside the garden; closed Mondays."
+                },
+                {
+                  "h": "Afternoon",
+                  "p": "Laureles, 20 minutes by car: coffee at Primer Parque and a walk down leafy streets to La 70."
+                },
+                {
+                  "h": "Evening",
+                  "p": "Back at Haven, sunset at the 360° Rooftop & Restaurant and an early, easy dinner: tomorrow starts at dawn."
+                }
+              ]
+            },
+            {
+              "t": "Day 4 · Guatapé and El Peñol",
+              "items": [
+                {
+                  "h": "Morning",
+                  "p": "Leave before 7 a.m. A private car takes close to 2 hours; the bus takes about 2 hours from Terminal del Norte, next to Caribe metro station. Climb the 700-plus steps of El Peñol before the heat sets in."
+                },
+                {
+                  "h": "Afternoon",
+                  "p": "Take a boat ride on the reservoir and stroll the town's brightly painted streets. Head back mid-afternoon to beat the traffic into the city."
+                },
+                {
+                  "h": "Evening",
+                  "p": "A massage at Wellness if you booked ahead, then a slow dinner in Provenza, on foot."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "eyebrow": "Make the plan work",
+          "title": "Common mistakes on a 4-day trip",
+          "paras": [
+            "Four days gives you breathing room, but also more pieces to fit together."
+          ],
+          "sub": [
+            {
+              "h3": "Doing Guatapé on a Sunday or holiday",
+              "paras": [
+                "That's when El Peñol and the buses are most crowded. If it's your only option, buy your bus ticket in advance and leave very early."
+              ]
+            },
+            {
+              "h3": "Forgetting Monday closures",
+              "paras": [
+                "Several city museums, including Casa de la Memoria, close on Mondays, and the free walking tour skips holidays. Use Monday for Comuna 13 or Guatapé."
+              ]
+            },
+            {
+              "h3": "Walking out of downtown after dark",
+              "paras": [
+                "At night, leave downtown by cab or rideshare."
+              ]
+            },
+            {
+              "h3": "Not booking ahead in high season",
+              "paras": [
+                "In August, during the Flower Festival, and in December, book your room, tours and Provenza dinners early."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "places",
+          "eyebrow": "On the route",
+          "title": "Every stop on this itinerary",
+          "intro": "In the order they appear over the four days. Each card shows the distance from Haven.",
+          "ids": [
+            "plaza-botero-museo-antioquia",
+            "palacio-cultura-rafael-uribe",
+            "mar-y-fuego",
+            "comuna-13-graffitour",
+            "pueblito-paisa-nutibara",
+            "jardin-botanico",
+            "parque-explora",
+            "laureles-la-70",
+            "guatape-piedra-penol",
+            "haven-wellness"
+          ]
+        },
+        {
+          "type": "faq",
+          "title": "Frequently asked questions",
+          "items": [
+            {
+              "q": "How many days do you need in Medellín?",
+              "a": "Three days for the city; four if you want Guatapé or a coffee farm tour. Two covers the essentials but no day trips."
+            },
+            {
+              "q": "Is Guatapé worth the day trip from Medellín?",
+              "a": "Yes: the view from El Peñol over the reservoir is one of the best in the region. Give it the whole day, with about 2 hours each way."
+            },
+            {
+              "q": "Is Medellín safe?",
+              "a": "With normal big-city precautions, yes. Comuna 13 with a guide, downtown by day, phone out of sight and cabs or rideshares at night outside El Poblado. The hotel has a 24-hour front desk and security."
+            },
+            {
+              "q": "How do you get to Guatapé and around Medellín?",
+              "a": "For Guatapé, take the bus from Terminal del Norte (Caribe station) or hire a private car. In the city, use the metro, Metrocable and cabs or rideshare; El Poblado is walkable."
+            },
+            {
+              "q": "What should I do on arrival day?",
+              "a": "If you get in after the 3:00 p.m. check-in, head up to the 360° Rooftop & Restaurant for sunset and walk to dinner in Provenza."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": "Keep planning",
+          "keys": [
+            "guia-2-dias",
+            "guia-3-dias",
+            "guia-medellin",
+            "guia-a-pie",
+            "guia-donde-hospedarse"
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Four days from El Poblado",
+          "text": "Check availability and rates for your dates; we'll help you plan Guatapé and book Wellness.",
+          "wa": "Hi, I'm spending 4 days in Medellín, including Guatapé. Do you have availability at Haven for these dates: "
+        }
+      ]
+    }
+  }
+}

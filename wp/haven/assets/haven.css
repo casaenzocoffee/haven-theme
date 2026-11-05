@@ -766,3 +766,4 @@ html.hvb-open,html.hvb-open body{overflow:hidden}
 .lp-cta h2{font:400 clamp(30px,3.4vw,52px)/1.1 var(--serif);margin:0 0 14px}
 .lp-cta p{color:var(--muted);margin:0 auto 30px;max-width:56ch}
 .lp-cta-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+@media (max-width:820px){.arch-float{right:0}}

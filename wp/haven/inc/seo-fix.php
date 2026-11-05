@@ -193,7 +193,10 @@ function hv_seo_fill_alts( $html ) {
 		if ( ! preg_match( '#\bsrc="[^"]*/([^/"]+?)(?:-\d+x\d+)?\.(?:webp|jpe?g|png)"#i', $m[0], $s ) ) return $m[0];
 		$stem = preg_replace( '/-\d+$/', '', strtolower( $s[1] ) );
 		foreach ( $map as $k => $v ) if ( 0 === strpos( $stem, $k ) ) return str_replace( 'alt=""', 'alt="' . esc_attr( $v[ $en ] ) . '"', $m[0] );
-		return $m[0];
+		// Sin descripción propia: nombre de la página + hotel (mejor que vacío para Google Imágenes y lectores de pantalla).
+		static $page = null;
+		if ( null === $page ) $page = trim( wp_strip_all_tags( (string) ( is_singular() ? get_the_title( get_queried_object_id() ) : '' ) ) );
+		return $page ? str_replace( 'alt=""', 'alt="' . esc_attr( $page . ( $en ? ' · Haven, El Poblado, Medellín' : ' · Haven, El Poblado, Medellín' ) ) . '"', $m[0] ) : $m[0];
 	}, $html );
 }
 
@@ -259,4 +262,13 @@ function hv_links_index( $eyebrow, $title_html, $keys, $intro = '' ) {
 	}
 	if ( ! $h ) return '';
 	return '<section class="sec lp-alt"><div class="wrap"><div class="sec-head" data-reveal><div><p class="eyebrow">' . e( $eyebrow ) . '</p><h2 style="margin-top:20px">' . wp_kses_post( $title_html ) . '</h2></div>' . ( $intro ? '<p>' . e( $intro ) . '</p>' : '' ) . '</div><ul class="lp-links" data-reveal>' . $h . '</ul></div></section>';
+}
+
+/** Fecha legible en el idioma de la página, sin depender del idioma del servidor. */
+function hv_fecha( $ts, $en = null ) {
+	$en = null === $en ? hv_en() : $en;
+	$m = (int) date( 'n', $ts );
+	if ( $en ) return date( 'F j, Y', $ts );
+	$meses = array( 1 => 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre' );
+	return date( 'j', $ts ) . ' de ' . $meses[ $m ] . ' de ' . date( 'Y', $ts );
 }

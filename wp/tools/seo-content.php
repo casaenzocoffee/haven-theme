@@ -131,7 +131,7 @@ foreach ( (array) ( $blog['new'] ?? array() ) as $np ) {
 		if ( is_wp_error( $id ) ) { WP_CLI::warning( $id->get_error_message() ); continue; }
 		if ( function_exists( 'pll_set_post_language' ) ) pll_set_post_language( $id, $lang );
 		update_post_meta( $id, '_hv_key', $np['key'] );
-		$date = 'en' === $lang ? date_i18n( 'F j, Y' ) : date_i18n( 'j \d\e F \d\e Y' );
+		$date = hv_fecha( time(), 'en' === $lang );
 		$put_data( $id, array( 'title' => $c['title'], 'ex' => $c['ex'], 'img' => $np['img'], 'prose' => $h2ids( $c['prose'] ), 'date' => $date ), '' );
 		$yoast( $id, $c['seo_title'] ?? '', $c['seo_desc'] ?? '' );
 		$bak[ $id ] = array( 'creado' => true );

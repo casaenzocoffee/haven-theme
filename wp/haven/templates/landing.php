@@ -23,7 +23,7 @@ echo hv_hero( $d['h1'] ?? e( get_the_title() ), $d['sub'] ?? '', $img, $crumbs, 
 // Fecha de actualización y autor (confianza y E-E-A-T), visibles bajo la portada.
 $upd = $d['updated'] ?? get_the_modified_date( 'Y-m-d' );
 $ts  = strtotime( $upd );
-$fmt = $en ? date( 'F j, Y', $ts ) : date_i18n( 'j \d\e F \d\e Y', $ts );
+$fmt = hv_fecha( $ts, $en );
 echo '<div class="lp-meta wrap"><span>' . e( $en ? 'By the Haven concierge' : 'Por el Concierge de Haven' ) . '</span><span aria-hidden="true">·</span><time datetime="' . ea( date( 'Y-m-d', $ts ) ) . '">' . e( ( $en ? 'Updated ' : 'Actualizado el ' ) . $fmt ) . '</time></div>';
 
 $places = array();
