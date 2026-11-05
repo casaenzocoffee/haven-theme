@@ -178,3 +178,29 @@ function hv_post_card( $p ) {
 	return '<article class="card post-card"><a class="card-media" href="' . $u . '">' . hv_img( $p['img'] ) . hv_img( $p['img'] ) . '<span class="card-tag">' . e( $p['date'] ) . '</span></a>'
 		. '<div class="card-body"><h3>' . e( $p['title'] ) . '</h3><p>' . e( $p['ex'] ) . '…</p><div class="card-actions"><a class="btn btn-ghost" href="' . $u . '">' . e( t( 'Leer artículo' ) ) . ' ' . HV_ARROW . '</a></div></div></article>';
 }
+
+/** Tipo de servicio según su nombre (ES/EN). */
+function hv_service_kind( $name ) {
+	$n = mb_strtolower( $name );
+	foreach ( array( 'm360' => '360|rooftop', 'mdesayuno' => 'desayuno|breakfast', 'mswing' => 'swing', 'minibar' => 'minibar|mini bar', 'traslado' => 'aeropuerto|airport|traslado|transfer',
+		'suero' => 'hidrataci|hydration|suero|iv ', 'spa' => 'spa|masaj|massage', 'tours' => 'tour', 'carro' => 'coche|carro|car rental|alquiler', 'dental' => 'dental|odont' ) as $k => $re ) {
+		if ( preg_match( '/' . $re . '/u', $n ) ) return $k;
+	}
+	return 'otro';
+}
+
+/** Símbolo propio de Haven para un servicio: arco dorado, ícono de línea y sello circular del hotel. */
+function hv_service_icon( $kind ) {
+	$I = array(
+		'minibar'  => '<rect x="20" y="10" width="24" height="44" rx="3"/><path d="M20 26h24M38 17v4M38 32v6"/><path d="M27 34h4v12h-4z" opacity=".55"/>',
+		'traslado' => '<path d="M32 8c2 0 3 2 3 4v12l17 10v5l-17-5v11l5 4v4l-8-2-8 2v-4l5-4V34l-17 5v-5l17-10V12c0-2 1-4 3-4z"/>',
+		'suero'    => '<path d="M32 9c7 10 13 18 13 26a13 13 0 0 1-26 0c0-8 6-16 13-26z"/><path d="M32 30v12M26 36h12"/>',
+		'spa'      => '<path d="M32 14c4 6 6 12 6 18s-2 10-6 14c-4-4-6-8-6-14s2-12 6-18z"/><path d="M32 46c-8-1-15-6-18-14 7-1 13 2 18 8M32 46c8-1 15-6 18-14-7-1-13 2-18 8"/><path d="M18 52h28"/>',
+		'tours'    => '<path d="M8 50h48"/><path d="M14 50c2-10 5-16 8-17s4 3 6 2c2-9 5-22 9-22s7 13 9 22c2 1 3-3 5-2s5 7 7 17"/><path d="M30 24h6M29 31h8" opacity=".55"/>',
+		'carro'    => '<path d="M12 40l4-12c1-3 3-4 6-4h20c3 0 5 1 6 4l4 12v8H12z"/><path d="M12 40h40"/><circle cx="21" cy="48" r="4"/><circle cx="43" cy="48" r="4"/><path d="M20 32h24" opacity=".55"/>',
+		'dental'   => '<path d="M22 12c4 0 6 2 10 2s6-2 10-2c6 0 9 5 9 11 0 7-3 10-4 16-1 7-2 13-6 13-3 0-3-9-6-9h-6c-3 0-3 9-6 9-4 0-5-6-6-13-1-6-4-9-4-16 0-6 3-11 9-11z"/>',
+		'otro'     => '<circle cx="32" cy="32" r="16"/><path d="M32 22v20M22 32h20"/>',
+	);
+	$p = $I[ $kind ] ?? $I['otro'];
+	return '<div class="sv-art" aria-hidden="true">' . hv_stamp() . '<span class="sv-arch"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">' . $p . '</svg></span></div>';
+}
