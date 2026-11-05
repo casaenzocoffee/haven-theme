@@ -11,4 +11,8 @@ $h    = hv_hero_data( $d, $def );
 $tags = $quiz ? array( t( '5 preguntas' ), t( '17 espacios' ) ) : array( t( '88 lugares' ), t( 'A pie' ), t( 'Plan a medida' ) );
 echo hv_hero( $h['title'], $h['sub'], $h['img'], array( array( t( 'Inicio' ), hv_url( 'home' ) ), array( $quiz ? t( '¿Qué suite va contigo?' ) : t( 'Guía Medellín' ), '' ) ), $h['eyebrow'], $d['hero']['tags'] ?? $tags );
 echo '<div id="c" class="hg-host hg-host--' . ( $quiz ? 'quiz' : 'guia' ) . '">' . hv_guia_html( $quiz ? 'quiz' : 'guia' ) . '</div>';
+if ( ! $quiz && function_exists( 'hv_links_index' ) ) {
+	$en = hv_en();
+	echo hv_links_index( $en ? 'The guide, topic by topic' : 'La guía, tema por tema', $en ? 'Plan your trip <em>by topic</em>' : 'Arme su viaje <em>por temas</em>', array_values( array_filter( hv_landing_keys(), function ( $k ) { return 0 === strpos( $k, 'guia-' ); } ) ), ( $en ? 'Updated ' . date( 'F j, Y', strtotime( get_the_modified_date( 'Y-m-d' ) ) ) : 'Actualizada el ' . date_i18n( 'j \\d\\e F \\d\\e Y', strtotime( get_the_modified_date( 'Y-m-d' ) ) ) ) . ( $en ? ' · By the Haven concierge' : ' · Por el Concierge de Haven' ) );
+}
 get_footer();

@@ -22,5 +22,6 @@ $F = array( 'penthouse' => t( 'Penthouse' ), 'presidencial' => t( 'Presidencial'
 <?php
 echo hv_bigq( 'Haven · A Design Hotel', $d['quote'] ?? t( 'Cada espacio está decorado y amoblado de forma individual.' ) );
 echo hv_hgallery( t( 'Galería' ), $d['gal_title'] ?? t( 'Detalles que <em>se sienten</em>' ), array_slice( $gal, 0, 10 ) );
+if ( function_exists( 'hv_links_index' ) ) echo hv_links_index( hv_en() ? 'Find your stay' : 'Encuentre su estadía', hv_en() ? 'Stays for every <em>plan</em>' : 'Estadías para cada <em>plan</em>', array( 'suites-de-lujo', 'penthouse', 'escapada-romantica', 'cerca-parque-lleras', 'dia-de-sol', 'celebraciones' ) );
 echo hv_bookbar();
 get_footer();

@@ -196,3 +196,67 @@ function hv_seo_fill_alts( $html ) {
 		return $m[0];
 	}, $html );
 }
+
+/* ---------- Páginas por intención y páginas de la guía (plantilla landing) ---------- */
+function hv_landing_keys() {
+	return array( 'cerca-parque-lleras', 'escapada-romantica', 'dia-de-sol', 'celebraciones',
+		'guia-a-pie', 'guia-provenza', 'guia-restaurantes-provenza', 'guia-restaurantes-poblado', 'guia-bares-lleras', 'guia-cafes', 'guia-rooftops', 'guia-el-poblado-a-pie',
+		'guia-2-dias', 'guia-3-dias', 'guia-4-dias', 'guia-donde-hospedarse' );
+}
+
+/** Datos de la guía (lugares, eventos) del idioma actual. */
+function hv_guia_data( $lang = null ) {
+	static $c = array();
+	$lang = $lang ?: hv_lang();
+	if ( ! isset( $c[ $lang ] ) ) {
+		$f = HAVEN_DIR . '/guia/data_' . $lang . '.json';
+		$c[ $lang ] = file_exists( $f ) ? (array) json_decode( file_get_contents( $f ), true ) : array();
+	}
+	return $c[ $lang ];
+}
+
+add_action( 'wp_head', function () {
+	if ( 'landing' !== hv_template_key() ) return;
+	$d = hv_data();
+	$url = get_permalink();
+	$places = array();
+	foreach ( (array) ( hv_guia_data()['lugares'] ?? array() ) as $p ) $places[ $p['id'] ] = $p;
+	foreach ( (array) ( $d['blocks'] ?? array() ) as $b ) {
+		$t = $b['type'] ?? '';
+		if ( 'faq' === $t ) {
+			$qs = array();
+			foreach ( (array) ( $b['items'] ?? array() ) as $q ) if ( ! empty( $q['q'] ) ) $qs[] = array( '@type' => 'Question', 'name' => $q['q'], 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => wp_strip_all_tags( $q['a'] ?? '' ) ) );
+			if ( $qs ) hv_ld( array( '@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => $qs ) );
+		}
+		if ( 'places' === $t ) {
+			$items = array(); $i = 0;
+			foreach ( (array) ( $b['ids'] ?? array() ) as $id ) {
+				if ( empty( $places[ $id ] ) ) continue;
+				$p = $places[ $id ];
+				$pl = array( '@type' => 'Place', 'name' => $p['n'], 'address' => trim( ( $p['dir'] ?? '' ) . ', Medellín' ), 'description' => $p['desc'] ?? '' );
+				if ( isset( $p['lat'], $p['lng'] ) ) $pl['geo'] = array( '@type' => 'GeoCoordinates', 'latitude' => $p['lat'], 'longitude' => $p['lng'] );
+				$items[] = array( '@type' => 'ListItem', 'position' => ++$i, 'item' => $pl );
+			}
+			if ( $items ) hv_ld( array( '@context' => 'https://schema.org', '@type' => 'ItemList', 'name' => wp_strip_all_tags( $b['title'] ?? get_the_title() ), 'itemListElement' => $items ) );
+		}
+		if ( 'days' === $t ) {
+			$parts = array();
+			foreach ( (array) ( $b['days'] ?? array() ) as $day ) $parts[] = array( '@type' => 'TouristTrip', 'name' => $day['t'] ?? '', 'description' => wp_strip_all_tags( implode( ' ', array_map( function ( $x ) { return ( $x['h'] ?? '' ) . ': ' . ( $x['p'] ?? '' ); }, (array) ( $day['items'] ?? array() ) ) ) ) );
+			hv_ld( array( '@context' => 'https://schema.org', '@type' => 'TouristTrip', 'name' => wp_strip_all_tags( $d['h1'] ?? get_the_title() ), 'url' => $url, 'touristType' => hv_en() ? 'Visitors to Medellín' : 'Visitantes de Medellín', 'itinerary' => array( '@type' => 'ItemList', 'itemListElement' => array_map( function ( $x, $i ) { return array( '@type' => 'ListItem', 'position' => $i + 1, 'item' => $x ); }, $parts, array_keys( $parts ) ) ), 'provider' => array( '@type' => 'Hotel', '@id' => home_url( '/#hotel' ), 'name' => 'Haven, A Design Hotel' ) ) );
+		}
+	}
+}, 7 );
+
+/** Índice de páginas (tarjetas de enlace) por claves; solo las que existen en el idioma actual. */
+function hv_links_index( $eyebrow, $title_html, $keys, $intro = '' ) {
+	$h = '';
+	foreach ( $keys as $k ) {
+		$id = hv_page_id( $k );
+		if ( ! $id || 'publish' !== get_post_status( $id ) ) continue;
+		$ld = hv_data( $id );
+		$label = wp_strip_all_tags( $ld['crumb'] ?? '' ) ?: get_the_title( $id );
+		$h .= '<li><a href="' . esc_url( get_permalink( $id ) ) . '"><span>' . e( $label ) . '</span>' . HV_ARROW . '</a></li>';
+	}
+	if ( ! $h ) return '';
+	return '<section class="sec lp-alt"><div class="wrap"><div class="sec-head" data-reveal><div><p class="eyebrow">' . e( $eyebrow ) . '</p><h2 style="margin-top:20px">' . wp_kses_post( $title_html ) . '</h2></div>' . ( $intro ? '<p>' . e( $intro ) . '</p>' : '' ) . '</div><ul class="lp-links" data-reveal>' . $h . '</ul></div></section>';
+}
