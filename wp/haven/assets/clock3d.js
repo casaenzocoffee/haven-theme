@@ -105,6 +105,7 @@ async function start(){
     if(document.hidden||!innerWidth){last=now;return;}
     if(VW!==innerWidth||VH!==innerHeight){size();measure();}
     if(!t0)t0=now;const raw=Math.max(0,now-last),d=Math.min(0.05,raw/1000);last=now;el+=Math.min(raw,50); // el: tiempo de animación sin saltos aunque el teléfono se trabe
+    if(big&&window.__hvIntroT0)el=Math.max(el,now-window.__hvIntroT0); // mismo reloj que la cuenta de la apertura
     if(big&&window.__introSkip&&!tExit){el=Math.max(el,DUR);}
     const P=reduce?1:Math.min(1,el/(big?DUR:3400));window.__introTakeover=1;if(big&&!introEl.classList.contains('go'))introEl.classList.add('go');
     if(big){if(P>.74)introEl.classList.add('brand');
@@ -139,7 +140,7 @@ async function start(){
         gg.attributes.position.needsUpdate=true;
         gMat.opacity=Math.max(P<.6?1:1-(P-.6)/.3,B>0?Math.min(1,B*4):0);
         gGroup.rotation.y=(1-Math.min(1,P/.62))*-1.6;gGroup.rotation.x=(1-Math.min(1,P/.62))*.8;
-        const c=Math.min(100,Math.round(ease(Math.min(1,P/.9))*100));if(c!==lastCnt){lastCnt=c;cntEl.textContent=String(c).padStart(2,'0');}
+        const c=Math.min(100,Math.round(ease(Math.min(1,P/.9))*100));if(c>lastCnt&&(!big||c>=+cntEl.textContent)){lastCnt=c;cntEl.textContent=String(c).padStart(2,'0');}
         if(P>.95&&!big)stage.classList.remove('counting');
       }else{
         gGroup.rotation.set(0,0,0);
