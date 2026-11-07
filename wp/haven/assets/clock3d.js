@@ -83,7 +83,7 @@ async function start(){
   const gDir=new Float32Array(G*3);for(let i=0;i<G;i++){const x=gTo[i*3],y=gTo[i*3+1],L=Math.hypot(x,y)||1;gDir[i*3]=x/L*(.6+Math.random())+(Math.random()-.5)*.9;gDir[i*3+1]=y/L*(.6+Math.random())+(Math.random()-.5)*.9+.25;gDir[i*3+2]=(Math.random()-.2)*1.6;}
   const introEl=document.getElementById('intro');const big=!!(introEl&&introEl.isConnected&&G);
   const cntEl=big?introEl.querySelector('.intro-count b'):stage.querySelector('.clock-count b');if(G&&!big)stage.classList.add('counting');if(big)cv.classList.add('top');
-  let tExit=0,I=big?1:0;const DUR=SM?1700:2600;
+  let tExit=0,I=big?1:0;const DUR=SM?1100:1600;
 
   scene.add(new THREE.AmbientLight(0xffffff,.25));
   const key=new THREE.DirectionalLight(0xfff1d6,2.4);key.position.set(3,4,6);scene.add(key);
@@ -109,10 +109,10 @@ async function start(){
     if(big&&window.__introSkip&&!tExit){el=Math.max(el,DUR);}
     const P=reduce?1:Math.min(1,el/(big?DUR:3400));window.__introTakeover=1;if(big&&!introEl.classList.contains('go'))introEl.classList.add('go');
     if(big){if(P>.74)introEl.classList.add('brand');
-      if(P>=1&&!tExit){tExit=now+(SM?450:1200);}
+      if(P>=1&&!tExit){tExit=now+(SM?250:500);}
       if(!tExit&&(!introEl.isConnected||introEl.classList.contains('out')))tExit=now; // si la apertura terminó por tiempo, el reloj igual vuela a su sitio
       if(tExit&&now>=tExit&&introEl.isConnected&&!introEl.classList.contains('out'))window.__introEnd&&window.__introEnd();
-      I=tExit?1-ease(cl((now-tExit)/(SM?700:1100))):1;
+      I=tExit?1-ease(cl((now-tExit)/(SM?600:800))):1;
       if(I<=0&&cv.classList.contains('top'))cv.classList.remove('top');}
     const p=cl((P-.5)/.5),e=ease(p);
     // Recorrido con scroll: S 0→1 a lo largo de ~1.7 pantallas
