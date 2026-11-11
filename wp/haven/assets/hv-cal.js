@@ -14,13 +14,16 @@
   const add=(s,n)=>{const d=parse(s);d.setDate(d.getDate()+n);return ymd(d);};
   const fmt=s=>{const d=parse(s);return d.getDate()+' '+L.m[d.getMonth()].slice(0,3);};
   const cache={};
-  const load=(api,room)=>cache[room]||(cache[room]=fetch(api+(api.includes('?')?'&':'?')+'room='+encodeURIComponent(room),{credentials:'omit'}).then(r=>{if(!r.ok)throw 0;return r.json();}));
+  const get=u=>fetch(u,{credentials:'omit'}).then(r=>{if(!r.ok)throw 0;return r.json();});
+  const rest=(api,room)=>get(api+(api.includes('?')?'&':'?')+'room='+encodeURIComponent(room));
+  // Primero la copia estática (uploads/hv-dispo, se renueva cada 5 min); si falla, la ruta REST de WordPress.
+  const load=(api,room,json)=>cache[room]||(cache[room]=json?get(json+encodeURIComponent(room)+'.json?v='+Math.floor(Date.now()/3e5)).then(j=>{if(!j||!j.days)throw 0;return j;}).catch(()=>rest(api,room)):rest(api,room));
   const track=a=>{(window.dataLayer=window.dataLayer||[]).push({event:'haven_click',accion:a});};
 
   function mount(el){
     if(el.dataset.ready)return;el.dataset.ready='1';
     const room=el.dataset.room;
-    load(el.dataset.api,room).then(j=>render(el,j)).catch(()=>{el.innerHTML='<p class="hv-cal-err">'+L.err+'</p><a class="btn btn-ghost" href="'+BOOK+'" target="_blank" rel="noopener">'+L.eng+'</a>';});
+    load(el.dataset.api,room,el.dataset.json).then(j=>render(el,j)).catch(()=>{el.innerHTML='<p class="hv-cal-err">'+L.err+'</p><a class="btn btn-ghost" href="'+BOOK+'" target="_blank" rel="noopener">'+L.eng+'</a>';});
   }
 
   function render(el,j){
@@ -96,7 +99,7 @@
     if(!dlg){dlg=document.createElement('dialog');dlg.className='hv-cal-dlg';document.body.appendChild(dlg);
       dlg.addEventListener('click',ev=>{if(ev.target===dlg||ev.target.closest('.hv-cal-x'))dlg.close();});
       dlg.addEventListener('close',()=>{document.documentElement.classList.remove('hvb-open');try{window.__hvLenis&&window.__hvLenis.start()}catch(_){}});}
-    dlg.innerHTML='<button type="button" class="hv-cal-x" aria-label="'+L.x+'">✕</button><h2 class="hv-cal-name">'+(b.dataset.name||'')+'</h2><div class="hv-cal" data-room="'+b.dataset.room+'" data-api="'+b.dataset.api+'"></div>';
+    dlg.innerHTML='<button type="button" class="hv-cal-x" aria-label="'+L.x+'">✕</button><h2 class="hv-cal-name">'+(b.dataset.name||'')+'</h2><div class="hv-cal" data-room="'+b.dataset.room+'" data-api="'+b.dataset.api+'" data-json="'+(b.dataset.json||'')+'"></div>';
     track('calendario_abrir_'+b.dataset.room);
     try{window.__hvLenis&&window.__hvLenis.stop()}catch(_){}
     document.documentElement.classList.add('hvb-open');

@@ -8,7 +8,8 @@
  * La copia se renueva poco a poco con WP-Cron (cada 5 min, unas 12 noches por vez): las próximas 120 noches quedan
  * al día cada hora más o menos. El cron real de cPanel (hv-cron-haven, 11 nov) ejecuta WP-Cron cada 5 minutos.
  *
- * Lo que ve el visitante: /wp-json/haven/v1/disponibilidad?room=<clave de la habitación> → { upd, days{fecha:cupo} }.
+ * Lo que ve el visitante: uploads/hv-dispo/<clave>.json (copia estática, rápida) o, de respaldo,
+ * /wp-json/haven/v1/disponibilidad?room=<clave de la habitación> → { upd, today, days{fecha:cupo} }.
  * No se muestran precios del motor (los precios "desde" siguen en inc/precios.php).
  */
 defined( 'ABSPATH' ) || exit;
@@ -97,8 +98,36 @@ function hv_dispo_refresh( $n = 12 ) {
 	foreach ( array_keys( $days ) as $d ) if ( ! isset( $want[ $d ] ) ) unset( $days[ $d ] ); // fuera de la ventana
 	ksort( $days );
 	update_option( 'hv_dispo', array( 'upd' => time(), 'names' => $names, 'days' => $days ), false );
+	hv_dispo_write_files();
 	return array( 'leidas' => $done, 'fallas' => $fail );
 }
+
+/** Datos que ve el visitante para una habitación: { upd, today, days{fecha:cupo} }. */
+function hv_dispo_payload( $key, $st = null ) {
+	$st    = null === $st ? get_option( 'hv_dispo', array() ) : $st;
+	$code  = hv_dispo_code_for( $key, $st['names'] ?? array() );
+	$today = ( new DateTime( 'today', hv_dispo_tz() ) )->format( 'Y-m-d' );
+	$days  = array();
+	foreach ( (array) ( $st['days'] ?? array() ) as $d => $x ) {
+		if ( $d < $today ) continue;
+		$days[ $d ] = $code ? (int) ( $x['c'][ $code ] ?? 0 ) : 0;
+	}
+	return array( 'upd' => (int) ( $st['upd'] ?? 0 ), 'today' => $today, 'days' => $days );
+}
+
+/* Copia estática por habitación en uploads/hv-dispo/<clave>.json (11 nov): el servidor la entrega sin arrancar WordPress
+   (una consulta a /wp-json tarda ~2,6 s en este hosting; el archivo, milisegundos). La ruta REST queda como respaldo. */
+function hv_dispo_dir() { $u = wp_upload_dir( null, false ); return array( trailingslashit( $u['basedir'] ) . 'hv-dispo/', trailingslashit( $u['baseurl'] ) . 'hv-dispo/' ); }
+function hv_dispo_write_files() {
+	list( $dir ) = hv_dispo_dir();
+	if ( ! wp_mkdir_p( $dir ) ) return;
+	$st = get_option( 'hv_dispo', array() );
+	foreach ( array_keys( hv_dispo_map() ) as $key ) {
+		$tmp = $dir . $key . '.json.tmp';
+		if ( false !== file_put_contents( $tmp, wp_json_encode( hv_dispo_payload( $key, $st ) ) ) ) rename( $tmp, $dir . $key . '.json' );
+	}
+}
+function hv_dispo_json_base() { list( $dir, $url ) = hv_dispo_dir(); return is_dir( $dir ) ? set_url_scheme( $url ) : ''; }
 
 /* WP-Cron: cada 5 minutos. */
 add_filter( 'cron_schedules', function ( $s ) { $s['hv_5min'] = array( 'interval' => 300, 'display' => 'Cada 5 minutos (Haven)' ); return $s; } );
@@ -144,6 +173,6 @@ add_action( 'rest_api_init', function () {
 function hv_dispo_block( $key, $name = '' ) {
 	if ( ! isset( hv_dispo_map()[ $key ] ) ) return '';
 	$en = hv_en();
-	return '<div class="hv-cal" data-room="' . ea( $key ) . '" data-name="' . ea( $name ) . '" data-api="' . esc_url( rest_url( 'haven/v1/disponibilidad' ) ) . '" data-lang="' . ( $en ? 'en' : 'es' ) . '">'
+	return '<div class="hv-cal" data-room="' . ea( $key ) . '" data-name="' . ea( $name ) . '" data-api="' . esc_url( rest_url( 'haven/v1/disponibilidad' ) ) . '" data-json="' . esc_url( hv_dispo_json_base() ) . '" data-lang="' . ( $en ? 'en' : 'es' ) . '">'
 		. '<p class="hv-cal-load">' . e( $en ? 'Loading live availability…' : 'Cargando disponibilidad en vivo…' ) . '</p></div>';
 }
