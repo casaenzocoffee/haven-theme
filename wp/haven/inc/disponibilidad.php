@@ -56,8 +56,9 @@ function hv_dispo_hotelcode( $force = false ) {
 	return $c['v'] ?? '';
 }
 
-/** Pregunta al motor por una noche. Devuelve array( codigo => cupo ) (vacío = nada libre) o null si falló. */
-function hv_dispo_fetch_night( $date, &$names = null ) {
+/** Pregunta al motor por una noche. Devuelve array( codigo => cupo ) (vacío = nada libre) o null si falló.
+ *  $prices recibe codigo => precio público por noche en COP (precio_desde del motor: tarifa más barata, IVA incluido; 11 nov). */
+function hv_dispo_fetch_night( $date, &$names = null, &$prices = null ) {
 	$code = hv_dispo_hotelcode();
 	if ( ! $code ) return null;
 	$out = ( new DateTime( $date ) )->modify( '+1 day' )->format( 'Y-m-d' );
@@ -73,6 +74,7 @@ function hv_dispo_fetch_night( $date, &$names = null ) {
 		if ( empty( $p['codigo'] ) ) continue;
 		$c[ $p['codigo'] ] = max( 0, (int) ( $p['cupo'] ?? 0 ) );
 		if ( is_array( $names ) && ! empty( $p['nombre'] ) ) $names[ $p['codigo'] ] = $p['nombre'];
+		if ( is_array( $prices ) && $c[ $p['codigo'] ] > 0 && (float) ( $p['precio_desde'] ?? 0 ) > 0 ) $prices[ $p['codigo'] ] = (int) round( (float) $p['precio_desde'] );
 	}
 	return $c;
 }
@@ -95,9 +97,10 @@ function hv_dispo_refresh( $n = 12 ) {
 	$t0 = microtime( true ); $done = 0; $fail = 0;
 	foreach ( array_slice( array_keys( $want ), 0, $n ) as $d ) {
 		if ( microtime( true ) - $t0 > 40 ) break;
-		$c = hv_dispo_fetch_night( $d, $names );
+		$pr = array();
+		$c = hv_dispo_fetch_night( $d, $names, $pr );
 		if ( null === $c ) { $fail++; if ( $fail >= 3 ) break; continue; }
-		$days[ $d ] = array( 't' => time(), 'c' => $c );
+		$days[ $d ] = array( 't' => time(), 'c' => $c, 'p' => $pr );
 		$done++;
 	}
 	foreach ( array_keys( $days ) as $d ) if ( ! isset( $want[ $d ] ) ) unset( $days[ $d ] ); // fuera de la ventana
@@ -112,13 +115,14 @@ function hv_dispo_payload( $key, $st = null ) {
 	$st    = null === $st ? get_option( 'hv_dispo', array() ) : $st;
 	$code  = hv_dispo_code_for( $key, $st['names'] ?? array() );
 	$today = ( new DateTime( 'today', hv_dispo_tz() ) )->format( 'Y-m-d' );
-	$days  = array();
+	$days  = array(); $prices = array();
 	foreach ( (array) ( $st['days'] ?? array() ) as $d => $x ) {
 		if ( $d < $today ) continue;
 		$days[ $d ] = $code ? (int) ( $x['c'][ $code ] ?? 0 ) : 0;
+		if ( $days[ $d ] > 0 && ! empty( $x['p'][ $code ] ) ) $prices[ $d ] = (int) $x['p'][ $code ];
 	}
 	// name: nombre del tipo de habitación en Roiback; el calendario lo pasa al motor (hv_room) para mostrarla de primera (etiqueta de GTM-TVFGX8W).
-	return array( 'upd' => (int) ( $st['upd'] ?? 0 ), 'today' => $today, 'name' => $code ? (string) ( ( $st['names'] ?? array() )[ $code ] ?? '' ) : '', 'days' => $days );
+	return array( 'upd' => (int) ( $st['upd'] ?? 0 ), 'today' => $today, 'name' => $code ? (string) ( ( $st['names'] ?? array() )[ $code ] ?? '' ) : '', 'days' => $days, 'cur' => 'COP', 'prices' => (object) $prices );
 }
 
 /* Copia estática por habitación en uploads/hv-dispo/<clave>.json (11 nov): el servidor la entrega sin arrancar WordPress
