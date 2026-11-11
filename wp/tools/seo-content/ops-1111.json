@@ -1,0 +1,288 @@
+[
+ {
+  "op": "more",
+  "key": "rooftop",
+  "lang": "es",
+  "blocks": [
+   {
+    "type": "text",
+    "eyebrow": "Rooftop con piscina en Medellín",
+    "title": "Qué hay en el <em>piso 11</em>",
+    "paras": [
+     "El 360° Rooftop & Restaurante ocupa la terraza del piso 11 de Haven, A Design Hotel, en la Calle 10A #36-29, El Poblado, a 2 minutos a pie de Provenza y del Parque Lleras. Reúne en un mismo lugar una piscina climatizada, un bar con coctelería de autor, la cocina del hotel y una vista de 360° de Medellín.",
+     "Está abierto a huéspedes y a visitantes. El horario es lunes a miércoles de 7:00 a. m. a 11:00 p. m.; jueves de 7:00 a. m. a 12:00 a. m.; viernes de 7:00 a. m. a 2:00 a. m.; sábado de 8:00 a. m. a 2:00 a. m., y domingo de 8:00 a. m. a 12:00 a. m. (hasta las 2:00 a. m. si el lunes es festivo). Puede reservar mesa en línea o por WhatsApp al +57 321 209 7033."
+    ],
+    "sub": [
+     {
+      "h3": "Día de sol en la piscina",
+      "paras": [
+       "Si no se hospeda en Haven, el servicio Sunny Days le da acceso a la piscina y la terraza con reserva previa por WhatsApp. Cuesta COP 150.000 por persona y es consumible: ese valor se descuenta en comida y bebida del rooftop. Los huéspedes tienen la piscina incluida."
+      ]
+     },
+     {
+      "h3": "Atardecer y cócteles",
+      "paras": [
+       "Para conseguir una mesa en el borde, suba unos 40 minutos antes de que caiga el sol. Los cócteles de la casa son el sello del lugar: Watermelon Mezcal, Don Julio Garden, Havenly Haven, Catrina y Medallo, nuestra versión del Moscow Mule."
+      ]
+     },
+     {
+      "h3": "Fiesta del primer viernes",
+      "paras": [
+       "El primer viernes de cada mes el rooftop tiene fiesta, con música en vivo y DJ, y los fines de semana hay sesiones de DJ en la terraza. En algunas fechas también hay fiestas en la piscina; pregúntenos por WhatsApp cuándo es la próxima."
+      ]
+     },
+     {
+      "h3": "Temporada de fin de año",
+      "paras": [
+       "En noviembre y diciembre el piso 11 recibe Acción de Gracias, la Alborada, la Nochebuena para dos y la cena de Año Nuevo, desde COP 180.000. Las fechas y los cupos están en la página de eventos de temporada."
+      ]
+     },
+     {
+      "h3": "Celebraciones privadas",
+      "paras": [
+       "Cumpleaños, despedidas y reuniones de empresa: el rooftop recibe eventos privados, y como es un hotel, el grupo puede quedarse a dormir en una suite o en el penthouse. Las condiciones se confirman con nuestro equipo según la fecha y el tamaño del grupo."
+      ]
+     }
+    ]
+   },
+   {
+    "type": "faq",
+    "items": [
+     {
+      "q": "¿El 360 Rooftop está abierto al público?",
+      "a": "Sí. El bar y el restaurante están abiertos a huéspedes y visitantes. Para usar la piscina sin hospedarse, reserve el día de sol por WhatsApp."
+     },
+     {
+      "q": "¿Cuál es el horario del rooftop?",
+      "a": "Lunes a miércoles de 7:00 a. m. a 11:00 p. m.; jueves de 7:00 a. m. a 12:00 a. m.; viernes de 7:00 a. m. a 2:00 a. m.; sábado de 8:00 a. m. a 2:00 a. m., y domingo de 8:00 a. m. a 12:00 a. m. (hasta las 2:00 a. m. si el lunes es festivo)."
+     },
+     {
+      "q": "¿Cuánto cuesta el día de sol en la piscina?",
+      "a": "COP 150.000 por persona, consumibles en comida y bebida del 360° Rooftop & Restaurante. Se reserva por WhatsApp al +57 321 209 7033."
+     },
+     {
+      "q": "¿La piscina es climatizada?",
+      "a": "Sí, la piscina del piso 11 es climatizada y tiene vista de 360° de Medellín."
+     },
+     {
+      "q": "¿Cómo reservo una mesa?",
+      "a": "En línea, desde el botón de reserva de esta página, o por WhatsApp al +57 321 209 7033."
+     },
+     {
+      "q": "¿Dónde queda el 360 Rooftop?",
+      "a": "En el piso 11 de Haven, A Design Hotel, Calle 10A #36-29, El Poblado, Medellín, a 2 minutos a pie de Provenza."
+     },
+     {
+      "q": "¿Se puede fumar en el rooftop?",
+      "a": "Solo en la zona de la piscina del piso 11."
+     }
+    ]
+   },
+   {
+    "type": "links",
+    "eyebrow": "Más del piso 11",
+    "title": "Planes en el <em>rooftop</em>",
+    "keys": [
+     "dia-de-sol",
+     "celebraciones",
+     "gastronomia",
+     "escapada-romantica",
+     "guia-rooftops"
+    ]
+   }
+  ]
+ },
+ {
+  "op": "insert",
+  "key": "guia-rooftops",
+  "lang": "es",
+  "at": 4,
+  "blocks": [
+   {
+    "type": "text",
+    "eyebrow": "Para un día de sol",
+    "title": "Rooftops con piscina en Medellín",
+    "paras": [
+     "Si lo que busca es un rooftop con piscina, estas son las opciones que más nos preguntan los huéspedes, además de la nuestra en el piso 11 y de Envy, sobre The Charlee."
+    ],
+    "sub": [
+     {
+      "h3": "Etro Rooftop, en Binn Hotel",
+      "paras": [
+       "En el piso 16 del Binn Hotel, en la parte alta de El Poblado, con piscina en la azotea y vista panorámica del valle. Queda en subida: llegue en taxi."
+      ]
+     },
+     {
+      "h3": "Rooftop del Marquee Hotel",
+      "paras": [
+       "En El Poblado, con piscina y jacuzzi al aire libre, asoleadoras y un bar de coctelería con vista a la ciudad."
+      ]
+     },
+     {
+      "h3": "Trópico Rooftop",
+      "paras": [
+       "En el centro de Medellín, en La Candelaria (Carrera 44 #47-02, piso 7). Tiene piscina y de noche se vuelve fiesta. Es una buena excusa para combinar con un recorrido por el centro, siempre en taxi desde El Poblado."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "op": "yoast",
+  "key": "rooftop",
+  "lang": "es",
+  "t": "360 Rooftop Medellín: piscina, bar y vista | Haven",
+  "d": null
+ },
+ {
+  "op": "yoast",
+  "key": "guia-rooftops",
+  "lang": "es",
+  "t": "Mejores rooftops de Medellín: guía desde El Poblado | Haven",
+  "d": "Los rooftops de Medellín que recomendamos: con piscina, para el atardecer o de fiesta, del piso 11 de Haven a Envy, Etro y Mamba Negra, con cómo llegar."
+ },
+ {
+  "op": "more",
+  "key": "rooftop",
+  "lang": "en",
+  "blocks": [
+   {
+    "type": "text",
+    "eyebrow": "Rooftop pool in Medellín",
+    "title": "What's on the <em>11th floor</em>",
+    "paras": [
+     "The 360° Rooftop & Restaurant takes up the 11th-floor terrace of Haven, A Design Hotel, at Calle 10A #36-29, El Poblado, a 2-minute walk from Provenza and Parque Lleras. It brings together a heated pool, a bar with signature cocktails, the hotel's kitchen and a 360° view of Medellín.",
+     "It is open to hotel guests and visitors. Opening hours: Monday to Wednesday 7:00 a.m.–11:00 p.m.; Thursday 7:00 a.m.–midnight; Friday 7:00 a.m.–2:00 a.m.; Saturday 8:00 a.m.–2:00 a.m.; and Sunday 8:00 a.m.–midnight (until 2:00 a.m. before a public holiday). Book a table online or by WhatsApp at +57 321 209 7033."
+    ],
+    "sub": [
+     {
+      "h3": "Pool day",
+      "paras": [
+       "If you are not staying at Haven, our Sunny Days service gives you access to the pool and terrace with a booking made in advance on WhatsApp. It costs COP 150,000 per person and is fully redeemable on food and drinks at the rooftop. Hotel guests have pool access included."
+      ]
+     },
+     {
+      "h3": "Sunset and cocktails",
+      "paras": [
+       "For a table on the edge, come up about 40 minutes before sunset. The house cocktails are the rooftop's signature: Watermelon Mezcal, Don Julio Garden, Havenly Haven, Catrina and Medallo, our take on the Moscow Mule."
+      ]
+     },
+     {
+      "h3": "First-Friday party",
+      "paras": [
+       "On the first Friday of every month the rooftop throws a party with live music and a DJ, and on weekends there are DJ sets on the terrace. Some dates also bring pool parties; ask us on WhatsApp when the next one is."
+      ]
+     },
+     {
+      "h3": "Holiday season",
+      "paras": [
+       "In November and December the 11th floor hosts Thanksgiving, the Alborada, Christmas Eve for two and New Year's Eve dinner, from COP 180,000. Dates and availability are on the holiday season events page."
+      ]
+     },
+     {
+      "h3": "Private celebrations",
+      "paras": [
+       "Birthdays, bachelor and bachelorette parties and company gatherings: the rooftop hosts private events, and since it is a hotel, the group can stay over in a suite or the penthouse. Terms are confirmed with our team depending on the date and group size."
+      ]
+     }
+    ]
+   },
+   {
+    "type": "faq",
+    "items": [
+     {
+      "q": "Is the 360 Rooftop open to the public?",
+      "a": "Yes. The bar and restaurant are open to guests and visitors. To use the pool without staying at the hotel, book a pool day on WhatsApp."
+     },
+     {
+      "q": "What are the rooftop's opening hours?",
+      "a": "Monday to Wednesday 7:00 a.m.–11:00 p.m.; Thursday 7:00 a.m.–midnight; Friday 7:00 a.m.–2:00 a.m.; Saturday 8:00 a.m.–2:00 a.m.; and Sunday 8:00 a.m.–midnight (until 2:00 a.m. before a public holiday)."
+     },
+     {
+      "q": "How much is a pool day?",
+      "a": "COP 150,000 per person, fully redeemable on food and drinks at the 360° Rooftop & Restaurant. Book on WhatsApp at +57 321 209 7033."
+     },
+     {
+      "q": "Is the pool heated?",
+      "a": "Yes, the 11th-floor pool is heated and has a 360° view of Medellín."
+     },
+     {
+      "q": "How do I book a table?",
+      "a": "Online, with the booking button on this page, or by WhatsApp at +57 321 209 7033."
+     },
+     {
+      "q": "Where is the 360 Rooftop?",
+      "a": "On the 11th floor of Haven, A Design Hotel, Calle 10A #36-29, El Poblado, Medellín, a 2-minute walk from Provenza."
+     },
+     {
+      "q": "Can I smoke on the rooftop?",
+      "a": "Only in the pool area on the 11th floor."
+     }
+    ]
+   },
+   {
+    "type": "links",
+    "eyebrow": "More on the 11th floor",
+    "title": "Plans on the <em>rooftop</em>",
+    "keys": [
+     "dia-de-sol",
+     "celebraciones",
+     "gastronomia",
+     "escapada-romantica",
+     "guia-rooftops"
+    ]
+   }
+  ]
+ },
+ {
+  "op": "insert",
+  "key": "guia-rooftops",
+  "lang": "en",
+  "at": 4,
+  "blocks": [
+   {
+    "type": "text",
+    "eyebrow": "For a pool day",
+    "title": "Rooftop pools in Medellín",
+    "paras": [
+     "If what you are after is a rooftop with a pool, these are the options our guests ask about most, besides ours on the 11th floor and Envy, on top of The Charlee."
+    ],
+    "sub": [
+     {
+      "h3": "Etro Rooftop, at Binn Hotel",
+      "paras": [
+       "On the 16th floor of Binn Hotel, in upper El Poblado, with a rooftop pool and panoramic views of the valley. It is uphill: take a taxi."
+      ]
+     },
+     {
+      "h3": "Marquee Hotel rooftop",
+      "paras": [
+       "In El Poblado, with an outdoor pool and hot tub, sun loungers and a cocktail bar overlooking the city."
+      ]
+     },
+     {
+      "h3": "Trópico Rooftop",
+      "paras": [
+       "In downtown Medellín, in La Candelaria (Carrera 44 #47-02, 7th floor). It has a pool and turns into a party at night. Pair it with a walk around downtown, and take a taxi from El Poblado."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "op": "yoast",
+  "key": "rooftop",
+  "lang": "en",
+  "t": "360 Rooftop Medellín: pool, bar and city views | Haven",
+  "d": null
+ },
+ {
+  "op": "yoast",
+  "key": "guia-rooftops",
+  "lang": "en",
+  "t": "Best Rooftop Bars in Medellín: El Poblado Guide | Haven",
+  "d": "The rooftop bars in Medellín we recommend: with a pool, for sunset or for a party, from Haven's 11th floor to Envy, Etro and Mamba Negra, and how to get there."
+ }
+]
