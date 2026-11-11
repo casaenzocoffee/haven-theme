@@ -99,13 +99,13 @@ async function start(){
   const mouse={x:0,y:0,tx:0,ty:0};
   addEventListener('pointermove',e=>{mouse.tx=(e.clientX/innerWidth-.5)*2;mouse.ty=(e.clientY/innerHeight-.5)*2;},{passive:true});
   const TAU=Math.PI*2,ease=p=>1-Math.pow(1-p,4),cl=v=>v<0?0:v>1?1:v,sm=v=>v*v*(3-2*v),lerp=(a,b,t)=>a+(b-a)*t;let lastCnt=-1;
-  let t0=0,last=performance.now(),idle=false,el=0;
+  let t0=0,t0s=0,last=performance.now(),idle=false,el=0;
   const frame=now=>{
     requestAnimationFrame(frame);
     if(document.hidden||!innerWidth){last=now;return;}
     if(VW!==innerWidth||VH!==innerHeight){size();measure();}
     if(!t0)t0=now;const raw=Math.max(0,now-last),d=Math.min(0.05,raw/1000);last=now;el+=Math.min(raw,50); // el: tiempo de animación sin saltos aunque el teléfono se trabe
-    if(big&&window.__hvIntroT0)el=Math.max(el,now-window.__hvIntroT0); // mismo reloj que la cuenta de la apertura
+    if(big&&!t0s){t0s=1;const c0=+cntEl.textContent||0;el=Math.max(el,DUR*.9*(1-Math.pow(1-Math.min(.99,c0/100),.25)));} // el reloj se arma completo, empezando donde va la cuenta
     if(big&&window.__introSkip&&!tExit){el=Math.max(el,DUR);}
     const P=reduce?1:Math.min(1,el/(big?DUR:3400));window.__introTakeover=1;if(big&&!introEl.classList.contains('go'))introEl.classList.add('go');
     if(big){if(P>.74)introEl.classList.add('brand');
