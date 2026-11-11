@@ -1711,8 +1711,8 @@
   "parent": "guia-medellin",
   "es": {
    "title": "Rooftops en Medellín",
-   "seo_title": "Rooftops en Medellín: dónde ver el atardecer en El Poblado",
-   "seo_desc": "Rooftops en Medellín para ver caer la tarde: el 360° de Haven con piscina, Náufrago, Envy y Mamba Negra, más los miradores que valen el taxi, con cuándo ir.",
+   "seo_title": "Mejores rooftops de Medellín: guía desde El Poblado | Haven",
+   "seo_desc": "Los rooftops de Medellín que recomendamos: con piscina, para el atardecer o de fiesta, del piso 11 de Haven a Envy, Etro y Mamba Negra, con cómo llegar.",
    "h1": "Rooftops en Medellín para <em>ver caer la tarde</em>",
    "sub": "Terrazas y miradores que recomendamos, empezando por el nuestro en el piso 11.",
    "crumb": "Rooftops",
@@ -1794,6 +1794,34 @@
      ]
     },
     {
+     "type": "text",
+     "eyebrow": "Para un día de sol",
+     "title": "Rooftops con piscina en Medellín",
+     "paras": [
+      "Si lo que busca es un rooftop con piscina, estas son las opciones que más nos preguntan los huéspedes, además de la nuestra en el piso 11 y de Envy, sobre The Charlee."
+     ],
+     "sub": [
+      {
+       "h3": "Etro Rooftop, en Binn Hotel",
+       "paras": [
+        "En el piso 16 del Binn Hotel, en la parte alta de El Poblado, con piscina en la azotea y vista panorámica del valle. Queda en subida: llegue en taxi."
+       ]
+      },
+      {
+       "h3": "Rooftop del Marquee Hotel",
+       "paras": [
+        "En El Poblado, con piscina y jacuzzi al aire libre, asoleadoras y un bar de coctelería con vista a la ciudad."
+       ]
+      },
+      {
+       "h3": "Trópico Rooftop",
+       "paras": [
+        "En el centro de Medellín, en La Candelaria (Carrera 44 #47-02, piso 7). Tiene piscina y de noche se vuelve fiesta. Es una buena excusa para combinar con un recorrido por el centro, siempre en taxi desde El Poblado."
+       ]
+      }
+     ]
+    },
+    {
      "type": "places",
      "eyebrow": "Con vista",
      "title": "Los rooftops y miradores que recomendamos",
@@ -1867,8 +1895,8 @@
   },
   "en": {
    "title": "Rooftop Bars in Medellín",
-   "seo_title": "Rooftop Bars in Medellín: Best Sunset Views in El Poblado",
-   "seo_desc": "The best rooftop bars in Medellín for sunset: Haven's 360° with its pool, Náufrago, Envy and Mamba Negra, plus lookouts worth the cab ride and when to go.",
+   "seo_title": "Best Rooftop Bars in Medellín: El Poblado Guide | Haven",
+   "seo_desc": "The rooftop bars in Medellín we recommend: with a pool, for sunset or for a party, from Haven's 11th floor to Envy, Etro and Mamba Negra, and how to get there.",
    "h1": "Rooftop bars in Medellín <em>for sunset</em>",
    "sub": "The terraces and lookouts we recommend, starting with our own on the 11th floor.",
    "crumb": "Rooftop bars",
@@ -1945,6 +1973,34 @@
        "h3": "El Tesoro Parque Comercial",
        "paras": [
         "An open-air mall on the El Poblado hillside; its upper terraces have panoramic valley views at the end of the day."
+       ]
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "eyebrow": "For a pool day",
+     "title": "Rooftop pools in Medellín",
+     "paras": [
+      "If what you are after is a rooftop with a pool, these are the options our guests ask about most, besides ours on the 11th floor and Envy, on top of The Charlee."
+     ],
+     "sub": [
+      {
+       "h3": "Etro Rooftop, at Binn Hotel",
+       "paras": [
+        "On the 16th floor of Binn Hotel, in upper El Poblado, with a rooftop pool and panoramic views of the valley. It is uphill: take a taxi."
+       ]
+      },
+      {
+       "h3": "Marquee Hotel rooftop",
+       "paras": [
+        "In El Poblado, with an outdoor pool and hot tub, sun loungers and a cocktail bar overlooking the city."
+       ]
+      },
+      {
+       "h3": "Trópico Rooftop",
+       "paras": [
+        "In downtown Medellín, in La Candelaria (Carrera 44 #47-02, 7th floor). It has a pool and turns into a party at night. Pair it with a walk around downtown, and take a taxi from El Poblado."
        ]
       }
      ]
