@@ -5,8 +5,8 @@
  * De dónde sale: el mismo motor de reservas de Roiback (havenmedellin.backhotelite.com) que usa la web para reservar.
  * Por cada noche se pregunta al motor qué tipos de habitación están libres (1 noche, 1 adulto, para no ocultar ninguna),
  * y se guarda una copia en la opción hv_dispo: { upd, names{codigo:nombre}, days{AAAA-MM-DD:{t:hora, c:{codigo:cupo}}} }.
- * La copia se renueva poco a poco con WP-Cron (cada 5 min, unas 12 noches por vez): las próximas 120 noches quedan
- * al día cada hora más o menos. El cron real de cPanel (hv-cron-haven, 11 nov) ejecuta WP-Cron cada 5 minutos.
+ * La copia se renueva poco a poco con WP-Cron (cada 5 min, 20 noches por vez, primero las cercanas): las próximas
+ * 2 semanas quedan al día cada ~5 min y las 120 noches en menos de una hora. El cron real de cPanel (hv-cron-haven, 11 nov) ejecuta WP-Cron cada 5 minutos.
  *
  * Lo que ve el visitante: uploads/hv-dispo/<clave>.json (copia estática, rápida) o, de respaldo,
  * /wp-json/haven/v1/disponibilidad?room=<clave de la habitación> → { upd, today, days{fecha:cupo} }.
@@ -85,7 +85,12 @@ function hv_dispo_refresh( $n = 12 ) {
 	$names = (array) ( $st['names'] ?? array() );
 	$today = new DateTime( 'today', $tz );
 	$want = array();
-	for ( $i = 0; $i < HV_DISPO_DAYS; $i++ ) { $d = ( clone $today )->modify( "+$i day" )->format( 'Y-m-d' ); $want[ $d ] = (int) ( $days[ $d ]['t'] ?? 0 ); }
+	// Prioridad (11 nov): las fechas cercanas cuentan como "más viejas" para renovarse primero.
+	// Con 20 noches cada 5 min: próximas 2 semanas al día cada ~5 min, el mes siguiente cada ≤30 min, el resto cada ≤50 min.
+	for ( $i = 0; $i < HV_DISPO_DAYS; $i++ ) {
+		$d = ( clone $today )->modify( "+$i day" )->format( 'Y-m-d' );
+		$want[ $d ] = (int) ( $days[ $d ]['t'] ?? 0 ) - ( $i < 14 ? 2700 : ( $i < 45 ? 1200 : 0 ) );
+	}
 	asort( $want ); // primero las que nunca se han leído o llevan más tiempo
 	$t0 = microtime( true ); $done = 0; $fail = 0;
 	foreach ( array_slice( array_keys( $want ), 0, $n ) as $d ) {
@@ -132,7 +137,7 @@ function hv_dispo_json_base() { list( $dir, $url ) = hv_dispo_dir(); return is_d
 /* WP-Cron: cada 5 minutos. */
 add_filter( 'cron_schedules', function ( $s ) { $s['hv_5min'] = array( 'interval' => 300, 'display' => 'Cada 5 minutos (Haven)' ); return $s; } );
 add_action( 'init', function () { if ( ! wp_next_scheduled( 'hv_dispo_cron' ) ) wp_schedule_event( time() + 60, 'hv_5min', 'hv_dispo_cron' ); } );
-add_action( 'hv_dispo_cron', function () { hv_dispo_refresh( 12 ); } );
+add_action( 'hv_dispo_cron', function () { hv_dispo_refresh( 20 ); } );
 
 /** Código de Roiback para una clave del sitio (resuelve los que se buscan por nombre). */
 function hv_dispo_code_for( $key, $names ) {
