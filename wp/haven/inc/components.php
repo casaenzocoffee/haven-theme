@@ -121,7 +121,8 @@ function hv_room_card( $r, $hidden = false ) {
   $cal = function_exists( 'hv_dispo_map' ) && isset( hv_dispo_map()[ $hk ] )
     ? '<button type="button" class="btn btn-gold card-cal-btn" data-room="' . ea( $hk ) . '" data-name="' . ea( $r['name'] ) . '" data-api="' . esc_url( rest_url( 'haven/v1/disponibilidad' ) ) . '" data-json="' . esc_url( function_exists( 'hv_dispo_json_base' ) ? hv_dispo_json_base() : '' ) . '" data-track="disponibilidad_' . ea( $slug ) . '">' . e( hv_en() ? 'Live availability' : 'Ver disponibilidad en vivo' ) . ' ' . HV_ARROW . '</button>'
     : '<a class="btn btn-gold" href="#reservar" data-track="reservar_' . ea( $slug ) . '">' . e( t( 'Reservar' ) ) . ' ' . HV_ARROW . '</a>'; ?>
-  <div class="card-actions"><a class="btn btn-ghost" href="<?php echo esc_url( $url ); ?>"><?php echo e( t( 'Ver' ) ), ' ', HV_OUT; ?></a><?php echo $cal; ?></div></div>
+  <?php $suite = false !== stripos( $r['name'], 'suite' ); $ver = hv_en() ? ( $suite ? 'Explore the suite' : 'Explore the room' ) : ( $suite ? 'Conocer la suite' : 'Conocer la habitación' ); ?>
+  <div class="card-actions"><a class="btn btn-ghost" href="<?php echo esc_url( $url ); ?>" data-track="conocer_<?php echo ea( $slug ); ?>"><?php echo e( $ver ), ' ', HV_ARROW; ?></a><?php echo $cal; ?></div></div>
 </article>
 <?php return ob_get_clean();
 }
