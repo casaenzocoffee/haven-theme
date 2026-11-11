@@ -7,7 +7,7 @@ function hv_template_map() {
 		'home' => 'front-page', 'habitaciones' => 'rooms', 'penthouse' => 'category', 'presidencial' => 'category', 'suites-de-lujo' => 'category', // penthouse y suites-de-lujo pasan a 'landing' cuando su contenido tiene bloques (ver abajo)
 		'rooftop' => 'experience', 'swing' => 'experience', 'wellness' => 'experience', 'eventos' => 'experience',
 		'gastronomia' => 'gastronomy', 'servicios' => 'services', 'contacto' => 'contact', 'preguntas-frecuentes' => 'faq', 'serena-rewards' => 'rewards',
-		'politica-de-visitantes' => 'legal', 'terminos-y-condiciones' => 'legal', 'blogs' => 'blogs', 'guia-medellin' => 'guide', 'que-suite-elegir' => 'guide',
+		'politica-de-visitantes' => 'legal', 'terminos-y-condiciones' => 'legal', 'blogs' => 'blogs', 'guia-medellin' => 'guide', 'que-suite-elegir' => 'guide', 'reservar' => 'reservar',
 	) + array_fill_keys( hv_landing_keys(), 'landing' );
 }
 

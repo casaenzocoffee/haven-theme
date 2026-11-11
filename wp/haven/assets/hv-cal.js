@@ -4,10 +4,10 @@
   const EN=(document.documentElement.lang||'').slice(0,2)==='en';
   const L=EN?{t:'Live availability',s:'Pick your check-in and check-out dates',upd:'Updated',ago:'min ago',now:'just now',av:'Available',no:'Not available',
       ci:'Check-in',co:'Check-out',book:'Book these dates',n:['night','nights'],err:'We could not load availability right now. You can still check dates in the booking engine.',
-      eng:'Open booking engine',pn:'Nightly rate · VAT incl.',from:'from',tax:'VAT incl.',clear:'Clear',pick:'Now choose your check-out date',blocked:'Some nights in that range are not available',m:['January','February','March','April','May','June','July','August','September','October','November','December'],w:['Mo','Tu','We','Th','Fr','Sa','Su'],x:'Close'}
+      eng:'Open booking engine',pn:'Nightly rate · VAT incl.',pnh:'Lowest nightly rate · VAT incl.',from:'from',tax:'VAT incl.',clear:'Clear',pick:'Now choose your check-out date',blocked:'Some nights in that range are not available',m:['January','February','March','April','May','June','July','August','September','October','November','December'],w:['Mo','Tu','We','Th','Fr','Sa','Su'],x:'Close'}
     :{t:'Disponibilidad en vivo',s:'Elija su fecha de llegada y de salida',upd:'Actualizado hace',ago:'min',now:'hace un momento',av:'Disponible',no:'No disponible',
       ci:'Llegada',co:'Salida',book:'Reservar estas fechas',n:['noche','noches'],err:'No pudimos cargar la disponibilidad en este momento. Puede consultar las fechas en el motor de reservas.',
-      eng:'Abrir motor de reservas',pn:'Precio por noche · IVA incl.',from:'desde',tax:'IVA incluido',clear:'Borrar',pick:'Ahora elija su fecha de salida',blocked:'Algunas noches de ese rango no están disponibles',m:['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],w:['Lu','Ma','Mi','Ju','Vi','Sá','Do'],x:'Cerrar'};
+      eng:'Abrir motor de reservas',pn:'Precio por noche · IVA incl.',pnh:'Desde, por noche · IVA incl.',from:'desde',tax:'IVA incluido',clear:'Borrar',pick:'Ahora elija su fecha de salida',blocked:'Algunas noches de ese rango no están disponibles',m:['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],w:['Lu','Ma','Mi','Ju','Vi','Sá','Do'],x:'Cerrar'};
   const BOOK='https://havenmedellin.backhotelite.com/'+(EN?'en':'es')+'/bookcore/availability/havenmedellin/';
   const pad=n=>(n<10?'0':'')+n, ymd=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
   const parse=s=>{const[a,b,c]=s.split('-').map(Number);return new Date(a,b-1,c,12);};
@@ -23,9 +23,21 @@
   const load=(api,room,json)=>cache[room]||(cache[room]=json?get(json+encodeURIComponent(room)+'.json?v='+Math.floor(Date.now()/3e5)).then(j=>{if(!j||!j.days)throw 0;return j;}).catch(()=>rest(api,room)):rest(api,room));
   const track=a=>{(window.dataLayer=window.dataLayer||[]).push({event:'haven_click',accion:a});};
 
+  // Modo hotel completo (página /reservar/): por noche, cuántas habitaciones caben para N huéspedes y el precio más bajo.
+  const hotel=(H,g,caps)=>{const days={},prices={};for(const d in H.days){let n=0,min=0;for(const k in H.days[d]){if((caps[k]||99)<g)continue;n++;const p=H.days[d][k];if(p&&(!min||p<min))min=p;}days[d]=n;if(n&&min)prices[d]=min;}return {upd:H.upd,today:H.today,days,prices};};
   function mount(el){
     if(el.dataset.ready)return;el.dataset.ready='1';
     const room=el.dataset.room;
+    if(room==='_hotel'){
+      const caps=JSON.parse(el.dataset.caps||'{}');
+      fetch(el.dataset.json+'_hotel.json?v='+Math.floor(Date.now()/3e5),{credentials:'omit'}).then(r=>{if(!r.ok)throw 0;return r.json();}).then(H=>{
+        window.hvHotel=H;let cur=el;
+        const draw=g=>{const fresh=cur.cloneNode(false);cur.replaceWith(fresh);cur=fresh;fresh.dataset.ready='1';render(fresh,hotel(H,g,caps));};
+        draw(+el.dataset.guests||2);
+        document.addEventListener('hvcal:guests',e=>{draw(e.detail);document.dispatchEvent(new CustomEvent('hvcal:range',{detail:null}));});
+      }).catch(()=>{el.innerHTML='<p class="hv-cal-err">'+L.err+'</p><a class="btn btn-ghost" href="'+BOOK+'" target="_blank" rel="noopener">'+L.eng+'</a>';});
+      return;
+    }
     load(el.dataset.api,room,el.dataset.json).then(j=>render(el,j)).catch(()=>{el.innerHTML='<p class="hv-cal-err">'+L.err+'</p><a class="btn btn-ghost" href="'+BOOK+'" target="_blank" rel="noopener">'+L.eng+'</a>';});
   }
 
@@ -41,7 +53,7 @@
     el.innerHTML='<div class="hv-cal-head"><div><p class="eyebrow">'+L.t+'</p><p class="hv-cal-sub">'+L.s+'</p></div>'
       +'<div class="hv-cal-nav"><button type="button" class="hv-cal-prev" aria-label="‹">‹</button><button type="button" class="hv-cal-next" aria-label="›">›</button></div></div>'
       +'<div class="hv-cal-months"></div>'
-      +'<div class="hv-cal-foot"><div class="hv-cal-legend"><span><i class="ok"></i>'+L.av+'</span><span><i class="no"></i>'+L.no+'</span>'+(Object.keys(prices).length?'<span class="hv-cal-pn">'+L.pn+'</span>':'')+'<span class="hv-cal-upd">'+(j.upd?(mins<2?L.upd.replace(/ hace$/,'')+' '+L.now:L.upd+' '+mins+' '+L.ago):'')+'</span></div>'
+      +'<div class="hv-cal-foot"><div class="hv-cal-legend"><span><i class="ok"></i>'+L.av+'</span><span><i class="no"></i>'+L.no+'</span>'+(Object.keys(prices).length?'<span class="hv-cal-pn">'+(el.dataset.room==='_hotel'?L.pnh:L.pn)+'</span>':'')+'<span class="hv-cal-upd">'+(j.upd?(mins<2?L.upd.replace(/ hace$/,'')+' '+L.now:L.upd+' '+mins+' '+L.ago):'')+'</span></div>'
       +'<div class="hv-cal-sel" aria-live="polite"></div></div>';
     const box=el.querySelector('.hv-cal-months'), sel=el.querySelector('.hv-cal-sel');
     const draw=()=>{
@@ -69,7 +81,10 @@
       const lastM=parse(last);
       el.querySelector('.hv-cal-prev').disabled=view.getFullYear()===first.getFullYear()&&view.getMonth()<=first.getMonth();
       el.querySelector('.hv-cal-next').disabled=new Date(view.getFullYear(),view.getMonth()+n,1,12)>lastM;
-      if(ci&&co){const nn=Math.round((parse(co)-parse(ci))/864e5);
+      const HM=el.dataset.room==='_hotel';
+      if(HM)document.dispatchEvent(new CustomEvent('hvcal:range',{detail:ci&&co?{ci,co}:null}));
+      if(ci&&co&&HM){const nn=Math.round((parse(co)-parse(ci))/864e5);sel.innerHTML='<span><b>'+fmt(ci)+' → '+fmt(co)+'</b> · '+nn+' '+L.n[nn===1?0:1]+'</span><button type="button" class="hv-cal-clear">'+L.clear+'</button>';}
+      else if(ci&&co){const nn=Math.round((parse(co)-parse(ci))/864e5);
         sel.innerHTML='<span><b>'+fmt(ci)+' → '+fmt(co)+'</b> · '+nn+' '+L.n[nn===1?0:1]+(()=>{let t=0;for(let d=ci;d<co;d=add(d,1)){if(!prices[d])return '';t+=prices[d];}return ' · '+L.from+' <b>'+money(t)+'</b> <span class="hv-cal-tax">'+L.tax+'</span>';})()+'</span><button type="button" class="hv-cal-clear">'+L.clear+'</button><a class="btn btn-gold hv-cal-book" href="'+BOOK+ci+'/'+co+'/'+(j.name?'?hv_room='+encodeURIComponent(j.name):'')+'" data-track="calendario_'+el.dataset.room+'">'+L.book+' <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>';}
       else sel.innerHTML='<span>'+(msg||(ci?L.pick:''))+'</span>'+(ci?'<button type="button" class="hv-cal-clear">'+L.clear+'</button>':'');
     };

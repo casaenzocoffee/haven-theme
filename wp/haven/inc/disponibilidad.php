@@ -132,6 +132,19 @@ function hv_dispo_write_files() {
 	list( $dir ) = hv_dispo_dir();
 	if ( ! wp_mkdir_p( $dir ) ) return;
 	$st = get_option( 'hv_dispo', array() );
+	// Hotel completo (página /reservar/, enlace de Instagram, 11 nov): por noche, habitaciones libres => precio (0 si no hay precio).
+	$hotel = array( 'upd' => (int) ( $st['upd'] ?? 0 ), 'today' => ( new DateTime( 'today', hv_dispo_tz() ) )->format( 'Y-m-d' ), 'names' => array(), 'days' => array() );
+	foreach ( array_keys( hv_dispo_map() ) as $key ) {
+		$p = hv_dispo_payload( $key, $st );
+		$hotel['names'][ $key ] = $p['name'];
+		foreach ( $p['days'] as $d => $cupo ) {
+			if ( ! isset( $hotel['days'][ $d ] ) ) $hotel['days'][ $d ] = array();
+			if ( $cupo > 0 ) $hotel['days'][ $d ][ $key ] = (int) ( ( (array) $p['prices'] )[ $d ] ?? 0 );
+		}
+	}
+	foreach ( $hotel['days'] as $d => $v ) if ( ! $v ) $hotel['days'][ $d ] = new stdClass();
+	$tmp = $dir . '_hotel.json.tmp';
+	if ( false !== file_put_contents( $tmp, wp_json_encode( $hotel ) ) ) rename( $tmp, $dir . '_hotel.json' );
 	foreach ( array_keys( hv_dispo_map() ) as $key ) {
 		$tmp = $dir . $key . '.json.tmp';
 		if ( false !== file_put_contents( $tmp, wp_json_encode( hv_dispo_payload( $key, $st ) ) ) ) rename( $tmp, $dir . $key . '.json' );
