@@ -116,8 +116,12 @@ function hv_room_card( $r, $hidden = false ) {
 <article class="card<?php echo $hidden ? ' hide' : ''; ?>" data-cat="<?php echo ea( $r['f'] ?? '' ); ?>">
   <a class="card-media" href="<?php echo esc_url( $url ); ?>" aria-label="<?php echo ea( $r['name'] ); ?>"><?php echo hv_img( $im1, array( 'alt' => $r['name'] ) ), hv_img( $im2 ); ?><span class="card-tag"><?php echo e( $r['cat'] ?? '' ); ?></span></a>
   <div class="card-body"><h3><?php echo e( $r['name'] ); ?></h3><div class="chips"><?php echo $chips; ?></div><p><?php echo e( $desc ); ?></p>
-  <?php $hk = isset( $r['id'] ) ? hv_key( $r['id'] ) : (string) ( $r['key'] ?? '' ); if ( function_exists( 'hv_dispo_map' ) && isset( hv_dispo_map()[ $hk ] ) ) echo '<button type="button" class="card-cal" data-room="' . ea( $hk ) . '" data-name="' . ea( $r['name'] ) . '" data-api="' . esc_url( rest_url( 'haven/v1/disponibilidad' ) ) . '" data-json="' . esc_url( function_exists( 'hv_dispo_json_base' ) ? hv_dispo_json_base() : '' ) . '"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>' . e( hv_en() ? 'Live availability' : 'Ver disponibilidad en vivo' ) . '</button>'; ?>
-  <div class="card-actions"><a class="btn btn-ghost" href="<?php echo esc_url( $url ); ?>"><?php echo e( t( 'Ver' ) ), ' ', HV_OUT; ?></a><a class="btn btn-gold" href="#reservar" data-track="reservar_<?php echo ea( $slug ); ?>"><?php echo e( t( 'Reservar' ) ), ' ', HV_ARROW; ?></a></div></div>
+  <?php $hk = isset( $r['id'] ) ? hv_key( $r['id'] ) : (string) ( $r['key'] ?? '' );
+  // 11 nov (pedido del gerente): el botón dorado abre el calendario en vivo de la habitación (antes "Reservar" + enlace aparte).
+  $cal = function_exists( 'hv_dispo_map' ) && isset( hv_dispo_map()[ $hk ] )
+    ? '<button type="button" class="btn btn-gold card-cal-btn" data-room="' . ea( $hk ) . '" data-name="' . ea( $r['name'] ) . '" data-api="' . esc_url( rest_url( 'haven/v1/disponibilidad' ) ) . '" data-json="' . esc_url( function_exists( 'hv_dispo_json_base' ) ? hv_dispo_json_base() : '' ) . '" data-track="disponibilidad_' . ea( $slug ) . '">' . e( hv_en() ? 'Live availability' : 'Ver disponibilidad en vivo' ) . ' ' . HV_ARROW . '</button>'
+    : '<a class="btn btn-gold" href="#reservar" data-track="reservar_' . ea( $slug ) . '">' . e( t( 'Reservar' ) ) . ' ' . HV_ARROW . '</a>'; ?>
+  <div class="card-actions"><a class="btn btn-ghost" href="<?php echo esc_url( $url ); ?>"><?php echo e( t( 'Ver' ) ), ' ', HV_OUT; ?></a><?php echo $cal; ?></div></div>
 </article>
 <?php return ob_get_clean();
 }

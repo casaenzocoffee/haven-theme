@@ -98,7 +98,7 @@
   // Tarjetas: botón "Disponibilidad" abre una ventana con el calendario de esa habitación.
   let dlg=null;
   document.addEventListener('click',e=>{
-    const b=e.target.closest('.card-cal');if(!b)return;e.preventDefault();
+    const b=e.target.closest('.card-cal,.card-cal-btn');if(!b)return;e.preventDefault();
     if(!dlg){dlg=document.createElement('dialog');dlg.className='hv-cal-dlg';document.body.appendChild(dlg);
       dlg.addEventListener('click',ev=>{if(ev.target===dlg||ev.target.closest('.hv-cal-x'))dlg.close();});
       dlg.addEventListener('close',()=>{document.documentElement.classList.remove('hvb-open');try{window.__hvLenis&&window.__hvLenis.start()}catch(_){}});}
