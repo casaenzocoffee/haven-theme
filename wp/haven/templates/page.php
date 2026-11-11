@@ -8,9 +8,12 @@ if ( hv_is_builder_page( $id ) ) {
 	while ( have_posts() ) { the_post(); the_content(); }
 	echo '</main>';
 } else {
+	$own = false !== strpos( (string) get_post_field( 'post_content', $id ), 'class="ph hvt-ph"' );
+	if ( ! $own ) {
 	$img = $d['hero']['img'] ?? ( get_post_thumbnail_id( $id ) ?: '/wp-content/uploads/2026/06/hotel-haven-medellin.webp' );
 	$h   = hv_hero_data( $d, array( 'img' => $img, 'sub' => has_excerpt( $id ) ? get_the_excerpt( $id ) : '' ) );
 	echo hv_hero( $h['title'], $h['sub'], $h['img'], array( array( t( 'Inicio' ), hv_url( 'home' ) ), array( get_the_title( $id ), '' ) ), $h['eyebrow'] );
+	}
 	echo '<section class="sec" id="c"><div class="wrap" style="max-width:900px"><article class="prose" data-reveal>';
 	while ( have_posts() ) { the_post(); the_content(); }
 	echo '</article></div></section>';
