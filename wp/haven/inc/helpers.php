@@ -167,6 +167,7 @@ function hv_img_url( $src, $size = 'full' ) {
 /** Nombres de marca en el texto visible: 360° Rooftop & Restaurante/Restaurant y Swing Lounge (antes Swing Coffee Bar / Swing Bar; cambio del 5 nov 2026). */
 function hv_brand( $html ) {
 	if ( function_exists( 'hv_seo_fill_alts' ) ) $html = hv_seo_fill_alts( $html ); // fotos sin texto alternativo (auditoría SEO 5 nov)
+	if ( function_exists( 'hv_seo_fix_events' ) ) $html = hv_seo_fix_events( $html ); // Event: endDate, performer y offers.validFrom (Search Console, 11 nov)
 	$rest = hv_en() ? 'Restaurant' : 'Restaurante';
 	$html = preg_replace( '#Swing <em>(?:Coffee )?Bar</em>#', 'Swing <em>Lounge</em>', $html );
 	$html = preg_replace( '#360°? <em>Rooftop</em>|Rooftop <em>360°?</em>#u', '360° Rooftop <em>&amp; ' . $rest . '</em>', $html );

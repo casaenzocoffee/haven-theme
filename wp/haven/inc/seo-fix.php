@@ -146,6 +146,50 @@ add_action( 'wp_head', function () {
 	}
 }, 6 );
 
+/* ---------- Datos estructurados Event completos (aviso de Search Console, 11 nov 2026) ----------
+ * Google pedía endDate, performer y offers.validFrom en los eventos. Se completan sobre el HTML final,
+ * así cubre tanto los eventos del tema como los JSON-LD escritos dentro del contenido (página de temporada). */
+function hv_seo_event_fix( array $e, $valid_from ) {
+	$is_ev = isset( $e['@type'] ) && in_array( 'Event', (array) $e['@type'], true );
+	if ( $is_ev ) {
+		if ( empty( $e['endDate'] ) && ! empty( $e['startDate'] ) ) {
+			$sd = (string) $e['startDate'];
+			if ( preg_match( '/T\d/', $sd ) ) {
+				try { $d = new DateTime( $sd ); $d->modify( '+4 hours' ); $e['endDate'] = $d->format( 'Y-m-d\TH:i:sP' ); } catch ( Exception $x ) { $e['endDate'] = $sd; }
+			} else {
+				$e['endDate'] = $sd;
+			}
+		}
+		if ( empty( $e['performer'] ) ) {
+			$e['performer'] = ! empty( $e['organizer'] ) ? $e['organizer'] : array( '@type' => 'Organization', 'name' => 'Haven, A Design Hotel', 'url' => home_url( '/' ) );
+		}
+		if ( ! empty( $e['offers'] ) && is_array( $e['offers'] ) ) {
+			if ( isset( $e['offers']['@type'] ) ) {
+				if ( empty( $e['offers']['validFrom'] ) ) $e['offers']['validFrom'] = $valid_from;
+			} else {
+				foreach ( $e['offers'] as $i => $o ) if ( is_array( $o ) && empty( $o['validFrom'] ) ) $e['offers'][ $i ]['validFrom'] = $valid_from;
+			}
+		}
+	}
+	foreach ( array( '@graph', 'subEvent' ) as $k ) {
+		if ( ! empty( $e[ $k ] ) && is_array( $e[ $k ] ) ) foreach ( $e[ $k ] as $i => $x ) if ( is_array( $x ) ) $e[ $k ][ $i ] = hv_seo_event_fix( $x, $valid_from );
+	}
+	return $e;
+}
+function hv_seo_fix_events( $html ) {
+	if ( false === strpos( $html, '"Event"' ) ) return $html;
+	$id = get_queried_object_id();
+	$valid_from = $id ? get_the_date( 'Y-m-d\TH:i:sP', $id ) : '';
+	if ( ! $valid_from ) $valid_from = '2026-11-01T00:00:00-05:00';
+	return preg_replace_callback( '#(<script[^>]*application/ld\+json[^>]*>)(.*?)(</script>)#s', function ( $m ) use ( $valid_from ) {
+		if ( false === strpos( $m[2], '"Event"' ) ) return $m[0];
+		$d = json_decode( $m[2], true );
+		if ( ! is_array( $d ) ) return $m[0];
+		$d = isset( $d[0] ) ? array_map( function ( $x ) use ( $valid_from ) { return is_array( $x ) ? hv_seo_event_fix( $x, $valid_from ) : $x; }, $d ) : hv_seo_event_fix( $d, $valid_from );
+		return $m[1] . wp_json_encode( $d, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG ) . $m[3];
+	}, $html );
+}
+
 /* ---------- Texto alternativo de la portada ---------- */
 function hv_seo_alts() {
 	$a = array(
