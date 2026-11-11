@@ -33,6 +33,12 @@ $slug = $r['slug_es'] ?? get_post_field( 'post_name' );
   </div>
   <div class="rd-specs" data-reveal><?php echo $specs; ?></div>
 </div></section>
+<?php if ( function_exists( 'hv_dispo_block' ) && ( $cal = hv_dispo_block( hv_key(), $name ) ) ) : ?>
+<section class="sec hv-cal-sec" id="disponibilidad"><div class="wrap">
+  <div class="sec-head" data-reveal><div><p class="eyebrow"><?php echo e( hv_en() ? 'Live calendar' : 'Calendario en vivo' ); ?></p><h2 style="margin-top:20px"><?php echo wp_kses_post( hv_en() ? 'Check your <em>dates</em>' : 'Consulte sus <em>fechas</em>' ); ?></h2></div><p><?php echo e( hv_en() ? 'Real-time availability for this room, straight from our booking engine. Pick your dates and book direct.' : 'Disponibilidad en tiempo real de esta habitación, tomada de nuestro motor de reservas. Elija sus fechas y reserve directo.' ); ?></p></div>
+  <?php echo $cal; ?>
+</div></section>
+<?php endif; ?>
 <section class="sec cream"><div class="wrap">
   <div class="sec-head" data-reveal><div><p class="eyebrow"><?php echo e( t( 'Comodidades' ) ); ?></p><h2 style="margin-top:20px"><?php echo wp_kses_post( t( 'Todo lo que <em style="color:#8a6f33">necesitas</em>' ) ); ?></h2></div><?php foreach ( (array) ( $r['serv'] ?? array() ) as $p ) echo '<p>' . e( $p ) . '</p>'; ?></div>
   <ul class="amen amen-cream" data-reveal><?php foreach ( (array) ( $r['amen'] ?? array() ) as $a ) echo '<li>' . hv_icon( $a ) . e( $a ) . '</li>'; ?></ul>
