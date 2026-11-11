@@ -67,7 +67,7 @@
       el.querySelector('.hv-cal-prev').disabled=view.getFullYear()===first.getFullYear()&&view.getMonth()<=first.getMonth();
       el.querySelector('.hv-cal-next').disabled=new Date(view.getFullYear(),view.getMonth()+n,1,12)>lastM;
       if(ci&&co){const nn=Math.round((parse(co)-parse(ci))/864e5);
-        sel.innerHTML='<span><b>'+fmt(ci)+' → '+fmt(co)+'</b> · '+nn+' '+L.n[nn===1?0:1]+'</span><button type="button" class="hv-cal-clear">'+L.clear+'</button><a class="btn btn-gold hv-cal-book" href="'+BOOK+ci+'/'+co+'/" data-track="calendario_'+el.dataset.room+'">'+L.book+' <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>';}
+        sel.innerHTML='<span><b>'+fmt(ci)+' → '+fmt(co)+'</b> · '+nn+' '+L.n[nn===1?0:1]+'</span><button type="button" class="hv-cal-clear">'+L.clear+'</button><a class="btn btn-gold hv-cal-book" href="'+BOOK+ci+'/'+co+'/'+(j.name?'?hv_room='+encodeURIComponent(j.name):'')+'" data-track="calendario_'+el.dataset.room+'">'+L.book+' <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>';}
       else sel.innerHTML='<span>'+(msg||(ci?L.pick:''))+'</span>'+(ci?'<button type="button" class="hv-cal-clear">'+L.clear+'</button>':'');
     };
     el.addEventListener('click',e=>{

@@ -1,0 +1,56 @@
+<script>
+/* Haven · Habitación elegida primero (GTM-TVFGX8W, 11 nov 2026).
+   El calendario de havenmedellin.com abre el motor con ?hv_room=<nombre de la habitación en Roiback>.
+   Esta etiqueta solo cambia el orden en pantalla (CSS order) y resalta esa habitación: no mueve ni toca
+   precios, tarifas, botones ni la medición. Si no encuentra la habitación, no hace nada. */
+(function () {
+  try {
+    var m = location.search.match(/[?&]hv_room=([^&]+)/);
+    if (!m) return;
+    var want = decodeURIComponent(m[1].replace(/\+/g, ' '));
+    var STOP = ['suite', 'habitacion', 'room', 'la', 'el', 'the'];
+    var norm = function (s) {
+      return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9 ]/g, ' ').split(/\s+/)
+        .filter(function (w) { return w && STOP.indexOf(w) < 0; });
+    };
+    /* Mismos números exactos (901 ≠ 902) y palabras parecidas (Presidential = Presidencial). */
+    var same = function (a, b) {
+      a = norm(a); b = norm(b);
+      if (!a.length || a.length !== b.length) return false;
+      for (var i = 0; i < a.length; i++) {
+        if (/\d/.test(a[i]) || /\d/.test(b[i])) { if (a[i] !== b[i]) return false; }
+        else if (a[i].slice(0, 5) !== b[i].slice(0, 5)) return false;
+      }
+      return true;
+    };
+    if (!document.getElementById('hv-room-css')) {
+      var st = document.createElement('style');
+      st.id = 'hv-room-css';
+      st.textContent = 'li[data-hv-room]{order:-1}' +
+        'li[data-hv-room] [data-testid="fn-room-item-container"]{outline:2px solid #CDB371;outline-offset:4px;border-radius:6px}';
+      document.head.appendChild(st);
+    }
+    var n = 0, moved = false;
+    var run = function () {
+      var cs = document.querySelectorAll('[data-testid="fn-room-item-container"]');
+      for (var i = 0; i < cs.length; i++) {
+        var h = cs[i].querySelector('h3');
+        if (h && same(h.textContent, want)) {
+          var li = cs[i].closest('li') || cs[i];
+          if (!li.hasAttribute('data-hv-room')) li.setAttribute('data-hv-room', '1');
+          if (!moved) {
+            moved = true;
+            var p = li.parentElement, d = p ? getComputedStyle(p).display : '';
+            /* Si la lista no es flexible (otro diseño), en vez de reordenar se lleva la pantalla hasta la habitación. */
+            if (d.indexOf('flex') < 0 && d.indexOf('grid') < 0) li.scrollIntoView({ block: 'start' });
+          }
+          break;
+        }
+      }
+      if (++n < 30) setTimeout(run, 600);
+    };
+    run();
+  } catch (e) {}
+})();
+</script>

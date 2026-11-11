@@ -117,7 +117,8 @@ function hv_dispo_payload( $key, $st = null ) {
 		if ( $d < $today ) continue;
 		$days[ $d ] = $code ? (int) ( $x['c'][ $code ] ?? 0 ) : 0;
 	}
-	return array( 'upd' => (int) ( $st['upd'] ?? 0 ), 'today' => $today, 'days' => $days );
+	// name: nombre del tipo de habitación en Roiback; el calendario lo pasa al motor (hv_room) para mostrarla de primera (etiqueta de GTM-TVFGX8W).
+	return array( 'upd' => (int) ( $st['upd'] ?? 0 ), 'today' => $today, 'name' => $code ? (string) ( ( $st['names'] ?? array() )[ $code ] ?? '' ) : '', 'days' => $days );
 }
 
 /* Copia estática por habitación en uploads/hv-dispo/<clave>.json (11 nov): el servidor la entrega sin arrancar WordPress

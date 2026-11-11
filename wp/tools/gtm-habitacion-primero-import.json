@@ -1,0 +1,92 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-11-11 14:30:00",
+  "containerVersion": {
+    "path": "accounts/6005535113/containers/56110687/versions/0",
+    "accountId": "6005535113",
+    "containerId": "56110687",
+    "containerVersionId": "0",
+    "container": {
+      "path": "accounts/6005535113/containers/56110687",
+      "accountId": "6005535113",
+      "containerId": "56110687",
+      "name": "Haven Medellin",
+      "publicId": "GTM-TVFGX8W",
+      "usageContext": [
+        "WEB"
+      ]
+    },
+    "tag": [
+      {
+        "accountId": "6005535113",
+        "containerId": "56110687",
+        "tagId": "901",
+        "name": "Haven - Habitación elegida primero (calendario web)",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>\n/* Haven · Habitación elegida primero (GTM-TVFGX8W, 11 nov 2026).\n   El calendario de havenmedellin.com abre el motor con ?hv_room=<nombre de la habitación en Roiback>.\n   Esta etiqueta solo cambia el orden en pantalla (CSS order) y resalta esa habitación: no mueve ni toca\n   precios, tarifas, botones ni la medición. Si no encuentra la habitación, no hace nada. */\n(function () {\n  try {\n    var m = location.search.match(/[?&]hv_room=([^&]+)/);\n    if (!m) return;\n    var want = decodeURIComponent(m[1].replace(/\\+/g, ' '));\n    var STOP = ['suite', 'habitacion', 'room', 'la', 'el', 'the'];\n    var norm = function (s) {\n      return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')\n        .replace(/[^a-z0-9 ]/g, ' ').split(/\\s+/)\n        .filter(function (w) { return w && STOP.indexOf(w) < 0; });\n    };\n    /* Mismos números exactos (901 ≠ 902) y palabras parecidas (Presidential = Presidencial). */\n    var same = function (a, b) {\n      a = norm(a); b = norm(b);\n      if (!a.length || a.length !== b.length) return false;\n      for (var i = 0; i < a.length; i++) {\n        if (/\\d/.test(a[i]) || /\\d/.test(b[i])) { if (a[i] !== b[i]) return false; }\n        else if (a[i].slice(0, 5) !== b[i].slice(0, 5)) return false;\n      }\n      return true;\n    };\n    if (!document.getElementById('hv-room-css')) {\n      var st = document.createElement('style');\n      st.id = 'hv-room-css';\n      st.textContent = 'li[data-hv-room]{order:-1}' +\n        'li[data-hv-room] [data-testid=\"fn-room-item-container\"]{outline:2px solid #CDB371;outline-offset:4px;border-radius:6px}';\n      document.head.appendChild(st);\n    }\n    var n = 0, moved = false;\n    var run = function () {\n      var cs = document.querySelectorAll('[data-testid=\"fn-room-item-container\"]');\n      for (var i = 0; i < cs.length; i++) {\n        var h = cs[i].querySelector('h3');\n        if (h && same(h.textContent, want)) {\n          var li = cs[i].closest('li') || cs[i];\n          if (!li.hasAttribute('data-hv-room')) li.setAttribute('data-hv-room', '1');\n          if (!moved) {\n            moved = true;\n            var p = li.parentElement, d = p ? getComputedStyle(p).display : '';\n            /* Si la lista no es flexible (otro diseño), en vez de reordenar se lleva la pantalla hasta la habitación. */\n            if (d.indexOf('flex') < 0 && d.indexOf('grid') < 0) li.scrollIntoView({ block: 'start' });\n          }\n          break;\n        }\n      }\n      if (++n < 30) setTimeout(run, 600);\n    };\n    run();\n  } catch (e) {}\n})();\n</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "901"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      }
+    ],
+    "trigger": [
+      {
+        "accountId": "6005535113",
+        "containerId": "56110687",
+        "triggerId": "901",
+        "name": "Haven - Motor con habitación elegida (hv_room)",
+        "type": "DOM_READY",
+        "filter": [
+          {
+            "type": "CONTAINS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{Page Hostname}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "backhotelite.com"
+              }
+            ]
+          },
+          {
+            "type": "CONTAINS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{Page URL}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "hv_room="
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
