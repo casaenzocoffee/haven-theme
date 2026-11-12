@@ -30,7 +30,8 @@
     const room=el.dataset.room;
     if(room==='_hotel'){
       const caps=JSON.parse(el.dataset.caps||'{}');
-      fetch(el.dataset.json+'_hotel.json?v='+Math.floor(Date.now()/3e5),{credentials:'omit'}).then(r=>{if(!r.ok)throw 0;return r.json();}).then(H=>{
+      const fH=()=>fetch(el.dataset.json+'_hotel.json?v='+Math.floor(Date.now()/3e5),{credentials:'omit'}).then(r=>{if(!r.ok)throw 0;return r.json();});
+      (window.__hvHotelP?window.__hvHotelP.catch(fH):fH()).catch(()=>new Promise(r=>setTimeout(r,1500)).then(fH)).then(H=>{
         window.hvHotel=H;let cur=el;
         const draw=g=>{const fresh=cur.cloneNode(false);cur.replaceWith(fresh);cur=fresh;fresh.dataset.ready='1';render(fresh,hotel(H,g,caps));};
         draw(+el.dataset.guests||2);
@@ -112,10 +113,13 @@
   }
 
   // Ficha: se carga cuando el calendario se acerca a la pantalla.
-  const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){io.unobserve(x.target);mount(x.target);}}),{rootMargin:'300px'}):null;
+  const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){io.unobserve(x.target);mount(x.target);}}),{rootMargin:'900px'}):null;
   const scan=()=>document.querySelectorAll('.hv-cal:not([data-ready])').forEach(el=>{if(el.closest('dialog'))return;io?io.observe(el):mount(el);});
   scan();
 
+  // Velocidad (11 nov): al tocar o pasar el mouse por el botón ya empieza la descarga de esa habitación.
+  const pre=e=>{const b=e.target.closest&&e.target.closest('.card-cal,.card-cal-btn');if(b&&b.dataset.room)load(b.dataset.api,b.dataset.room,b.dataset.json).catch(()=>{});};
+  document.addEventListener('pointerdown',pre,{passive:true});document.addEventListener('mouseover',pre,{passive:true});
   // Tarjetas: botón "Disponibilidad" abre una ventana con el calendario de esa habitación.
   let dlg=null;
   document.addEventListener('click',e=>{

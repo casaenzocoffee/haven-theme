@@ -42,6 +42,7 @@ $wa = hv_wa( $en ? 'Hello, I would like to book a room at Haven' : 'Hola, quiero
   <div class="hv-cal" data-room="_hotel" data-guests="2" data-caps="<?php echo ea( wp_json_encode( $caps ) ); ?>" data-api="<?php echo esc_url( rest_url( 'haven/v1/disponibilidad' ) ); ?>" data-json="<?php echo esc_url( function_exists( 'hv_dispo_json_base' ) ? hv_dispo_json_base() : '' ); ?>" data-lang="<?php echo $en ? 'en' : 'es'; ?>">
     <p class="hv-cal-load"><?php echo e( $en ? 'Loading live availability…' : 'Cargando disponibilidad en vivo…' ); ?></p>
   </div>
+  <script>/* velocidad: los datos del hotel empiezan a bajar ya, sin esperar a hv-cal.js */try{window.__hvHotelP=fetch(<?php echo wp_json_encode( esc_url_raw( ( function_exists( 'hv_dispo_json_base' ) ? hv_dispo_json_base() : '' ) . '_hotel.json' ) ); ?>+'?v='+Math.floor(Date.now()/3e5),{credentials:'omit'}).then(function(r){if(!r.ok)throw 0;return r.json();});window.__hvHotelP.catch(function(){window.__hvHotelP=null;});}catch(e){}</script>
   <div class="rs-res" id="rs-res" aria-live="polite"></div>
   <p class="rs-help"><?php echo e( $en ? 'Questions or a group booking?' : '¿Dudas o reserva para un grupo?' ); ?> <a href="<?php echo esc_url( $wa ); ?>" target="_blank" rel="noopener" data-track="reservar_whatsapp"><?php echo e( $en ? 'Message us on WhatsApp' : 'Escríbanos por WhatsApp' ); ?></a></p>
 </div></section>
