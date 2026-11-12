@@ -120,7 +120,7 @@
   let dlg=null;
   document.addEventListener('click',e=>{
     const b=e.target.closest('.card-cal,.card-cal-btn');if(!b)return;e.preventDefault();
-    if(!dlg){dlg=document.createElement('dialog');dlg.className='hv-cal-dlg';document.body.appendChild(dlg);
+    if(!dlg){dlg=document.createElement('dialog');dlg.className='hv-cal-dlg';dlg.setAttribute('data-lenis-prevent','');document.body.appendChild(dlg);
       dlg.addEventListener('click',ev=>{if(ev.target===dlg||ev.target.closest('.hv-cal-x'))dlg.close();});
       dlg.addEventListener('close',()=>{document.documentElement.classList.remove('hvb-open');try{window.__hvLenis&&window.__hvLenis.start()}catch(_){}});}
     dlg.innerHTML='<button type="button" class="hv-cal-x" aria-label="'+L.x+'">✕</button><h2 class="hv-cal-name">'+(b.dataset.name||'')+'</h2><div class="hv-cal" data-room="'+b.dataset.room+'" data-api="'+b.dataset.api+'" data-json="'+(b.dataset.json||'')+'"></div>';

@@ -860,3 +860,23 @@ dialog.hv-cal-dlg::backdrop{background:rgba(25,19,17,.72);backdrop-filter:blur(4
 body:has(.rs) .mbar{display:none}
 .rs .hv-cal-head>div:first-child{visibility:hidden}
 .rs .hv-cal-head{margin-bottom:-28px;justify-content:flex-end}
+/* Ventana del calendario en celular (11 nov): se desliza con el dedo (data-lenis-prevent) y el pie con el botón de reservar queda fijo abajo */
+dialog.hv-cal-dlg{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;max-height:calc(100dvh - 24px)}
+dialog.hv-cal-dlg .hv-cal-foot{position:sticky;bottom:calc(-1 * clamp(20px,3vw,36px));margin-bottom:calc(-1 * clamp(20px,3vw,36px));padding-bottom:clamp(16px,3vw,28px);background:var(--ink,#191311);z-index:2}
+@media (max-width:700px){
+  dialog.hv-cal-dlg{width:calc(100vw - 16px);padding:18px 16px;border-radius:24px}
+  dialog.hv-cal-dlg .hv-cal-foot{bottom:-18px;margin-bottom:-18px;padding-bottom:14px;gap:8px;margin-top:10px;padding-top:12px}
+  dialog.hv-cal-dlg .hv-cal-name{font-size:26px;margin:0 44px 6px 0}
+  dialog.hv-cal-dlg .hv-cal-sub{display:none}
+  dialog.hv-cal-dlg .hv-cal-grid.has-p .hv-cal-d{height:42px}
+  dialog.hv-cal-dlg .hv-cal-title{margin:6px 0 8px}
+  dialog.hv-cal-dlg .hv-cal-legend{font-size:12px;gap:4px 12px}
+  dialog.hv-cal-dlg .hv-cal-sel{font-size:14px;gap:8px}
+  dialog.hv-cal-dlg .hv-cal-sel .btn{padding-top:10px;padding-bottom:10px}
+}
+dialog.hv-cal-dlg{overflow-x:hidden}
+dialog.hv-cal-dlg .hv-cal-months,dialog.hv-cal-dlg .hv-cal-m{min-width:0;max-width:100%}
+@media (max-width:420px){dialog.hv-cal-dlg .hv-cal-grid{gap:4px 0}dialog.hv-cal-dlg .hv-cal-d{min-width:0;width:100%}}
+dialog.hv-cal-dlg{box-sizing:border-box}
+dialog.hv-cal-dlg .hv-cal-foot,dialog.hv-cal-dlg .hv-cal-foot>*,dialog.hv-cal-dlg .hv-cal-sel>*{min-width:0;max-width:100%}
+@media (max-width:420px){dialog.hv-cal-dlg .hv-cal-sel .btn{font-size:12px;letter-spacing:.1em;padding-left:18px;gap:8px}}
