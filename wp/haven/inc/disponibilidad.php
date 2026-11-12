@@ -192,6 +192,18 @@ add_action( 'rest_api_init', function () {
 	) );
 } );
 
+/* Ficha de habitación (12 nov): window.hvRoom = nombre de la habitación en Roiback, para que TODOS los botones de reservar
+   de la ficha (Reservar ahora, barra fija, barra del celular) abran el motor con esa habitación de primera (hvBook en haven.js). */
+add_action( 'wp_head', function () {
+	if ( ! function_exists( 'hv_template_key' ) || 'room' !== hv_template_key() ) return;
+	$key = hv_key();
+	if ( ! isset( hv_dispo_map()[ $key ] ) ) return;
+	$st   = get_option( 'hv_dispo', array() );
+	$code = hv_dispo_code_for( $key, $st['names'] ?? array() );
+	$name = $code ? (string) ( ( $st['names'] ?? array() )[ $code ] ?? '' ) : '';
+	if ( $name ) echo '<script>window.hvRoom=' . wp_json_encode( $name ) . ';</script>' . "\n";
+}, 3 );
+
 /** Bloque del calendario (ficha de habitación y ventana de las tarjetas). */
 function hv_dispo_block( $key, $name = '' ) {
 	if ( ! isset( hv_dispo_map()[ $key ] ) ) return '';

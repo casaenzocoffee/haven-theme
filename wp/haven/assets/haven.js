@@ -11,6 +11,9 @@
   window.hvBook=function(url,ci,co,src){
     const n=Math.max(1,Math.round((new Date(co)-new Date(ci))/864e5));
     dataLayer.push({event:'begin_checkout',checkin:ci,checkout:co,noches:n,origen:src||page,idioma:lang});
+    // 12 nov: en la página de una habitación, CUALQUIER botón de reservar le dice al motor cuál era (hv_room);
+    // la etiqueta de GTM-TVFGX8W la muestra de primera. window.hvRoom lo pone inc/disponibilidad.php.
+    if(window.hvRoom&&!/[?&]hv_room=/.test(url))url+=(url.includes('?')?'&':'?')+'hv_room='+encodeURIComponent(window.hvRoom);
     const p=new URLSearchParams(attr).toString();
     window.open(url+(p?(url.includes('?')?'&':'?')+p:''),'_blank','noopener');
   };
