@@ -17,7 +17,7 @@
   const money=p=>'COP '+Math.round(p).toLocaleString(EN?'en-US':'es-CO');
   const fmt=s=>{const d=parse(s);return d.getDate()+' '+L.m[d.getMonth()].slice(0,3);};
   const cache={};
-  const get=u=>fetch(u,{credentials:'omit'}).then(r=>{if(!r.ok)throw 0;return r.json();});
+  const get=u=>fetch(u,{credentials:'omit'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
   const rest=(api,room)=>get(api+(api.includes('?')?'&':'?')+'room='+encodeURIComponent(room));
   // Primero la copia estática (uploads/hv-dispo, se renueva cada 5 min); si falla, la ruta REST de WordPress.
   const load=(api,room,json)=>cache[room]||(cache[room]=json?get(json+encodeURIComponent(room)+'.json?v='+Math.floor(Date.now()/3e5)).then(j=>{if(!j||!j.days)throw 0;return j;}).catch(()=>rest(api,room)):rest(api,room));
@@ -38,7 +38,13 @@
       }).catch(()=>{el.innerHTML='<p class="hv-cal-err">'+L.err+'</p><a class="btn btn-ghost" href="'+BOOK+'" target="_blank" rel="noopener">'+L.eng+'</a>';});
       return;
     }
-    load(el.dataset.api,room,el.dataset.json).then(j=>render(el,j)).catch(()=>{el.innerHTML='<p class="hv-cal-err">'+L.err+'</p><a class="btn btn-ghost" href="'+BOOK+'" target="_blank" rel="noopener">'+L.eng+'</a>';});
+    // 11 nov: si falla (p. ej. señal inestable en el celular), reintenta 2 veces antes del aviso; el fallo queda en dataLayer con su motivo.
+    const fail=(e,n)=>{delete cache[room];
+      if(n<2){setTimeout(()=>go(n+1),1200*(n+1));return;}
+      (window.dataLayer=window.dataLayer||[]).push({event:'haven_click',accion:'calendario_error',detalle:String(e&&e.message||e||'carga').slice(0,120),habitacion:room,online:navigator.onLine});
+      el.innerHTML='<p class="hv-cal-err">'+L.err+'</p><a class="btn btn-ghost" href="'+BOOK+'" target="_blank" rel="noopener">'+L.eng+'</a>';};
+    const go=n=>load(el.dataset.api,room,el.dataset.json).then(j=>{try{render(el,j);}catch(e){fail(e,9);}}).catch(e=>fail(e,n));
+    go(0);
   }
 
   function render(el,j){
