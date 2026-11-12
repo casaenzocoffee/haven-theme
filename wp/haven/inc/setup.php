@@ -31,7 +31,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_script( 'hv-gsap-st', hv_vendor( 'ScrollTrigger.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js' ), array( 'hv-gsap' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
 	wp_enqueue_script( 'hv-lenis', hv_vendor( 'lenis.min.js', 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js' ), array(), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
 	wp_enqueue_script( 'haven', hv_asset( 'haven.js' ), array( 'hv-gsap', 'hv-gsap-st', 'hv-lenis' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
-	if ( ! is_front_page() ) wp_enqueue_script( 'hv-cal', hv_asset( 'hv-cal.js' ), array( 'haven' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) ); // calendario de disponibilidad en vivo
+	wp_enqueue_script( 'hv-cal', hv_asset( 'hv-cal.js' ), array( 'haven' ), null, array( 'strategy' => 'defer', 'in_footer' => true ) ); // calendario de disponibilidad en vivo (también en portada desde el 12 nov: botones de "Nuestras favoritas")
 	if ( is_front_page() && function_exists( 'wp_enqueue_script_module' ) ) {
 		// Sin dependencias registradas: el mapa de importación lo imprime el tema en el <head>, antes de las precargas (si no, el navegador lo ignora).
 		wp_enqueue_script_module( 'haven-clock', hv_asset( 'clock3d.js' ), array(), null );

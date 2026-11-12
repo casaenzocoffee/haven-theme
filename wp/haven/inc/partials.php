@@ -12,7 +12,7 @@ function hv_home_defaults() {
 function hv_fill( $tpl, $ov = array(), $lang = null ) {
 	$lang = $lang ?: hv_lang();
 	$def  = hv_home_defaults()[ $lang ] ?? array( 't' => array(), 'img' => array() );
-	return preg_replace_callback( '#\{\{(t|ta|img|url|asset|sc):([^}]+)\}\}#', function ( $m ) use ( $ov, $def ) {
+	return preg_replace_callback( '#\{\{(t|ta|img|url|asset|sc|room):([^}]+)\}\}#', function ( $m ) use ( $ov, $def ) {
 		switch ( $m[1] ) {
 			case 't':
 			case 'ta':
@@ -27,6 +27,8 @@ function hv_fill( $tpl, $ov = array(), $lang = null ) {
 				return esc_url( hv_url( $m[2] ) );
 			case 'asset':
 				return esc_url( hv_asset( $m[2] ) );
+			case 'room':
+				return hv_home_room_btns( $m[2] );
 			case 'sc':
 				// Bloques de la guía: los sirve el tema (mismo código del prototipo).
 				$g = array( 'haven_mapa' => 'mapa', 'haven_guia' => 'guia', 'haven_quiz' => 'quiz' );
@@ -35,6 +37,29 @@ function hv_fill( $tpl, $ov = array(), $lang = null ) {
 		}
 		return '';
 	}, $tpl );
+}
+
+/**
+ * Portada, "Nuestras favoritas" (12 nov 2026, pedido del gerente): mismos dos botones que las tarjetas de
+ * /todas-las-habitaciones/: "Conocer la suite" y "Ver disponibilidad en vivo" (abre el calendario en vivo de esa suite).
+ * Uso en partials/home.html: {{room:room-suite-presidential}}. Si la habitación no está en el calendario, deja "Reservar".
+ */
+function hv_home_room_btns( $key ) {
+	$key  = sanitize_key( $key );
+	$name = '';
+	foreach ( hv_rooms() as $r ) {
+		if ( isset( $r['id'] ) && hv_key( $r['id'] ) === $key ) { $name = $r['name']; break; }
+	}
+	$en    = hv_en();
+	$url   = hv_url( $key );
+	$slug  = str_replace( 'room-', '', $key );
+	$suite = false !== stripos( $name ?: $key, 'suite' );
+	$ver   = $en ? ( $suite ? 'Explore the suite' : 'Explore the room' ) : ( $suite ? 'Conocer la suite' : 'Conocer la habitación' );
+	$ghost = '<a class="btn btn-ghost" href="' . esc_url( $url ) . '" data-track="conocer_' . ea( $slug ) . '">' . e( $ver ) . ' ' . HV_ARROW . '</a>';
+	$cal   = function_exists( 'hv_dispo_map' ) && isset( hv_dispo_map()[ $key ] ) && $name
+		? '<button type="button" class="btn btn-gold card-cal-btn" data-room="' . ea( $key ) . '" data-name="' . ea( $name ) . '" data-api="' . esc_url( rest_url( 'haven/v1/disponibilidad' ) ) . '" data-json="' . esc_url( function_exists( 'hv_dispo_json_base' ) ? hv_dispo_json_base() : '' ) . '" data-track="disponibilidad_' . ea( $slug ) . '">' . e( $en ? 'Live availability' : 'Ver disponibilidad en vivo' ) . ' ' . HV_ARROW . '</button>'
+		: '<a class="btn btn-gold" href="#reservar" data-track="reservar_' . ea( $slug ) . '">' . e( t( 'Reservar' ) ) . ' ' . HV_ARROW . '</a>';
+	return $ghost . $cal;
 }
 
 function hv_front_intro() {

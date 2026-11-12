@@ -887,3 +887,6 @@ dialog.hv-cal-dlg .hv-cal-foot,dialog.hv-cal-dlg .hv-cal-foot>*,dialog.hv-cal-dl
 /* Ficha: al tocar "Reservar" se llega al calendario y este destella una vez (12 nov) */
 #disponibilidad.hv-flash .hv-cal{animation:hvFlash 1.6s ease-out 1}
 @keyframes hvFlash{0%{box-shadow:0 0 0 0 rgba(205,179,113,.0)}25%{box-shadow:0 0 0 3px rgba(205,179,113,.85)}100%{box-shadow:0 0 0 0 rgba(205,179,113,0)}}
+/* Portada "Nuestras favoritas" (12 nov): mismos botones que las tarjetas de habitaciones (Conocer + Ver disponibilidad en vivo). */
+.suite-actions{flex-direction:column;align-items:stretch;gap:8px;max-width:360px}
+.suite-actions .btn{justify-content:space-between;white-space:nowrap;letter-spacing:.08em;font-size:12px;gap:10px;padding-left:16px}
