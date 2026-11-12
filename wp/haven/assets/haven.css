@@ -880,3 +880,7 @@ dialog.hv-cal-dlg .hv-cal-months,dialog.hv-cal-dlg .hv-cal-m{min-width:0;max-wid
 dialog.hv-cal-dlg{box-sizing:border-box}
 dialog.hv-cal-dlg .hv-cal-foot,dialog.hv-cal-dlg .hv-cal-foot>*,dialog.hv-cal-dlg .hv-cal-sel>*{min-width:0;max-width:100%}
 @media (max-width:420px){dialog.hv-cal-dlg .hv-cal-sel .btn{font-size:12px;letter-spacing:.1em;padding-left:18px;gap:8px}}
+/* Reservar: espacio reservado para el calendario mientras carga (evita el salto de diseño, CLS; 11 nov) */
+.rs .hv-cal{min-height:500px}
+@media (max-width:700px){.rs .hv-cal{min-height:590px}}
+.rs-help a{text-decoration:underline;text-underline-offset:3px}
