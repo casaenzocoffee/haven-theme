@@ -1,8 +1,10 @@
 <script>
-/* Haven · Habitación elegida primero (GTM-TVFGX8W, 11 nov 2026).
+/* Haven · Habitación elegida primero (GTM-TVFGX8W). v2, 12 nov 2026: también para el diseño de celular del motor.
    El calendario de havenmedellin.com abre el motor con ?hv_room=<nombre de la habitación en Roiback>.
    Esta etiqueta solo cambia el orden en pantalla (CSS order) y resalta esa habitación: no mueve ni toca
-   precios, tarifas, botones ni la medición. Si no encuentra la habitación, no hace nada. */
+   precios, tarifas, botones ni la medición. Si no encuentra la habitación, no hace nada.
+   Computador: tarjetas [data-testid="fn-room-item-container"] dentro de <li>.
+   Celular: tarjetas [data-testid="fn-rooms-cards"] (clase fnRoomsCards), con otra estructura. */
 (function () {
   try {
     var m = location.search.match(/[?&]hv_room=([^&]+)/);
@@ -27,28 +29,65 @@
     if (!document.getElementById('hv-room-css')) {
       var st = document.createElement('style');
       st.id = 'hv-room-css';
-      st.textContent = 'li[data-hv-room]{order:-1}' +
-        'li[data-hv-room] [data-testid="fn-room-item-container"]{outline:2px solid #CDB371;outline-offset:4px;border-radius:6px}';
+      st.textContent = '[data-hv-list]{display:flex!important;flex-direction:column}' +
+        '[data-hv-pre]{order:-2}[data-hv-room]{order:-1}' +
+        '[data-hv-card]{outline:2px solid #CDB371;outline-offset:4px;border-radius:6px}';
       document.head.appendChild(st);
     }
+    var CARDS = '[data-testid="fn-room-item-container"],[data-testid="fn-rooms-cards"],.fnRoomsCards';
+    /* Nombre de la tarjeta: el <h3> (computador) o el texto corto que coincide con la habitación (celular). */
+    var isMine = function (card) {
+      var h = card.querySelector('h1,h2,h3,h4');
+      if (h && same(h.textContent, want)) return true;
+      var els = card.querySelectorAll('h1,h2,h3,h4,h5,p,span,div,strong');
+      for (var i = 0; i < els.length && i < 400; i++) {
+        var e = els[i];
+        if (e.children.length > 1) continue;
+        var t = (e.textContent || '').trim();
+        if (t && t.length < 45 && same(t, want)) return true;
+      }
+      return false;
+    };
     var n = 0, moved = false;
     var run = function () {
-      var cs = document.querySelectorAll('[data-testid="fn-room-item-container"]');
+      var cs = document.querySelectorAll(CARDS), card = null;
       for (var i = 0; i < cs.length; i++) {
-        var h = cs[i].querySelector('h3');
-        if (h && same(h.textContent, want)) {
-          var li = cs[i].closest('li') || cs[i];
-          if (!li.hasAttribute('data-hv-room')) li.setAttribute('data-hv-room', '1');
+        if (cs[i].parentElement && cs[i].parentElement.closest(CARDS)) continue; /* tarjeta dentro de tarjeta */
+        if (isMine(cs[i])) { card = cs[i]; break; }
+      }
+      if (card) {
+        /* Bloque a mover: el contenedor más alto de esta tarjeta que no contiene otra tarjeta. */
+        var u = card.closest('li') || card;
+        while (u.parentElement && u.parentElement !== document.body) {
+          var p0 = u.parentElement, k = p0.querySelectorAll(CARDS).length;
+          if (k > 1) break;
+          u = p0;
+        }
+        var p = u.parentElement;
+        if (p) {
+          var d = getComputedStyle(p).display;
+          var flex = d.indexOf('flex') >= 0 || d.indexOf('grid') >= 0;
+          /* Lista normal (celular): se vuelve columna flexible, que se ve igual y permite reordenar. */
+          if (!flex && d === 'block') { p.setAttribute('data-hv-list', '1'); flex = true; }
+          if (flex) {
+            /* Lo que va antes de la primera tarjeta (títulos, filtros) se queda arriba. */
+            var kids = p.children, seen = false;
+            for (var j = 0; j < kids.length; j++) {
+              var c = kids[j];
+              var has = c.matches(CARDS) || !!c.querySelector(CARDS);
+              if (has) seen = true;
+              if (!seen && !has) { if (!c.hasAttribute('data-hv-pre')) c.setAttribute('data-hv-pre', '1'); }
+            }
+            if (!u.hasAttribute('data-hv-room')) u.setAttribute('data-hv-room', '1');
+          }
+          if (!card.hasAttribute('data-hv-card')) card.setAttribute('data-hv-card', '1');
           if (!moved) {
             moved = true;
-            var p = li.parentElement, d = p ? getComputedStyle(p).display : '';
-            /* Si la lista no es flexible (otro diseño), en vez de reordenar se lleva la pantalla hasta la habitación. */
-            if (d.indexOf('flex') < 0 && d.indexOf('grid') < 0) li.scrollIntoView({ block: 'start' });
+            if (!flex) card.scrollIntoView({ block: 'start' });
           }
-          break;
         }
       }
-      if (++n < 30) setTimeout(run, 600);
+      if (++n < 60) setTimeout(run, 600);
     };
     run();
   } catch (e) {}
