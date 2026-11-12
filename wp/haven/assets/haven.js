@@ -280,6 +280,14 @@ hvPainted(()=>{
       dlg.addEventListener('close',()=>{document.documentElement.classList.remove('hvb-open');try{window.__hvLenis&&window.__hvLenis.start()}catch(_){}});
     };
     document.addEventListener('click',e=>{const a=e.target.closest('a[href="#reservar"]');if(!a)return;e.preventDefault();e.stopPropagation();
+      // 12 nov: en la ficha de una habitación, "Reservar" lleva a su calendario en vivo (solo fechas en que ESA habitación está libre;
+      // al reservar, el motor la abre de primera). El selector general queda para el resto del sitio.
+      const cal=document.querySelector('#disponibilidad .hv-cal');
+      if(cal){const sec=document.getElementById('disponibilidad');
+        const dr=document.getElementById('drawer');if(dr&&!dr.hidden){dr.hidden=true;const mb=document.querySelector('.menu-btn');mb&&mb.setAttribute('aria-expanded','false');}
+        (window.dataLayer=window.dataLayer||[]).push({event:'haven_click',accion:'reservar_a_calendario_'+(document.body.dataset.hv||'')});
+        try{window.__hvLenis?window.__hvLenis.scrollTo(sec,{offset:-90}):sec.scrollIntoView({behavior:'smooth',block:'start'});}catch(_){sec.scrollIntoView();}
+        sec.classList.remove('hv-flash');void sec.offsetWidth;sec.classList.add('hv-flash');return;}
       src=a.dataset.track||'boton_reservar';if(!dlg)build();
       (window.dataLayer=window.dataLayer||[]).push({event:'haven_click',accion:'abrir_reserva_'+(document.body.dataset.hv||'')});
       try{window.__hvLenis&&window.__hvLenis.stop()}catch(_){}

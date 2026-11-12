@@ -884,3 +884,6 @@ dialog.hv-cal-dlg .hv-cal-foot,dialog.hv-cal-dlg .hv-cal-foot>*,dialog.hv-cal-dl
 .rs .hv-cal{min-height:500px}
 @media (max-width:700px){.rs .hv-cal{min-height:590px}}
 .rs-help a{text-decoration:underline;text-underline-offset:3px}
+/* Ficha: al tocar "Reservar" se llega al calendario y este destella una vez (12 nov) */
+#disponibilidad.hv-flash .hv-cal{animation:hvFlash 1.6s ease-out 1}
+@keyframes hvFlash{0%{box-shadow:0 0 0 0 rgba(205,179,113,.0)}25%{box-shadow:0 0 0 3px rgba(205,179,113,.85)}100%{box-shadow:0 0 0 0 rgba(205,179,113,0)}}
