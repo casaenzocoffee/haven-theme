@@ -20,9 +20,8 @@ HOTEL = {"@type": "Hotel", "name": "Haven, A Design Hotel", "url": "https://have
 PROFILES = {
     '360': dict(
         url='https://havenmedellin.com/360-rooftop-carta/',
-        title='Carta 360 Rooftop Bar & Restaurante · Medellín',
-        desc=('Carta del 360 Rooftop Bar & Restaurante en el piso 11 de Haven, en Provenza, El Poblado (Medellín): '
-              'desayunos, platos fuertes, hamburguesas, pizzas, postres, cócteles, vinos y más.'),
+        title='Menú 360 Rooftop Medellín: carta, cócteles y precios | Haven',
+        desc='Menú oficial del 360 Rooftop Medellín, piso 11 de Haven en Provenza: desayunos, platos fuertes, hamburguesas, pizzas, cócteles, vinos y precios actualizados.',
         site='360 Rooftop · Haven Medellín',
         place='360%20Rooftop%20Bar%20%26%20Restaurante', place_id='ChIJkWmO1w4pRI4RJ_Ez8Fw5es8',
         ld=dict(type='Restaurant', name='360 Rooftop Bar & Restaurante', alt='360 Rooftop Medellín',
