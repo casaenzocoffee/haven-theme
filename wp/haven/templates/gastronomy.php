@@ -15,7 +15,7 @@ foreach ( $secs as $s ) {
 	if ( count( $ps ) < 2 ) $ps[] = $s['paras'][0];
 }
 $menu  = ( $d['menu_url'] ?? '' ) ?: hv_menu_360();
-$table = $d['table_url'] ?? 'https://fiweex.com/reservas_portal_bienvenida/aIJzgQ%3D%3D';
+$table = $d['table_url'] ?? 'https://reservas.havenmedellin.com/';
 echo hv_hero( $h['title'], $h['sub'], $h['img'], array( array( t( 'Inicio' ), hv_url( 'home' ) ), array( t( 'Gastronomía' ), '' ) ), $h['eyebrow'] );
 echo hv_editorial( t( 'Platos recomendados' ), t( 'Sabores que <em>inspiran</em>' ), $ps, $imgs[0] ?? '', $imgs[1] ?? null, false, false, hv_btn( t( 'Ver menú digital' ), $menu, 'gold', 'menu_digital', true ) . hv_btn( t( 'Reservar mesa' ), $table, 'ghost', 'reservar_mesa', true ) );
 ?>

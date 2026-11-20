@@ -106,6 +106,7 @@ function hv_href( $h ) {
 	}
 	if ( 0 === strpos( $h, 'theme:' ) ) return HAVEN_URI . '/assets/' . substr( $h, 6 );
 	if ( false !== strpos( $h, 'cluvi.co' ) ) return hv_menu_360(); // el menú viejo (Cluvi) se reemplazó por la carta propia
+	if ( false !== strpos( $h, 'fiweex.com' ) ) return hv_reservas_360(); // Fiweex se reemplazó por el sistema propio de reservas del 360
 	if ( false !== stripos( $h, 'Carta-Swing.pdf' ) ) return hv_menu_swing(); // el PDF viejo de Swing se reemplazó por la carta web propia
 	return $h;
 }
@@ -219,6 +220,8 @@ function hv_rooms( $lang = null ) {
 /** Carta digital del 360° Rooftop (subdominio propio). Se puede cambiar con el filtro hv_menu_360 o con menu_url en la página. */
 /** Carta de Swing Lounge (carpeta propia en el dominio del hotel). Se puede cambiar con el filtro hv_menu_swing. */
 function hv_menu_swing() { return apply_filters( 'hv_menu_swing', 'https://havenmedellin.com/swing-coffee-bar-carta/' ); }
+/** Reservas de mesa del 360° Rooftop (sistema propio desde el 19 nov 2026; antes Fiweex). */
+function hv_reservas_360() { return apply_filters( 'hv_reservas_360', 'https://reservas.havenmedellin.com/' ); }
 function hv_menu_360() { return apply_filters( 'hv_menu_360', 'https://havenmedellin.com/360-rooftop-carta/' ); }
 
 function hv_wa( $text = '' ) { return 'https://wa.me/573212097033?text=' . rawurlencode( $text ); }
