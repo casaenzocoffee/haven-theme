@@ -95,7 +95,10 @@ function hv_seo_rooftop_schema() {
 		'address' => array( '@type' => 'PostalAddress', 'streetAddress' => 'Calle 10A #36-29, piso 11', 'addressLocality' => 'Medellín', 'addressRegion' => 'Antioquia', 'addressCountry' => 'CO' ),
 		'openingHoursSpecification' => array( $h( array( 'Monday', 'Tuesday', 'Wednesday' ), '07:00', '23:00' ), $h( 'Thursday', '07:00', '00:00' ), $h( 'Friday', '07:00', '02:00' ), $h( 'Saturday', '08:00', '02:00' ), $h( 'Sunday', '08:00', '00:00' ) ),
 		'amenityFeature' => array( array( '@type' => 'LocationFeatureSpecification', 'name' => hv_en() ? 'Rooftop pool' : 'Piscina en la terraza', 'value' => true ) ),
-		'acceptsReservations' => 'True',
+		'acceptsReservations' => function_exists( 'hv_reservas_360' ) ? hv_reservas_360() : 'True',
+		'potentialAction' => array( '@type' => 'ReserveAction', 'name' => hv_en() ? 'Book a table at 360 Rooftop' : 'Reserva tu mesa en 360 Rooftop',
+			'target' => array( '@type' => 'EntryPoint', 'urlTemplate' => function_exists( 'hv_reservas_360' ) ? hv_reservas_360() : 'https://reservas.havenmedellin.com/', 'actionPlatform' => array( 'https://schema.org/DesktopWebPlatform', 'https://schema.org/MobileWebPlatform' ) ),
+			'result' => array( '@type' => 'FoodEstablishmentReservation', 'name' => hv_en() ? 'Table reservation' : 'Reserva de mesa' ) ),
 	);
 }
 function hv_seo_swing_schema() {

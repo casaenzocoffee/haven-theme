@@ -47,7 +47,10 @@ def profile(name):
     ld = {"@context": "https://schema.org", "@type": L['type'], "name": L['name'], "alternateName": L['alt'], "url": U,
           "image": U + "img/hero_poster.webp", "servesCuisine": L['cuisine'], "hasMenu": U, "telephone": "+57 312 6273647",
           "address": dict(ADDR, streetAddress=L['street']), "containedInPlace": HOTEL, "openingHoursSpecification": L['hours']}
-    if L['type'] == 'Restaurant': ld["acceptsReservations"] = "True"
+    if L['type'] == 'Restaurant':
+        ld["acceptsReservations"] = "https://reservas.havenmedellin.com/"
+        ld["potentialAction"] = {"@type": "ReserveAction", "name": "Reserva tu mesa en 360 Rooftop",
+                                 "target": {"@type": "EntryPoint", "urlTemplate": "https://reservas.havenmedellin.com/"}}
     maps = ('https://www.google.com/maps/search/?api=1&amp;query=' + P['place'] + '%2C%20Calle%2010A%20%2336-29%2C%20Medell%C3%ADn'
             '&amp;query_place_id=' + P['place_id'])
     return U, P['title'], P['desc'], P['site'], maps, ld
